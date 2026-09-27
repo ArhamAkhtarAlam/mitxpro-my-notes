@@ -44,19 +44,55 @@ $$
 P(\text{same answer})=\cos^2(\theta_A-\theta_B)
 $$
 ## the strategy
-| player | gets | measures in |
-|---|---|---|
-| Alice | $a=0$ | $\lvert0\rangle,\lvert1\rangle$ basis (angle $0^\circ$) |
-| Alice | $a=1$ | $\lvert+\rangle,\lvert-\rangle$ basis (angle $45^\circ$) |
-| Bob | $b=0$ | the $s$ basis (angle $+22.5^\circ$) |
-| Bob | $b=1$ | the $t$ basis (angle $-22.5^\circ$) |
+| player | gets | measures in | as an observable |
+|---|---|---|---|
+| Alice | $a=0$ | $\lvert0\rangle,\lvert1\rangle$ basis (angle $0^\circ$) | $\sigma_z$ |
+| Alice | $a=1$ | $\lvert+\rangle,\lvert-\rangle$ basis (angle $45^\circ$) | $\sigma_x$ |
+| Bob | $b=0$ | the $s$ basis (angle $+22.5^\circ$) | $\frac1{\sqrt2}(\sigma_x+\sigma_z)$ |
+| Bob | $b=1$ | the $t$ basis (angle $-22.5^\circ$) | $\frac1{\sqrt2}(\sigma_z-\sigma_x)$ |
 
-they output $0$ for the first basis state and $1$ for the other one
+they output $0$ for the first basis state and $1$ for the other one (the $+1$ and $-1$ [[Eigenvalues and eigenvectors|eigenvectors]] of their observable)
 
 ![[CHSH_quantum_strategy.png]]
 
-> [!info] where the lecture stops
-> the lecture defines the $s$ and $t$ axes but stops before giving their angles. the $\pm22.5^\circ$ above are the standard choice (checked numerically)
+> [!info] what the lecture gives
+> the lecture gives Bob's $b=0$ measurement as the observable $\frac1{\sqrt2}(\sigma_x+\sigma_z)$, which is exactly the $s$ basis at $+22.5^\circ$. it doesn't write out $t$, but $\frac1{\sqrt2}(\sigma_z-\sigma_x)$ at $-22.5^\circ$ is the mirror image and the standard choice (checked numerically)
+### working it out with expectation values ($a=0$, $b=0$)
+**1.** Alice gets $a=0$ so she measures $\sigma_z$. say she gets $0$, then Bob's qubit is $|0\rangle$ (same measurement → same answer)
+
+**2.** Bob gets $b=0$ so he measures
+$$
+B_s=\frac1{\sqrt2}(\sigma_x+\sigma_z)=\frac1{\sqrt2}\left(\begin{bmatrix}0&1\\1&0\end{bmatrix}+\begin{bmatrix}1&0\\0&-1\end{bmatrix}\right)=\frac1{\sqrt2}\begin{bmatrix}1&1\\1&-1\end{bmatrix}
+$$
+(fun fact: that's exactly the [[Hadamard Gate]] matrix)
+
+its eigenvalues are $+1$ (Bob outputs $y=0$) and $-1$ (Bob outputs $y=1$)
+
+**3.** the slow way: find the $+1$ eigenvector, take its inner product with $|0\rangle$ and square it. the **easy** way: use the [[Probability and expectation values|expectation value]]
+$$
+\langle0|B_s|0\rangle=\begin{bmatrix}1&0\end{bmatrix}\frac1{\sqrt2}\begin{bmatrix}1&1\\1&-1\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix}=\frac1{\sqrt2}
+$$
+**4.** the expectation value is (eigenvalue × probability) added up, so
+$$
+P(y=0)-P(y=1)=\frac1{\sqrt2}\qquad P(y=0)+P(y=1)=1
+$$
+2 equations, 2 unknowns
+$$
+P(y=0)=\frac12+\frac1{2\sqrt2}\approx0.854=\cos^2\frac\pi8
+$$
+Bob outputs $0$, same as Alice, so they **win with 85.4%**
+
+(if Alice got $1$ instead, Bob's qubit is $|1\rangle$, $\langle1|B_s|1\rangle=-\frac1{\sqrt2}$, and Bob outputs $1$ with the same 85.4%)
+
+> [!tip] the trick
+> for an observable with eigenvalues $\pm1$
+> $$
+> P(+1)=\frac{1+\langle A\rangle}2\qquad P(-1)=\frac{1-\langle A\rangle}2
+> $$
+> way faster than finding eigenvectors
+
+> [!warning] lecture mix-up
+> on the board he first wrote $\frac12+\frac1{\sqrt2}$, which is more than 1. a student caught it: it's $\frac12+\frac1{2\sqrt2}$
 ### why it wins 85.4%
 | $a$ | $b$ | want | bases | angle apart | P(win) |
 |---|---|---|---|---|---|

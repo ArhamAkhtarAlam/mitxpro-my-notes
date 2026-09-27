@@ -4,8 +4,8 @@ My personal study notes from three **MIT xPRO** quantum computing courses, writt
 
 ## The courses
 
-| folder                    | course                                                                                                                    | program                                                                                              |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| folder     | course                                                                                                                    | program                                                                                              |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `Course 1` | [Introduction to Quantum Computing](https://xpro.mit.edu/courses/course-v1:xPRO+QCFx1/)                                   | [Quantum Computing Fundamentals](https://xpro.mit.edu/programs/program-v1:xPRO+QCF/) (course 1 of 2) |
 | `Course 2` | [Quantum Algorithms for Cybersecurity, Chemistry, and Optimization](https://xpro.mit.edu/courses/course-v1:xPRO+QCFx2/)   | [Quantum Computing Fundamentals](https://xpro.mit.edu/programs/program-v1:xPRO+QCF/) (course 2 of 2) |
 | `Course 3` | [Practical Realities of Quantum Computation and Quantum Communication](https://xpro.mit.edu/courses/course-v1:xPRO+QCRx1) | [Quantum Computing Realities](https://xpro.mit.edu/programs/program-v1:xPRO+QCR/) (course 1 of 2)    |
