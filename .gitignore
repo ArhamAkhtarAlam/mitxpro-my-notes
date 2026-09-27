@@ -1,0 +1,10 @@
+# copyrighted papers: keep them local, the notes link to them by DOI instead
+Course 3/Week 2/Papers/
+
+# Obsidian's trash and per-device window layout
+.trash/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# macOS junk
+.DS_Store

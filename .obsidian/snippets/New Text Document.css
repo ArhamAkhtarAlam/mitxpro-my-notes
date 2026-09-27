@@ -1,0 +1,47 @@
+/* ================================
+   SF PRO – FULL OBSIDIAN FIX (Windows)
+   ================================ */
+
+/* Disable problematic OpenType features */
+* {
+  font-feature-settings: normal !important;
+  font-variation-settings: normal !important;
+  text-rendering: auto !important;
+}
+
+/* Main body text */
+body {
+  --font-text: "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  --font-interface: "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  --font-ui: "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+}
+
+/* Headings */
+body {
+  --font-heading: "SF Pro Display", "SF Pro Text", "Segoe UI", sans-serif;
+}
+
+/* Monospace (code blocks, inline code) */
+body {
+  --font-monospace: "SF Mono", "Cascadia Mono", Consolas, monospace;
+}
+
+/* Explicit hard fallback for rendered elements */
+.markdown-preview-view,
+.markdown-source-view,
+.cm-editor,
+.cm-content,
+.cm-line,
+.cm-scroller {
+  font-family: var(--font-text) !important;
+}
+/* Apple-like spacing */
+.markdown-preview-view {
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+}
+
+/* Headings: slightly tighter */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}

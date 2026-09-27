@@ -1,0 +1,9 @@
+{
+  "theme": "obsidian",
+  "accentColor": "#00d4aa",
+  "enabledCssSnippets": [
+    "New Text Document"
+  ],
+  "translucency": true,
+  "cssTheme": "Void Teal"
+}

@@ -1,0 +1,185 @@
+/* Void Teal for Obsidian
+   Dark mode  = Void Teal (pure black)
+   Light mode = Void Reef */
+
+.theme-dark {
+    --vt-bg: #000000;
+    --vt-bg-alt: #001a1a;
+    --vt-bg-deep: #000d0d;
+    --vt-fg: #bfbdb6;
+    --vt-fg-muted: #888888;
+    --vt-fg-faint: #555555;
+    --vt-primary: #00d4aa;
+    --vt-secondary: #a78bfa;
+    --vt-tertiary: #4fc3f7;
+    --vt-keyword: #7c4dff;
+    --vt-function: #00bcd4;
+    --vt-constant: #ff6b6b;
+    --vt-comment: #00897b;
+    --vt-accent: #ffd740;
+    --vt-selection: #0d4f4f;
+    --vt-selection-hover: #1a6b6b;
+    --vt-border: #0d4f4f;
+    --vt-line-number: #1a6b5a;
+
+    --accent-h: 168;
+    --accent-s: 100%;
+    --accent-l: 42%;
+}
+
+.theme-light {
+    --vt-bg: #f5f5f0;
+    --vt-bg-alt: #ebebeb;
+    --vt-bg-deep: #e8e8e3;
+    --vt-fg: #2d2d2d;
+    --vt-fg-muted: #666666;
+    --vt-fg-faint: #aaaaaa;
+    --vt-primary: #00a387;
+    --vt-secondary: #9c27b0;
+    --vt-tertiary: #0288d1;
+    --vt-keyword: #7c4dff;
+    --vt-function: #00acc1;
+    --vt-constant: #e53935;
+    --vt-comment: #7a9e9a;
+    --vt-accent: #007a65;
+    --vt-selection: #00a38730;
+    --vt-selection-hover: #00a38750;
+    --vt-border: #d6d6d0;
+    --vt-line-number: #aaaaaa;
+
+    --accent-h: 170;
+    --accent-s: 100%;
+    --accent-l: 32%;
+}
+
+/* ---------- Map palette onto Obsidian variables ---------- */
+.theme-dark,
+.theme-light {
+    /* Surfaces */
+    --background-primary: var(--vt-bg);
+    --background-primary-alt: var(--vt-bg-alt);
+    --background-secondary: var(--vt-bg);
+    --background-secondary-alt: var(--vt-bg-alt);
+    --background-modifier-border: var(--vt-border);
+    --background-modifier-border-hover: var(--vt-selection-hover);
+    --background-modifier-border-focus: var(--vt-primary);
+    --background-modifier-hover: var(--vt-bg-alt);
+    --background-modifier-active-hover: var(--vt-selection);
+    --background-modifier-form-field: var(--vt-bg-alt);
+    --background-modifier-error: var(--vt-constant);
+    --background-modifier-success: var(--vt-primary);
+
+    --titlebar-background: var(--vt-bg);
+    --titlebar-background-focused: var(--vt-bg);
+    --tab-container-background: var(--vt-bg);
+    --tab-background-active: var(--vt-bg-alt);
+    --ribbon-background: var(--vt-bg);
+    --ribbon-background-collapsed: var(--vt-bg);
+    --status-bar-background: var(--vt-bg);
+    --divider-color: transparent;
+    --tab-outline-color: transparent;
+
+    /* Text */
+    --text-normal: var(--vt-fg);
+    --text-muted: var(--vt-fg-muted);
+    --text-faint: var(--vt-fg-faint);
+    --text-accent: var(--vt-primary);
+    --text-accent-hover: var(--vt-tertiary);
+    --text-error: var(--vt-constant);
+    --text-success: var(--vt-primary);
+    --text-selection: var(--vt-selection);
+    --text-highlight-bg: rgba(255, 215, 64, 0.25);
+    --text-on-accent: var(--vt-bg);
+
+    --interactive-accent: var(--vt-primary);
+    --interactive-accent-hover: var(--vt-function);
+    --caret-color: var(--vt-primary);
+    --icon-color: var(--vt-fg-muted);
+    --icon-color-active: var(--vt-primary);
+
+    /* Nav / file explorer */
+    --nav-item-color: var(--vt-fg-muted);
+    --nav-item-color-hover: var(--vt-tertiary);
+    --nav-item-color-active: var(--vt-primary);
+    --nav-item-background-active: var(--vt-selection);
+    --nav-item-background-hover: var(--vt-bg-alt);
+
+    /* Headings: same rainbow as your syntax colors */
+    --h1-color: var(--vt-primary);
+    --h2-color: var(--vt-secondary);
+    --h3-color: var(--vt-tertiary);
+    --h4-color: var(--vt-function);
+    --h5-color: var(--vt-keyword);
+    --h6-color: var(--vt-comment);
+
+    /* Links, tags, emphasis */
+    --link-color: var(--vt-tertiary);
+    --link-color-hover: var(--vt-primary);
+    --link-external-color: var(--vt-tertiary);
+    --link-unresolved-color: var(--vt-constant);
+    --tag-color: var(--vt-secondary);
+    --tag-background: var(--vt-bg-alt);
+    --tag-color-hover: var(--vt-primary);
+    --tag-background-hover: var(--vt-selection);
+    --bold-color: var(--vt-primary);
+    --italic-color: var(--vt-secondary);
+    --blockquote-border-color: var(--vt-primary);
+    --blockquote-background-color: var(--vt-bg-alt);
+    --hr-color: var(--vt-border);
+    --checkbox-color: var(--vt-primary);
+    --checkbox-border-color: var(--vt-comment);
+    --list-marker-color: var(--vt-comment);
+
+    /* Inline + block code background */
+    --code-background: var(--vt-bg-alt);
+    --code-normal: var(--vt-fg);
+
+    /* Code syntax: matches the VS Code tokenColors */
+    --code-comment: var(--vt-comment);
+    --code-keyword: var(--vt-keyword);
+    --code-string: var(--vt-tertiary);
+    --code-function: var(--vt-function);
+    --code-value: var(--vt-constant);
+    --code-important: var(--vt-constant);
+    --code-property: var(--vt-primary);
+    --code-tag: var(--vt-secondary);
+    --code-operator: var(--vt-fg);
+    --code-punctuation: var(--vt-fg-muted);
+
+    /* Scrollbars */
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb-bg: rgba(0, 212, 170, 0.15);
+    --scrollbar-active-thumb-bg: rgba(0, 212, 170, 0.35);
+
+    /* Graph view */
+    --graph-node: var(--vt-primary);
+    --graph-node-unresolved: var(--vt-fg-faint);
+    --graph-node-focused: var(--vt-accent);
+    --graph-node-tag: var(--vt-secondary);
+    --graph-node-attachment: var(--vt-tertiary);
+    --graph-line: var(--vt-border);
+}
+
+/* Inline code gets the "string" color like in the editor */
+.markdown-rendered code,
+.cm-s-obsidian span.cm-inline-code {
+    color: var(--vt-tertiary);
+}
+
+/* Comments italic, like the VS Code theme */
+.markdown-rendered .token.comment,
+.cm-s-obsidian .cm-comment {
+    font-style: italic;
+}
+
+/* Line numbers (Settings → Editor → Show line number) */
+.cm-gutters .cm-lineNumbers .cm-gutterElement {
+    color: var(--vt-line-number);
+}
+
+/* Borderless look, like the VS Code theme */
+.workspace-ribbon.mod-left,
+.workspace-split.mod-left-split .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split .workspace-leaf-resize-handle {
+    border-color: transparent;
+}
