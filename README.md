@@ -30,3 +30,9 @@ On GitHub the maths and diagrams show up fine, but Obsidian specific things like
 - These are **my own notes**, not official MIT material, and I'm not affiliated with MIT. If something's wrong it's my mistake, not the course's
 - The pictures were made by me: diagrams and plots with Python (matplotlib), and circuit diagrams with [Qiskit](https://www.qiskit.org/)
 - The original papers I read for Course 3 (EPR 1935 and Schrödinger 1935) aren't included because they're copyrighted, the notes link to them by DOI instead
+
+## License
+
+These notes and pictures are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see [`LICENSE`](LICENSE)): you can share and adapt them for anything, as long as you give credit to [ArhamAkhtarAlam](https://github.com/ArhamAkhtarAlam) and link back here.
+
+This doesn't cover MIT's course material (which isn't included) or the Obsidian theme in `.obsidian/themes/`, which belongs to its own creator.
