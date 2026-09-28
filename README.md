@@ -2,6 +2,8 @@
 
 My personal study notes from three **MIT xPRO** quantum computing courses, written in [Obsidian](https://obsidian.md).
 
+**📖 Read them online: [publish.obsidian.md/qnotes](https://publish.obsidian.md/qnotes)**, with all the links, pictures and the graph view working. Start at the [Welcome](Welcome.md) page.
+
 ## The courses
 
 | folder     | course                                                                                                                    | program                                                                                              |
@@ -21,7 +23,12 @@ My personal study notes from three **MIT xPRO** quantum computing courses, writt
 
 ## How to read these
 
-The notes are made for **Obsidian**, so the best way to read them is to download this repo and open the folder as a vault in Obsidian (it's free). Then all the links between notes, the pictures, and the graph view work.
+The notes are made for **Obsidian**, so there are 2 good ways to read them:
+
+- **online** at [publish.obsidian.md/qnotes](https://publish.obsidian.md/qnotes), easiest, nothing to install
+- **offline**: download this repo and open the folder as a vault in [Obsidian](https://obsidian.md) (it's free)
+
+Either way, start at [`Welcome.md`](Welcome.md). It has starting points depending on what you're interested in.
 
 On GitHub the maths and diagrams show up fine, but Obsidian specific things like `[[links]]`, `![[image embeds]]` and callout boxes show up as plain text.
 
