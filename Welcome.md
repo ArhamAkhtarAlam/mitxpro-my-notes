@@ -1,4 +1,4 @@
-# Welcome 👋
+# Welcome 
 these are my notes from three **MIT xPRO** quantum computing courses. I wrote them while taking the courses, so they're written the way I understood things, with lots of pictures and worked examples
 
 ![[Bloch_sphere.png|400]]
