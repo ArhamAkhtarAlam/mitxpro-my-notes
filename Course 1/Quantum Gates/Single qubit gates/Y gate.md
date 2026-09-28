@@ -35,3 +35,17 @@ x&\text Y(x)\\
 |1\rangle&-i|0\rangle
 \end{array}
 $$
+## On the Bloch sphere
+![[Y_gate_bloch.png|500]]
+flips the sphere around the $y$ axis. $|0\rangle\to|1\rangle$ like an X, but it also flips $|+\rangle\leftrightarrow|-\rangle$ like a Z
+
+$|{+i}\rangle$ and $|{-i}\rangle$ sit on the $y$ axis so they don't move
+## Properties
+- $\text Y\text Y=I$ (its own inverse)
+- eigenvalues $+1$ and $-1$ with eigenvectors $|{+i}\rangle$ and $|{-i}\rangle$
+- it's a bit flip **and** a phase flip at the same time: $\text Y=i\,\text X\text Z$
+> [!note] why the $i$?
+> $\text X\text Z=\begin{bmatrix}0&-1\\1&0\end{bmatrix}$ already does "flip + phase", the extra $i$ in front just makes the matrix **Hermitian** (equal to its own conjugate transpose, so it's a proper observable). it's a **global phase**, so on its own you can't measure it (see [[Complex numbers]])
+## Where it's used
+- as an error it's a **bit + phase flip**, one of the 3 errors in the [[Depolarizing channel]]
+- measuring $\sigma_y$ on the Bell state $\frac1{\sqrt2}(|00\rangle+|11\rangle)$ always gives **opposite** answers (see [[CHSH quantum strategy]])
