@@ -23,5 +23,6 @@ flowchart TD
 ```
 - [[Quantum hacking]] → the maths is secure, but the **equipment** might not be
 - [[QKD distance and key rate]] → fibre loss limits the distance, and today's keys are too slow for one-time padding internet traffic
+- [[Floodlight QKD]] → a new protocol aiming for gigabit keys across a city
 
 see also [[QKD]], [[Long-distance quantum communication]]

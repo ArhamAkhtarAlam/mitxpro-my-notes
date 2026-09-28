@@ -51,6 +51,6 @@ even inside a city (where distance is fine), is the key **fast enough**?
 flowchart LR
     N["BB84 today<br/>~1 Mbit/s at 50 km"] -- "×10 faster clock" --> C["~10 Mbit/s"] -- "×100 wavelength channels<br/>(all at the faster clock)" --> G["~1 Gbit/s"]
 ```
-that's a lot of hardware: 100 separate channels all running 10 times faster. the next lecture is about a new protocol that aims for gigabit rates in a city with **much less** equipment
+that's a lot of hardware: 100 separate channels all running 10 times faster. [[Floodlight QKD]] is a new protocol that aims for gigabit rates in a city with **much less** equipment
 
 see also [[QKD in practice]], [[Quantum hacking]], [[Quantum repeaters]]
