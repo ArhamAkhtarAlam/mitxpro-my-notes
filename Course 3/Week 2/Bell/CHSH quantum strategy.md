@@ -109,10 +109,36 @@ Bob's bases sit **in between** Alice's, so he's always close to what she measure
 
 > [!note] angles on the Bloch sphere
 > these angles are in the $\cos\theta|0\rangle+\sin\theta|1\rangle$ picture. on the [[Bloch sphere]] every angle **doubles**: $|0\rangle$ and $|+\rangle$ are $90^\circ$ apart, and $s,t$ are at $\pm45^\circ$
+### only the angle matters
+the only thing that decides how often Alice and Bob agree is the **angle between their 2 points** on the Bloch sphere, not where exactly they are. that's why the 3 "want same" cases all win with the same 0.854: each pair of points is $\frac\pi4$ ($45^\circ$) apart on the Bloch sphere
+### the $a=b=1$ case
+here they want **different** answers
+- Bob's $t$ point is close to Alice's $|-\rangle$ point (the "1" answer of her $+/-$ basis)
+- so "Alice gets 1 and Bob gets 0" happens exactly as often as 2 points $\frac\pi4$ apart agree, which is 0.854
+- so they **disagree** with probability 0.854 too ✅
+### the general rule
+> [!important] the cos² rule
+> if Alice and Bob share the entangled state and measure 2 observables that are $\theta$ apart **on the Bloch sphere**
+> $$
+> P(\text{agree})=\cos^2\frac\theta2
+> $$
+
+| angle on the Bloch sphere | eg. | $P(\text{agree})$ |
+|---|---|---|
+| $0$ | same basis | $\cos^20=1$, always agree |
+| $\frac\pi4$ ($45^\circ$) | $0/1$ vs $s$ | $\cos^2\frac\pi8\approx0.854$ |
+| $\frac\pi2$ ($90^\circ$) | Alice $0/1$ vs Bob $+/-$ | $\cos^2\frac\pi4=\frac12$, like a coin flip |
+| $\pi$ ($180^\circ$) | opposite points | $\cos^2\frac\pi2=0$, never agree |
+
+(the lecture doesn't prove it. it's the same rule as $P(\text{same answer})=\cos^2(\theta_A-\theta_B)$ above, just with Bloch sphere angles, which are double)
 ## why it matters
 > [!important] quantum beats classical
 > no classical strategy can beat 75% (see [[CHSH game#the best classical strategy wins 75%]]), but sharing entanglement gets 85.4%. that's Bell's result: quantum mechanics can't be explained by any **local hidden variable** theory
 >
 > 85.4% is also the best any quantum strategy can do (called **Tsirelson's bound**)
+
+> [!note] from the lecture
+> - someone asked if this strategy is the best possible, and yes: you **can't** beat 0.854. the proof is harder than everything else here so the lecture skips it (it was proved by Tsirelson, the transcript mishears it as "Sir Olson")
+> - so the CHSH game is a game that Alice and Bob can win **more often with an entangled state than without one**, and that's what makes it useful as a test for entanglement (like in [[Ekert91]])
 
 see also [[CHSH game]], [[Quantum weirdness]], [[Ekert91]]

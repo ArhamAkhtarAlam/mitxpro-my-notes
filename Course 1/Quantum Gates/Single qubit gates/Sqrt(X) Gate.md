@@ -50,4 +50,5 @@ $$
 ## Where it's used
 > [!info] a "native" gate on real hardware
 > IBM's quantum computers build every single qubit gate out of just $\sqrt{\text X}$, X and $R_z$ (a [[Phase shift|z rotation]]). when you run a circuit, Qiskit rewrites your H, Y, etc. into these
+
 - it's a $\frac\pi2$ pulse, the quarter period of a [[Rabi oscillation]]
