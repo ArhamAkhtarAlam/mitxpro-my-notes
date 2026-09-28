@@ -25,7 +25,7 @@ $$
 
 so Alice and Bob want $S$ close to $2\sqrt2$. if Eve measures the photons she breaks the entanglement and $S$ drops to 2 or below
 > [!important] why this is extra safe
-> in [[BB84]] and [[BBM92]] you have to trust your equipment. in Ekert91 the Bell test proves the photons are entangled **no matter where they came from**, so even a source made by Eve can't fool it. this idea leads to "device independent" QKD
+> in [[BB84]] and [[BBM92]] you have to trust your equipment. in Ekert91 the Bell test proves the photons are entangled **no matter where they came from**, so even a source made by Eve can't fool it. this idea leads to "device independent" QKD (see [[Quantum hacking#fix 2, device independent (DI) QKD]])
 
 ```mermaid
 sequenceDiagram

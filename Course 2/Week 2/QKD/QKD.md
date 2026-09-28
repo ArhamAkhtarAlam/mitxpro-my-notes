@@ -30,5 +30,6 @@ flowchart LR
 | how Eve is caught | error rate | error rate | Bell test ([[CHSH game]]) |
 | needs a trusted source? | Alice is the source | yes | no, the Bell test checks it |
 ## in real life
+(more on this in Course 3: [[QKD in practice]], [[Quantum hacking]], [[QKD distance and key rate]])
 - photons get absorbed in optical fibre, so practical fibre QKD only reaches about 100 km (lab records go a few hundred km)
 - to go further you need [[Quantum repeaters|quantum repeaters]] (still being developed, see [[Long-distance quantum communication]]) or **satellites** (China's Micius satellite did QKD between ground stations over 1000 km apart)

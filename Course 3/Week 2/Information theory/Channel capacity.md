@@ -7,7 +7,7 @@ $$
 - $I(X;Y)$ is the **mutual information** (see [[Shannon entropy#mutual information]])
 - you pick the best possible way to send messages (the best distribution $p(x)$)
 - $C$ = the **maximum error free rate** you can send over the noisy channel (in bits per use)
-### example: binary symmetric channel
+### example (binary symmetric channel)
 for the [[Binary symmetric channel]] (flips the bit with probability $p$)
 $$
 C=1-H(p)

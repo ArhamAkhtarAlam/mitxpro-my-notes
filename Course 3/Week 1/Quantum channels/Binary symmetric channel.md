@@ -16,6 +16,6 @@ flowchart LR
 - the [[Depolarizing channel]] is like the quantum version because it also has no preferred basis (see [[Depolarizing channel#binary symmetric channel]])
 - the **bit flip channel** (apply [[X gate|X]] with probability $p$) is the most direct copy of it, but it only flips $|0\rangle\leftrightarrow|1\rangle$ so it does have a preferred basis
 
-its capacity is $1-H(p)$, see [[Channel capacity#example: binary symmetric channel]]
+its capacity is $1-H(p)$, see [[Channel capacity#example (binary symmetric channel)]]
 
 see also [[Quantum channels]]
