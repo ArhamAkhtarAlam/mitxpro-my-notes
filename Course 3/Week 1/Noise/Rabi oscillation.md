@@ -25,6 +25,13 @@ $$
 > [!tip] where gates come from
 > - stop the pulse after **a quarter period** → the Bloch vector stops on the equator → a $\frac\pi2$ pulse around $x$
 > - stop after **half a period** → it rotated $180^\circ$ around $x$ → an [[X gate]] ($\pi$ pulse)
+
+```mermaid
+flowchart LR
+    Z0["|0⟩<br/>start"] -- "quarter period<br/>(π/2 pulse)" --> Eq["equator<br/>superposition"] -- "another quarter<br/>(total: π pulse = X gate)" --> Z1["|1⟩"] -- "half more" --> Z0
+```
+(how long you leave the pulse on)
+
 ## with noise
 now add one type of noise: **amplitude noise on the control field**
 

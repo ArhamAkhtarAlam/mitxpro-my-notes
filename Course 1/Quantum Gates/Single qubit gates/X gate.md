@@ -39,6 +39,16 @@ $$
 flips the sphere upside down around the $x$ axis, so the north pole ($|0\rangle$) goes to the south pole ($|1\rangle$)
 
 $|+\rangle$ and $|-\rangle$ sit **on** the $x$ axis so they don't move at all (they're its [[Eigenvalues and eigenvectors|eigenvectors]])
+
+```mermaid
+flowchart LR
+    Z0["|0⟩"] -- "X" --> Z1["|1⟩"]
+    Z1 -- "X" --> Z0
+    P["|+⟩"] -- "X (no change)" --> P
+    M["|−⟩"] -- "X (only a −1 in front)" --> M
+```
+(what X does to each state)
+
 ## Properties
 - doing it twice undoes it: $\text X\text X=I$ (it's its own inverse)
 - eigenvalues $+1$ and $-1$ with eigenvectors $|+\rangle$ and $|-\rangle$

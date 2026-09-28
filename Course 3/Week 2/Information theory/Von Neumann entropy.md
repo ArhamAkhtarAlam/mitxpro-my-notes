@@ -8,6 +8,13 @@ $$
 $\lambda_k$ are the **[[Eigenvalues and eigenvectors|eigenvalues]]** of $\rho$ (the spectral unravelling from [[Density matrix#unraveling (going the other way)]])
 
 so it's just the Shannon entropy of the eigenvalues
+
+```mermaid
+flowchart LR
+    R["density matrix ρ"] --> E["find its eigenvalues λ"] --> H["Shannon entropy of the λs<br/>−Σ λ log₂ λ"] --> S["S(ρ) qubits"]
+```
+(how to calculate it)
+
 ## examples
 | state                                                                     | eigenvalues       | $S(\rho)$     |
 | ------------------------------------------------------------------------- | ----------------- | ------------- |

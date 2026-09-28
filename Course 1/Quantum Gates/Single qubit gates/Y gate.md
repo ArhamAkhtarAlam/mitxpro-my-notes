@@ -40,6 +40,15 @@ $$
 flips the sphere around the $y$ axis. $|0\rangle\to|1\rangle$ like an X, but it also flips $|+\rangle\leftrightarrow|-\rangle$ like a Z
 
 $|{+i}\rangle$ and $|{-i}\rangle$ sit on the $y$ axis so they don't move
+
+```mermaid
+flowchart LR
+    Z0["|0⟩"] -- "Y" --> Z1["|1⟩ (times i)"]
+    P["|+⟩"] -- "Y" --> M["|−⟩ (times −i)"]
+    Pi["|+i⟩"] -- "Y (no change)" --> Pi
+```
+(what Y does to each state)
+
 ## Properties
 - $\text Y\text Y=I$ (its own inverse)
 - eigenvalues $+1$ and $-1$ with eigenvectors $|{+i}\rangle$ and $|{-i}\rangle$

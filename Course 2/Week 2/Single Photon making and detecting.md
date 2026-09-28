@@ -4,6 +4,15 @@ There are two main methods for single photon generation
 - Attenuation(aka just making a coherent source of light less intense)
 - optically active quantum dot(aka just a crystal with some electron stuff)
 This is done so we can [[Polarization|polarize]] a single photon
+
+```mermaid
+flowchart TD
+    G["single photon sources"] --> A["dim laser (attenuation)<br/>cheap, but sometimes 0 or 2 photons"]
+    G --> Q["quantum dot<br/>one electron → one photon"]
+    G --> H["heralded SPDC<br/>detect one of a pair"]
+```
+(3 ways to get single photons)
+
 ## Attenuation
 Attenuation is making a coherent source of light sooo dim that it might just emit 1 photon (but it's kinda bad cuz most of the time no photons come, and sometimes 2 come at once)
 
@@ -31,6 +40,13 @@ another way: make a pair of photons with SPDC (see [[Entangled Photons generatio
 most of the time they use an **avalanche photodiode** (SPAD, single photon avalanche diode) like the picture below
 ![[Single photon detection.png]]
 so when a photon comes it makes an electron (-) and hole (+) pair, they get separated, and the electron speeds up and breaks more pairs which breaks even more pairs, an avalanche that makes a large current you can measure
+
+```mermaid
+flowchart LR
+    P["1 photon"] --> E["1 electron-hole pair"] --> A["electron speeds up<br/>(high voltage)"] --> M["knocks out more pairs"] --> M2["...and more"] --> C["big current → click"]
+```
+(the avalanche)
+
 ### what makes a detector good or bad
 | property | what it means | why it matters |
 |---|---|---|

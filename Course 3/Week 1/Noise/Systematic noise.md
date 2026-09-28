@@ -14,4 +14,9 @@ eg. you want to do an [[X gate]] but the control field isn't tuned right, so ins
 > [!success] good news
 > systematic errors can usually be **fixed** once you find them, with proper calibration or better hardware
 
+```mermaid
+flowchart LR
+    P["pulse always 188°<br/>instead of 180°"] --> R["repeat it n times"] --> E["error adds up: 8° × n"] --> C["find it + calibrate"] --> F["fixed ✓"]
+```
+
 see also [[Stochastic noise]]

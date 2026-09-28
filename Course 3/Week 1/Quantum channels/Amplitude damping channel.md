@@ -17,9 +17,9 @@ so the longer you wait the bigger $\gamma$ gets
 ```mermaid
 flowchart LR
     IN["qubit"] --> C{"amplitude<br/>damping"}
-    C -- "was |0⟩" --> A["stays |0⟩"]
-    C -- "was |1⟩<br/>probability 1−γ" --> B["stays |1⟩"]
-    C -- "was |1⟩<br/>probability γ" --> D["falls to |0⟩<br/>(energy goes to the environment)"]
+    C -- "was 0" --> A["stays |0⟩"]
+    C -- "was 1<br/>probability 1−γ" --> B["stays |1⟩"]
+    C -- "was 1<br/>probability γ" --> D["falls to |0⟩<br/>(energy goes to the environment)"]
 ```
 ## it's not a mixture of gates
 unlike [[Dephasing channel|dephasing]] and [[Depolarizing channel|depolarizing]] you **can't** write this as "apply some gate with some probability"

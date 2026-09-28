@@ -32,6 +32,16 @@ these two outputs have names: $|+\rangle$ and $|-\rangle$
 ## On the Bloch sphere
 ![[H_gate_bloch.png|500]]
 half a turn around the diagonal axis between $x$ and $z$. it swaps the $z$ axis and the $x$ axis, so it **switches between the $|0\rangle,|1\rangle$ basis and the $|+\rangle,|-\rangle$ basis**
+
+```mermaid
+flowchart LR
+    Z0["|0⟩"] -- "H" --> P["|+⟩"]
+    P -- "H" --> Z0
+    Z1["|1⟩"] -- "H" --> M["|−⟩"]
+    M -- "H" --> Z1
+```
+(H swaps the 2 bases)
+
 ## Properties
 - $\text H\text H=I$, so doing it twice gets you back where you started
 $$

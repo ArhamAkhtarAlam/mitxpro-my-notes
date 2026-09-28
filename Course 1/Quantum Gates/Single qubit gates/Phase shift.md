@@ -16,6 +16,13 @@ $$
 | T gate | $\frac\pi4$ | $\begin{bmatrix}1&0\\0&e^{i\pi/4}\end{bmatrix}$ |
 
 the $R_k$ gates in the [[Quantum Fourier Transform]] are phase shifts too, with $\varphi=\frac{2\pi}{2^k}$
+
+```mermaid
+flowchart LR
+    T["T = P(π/4)"] -- "×2" --> S["S = P(π/2)"] -- "×2" --> Z["Z = P(π)"] -- "×2" --> I["I = P(2π)"]
+```
+(doing a phase gate twice doubles the angle)
+
 ## Qiskit implementation
 ```python
 from qiskit import QuantumCircuit

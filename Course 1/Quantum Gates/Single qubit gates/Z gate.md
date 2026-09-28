@@ -39,6 +39,16 @@ $$
 ## On the Bloch sphere
 ![[Z_gate_bloch.png|500]]
 spins the sphere half a turn around the $z$ axis. $|0\rangle$ and $|1\rangle$ are on that axis so they **don't move**, but $|+\rangle\to|-\rangle$ (that's why you only see it in superpositions)
+
+```mermaid
+flowchart LR
+    Z0["|0⟩"] -- "Z (no change)" --> Z0
+    Z1["|1⟩"] -- "Z (only a −1 in front)" --> Z1
+    P["|+⟩"] -- "Z" --> M["|−⟩"]
+    M -- "Z" --> P
+```
+(what Z does to each state)
+
 ## Properties
 - $\text Z\text Z=I$ (its own inverse)
 - eigenvalues $+1$ and $-1$ with eigenvectors $|0\rangle$ and $|1\rangle$. that's why "measuring $\sigma_z$" means measuring in the $|0\rangle,|1\rangle$ basis

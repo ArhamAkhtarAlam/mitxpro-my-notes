@@ -15,6 +15,12 @@ examples
 > - energy loss from phonon or photon emission
 > - noise coming in and out of the control line
 > - and many many more
+
+```mermaid
+flowchart LR
+    S["noise source<br/>(heat, charges, fields...)"] --> F["random fluctuation<br/>of a parameter"] --> Q["qubit's energy / control<br/>wobbles randomly"] --> D["decoherence"]
+```
+
 ## example: amplitude noise on the control field
 the noisy Rabi oscillation in [[Rabi oscillation#with noise|Rabi oscillation]] is an example of stochastic noise. the control field amplitude fluctuates randomly, so the Rabi frequency does too, and the oscillation decays
 

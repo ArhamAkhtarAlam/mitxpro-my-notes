@@ -42,6 +42,12 @@ $$
 A\begin{bmatrix}1\\-1\end{bmatrix}=\begin{bmatrix}1\\-1\end{bmatrix}=1\begin{bmatrix}1\\-1\end{bmatrix}
 $$
 exactly the same → eigenvector with **eigenvalue 1**
+
+```mermaid
+flowchart LR
+    A["matrix A"] --> D["solve det(A − λI) = 0"] --> L["eigenvalues λ"] --> P["plug each λ into (A − λI)v = 0"] --> V["eigenvectors v"]
+```
+
 ## how to find them
 > [!example]- step by step
 > **1. find the eigenvalues:** solve

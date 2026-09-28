@@ -24,6 +24,17 @@ every single qubit [[Quantum gate|quantum gate]] just rotates the sphere
 - [[Hadamard Gate]] → $180^\circ$ around the axis halfway between $x$ and $z$ (swaps $|0\rangle\leftrightarrow|+\rangle$)
 - [[Sqrt(X) Gate]] → $90^\circ$ around $x$
 - [[Phase shift]] → $\varphi$ around $z$
+
+```mermaid
+flowchart LR
+    Z0["|0⟩ top"] -- "X" --> Z1["|1⟩ bottom"]
+    Z0 -- "H" --> P["|+⟩ front"]
+    Z1 -- "H" --> M["|−⟩ back"]
+    P -- "Z" --> M
+    Z0 -- "√X" --> Mi["|−i⟩ left"]
+```
+(how the gates move you between the main states)
+
 ## Inside the sphere
 - **surface** → pure states
 - **inside** → mixed states ([[Density matrix]])

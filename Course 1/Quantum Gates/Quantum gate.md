@@ -10,6 +10,20 @@ Every quantum gate is a [[Unitary Operation]] so it can be written as a matrix
 On the [[Bloch sphere]] a single qubit gate is just a **rotation** of the sphere
 > [!important] quantum gates are always reversible
 > because they're unitary you can always undo them (apply $U^\dagger$). normal gates like AND aren't reversible, if AND gives 0 you can't tell what went in
+
+```mermaid
+flowchart TD
+    G["quantum gates"] --> S["single qubit"]
+    G --> M["multi qubit"]
+    S --> Pa["Pauli: X, Y, Z"]
+    S --> Ha["Hadamard H"]
+    S --> Ph["phase: P(φ), S, T"]
+    S --> Sx["√X"]
+    M --> Co["controlled: CNOT, CZ, Toffoli"]
+    M --> Sw["SWAP"]
+```
+(the gate family tree)
+
 ## Single qubit gates
 - [[Identity gate]]
 - [[X gate]]

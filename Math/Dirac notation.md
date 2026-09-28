@@ -35,6 +35,13 @@ this is what the [[Density matrix]] is built from: $\rho=\sum_kp_k|\psi_k\rangle
 (trick: $|i\rangle\langle j|$ puts a 1 in row $i$, column $j$)
 ## sandwiches $\langle\psi|A|\psi\rangle$
 bra × matrix × ket = one number. it's the **average result** (expectation value) if you measure $A$ on $|\psi\rangle$, see [[Probability and expectation values]]
+
+```mermaid
+flowchart LR
+    Br["bra ⟨φ|<br/>(row)"] -- "then ket" --> N["⟨φ|ψ⟩<br/>a number"]
+    K["ket |ψ⟩<br/>(column)"] -- "then bra" --> Mx["|ψ⟩⟨φ|<br/>a matrix"]
+```
+
 ## cheat sheet
 | you see | it is | size |
 |---|---|---|

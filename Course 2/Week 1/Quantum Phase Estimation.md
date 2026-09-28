@@ -16,5 +16,11 @@ $$
 \theta\approx\frac{k}{2^n}
 $$
 more counting qubits = more precise $\theta$ (see [[Quantum Fourier Transform#Phase Resolution]])
+
+```mermaid
+flowchart LR
+    A["n counting qubits<br/>all |0⟩"] --> H["H on all"] --> C["qubit j controls U^(2^j)<br/>(phase kicks back)"] --> Q["inverse QFT"] --> M["measure → k"] --> T["θ ≈ k / 2ⁿ"]
+```
+
 ## Why it matters
 [[Shor's algorithm]] is basically QPE: the [[Order finding algorithm|order finding]] part runs QPE on $U|y\rangle=|ay \bmod N\rangle$ (the [[Modular Exponentiation]] gate). its phases are $\theta=\frac sr$, so measuring $\theta$ lets you find the order $r$

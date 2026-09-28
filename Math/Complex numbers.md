@@ -38,6 +38,13 @@ $$
 - $e^{i\pi}=-1$, $e^{i\pi/2}=i$, $e^{i2\pi}=1$
 
 any complex number can be written as $z=|z|\,e^{i\varphi}$ (a size and an angle)
+
+```mermaid
+flowchart LR
+    A["amplitude α<br/>(complex)"] --> C["conjugate α*"] --> M["α α* = |α|²"] --> P["probability ✓<br/>(real, ≥ 0)"]
+```
+(from amplitude to probability)
+
 ## where it shows up
 - **amplitudes** of a qubit, eg. $\frac1{\sqrt2}(|0\rangle+i|1\rangle)$ (that's $|{+i}\rangle$ on the [[Bloch sphere]])
 - **phase gates** like the [[Z gate]] ($e^{i\pi}=-1$) and [[Phase shift]] ($e^{i\varphi}$)

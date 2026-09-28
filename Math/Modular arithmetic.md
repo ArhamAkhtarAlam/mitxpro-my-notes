@@ -32,6 +32,12 @@ keep multiplying by $a$ in mod $N$ and it eventually **repeats**. the number of 
 eg. $a=2,\ N=15$: $1\to2\to4\to8\to16\equiv1$, so $r=4$
 
 this is exactly what the [[Order finding algorithm]] finds, and it's the heart of [[Shor's algorithm]] (using [[Modular Exponentiation]])
+
+```mermaid
+flowchart LR
+    A["1"] -- "×2" --> B["2"] -- "×2" --> C["4"] -- "×2" --> D["8"] -- "×2 = 16 ≡ 1" --> A
+```
+
 ## gcd
 $\gcd(a,N)$ = the biggest number that divides both. [[Shor's algorithm]] needs $\gcd(a,N)=1$, and at the end it uses $\gcd(a^{r/2}\pm1,\,N)$ to get the factors
 

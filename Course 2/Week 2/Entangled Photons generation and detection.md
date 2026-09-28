@@ -20,6 +20,17 @@ one of the 4 Bell states (see [[CNOT gate#Example (making a Bell state)]]). tilt
 
 > [!note] it's rare
 > only a tiny fraction of pump photons actually split (around 1 in a billion or even fewer), so you need a strong laser to get a useful number of pairs
+
+```mermaid
+flowchart LR
+    L["pump laser"] --> B["BBO crystal<br/>(SPDC)"]
+    B --> S["photon A"] --> PA["polarizing<br/>beamsplitter"] --> DA["detectors A"]
+    B --> I["photon B"] --> PB["polarizing<br/>beamsplitter"] --> DB["detectors B"]
+    DA --> C["coincidence counter<br/>(both click together?)"]
+    DB --> C
+```
+(the whole setup)
+
 ## Detection 
 to detect entangled pairs we use a [[Beamsplitters|polarizing beamsplitter]] for each photon, then a [[Single Photon making and detecting|single photon detector]] on each output
 

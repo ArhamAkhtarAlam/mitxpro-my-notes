@@ -23,6 +23,16 @@ That is what makes the quantum nature
 (a [[Beamsplitters|polarizing beamsplitter]] is similar but instead of blocking one polarization it sends each one a different way)
 
 Also if you choose two states that are $90^\circ$ degrees apart you can make it into a $|0\rangle$ and the other $|1\rangle$ and the Diagonal would be a like a [[Hadamard Gate]] operation on a regular $|0\rangle$ and the Antidiagonal would be the same as the Diagonal but with a [[Phase shift]] or [[Hadamard Gate]] on state $|1\rangle$ 
+
+```mermaid
+flowchart LR
+    Ph["photon"] --> Pol{"H polarizer"}
+    Pol -- "was H" --> Th["always through"]
+    Pol -- "was V" --> Bl["always blocked"]
+    Pol -- "was D or A" --> Coin["50/50"] --> Out["if through: now |H⟩"]
+```
+(what happens at a horizontal (H) polarizer)
+
 ## Polarization as a qubit
 a single photon's polarization **is** a qubit
 

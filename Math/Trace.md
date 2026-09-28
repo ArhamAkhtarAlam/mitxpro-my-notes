@@ -20,6 +20,12 @@ eg. $\text{tr}\begin{bmatrix}\frac34&0\\0&\frac14\end{bmatrix}=\frac34+\frac14=1
 $\langle A\rangle=\text{tr}(\rho A)$ is the average result of measuring $A$, see [[Probability and expectation values]]
 ### von Neumann entropy
 $S(\rho)=-\text{tr}(\rho\log_2\rho)$, see [[Von Neumann entropy]]
+
+```mermaid
+flowchart LR
+    AB["ρ_AB<br/>(A and B together)"] -- "tr_B<br/>(throw B away)" --> A["ρ_A<br/>(what A sees on its own)"]
+```
+
 ## the partial trace
 for a 2 part state (A and B), the **partial trace** $\text{tr}_B$ throws away B and tells you what's left for A
 $$

@@ -60,6 +60,12 @@ U^x\,|1\rangle = |2^x \bmod 15\rangle
 $$
 In the circuit, each qubit $x_j$ of the first register controls $U^{2^j}$, so together they apply $U^x$.
 
+```mermaid
+flowchart LR
+    A["1 = |0⟩"] -- "×2" --> B["2 = |1⟩"] -- "×2" --> C["4 = |2⟩"] -- "×2" --> D["8 = |3⟩"] -- "×2 (16 mod 15)" --> A
+```
+(the multiply by 2 gate goes round in a loop)
+
 ## Actual Matrix Representation
 
 In the relabeled basis $|0\rangle,|1\rangle,|2\rangle,|3\rangle$ the gate is the matrix

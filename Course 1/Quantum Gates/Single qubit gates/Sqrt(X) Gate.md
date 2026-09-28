@@ -43,6 +43,13 @@ $$
 (the $\frac{1+i}2$ in front is just a global phase)
 
 2 quarter turns = a half turn = [[X gate]] ✅
+
+```mermaid
+flowchart LR
+    Z0["|0⟩"] -- "√X" --> Mi["|−i⟩"] -- "√X" --> Z1["|1⟩"] -- "√X" --> Pi["|+i⟩"] -- "√X" --> Z0
+```
+(each √X is a quarter turn, so 4 of them bring you back)
+
 ## Properties
 - $\sqrt{\text X}\sqrt{\text X}=\text X$
 - $\sqrt{\text X}$ undone by $\sqrt{\text X}^\dagger$ (a quarter turn the other way)

@@ -36,6 +36,13 @@ the **inverse** Fourier transform rebuilds the curve from its frequencies, nothi
 $$
 x(t)=\frac1{2\pi}\int_{-\infty}^{\infty}X(\omega)\,e^{i\omega t}\,d\omega
 $$
+
+```mermaid
+flowchart LR
+    S["signal x(t)"] -- "Fourier transform<br/>(multiply by e^−iωt, integrate)" --> X["spectrum X(ω)"]
+    X -- "inverse transform" --> S
+```
+
 ## Why it matters for quantum
 > [!important] repeating signals → sharp spikes
 > if a signal **repeats** every $r$ steps, its Fourier transform only has spikes at multiples of $\frac1r$. so the Fourier transform is a way to **find the period** of something

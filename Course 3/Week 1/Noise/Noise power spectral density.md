@@ -50,6 +50,14 @@ strictly these have to be true for **all orders** of the statistics, but we only
 > [!note] wide sense stationary (weak stationarity)
 > - the mean is constant in time
 > - the autocorrelation depends only on $\tau$
+
+```mermaid
+flowchart LR
+    X["measure x(t)"] --> A["autocorrelation<br/>⟨x(t) x(t+τ)⟩"] -- "Fourier transform" --> S["power spectral density S(ω)"]
+    S -- "inverse" --> A
+```
+(from measurements to a spectrum)
+
 ## Wiener–Khinchin theorem
 for a wide sense stationary process: **the autocorrelation function and the power spectral density are a [[Fourier Transform]] pair**
 

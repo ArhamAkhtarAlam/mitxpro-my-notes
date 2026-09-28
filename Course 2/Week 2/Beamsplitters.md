@@ -28,6 +28,17 @@ put a detector on each output and **only one** clicks, 50/50 at random. it's a r
 > B=\frac1{\sqrt2}\begin{bmatrix}1&i\\i&1\end{bmatrix}
 > $$
 > it's [[Unitary Operation|unitary]] like any gate, so a beamsplitter is basically a quantum gate for photons
+
+```mermaid
+flowchart LR
+    P["1 photon"] --> BS{"50:50<br/>beamsplitter"}
+    BS -- "50%" --> D1["detector 1 clicks"]
+    BS -- "50%" --> D2["detector 2 clicks"]
+    D1 --> O["only ever one of them,<br/>never both"]
+    D2 --> O
+```
+(one photon, two paths)
+
 ## A polarizing beamsplitter is a measurement
 put a single photon detector on each output of a polarizing beamsplitter and you've **measured the polarization** in the H/V basis
 - detector 1 clicks → $|H\rangle$ (= 0)

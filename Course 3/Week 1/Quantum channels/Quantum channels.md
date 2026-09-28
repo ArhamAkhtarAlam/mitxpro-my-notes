@@ -30,6 +30,17 @@ the fully general version is a **completely positive trace preserving map** (CPT
 - generalized amplitude damping channel
 - phase damping channel
 - erasure channel
+
+```mermaid
+flowchart TD
+    C["quantum channels"] --> P["mixtures of gates<br/>(keep the center fixed)"]
+    C --> NU["not mixtures of gates<br/>(move the center)"]
+    P --> Dp["dephasing: Z"]
+    P --> Bf["bit flip: X"]
+    P --> Dl["depolarizing: X, Y, Z"]
+    NU --> Ad["amplitude damping: energy loss"]
+```
+
 ## what the Bloch sphere squishing actually means
 every point on the [[Bloch sphere]] is a state, but where the point is tells you how "quantum" it is
 - **on the surface** → a **pure** state, you know exactly what state you have (full quantum information)

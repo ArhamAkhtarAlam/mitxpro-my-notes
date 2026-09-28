@@ -25,6 +25,17 @@ $$
 > - $a^{r/2}\equiv-1\pmod N$ → the gcd just gives $1$ or $N$
 >
 > then just pick a different $a$ and try again. at least half of all $a$ values work, so it doesn't take many tries
+
+```mermaid
+flowchart TD
+    R["order r"] --> E{"r even?"}
+    E -- "no" --> T["try another a"]
+    E -- "yes" --> M{"a^(r/2) ≡ −1 mod N?"}
+    M -- "yes" --> T
+    M -- "no" --> F["factors = gcd(a^(r/2) ± 1, N)"]
+```
+(from the order to the factors)
+
 ## how the quantum part finds $r$
 1. make the gate $U|y\rangle=|a\,y\bmod N\rangle$ (multiply by $a$, see [[Modular Exponentiation]])
 2. its [[Eigenvalues and eigenvectors|eigenvalues]] are $e^{2\pi i\,s/r}$ for $s=0,1,\ldots,r-1$, so $r$ is hiding in the **phase**

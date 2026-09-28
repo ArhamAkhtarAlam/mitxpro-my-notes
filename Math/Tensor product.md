@@ -23,6 +23,15 @@ the 4 spots are $|00\rangle,|01\rangle,|10\rangle,|11\rangle$ in that order
 same idea with matrices: $A\otimes B$ means "do $A$ on the first qubit and $B$ on the second"
 
 eg. [[Hadamard Gate|H]] on qubit 1 and nothing on qubit 2 is $H\otimes I$
+
+```mermaid
+flowchart LR
+    A["qubit A"] --> T{"⊗"}
+    B["qubit B"] --> T
+    T --> P["product state<br/>(can be split back)"]
+    E["entangled state"] --> X["can't be split into<br/>A ⊗ B ✗"]
+```
+
 ## entanglement
 > [!important] entangled = can't be split
 > some 2 qubit states **can** be written as (qubit 1) $\otimes$ (qubit 2), like $|0\rangle\otimes|+\rangle$. these are **product states**

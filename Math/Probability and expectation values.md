@@ -27,6 +27,12 @@ $$
 > - $|+\rangle$ → half $+1$ half $-1$ → $\langle\sigma_z\rangle=0$
 >
 > this is exactly the $\langle Z\rangle$ that goes up and down in a [[Rabi oscillation]]
+
+```mermaid
+flowchart LR
+    S["prepare |ψ⟩"] --> M["measure A<br/>(get +1 or −1)"] --> R["repeat lots of times"] --> Av["average"] --> E["⟨A⟩"]
+```
+
 ## log₂
 used in [[Shannon entropy]] and [[Von Neumann entropy]]. $\log_2x$ asks "2 to the power of **what** gives $x$?"
 

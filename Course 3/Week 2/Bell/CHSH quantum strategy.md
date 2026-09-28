@@ -57,6 +57,18 @@ they output $0$ for the first basis state and $1$ for the other one (the $+1$ an
 
 > [!info] what the lecture gives
 > the lecture gives Bob's $b=0$ measurement as the observable $\frac1{\sqrt2}(\sigma_x+\sigma_z)$, which is exactly the $s$ basis at $+22.5^\circ$. it doesn't write out $t$, but $\frac1{\sqrt2}(\sigma_z-\sigma_x)$ at $-22.5^\circ$ is the mirror image and the standard choice (checked numerically)
+
+```mermaid
+flowchart LR
+    Ra["referee bit a"] --> A{"Alice"}
+    A -- "a = 0" --> Az["measure σz"]
+    A -- "a = 1" --> Ax["measure σx"]
+    Rb["referee bit b"] --> B{"Bob"}
+    B -- "b = 0" --> Bs["measure s<br/>(σx + σz)/√2"]
+    B -- "b = 1" --> Bt["measure t<br/>(σz − σx)/√2"]
+```
+(who measures what)
+
 ### working it out with expectation values ($a=0$, $b=0$)
 **1.** Alice gets $a=0$ so she measures $\sigma_z$. say she gets $0$, then Bob's qubit is $|0\rangle$ (same measurement → same answer)
 

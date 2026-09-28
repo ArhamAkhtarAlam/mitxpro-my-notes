@@ -8,6 +8,13 @@ used at the end of the [[Quantum Fourier Transform]] to put the qubits back in t
 $$
 \text{SWAP}=\begin{bmatrix}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\end{bmatrix}
 $$
+
+```mermaid
+flowchart LR
+    A["CNOT<br/>q0 controls q1"] --> B["CNOT<br/>q1 controls q0"] --> C["CNOT<br/>q0 controls q1"] --> D["= SWAP"]
+```
+(building a SWAP out of CNOTs)
+
 ## Qiskit implementation
 ```python
 from qiskit import QuantumCircuit

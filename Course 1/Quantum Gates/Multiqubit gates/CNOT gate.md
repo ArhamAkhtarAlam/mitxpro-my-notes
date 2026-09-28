@@ -5,6 +5,13 @@ It is a [[Quantum gate|quantum gate]] on 2 qubits: a **control** and a **target*
 - control is $|1\rangle$ → apply an [[X gate]] to the target (flip it)
 
 it's the main way to make **entanglement**: [[Hadamard Gate]] on the control then CNOT gives $\frac1{\sqrt2}(|00\rangle+|11\rangle)$
+
+```mermaid
+flowchart LR
+    C{"control qubit?"} -- "control = 0" --> N["do nothing"]
+    C -- "control = 1" --> F["flip the target (X)"]
+```
+
 ## Matrix
 (order $|\text{control},\text{target}\rangle$)
 $$

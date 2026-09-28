@@ -19,6 +19,14 @@ $$
 0&0&0&0&0&0&1&0
 \end{bmatrix}
 $$
+
+```mermaid
+flowchart LR
+    C{"both controls |1⟩?"} -- "yes" --> F["flip the target"]
+    C -- "no" --> N["do nothing"]
+    F --> R["target starts |0⟩ → ends as c1 AND c2"]
+```
+
 ## Qiskit implementation
 ```python
 from qiskit import QuantumCircuit

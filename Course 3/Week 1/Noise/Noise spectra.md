@@ -33,6 +33,15 @@ for noise at the qubit frequency $\omega_q$ (which can exchange energy with the 
 > but a zero temperature environment can't push the qubit up from $|0\rangle$ to $|1\rangle$, it has no energy to give. that's why there's nothing on the negative side
 ### Johnson–Nyquist noise
 Johnson (classical, both directions) + Nyquist (the extra spontaneous emission part) together
+
+```mermaid
+flowchart LR
+    N["noise S(ω)"] --> L["near ω = 0<br/>(slow, low frequency)"] --> DP["dephasing (T2)"]
+    N --> Q["at the qubit frequency ±ωq"] --> T1["energy exchange (T1)"]
+    T1 --> Em["+ωq: qubit emits"]
+    T1 --> Ab["−ωq: qubit absorbs"]
+```
+
 ## which noise causes what
 | noise | where in the spectrum | what it does |
 |---|---|---|

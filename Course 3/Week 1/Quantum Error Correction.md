@@ -13,6 +13,12 @@ $$
 if one bit flips ($000\to010$) you take a **majority vote** and still get $0$
 
 this protects against the [[Binary symmetric channel]] as long as only 1 of the 3 bits flips
+
+```mermaid
+flowchart LR
+    A["bit 0"] --> E["encode: 000"] --> N["noisy channel"] --> R["receive: 010"] --> V["majority vote"] --> O["0 ✓"]
+```
+
 ## Why quantum is harder
 - **can't copy** a qubit (no-cloning theorem), so you can't just send $|\psi\rangle|\psi\rangle|\psi\rangle$
 - **measuring destroys** superpositions, so you can't just look at the qubits to check for errors

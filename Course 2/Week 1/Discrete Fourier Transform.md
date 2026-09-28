@@ -48,6 +48,15 @@ $$
 r=\frac{N}{\text{spacing}}=\frac82=4
 $$
 this is exactly what happens inside [[Shor's algorithm]]
+
+```mermaid
+flowchart LR
+    F["Fourier transform<br/>(continuous)"] -- "sample the curve" --> D["DFT<br/>(N points)"]
+    D -- "clever classical trick" --> FFT["FFT<br/>N log N steps"]
+    D -- "on qubit amplitudes" --> Q["QFT<br/>about (log N)² gates"]
+```
+(how the Fourier transforms are related)
+
 ## How fast is it?
 | | steps |
 |---|---|
