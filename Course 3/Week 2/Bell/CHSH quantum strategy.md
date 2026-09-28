@@ -135,12 +135,12 @@ here they want **different** answers
 > P(\text{agree})=\cos^2\frac\theta2
 > $$
 
-| angle on the Bloch sphere | eg. | $P(\text{agree})$ |
-|---|---|---|
-| $0$ | same basis | $\cos^20=1$, always agree |
-| $\frac\pi4$ ($45^\circ$) | $0/1$ vs $s$ | $\cos^2\frac\pi8\approx0.854$ |
-| $\frac\pi2$ ($90^\circ$) | Alice $0/1$ vs Bob $+/-$ | $\cos^2\frac\pi4=\frac12$, like a coin flip |
-| $\pi$ ($180^\circ$) | opposite points | $\cos^2\frac\pi2=0$, never agree |
+| angle on the Bloch sphere | eg.                      | $P(\text{agree})$                           |
+| ------------------------- | ------------------------ | ------------------------------------------- |
+| $0$                       | same basis               | $\cos^20=1$, always agree                   |
+| $\frac\pi4$ ($45^\circ$)  | $0/1$ vs $s$             | $\cos^2\frac\pi8\approx0.854$               |
+| $\frac\pi2$ ($90^\circ$)  | Alice $0/1$ vs Bob $+/-$ | $\cos^2\frac\pi4=\frac12$, like a coin flip |
+| $\pi$ ($180^\circ$)       | opposite points          | $\cos^2\frac\pi2=0$, never agree            |
 
 (the lecture doesn't prove it. it's the same rule as $P(\text{same answer})=\cos^2(\theta_A-\theta_B)$ above, just with Bloch sphere angles, which are double)
 ## why it matters

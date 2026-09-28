@@ -17,6 +17,8 @@ for a lot of these, **entanglement** is the resource that makes it better, when 
 - [[Quantum weirdness]] → the EPR paper, entanglement and Bell
 - [[CHSH game]] → Bell's argument as a game, classical max 75%
 - [[CHSH quantum strategy]] → winning 85.4% with an [[Entangled Photons generation and detection|entangled pair]]
+- [[Long-distance quantum communication]] → why we can't amplify photons, fibre loss, the quantum internet
+- [[Quantum repeaters]] → error correction nodes, BDCZ, DLCZ and entanglement swapping
 ## classical vs quantum communication
 ### classical
 ```mermaid
