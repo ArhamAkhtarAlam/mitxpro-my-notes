@@ -19,7 +19,7 @@ for a lot of these, **entanglement** is the resource that makes it better, when 
 - [[CHSH quantum strategy]] → winning 85.4% with an [[Entangled Photons generation and detection|entangled pair]]
 - [[Long-distance quantum communication]] → why we can't amplify photons, fibre loss, the quantum internet
 - [[Quantum repeaters]] → error correction nodes, BDCZ, DLCZ and entanglement swapping
-- [[QKD in practice]] → [[Quantum hacking]], [[QKD distance and key rate]], [[Floodlight QKD]]
+- [[QKD in practice]] → [[Quantum hacking]], [[QKD distance and key rate]], [[Floodlight QKD]], [[Increasing the key rate]]
 ## classical vs quantum communication
 ### classical
 ```mermaid
