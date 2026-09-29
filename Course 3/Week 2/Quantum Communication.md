@@ -20,6 +20,7 @@ for a lot of these, **entanglement** is the resource that makes it better, when 
 - [[Long-distance quantum communication]] → why we can't amplify photons, fibre loss, the quantum internet
 - [[Quantum repeaters]] → error correction nodes, BDCZ, DLCZ and entanglement swapping
 - [[QKD in practice]] → [[Quantum hacking]], [[QKD distance and key rate]], [[Floodlight QKD]], [[Increasing the key rate]]
+- [[Entanglement as a resource]] → the entanglement deep dive: ebits, LOCC, asymptotic equivalence
 ## classical vs quantum communication
 ### classical
 ```mermaid
