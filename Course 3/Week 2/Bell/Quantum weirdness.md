@@ -19,7 +19,7 @@ suppose Alice and Bob share a pair of [[Entangled Photons generation and detecti
 $$
 \frac{1}{\sqrt2}(|01\rangle-|10\rangle)
 $$
-(this is one of the 4 **Bell states**, the one called the **singlet**. you can make it from $|11\rangle$ with a [[Hadamard Gate]] on the first qubit and then a [[CNOT gate]])
+(this is one of the 4 **[[Bell states]]**, the one called the **singlet**. you can make it from $|11\rangle$ with a [[Hadamard Gate]] on the first qubit and then a [[CNOT gate]])
 
 ![[EPR_setup.png]]
 

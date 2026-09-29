@@ -1,7 +1,7 @@
 #shors_algorithm
 Uses quantum [[Order finding algorithm|order finding]] to find the factors of an integer $N$
 ## Why it matters
-most internet security (**RSA**) is safe because multiplying 2 big primes is easy, but **un**-multiplying (factoring) the answer is insanely hard for normal computers
+most internet security (**[[RSA]]**) is safe because multiplying 2 big primes is easy, but **un**-multiplying (factoring) the answer is insanely hard for normal computers
 
 Shor's algorithm factors numbers **exponentially faster**, so a big enough quantum computer could break RSA
 
@@ -11,7 +11,7 @@ Shor's algorithm factors numbers **exponentially faster**, so a big enough quant
 | Shor's algorithm | about $n^3$ (a normal polynomial) |
 
 > [!info] how close is it?
-> the biggest numbers factored with Shor's on real quantum computers are still tiny (like 15 and 21). breaking real 2048 bit RSA needs around a million noisy qubits or more, way more than exists today. that's why people are already switching to "post-quantum" cryptography, and why [[QKD]] is interesting
+> the biggest numbers factored with Shor's on real quantum computers are still tiny (like 15 and 21). breaking real 2048 bit RSA needs around a million noisy qubits or more, way more than exists today. that's why people are already switching to "[[Post-quantum cryptography|post-quantum]]" cryptography, and why [[QKD]] is interesting
 ## The big picture
 most of Shor's algorithm is **classical**, only the order finding needs a quantum computer
 ```mermaid

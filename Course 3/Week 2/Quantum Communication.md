@@ -9,9 +9,9 @@ quantum communication can beat classical communication (**quantum advantage**) f
 for a lot of these, **entanglement** is the resource that makes it better, when it's shared between 2 or more people
 > [!info] this week
 > the practical problems with real quantum communication
-> - Bell states and a game based on Bell's argument (an inequality classical probability has to follow but quantum mechanics breaks)
+> - [[Bell states]] and a game based on Bell's argument (an inequality classical probability has to follow but quantum mechanics breaks)
 > - sending entanglement over long distances, using **repeaters** to deal with photon loss, and other ways to do long distance QKD
-> - a deep dive into entanglement: how to write it mathematically, how to measure it, and its **fungibility**
+> - a deep dive into entanglement: how to write it mathematically, how to measure it, and its **[[Entanglement fungibility|fungibility]]**
 ## this week's notes
 - [[Shannon entropy]], [[Von Neumann entropy]], [[Channel capacity]] → information theory
 - [[Quantum weirdness]] → the EPR paper, entanglement and Bell
@@ -20,7 +20,7 @@ for a lot of these, **entanglement** is the resource that makes it better, when 
 - [[Long-distance quantum communication]] → why we can't amplify photons, fibre loss, the quantum internet
 - [[Quantum repeaters]] → error correction nodes, BDCZ, DLCZ and entanglement swapping
 - [[QKD in practice]] → [[Quantum hacking]], [[QKD distance and key rate]], [[Floodlight QKD]], [[Increasing the key rate]]
-- [[Entanglement as a resource]] → the entanglement deep dive: ebits, LOCC, asymptotic equivalence
+- [[Entanglement as a resource]] → the entanglement deep dive: ebits, [[LOCC]], asymptotic equivalence
 ## classical vs quantum communication
 ### classical
 ```mermaid

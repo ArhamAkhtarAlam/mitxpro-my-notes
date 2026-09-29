@@ -25,7 +25,7 @@ flowchart LR
 
 (real fibre is worse than ideal because of bends, connectors and splices)
 
-and since there are no quantum amplifiers (no-cloning, see [[Long-distance quantum communication]]), the key rate is **fundamentally limited** by how much of the channel's light gets through. fixes like [[Quantum repeaters]] are still a few years away
+and since there are no quantum amplifiers ([[No-cloning theorem|no-cloning]], see [[Long-distance quantum communication]]), the key rate is **fundamentally limited** by how much of the channel's light gets through. fixes like [[Quantum repeaters]] are still a few years away
 ## strategy 1: wavelength division multiplexing (WDM)
 one fibre can carry lots of **colours** (wavelengths) of light at once without them mixing, so run several QKD systems side by side, one colour each
 ```mermaid

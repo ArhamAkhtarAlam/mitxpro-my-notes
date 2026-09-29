@@ -7,10 +7,10 @@ QKD or quantum key distribution is a method to securely exchange a key, and if a
 ## why it's secure
 normal encryption is safe because some maths problem is **hard** (like factoring, which [[Shor's algorithm]] could break). QKD is safe because of **physics**
 - **measuring disturbs**: if Eve measures a photon in the wrong basis she changes it, which causes errors Alice and Bob can spot
-- **no-cloning theorem**: you can't make a perfect copy of an unknown quantum state, so Eve can't secretly copy the photon and measure the copy
+- **[[No-cloning theorem|no-cloning theorem]]**: you can't make a perfect copy of an unknown quantum state, so Eve can't secretly copy the photon and measure the copy
 - **entanglement is private**: if Alice and Bob's photons are strongly entangled (they beat the classical limit in the [[CHSH game]]), nobody else can be correlated with them
 > [!note] QKD only makes the key
-> QKD just gives Alice and Bob the same secret random key. they then use it to encrypt their actual message with normal encryption (with a key as long as the message, a "one time pad", it's unbreakable)
+> QKD just gives Alice and Bob the same secret random key. they then use it to encrypt their actual message with normal encryption (with a key as long as the message, a "[[One-time pad|one time pad]]", it's unbreakable)
 ## the steps every method shares
 ```mermaid
 flowchart LR

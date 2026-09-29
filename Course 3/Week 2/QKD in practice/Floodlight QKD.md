@@ -37,7 +37,7 @@ $$
 \text{processing gain}=\text{optical bandwidth}\times\text{Bob's bit time}
 $$
 > [!important] why a listening Eve can't read it
-> the light Eve can grab from the Alice → Bob fibre is **too dim** to use as a reference for coherent detection, and the no-cloning theorem stops her turning it into a bright copy. without Alice's bright reference, Bob's bits just look like noise to her
+> the light Eve can grab from the Alice → Bob fibre is **too dim** to use as a reference for coherent detection, and the [[No-cloning theorem|no-cloning theorem]] stops her turning it into a bright copy. without Alice's bright reference, Bob's bits just look like noise to her
 ## the numbers
 2 × 50 km of fibre (there and back), Alice's light is 2 THz wide, Bob sends 10 Gbit/s, and his amplifier has 40 dB gain (×10,000)
 ```mermaid

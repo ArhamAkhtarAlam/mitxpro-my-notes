@@ -24,12 +24,12 @@ the fully general version is a **completely positive trace preserving map** (CPT
 > [!note]
 > dephasing and depolarizing are the 2 main ones we'll use in the course
 ### other channels
-- bit flip channel
-- bit-phase flip channel
-- Pauli channel
-- generalized amplitude damping channel
-- phase damping channel
-- erasure channel
+- [[Bit flip channel]]
+- [[Bit-phase flip channel]]
+- [[Pauli channel]]
+- [[Generalized amplitude damping channel]]
+- [[Phase damping channel]]
+- [[Erasure channel]]
 
 ```mermaid
 flowchart TD

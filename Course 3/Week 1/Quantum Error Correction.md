@@ -20,7 +20,7 @@ flowchart LR
 ```
 
 ## Why quantum is harder
-- **can't copy** a qubit (no-cloning theorem), so you can't just send $|\psi\rangle|\psi\rangle|\psi\rangle$
+- **can't copy** a qubit ([[No-cloning theorem|no-cloning theorem]]), so you can't just send $|\psi\rangle|\psi\rangle|\psi\rangle$
 - **measuring destroys** superpositions, so you can't just look at the qubits to check for errors
 - errors can be **continuous** (small rotations) not just flips
 ## The trick

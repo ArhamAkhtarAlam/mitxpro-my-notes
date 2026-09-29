@@ -7,8 +7,8 @@ flowchart LR
     Q["QKD"] --> K["shared secret random key"] --> OTP["one-time pad encryption"] --> S["perfectly secret messages"]
 ```
 > [!important] why this matters now
-> - **shared randomness** is really valuable: with a one-time pad (a key as long as the message, only used once), encryption is **unbreakable**
-> - normal internet security (**RSA**) will be broken by [[Shor's algorithm]] once quantum computers are big enough
+> - **shared randomness** is really valuable: with a [[One-time pad|one-time pad]] (a key as long as the message, only used once), encryption is **unbreakable**
+> - normal internet security (**[[RSA]]**) will be broken by [[Shor's algorithm]] once quantum computers are big enough
 > - QKD doesn't depend on any maths being hard, only on physics
 ## where it's used
 - you can already **buy** QKD systems

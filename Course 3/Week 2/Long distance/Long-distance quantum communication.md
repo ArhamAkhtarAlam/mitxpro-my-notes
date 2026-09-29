@@ -3,7 +3,7 @@ why sending quantum information far is so hard, and why we want to. part of [[Qu
 ## the problem: no amplifiers
 normal (classical) communication uses **amplifiers** and **repeaters** all the time: when a signal gets weak, you just copy it, make it louder and send it on
 
-quantum communication **can't** do that because of the **no-cloning theorem**: you can't copy an unknown quantum state
+quantum communication **can't** do that because of the **[[No-cloning theorem|no-cloning theorem]]**: you can't copy an unknown quantum state
 ```mermaid
 flowchart LR
     subgraph classical
@@ -38,8 +38,8 @@ since you can't amplify, the error rate grows exponentially with distance. at so
 the dream is a **quantum internet**: quantum computers and sensors all connected, sharing entanglement (most famously described by Jeff Kimble in *Nature* in 2008)
 
 what it would be used for
-- **blind quantum computing** → run your program on someone else's quantum computer in the cloud, and they can't see what you're computing
-- **distributed quantum computing** → link smaller quantum computers into a bigger one
+- **[[Blind quantum computing|blind quantum computing]]** → run your program on someone else's quantum computer in the cloud, and they can't see what you're computing
+- **[[Distributed quantum computing|distributed quantum computing]]** → link smaller quantum computers into a bigger one
 - **quantum sensing** → entanglement over long distances can make measurements more precise
 - and longer distance [[QKD]]
 ## getting qubits onto photons (transduction)

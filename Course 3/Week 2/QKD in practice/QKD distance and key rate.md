@@ -31,11 +31,11 @@ sequenceDiagram
     R-->>B: result: 00, 01, 10 or 11 (classical)
     Note over A,B: stored idlers are now entangled,<br/>and the result says which Bell state
 ```
-this is **entanglement swapping** (see [[Quantum repeaters#entanglement swapping]]). the 2 bit result tells them which of the 4 Bell states they share (see [[CNOT gate#Example (making a Bell state)]]), and they can fix it into the one they want with a Pauli gate
+this is **entanglement swapping** (see [[Quantum repeaters#entanglement swapping]]). the 2 bit result tells them which of the 4 [[Bell states]] they share (see [[CNOT gate#Example (making a Bell state)]]), and they can fix it into the one they want with a Pauli gate
 
 do this along a **chain** of repeaters and the entanglement can reach much further than one fibre
 > [!warning] not ready yet
-> a practical repeater chain needs much better **quantum memories** and **quantum processors** than exist today
+> a practical repeater chain needs much better **[[Quantum memory|quantum memories]]** and **quantum processors** than exist today
 ### option 2: satellites
 send the photons through **space** instead: once they're above the atmosphere there's almost nothing to absorb them. China has already demonstrated satellite QKD (the Micius satellite)
 ```mermaid

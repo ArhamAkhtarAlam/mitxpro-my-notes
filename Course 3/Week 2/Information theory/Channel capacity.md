@@ -43,7 +43,7 @@ flowchart LR
 (more quantum = more (or the same) capacity)
 
 ### even more scenarios
-- **entanglement assisted**: if the sender and receiver share entangled qubits beforehand, it can change (increase) the capacity. eg. superdense coding sends 2 classical bits using 1 qubit + a shared [[Entangled Photons generation and detection|entangled pair]]
+- **entanglement assisted**: if the sender and receiver share entangled qubits beforehand, it can change (increase) the capacity. eg. [[Superdense coding|superdense coding]] sends 2 classical bits using 1 qubit + a shared [[Entangled Photons generation and detection|entangled pair]]
 - quantum info sent **one way** or **two ways**, maybe with an extra **classical side channel**
 - **multiple parties** instead of just 2
 

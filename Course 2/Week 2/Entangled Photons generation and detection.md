@@ -16,7 +16,7 @@ in the common setup ("type II" SPDC) one photon comes out H and the other V, but
 $$
 \frac1{\sqrt2}\big(|HV\rangle+|VH\rangle\big)
 $$
-one of the 4 Bell states (see [[CNOT gate#Example (making a Bell state)]]). tilting the crystal or adding wave plates changes it into any of the other Bell states
+one of the 4 [[Bell states]] (see [[CNOT gate#Example (making a Bell state)]]). tilting the crystal or adding wave plates changes it into any of the other Bell states
 
 > [!note] it's rare
 > only a tiny fraction of pump photons actually split (around 1 in a billion or even fewer), so you need a strong laser to get a useful number of pairs

@@ -3,8 +3,8 @@ the start of the deep dive into entanglement: is entanglement a **resource**, li
 > [!info] the deep dive
 > 1. **entanglement as a resource** (this note)
 > 2. a general definition of entanglement
-> 3. measuring it: the **entropy** and the **Schmidt number**
-> 4. **fungibility**: all entangled pure states are "the same currency" in the long run
+> 3. measuring it: the **[[Entanglement entropy|entropy]]** and the **[[Schmidt number]]**
+> 4. **[[Entanglement fungibility|fungibility]]**: all entangled pure states are "the same currency" in the long run
 ## physical resources
 space, time and energy are the classic physical resources. does quantum information add new ones?
 
@@ -20,9 +20,9 @@ flowchart LR
     T1["teleportation:<br/>1 ebit + 2 classical bits"] --> T2["send 1 qubit"]
     S1["superdense coding:<br/>1 ebit + 1 qubit"] --> S2["send 2 classical bits"]
 ```
-- **teleportation**: 1 ebit + 2 classical bits → send 1 qubit. impossible without the entanglement
-- **superdense coding**: 1 ebit + 1 qubit → send 2 classical bits (see [[Channel capacity#even more scenarios]])
-- also useful for: clock synchronization, distributed quantum computing, cryptography like [[QKD]] (eg. [[Ekert91]]), and sometimes it can **replace** shared classical randomness
+- **[[Teleportation|teleportation]]**: 1 ebit + 2 classical bits → send 1 qubit. impossible without the entanglement
+- **[[Superdense coding|superdense coding]]**: 1 ebit + 1 qubit → send 2 classical bits (see [[Channel capacity#even more scenarios]])
+- also useful for: clock synchronization, [[Distributed quantum computing|distributed quantum computing]], cryptography like [[QKD]] (eg. [[Ekert91]]), and sometimes it can **replace** shared classical randomness
 
 (the exact exchange rates, like "1 ebit + 2 bits = 1 qubit", already look a lot like a resource you can trade)
 ## is it a resource, formally?
@@ -32,14 +32,14 @@ $$
 $$
 both are entangled, but not **equally**. for entanglement to be one resource, there has to be a way to **convert** between states with different amounts of it (you can't have a different kind of resource for every state)
 ### the allowed moves: LOCC
-conversions have to use only **LOCC** (local operations and classical communication)
+conversions have to use only **[[LOCC]]** (local operations and classical communication)
 - each person can do anything they want to their **own** qubits
 - they can send each other normal **classical** messages
 - but they can't send qubits, so they **can't create** new entanglement
 ### try 1: exact conversion (too strict)
 call 2 states equivalent if you can convert A → B **and** B → A exactly with LOCC
 
-for 2 part pure states this works if and only if they **majorize each other**, which means they have exactly the **same Schmidt coefficients**, which is the same as saying the [[Density matrix|reduced density matrix]] of one side ([[Trace#the partial trace|partial trace]]) has the same [[Eigenvalues and eigenvectors|eigenvalues]]
+for 2 part pure states this works if and only if they **[[Majorization|majorize]] each other**, which means they have exactly the **same [[Schmidt decomposition|Schmidt coefficients]]**, which is the same as saying the [[Density matrix|reduced density matrix]] of one side ([[Trace#the partial trace|partial trace]]) has the same [[Eigenvalues and eigenvectors|eigenvalues]]
 
 > [!example]- majorization
 > sort each state's squared Schmidt coefficients from big to small and add them up one by one. $x$ is **majorized** by $y$ ($x\prec y$) if $y$'s running totals are always at least as big
