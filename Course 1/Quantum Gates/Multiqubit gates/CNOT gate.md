@@ -17,6 +17,13 @@ flowchart LR
 $$
 \text{CNOT}=\begin{bmatrix}1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&1&0\end{bmatrix}
 $$
+
+## On the Bloch sphere
+![[CNOT_gate_bloch.png]]
+each qubit gets its own sphere (see [[Multiqubit gates#on the Bloch sphere]])
+- **top**: control is $|1\rangle$ → the target's arrow flips from top to bottom, like an [[X gate]]
+- **bottom**: control is $|+\rangle$ → the output is a Bell state, which is entangled, so **both** arrows shrink to the middle (each qubit on its own is fully mixed)
+
 ## Qiskit implementation
 ```python
 from qiskit import QuantumCircuit

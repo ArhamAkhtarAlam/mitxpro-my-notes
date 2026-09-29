@@ -33,6 +33,7 @@ flowchart TD
 - [[Sqrt(X) Gate]]
 - [[Phase shift]] (and the $S$ and $T$ gates)
 ## Multiqubit gates
+(what they are and why we need them: [[Multiqubit gates]])
 - [[CNOT gate]]
 - [[CZ gate]]
 - [[SWAP gate]]

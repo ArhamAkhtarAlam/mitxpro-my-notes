@@ -27,6 +27,11 @@ flowchart LR
     F --> R["target starts |0⟩ → ends as c1 AND c2"]
 ```
 
+## On the Bloch sphere
+![[Toffoli_gate_bloch.png]]
+- **top**: both controls are $|1\rangle$ → the target flips
+- **bottom**: q0 is $|+\rangle$ → the flip happens "half the time", so q0 and the target get entangled and **both** shrink to the middle. q1 stays $|1\rangle$ because it isn't entangled with anything
+
 ## Qiskit implementation
 ```python
 from qiskit import QuantumCircuit

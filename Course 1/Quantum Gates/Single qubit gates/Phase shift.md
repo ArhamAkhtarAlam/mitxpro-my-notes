@@ -23,6 +23,13 @@ flowchart LR
 ```
 (doing a phase gate twice doubles the angle)
 
+## On the Bloch sphere
+![[Phase_shift_bloch.png|500]]
+spins the sphere around the $z$ axis by $\varphi$. $|0\rangle$ and $|1\rangle$ are on the axis so they don't move, everything else goes around the equator
+- S ($\varphi=\frac\pi2$): quarter turn, $|+\rangle\to|{+i}\rangle$
+- T ($\varphi=\frac\pi4$): eighth of a turn
+- [[Z gate|Z]] ($\varphi=\pi$): half turn, $|+\rangle\to|-\rangle$
+
 ## Qiskit implementation
 ```python
 from qiskit import QuantumCircuit

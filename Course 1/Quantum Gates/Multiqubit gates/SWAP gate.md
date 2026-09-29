@@ -15,6 +15,10 @@ flowchart LR
 ```
 (building a SWAP out of CNOTs)
 
+## On the Bloch sphere
+![[SWAP_gate_bloch.png]]
+the easiest one: the 2 arrows just **trade places**. SWAP never creates entanglement on its own
+
 ## Qiskit implementation
 ```python
 from qiskit import QuantumCircuit

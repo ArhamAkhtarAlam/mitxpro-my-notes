@@ -35,6 +35,10 @@ x & \text I(x)\\
 |1\rangle & |1\rangle
 \end{array}
 $$
+
+## On the Bloch sphere
+![[I_gate_bloch.png|500]]
+
 ## Why have a gate that does nothing?
 - **waiting**: on real hardware "do nothing" still takes time, and while the qubit waits it slowly loses its state through noise ($T_1$ and $T_2$, see [[Noise Processes]] and [[Amplitude damping channel]]). the identity gate is how you tell the computer "wait here"
 - **maths**: $I$ is what you get when a gate undoes itself, eg. $\text X\text X=I$, $\text H\text H=I$, and a [[Unitary Operation|unitary]] times its inverse $U^\dagger U=I$

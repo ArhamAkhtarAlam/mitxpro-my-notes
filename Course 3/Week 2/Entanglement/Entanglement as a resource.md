@@ -2,8 +2,8 @@
 the start of the deep dive into entanglement: is entanglement a **resource**, like energy, and what would that even mean mathematically? part of [[Quantum Communication]]
 > [!info] the deep dive
 > 1. **entanglement as a resource** (this note)
-> 2. a general definition of entanglement
-> 3. measuring it: the **[[Entanglement entropy|entropy]]** and the **[[Schmidt number]]**
+> 2. a general definition of entanglement ([[Defining entanglement]])
+> 3. measuring it: the **[[Entanglement entropy|entropy]]** and the **[[Schmidt number]]** (using the [[Schmidt decomposition]])
 > 4. **[[Entanglement fungibility|fungibility]]**: all entangled pure states are "the same currency" in the long run
 ## physical resources
 space, time and energy are the classic physical resources. does quantum information add new ones?
@@ -36,7 +36,7 @@ conversions have to use only **[[LOCC]]** (local operations and classical commun
 - each person can do anything they want to their **own** qubits
 - they can send each other normal **classical** messages
 - but they can't send qubits, so they **can't create** new entanglement
-### try 1: exact conversion (too strict)
+### try 1, exact conversion (too strict)
 call 2 states equivalent if you can convert A → B **and** B → A exactly with LOCC
 
 for 2 part pure states this works if and only if they **[[Majorization|majorize]] each other**, which means they have exactly the **same [[Schmidt decomposition|Schmidt coefficients]]**, which is the same as saying the [[Density matrix|reduced density matrix]] of one side ([[Trace#the partial trace|partial trace]]) has the same [[Eigenvalues and eigenvectors|eigenvalues]]
@@ -59,7 +59,7 @@ for 2 part pure states this works if and only if they **[[Majorization|majorize]
 
 > [!warning] why it's too strict
 > almost every state would be its own separate category of entanglement, like having a different currency for every single coin
-### try 2: asymptotic equivalence (currency exchange)
+### try 2, asymptotic equivalence (currency exchange)
 dollars and pounds are "the same kind of thing" because you can swap them at a fixed **exchange rate**, paying a small **fee**
 ```mermaid
 flowchart LR

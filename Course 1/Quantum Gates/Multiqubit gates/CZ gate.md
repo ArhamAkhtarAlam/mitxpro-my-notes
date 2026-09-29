@@ -16,6 +16,11 @@ flowchart LR
 ```
 (building a CZ out of a CNOT)
 
+## On the Bloch sphere
+![[CZ_gate_bloch.png]]
+- **top**: control is $|1\rangle$ → the target gets a [[Z gate|Z]], so $|+\rangle$ flips to $|-\rangle$ (front to back)
+- **bottom**: $|+\rangle|+\rangle$ → CZ entangles them, so both arrows shrink to the middle
+
 ## Qiskit implementation
 ```python
 from qiskit import QuantumCircuit

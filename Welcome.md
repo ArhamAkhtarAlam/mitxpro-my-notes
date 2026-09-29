@@ -42,6 +42,7 @@ flowchart LR
 ### Course 3: Practical Realities of Quantum Computation and Quantum Communication
 - **week 1** → [[Density matrix]], [[Quantum channels]], [[Noise Processes]], [[Quantum Error Correction]]
 - **week 2** → [[Quantum Communication]] (information theory, EPR, Bell and CHSH)
+- **week 3** → [[Realistic quantum computation]] (the [[NISQ]] era)
 ### Math
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, eigenvalues, tensor products, the trace
 ## tips for reading

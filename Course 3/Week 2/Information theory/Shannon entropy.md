@@ -10,7 +10,7 @@ $$
 basically: how **surprising** / random the message is
 - always the same message → $H=0$ (no surprise, you don't need to send anything)
 - all messages equally likely → $H$ is as big as it can be
-## example: a coin
+## example (a coin)
 a coin that lands on 1 with probability $p$ (this is called the **binary entropy**)
 $$
 H(p)=-p\log_2p-(1-p)\log_2(1-p)
