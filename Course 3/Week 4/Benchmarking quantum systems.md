@@ -33,6 +33,7 @@ flowchart LR
 3. the practical side: how many measurements tomography takes (the **overhead**)
 4. [[Randomized benchmarking]] → a smarter way to measure gate quality with way less overhead
 ## this week's notes
-(added as the lectures come)
+- [[State tomography]] → measuring the Bloch vector to rebuild ρ, and how it scales to many qubits
+- [[State fidelity]] → one number (0 to 1) for how close the state you made is to the one you wanted
 
 see also [[Quantum volume]], [[NISQ]], [[Realistic quantum computation]]
