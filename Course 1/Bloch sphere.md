@@ -9,6 +9,7 @@ $$
 
 ![[Bloch_sphere.png|500]]
 ## Where the states are
+
 | axis | states |
 |---|---|
 | $z$ (up/down) | $\lvert0\rangle$ top, $\lvert1\rangle$ bottom |

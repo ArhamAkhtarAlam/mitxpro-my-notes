@@ -16,6 +16,7 @@ flowchart LR
 (how to calculate it)
 
 ## examples
+
 | state                                                                     | eigenvalues       | $S(\rho)$     |
 | ------------------------------------------------------------------------- | ----------------- | ------------- |
 | any pure state $\lvert\psi\rangle\langle\psi\rvert$                       | $1,0$             | $0$           |

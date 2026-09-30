@@ -15,7 +15,7 @@ My personal study notes from three **MIT xPRO** quantum computing courses, writt
 ## What's in here
 
 - **Course 1** → quantum gates (single qubit and multi qubit), the Bloch sphere, unitary operations
-- **Course 2** → Fourier transforms and the QFT, Shor's algorithm, quantum phase estimation, photons, polarization, and QKD (BB84, BBM92, Ekert91)
+- **Course 2** → modern cryptography and RSA, the QFT, Shor's and Simon's algorithms, photons and QKD (BB84, BBM92, Ekert91), post-quantum cryptography, quantum random numbers, teleportation, Hamiltonian simulation and VQE, adiabatic computing, quantum annealing, QAOA and Grover's algorithm
 - **Course 3**
   - *Week 1* → density matrices, quantum channels (dephasing, depolarizing, amplitude damping), noise, Rabi oscillations, noise spectra
   - *Week 2* → information theory (Shannon and von Neumann entropy, channel capacity), EPR, Bell and the CHSH game

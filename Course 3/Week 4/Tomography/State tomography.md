@@ -13,6 +13,8 @@ every single qubit density matrix can be written with the identity and the 3 Pau
 $$
 \rho=\frac{I+\vec r\cdot\vec\sigma}2=\frac{I+r_x\sigma_x+r_y\sigma_y+r_z\sigma_z}2
 $$
+^bloch-vector
+
 $\vec r=(r_x,r_y,r_z)$ is the **Bloch vector**: the point in the ball. so you just need to measure its 3 numbers
 > [!important] each component is an expectation value
 > $$
@@ -56,6 +58,7 @@ $$
 \rho=\frac14\sum_{i,j\in\{I,x,y,z\}}r_{ij}\;\sigma_i\otimes\sigma_j
 $$
 rotate **each** qubit before measuring: 3 choices per qubit, so $3\times3=$ **9 measurement settings**
+
 | qubits | numbers to find ($4^n-1$) | measurement settings ($3^n$) |
 |---|---|---|
 | 1 | 3 | 3 |

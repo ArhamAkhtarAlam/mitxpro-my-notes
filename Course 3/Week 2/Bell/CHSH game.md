@@ -20,6 +20,7 @@ x\oplus y=a\cdot b
 $$
 ($\oplus$ is [[Modular arithmetic|XOR]], which is the same as $x+y \bmod 2$)
 ### the win chart
+
 | $a$ | $b$ | $a\cdot b$ | they win if |
 |---|---|---|---|
 | 0 | 0 | 0 | $x=y$ (same answer) |

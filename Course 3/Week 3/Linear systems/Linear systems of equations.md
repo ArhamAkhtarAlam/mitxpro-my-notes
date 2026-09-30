@@ -36,6 +36,7 @@ $$
 > - big $\kappa$ → some tiny changes in $\vec b$ give **huge** changes in $\vec x$ ✗
 
 > [!example] try it (checked numerically)
+>
 > | $A$ | $\kappa$ | $\vec x$ | after changing $b_2$ by $0.001$ |
 > |---|---|---|---|
 > | $\begin{bmatrix}2&0\\0&1\end{bmatrix}$ | 2 | $(1,\ 1)$ | $(1,\ 1.001)$, barely moves |
@@ -68,6 +69,7 @@ O(N^3)
 $$
 great for small systems, but way too slow for huge ones, so big problems use iterative solvers
 ## comparing
+
 | | time | good for |
 |---|---|---|
 | iterative (eg. gradient descent) | $O(Ns\,\kappa\log\frac1\epsilon)$ | **huge**, sparse, well conditioned systems |

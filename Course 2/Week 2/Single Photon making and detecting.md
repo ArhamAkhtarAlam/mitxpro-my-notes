@@ -48,6 +48,7 @@ flowchart LR
 (the avalanche)
 
 ### what makes a detector good or bad
+
 | property | what it means | why it matters |
 |---|---|---|
 | **efficiency** | how many photons actually get detected | missed photons = lost key bits |

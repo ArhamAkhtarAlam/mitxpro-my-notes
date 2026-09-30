@@ -26,6 +26,7 @@ just the size of the overlap ([[Dirac notation|inner product]]) of the 2 states
 > $$
 > F^2=|\langle\psi|\phi\rangle|^2
 > $$
+>
 > | | $F$ | $F^2$ |
 > |---|---|---|
 > | $\lvert0\rangle$ vs $\lvert+\rangle$ | $0.707$ | $0.5$ |
@@ -50,7 +51,9 @@ $$
 if $\rho=|\psi\rangle\langle\psi|$ is actually pure, this gives back $\sqrt{\langle\phi|\psi\rangle\langle\psi|\phi\rangle}=|\langle\psi|\phi\rangle|$ ✅
 > [!example] examples
 > - **fully mixed qubit** $\rho=\frac I2$: $F=\sqrt{\frac12}\approx0.707$ with **every** state. pure noise is "half right" about everything
-> - **any qubit**: with Bloch vectors $\vec r$ for $\rho$ and $\vec n$ for $\phi$, $F^2=\frac{1+\vec r\cdot\vec n}2$. so after [[State tomography]] gives you $\vec r$, the fidelity is one dot product away
+> - **any qubit**: with Bloch vectors $\vec r$ for $\rho$ and $\vec n$ for $\phi$, $F^2=\frac{1+\vec r\cdot\vec n}2$. so after [[State tomography]] gives you $\vec r$, the fidelity is one dot product away. ($\vec r$ is the Bloch vector from here:)
+>
+> ![[State tomography#^bloch-vector]]
 >
 > (both checked numerically)
 

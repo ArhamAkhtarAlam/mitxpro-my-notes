@@ -20,6 +20,7 @@ flowchart LR
 ```
 (or find the eigenvalues of $\rho_A$ to get the $\lambda_k$)
 ## examples
+
 | state | Schmidt coefficients² $\lambda_k$ | Schmidt number | entangled? |
 |---|---|---|---|
 | $\frac1{\sqrt2}(\lvert00\rangle+\lvert11\rangle)$ | $\frac12,\frac12$ | 2 | yes, 1 ebit |

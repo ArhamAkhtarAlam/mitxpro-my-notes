@@ -79,4 +79,4 @@ example by IBM
 ![[IBM_demonstrations.png]]
 (this is the circuit for exactly this example: 8 counting qubits $C$, 4 work qubits $T$ starting at $|1\rangle$ with an X, and controlled "multiply by 2" and "multiply by 4" gates, see [[Modular Exponentiation]])
 
-see also [[Order finding algorithm]], [[Quantum Phase Estimation]], [[Quantum Fourier Transform]]
+see also [[Order finding algorithm]], [[Quantum Phase Estimation]], [[Quantum Fourier Transform]], [[RSA]], [[Simon's algorithm]] (the algorithm that inspired it)

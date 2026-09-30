@@ -44,6 +44,7 @@ $$
 P(\text{same answer})=\cos^2(\theta_A-\theta_B)
 $$
 ## the strategy
+
 | player | gets | measures in | as an observable |
 |---|---|---|---|
 | Alice | $a=0$ | $\lvert0\rangle,\lvert1\rangle$ basis (angle $0^\circ$) | $\sigma_z$ |
@@ -106,6 +107,7 @@ Bob outputs $0$, same as Alice, so they **win with 85.4%**
 > [!warning] lecture mix-up
 > on the board he first wrote $\frac12+\frac1{\sqrt2}$, which is more than 1. a student caught it: it's $\frac12+\frac1{2\sqrt2}$
 ### why it wins 85.4%
+
 | $a$ | $b$ | want | bases | angle apart | P(win) |
 |---|---|---|---|---|---|
 | 0 | 0 | same | $0/1$ vs $s$ | $22.5^\circ$ | $\cos^2 22.5^\circ\approx0.854$ |

@@ -28,6 +28,7 @@ a grid of **80 electrons**, each described with **100 orbitals** (treating them 
 $$
 100^{80}=10^{160}\text{ numbers}
 $$
+
 | | how many |
 |---|---|
 | particles in a mole (a handful of stuff) | $\approx6\times10^{23}$ |
@@ -36,6 +37,7 @@ $$
 
 that's more numbers than there are particles in the universe, **squared**
 ### what classical methods can do
+
 | method | how big | catch |
 |---|---|---|
 | solving the Schrödinger equation exactly | **fewer than 10 atoms** | exact but tiny |

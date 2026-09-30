@@ -38,6 +38,7 @@ using the formula (without the $\frac1{\sqrt N}$)
 | $1,0,0,0$ | $1,1,1,1$ | one sharp spike in time → **every** frequency equally |
 | $1,1,1,1$ | $4,0,0,0$ | flat (never changes) → only frequency 0 |
 | $1,0,-1,0$ | $0,2,0,2$ | a cosine that repeats every 4 → frequency 1 (and its mirror, 3) |
+
 > [!tip] check one yourself
 > for $x=(1,0,-1,0)$: $X_k=1\cdot\omega^0+(-1)\cdot\omega^{2k}=1-(-1)^k$, which is $0,2,0,2$ ✅
 ## Periods show up as spikes
@@ -58,6 +59,7 @@ flowchart LR
 (how the Fourier transforms are related)
 
 ## How fast is it?
+
 | | steps |
 |---|---|
 | DFT straight from the formula | $N^2$ |

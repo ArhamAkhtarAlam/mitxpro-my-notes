@@ -9,6 +9,7 @@ $$
 \text P(\varphi)=\begin{bmatrix}1&0\\0&e^{i\varphi}\end{bmatrix}
 $$
 ## Special cases
+
 | gate | $\varphi$ | matrix |
 |---|---|---|
 | [[Z gate]] | $\pi$ | $\begin{bmatrix}1&0\\0&-1\end{bmatrix}$ |

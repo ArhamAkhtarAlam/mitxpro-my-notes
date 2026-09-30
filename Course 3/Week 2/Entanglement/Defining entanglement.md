@@ -18,6 +18,7 @@ flowchart LR
 entanglement comes in **amounts**, eg. $\frac1{\sqrt2}(|00\rangle+|11\rangle)$ is more entangled than $\sqrt{0.9}|00\rangle+\sqrt{0.1}|11\rangle$ (see [[Entanglement as a resource#is it a resource, formally?]])
 
 2 ways to measure it
+
 | measure | what it is | Bell pair |
 |---|---|---|
 | [[Entanglement entropy]] $E$ | the von Neumann entropy of one half | 1 ebit |

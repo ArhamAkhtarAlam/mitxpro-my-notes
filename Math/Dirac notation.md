@@ -43,6 +43,7 @@ flowchart LR
 ```
 
 ## cheat sheet
+
 | you see | it is | size |
 |---|---|---|
 | $\lvert\psi\rangle$ | column vector | state |

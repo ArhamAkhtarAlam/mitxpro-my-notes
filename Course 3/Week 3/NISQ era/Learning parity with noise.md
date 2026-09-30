@@ -13,6 +13,7 @@ flowchart LR
     D["random input bits<br/>D1, D2, ..."] --> O["oracle<br/>(secret k inside)"] --> A["a = parity of the<br/>D_i where k_i = 1"]
 ```
 ### example: 2 bits, $k=11$
+
 | $D_1$ | $D_2$ | $a$ |
 |---|---|---|
 | 0 | 0 | 0 |

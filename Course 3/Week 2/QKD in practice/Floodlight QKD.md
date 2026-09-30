@@ -44,12 +44,14 @@ $$
 flowchart LR
     A["Alice sends<br/>20 photons per bit"] -- "50 km<br/>(10% gets through)" --> B["Bob gets 2"] -- "amplifier ×10,000" --> C["20,000"] -- "50 km back<br/>(10%)" --> D["Alice gets<br/>2,000 signal photons<br/>+ 20,000 noise photons"] -- "processing gain ÷200" --> E["effectively 2,000 signal<br/>vs 100 noise ✓"]
 ```
+
 | | value |
 |---|---|
 | Bob's bit time | $\frac1{10\text{ GHz}}=0.1$ ns |
 | processing gain | $2\text{ THz}\times0.1\text{ ns}=200$ |
 | brightness Alice sends | 0.1 photons per second per Hz |
 | photons Alice sends per bit | $0.1\times200=20$ |
+
 ## the catch: active eavesdropping
 because it's two way, Eve can **inject her own dim broadband light** into Bob's side, keep a bright copy for herself, and read Bob's bits off **her** light when it comes back, even though it's buried in noise
 

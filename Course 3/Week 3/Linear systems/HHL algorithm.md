@@ -1,6 +1,7 @@
 #HHL #linear_systems #quantum_algorithms
 a quantum algorithm for solving huge linear systems $A\vec x=\vec b$ (named HHL after Harrow, Hassidim and Lloyd). follows on from [[Linear systems of equations]]
 ## the speed up
+
 | | time |
 |---|---|
 | best classical (iterative) | $O\!\left(N\,s\,\kappa\log\frac1\epsilon\right)$ |

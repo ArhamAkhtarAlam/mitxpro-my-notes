@@ -68,12 +68,14 @@ the result can't be split into (qubit 0) $\otimes$ (qubit 1) anymore, it's **ent
 
 > [!tip] all 4 Bell states
 > start from $|00\rangle,|01\rangle,|10\rangle,|11\rangle$ and do the same H + CNOT
+>
 > | start | Bell state |
 > |---|---|
 > | $\lvert00\rangle$ | $\frac1{\sqrt2}(\lvert00\rangle+\lvert11\rangle)$ |
 > | $\lvert01\rangle$ | $\frac1{\sqrt2}(\lvert01\rangle+\lvert10\rangle)$ |
 > | $\lvert10\rangle$ | $\frac1{\sqrt2}(\lvert00\rangle-\lvert11\rangle)$ |
 > | $\lvert11\rangle$ | $\frac1{\sqrt2}(\lvert01\rangle-\lvert10\rangle)$ (the singlet from [[Quantum weirdness]]) |
+
 ## Properties
 - $\text{CNOT}\cdot\text{CNOT}=I$ (its own inverse)
 - with single qubit gates, CNOT can build **any** multi qubit gate (see [[Quantum gate#universal gate sets]])

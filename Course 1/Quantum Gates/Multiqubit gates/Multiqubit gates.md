@@ -13,12 +13,14 @@ flowchart LR
 > without them every qubit would just be its own separate little system. entanglement, and so things like [[Shor's algorithm]], [[Quantum Phase Estimation]] and [[Teleportation]], all need multiqubit gates
 ## matrix size
 every extra qubit **doubles** the size of the matrix
+
 | qubits | matrix | example |
 |---|---|---|
 | 1 | $2\times2$ | [[X gate]] |
 | 2 | $4\times4$ | [[CNOT gate]] |
 | 3 | $8\times8$ | [[Toffoli gate]] |
 | $n$ | $2^n\times2^n$ | |
+
 ## controlled gates
 most multiqubit gates are **controlled** gates: a **control** qubit decides whether a gate $U$ happens to the **target** qubit
 ```mermaid

@@ -5,7 +5,7 @@ these are my notes from three **MIT xPRO** quantum computing courses. I wrote th
 
 > [!info] what's in here
 > - **Course 1** → *Introduction to Quantum Computing*: qubits, the Bloch sphere, quantum gates
-> - **Course 2** → *Quantum Algorithms for Cybersecurity, Chemistry, and Optimization*: the QFT, Shor's algorithm, photons and quantum key distribution
+> - **Course 2** → *Quantum Algorithms for Cybersecurity, Chemistry, and Optimization*: cryptography and Shor's algorithm, photons and quantum key distribution, simulating molecules, quantum optimisation and Grover
 > - **Course 3** → *Practical Realities of Quantum Computation and Quantum Communication*: density matrices, noise, quantum channels, information theory, Bell and the CHSH game
 > - **Math** → all the maths you need for the rest
 
@@ -17,7 +17,9 @@ pick whatever sounds interesting, every note links to the ones it builds on
 | the basics of qubits | [[Bloch sphere]] | [[Quantum gate]] → [[Hadamard Gate]] → [[CNOT gate]] |
 | the maths | [[Math]] | [[Dirac notation]] → [[Eigenvalues and eigenvectors]] |
 | quantum algorithms | [[Quantum Fourier Transform]] | [[Quantum Phase Estimation]] → [[Shor's algorithm]] |
-| quantum cryptography | [[Polarization]] | [[QKD]] → [[BB84]] → [[Ekert91]] |
+| quantum cryptography | [[Modern cryptography]] | [[RSA]] → [[QKD]] → [[BB84]] → [[Ekert91]] |
+| simulating molecules | [[Simulating quantum systems]] | [[Hamiltonian]] → [[Trotterization]] → [[VQE]] |
+| optimisation | [[Quantum optimization]] | [[Adiabatic quantum computing]] → [[QAOA]] → [[Grover's algorithm]] |
 | why real quantum computers are hard | [[Density matrix]] | [[Quantum channels]] → [[Noise Processes]] |
 | the weird stuff | [[Quantum weirdness]] | [[CHSH game]] → [[CHSH quantum strategy]] |
 | information theory | [[Quantum Communication]] | [[Shannon entropy]] → [[Von Neumann entropy]] |
@@ -37,8 +39,10 @@ flowchart LR
 - [[Quantum gate]] → every gate, single qubit and multi qubit
 - [[Bloch sphere]] and [[Unitary Operation]]
 ### Course 2: Quantum Algorithms for Cybersecurity, Chemistry, and Optimization
-- **week 1** → [[Fourier Transform]], [[Discrete Fourier Transform]], [[Quantum Fourier Transform]], [[Modular Exponentiation]], [[Order finding algorithm]], [[Quantum Phase Estimation]], [[Shor's algorithm]]
-- **week 2** → [[Polarization]], [[Beamsplitters]], [[Single Photon making and detecting]], [[Entangled Photons generation and detection]], [[QKD]]
+- **week 1** → [[Modern cryptography]], [[RSA]], [[Fourier Transform]], [[Discrete Fourier Transform]], [[Quantum Fourier Transform]], [[Modular Exponentiation]], [[Order finding algorithm]], [[Quantum Phase Estimation]], [[Shor's algorithm]], [[Simon's algorithm]]
+- **week 2** → [[Post-quantum cryptography]], [[Polarization]], [[Beamsplitters]], [[Single Photon making and detecting]], [[Entangled Photons generation and detection]], [[Bell states]], [[QKD]], [[Quantum random number generators]], [[One-time pad]], [[Teleportation]]
+- **week 3** → [[Simulating quantum systems]] ([[Hamiltonian]], [[Particle in a box]], [[Hamiltonian simulation]], [[Trotterization]], [[VQE]])
+- **week 4** → [[Quantum optimization]] ([[Adiabatic quantum computing]], [[Quantum annealing]], [[QAOA]], [[Grover's algorithm]], [[QASM]])
 ### Course 3: Practical Realities of Quantum Computation and Quantum Communication
 - **week 1** → [[Density matrix]], [[Quantum channels]], [[Noise Processes]], [[Quantum Error Correction]]
 - **week 2** → [[Quantum Communication]] (information theory, EPR, Bell and CHSH)

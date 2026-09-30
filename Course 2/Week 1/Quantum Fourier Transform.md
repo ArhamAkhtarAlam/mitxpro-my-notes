@@ -1,6 +1,7 @@
 #quantum_fourier_transform #fourier_transform
 The Quantum Fourier Transform is a [[Unitary Operation]] (the same matrix as the one in [[Discrete Fourier Transform]])
 ![[Discrete Fourier Transform#^matrix]]
+
 It is a vital step in [[Shor's algorithm]]
 ## Example
 ### 3 qubits
@@ -33,7 +34,6 @@ $$
 \sum_{k=0}^{7}
 e^{2\pi i \frac{xk}{8}}
 \lvert k \rangle
-
 $$
 ##### Series
 $$
@@ -50,7 +50,6 @@ $$
 + e^{2\pi i \frac{6x}{8}} \lvert 6\rangle
 + e^{2\pi i \frac{7x}{8}} \lvert 7\rangle
 \Big)
-
 $$
 ## Convert the matrix into Quantum gates
 ### Quantum Fourier Transform → Quantum Gates

@@ -43,6 +43,7 @@ flowchart LR
 ```
 
 ## which noise causes what
+
 | noise | where in the spectrum | what it does |
 |---|---|---|
 | at the qubit frequency $\pm\omega_q$ | on resonance | energy exchange with the environment → $T_1$ processes ([[Amplitude damping channel]]) |

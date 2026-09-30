@@ -63,12 +63,14 @@ flowchart LR
     F --> S2["photon in slot 3 → 10"]
     F --> S3["photon in slot 4 → 11"]
 ```
+
 | slots per frame | bits per photon |
 |---|---|
 | 4 | 2 |
 | 8 | 3 |
 | 16 | 4 |
 | $M$ | $\log_2M$ |
+
 > [!note] the trade-off
 > more slots per frame = more bits per photon, but **fewer photons per second** (each frame takes longer)
 ### when it helps: a saturated receiver

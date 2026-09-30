@@ -74,6 +74,7 @@ flowchart LR
 (a $2\times2$ matrix has 2 eigenvalues, an $n\times n$ matrix has $n$)
 ## why it matters in quantum
 ### gates
+
 | gate | eigenvectors | eigenvalues |
 |---|---|---|
 | [[Z gate]] | $\lvert0\rangle$, $\lvert1\rangle$ | $+1$, $-1$ |

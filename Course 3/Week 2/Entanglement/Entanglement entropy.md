@@ -31,6 +31,7 @@ $$
 $$
 so the Bell pair has entanglement **1 ebit**. in fact this is what **defines** an ebit
 ## more examples
+
 | state | eigenvalues of $\rho_A$ | $E$ (ebits) |
 |---|---|---|
 | $\lvert00\rangle$ (product state) | $1,0$ | $0$ |

@@ -8,65 +8,93 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"Quantum Gates/Single qubit gates\"  ",
+      "query": "path:\"Course 1/Quantum Gates/Single qubit gates\"  ",
       "color": {
         "a": 1,
         "rgb": 14701138
       }
     },
     {
-      "query": "path:\"Quantum Gates/Multiqubit gates\"  ",
+      "query": "path:\"Course 1/Quantum Gates/Multiqubit gates\"  ",
       "color": {
         "a": 1,
         "rgb": 14725458
       }
     },
     {
-      "query": "path:\"Course 2/Week 1\"  ",
+      "query": "path:\"Course 1\"  ",
       "color": {
         "a": 1,
         "rgb": 11657298
       }
     },
     {
-      "query": "path:\"Course 2/Week 2\"  ",
+      "query": "path:\"Course 2/Week 1\"  ",
       "color": {
         "a": 1,
         "rgb": 5431378
       }
     },
     {
+      "query": "path:\"Course 2/Week 2\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 8635106
+      }
+    },
+    {
+      "query": "path:\"Course 2/Week 3\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 3238535
+      }
+    },
+    {
+      "query": "path:\"Course 2/Week 4\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
       "query": "path:\"Course 3/Week 1\"  ",
       "color": {
         "a": 1,
-        "rgb": 3041258
+        "rgb": 11621088
       }
     },
     {
       "query": "path:\"Course 3/Week 2\"  ",
       "color": {
         "a": 1,
-        "rgb": 5419488
+        "rgb": 14701233
       }
     },
     {
-      "query": "path:Math  ",
+      "query": "path:\"Course 3/Week 3\"  ",
       "color": {
         "a": 1,
-        "rgb": 1184499
+        "rgb": 10673625
+      }
+    },
+    {
+      "query": "path:\"Course 3/Week 4\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 2818681
       }
     }
   ],
   "collapse-display": false,
   "showArrow": true,
-  "textFadeMultiplier": 0.7,
-  "nodeSizeMultiplier": 1.51281276238455,
-  "lineSizeMultiplier": 1.84085082563672,
+  "textFadeMultiplier": 1.7,
+  "nodeSizeMultiplier": 1.38828995242093,
+  "lineSizeMultiplier": 1.26842989084803,
   "collapse-forces": false,
-  "centerStrength": 0.623565631122306,
-  "repelStrength": 11.7809359576619,
+  "centerStrength": 0.284914637559474,
+  "repelStrength": 10.8782779330439,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.8486088817293467,
-  "close": true
+  "scale": 0.8372166645230299,
+  "close": false
 }

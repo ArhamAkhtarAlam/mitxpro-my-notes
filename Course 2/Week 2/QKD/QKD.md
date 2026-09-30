@@ -11,6 +11,8 @@ normal encryption is safe because some maths problem is **hard** (like factoring
 - **entanglement is private**: if Alice and Bob's photons are strongly entangled (they beat the classical limit in the [[CHSH game]]), nobody else can be correlated with them
 > [!note] QKD only makes the key
 > QKD just gives Alice and Bob the same secret random key. they then use it to encrypt their actual message with normal encryption (with a key as long as the message, a "[[One-time pad|one time pad]]", it's unbreakable)
+>
+> ![[One-time pad#^otp-example]]
 ## the steps every method shares
 ```mermaid
 flowchart LR
@@ -22,6 +24,7 @@ flowchart LR
 4. **error correction**: fix the few leftover differences between Alice's and Bob's keys
 5. **privacy amplification**: shrink the key with some clever maths so that whatever tiny bit Eve might know becomes useless
 ## comparing the methods
+
 | | [[BB84]] | [[BBM92]] | [[Ekert91]] |
 |---|---|---|---|
 | year | 1984 | 1992 | 1991 |
@@ -29,9 +32,15 @@ flowchart LR
 | bases | H/V and D/A | H/V and D/A | 3 angles each |
 | how Eve is caught | error rate | error rate | Bell test ([[CHSH game]]) |
 | needs a trusted source? | Alice is the source | yes | no, the Bell test checks it |
+
 ## in real life
 (more on this in Course 3: [[QKD in practice]], [[Quantum hacking]], [[QKD distance and key rate]])
 - photons get absorbed in optical fibre, so practical fibre QKD only reaches about 100 km (lab records go a few hundred km)
 - to go further you need [[Quantum repeaters|quantum repeaters]] (still being developed, see [[Long-distance quantum communication]]) or **satellites** (China's Micius satellite did QKD between ground stations over 1000 km apart)
+
+## the rest of the week
+- [[Post-quantum cryptography]] → the other way to stay safe from quantum computers (new maths problems instead of physics)
+- [[Quantum random number generators]] → where truly random key bits come from
+- [[Bell states]] and [[Teleportation]] → the entanglement tools behind repeaters
 
 see also [[QKD in practice]], [[BB84]], [[Quantum hacking]], [[Long-distance quantum communication]]

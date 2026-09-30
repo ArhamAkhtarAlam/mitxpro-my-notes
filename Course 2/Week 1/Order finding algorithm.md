@@ -49,5 +49,35 @@ eg. with 8 counting qubits and $N=15,\ a=2$ you measure $0$, $64$, $128$ or $192
 - $0$ → tells you nothing, run again
 
 see [[Shor's algorithm#Worked example (factoring 15)]] for the full thing
+## worked example 2 (11 to the x, mod 21)
+the course's example: find the period of $f(x)=11^x\bmod21$
+$$
+11^0,11^1,11^2,\ldots\bmod21=1,\ 11,\ 16,\ 8,\ 4,\ 2,\ 1,\ 11,\ldots
+$$
+so the answer should be $r=6$. here's how the quantum version finds it
+
+**how many qubits?** the first register needs $N^2\le2^l\le2N^2$, so $441\le2^l\le882$ → $l=9$ qubits ($2^9=512$). enough room to catch the period clearly
+1. Hadamards → $\frac1{\sqrt{512}}\sum_{x=0}^{511}|x\rangle|0\rangle$
+2. modular exponentiation → $\frac1{\sqrt{512}}\sum_x|x\rangle|11^x\bmod21\rangle$
+3. measure the 2nd register, say you get $16$. that only happens for $x=2,8,14,\ldots$ (every 6th), so the first register is left holding $|2\rangle+|8\rangle+|14\rangle+\ldots$
+4. QFT on the first register → spikes near multiples of $\frac{512}6\approx85.3$
+5. measure, say you get $427$
+
+![[Period_finding_21.png]]
+(my simulation of step 5: 6 spikes, you land on one at random)
+
+**6. continued fractions** turn $\frac{427}{512}$ into a fraction with a small bottom
+$$
+\frac{427}{512}=0+\cfrac1{1+\cfrac1{5+\cfrac1{42+\cfrac12}}}
+$$
+cutting it off at each step gives the **convergents** $\frac01,\ \frac11,\ \frac56,\ \frac{211}{253}$ (using $z_n=a_nz_{n-1}+z_{n-2}$ and $r_n=a_nr_{n-1}+r_{n-2}$)
+
+try the bottoms as guesses for $r$: $11^6\bmod21=1$ ✅ so $r=6$
+> [!example]- and then factoring 21
+> $r=6$ is even and $11^3\bmod21=8\not\equiv-1$, so
+> $$
+> \gcd(8-1,21)=7\qquad\gcd(8+1,21)=3\qquad21=3\times7\ ✅
+> $$
+> (all checked numerically)
 
 see also [[Shor's algorithm]], [[Quantum Phase Estimation]], [[Modular arithmetic]]
