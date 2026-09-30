@@ -51,7 +51,7 @@ flowchart LR
 
 ## Properties
 - $\text Z\text Z=I$ (its own inverse)
-- eigenvalues $+1$ and $-1$ with eigenvectors $|0\rangle$ and $|1\rangle$. that's why "measuring $\sigma_z$" means measuring in the $|0\rangle,|1\rangle$ basis
+- [[Eigenvalues and eigenvectors|eigenvalues]] $+1$ and $-1$ with eigenvectors $|0\rangle$ and $|1\rangle$. that's why "measuring $\sigma_z$" means measuring in the $|0\rangle,|1\rangle$ basis
 - $\text Z=\text H\,\text X\,\text H$ (a Z is an [[X gate|X]] in the $|+\rangle,|-\rangle$ basis)
 ## Example
 $$
@@ -62,3 +62,5 @@ the probabilities $|\alpha|^2,|\beta|^2$ stay the same, only the **relative phas
 - as an error it's a **phase flip**, the error in the [[Dephasing channel]]
 - the $\sigma_z$ observable measured in the [[CHSH quantum strategy]] and in [[Rabi oscillation|Rabi oscillations]] ($\langle Z\rangle$)
 - the [[CZ gate]] is a controlled Z
+
+see also [[X gate]], [[Y gate]], [[Phase shift]], [[Dephasing channel]]

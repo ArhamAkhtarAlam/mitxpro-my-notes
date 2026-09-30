@@ -27,7 +27,7 @@ put a detector on each output and **only one** clicks, 50/50 at random. it's a r
 > $$
 > B=\frac1{\sqrt2}\begin{bmatrix}1&i\\i&1\end{bmatrix}
 > $$
-> it's [[Unitary Operation|unitary]] like any gate, so a beamsplitter is basically a quantum gate for photons
+> it's [[Unitary Operation|unitary]] like any gate, so a beamsplitter is basically a [[Quantum gate|quantum gate]] for photons
 
 ```mermaid
 flowchart LR
@@ -45,3 +45,5 @@ put a single photon detector on each output of a polarizing beamsplitter and you
 - detector 2 clicks → $|V\rangle$ (= 1)
 
 rotate the photon first with a half wave plate and the same setup measures in the D/A basis instead (see [[Polarization#Changing polarization]]). this is the detector in [[BB84]], [[BBM92]] and [[Ekert91]], and how [[Entangled Photons generation and detection|entangled photons get detected]]
+
+see also [[Polarization]], [[Single Photon making and detecting]], [[BB84]]

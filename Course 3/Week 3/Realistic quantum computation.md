@@ -18,5 +18,7 @@ flowchart LR
 - [[Learning parity with noise]] → a real quantum advantage with a few noisy qubits (BBN + IBM)
 - [[Quantum machine learning]] → [[Support vector machines]], [[Quantum kernel SVM]]
 - [[Quantum simulation]] → simulating molecules and materials, why classical computers can't, and the ammonia challenge
+- [[Linear systems of equations]] → solving A x = b classically, sparsity and the condition number (setup for [[HHL algorithm|HHL]])
+- [[HHL algorithm]] → the quantum linear system solver: log N instead of N, but with a very different input and output
 
 see also [[Noise Processes]], [[Quantum channels]], [[Quantum Communication]]

@@ -80,7 +80,7 @@ $$
 
 its eigenvalues are $+1$ (Bob outputs $y=0$) and $-1$ (Bob outputs $y=1$)
 
-**3.** the slow way: find the $+1$ eigenvector, take its inner product with $|0\rangle$ and square it. the **easy** way: use the [[Probability and expectation values|expectation value]]
+**3.** the slow way: find the $+1$ eigenvector, take its [[Dirac notation|inner product]] with $|0\rangle$ and square it. the **easy** way: use the [[Probability and expectation values|expectation value]]
 $$
 \langle0|B_s|0\rangle=\begin{bmatrix}1&0\end{bmatrix}\frac1{\sqrt2}\begin{bmatrix}1&1\\1&-1\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix}=\frac1{\sqrt2}
 $$

@@ -288,3 +288,5 @@ the number of qubits:
 $$
 \boxed{\text{QFT limit} = 2^n \text{ discrete, modular frequencies}}
 $$
+
+see also [[Discrete Fourier Transform]], [[Quantum Phase Estimation]], [[Shor's algorithm]], [[HHL algorithm]]

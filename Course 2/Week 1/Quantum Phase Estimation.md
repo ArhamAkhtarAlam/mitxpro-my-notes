@@ -24,3 +24,5 @@ flowchart LR
 
 ## Why it matters
 [[Shor's algorithm]] is basically QPE: the [[Order finding algorithm|order finding]] part runs QPE on $U|y\rangle=|ay \bmod N\rangle$ (the [[Modular Exponentiation]] gate). its phases are $\theta=\frac sr$, so measuring $\theta$ lets you find the order $r$
+
+see also [[Quantum Fourier Transform]], [[Shor's algorithm]], [[HHL algorithm]], [[Eigenvalues and eigenvectors]]

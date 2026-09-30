@@ -66,3 +66,5 @@ sequenceDiagram
     Note right of Bob: Shared secret key
 
 ```
+
+see also [[QKD]], [[CHSH game]], [[Quantum hacking]]

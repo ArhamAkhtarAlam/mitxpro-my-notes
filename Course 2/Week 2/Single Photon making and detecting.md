@@ -58,3 +58,5 @@ flowchart LR
 (the avalanche diode can only say "photon or no photon", not **how many**, which is another reason 2 photon pulses are sneaky)
 
 used in [[QKD]] methods like [[BB84]]
+
+see also [[Beamsplitters]], [[Quantum hacking]], [[Increasing the key rate]]

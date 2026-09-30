@@ -16,7 +16,7 @@ put nodes along the line that use [[Quantum Error Correction]] to fix the quantu
 by Briegel, Dür, Cirac and Zoller. instead of sending the qubit itself, just build up **entanglement** between the 2 far ends, then use it for anything (QKD, [[Teleportation|teleportation]], computing, sensing)
 
 it has 3 key ideas
-1. **[[Entanglement purification|entanglement purification]]**: using 2 way communication, turn several **noisy** entangled pairs into fewer **better** ones, even with imperfect parts
+1. **[[Entanglement purification|entanglement purification]]**: using 2 way communication, turn several **noisy** [[Entangled Photons generation and detection|entangled pairs]] into fewer **better** ones, even with imperfect parts
 2. **nested entanglement swapping**: entangle short neighbouring links, then join them together step by step until the ends are entangled
 3. **modest resources**: the amount of hardware each node needs only grows slowly with the total distance
 ### entanglement swapping

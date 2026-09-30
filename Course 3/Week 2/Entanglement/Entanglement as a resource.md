@@ -12,7 +12,7 @@ we've already seen some things that are useful like resources
 - noisy classical channels can give 2 people **correlated** signals ($x$ and $y$, see [[Channel capacity]])
 - **shared classical randomness** is useful for cryptography (eg. the key from [[QKD]])
 
-so maybe noisy quantum channels and **entangled states** are resources too
+so maybe noisy [[Quantum channels|quantum channels]] and **entangled states** are resources too
 ## what entanglement is good for
 one Bell pair $\frac1{\sqrt2}(|00\rangle+|11\rangle)$ shared between 2 people is called an **ebit** (1 unit of entanglement)
 ```mermaid

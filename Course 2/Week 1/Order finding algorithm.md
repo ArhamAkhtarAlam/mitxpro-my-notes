@@ -49,3 +49,5 @@ eg. with 8 counting qubits and $N=15,\ a=2$ you measure $0$, $64$, $128$ or $192
 - $0$ → tells you nothing, run again
 
 see [[Shor's algorithm#Worked example (factoring 15)]] for the full thing
+
+see also [[Shor's algorithm]], [[Quantum Phase Estimation]], [[Modular arithmetic]]

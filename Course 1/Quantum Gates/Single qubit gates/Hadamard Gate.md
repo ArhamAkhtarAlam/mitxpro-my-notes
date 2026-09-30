@@ -61,3 +61,5 @@ eg. 2 qubits: $\frac12(|00\rangle+|01\rangle+|10\rangle+|11\rangle)$ (see [[Tens
 - the first step of almost every algorithm: [[Shor's algorithm]], [[Quantum Phase Estimation]], the [[Quantum Fourier Transform]]
 - making [[Bell states]]: H then a [[CNOT gate]]
 - switching bases, like the $|+\rangle,|-\rangle$ basis in [[BB84]]
+
+see also [[Quantum gate]], [[X gate]], [[Z gate]], [[Bloch sphere]]

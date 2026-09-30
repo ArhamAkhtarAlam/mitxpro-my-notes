@@ -10,7 +10,7 @@ $$
 - each A state is paired with **exactly one** B state, no cross terms
 
 > [!important] the link to everything else
-> the $\lambda_k$ are exactly the [[Eigenvalues and eigenvectors|eigenvalues]] of the reduced density matrix $\rho_A$ (and of $\rho_B$, they're the same). so
+> the $\lambda_k$ are exactly the [[Eigenvalues and eigenvectors|eigenvalues]] of the reduced [[Density matrix|density matrix]] $\rho_A$ (and of $\rho_B$, they're the same). so
 > - [[Entanglement entropy]] $E=-\sum_k\lambda_k\log_2\lambda_k$
 > - [[Schmidt number]] = how many $\lambda_k$ aren't 0
 ## how to find it

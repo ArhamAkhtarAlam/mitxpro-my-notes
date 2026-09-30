@@ -34,7 +34,7 @@ flowchart LR
 (what happens at a horizontal (H) polarizer)
 
 ## Polarization as a qubit
-a single photon's polarization **is** a qubit
+a [[Single Photon making and detecting|single photon]]'s polarization **is** a qubit
 
 | polarization | as a qubit | on the [[Bloch sphere]] |
 |---|---|---|
@@ -67,3 +67,5 @@ instead of wiggling along a line, the wave's direction **spins around** as it tr
 - a **quarter wave plate** turns linear into circular polarization
 
 this is how [[BB84]] switches between the H/V and D/A bases
+
+see also [[Beamsplitters]], [[Bloch sphere]], [[BB84]]

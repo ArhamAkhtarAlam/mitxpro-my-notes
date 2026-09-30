@@ -108,3 +108,5 @@ the **shape** tells you *which* information gets lost
 | shrink factor     | $1-2p$ (only $x$, $y$)                               | $1-\frac43p$ (all directions) | $\sqrt{1-\gamma}$ sideways, $1-\gamma$ up/down    |
 | preferred basis?  | yes ($\lvert0\rangle$ and $\lvert1\rangle$ are safe) | no                            | yes ($\lvert0\rangle$ is safe)                    |
 | mixture of gates? | yes                                                  | yes                           | no                                                |
+
+see also [[Density matrix]], [[Noise Processes]], [[Bloch sphere]]

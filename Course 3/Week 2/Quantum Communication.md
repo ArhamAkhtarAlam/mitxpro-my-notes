@@ -18,7 +18,7 @@ for a lot of these, **entanglement** is the resource that makes it better, when 
 - [[CHSH game]] → Bell's argument as a game, classical max 75%
 - [[CHSH quantum strategy]] → winning 85.4% with an [[Entangled Photons generation and detection|entangled pair]]
 - [[Long-distance quantum communication]] → why we can't amplify photons, fibre loss, the quantum internet
-- [[Quantum repeaters]] → error correction nodes, BDCZ, DLCZ and entanglement swapping
+- [[Quantum repeaters]] → [[Quantum Error Correction|error correction]] nodes, BDCZ, DLCZ and entanglement swapping
 - [[QKD in practice]] → [[Quantum hacking]], [[QKD distance and key rate]], [[Floodlight QKD]], [[Increasing the key rate]]
 - [[Entanglement as a resource]] → the entanglement deep dive: ebits, [[LOCC]], asymptotic equivalence
 - [[Defining entanglement]] → [[Entanglement entropy]], [[Schmidt decomposition]], [[Schmidt number]]

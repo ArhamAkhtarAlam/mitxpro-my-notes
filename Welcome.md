@@ -43,6 +43,7 @@ flowchart LR
 - **week 1** → [[Density matrix]], [[Quantum channels]], [[Noise Processes]], [[Quantum Error Correction]]
 - **week 2** → [[Quantum Communication]] (information theory, EPR, Bell and CHSH)
 - **week 3** → [[Realistic quantum computation]] (the [[NISQ]] era)
+- **week 4** → [[Benchmarking quantum systems]] (tomography and randomized benchmarking)
 ### Math
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, eigenvalues, tensor products, the trace
 ## tips for reading

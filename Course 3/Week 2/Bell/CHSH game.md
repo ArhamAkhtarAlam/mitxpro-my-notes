@@ -1,5 +1,5 @@
 #bell #CHSH_game #entanglement #quantum_foundations
-Bell's argument turned into a **game**, which makes it way easier to understand than the original (which is about marginal probabilities of a joint probability distribution). follows on from [[Quantum weirdness]]
+Bell's argument turned into a **game**, which makes it way easier to understand than the original (which is about marginal probabilities of a joint [[Probability and expectation values|probability distribution]]). follows on from [[Quantum weirdness]]
 ## the game
 Alice and Bob are on the **same team**, they want to win with the highest probability they can
 ```mermaid
@@ -18,7 +18,7 @@ they win if
 $$
 x\oplus y=a\cdot b
 $$
-($\oplus$ is XOR, which is the same as $x+y \bmod 2$)
+($\oplus$ is [[Modular arithmetic|XOR]], which is the same as $x+y \bmod 2$)
 ### the win chart
 | $a$ | $b$ | $a\cdot b$ | they win if |
 |---|---|---|---|
@@ -66,7 +66,7 @@ and 75% is actually possible, eg. both always say $0$ (wins every case except $a
 >
 > so **no classical strategy** of any kind beats 75%
 ## the quantum strategy
-if Alice and Bob share an entangled pair they **can** win more than 75%, about **85.4%**, see [[CHSH quantum strategy]]
+if Alice and Bob share an [[Entangled Photons generation and detection|entangled pair]] they **can** win more than 75%, about **85.4%**, see [[CHSH quantum strategy]]
 
 > [!info] why it matters
 > beating 75% is exactly what proves no local hidden variable theory can explain quantum mechanics, which is Bell's point

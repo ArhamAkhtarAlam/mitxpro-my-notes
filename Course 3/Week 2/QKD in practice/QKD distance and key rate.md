@@ -1,7 +1,7 @@
 #QKD #key_rate #long_distance #quantum_repeater
-the 2 numbers that matter most for a QKD system: **how far** it works, and **how fast** it makes key at that distance. part of [[QKD in practice]]
+the 2 numbers that matter most for a [[QKD]] system: **how far** it works, and **how fast** it makes key at that distance. part of [[QKD in practice]]
 ## distance
-if Alice sends single photons at a rate $R$ per second straight down a fibre to Bob (with a perfect detector), the secret key rate is
+if Alice sends [[Single Photon making and detecting|single photons]] at a rate $R$ per second straight down a fibre to Bob (with a perfect detector), the secret key rate is
 $$
 \text{key rate}\;\propto\;R\times(\text{fraction of photons that reach Bob})
 $$
@@ -45,7 +45,7 @@ flowchart LR
 ```
 ## key rate
 even inside a city (where distance is fine), is the key **fast enough**?
-- best today: BB84 at about a **megabit per second** over 50 km of fibre
+- best today: [[BB84]] at about a **megabit per second** over 50 km of fibre
 - one-time padding big files at internet speeds needs about a **gigabit per second**, 1000 times more
 ```mermaid
 flowchart LR

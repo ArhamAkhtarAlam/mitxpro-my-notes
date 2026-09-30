@@ -63,3 +63,5 @@ eg. $\text X\left(\sqrt{\tfrac34}|0\rangle+\tfrac12|1\rangle\right)=\tfrac12|0\r
 - the target of a [[CNOT gate]] and [[Toffoli gate]] (they're controlled X gates)
 - flipping $|0\rangle$ to $|1\rangle$ to set up a qubit, eg. the work register in the [[Shor's algorithm]] demo starts with an X
 - as an error it's a **bit flip**, one of the errors in the [[Depolarizing channel]]
+
+see also [[Y gate]], [[Z gate]], [[CNOT gate]], [[Depolarizing channel]]

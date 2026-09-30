@@ -47,3 +47,5 @@ x & \text{CZ}(x)\\
 $$
 > [!tip]
 > $\text{CZ}$ = [[Hadamard Gate|H]] on the target, then [[CNOT gate|CNOT]], then H on the target again
+
+see also [[Multiqubit gates]], [[CNOT gate]], [[Z gate]]

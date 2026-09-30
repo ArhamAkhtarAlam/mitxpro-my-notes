@@ -16,7 +16,7 @@ flowchart LR
     P["|ψ⟩AB"] --> R["ρAB = |ψ⟩⟨ψ|"] -- "partial trace over B" --> RA["ρA"] -- "eigenvalues λ" --> S["S(ρA) = −Σ λ log₂ λ"] --> E["E (in ebits)"]
 ```
 > [!tip] why this works
-> if the state is a product state, A on its own is still a **pure** state, so $S=0$. the more entangled it is, the more **mixed** A looks on its own, so the bigger $S$ gets. entanglement = how much information about A is hidden in its connection to B
+> if the state is a [[Tensor product|product state]], A on its own is still a **pure** state, so $S=0$. the more entangled it is, the more **mixed** A looks on its own, so the bigger $S$ gets. entanglement = how much information about A is hidden in its connection to B
 ## example: the Bell pair
 $$
 |\psi\rangle=\frac1{\sqrt2}(|00\rangle+|11\rangle)

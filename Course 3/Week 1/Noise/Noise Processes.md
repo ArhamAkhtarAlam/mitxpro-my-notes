@@ -1,4 +1,4 @@
- #noise #decoherence #rabi_oscillation #gate_fidelity
+#noise #decoherence #rabi_oscillation #gate_fidelity
 ## why we care
 in course 2 everything was **ideal** (perfect qubits, perfect control electronics and optics)
 

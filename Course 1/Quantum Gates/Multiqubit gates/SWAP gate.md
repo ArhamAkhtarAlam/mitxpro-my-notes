@@ -45,3 +45,5 @@ x & \text{SWAP}(x)\\
 $$
 > [!tip]
 > a SWAP is the same as 3 [[CNOT gate|CNOTs]] in a row (the middle one upside down)
+
+see also [[Multiqubit gates]], [[CNOT gate]], [[Quantum volume]]

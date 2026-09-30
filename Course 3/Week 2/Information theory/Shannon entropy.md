@@ -21,6 +21,12 @@ $$
 
 ![[Binary_entropy_and_BSC_capacity.png]]
 (left side, the right side is in [[Channel capacity]])
+```mermaid
+flowchart LR
+    P["probabilities p(x)<br/>of each message"] --> F["−Σ p(x) log₂ p(x)"] --> H["H(X) = bits needed<br/>per message on average"]
+```
+(how to calculate it)
+
 ## mutual information
 $I(X;Y)$ = how much info the received message $y$ gives you about the sent message $x$
 $$

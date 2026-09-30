@@ -256,4 +256,4 @@ $$
 
 Each block is $15\times15$, so the full matrix is $60\times60$.
 
-
+see also [[Shor's algorithm]], [[Order finding algorithm]], [[Modular arithmetic]]

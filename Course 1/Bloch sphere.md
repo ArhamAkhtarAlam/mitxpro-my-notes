@@ -41,3 +41,5 @@ flowchart LR
 - **center** → the fully mixed state $\frac I2$
 
 noise squishes the sphere inwards, see [[Quantum channels#what the Bloch sphere squishing actually means]]
+
+see also [[Quantum gate]], [[Density matrix]], [[Quantum channels]], [[Complex numbers]]

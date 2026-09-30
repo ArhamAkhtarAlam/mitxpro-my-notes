@@ -1,5 +1,5 @@
 #QKD #key_rate #high_dimensional_encoding
-what limits how fast QKD makes key, and 2 ways to make it faster with the technology we have **today**. part of [[QKD in practice]]
+what limits how fast [[QKD]] makes key, and 2 ways to make it faster with the technology we have **today**. part of [[QKD in practice]]
 ## the goal
 QKD's job is to give Alice and Bob **identical** copies of a random **key**, while Eve knows nothing about it
 

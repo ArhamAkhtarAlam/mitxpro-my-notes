@@ -16,7 +16,7 @@ named after Bennett, Brassard and Mermin (1992). it's basically [[BB84]] but wit
 ## vs BB84
 - the maths ends up almost the same as BB84, and Eve gets caught the same way (by the error rate)
 - the source can be **in the middle**, so each photon only travels half the distance
-- unlike [[Ekert91]] it doesn't do a Bell test, it just checks the error rate
+- unlike [[Ekert91]] it doesn't do a [[CHSH game|Bell test]], it just checks the error rate
 
 ```mermaid
 	sequenceDiagram
@@ -58,4 +58,4 @@ named after Bennett, Brassard and Mermin (1992). it's basically [[BB84]] but wit
 
 ```
 
- 
+see also [[QKD]], [[BB84]], [[Ekert91]]

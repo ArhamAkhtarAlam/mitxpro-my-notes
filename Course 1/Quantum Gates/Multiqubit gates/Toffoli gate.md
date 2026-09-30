@@ -63,3 +63,5 @@ x & \text{Toffoli}(x)\\
 |111\rangle & |110\rangle
 \end{array}
 $$
+
+see also [[Multiqubit gates]], [[CNOT gate]], [[Fredkin gate]]

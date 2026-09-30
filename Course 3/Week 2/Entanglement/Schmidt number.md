@@ -7,7 +7,7 @@ $$
 $$
 the **Schmidt number** = the number of **non-zero** Schmidt coefficients $\sqrt{\lambda_k}$
 
-- Schmidt number 1 → product state, **not** entangled
+- Schmidt number 1 → [[Tensor product|product state]], **not** entangled
 - Schmidt number 2 or more → **entangled**
 - eg. a Bell pair has Schmidt number 2
 

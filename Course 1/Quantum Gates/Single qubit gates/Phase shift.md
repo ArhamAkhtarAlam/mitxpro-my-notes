@@ -57,3 +57,5 @@ x & \text P(\varphi)(x)\\
 $$
 > [!note] global vs relative phase
 > a phase on the **whole** state ($e^{i\varphi}|\psi\rangle$) does nothing you can measure. a phase on just **one part** ($|0\rangle+e^{i\varphi}|1\rangle$) is a real change, that's what this gate does
+
+see also [[Z gate]], [[Quantum Fourier Transform]], [[Complex numbers]]

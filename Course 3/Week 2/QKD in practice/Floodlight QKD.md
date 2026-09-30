@@ -1,5 +1,5 @@
 #QKD #floodlight_QKD #key_rate
-a newer QKD protocol that aims for **gigabit per second** keys across a city, on a single wavelength. part of [[QKD in practice]], and the answer to the key rate problem in [[QKD distance and key rate]]
+a newer [[QKD]] protocol that aims for **gigabit per second** keys across a city, on a single wavelength. part of [[QKD in practice]], and the answer to the key rate problem in [[QKD distance and key rate]]
 ## why BB84 can't go that fast
 normal fibre internet easily does gigabits per second over 50–100 km because
 - it sends **lots of photons per bit**

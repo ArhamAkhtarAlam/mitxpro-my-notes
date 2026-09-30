@@ -29,3 +29,5 @@ flowchart LR
 - fix it with a gate
 
 this is where the ideas from [[Density matrix]] come in: unravellings and purification explain why fixing a few discrete errors is enough to fix any error
+
+see also [[NISQ]], [[Quantum channels]], [[Quantum repeaters]], [[Logical qubit]]

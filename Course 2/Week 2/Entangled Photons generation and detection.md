@@ -43,3 +43,5 @@ we look for **coincidences**: both detectors clicking at the same time means it 
 measure both photons at different angles and compare, if the results beat the classical limit in a Bell test ([[CHSH game]]) the photons are really entangled. that's exactly what [[Ekert91]] does
 
 used in [[QKD]] methods like [[BBM92]] and [[Ekert91]]
+
+see also [[Quantum weirdness]], [[Bell states]], [[Ekert91]], [[BBM92]]

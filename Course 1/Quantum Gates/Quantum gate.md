@@ -63,3 +63,5 @@ this is like how NAND alone can build any classical circuit
 - gates are [[Unitary Operation|unitary]] and reversible
 - measurement **isn't**: it collapses the qubit to $|0\rangle$ or $|1\rangle$ with probabilities $|\alpha|^2$ and $|\beta|^2$ (the probability rule in [[Dirac notation]]), and you can't undo it
 - that's why algorithms measure only at the **end**
+
+see also [[Multiqubit gates]], [[Unitary Operation]], [[Bloch sphere]], [[Math]]

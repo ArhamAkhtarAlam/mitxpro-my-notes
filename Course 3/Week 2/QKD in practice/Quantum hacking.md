@@ -1,7 +1,7 @@
 #QKD #quantum_hacking #security
 attacking the **equipment** instead of the physics. part of [[QKD in practice]]
 ## the gap
-QKD security proofs guarantee the **protocol** is secure, not the **hardware** it runs on
+[[QKD]] security proofs guarantee the **protocol** is secure, not the **hardware** it runs on
 
 **quantum hacking** = Eve uses flaws in the real equipment to learn some or even **all** of Alice and Bob's key, without causing the errors that normally give her away
 ## example, the blinding attack on BB84

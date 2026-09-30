@@ -26,3 +26,5 @@ flowchart LR
     E --> B["Bloch sphere"]
 ```
 (arrows = "learn this first")
+
+see also [[Welcome]]

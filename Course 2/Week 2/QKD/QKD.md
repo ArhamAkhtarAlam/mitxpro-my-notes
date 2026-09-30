@@ -33,3 +33,5 @@ flowchart LR
 (more on this in Course 3: [[QKD in practice]], [[Quantum hacking]], [[QKD distance and key rate]])
 - photons get absorbed in optical fibre, so practical fibre QKD only reaches about 100 km (lab records go a few hundred km)
 - to go further you need [[Quantum repeaters|quantum repeaters]] (still being developed, see [[Long-distance quantum communication]]) or **satellites** (China's Micius satellite did QKD between ground stations over 1000 km apart)
+
+see also [[QKD in practice]], [[BB84]], [[Quantum hacking]], [[Long-distance quantum communication]]

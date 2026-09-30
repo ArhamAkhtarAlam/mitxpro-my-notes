@@ -27,3 +27,5 @@ flowchart LR
 $$
 \text X^\dagger\text X=\begin{bmatrix}0&1\\1&0\end{bmatrix}\begin{bmatrix}0&1\\1&0\end{bmatrix}=\begin{bmatrix}1&0\\0&1\end{bmatrix}=I
 $$
+
+see also [[Quantum gate]], [[Eigenvalues and eigenvectors]], [[Dirac notation]]

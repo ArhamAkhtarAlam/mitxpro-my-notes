@@ -42,7 +42,7 @@ $$
 ## Why have a gate that does nothing?
 - **waiting**: on real hardware "do nothing" still takes time, and while the qubit waits it slowly loses its state through noise ($T_1$ and $T_2$, see [[Noise Processes]] and [[Amplitude damping channel]]). the identity gate is how you tell the computer "wait here"
 - **maths**: $I$ is what you get when a gate undoes itself, eg. $\text X\text X=I$, $\text H\text H=I$, and a [[Unitary Operation|unitary]] times its inverse $U^\dagger U=I$
-- **multi qubit gates**: "do $\text H$ on qubit 1 and nothing on qubit 2" is $\text H\otimes I$ (see [[Tensor product]])
+- **[[Multiqubit gates|multi qubit gates]]**: "do $\text H$ on qubit 1 and nothing on qubit 2" is $\text H\otimes I$ (see [[Tensor product]])
 - the "do nothing" part of a noise channel, eg. the [[Depolarizing channel]] does $I$ with probability $1-p$
 
 ```mermaid
@@ -55,3 +55,5 @@ flowchart LR
 ## Properties
 - every state is an [[Eigenvalues and eigenvectors|eigenvector]] of $I$ with eigenvalue 1
 - $\frac I2$ (half the identity) is the **fully mixed state**, the middle of the [[Bloch sphere]] (see [[Density matrix]])
+
+see also [[Quantum gate]], [[Noise Processes]], [[Unitary Operation]]
