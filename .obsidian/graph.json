@@ -3,7 +3,7 @@
   "search": "",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
@@ -11,77 +11,91 @@
       "query": "path:\"Course 1/Quantum Gates/Single qubit gates\"  ",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 15023678
       }
     },
     {
       "query": "path:\"Course 1/Quantum Gates/Multiqubit gates\"  ",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 14510880
       }
     },
     {
       "query": "path:\"Course 1\"  ",
       "color": {
         "a": 1,
-        "rgb": 11657298
+        "rgb": 14065198
       }
     },
     {
       "query": "path:\"Course 2/Week 1\"  ",
       "color": {
         "a": 1,
-        "rgb": 5431378
+        "rgb": 4766584
       }
     },
     {
       "query": "path:\"Course 2/Week 2\"  ",
       "color": {
         "a": 1,
-        "rgb": 8635106
+        "rgb": 3715756
       }
     },
     {
       "query": "path:\"Course 2/Week 3\"  ",
       "color": {
         "a": 1,
-        "rgb": 3238535
+        "rgb": 10145074
       }
     },
     {
       "query": "path:\"Course 2/Week 4\"  ",
       "color": {
         "a": 1,
-        "rgb": 5395168
+        "rgb": 2775618
       }
     },
     {
       "query": "path:\"Course 3/Week 1\"  ",
       "color": {
         "a": 1,
-        "rgb": 11621088
+        "rgb": 7715312
       }
     },
     {
       "query": "path:\"Course 3/Week 2\"  ",
       "color": {
         "a": 1,
-        "rgb": 14701233
+        "rgb": 5533672
       }
     },
     {
       "query": "path:\"Course 3/Week 3\"  ",
       "color": {
         "a": 1,
-        "rgb": 10673625
+        "rgb": 6505634
       }
     },
     {
       "query": "path:\"Course 3/Week 4\"  ",
       "color": {
         "a": 1,
-        "rgb": 2818681
+        "rgb": 10744063
+      }
+    },
+    {
+      "query": "path:Math  ",
+      "color": {
+        "a": 1,
+        "rgb": 10530496
+      }
+    },
+    {
+      "query": "path:\"Extra (not in course)\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15557798
       }
     }
   ],
@@ -91,10 +105,10 @@
   "nodeSizeMultiplier": 1.38828995242093,
   "lineSizeMultiplier": 1.26842989084803,
   "collapse-forces": false,
-  "centerStrength": 0.284914637559474,
-  "repelStrength": 10.8782779330439,
+  "centerStrength": 0,
+  "repelStrength": 9.67592317297972,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.8372166645230299,
-  "close": false
+  "scale": 0.5487941451131642,
+  "close": true
 }

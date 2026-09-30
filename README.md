@@ -19,7 +19,8 @@ My personal study notes from three **MIT xPRO** quantum computing courses, writt
 - **Course 3**
   - *Week 1* → density matrices, quantum channels (dephasing, depolarizing, amplitude damping), noise, Rabi oscillations, noise spectra
   - *Week 2* → information theory (Shannon and von Neumann entropy, channel capacity), EPR, Bell and the CHSH game
-- **Math** → the maths behind all of it: complex numbers, Dirac notation, probability, modular arithmetic, eigenvalues, tensor products, the trace. Start at [`Math/Math.md`](Math/Math.md) if something doesn't make sense
+- **Math** → the maths behind all of it: complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace. Start at [`Math/Math.md`](Math/Math.md) if something doesn't make sense
+- **Extra (not in course)** → good-to-know topics the courses skip, sorted by course and week: the no-cloning theorem, more noise channels, superdense coding, entanglement purification, quantum memories, distributed and blind quantum computing, GHZ states, Bernstein–Vazirani, Solovay–Kitaev, tensor networks, DFT, the partial trace and purification. Start at [`Extra (not in course)/Extra.md`](<Extra (not in course)/Extra.md>)
 
 ## How to read these
 

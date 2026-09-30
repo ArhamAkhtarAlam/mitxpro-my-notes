@@ -8,6 +8,7 @@ these are my notes from three **MIT xPRO** quantum computing courses. I wrote th
 > - **Course 2** → *Quantum Algorithms for Cybersecurity, Chemistry, and Optimization*: cryptography and Shor's algorithm, photons and quantum key distribution, simulating molecules, quantum optimisation and Grover
 > - **Course 3** → *Practical Realities of Quantum Computation and Quantum Communication*: density matrices, noise, quantum channels, information theory, Bell and the CHSH game
 > - **Math** → all the maths you need for the rest
+> - **Extra** → good-to-know topics that aren't in the courses
 
 ## where to start
 pick whatever sounds interesting, every note links to the ones it builds on
@@ -49,7 +50,9 @@ flowchart LR
 - **week 3** → [[Realistic quantum computation]] (the [[NISQ]] era)
 - **week 4** → [[Benchmarking quantum systems]] (tomography and randomized benchmarking)
 ### Math
-- [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, eigenvalues, tensor products, the trace
+- [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace
+### Extra (not in the courses)
+- [[Extra]] → things the courses skip but are good to know: the no-cloning theorem, more noise channels, superdense coding, GHZ states, tensor networks, purification...
 ## tips for reading
 - **click any link** to jump to that note, or **hover** over it for a quick preview
 - the **graph view** shows how all the notes connect

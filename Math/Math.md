@@ -7,6 +7,7 @@ the maths you need for the quantum notes. start at the top if something doesn't 
 - [[Modular arithmetic]] → mod $N$, XOR, periods, gcd
 ## linear algebra
 - [[Eigenvalues and eigenvectors]] → the directions a matrix only stretches
+- [[Hilbert space]] → the space states live in, why it doubles with every qubit
 - [[Tensor product]] → combining qubits with $\otimes$, entanglement
 - [[Trace]] → tr, purity, the partial trace
 - [[Unitary Operation]] → $U^\dagger U=I$, what every gate is
