@@ -77,7 +77,7 @@ $$
 (checked numerically). in practice $\mathcal E(\sigma_j)$ comes from sending in the 2 eigenstates of each Pauli (eg. $|0\rangle$ and $|1\rangle$ for $\sigma_z$) and doing [[State tomography]] on the outputs
 ```mermaid
 flowchart LR
-    I["inputs: eigenstates of<br/>σx, σy, σz"] --> G["run the real gate ℰ"] --> T["state tomography<br/>on each output"] --> A["average gate fidelity F̄"] --> E["entanglement fidelity<br/>F_e = ((d+1)F̄ − 1)/d"]
+    I["inputs: eigenstates of<br/> σx, σy, σz"] --> G["run the real gate ℰ"] --> T["state tomography<br/>on each output"] --> A["average gate fidelity F̄"] --> E["entanglement fidelity<br/>F_e = ((d+1)F̄ − 1)/d"]
 ```
 there are versions for many qubits too, and today **gate fidelities are routinely measured** as a normal part of running a quantum computer. the numbers in [[Quantum volume]] and the error rates in [[NISQ]] come from measurements like this
 ## comparing the 3

@@ -1,5 +1,5 @@
 #quantum_operations #kraus_operators #quantum_channel #quantum_error_correction
-the general way to describe **anything** that can happen to a quantum state (noise, measurement, gates...) as a map $\mathcal E$ from an input [[Density matrix|density matrix]] to an output one. it's the "VERY COMPLICATED" general version from [[Quantum channels]], and the language of [[Quantum Error Correction]]. part of [[Benchmarking quantum systems]]
+the general way to describe **anything** that can happen to a quantum state (noise, measurement, gates...) as a map $\mathcal E$ from an input [[Density matrix|density matrix]] to an output one. it's the general version from [[Quantum channels]], and the language of [[Quantum Error Correction]]. part of [[Benchmarking quantum systems]]
 ## the goal
 for error correction we first need to say what an **error** even is. so: describe **every** possible way a density matrix $\rho$ can turn into another one
 $$
@@ -9,10 +9,10 @@ not just [[Unitary Operation|unitary]] evolution ($\rho\to U\rho U^\dagger$), bu
 ## the model: system + environment
 ```mermaid
 flowchart LR
-    S["system |ψ⟩"] --> U["joint unitary U<br/>(system and environment interact)"]
-    E["environment |e⟩"] --> U
-    U --> M["measure the environment<br/>in a basis e₀, e₁, e₂, ..."]
-    U --> OUT["system: output ρ"]
+    S["system $$\ |\psi\rangle$$"] --> U["joint unitary U<br/>(system and environment interact)"]
+    E["environment $$\ |e\rangle$$"] --> U
+    U --> M["measure the environment in a basis $$\ |e_0\rangle,|e_1\rangle,|e_2\rangle,\ldots$$"]
+    U --> OUT["system: output $$\ \rho$$"]
 ```
 1. the **system** starts in a state $|\psi\rangle$
 2. it doesn't evolve by itself: it's coupled to an **environment**, starting in some state $|e\rangle$ (pure here, but it doesn't have to be)
@@ -68,13 +68,13 @@ this is what makes the probabilities add up to 1: the chance of outcome $k$ is $
 so dephasing just means: ==the environment learned a little bit about whether the qubit is $|0\rangle$ or $|1\rangle$==
 ## the channels you already know
 
-| channel | operation elements |
-|---|---|
-| a unitary gate | just one: $E_0=U$ |
-| [[Dephasing channel]] | $\sqrt{1-p}\,I,\ \sqrt p\,Z$ |
-| [[Depolarizing channel]] | $\sqrt{1-p}\,I,\ \sqrt{\frac p3}\,X,\ \sqrt{\frac p3}\,Y,\ \sqrt{\frac p3}\,Z$ |
-| [[Bit flip channel]] | $\sqrt{1-p}\,I,\ \sqrt p\,X$ |
-| [[Amplitude damping channel]] | the 2 below |
+| channel                       | operation elements                                                             |
+| ----------------------------- | ------------------------------------------------------------------------------ |
+| a unitary gate                | just one: $E_0=U$                                                              |
+| [[Dephasing channel]]         | $\sqrt{1-p}\,I,\ \sqrt p\,Z$                                                   |
+| [[Depolarizing channel]]      | $\sqrt{1-p}\,I,\ \sqrt{\frac p3}\,X,\ \sqrt{\frac p3}\,Y,\ \sqrt{\frac p3}\,Z$ |
+| [[Bit flip channel]]          | $\sqrt{1-p}\,I,\ \sqrt p\,X$                                                   |
+| [[Amplitude damping channel]] | the 2 below                                                                    |
 
 ![[Amplitude damping channel#^kraus]]
 

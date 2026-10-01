@@ -9,12 +9,12 @@ $$
 
 ```mermaid
 flowchart LR
-    IN["ρ"] --> C{"depolarizing<br/>channel"}
-    C -- "1−p<br/>do nothing" --> A["ρ"]
-    C -- "p/3<br/>apply X" --> X["XρX"]
-    C -- "p/3<br/>apply Y" --> Y["YρY"]
-    C -- "p/3<br/>apply Z" --> Z["ZρZ"]
-    A --> OUT["ρ_out<br/>(a mixture of all 4)"]
+    IN["$$\rho$$"] --> C{"depolarizing<br/>channel"}
+    C -- "$$1-p\ $$ do nothing" --> A["$$\rho$$"]
+    C -- "$$\tfrac p3\ $$ apply X" --> X["$$X\rho X$$"]
+    C -- "$$\tfrac p3\ $$ apply Y" --> Y["$$Y\rho Y$$"]
+    C -- "$$\tfrac p3\ $$ apply Z" --> Z["$$Z\rho Z$$"]
+    A --> OUT["$$\rho_{\text{out}}\ $$ (a mixture of all 4)"]
     X --> OUT
     Y --> OUT
     Z --> OUT
