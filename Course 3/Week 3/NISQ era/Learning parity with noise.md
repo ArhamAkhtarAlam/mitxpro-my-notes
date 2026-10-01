@@ -26,13 +26,8 @@ after a few tries it's obvious that $a=D_1\oplus D_2$, so $k=11$
 now say any of $D_1$, $D_2$ or $a$ gets **flipped** by accident sometimes. the pattern gets buried, and classically the number of queries you need grows **nearly exponentially** with the amount of noise
 ## the quantum oracle
 the same oracle as a quantum circuit: data qubits $D_1\ldots D_n$ and one result qubit $a$
-```visual
-D1: ─┤H├──■────────
-          │
-D2: ─┤H├──┼────■───
-          │    │
-a:  ──────⊕────⊕───      (a CNOT from every D_i with k_i = 1)
-```
+![[LPN_oracle_circuit.png]]
+(a CNOT from every $D_i$ with $k_i=1$ onto $a$, drawn here for $k=11$)
 - the [[Hadamard Gate|Hadamards]] put the inputs in an equal superposition of **every** input at once
 - a [[CNOT gate|CNOT]] from each $D_i$ with $k_i=1$ onto $a$ writes the parity into $a$, exactly like the classical oracle
 ### the hardware

@@ -40,14 +40,7 @@ qc = QuantumCircuit(3)
 qc.ccx(0, 1, 2)   # controls 0 and 1, target 2
 ```
 ## Visual representation
-```visual
-q_0: ──■──
-       │
-q_1: ──■──
-     ┌─┴─┐
-q_2: ┤ X ├
-     └───┘
-```
+![[Toffoli_gate.png]]
 ## Truth Table
 $$
 \begin{array}{c|c}

@@ -39,5 +39,6 @@ flowchart LR
 - [[Quantum operations]] → the 3 rules for a legal map (trace preserving, convex-linear, **completely positive**)
 - [[Partial transpose]] → the transpose isn't a physical operation, but it's a test for entanglement
 - [[Gate fidelity]] → how good a real gate is: minimum, entanglement and average gate fidelity, and how to measure it with 3 tomography runs
+- [[Process tomography]] → rebuilding a gate's whole χ matrix ($d^4-d^2$ numbers, 240 for 2 qubits!)
 
 see also [[Quantum volume]], [[NISQ]], [[Realistic quantum computation]]

@@ -39,11 +39,7 @@ flowchart TD
 - [[SWAP gate]]
 - [[Toffoli gate]]
 ## Reading a circuit diagram
-```visual
-q_0: ┤ H ├──■──┤ M ├
-            │
-q_1: ──────┤ X ├┤ M ├
-```
+![[Example_circuit.png]]
 - each **line** is a qubit, and they all start in $|0\rangle$
 - time goes **left to right**
 - a **box** is a gate on that qubit

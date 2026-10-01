@@ -19,13 +19,7 @@ flowchart LR
     A["CNOT<br/>(target 2 → target 1)"] --> B["Toffoli<br/>(control + target 1 → target 2)"] --> C["CNOT<br/>(target 2 → target 1)"] --> D["= Fredkin"]
 ```
 (same idea as building a SWAP out of 3 CNOTs, but the middle one gets the extra control)
-```visual
-q0: ──●──
-      │
-q1: ──x──
-      │
-q2: ──x──
-```
+![[Fredkin_gate.png]]
 ## why it's interesting
 - **reversible**: it's its own inverse (do it twice = nothing)
 - **universal for classical logic**: like the Toffoli, you can build any classical circuit out of Fredkin gates alone (eg. with the target set to fixed values you get AND, OR, NOT)

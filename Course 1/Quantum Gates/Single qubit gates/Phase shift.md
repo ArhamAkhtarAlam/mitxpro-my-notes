@@ -42,11 +42,7 @@ qc.s(0)         # S gate
 qc.t(0)         # T gate
 ```
 ## Visual representation
-```visual
-   ┌────────┐
-q: ┤ P(π/4) ├
-   └────────┘
-```
+![[P_gate.png]]
 ## Truth Table
 $$
 \begin{array}{c|c}

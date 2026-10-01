@@ -21,11 +21,6 @@ qc = QuantumCircuit(1)
 qc.z(0)
 ```
 ## Visual representation
-```visual
-   ┌───┐
-q: ┤ Z ├
-   └───┘
-```
 ![[Z_gate.png]]
 ## Truth Table
 $$

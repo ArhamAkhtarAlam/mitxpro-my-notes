@@ -19,11 +19,6 @@ qc = QuantumCircuit(1)
 qc.x(0)
 ```
 ## Visual representation
-```visual
-   ┌───┐
-q: ┤ X ├
-   └───┘
-```
 ![[X_gate.png]]
 ## Truth Table
 $$

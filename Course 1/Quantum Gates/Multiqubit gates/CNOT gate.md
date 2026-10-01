@@ -34,12 +34,7 @@ qc.cx(0, 1)   # control 0, target 1
 > [!warning] Qiskit qubit order
 > ==Qiskit writes states backwards ($|q_1q_0\rangle$) so the matrix Qiskit shows looks different from the one above, but it's the same gate==
 ## Visual representation
-```visual
-q_0: ──■──
-     ┌─┴─┐
-q_1: ┤ X ├
-     └───┘
-```
+![[CNOT_gate.png]]
 ## Truth Table
 $$
 \begin{array}{c|c}
@@ -53,11 +48,7 @@ x & \text{CNOT}(x)\\
 $$
 (it's the same as target $\to$ target $\oplus$ control, the XOR from [[Modular arithmetic]])
 ## Example (making a Bell state)
-```visual
-q_0: ┤ H ├──■──
-            │
-q_1: ──────┤ X ├
-```
+![[Bell_state_circuit.png]]
 step by step, starting from $|00\rangle$
 $$
 |00\rangle\xrightarrow{\ \text H\text{ on }q_0\ }\frac1{\sqrt2}(|00\rangle+|10\rangle)\xrightarrow{\text{ CNOT }}\frac1{\sqrt2}(|00\rangle+|11\rangle)

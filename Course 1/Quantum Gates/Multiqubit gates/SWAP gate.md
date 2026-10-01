@@ -27,11 +27,7 @@ qc = QuantumCircuit(2)
 qc.swap(0, 1)
 ```
 ## Visual representation
-```visual
-q_0: ─X─
-      │
-q_1: ─X─
-```
+![[SWAP_gate.png]]
 ## Truth Table
 $$
 \begin{array}{c|c}

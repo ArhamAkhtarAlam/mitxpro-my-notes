@@ -20,11 +20,7 @@ qc = QuantumCircuit(1)
 qc.sx(0)
 ```
 ## Visual representation
-```visual
-   ┌────┐
-q: ┤ √X ├
-   └────┘
-```
+![[Sqrt_X_gate.png]]
 ## Truth Table
 $$
 \begin{array}{c|c}

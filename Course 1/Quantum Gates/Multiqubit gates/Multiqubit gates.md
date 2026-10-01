@@ -44,12 +44,7 @@ the top left block does nothing (control is 0), the bottom right block does $U$ 
 
 > [!note] in a circuit
 > a **dot** on the control qubit, joined by a line to the gate on the target
-> ```visual
-> q_0: ──■──
->      ┌─┴─┐
-> q_1: ┤ U ├
->      └───┘
-> ```
+> ![[Controlled_U.png]]
 ### the control isn't just a switch
 if it's in a **superposition**, the gate happens and doesn't happen **at the same time**. that's how CNOT makes a Bell state from $|+\rangle|0\rangle$
 

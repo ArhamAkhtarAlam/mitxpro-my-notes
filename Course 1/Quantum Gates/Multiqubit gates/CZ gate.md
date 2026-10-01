@@ -30,11 +30,7 @@ qc = QuantumCircuit(2)
 qc.cz(0, 1)
 ```
 ## Visual representation
-```visual
-q_0: ─■─
-      │
-q_1: ─■─
-```
+![[CZ_gate.png]]
 ## Truth Table
 $$
 \begin{array}{c|c}

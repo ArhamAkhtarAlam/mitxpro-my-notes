@@ -20,11 +20,6 @@ qc = QuantumCircuit(1)
 qc.y(0)
 ```
 ## Visual representation
-```visual
-   ┌───┐
-q: ┤ Y ├
-   └───┘
-```
 ![[Y_gate.png]]
 ## Truth Table
 $$
