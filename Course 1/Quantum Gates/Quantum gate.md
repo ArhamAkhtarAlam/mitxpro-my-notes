@@ -9,7 +9,7 @@ Every quantum gate is a [[Unitary Operation]] so it can be written as a matrix
 
 On the [[Bloch sphere]] a single qubit gate is just a **rotation** of the sphere
 > [!important] quantum gates are always reversible
-> because they're unitary you can always undo them (apply $U^\dagger$). normal gates like AND aren't reversible, if AND gives 0 you can't tell what went in
+> ==because they're unitary you can always undo them (apply $U^\dagger$).== normal gates like AND aren't reversible, if AND gives 0 you can't tell what went in
 
 ```mermaid
 flowchart TD

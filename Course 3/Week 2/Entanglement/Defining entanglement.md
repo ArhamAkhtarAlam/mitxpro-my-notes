@@ -13,7 +13,7 @@ flowchart LR
     Q -- "no" --> E["entangled"]
 ```
 > [!warning] looks can lie
-> $\frac12(|00\rangle+|01\rangle+|10\rangle+|11\rangle)$ has lots of terms and looks entangled, but it's just $|+\rangle\otimes|+\rangle$, a product state. the [[Schmidt decomposition]] is the reliable way to check
+> ==$\frac12(|00\rangle+|01\rangle+|10\rangle+|11\rangle)$ has lots of terms and looks entangled, but it's just $|+\rangle\otimes|+\rangle$, a product state.== the [[Schmidt decomposition]] is the reliable way to check
 ## not just yes or no
 entanglement comes in **amounts**, eg. $\frac1{\sqrt2}(|00\rangle+|11\rangle)$ is more entangled than $\sqrt{0.9}|00\rangle+\sqrt{0.1}|11\rangle$ (see [[Entanglement as a resource#is it a resource, formally?]])
 
@@ -25,3 +25,5 @@ entanglement comes in **amounts**, eg. $\frac1{\sqrt2}(|00\rangle+|11\rangle)$ i
 | [[Schmidt number]] | how many terms in the [[Schmidt decomposition]] | 2 |
 
 see also [[Entanglement as a resource]], [[Quantum weirdness]]
+
+(a quick way to check if a 2 qubit mixed state is entangled: the [[Partial transpose|PPT test]])

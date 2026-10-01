@@ -27,7 +27,7 @@ flowchart LR
 
 this works because of the trick below
 > [!important] the trick
-> for any density matrix $\rho$, if you apply $I,\sigma_x,\sigma_y,\sigma_z$ each with probability $\frac14$ you always get $\frac I2$
+> ==for any density matrix $\rho$, if you apply $I,\sigma_x,\sigma_y,\sigma_z$ each with probability $\frac14$ you always get $\frac I2$==
 > $$
 > \tau=\frac14\Big(\rho+\sigma_x\rho\,\sigma_x+\sigma_y\rho\,\sigma_y+\sigma_z\rho\,\sigma_z\Big)=\frac I2
 > $$

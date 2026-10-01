@@ -2,7 +2,7 @@
 ## why we need it
 quantum computers need to be built from robust parts (just like classical computers)
 
-**gate fidelity** measures how robust a qubit is. basically it's about how many gates you can do on a qubit on average before an error happens and the state is lost
+**[[Gate fidelity|gate fidelity]]** measures how robust a qubit is. basically it's about how many gates you can do on a qubit on average before an error happens and the state is lost
 
 from course 1 there are 2 ways a qubit loses quantum information
 - **energy exchange** with the environment → coherence time $T_1$
@@ -12,10 +12,10 @@ $T_2$ is related to both of these
 
 we can model these errors on the [[Bloch sphere]] using probabilistic error channels made from qubit gates. it's not totally general but it's an easy way to see dephasing and depolarization using a [[Density matrix]]
 ## what a quantum channel is
-the fully general version is a **completely positive trace preserving map** (CPTP map) which is **VERY COMPLICATED TO UNDERSTAND**
+the fully general version is a **completely positive trace preserving map** (CPTP map) which is **VERY COMPLICATED TO UNDERSTAND** (it's finally explained in Week 4: [[Operator-sum representation]])
 
 > [!important] the simple version (enough for this course)
-> a quantum channel is a **mixture of simple channels** (gates that happen with some probability)
+> ==a quantum channel is a **mixture of simple channels** (gates that happen with some probability)==
 ## types of channels
 - [[Dephasing channel]] → only $Z$ errors (phase flips)
 - [[Depolarizing channel]] → $X$, $Y$ and $Z$ errors equally

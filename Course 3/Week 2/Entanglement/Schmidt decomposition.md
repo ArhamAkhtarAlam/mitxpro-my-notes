@@ -10,7 +10,7 @@ $$
 - each A state is paired with **exactly one** B state, no cross terms
 
 > [!important] the link to everything else
-> the $\lambda_k$ are exactly the [[Eigenvalues and eigenvectors|eigenvalues]] of the reduced [[Density matrix|density matrix]] $\rho_A$ (and of $\rho_B$, they're the same). so
+> ==the $\lambda_k$ are exactly the [[Eigenvalues and eigenvectors|eigenvalues]] of the reduced [[Density matrix|density matrix]] $\rho_A$ (and of $\rho_B$, they're the same).== so
 > - [[Entanglement entropy]] $E=-\sum_k\lambda_k\log_2\lambda_k$
 > - [[Schmidt number]] = how many $\lambda_k$ aren't 0
 ## how to find it
@@ -28,7 +28,7 @@ flowchart LR
 | $\frac1{\sqrt3}(\lvert00\rangle+\lvert01\rangle+\lvert11\rangle)$ | $\approx0.873,\ 0.127$ | 2 | yes, $E\approx0.55$ |
 
 > [!warning] use the eigenvalues, not the diagonal
-> for $\frac1{\sqrt3}(|00\rangle+|01\rangle+|11\rangle)$ the **diagonal** of $\rho_A$ is $\frac23,\frac13$, but its **eigenvalues** are $\frac{3\pm\sqrt5}6\approx0.873,\ 0.127$. only the eigenvalues give the right Schmidt coefficients (checked numerically)
+> ==for $\frac1{\sqrt3}(|00\rangle+|01\rangle+|11\rangle)$ the **diagonal** of $\rho_A$ is $\frac23,\frac13$, but its **eigenvalues** are $\frac{3\pm\sqrt5}6\approx0.873,\ 0.127$.== only the eigenvalues give the right Schmidt coefficients (checked numerically)
 ## why it's useful
 - 1 term → product state (not entangled), 2 or more → entangled (see [[Defining entanglement]])
 - 2 states with the **same** Schmidt coefficients are equally entangled and can be turned into each other with [[LOCC]] (see [[Entanglement as a resource#try 1, exact conversion (too strict)]])

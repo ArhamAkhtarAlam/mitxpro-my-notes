@@ -57,6 +57,6 @@ flowchart TD
     C --> Q["a quantum computer<br/>could study it"]
 ```
 > [!important] why it matters
-> if a quantum computer could figure out how the bacteria's catalyst works, we might make fertilizer without the huge energy cost of the Haber process. still some distance away from today's machines, but it would have a **huge** impact on the world
+> ==if a quantum computer could figure out how the bacteria's catalyst works, we might make fertilizer without the huge energy cost of the Haber process.== still some distance away from today's machines, but it would have a **huge** impact on the world
 
 see also [[NISQ]], [[Realistic quantum computation]], [[VQE]]

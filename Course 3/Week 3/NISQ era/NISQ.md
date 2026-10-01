@@ -6,7 +6,7 @@ the famous quantum algorithms assume **perfect qubits**
 - [[Quantum simulation]] of chemistry and materials
 - [[Quantum optimization]]
 
-but real qubits are **noisy** (see [[Noise Processes]]). noise lowers the gate fidelity, so you can only do so many gates before the quantum information is lost
+but real qubits are **noisy** (see [[Noise Processes]]). noise lowers the [[Gate fidelity|gate fidelity]], so you can only do so many gates before the quantum information is lost
 
 > [!important] known useful algorithms need way more qubits than we have
 > that's the whole problem this week is about
@@ -17,7 +17,7 @@ flowchart LR
     P["~1,000 noisy<br/>physical qubits"] -- "error correction" --> L["1 protected<br/>logical qubit"]
 ```
 > [!warning] the cost
-> at today's error rates, even on the best hardware, protecting **1** logical qubit takes around **1,000** physical qubits. so fully error corrected machines are still **several years** away
+> ==at today's error rates, even on the best hardware, protecting **1** logical qubit takes around **1,000** physical qubits.== so fully error corrected machines are still **several years** away
 ## what we have instead
 for the next several years: machines with **a few hundred to a few thousand noisy physical qubits**, **not** fully error corrected. that's the NISQ era
 ```mermaid

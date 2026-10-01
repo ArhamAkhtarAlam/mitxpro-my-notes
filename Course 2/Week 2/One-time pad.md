@@ -20,7 +20,7 @@ Alice and Bob share a secret **random key at least as long as the message**
 ## why it can't be broken
 for **any** message and **any** ciphertext of the same length, there's **some** key that links them. so if the key is truly random, every ciphertext is **equally likely** whatever the message was, and Eve learns **nothing** from intercepting it
 > [!important] information-theoretic security
-> it's safe even against an eavesdropper with **infinite computing power** (including quantum computers), as long as she doesn't have the key. compare [[RSA]], which is only safe because factoring is slow
+> ==it's safe even against an eavesdropper with **infinite computing power** (including quantum computers), as long as she doesn't have the key.== compare [[RSA]], which is only safe because factoring is slow
 
 ## the catches
 - the key must be **truly random**. a pseudo-random key from an algorithm can leak information (see [[Quantum random number generators]])

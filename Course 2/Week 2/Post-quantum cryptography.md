@@ -5,7 +5,7 @@ crypto that stays safe even when big quantum computers exist. follows on from [[
 - **symmetric** crypto (like AES) is **not** in big trouble. [[Grover's algorithm]] only speeds up guessing the key by a square root, so doubling the key length fixes it
 ## why start now?
 > [!important] "harvest now, decrypt later"
-> someone can **record** encrypted data today and decrypt it once they have a quantum computer. so what matters is whether the data still needs to be secret by then
+> ==someone can **record** encrypted data today and decrypt it once they have a quantum computer.== so what matters is whether the data still needs to be secret by then
 >
 > Michele **Mosca**'s way to think about it: if
 > $$
@@ -33,7 +33,7 @@ flowchart TD
 | **code based** | the public key **adds random noise** to the message, the private key is an **error correcting code** that removes it | same | same |
 
 > [!warning] switching won't be easy
-> the new schemes probably **won't work with existing systems**, so new hardware and software will be needed, at big cost. it needs careful planning years ahead
+> ==the new schemes probably **won't work with existing systems**, so new hardware and software will be needed, at big cost.== it needs careful planning years ahead
 
 > [!info] update since the course
 > NIST published its first post-quantum standards in **August 2024**: **ML-KEM** (from CRYSTALS-Kyber, lattice based, for sharing keys) and **ML-DSA** (from Dilithium, lattice based) and **SLH-DSA** (from SPHINCS+, hash based) for digital signatures. in 2025 it also picked **HQC**, a code based scheme, as a backup key sharing standard

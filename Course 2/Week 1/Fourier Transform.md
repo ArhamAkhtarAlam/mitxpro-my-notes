@@ -45,7 +45,7 @@ flowchart LR
 
 ## Why it matters for quantum
 > [!important] repeating signals → sharp spikes
-> if a signal **repeats** every $r$ steps, its Fourier transform only has spikes at multiples of $\frac1r$. so the Fourier transform is a way to **find the period** of something
+> ==if a signal **repeats** every $r$ steps, its Fourier transform only has spikes at multiples of $\frac1r$.== so the Fourier transform is a way to **find the period** of something
 >
 > that's the whole trick behind [[Shor's algorithm]]: it makes a signal that repeats with period $r$ and uses the [[Quantum Fourier Transform]] to find $r$
 

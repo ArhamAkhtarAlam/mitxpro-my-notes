@@ -17,7 +17,7 @@ it's all built on [[Modular Exponentiation|modular exponentiation]] $f(x)=a^x\bm
 | 5 | private exponent $d=e^{-1}\bmod r$ | $d=247$ |
 
 > [!warning] $e^{-1}\bmod r$ is NOT $\frac1e$
-> it means the whole number $d$ where $d\,e\bmod r=1$. check: $7\times247=1729=6\times288+1$ ✅
+> ==it means the whole number $d$ where $d\,e\bmod r=1$.== check: $7\times247=1729=6\times288+1$ ✅
 >
 > (on a modular calculator you type `A^(-1) mod C`, not `1/A mod C`)
 

@@ -31,7 +31,7 @@ $$
 - scaling $A$ by a number doesn't change $\kappa$
 
 > [!important] κ = how unstable the answer is
-> if you nudge $\vec b$ a tiny bit, how much does $\vec x$ change?
+> ==if you nudge $\vec b$ a tiny bit, how much does $\vec x$ change?==
 > - small $\kappa$ → small change in $\vec b$ gives a small change in $\vec x$ ✓
 > - big $\kappa$ → some tiny changes in $\vec b$ give **huge** changes in $\vec x$ ✗
 

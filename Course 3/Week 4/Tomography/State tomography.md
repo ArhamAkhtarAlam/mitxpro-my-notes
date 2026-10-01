@@ -47,7 +47,7 @@ each measurement just gives 0 or 1, so you repeat it lots of times: $\langle\sig
 
 (checked numerically: rotating by those angles really does turn $r_x$ and $r_y$ into $\langle\sigma_z\rangle$)
 > [!warning] it's statistics
-> each axis is estimated from a finite number of shots $N$, so the answer is never exact. the error only shrinks like $\frac1{\sqrt N}$
+> ==each axis is estimated from a finite number of shots $N$, so the answer is never exact.== the error only shrinks like $\frac1{\sqrt N}$
 > ![[Tomography_shots.png]]
 > (my simulation: 100× more measurements only makes it 10× more accurate)
 ## more qubits

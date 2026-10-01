@@ -44,7 +44,7 @@ so you need about $k\approx\frac\pi4\sqrt N$ iterations to point (almost) straig
 
 (checked numerically)
 > [!warning] don't overshoot
-> it's a rotation, so doing **more** iterations than needed rotates **past** $|w\rangle$ and the chance goes back down (see the right side of the plot)
+> ==it's a rotation, so doing **more** iterations than needed rotates **past** $|w\rangle$ and the chance goes back down (see the right side of the plot)==
 
 ## oracle examples
 

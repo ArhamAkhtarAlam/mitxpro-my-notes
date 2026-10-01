@@ -48,6 +48,8 @@ real experiments don't give pure states, they give a **mixed** state $\rho$ (a [
 $$
 F(\rho,\phi)=\sqrt{\langle\phi|\rho|\phi\rangle}
 $$
+^mixed-fidelity
+
 if $\rho=|\psi\rangle\langle\psi|$ is actually pure, this gives back $\sqrt{\langle\phi|\psi\rangle\langle\psi|\phi\rangle}=|\langle\psi|\phi\rangle|$ ✅
 > [!example] examples
 > - **fully mixed qubit** $\rho=\frac I2$: $F=\sqrt{\frac12}\approx0.707$ with **every** state. pure noise is "half right" about everything
@@ -59,7 +61,7 @@ if $\rho=|\psi\rangle\langle\psi|$ is actually pure, this gives back $\sqrt{\lan
 
 ## the purification trick
 > [!important] fidelity = best overlap with a purification
-> $F(\rho,\phi)$ is also the **largest possible overlap** between the state $\phi$ and a **purification** of $\rho$
+> ==$F(\rho,\phi)$ is also the **largest possible overlap** between the state $\phi$ and a **purification** of $\rho$==
 >
 > a [[Purification]] of $\rho$ is a pure state $|\psi\rangle$ on a **bigger** system (the qubit plus an extra helper system) such that **forgetting** the extra part gives back $\rho$ ([[Partial trace|tracing it out]])
 

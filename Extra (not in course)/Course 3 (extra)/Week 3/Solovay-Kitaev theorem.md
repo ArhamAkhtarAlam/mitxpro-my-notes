@@ -4,7 +4,7 @@
 real hardware can only do a handful of gates directly, eg. [[Hadamard Gate|H]] and $T$ (a $\frac\pi4$ [[Phase shift]]). but algorithms want **any** rotation, like $R_z(0.3)$. you can't make most rotations **exactly** from H and T, only approximately
 ## the theorem
 > [!important] Solovay–Kitaev
-> if a finite gate set is **universal** (its products can get arbitrarily close to any gate), then any single qubit gate can be approximated to accuracy $\varepsilon$ using only
+> ==if a finite gate set is **universal** (its products can get arbitrarily close to any gate), then any single qubit gate can be approximated to accuracy $\varepsilon$ using only==
 > $$
 > O\big(\log^c(1/\varepsilon)\big)
 > $$

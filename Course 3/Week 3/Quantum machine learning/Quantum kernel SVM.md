@@ -53,6 +53,6 @@ the kernel: bright = very similar states. the 2 bright blocks show points of the
 > repeat many times to estimate it
 ## the honest bit
 > [!warning] just a toy example
-> the data set was made up and has no connection to real life data. the point is to show the idea works on real quantum hardware. whether it beats classical methods on **real** problems is still an open question (see [[NISQ#where people are looking]])
+> ==the data set was made up and has no connection to real life data.== the point is to show the idea works on real quantum hardware. whether it beats classical methods on **real** problems is still an open question (see [[NISQ#where people are looking]])
 
 see also [[Support vector machines]], [[Quantum machine learning]], [[NISQ]]

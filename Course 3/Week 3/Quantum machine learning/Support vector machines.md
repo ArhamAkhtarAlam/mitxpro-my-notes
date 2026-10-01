@@ -14,7 +14,7 @@ lots of cuts can separate the training set. a **support vector machine** (SVM) p
 
 ![[SVM_margin.png]]
 > [!important] support vectors
-> the points **closest** to the cut are the hardest to classify, and they're the only ones that decide where the cut goes. they're called the **support vectors** (that's where the name comes from). find them and you've found the cut
+> ==the points **closest** to the cut are the hardest to classify, and they're the only ones that decide where the cut goes.== they're called the **support vectors** (that's where the name comes from). find them and you've found the cut
 ## when a flat cut doesn't work: feature maps
 some data can't be split with a flat cut. the trick: **map** the data into more dimensions until it can be
 ![[Feature_map_1D_to_2D.png]]
@@ -25,7 +25,7 @@ to classify you don't actually need to know **where** each point ends up, only *
 the tool for "how close" is the **inner product** (like $\langle\phi|\psi\rangle$ in [[Dirac notation]])
 
 > [!important] the kernel
-> the **kernel** is the table of inner products between every pair of training points, **after** the feature map
+> ==the **kernel** is the table of inner products between every pair of training points, **after** the feature map==
 > $$
 > K_{ij}=\langle\phi(x_i),\phi(x_j)\rangle
 > $$

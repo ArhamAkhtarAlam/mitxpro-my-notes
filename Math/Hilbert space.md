@@ -20,7 +20,7 @@ the inner product gives you
 
 putting systems together = [[Tensor product|tensor product]] of their Hilbert spaces, so the **dimensions multiply**
 > [!important] why quantum computers are powerful (and hard to simulate)
-> every extra qubit **doubles** the dimension. 300 qubits have a Hilbert space bigger than the number of atoms in the observable universe ($2^{300}\approx10^{90}$). that's why simulating them classically is hopeless ([[Simulating quantum systems]])
+> ==every extra qubit **doubles** the dimension.== 300 qubits have a Hilbert space bigger than the number of atoms in the observable universe ($2^{300}\approx10^{90}$). that's why simulating them classically is hopeless ([[Simulating quantum systems]])
 
 ## useful facts
 - any orthonormal basis works: eg. $|+\rangle,|-\rangle$ is just as good a basis for $\mathbb C^2$ as $|0\rangle,|1\rangle$

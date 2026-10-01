@@ -39,7 +39,7 @@ Bob always gets the **opposite** of Alice, no matter which basis they both use
 5. so there must be a **more complete theory** of reality than quantum mechanics (what people later called **hidden variables**)
 
 > [!important] the conclusion
-> Einstein: quantum mechanics is missing something
+> ==Einstein: quantum mechanics is missing something==
 >
 > Einstein was never fully happy with quantum mechanics
 ## Schrödinger's reply (1935)

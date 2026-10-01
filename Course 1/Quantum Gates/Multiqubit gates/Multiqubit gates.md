@@ -10,7 +10,7 @@ flowchart LR
 (checked numerically: random single qubit gates always leave $|00\rangle$ with Schmidt number 1, H + CNOT gives 2, see [[Schmidt number]])
 
 > [!important] no multiqubit gates = no quantum advantage
-> without them every qubit would just be its own separate little system. entanglement, and so things like [[Shor's algorithm]], [[Quantum Phase Estimation]] and [[Teleportation]], all need multiqubit gates
+> ==without them every qubit would just be its own separate little system.== entanglement, and so things like [[Shor's algorithm]], [[Quantum Phase Estimation]] and [[Teleportation]], all need multiqubit gates
 ## matrix size
 every extra qubit **doubles** the size of the matrix
 
@@ -89,6 +89,6 @@ flowchart TD
 - 2 qubit gates are usually the **slowest** and **noisiest** part of a real quantum computer, so good circuits try to use as few as possible
 
 > [!warning] qubit order
-> textbooks write $|q_0q_1\rangle$ but Qiskit writes $|q_1q_0\rangle$ (backwards), so the same gate can have a different looking matrix in Qiskit (see [[CNOT gate]])
+> ==textbooks write $|q_0q_1\rangle$ but Qiskit writes $|q_1q_0\rangle$ (backwards), so the same gate can have a different looking matrix in Qiskit (see [[CNOT gate]])==
 
 see also [[Quantum gate]], [[Quantum gate#Single qubit gates|single qubit gates]], [[Tensor product]]

@@ -58,7 +58,7 @@ for 2 part pure states this works if and only if they **[[Majorization|majorize]
 > so they're not equivalent under try 1 (checked numerically)
 
 > [!warning] why it's too strict
-> almost every state would be its own separate category of entanglement, like having a different currency for every single coin
+> ==almost every state would be its own separate category of entanglement, like having a different currency for every single coin==
 ### try 2, asymptotic equivalence (currency exchange)
 dollars and pounds are "the same kind of thing" because you can swap them at a fixed **exchange rate**, paying a small **fee**
 ```mermaid
@@ -67,7 +67,7 @@ flowchart LR
     B -- "convert back (error < ε)" --> A2["n(R − δ) copies of A"]
 ```
 > [!important] the definition
-> A and B are **asymptotically equivalent** if there's a rate $R$ so that for any $\epsilon,\delta>0$ there's a big enough $N$, and for every $n>N$
+> ==A and B are **asymptotically equivalent** if there's a rate $R$ so that for any $\epsilon,\delta>0$ there's a big enough $N$, and for every $n>N$==
 > - $n(R+\delta)$ copies of A can be turned into $n$ copies of B
 > - $n$ copies of B can be turned back into $n(R-\delta)$ copies of A
 >

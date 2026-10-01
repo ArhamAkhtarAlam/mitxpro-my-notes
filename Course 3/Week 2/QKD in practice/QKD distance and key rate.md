@@ -35,7 +35,7 @@ this is **entanglement swapping** (see [[Quantum repeaters#entanglement swapping
 
 do this along a **chain** of repeaters and the entanglement can reach much further than one fibre
 > [!warning] not ready yet
-> a practical repeater chain needs much better **[[Quantum memory|quantum memories]]** and **quantum processors** than exist today
+> ==a practical repeater chain needs much better **[[Quantum memory|quantum memories]]** and **quantum processors** than exist today==
 ### option 2: satellites
 send the photons through **space** instead: once they're above the atmosphere there's almost nothing to absorb them. China has already demonstrated satellite QKD (the Micius satellite)
 ```mermaid

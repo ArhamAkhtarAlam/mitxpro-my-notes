@@ -14,7 +14,7 @@ $$
 $$
 the populations (diagonal) stay the same, the coherences (off diagonal) shrink
 > [!important] it's the same as dephasing
-> the [[Dephasing channel]] multiplies the off diagonals by $1-2p$. so phase damping with $\lambda$ **is** dephasing with
+> ==the [[Dephasing channel]] multiplies the off diagonals by $1-2p$.== so phase damping with $\lambda$ **is** dephasing with
 > $$
 > 1-2p=\sqrt{1-\lambda}
 > $$

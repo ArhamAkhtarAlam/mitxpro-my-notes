@@ -27,10 +27,12 @@ unlike [[Dephasing channel|dephasing]] and [[Depolarizing channel|depolarizing]]
 > [!question] why?
 > any mixture of gates keeps the middle of the [[Bloch sphere]] ($\frac I2$) in the middle, but amplitude damping pushes everything (even $\frac I2$) towards $|0\rangle$
 
-so it's one of the channels where "a mixture of simple channels" doesn't work and you need the general version (CPTP map). it gets written with 2 matrices called **Kraus operators**
+so it's one of the channels where "a mixture of simple channels" doesn't work and you need the general version (CPTP map, see [[Operator-sum representation]]). it gets written with 2 matrices called **Kraus operators**
 $$
 E_0=\begin{bmatrix}1&0\\0&\sqrt{1-\gamma}\end{bmatrix}\qquad E_1=\begin{bmatrix}0&\sqrt\gamma\\0&0\end{bmatrix}
 $$
+^kraus
+
 $$
 \rho\longrightarrow E_0\,\rho\,E_0^\dagger+E_1\,\rho\,E_1^\dagger
 $$

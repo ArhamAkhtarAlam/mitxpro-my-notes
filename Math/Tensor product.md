@@ -34,7 +34,7 @@ flowchart LR
 
 ## entanglement
 > [!important] entangled = can't be split
-> some 2 qubit states **can** be written as (qubit 1) $\otimes$ (qubit 2), like $|0\rangle\otimes|+\rangle$. these are **product states**
+> ==some 2 qubit states **can** be written as (qubit 1) $\otimes$ (qubit 2), like $|0\rangle\otimes|+\rangle$.== these are **product states**
 >
 > but some **can't**, like
 > $$

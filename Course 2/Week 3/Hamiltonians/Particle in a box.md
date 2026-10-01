@@ -23,7 +23,7 @@ $$
 E_n=\frac{n^2\pi^2\hbar^2}{2ma^2}\qquad\psi_n(x)=\sqrt{\frac2a}\,\sin\Big(\frac{n\pi x}a\Big)
 $$
 > [!important] quantized energy
-> $n$ is the **quantum number**. the energy goes up as $n^2$: $E_1,\ 4E_1,\ 9E_1,\ 16E_1,\ldots$ and it can never be $0$ (the particle always jiggles, even in its lowest state)
+> ==$n$ is the **quantum number**.== the energy goes up as $n^2$: $E_1,\ 4E_1,\ 9E_1,\ 16E_1,\ldots$ and it can never be $0$ (the particle always jiggles, even in its lowest state)
 
 the $\sqrt{\frac2a}$ makes it **normalized**: $\int_0^a|\psi_n|^2dx=1$, ie. the particle is definitely somewhere in the box
 ![[Particle_in_a_box.png]]
@@ -51,6 +51,6 @@ kinetic energy is easy in the **momentum** basis and potential energy in the **p
 ![[Trotterization#^lie-product]]
 
 > [!warning] you need both terms
-> the Hamiltonian needs the **kinetic** energy term too, not just $V(x)$. inside the box $V=0$, so without the kinetic term nothing would happen at all
+> ==the Hamiltonian needs the **kinetic** energy term too, not just $V(x)$.== inside the box $V=0$, so without the kinetic term nothing would happen at all
 
 see also [[Hamiltonian]], [[Trotterization]], [[Quantum Fourier Transform]]

@@ -3,7 +3,7 @@ Course 3, Week 4: **how well do our quantum states and gates actually work?** me
 ## recap: where we are
 - [[NISQ]] computers: about 50 to a few thousand qubits, available now or soon, and **not error corrected**
 - so how useful they are is limited by
-  - their **gate fidelity** (how close each gate is to perfect)
+  - their **[[Gate fidelity|gate fidelity]]** (how close each gate is to perfect)
   - the **types of gates** the hardware can do
   - the **circuit depth** they can handle before noise takes over
 - [[Quantum volume]] rolls all of that into **one number** to compare different machines
@@ -35,5 +35,9 @@ flowchart LR
 ## this week's notes
 - [[State tomography]] → measuring the Bloch vector to rebuild ρ, and how it scales to many qubits
 - [[State fidelity]] → one number (0 to 1) for how close the state you made is to the one you wanted
+- [[Operator-sum representation]] → describing **any** process on a qubit with Kraus operators, $\mathcal E(\rho)=\sum_kE_k\rho E_k^\dagger$ (the setup for error correction and process tomography)
+- [[Quantum operations]] → the 3 rules for a legal map (trace preserving, convex-linear, **completely positive**)
+- [[Partial transpose]] → the transpose isn't a physical operation, but it's a test for entanglement
+- [[Gate fidelity]] → how good a real gate is: minimum, entanglement and average gate fidelity, and how to measure it with 3 tomography runs
 
 see also [[Quantum volume]], [[NISQ]], [[Realistic quantum computation]]

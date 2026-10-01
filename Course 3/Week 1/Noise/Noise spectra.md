@@ -8,7 +8,7 @@ for noise at the qubit frequency $\omega_q$ (which can exchange energy with the 
 ![[Noise_spectra.png]]
 ## classical noise
 > [!important] symmetric = classical
-> if $S(\omega)$ is **symmetric** around $0$, the noise is a real signal in time, so you can describe it with a normal classical variable $\lambda$. that's why symmetric spectra are called **classical noise**
+> ==if $S(\omega)$ is **symmetric** around $0$, the noise is a real signal in time, so you can describe it with a normal classical variable $\lambda$.== that's why symmetric spectra are called **classical noise**
 >
 > (it's a [[Fourier Transform]] thing: symmetric in frequency ↔ real in time)
 ### 1/f noise
@@ -28,7 +28,7 @@ for noise at the qubit frequency $\omega_q$ (which can exchange energy with the 
 - not symmetric means the time signal isn't just a real number, you have to describe it with **quantum operators**: $\lambda$ becomes an operator $\hat\lambda(t)$, and $\hat\lambda(t)$ at different times don't commute (the commutator can have imaginary parts)
 
 > [!important] Nyquist noise = spontaneous emission
-> put a qubit in its excited state $|1\rangle$ and it relaxes to $|0\rangle$ by emitting a photon at $\omega_q$, **even at zero temperature** with no classical noise at all (that's the [[Amplitude damping channel]])
+> ==put a qubit in its excited state $|1\rangle$ and it relaxes to $|0\rangle$ by emitting a photon at $\omega_q$, **even at zero temperature** with no classical noise at all (that's the [[Amplitude damping channel]])==
 >
 > but a zero temperature environment can't push the qubit up from $|0\rangle$ to $|1\rangle$, it has no energy to give. that's why there's nothing on the negative side
 ### Johnson–Nyquist noise

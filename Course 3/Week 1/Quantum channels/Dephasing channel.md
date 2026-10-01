@@ -31,7 +31,7 @@ $$
 \rho_{in}=\begin{bmatrix}\alpha^2&\alpha\beta\\\alpha\beta&\beta^2\end{bmatrix}
 $$
 > [!summary] so
-> the dephasing channel **multiplies the off diagonal elements by $(1-2p)$** and the diagonal stays the same
+> ==the dephasing channel **multiplies the off diagonal elements by $(1-2p)$** and the diagonal stays the same==
 
 ![[Dephasing_matrix.png]]
 this is $|+\rangle$ going through with bigger and bigger $p$. the off diagonal fades away and at $p=\frac12$ it's gone completely (just a 50/50 classical mix of $|0\rangle$ and $|1\rangle$)

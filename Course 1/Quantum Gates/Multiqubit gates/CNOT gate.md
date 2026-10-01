@@ -32,7 +32,7 @@ qc = QuantumCircuit(2)
 qc.cx(0, 1)   # control 0, target 1
 ```
 > [!warning] Qiskit qubit order
-> Qiskit writes states backwards ($|q_1q_0\rangle$) so the matrix Qiskit shows looks different from the one above, but it's the same gate
+> ==Qiskit writes states backwards ($|q_1q_0\rangle$) so the matrix Qiskit shows looks different from the one above, but it's the same gate==
 ## Visual representation
 ```visual
 q_0: ──■──

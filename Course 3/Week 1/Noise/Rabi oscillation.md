@@ -48,13 +48,13 @@ what happens
 grey = single trials, green = the average
 
 > [!important] the decay is Gaussian
-> because the noise is quasi-static (low frequency) the decay has a **Gaussian** shape. if $\Omega$ is spread out with standard deviation $\sigma$ around $\Omega_0$
+> ==because the noise is quasi-static (low frequency) the decay has a **Gaussian** shape.== if $\Omega$ is spread out with standard deviation $\sigma$ around $\Omega_0$
 > $$
 > \langle Z\rangle(t)=\cos(\Omega_0t)\,e^{-\sigma^2t^2/2}
 > $$
 
 > [!warning] why this matters for gates
-> the $\frac\pi2$ and $\pi$ pulses are just "stop the Rabi oscillation at the right time". if the frequency is a bit off, you stop at the wrong spot → **small gate errors**
+> ==the $\frac\pi2$ and $\pi$ pulses are just "stop the Rabi oscillation at the right time".== if the frequency is a bit off, you stop at the wrong spot → **small gate errors**
 
 even though this was just one type of noise, it gives the general idea of how noise causes gate errors
 

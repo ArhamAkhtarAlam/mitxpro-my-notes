@@ -31,7 +31,7 @@ compare the [[Adiabatic quantum computing|AQC]] path, which is the same idea wit
 - in the middle it passes the **minimum gap** and almost certainly leaves the ground state (noise, Landau–Zener). the hope is that tunnelling + dissipation bring it back to a low energy state
 
 > [!warning] not the same as AQC
-> the computer is **not** meant to end up in an excited state, the aim is still the ground state. it's just **allowed** to leave and come back on the way. and quantum annealing is **not** proven to be a universal quantum computer
+> ==the computer is **not** meant to end up in an excited state, the aim is still the ground state.== it's just **allowed** to leave and come back on the way. and quantum annealing is **not** proven to be a universal quantum computer
 
 ## D-Wave
 the most advanced quantum annealers are the commercial **D-Wave** machines: at the time of the course more than **2000 superconducting qubits**, connected in a fixed pattern called the **chimera graph** (newer models have 5000+ qubits and better connectivity)

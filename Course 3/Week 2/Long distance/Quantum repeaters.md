@@ -9,7 +9,7 @@ put nodes along the line that use [[Quantum Error Correction]] to fix the quantu
 
 (the transcript says Knill and Laflamme made the first "quantum computer proposal" here, it means a repeater based on error correction)
 > [!warning] the 50% limit
-> because of [[No-cloning theorem|no-cloning]], this only works if **less than half** the photons are lost between nodes. if more than half are lost, Eve (or the environment) could have as much of the information as the receiver, and that's impossible to fix
+> ==because of [[No-cloning theorem|no-cloning]], this only works if **less than half** the photons are lost between nodes.== if more than half are lost, Eve (or the environment) could have as much of the information as the receiver, and that's impossible to fix
 >
 > with $0.2$ dB/km fibre, 50% loss happens at just **15 km**, so you'd need a node every 15 km (see the table in [[Long-distance quantum communication#losing photons]])
 ## idea 2: BDCZ (1998)
@@ -34,7 +34,7 @@ flowchart TD
 ```
 purify at each level to keep the pairs good, and the ends end up entangled over the whole distance
 > [!important] the catch: quantum memory
-> every node has to **hold its qubits** (keep them coherent) the whole time it waits for the other links to succeed and for messages to go back and forth. that needs very good **[[Quantum memory|quantum memories]]**
+> ==every node has to **hold its qubits** (keep them coherent) the whole time it waits for the other links to succeed and for messages to go back and forth.== that needs very good **[[Quantum memory|quantum memories]]**
 ## idea 3: DLCZ (2001)
 by Duan, Lukin, Cirac and Zoller. made to get around the memory problem by using **atomic ensembles** (clouds of lots of atoms) as the memory
 ```mermaid

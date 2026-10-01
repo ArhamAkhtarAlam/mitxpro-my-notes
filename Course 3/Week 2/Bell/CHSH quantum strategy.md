@@ -147,7 +147,7 @@ here they want **different** answers
 (the lecture doesn't prove it. it's the same rule as $P(\text{same answer})=\cos^2(\theta_A-\theta_B)$ above, just with Bloch sphere angles, which are double)
 ## why it matters
 > [!important] quantum beats classical
-> no classical strategy can beat 75% (see [[CHSH game#the best classical strategy wins 75%]]), but sharing entanglement gets 85.4%. that's Bell's result: quantum mechanics can't be explained by any **local hidden variable** theory
+> ==no classical strategy can beat 75% (see [[CHSH game#the best classical strategy wins 75%]]), but sharing entanglement gets 85.4%.== that's Bell's result: quantum mechanics can't be explained by any **local hidden variable** theory
 >
 > 85.4% is also the best any quantum strategy can do (called **Tsirelson's bound**)
 

@@ -26,7 +26,7 @@ flowchart LR
 pure = no uncertainty = 0, fully mixed = most uncertain = 1 qubit
 ## similar but different from Shannon
 > [!important] non-orthogonal states
-> if you mix states that are **orthogonal** (like $|0\rangle$ and $|1\rangle$) then $S(\rho)$ = the Shannon entropy of the probabilities
+> ==if you mix states that are **orthogonal** (like $|0\rangle$ and $|1\rangle$) then $S(\rho)$ = the Shannon entropy of the probabilities==
 >
 > but if they're **not orthogonal** then $S(\rho)$ is **smaller** than the Shannon entropy
 

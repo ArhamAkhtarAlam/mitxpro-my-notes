@@ -12,7 +12,7 @@ a quantum algorithm for solving huge linear systems $A\vec x=\vec b$ (named HHL 
 for huge $N$, going from $N$ to $\log N$ is an **exponential** saving
 ## the catch: a different input and output
 > [!important] never write down the whole thing
-> writing down $\vec b$ or $\vec x$ as a list of $N$ numbers would already take $N$ steps. so HHL doesn't
+> ==writing down $\vec b$ or $\vec x$ as a list of $N$ numbers would already take $N$ steps.== so HHL doesn't
 > - **input** $\vec b$ → given as a **quantum state** $|b\rangle$, with the numbers stored in its **amplitudes**. $N$ numbers fit in just $\log_2N$ qubits
 > - **matrix** $A$ → not written down either ($Ns$ numbers). instead there's a procedure that, given a row number, spits out that row's non-zero entries and where they are ("computable on the fly")
 > - **output** → a quantum state $|x\rangle$ with the answer in its amplitudes, **not** a list of numbers

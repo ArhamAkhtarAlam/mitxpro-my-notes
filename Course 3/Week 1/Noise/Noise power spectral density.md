@@ -37,12 +37,12 @@ $$
 $$
 ## ergodic and stationary
 > [!important] ergodic
-> time averaging gives the **same** result as ensemble averaging. these systems are called **ergodic** ensembles
+> ==time averaging gives the **same** result as ensemble averaging.== these systems are called **ergodic** ensembles
 >
 > this is what we want, then measuring one system for a long time tells you everything
 
 > [!important] stationary
-> the statistics **don't depend on when** you measure. eg. the autocorrelation only depends on the time difference $\tau$, not on $t$ itself
+> ==the statistics **don't depend on when** you measure.== eg. the autocorrelation only depends on the time difference $\tau$, not on $t$ itself
 
 ergodic → stationary, but stationary does **not** always mean ergodic
 

@@ -5,7 +5,7 @@ QKD's job is to give Alice and Bob **identical** copies of a random **key**, whi
 
 the **secret key rate** (bits per second) is how fast that happens, and how fast you need depends on what you'll use the key for
 > [!important] the one-time pad
-> the "holy grail": encryption that's **mathematically proven** unbreakable, even against a supercomputer or a quantum computer
+> ==the "holy grail": encryption that's **mathematically proven** unbreakable, even against a supercomputer or a quantum computer==
 >
 > but it's hungry: it uses **1 bit of key for every bit of message**, and a key can **never be reused**. so to encrypt fast you need key fast
 ## what limits the key rate
@@ -85,6 +85,6 @@ this happens a lot over **city distances** (a few tens of km), like the MIT–Li
 - ❌ drawback: the transmitter and receiver get **more complicated** than a simple 0/1 system. whether it's worth it depends on the situation
 ## the takeaway
 > [!important] no single best QKD system
-> the best system and strategy depend on the **hardware you have** and the **channel you're using**
+> ==the best system and strategy depend on the **hardware you have** and the **channel you're using**==
 
 see also [[QKD distance and key rate]], [[Floodlight QKD]], [[QKD in practice]]

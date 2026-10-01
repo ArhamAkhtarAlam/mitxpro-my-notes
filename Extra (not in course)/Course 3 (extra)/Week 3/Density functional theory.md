@@ -3,7 +3,7 @@
 ## the big idea
 the exact state of $N$ electrons depends on $3N$ coordinates, so it's hopeless for big molecules. DFT works with the electron **density** $n(\vec r)$ instead: how many electrons are near each point in space. that's a function of just **3** coordinates, however many electrons there are
 > [!important] Hohenberg–Kohn theorem (1964)
-> the ground state electron density determines **everything** about the ground state (the energy, the wavefunction, all of it)
+> ==the ground state electron density determines **everything** about the ground state (the energy, the wavefunction, all of it)==
 
 (Walter Kohn shared the 1998 Nobel prize in chemistry for this)
 ## how it's done (Kohn–Sham, 1965)

@@ -26,7 +26,7 @@ flowchart LR
 3. a classical **optimiser** changes $\theta$ to lower the energy
 4. repeat until it stops improving
 > [!important] which part is classical?
-> the **parameter optimisation** runs on the classical computer. preparing the state and measuring the energy run on the quantum one
+> ==the **parameter optimisation** runs on the classical computer.== preparing the state and measuring the energy run on the quantum one
 
 ## measuring the energy: Hamiltonian averaging
 $H$ is a sum of Pauli strings ([[Hamiltonian#why it's hard to simulate]]), and you can't measure them all at once. so you

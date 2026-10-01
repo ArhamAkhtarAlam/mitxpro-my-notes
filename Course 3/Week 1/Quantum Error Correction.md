@@ -5,6 +5,8 @@
 [[Noise Processes|noise]] causes errors, and the [[Quantum channels]] show what that does: the [[Bloch sphere]] gets squished and quantum information is lost
 
 QEC is about getting that information back
+
+the errors themselves are described by **error operators** (Kraus operators), see [[Operator-sum representation]]
 ## The classical idea: repetition code
 send each bit 3 times
 $$

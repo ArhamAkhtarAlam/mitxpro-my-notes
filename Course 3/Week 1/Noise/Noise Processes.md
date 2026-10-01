@@ -6,7 +6,7 @@ in real life there is **noise** and noise causes **errors**
 
 where noise shows up
 - **[[Quantum Communication|quantum communication]]** → photon loss in a long optical fiber, measurement errors in a [[Single Photon making and detecting|photodetector]]
-- **quantum computing** → qubit decoherence, control errors when doing a gate (both lower the gate fidelity)
+- **quantum computing** → qubit decoherence, control errors when doing a gate (both lower the [[Gate fidelity|gate fidelity]])
 
 > [!danger] what errors do in practice
 > - lower communication rates

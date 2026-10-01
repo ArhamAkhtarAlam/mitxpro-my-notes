@@ -45,6 +45,6 @@ e^{-i\theta Z\otimes Z}=\text{CNOT}\cdot\big(I\otimes R_z(2\theta)\big)\cdot\tex
 $$
 the CNOT copies the **parity** of the 2 qubits onto the second one, the $R_z$ gives a phase depending on it, and the second CNOT undoes the copy ([[CNOT gate]], [[Phase shift]])
 > [!warning] the trade-off
-> more steps = more accurate, but also **more gates**, and on noisy hardware every gate adds errors ([[NISQ]]). that's why deep Trotter circuits need error corrected machines, and why [[VQE]] was invented
+> ==more steps = more accurate, but also **more gates**, and on noisy hardware every gate adds errors ([[NISQ]]).== that's why deep Trotter circuits need error corrected machines, and why [[VQE]] was invented
 
 see also [[Hamiltonian simulation]], [[Hamiltonian]], [[Particle in a box]]

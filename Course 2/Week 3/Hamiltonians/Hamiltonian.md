@@ -38,6 +38,6 @@ for $n$ qubits (or $n$ spins), $\hat H$ is a $2^n\times2^n$ matrix. 50 qubits â†
 > ![[VQE#^h2-hamiltonian]]
 
 > [!warning] what a Hamiltonian does NOT tell you directly
-> it gives energies and time evolution, and the gates of a quantum computer come from Hamiltonians. but it doesn't directly give the **amount of entanglement** of a state (that's [[Entanglement entropy]])
+> ==it gives energies and time evolution, and the gates of a quantum computer come from Hamiltonians.== but it doesn't directly give the **amount of entanglement** of a state (that's [[Entanglement entropy]])
 
 see also [[Particle in a box]], [[Hamiltonian simulation]], [[Unitary Operation]]

@@ -6,7 +6,7 @@
 - it's a form of **analog** quantum computing
 ## the adiabatic theorem
 > [!important] adiabatic theorem
-> a system in its **lowest energy state** stays in the lowest energy state if its [[Hamiltonian]] is changed **slowly enough**
+> ==a system in its **lowest energy state** stays in the lowest energy state if its [[Hamiltonian]] is changed **slowly enough**==
 
 ## how AQC uses it
 $$
