@@ -9,8 +9,7 @@ Course 3, Week 4: **how well do our quantum states and gates actually work?** me
 - [[Quantum volume]] rolls all of that into **one number** to compare different machines
 - NISQ machines will probably run small, specific algorithms, eg. as a **co-processor** for a normal computer, like [[VQE]] finding the ground state energy of atoms and molecules
 
-> [!note] transcript slip
-> the transcript says "NIST computers" a few times, it means **NISQ** computers
+
 ## why benchmark?
 ```mermaid
 flowchart LR

@@ -2,7 +2,7 @@
 the maths you need for the quantum notes. start at the top if something doesn't make sense
 ## the basics
 - [[Complex numbers]] → $i$, conjugates, $|z|^2$, phases $e^{i\varphi}$
-- [[Dirac notation]] → kets $|\psi\rangle$, bras $\langle\psi|$, inner and outer products
+- [[Math/Dirac notation]] → kets $|\psi\rangle$, bras $\langle\psi|$, inner and outer products
 - [[Probability and expectation values]] → distributions, averages $\langle x\rangle$, $\log_2$
 - [[Modular arithmetic]] → mod $N$, XOR, periods, gcd
 ## linear algebra

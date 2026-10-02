@@ -5,7 +5,7 @@ for 2 pure states $|\psi\rangle$ and $|\phi\rangle$, the fidelity asks: **how we
 $$
 F=|\langle\psi|\phi\rangle|
 $$
-just the size of the overlap ([[Dirac notation|inner product]]) of the 2 states
+just the size of the overlap ([[Math/Dirac notation|inner product]]) of the 2 states
 > [!tip] the picture
 > both states are **unit vectors** (length 1), so $F$ is the length of the "shadow" of one on the other (the projection of $\phi$ onto $\psi$, or the other way round, same thing)
 > ![[Fidelity_overlap.png]]

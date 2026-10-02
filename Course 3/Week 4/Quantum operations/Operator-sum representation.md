@@ -1,5 +1,5 @@
 #quantum_operations #kraus_operators #quantum_channel #quantum_error_correction
-the general way to describe **anything** that can happen to a quantum state (noise, measurement, gates...) as a map $\mathcal E$ from an input [[Density matrix|density matrix]] to an output one. it's the general version from [[Quantum channels]], and the language of [[Quantum Error Correction]]. part of [[Benchmarking quantum systems]]
+the general way to describe **anything** that can happen to a quantum state (noise, measurement, gates...) as a map $\mathcal E$ from an input [[Density matrix|density matrix]] to an output one. it's the "VERY COMPLICATED" general version from [[Quantum channels]], and the language of [[Quantum Error Correction]]. part of [[Benchmarking quantum systems]]
 ## the goal
 for error correction we first need to say what an **error** even is. so: describe **every** possible way a density matrix $\rho$ can turn into another one
 $$

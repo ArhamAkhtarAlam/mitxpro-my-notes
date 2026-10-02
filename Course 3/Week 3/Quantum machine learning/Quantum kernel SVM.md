@@ -32,7 +32,7 @@ flowchart TD
     N --> R["which side of the cut?<br/>→ label"]
 ```
 1. **training set**: 20 points per label
-2. map each one into the 2 qubit space and use the quantum processor to estimate the [[Dirac notation|inner product]] of **every pair** → the **kernel**, a $40\times40$ matrix (symmetric and positive semidefinite, from real quantum hardware)
+2. map each one into the 2 qubit space and use the quantum processor to estimate the [[Math/Dirac notation|inner product]] of **every pair** → the **kernel**, a $40\times40$ matrix (symmetric and positive semidefinite, from real quantum hardware)
 3. find the **support vectors** from the kernel (done on a normal computer)
 4. for each **new** point, use the quantum processor to get its inner products with just the support vectors (all the other training points can be forgotten), and see which side of the cut it lands on
 ### result

@@ -22,7 +22,7 @@ this is called a **feature map**. the harder the problem, the bigger the new spa
 ## the kernel trick
 to classify you don't actually need to know **where** each point ends up, only **how close** the points are to each other
 
-the tool for "how close" is the **inner product** (like $\langle\phi|\psi\rangle$ in [[Dirac notation]])
+the tool for "how close" is the **inner product** (like $\langle\phi|\psi\rangle$ in [[Math/Dirac notation]])
 
 > [!important] the kernel
 > ==the **kernel** is the table of inner products between every pair of training points, **after** the feature map==

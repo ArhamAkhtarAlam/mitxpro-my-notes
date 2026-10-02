@@ -57,7 +57,7 @@ you don't need every gate, a small set can build (or get as close as you want to
 this is like how NAND alone can build any classical circuit
 ## Measurement is not a gate
 - gates are [[Unitary Operation|unitary]] and reversible
-- measurement **isn't**: it collapses the qubit to $|0\rangle$ or $|1\rangle$ with probabilities $|\alpha|^2$ and $|\beta|^2$ (the probability rule in [[Dirac notation]]), and you can't undo it
+- measurement **isn't**: it collapses the qubit to $|0\rangle$ or $|1\rangle$ with probabilities $|\alpha|^2$ and $|\beta|^2$ (the probability rule in [[Math/Dirac notation]]), and you can't undo it
 - that's why algorithms measure only at the **end**
 
 see also [[Multiqubit gates]], [[Unitary Operation]], [[Bloch sphere]], [[Math]]

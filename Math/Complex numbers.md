@@ -56,4 +56,4 @@ flowchart LR
 > [!note] global phase doesn't matter
 > multiplying the **whole** state by $e^{i\varphi}$ changes nothing you can measure, because $|e^{i\varphi}\alpha|^2=|\alpha|^2$. only **relative** phases (between the $|0\rangle$ and $|1\rangle$ parts) matter
 
-see also [[Dirac notation]], [[Math]]
+see also [[Math/Dirac notation]], [[Math]]

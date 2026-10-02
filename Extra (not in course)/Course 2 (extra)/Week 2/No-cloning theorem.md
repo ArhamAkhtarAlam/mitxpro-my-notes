@@ -11,7 +11,7 @@ say it worked for 2 states $|\psi\rangle$ and $|\phi\rangle$
 $$
 U|\psi\rangle|0\rangle=|\psi\rangle|\psi\rangle\qquad U|\phi\rangle|0\rangle=|\phi\rangle|\phi\rangle
 $$
-unitaries keep inner products the same ([[Dirac notation]]), so take the inner product of the 2 lines
+unitaries keep inner products the same ([[Math/Dirac notation]]), so take the inner product of the 2 lines
 $$
 \langle\psi|\phi\rangle\cdot\langle0|0\rangle=\langle\psi|\phi\rangle^2\quad\Rightarrow\quad\langle\psi|\phi\rangle=\langle\psi|\phi\rangle^2
 $$

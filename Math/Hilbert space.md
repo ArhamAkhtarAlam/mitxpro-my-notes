@@ -1,7 +1,7 @@
 #math #hilbert_space #linear_algebra
 the "space" that quantum states live in. basically a vector space where you can measure lengths and angles
 ## what it is
-a **Hilbert space** is a vector space (you can add states and multiply them by [[Complex numbers|complex numbers]]) with an **inner product** $\langle\psi|\phi\rangle$ ([[Dirac notation]])
+a **Hilbert space** is a vector space (you can add states and multiply them by [[Complex numbers|complex numbers]]) with an **inner product** $\langle\psi|\phi\rangle$ ([[Math/Dirac notation]])
 
 the inner product gives you
 - **length** (the norm): $\|\psi\|=\sqrt{\langle\psi|\psi\rangle}$. quantum states have length 1
@@ -27,4 +27,4 @@ putting systems together = [[Tensor product|tensor product]] of their Hilbert sp
 - [[Unitary Operation|unitaries]] are the "rotations" of a Hilbert space: they keep all lengths and angles the same
 - observables are Hermitian operators on it, and their [[Eigenvalues and eigenvectors|eigenvectors]] form a basis
 
-see also [[Dirac notation]], [[Tensor product]], [[Complex numbers]], [[Math]]
+see also [[Math/Dirac notation]], [[Tensor product]], [[Complex numbers]], [[Math]]

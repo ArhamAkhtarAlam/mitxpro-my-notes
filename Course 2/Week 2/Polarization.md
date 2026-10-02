@@ -59,7 +59,7 @@ $$
 - $\theta=45^\circ$ (eg. $|D\rangle$ into an H polarizer) → 50/50, that's the quantum part from above
 - $\theta=90^\circ$ (eg. $|V\rangle$ into an H polarizer) → never
 
-this is the same $\cos^2$ rule as the qubit probability $|\langle\phi|\psi\rangle|^2$ (see [[Dirac notation]]) and the $\cos^2(22.5^\circ)\approx85\%$ in the [[CHSH quantum strategy]]
+this is the same $\cos^2$ rule as the qubit probability $|\langle\phi|\psi\rangle|^2$ (see [[Math/Dirac notation]]) and the $\cos^2(22.5^\circ)\approx85\%$ in the [[CHSH quantum strategy]]
 ## Circular polarization
 instead of wiggling along a line, the wave's direction **spins around** as it travels. it's a superposition of H and V with a $90^\circ$ ($i$) phase between them
 ## Changing polarization

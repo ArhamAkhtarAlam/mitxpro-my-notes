@@ -16,7 +16,7 @@ pick whatever sounds interesting, every note links to the ones it builds on
 | if you want... | start here | then |
 |---|---|---|
 | the basics of qubits | [[Bloch sphere]] | [[Quantum gate]] → [[Hadamard Gate]] → [[CNOT gate]] |
-| the maths | [[Math]] | [[Dirac notation]] → [[Eigenvalues and eigenvectors]] |
+| the maths | [[Math]] | [[Math/Dirac notation]] → [[Eigenvalues and eigenvectors]] |
 | quantum algorithms | [[Quantum Fourier Transform]] | [[Quantum Phase Estimation]] → [[Shor's algorithm]] |
 | quantum cryptography | [[Modern cryptography]] | [[RSA]] → [[QKD]] → [[BB84]] → [[Ekert91]] |
 | simulating molecules | [[Simulating quantum systems]] | [[Hamiltonian]] → [[Trotterization]] → [[VQE]] |
