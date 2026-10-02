@@ -33,6 +33,8 @@ $$
 this is what the [[Density matrix]] is built from: $\rho=\sum_kp_k|\psi_k\rangle\langle\psi_k|$
 
 (trick: $|i\rangle\langle j|$ puts a 1 in row $i$, column $j$)
+
+$|\phi\rangle\langle\phi|$ is called a **projector**, see [[Projectors]]
 ## sandwiches $\langle\psi|A|\psi\rangle$
 bra × matrix × ket = one number. it's the **average result** (expectation value) if you measure $A$ on $|\psi\rangle$, see [[Probability and expectation values]]
 

@@ -23,6 +23,7 @@ $$
 \langle1|0\rangle=\begin{bmatrix}0&1\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix}=0\qquad\langle0|1\rangle=0\qquad\sqrt{\langle0|0\rangle}=\sqrt{\langle1|1\rangle}=1
 $$
 ### identity and projectors
+(more on these in [[Projectors]])
 $$
 I=\begin{bmatrix}1&0\\0&1\end{bmatrix}\qquad\Pi_0=|0\rangle\langle0|=\begin{bmatrix}1&0\\0&0\end{bmatrix}\qquad\Pi_1=|1\rangle\langle1|=\begin{bmatrix}0&0\\0&1\end{bmatrix}
 $$
@@ -91,3 +92,5 @@ $$
 > ==the first slot is the first qubit== (checked numerically)
 
 see also [[Math/Dirac notation]], [[Tensor product]], [[Density matrix]], [[Math]]
+
+all 16 ways to combine $|0\rangle,|1\rangle,\langle0|,\langle1|$: [[Kets and bras combined]]

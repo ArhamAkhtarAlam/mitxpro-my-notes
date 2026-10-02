@@ -80,6 +80,8 @@ so the $\lambda_k$ are basically a [[Probability and expectation values|probabil
 ### pure vs mixed
 - **pure** → the unraveling is just one pure state $\rho=|\psi\rangle\langle\psi|$
 - **mixed** → the unraveling is a stochastic combination of more than one pure state
+
+(full explanation with examples: [[Pure and mixed states]])
 ## mixing density matrices
 if you mix density matrices with probabilities $p_k$
 $$
@@ -113,4 +115,4 @@ it's basically the [[#bipartite state example]] again. you have a two part syste
 > [!tip] why this matters
 > having infinite unravellings and purifications are key ideas for understanding [[Quantum Error Correction]]
 
-see also [[Course 3/Week 1/Dirac notation]] (all the matrix maths for this week), [[Trace]], [[Von Neumann entropy]], [[Entanglement entropy]], [[Quantum channels]]
+see also [[Density matrix practice]] (the course's worked exercise), [[Projectors]], [[Course 3/Week 1/Dirac notation]] (all the matrix maths for this week), [[Trace]], [[Von Neumann entropy]], [[Entanglement entropy]], [[Quantum channels]]
