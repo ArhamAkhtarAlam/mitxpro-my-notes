@@ -175,10 +175,12 @@ $$
 ### the density matrix of qubit A
 same rule: each state's projector times its probability. but now the projectors are $|\psi_{A,b}\rangle\langle\psi_{A,b}|$, **not** $\Pi_0$ and $\Pi_1$
 $$
-\rho_A=\tfrac12\,|\psi_{A,0}\rangle\langle\psi_{A,0}|+\tfrac12\,|\psi_{A,1}\rangle\langle\psi_{A,1}|
-$$
-$$
-=\frac12\begin{bmatrix}\frac34&\frac{\sqrt3}4\\\frac{\sqrt3}4&\frac14\end{bmatrix}+\frac12\begin{bmatrix}\frac34&-\frac{\sqrt3}4\\-\frac{\sqrt3}4&\frac14\end{bmatrix}=\begin{bmatrix}\frac34&0\\0&\frac14\end{bmatrix}=0.75\begin{bmatrix}1&0\\0&0\end{bmatrix}+0.25\begin{bmatrix}0&0\\0&1\end{bmatrix}
+\begin{aligned}
+\rho_A&=\tfrac12\,|\psi_{A,0}\rangle\langle\psi_{A,0}|+\tfrac12\,|\psi_{A,1}\rangle\langle\psi_{A,1}|\\
+&=\frac12\begin{bmatrix}\frac34&\frac{\sqrt3}4\\\frac{\sqrt3}4&\frac14\end{bmatrix}+\frac12\begin{bmatrix}\frac34&-\frac{\sqrt3}4\\-\frac{\sqrt3}4&\frac14\end{bmatrix}\\
+&=\begin{bmatrix}\frac34&0\\0&\frac14\end{bmatrix}\\
+&=0.75\begin{bmatrix}1&0\\0&0\end{bmatrix}+0.25\begin{bmatrix}0&0\\0&1\end{bmatrix}
+\end{aligned}
 $$
 the off diagonals cancel, and ==it's the **same** $\rho_A$ as part 3==, even though B was measured completely differently (checked numerically). what B does far away can't change what A looks like on its own
 

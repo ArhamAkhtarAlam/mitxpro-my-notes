@@ -56,8 +56,6 @@ $$
 > $$
 > so $\tau$ is a multiple of $I$, and the trace is 1 (it's a density matrix) so $\tau=\frac I2$ ✅
 
-> [!warning] lecture mix-up
-> the lecture proof is kinda messy, he also says $\sigma_y$ isn't self adjoint and adds conjugates, but $\sigma_y$ actually is Hermitian so $\sigma_y\rho\,\sigma_y$ is fine as it is
 ## on the Bloch sphere
 everything moves straight to the center **at the same rate**
 $$
