@@ -10,7 +10,7 @@ $$
 - **quantum**: 1 query
 ## the circuit
 ```mermaid
-flowchart LR
+flowchart TD
     A["n qubits |0⟩"] --> H1["H on all"] --> O["oracle<br/>|x⟩ → (−1)^(s·x) |x⟩"] --> H2["H on all"] --> M["measure → exactly s"]
 ```
 1. [[Hadamard Gate|Hadamards]] → equal superposition of every $x$

@@ -21,7 +21,7 @@ $$
 $$
 
 ```mermaid
-flowchart LR
+flowchart TD
     C{"both controls |1⟩?"} -- "yes" --> F["flip the target"]
     C -- "no" --> N["do nothing"]
     F --> R["target starts |0⟩ → ends as c1 AND c2"]

@@ -29,7 +29,7 @@ $$
 > this is exactly the $\langle Z\rangle$ that goes up and down in a [[Rabi oscillation]]
 
 ```mermaid
-flowchart LR
+flowchart TD
     S["prepare |ψ⟩"] --> M["measure A<br/>(get +1 or −1)"] --> R["repeat lots of times"] --> Av["average"] --> E["⟨A⟩"]
 ```
 

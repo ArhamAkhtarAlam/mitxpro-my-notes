@@ -10,7 +10,7 @@ $\lambda_k$ are the **[[Eigenvalues and eigenvectors|eigenvalues]]** of $\rho$ (
 so it's just the Shannon entropy of the eigenvalues
 
 ```mermaid
-flowchart LR
+flowchart TD
     R["density matrix ρ"] --> E["find its eigenvalues λ"] --> H["Shannon entropy of the λs<br/>−Σ λ log₂ λ"] --> S["S(ρ) qubits"]
 ```
 (how to calculate it)

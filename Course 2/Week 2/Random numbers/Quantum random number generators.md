@@ -32,7 +32,7 @@ and measure it in the $|0\rangle,|1\rangle$ basis. the answer is 0 or 1 with 50%
 ## self-checking QRNGs (using a Bell test)
 use an entangled [[Bell states|Bell state]] like $|\Phi\rangle=\frac1{\sqrt2}(|00\rangle+|11\rangle)$ and run a **Bell test** on lots of copies: each qubit is measured in one of 2 ways, each with 2 outcomes, and you check the statistics against a **Bell inequality** (see [[CHSH game]] and [[CHSH quantum strategy]])
 ```mermaid
-flowchart LR
+flowchart TD
     B["many entangled pairs"] --> T["Bell test"] --> V{"Bell inequality<br/>violated?"}
     V -- "no" --> D["could be pre-decided<br/>(a hidden variable model)<br/>→ don't trust"]
     V -- "yes" --> R["outcomes can't have been<br/>decided in advance<br/>→ certified random"]

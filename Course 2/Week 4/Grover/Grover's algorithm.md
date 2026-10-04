@@ -15,7 +15,7 @@ eg. $N=4$ → 2 qubits: $0\to|00\rangle,\ 1\to|01\rangle,\ 2\to|10\rangle,\ 3\to
 
 ## the 3 steps
 ```mermaid
-flowchart LR
+flowchart TD
     I["1. H on every qubit<br/>(equal superposition |s⟩)"] --> O["2. oracle U_w<br/>(flip the sign of |w⟩)"] --> D["3. diffuser U_s<br/>(reflect about the average)"] --> R{"done about<br/>(π/4)√N times?"}
     R -- "no" --> O
     R -- "yes" --> M["measure → w"]

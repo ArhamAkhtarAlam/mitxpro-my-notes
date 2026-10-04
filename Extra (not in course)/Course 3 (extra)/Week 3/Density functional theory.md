@@ -9,7 +9,7 @@ the exact state of $N$ electrons depends on $3N$ coordinates, so it's hopeless f
 ## how it's done (Kohn–Sham, 1965)
 replace the real interacting electrons with fake **non-interacting** ones that have the **same density**, moving in an effective potential. solve it over and over until it settles
 ```mermaid
-flowchart LR
+flowchart TD
     G["guess the density n(r)"] --> V["build the effective potential<br/>(including the 'exchange-correlation' part)"] --> S["solve 1 electron equations"] --> N["new density"] --> C{"same as before?"}
     C -- "no" --> V
     C -- "yes" --> E["ground state energy"]

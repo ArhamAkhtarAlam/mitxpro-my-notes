@@ -3,7 +3,7 @@ using quantum computers to help with **machine learning**, one of the areas peop
 ## the idea
 machine learning finds patterns in data. some patterns might be easier to find if the data is mapped into the **huge** space of quantum states
 ```mermaid
-flowchart LR
+flowchart TD
     D["classical data"] --> Q["map it into<br/>quantum states"] --> M["quantum computer does<br/>the hard part"] --> C["classical computer<br/>does the rest"] --> R["prediction"]
 ```
 this is the co-processor idea from [[NISQ#where people are looking]]: the quantum computer does only the one step that's hard classically

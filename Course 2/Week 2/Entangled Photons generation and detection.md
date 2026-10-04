@@ -22,7 +22,7 @@ one of the 4 [[Bell states]] (see [[CNOT gate#Example (making a Bell state)]]). 
 > only a tiny fraction of pump photons actually split (around 1 in a billion or even fewer), so you need a strong laser to get a useful number of pairs
 
 ```mermaid
-flowchart LR
+flowchart TD
     L["pump laser"] --> B["BBO crystal<br/>(SPDC)"]
     B --> S["photon A"] --> PA["polarizing<br/>beamsplitter"] --> DA["detectors A"]
     B --> I["photon B"] --> PB["polarizing<br/>beamsplitter"] --> DB["detectors B"]

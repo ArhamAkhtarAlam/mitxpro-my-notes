@@ -41,7 +41,7 @@ $$
 ## the numbers
 2 × 50 km of fibre (there and back), Alice's light is 2 THz wide, Bob sends 10 Gbit/s, and his amplifier has 40 dB gain (×10,000)
 ```mermaid
-flowchart LR
+flowchart TD
     A["Alice sends<br/>20 photons per bit"] -- "50 km<br/>(10% gets through)" --> B["Bob gets 2"] -- "amplifier ×10,000" --> C["20,000"] -- "50 km back<br/>(10%)" --> D["Alice gets<br/>2,000 signal photons<br/>+ 20,000 noise photons"] -- "processing gain ÷200" --> E["effectively 2,000 signal<br/>vs 100 noise ✓"]
 ```
 

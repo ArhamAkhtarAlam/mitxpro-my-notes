@@ -2,7 +2,7 @@
 the most famous **public key** cryptosystem (Rivest, Shamir, Adleman, 1978). anyone can lock a message for you, only you can unlock it. part of [[Modern cryptography]]
 ## the 4 steps
 ```mermaid
-flowchart LR
+flowchart TD
     G["1. Alice makes keys<br/>public (e, N), private (d, N)"] --> P["2. Alice publishes (e, N)"] --> E["3. Bob encrypts<br/>c = mᵉ mod N"] --> D["4. Alice decrypts<br/>m = cᵈ mod N"]
 ```
 ## step 1: making the keys

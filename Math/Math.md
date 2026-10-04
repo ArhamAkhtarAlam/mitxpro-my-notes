@@ -16,7 +16,7 @@ the maths you need for the quantum notes. start at the top if something doesn't 
 - [[Fourier Transform]], [[Discrete Fourier Transform]] → splitting a signal into frequencies (used in the [[Quantum Fourier Transform]])
 
 ```mermaid
-flowchart LR
+flowchart TD
     C["Complex numbers"] --> D["Dirac notation"]
     D --> T["Tensor product"]
     D --> E["Eigenvalues"]

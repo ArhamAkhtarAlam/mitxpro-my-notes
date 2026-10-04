@@ -8,7 +8,7 @@ $$
 not just [[Unitary Operation|unitary]] evolution ($\rho\to U\rho U^\dagger$), but **non-unitary** stuff too, like decoherence and losing energy ([[Noise Processes]])
 ## the model: system + environment
 ```mermaid
-flowchart LR
+flowchart TD
     S["system $$\ |\psi\rangle$$"] --> U["joint unitary U<br/>(system and environment interact)"]
     E["environment $$\ |e\rangle$$"] --> U
     U --> M["measure the environment in a basis $$\ |e_0\rangle,|e_1\rangle,|e_2\rangle,\ldots$$"]

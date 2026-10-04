@@ -15,7 +15,7 @@ normal encryption is safe because some maths problem is **hard** (like factoring
 > ![[One-time pad#^otp-example]]
 ## the steps every method shares
 ```mermaid
-flowchart LR
+flowchart TD
     Q["send / measure<br/>quantum states"] --> S["sifting<br/>(throw away<br/>wrong bases)"] --> E["estimate errors<br/>(check some bits)"] --> C["error<br/>correction"] --> P["privacy<br/>amplification"] --> K["secret key 🔑"]
 ```
 1. **quantum part**: send and measure photons in random bases

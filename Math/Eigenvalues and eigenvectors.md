@@ -44,7 +44,7 @@ $$
 exactly the same → eigenvector with **eigenvalue 1**
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["matrix A"] --> D["solve det(A − λI) = 0"] --> L["eigenvalues λ"] --> P["plug each λ into (A − λI)v = 0"] --> V["eigenvectors v"]
 ```
 

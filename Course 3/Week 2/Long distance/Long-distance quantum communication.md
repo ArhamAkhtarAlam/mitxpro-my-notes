@@ -19,10 +19,32 @@ flowchart LR
 photons are the best carriers of quantum information (they're fast, don't interact much with stuff, and we already have fibre everywhere), but fibre still **absorbs** them
 
 the loss is **exponential** (the **Beer–Lambert law**). good fibre loses $0.2$ dB per km
-$$
-\text{fraction that arrives}=10^{-0.2\,L/10}\qquad(L\text{ in km})
-$$
-![[Fiber_loss.png]]
+
+> [!info]- what is a dB (decibel)?
+> a **decibel** measures how much a signal shrinks, on a log scale
+> $$
+> \text{loss in dB}=10\log_{10}\!\left(\frac{P_{\text{in}}}{P_{\text{out}}}\right)\qquad\Longleftrightarrow\qquad\frac{P_{\text{out}}}{P_{\text{in}}}=10^{-\text{dB}/10}
+> $$
+> ^decibel
+>
+> eg. **1 dB**: $\frac{P_{\text{out}}}{P_{\text{in}}}=10^{-0.1}\approx0.79$, so about **79%** gets through (21% lost)
+>
+> | loss | fraction that gets through |
+> |---|---|
+> | 0.2 dB (1 km of good fibre) | ≈ 95% |
+> | 1 dB | ≈ 79% |
+> | 3 dB | ≈ 50% |
+> | 10 dB | 1 in 10 |
+> | 20 dB | 1 in 100 |
+> | 100 dB | 1 in $10^{10}$ |
+>
+> ==every 10 dB is another factor of 10==, and losses in dB just **add up** (10 dB then 20 dB = 30 dB total) instead of multiplying. at 0.2 dB/km, you lose 1 dB every 5 km
+>
+> **for fibre**: $L$ km of fibre at 0.2 dB/km is a loss of $0.2L$ dB, so
+> $$
+> \text{fraction that arrives}=10^{-0.2\,L/10}\qquad(L\text{ in km})
+> $$
+> ![[Fiber_loss.png]]
 
 | distance | photons that arrive |
 |---|---|
@@ -45,7 +67,7 @@ what it would be used for
 ## getting qubits onto photons (transduction)
 lots of qubits aren't photons, so they have to be **converted** first, without destroying the quantum state
 ```mermaid
-flowchart LR
+flowchart TD
     SC["superconducting qubit<br/>(microwave, only works super cold)"] --> T["transducer<br/>(keeps the quantum state)"]
     SP["electron / nuclear spin"] --> T
     ION["trapped ion<br/>(already optical, wrong colour)"] --> FC["frequency conversion"]

@@ -3,7 +3,7 @@ IBM's experiment: a [[Support vector machines|support vector machine]] where a *
 ## the idea
 for some kinds of data there's a feature map into **quantum states**, where the inner products are easy for a quantum computer but (for big enough problems) hard for a normal one
 ```mermaid
-flowchart LR
+flowchart TD
     X["data point x"] --> FM["quantum feature map<br/>(gates depend on x)"] --> S["quantum state |φ(x)⟩"]
     S --> K["quantum computer estimates<br/>overlaps |⟨φ(x)|φ(y)⟩|²<br/>= the kernel"]
     K --> C["classical computer finds<br/>support vectors + classifies"]

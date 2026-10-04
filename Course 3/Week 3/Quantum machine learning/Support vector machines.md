@@ -5,7 +5,7 @@ the classical machine learning method that the [[Quantum kernel SVM]] builds on.
 - each one belongs to one of **2 classes**
 - we get a **training set** where we know the labels, and want to label **new** data
 ```mermaid
-flowchart LR
+flowchart TD
     T["training set<br/>(data + labels)"] --> C["find a cut<br/>(hyperplane)"] --> N["new data:<br/>which side of the cut?"] --> L["label"]
 ```
 if the data is **linearly separable**, a flat cut (a line in 2D, a plane in 3D, a **hyperplane** in general) can split the 2 classes
@@ -34,7 +34,7 @@ the tool for "how close" is the **inner product** (like $\langle\phi|\psi\rangle
 > - from the kernel you can find the support vectors, and then classify anything
 
 ```mermaid
-flowchart LR
+flowchart TD
     D["data"] --> F["feature map<br/>(could be huge,<br/>skip it! ✗)"]
     D --> K["kernel K_ij<br/>(just the inner products)"] --> S["support vectors"] --> C["classify new data"]
 ```

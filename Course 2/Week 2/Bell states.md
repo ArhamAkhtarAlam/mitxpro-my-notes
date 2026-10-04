@@ -20,7 +20,7 @@ $$
 ## making them
 [[Hadamard Gate|H]] on the first qubit, then a [[CNOT gate|CNOT]]
 ```mermaid
-flowchart LR
+flowchart TD
     I["|00⟩, |01⟩, |10⟩ or |11⟩"] --> H["H on qubit 1"] --> C["CNOT<br/>(qubit 1 controls)"] --> B["|Φ⁺⟩, |Ψ⁺⟩, |Φ⁻⟩ or |Ψ⁻⟩"]
 ```
 

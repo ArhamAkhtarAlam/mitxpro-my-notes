@@ -5,7 +5,7 @@ a type of [[Quantum channels|quantum channel]] where the qubit randomly gets a p
 - probability $p$ → apply $\sigma_z$ (the [[Z gate]])
 
 ```mermaid
-flowchart LR
+flowchart TD
     IN["α|0⟩ + β|1⟩"] --> C{"dephasing<br/>channel"}
     C -- "probability 1−p<br/>do nothing" --> A["α|0⟩ + β|1⟩"]
     C -- "probability p<br/>apply Z" --> B["α|0⟩ − β|1⟩"]

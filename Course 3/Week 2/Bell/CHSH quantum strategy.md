@@ -106,6 +106,75 @@ Bob outputs $0$, same as Alice, so they **win with 85.4%**
 
 > [!warning] lecture mix-up
 > on the board he first wrote $\frac12+\frac1{\sqrt2}$, which is more than 1. a student caught it: it's $\frac12+\frac1{2\sqrt2}$
+
+### every case worked out
+the same 4 steps for all 4 cases. the 2 things you need
+- **after Alice measures**, Bob's qubit is the **same state** Alice got (that's what $\frac1{\sqrt2}(|00\rangle+|11\rangle)$ does, in any basis). Alice gets each result 50% of the time
+- **Bob's 2 observables**
+$$
+B_s=\frac1{\sqrt2}(\sigma_x+\sigma_z)=\frac1{\sqrt2}\begin{bmatrix}1&1\\1&-1\end{bmatrix}\qquad B_t=\frac1{\sqrt2}(\sigma_z-\sigma_x)=\frac1{\sqrt2}\begin{bmatrix}1&-1\\-1&-1\end{bmatrix}
+$$
+then use the trick: $P(y=0)=\frac{1+\langle B\rangle}2$ and $P(y=1)=\frac{1-\langle B\rangle}2$, where $\frac{1+1/\sqrt2}2\approx0.854$ and $\frac{1-1/\sqrt2}2\approx0.146$
+#### case 1: $a=0$, $b=0$ → they want the **same** answer
+Alice measures $\sigma_z$, Bob measures $B_s$
+- **Alice gets 0** → Bob's qubit is $|0\rangle$
+$$
+\langle0|B_s|0\rangle=\frac1{\sqrt2}\begin{bmatrix}1&0\end{bmatrix}\begin{bmatrix}1&1\\1&-1\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix}=+\frac1{\sqrt2}\ \Rightarrow\ P(y=0)\approx0.854
+$$
+Bob says 0, same as Alice → **win 85.4%**
+- **Alice gets 1** → Bob's qubit is $|1\rangle$
+$$
+\langle1|B_s|1\rangle=\frac1{\sqrt2}\begin{bmatrix}0&1\end{bmatrix}\begin{bmatrix}1&1\\1&-1\end{bmatrix}\begin{bmatrix}0\\1\end{bmatrix}=-\frac1{\sqrt2}\ \Rightarrow\ P(y=1)\approx0.854
+$$
+Bob says 1, same as Alice → **win 85.4%**
+#### case 2: $a=0$, $b=1$ → they want the **same** answer
+Alice measures $\sigma_z$, Bob measures $B_t$
+- **Alice gets 0** → Bob's qubit is $|0\rangle$
+$$
+\langle0|B_t|0\rangle=\frac1{\sqrt2}\begin{bmatrix}1&0\end{bmatrix}\begin{bmatrix}1&-1\\-1&-1\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix}=+\frac1{\sqrt2}\ \Rightarrow\ P(y=0)\approx0.854
+$$
+Bob says 0, same → **win 85.4%**
+- **Alice gets 1** → Bob's qubit is $|1\rangle$
+$$
+\langle1|B_t|1\rangle=\frac1{\sqrt2}\begin{bmatrix}0&1\end{bmatrix}\begin{bmatrix}1&-1\\-1&-1\end{bmatrix}\begin{bmatrix}0\\1\end{bmatrix}=-\frac1{\sqrt2}\ \Rightarrow\ P(y=1)\approx0.854
+$$
+Bob says 1, same → **win 85.4%**
+#### case 3: $a=1$, $b=0$ → they want the **same** answer
+Alice measures $\sigma_x$ (she outputs 0 for $|+\rangle$, 1 for $|-\rangle$), Bob measures $B_s$
+- **Alice gets 0 ($|+\rangle$)** → Bob's qubit is $|+\rangle=\frac1{\sqrt2}\begin{bmatrix}1\\1\end{bmatrix}$
+$$
+\langle+|B_s|+\rangle=\frac12\cdot\frac1{\sqrt2}\begin{bmatrix}1&1\end{bmatrix}\begin{bmatrix}1&1\\1&-1\end{bmatrix}\begin{bmatrix}1\\1\end{bmatrix}=\frac1{2\sqrt2}\begin{bmatrix}1&1\end{bmatrix}\begin{bmatrix}2\\0\end{bmatrix}=+\frac1{\sqrt2}\ \Rightarrow\ P(y=0)\approx0.854
+$$
+Bob says 0, same → **win 85.4%**
+- **Alice gets 1 ($|-\rangle$)** → Bob's qubit is $|-\rangle=\frac1{\sqrt2}\begin{bmatrix}1\\-1\end{bmatrix}$
+$$
+\langle-|B_s|-\rangle=\frac1{2\sqrt2}\begin{bmatrix}1&-1\end{bmatrix}\begin{bmatrix}1&1\\1&-1\end{bmatrix}\begin{bmatrix}1\\-1\end{bmatrix}=\frac1{2\sqrt2}\begin{bmatrix}1&-1\end{bmatrix}\begin{bmatrix}0\\2\end{bmatrix}=-\frac1{\sqrt2}\ \Rightarrow\ P(y=1)\approx0.854
+$$
+Bob says 1, same → **win 85.4%**
+#### case 4: $a=1$, $b=1$ → they want **different** answers
+Alice measures $\sigma_x$, Bob measures $B_t$
+- **Alice gets 0 ($|+\rangle$)** → Bob's qubit is $|+\rangle$
+$$
+\langle+|B_t|+\rangle=\frac1{2\sqrt2}\begin{bmatrix}1&1\end{bmatrix}\begin{bmatrix}1&-1\\-1&-1\end{bmatrix}\begin{bmatrix}1\\1\end{bmatrix}=\frac1{2\sqrt2}\begin{bmatrix}1&1\end{bmatrix}\begin{bmatrix}0\\-2\end{bmatrix}=-\frac1{\sqrt2}\ \Rightarrow\ P(y=1)\approx0.854
+$$
+Bob says 1, Alice said 0, **different** → **win 85.4%**
+- **Alice gets 1 ($|-\rangle$)** → Bob's qubit is $|-\rangle$
+$$
+\langle-|B_t|-\rangle=\frac1{2\sqrt2}\begin{bmatrix}1&-1\end{bmatrix}\begin{bmatrix}1&-1\\-1&-1\end{bmatrix}\begin{bmatrix}1\\-1\end{bmatrix}=\frac1{2\sqrt2}\begin{bmatrix}1&-1\end{bmatrix}\begin{bmatrix}2\\0\end{bmatrix}=+\frac1{\sqrt2}\ \Rightarrow\ P(y=0)\approx0.854
+$$
+Bob says 0, Alice said 1, **different** → **win 85.4%**
+
+> [!summary] all 4 cases
+> 
+> | $a$ | $b$ | want | Alice gets 0 → Bob says | Alice gets 1 → Bob says | P(win) |
+> |---|---|---|---|---|---|
+> | 0 | 0 | same | 0 (85.4%) | 1 (85.4%) | 85.4% |
+> | 0 | 1 | same | 0 (85.4%) | 1 (85.4%) | 85.4% |
+> | 1 | 0 | same | 0 (85.4%) | 1 (85.4%) | 85.4% |
+> | 1 | 1 | different | 1 (85.4%) | 0 (85.4%) | 85.4% |
+> 
+> ==in case 4 the sign of $\langle B_t\rangle$ flips, so Bob mostly says the **opposite** of Alice, exactly when they need different answers==. every case wins 85.4%, so overall 85.4% (checked numerically)
+
 ### why it wins 85.4%
 
 | $a$ | $b$ | want | bases | angle apart | P(win) |
@@ -155,4 +224,4 @@ here they want **different** answers
 > - someone asked if this strategy is the best possible, and yes: you **can't** beat 0.854. the proof is harder than everything else here so the lecture skips it (it was proved by Tsirelson, the transcript mishears it as "Sir Olson")
 > - so the CHSH game is a game that Alice and Bob can win **more often with an entangled state than without one**, and that's what makes it useful as a test for entanglement (like in [[Ekert91]])
 
-see also [[CHSH game]], [[Quantum weirdness]], [[Ekert91]]
+see also [[CHSH game]], [[CHSH inequality]] (the same thing as an inequality, 2√2 > 2), [[Quantum weirdness]], [[Ekert91]]

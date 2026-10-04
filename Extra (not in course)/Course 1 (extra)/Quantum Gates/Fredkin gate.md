@@ -15,7 +15,7 @@
 (checked numerically). as a matrix it's the $8\times8$ identity with rows 5 and 6 (the $|101\rangle$ and $|110\rangle$ rows) swapped
 ## circuit
 ```mermaid
-flowchart LR
+flowchart TD
     A["CNOT<br/>(target 2 → target 1)"] --> B["Toffoli<br/>(control + target 1 → target 2)"] --> C["CNOT<br/>(target 2 → target 1)"] --> D["= Fredkin"]
 ```
 (same idea as building a SWAP out of 3 CNOTs, but the middle one gets the extra control)

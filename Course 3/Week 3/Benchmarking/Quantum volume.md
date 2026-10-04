@@ -62,7 +62,7 @@ $$
 > with $\epsilon_{\text{eff}}\approx0.1$ on 5 qubits that gives $m=3$ and $V_Q=8$, the same as IBM's real result below. to double the useful qubits you need about **4× lower** error
 ## IBM's result
 ```mermaid
-flowchart LR
+flowchart TD
     R["random U4 circuits<br/>on random qubit pairs"] --> C["compile offline<br/>(greedy algorithm adds<br/>swaps / teleportation)"] --> RUN["run on the hardware"] --> A["average over<br/>many random trials"] --> V["quantum volume"]
 ```
 their **5 qubit** IBM Quantum Experience processor got an average quantum volume of **8** (so effectively $m=3$ useful qubits, not 5)

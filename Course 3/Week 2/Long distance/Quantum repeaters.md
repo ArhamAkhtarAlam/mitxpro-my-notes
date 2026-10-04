@@ -1,7 +1,7 @@
 #quantum_repeater #entanglement #quantum_internet #long_distance
 how to send quantum information further than ~100 km without amplifiers. follows on from [[Long-distance quantum communication]]
 ```mermaid
-flowchart LR
+flowchart TD
     K["1996<br/>error correction idea<br/>(Knill & Laflamme)"] --> B["1998<br/>BDCZ<br/>(purify + swap)"] --> D["2001<br/>DLCZ<br/>(atomic ensembles)"] --> T["today<br/>~100 qubits per node,<br/>~100 ms memory"]
 ```
 ## idea 1: error correction nodes (1996)
@@ -38,7 +38,7 @@ purify at each level to keep the pairs good, and the ends end up entangled over 
 ## idea 3: DLCZ (2001)
 by Duan, Lukin, Cirac and Zoller. made to get around the memory problem by using **atomic ensembles** (clouds of lots of atoms) as the memory
 ```mermaid
-flowchart LR
+flowchart TD
     W["write pulse on 2<br/>neighbouring ensembles"] --> E["maybe emits a photon"] --> BS["both photon paths meet<br/>at a beamsplitter"] --> C["detector clicks<br/>(can't tell which ensemble)"] --> ENT["ensembles entangled ✓"]
     ENT --> R["read pulse → photons →<br/>beamsplitter again"] --> S["entanglement swapped<br/>to the next link"]
 ```

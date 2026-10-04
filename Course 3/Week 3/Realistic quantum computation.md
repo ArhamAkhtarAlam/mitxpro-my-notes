@@ -9,7 +9,7 @@ courses 1 and 2 had examples like [[Shor's algorithm]], [[Quantum simulation|sim
 ## this week
 real qubits are noisy, so this week is about the [[NISQ]] era: what's been demonstrated on small real machines, the problems people ran into, how they **benchmarked** their systems, and what that means going forward
 ```mermaid
-flowchart LR
+flowchart TD
     I["perfect-qubit algorithms<br/>(courses 1 & 2)"] --> R["reality: noisy qubits<br/>(course 3)"] --> N["NISQ: what can we do now?<br/>(this week)"] --> F["fault tolerance<br/>(course 4)"]
 ```
 ## this week's notes

@@ -42,7 +42,7 @@ most of the time they use an **avalanche photodiode** (SPAD, single photon avala
 so when a photon comes it makes an electron (-) and hole (+) pair, they get separated, and the electron speeds up and breaks more pairs which breaks even more pairs, an avalanche that makes a large current you can measure
 
 ```mermaid
-flowchart LR
+flowchart TD
     P["1 photon"] --> E["1 electron-hole pair"] --> A["electron speeds up<br/>(high voltage)"] --> M["knocks out more pairs"] --> M2["...and more"] --> C["big current → click"]
 ```
 (the avalanche)

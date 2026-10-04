@@ -74,4 +74,4 @@ if Alice and Bob share an [[Entangled Photons generation and detection|entangled
 >
 > this is also the test [[Ekert91]] uses to check for an eavesdropper
 
-see also [[CHSH quantum strategy]], [[Quantum weirdness]], [[Quantum Communication]]
+see also [[CHSH quantum strategy]], [[CHSH inequality]] (the same game written as an inequality), [[Quantum weirdness]], [[Quantum Communication]]

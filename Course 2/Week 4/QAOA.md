@@ -23,7 +23,7 @@ $$
 |\gamma,\beta\rangle=U(B,\beta_p)\,U(C,\gamma_p)\cdots U(B,\beta_1)\,U(C,\gamma_1)\,|s\rangle
 $$
 ```mermaid
-flowchart LR
+flowchart TD
     Q["⚛️ quantum computer:<br/>make |γ,β⟩, measure bit strings,<br/>estimate ⟨C⟩"] --> C["💻 classical optimiser:<br/>new angles γ, β<br/>to increase ⟨C⟩"] --> Q
     Q --> A["best bit string seen<br/>≈ good answer"]
 ```

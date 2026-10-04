@@ -3,7 +3,7 @@
 ## quick recap
 [[BB84]], [[Ekert91]] and [[BBM92]] all let Alice and Bob build up the **same random string of bits**, while Eve learns **nothing** about it
 ```mermaid
-flowchart LR
+flowchart TD
     Q["QKD"] --> K["shared secret random key"] --> OTP["one-time pad encryption"] --> S["perfectly secret messages"]
 ```
 > [!important] why this matters now

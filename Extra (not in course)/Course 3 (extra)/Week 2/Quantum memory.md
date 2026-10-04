@@ -3,7 +3,7 @@
 ## why repeaters need it
 entanglement links succeed at **random** times (most photons get lost). a node has to **hold** its half of a successful link until the neighbouring link succeeds too, and until the classical messages have travelled back and forth
 ```mermaid
-flowchart LR
+flowchart TD
     L1["link A=R succeeds"] --> W["R stores its qubit<br/>(quantum memory)"] --> L2["...later, link R=B succeeds"] --> S["swap: A=B"]
 ```
 without memory, **every** link would have to succeed at the same moment, and the chance of that shrinks exponentially with the number of links

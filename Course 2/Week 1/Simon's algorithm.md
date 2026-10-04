@@ -10,7 +10,7 @@ you get a black box function $f$ that takes an $n$ bit string and gives an $n$ b
 **goal:** find out which one it is, and if it's two to one, find $s$
 ## the circuit
 ```mermaid
-flowchart LR
+flowchart TD
     A["n data qubits |0⟩<br/>n helper qubits |0⟩"] --> H1["H on every<br/>data qubit"] --> O["oracle<br/>|x⟩|0⟩ → |x⟩|f(x)⟩"] --> H2["H on every<br/>data qubit"] --> M["measure data → y"]
 ```
 1. [[Hadamard Gate|Hadamards]] → equal superposition of every $x$

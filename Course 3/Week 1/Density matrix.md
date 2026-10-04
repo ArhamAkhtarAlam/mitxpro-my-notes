@@ -35,7 +35,7 @@ $$
 > $\rho_1=\rho_2$ so they are actually the **same state** even though the mixtures look totally different
 
 ```mermaid
-flowchart LR
+flowchart TD
     AB["shared state |ψ⟩AB"] --> B{"B measures"}
     B -- "in 0/1" --> M1["mixture 1<br/>|0⟩ or |1⟩"]
     B -- "H then 0/1" --> M2["mixture 2<br/>superpositions"]

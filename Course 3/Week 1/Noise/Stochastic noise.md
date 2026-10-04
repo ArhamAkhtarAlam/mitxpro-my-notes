@@ -17,7 +17,7 @@ examples
 > - and many many more
 
 ```mermaid
-flowchart LR
+flowchart TD
     S["noise source<br/>(heat, charges, fields...)"] --> F["random fluctuation<br/>of a parameter"] --> Q["qubit's energy / control<br/>wobbles randomly"] --> D["decoherence"]
 ```
 

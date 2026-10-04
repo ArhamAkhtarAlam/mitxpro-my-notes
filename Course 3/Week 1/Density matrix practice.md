@@ -10,7 +10,7 @@ $$
 \langle\psi_{AB}|=\sqrt{\tfrac34}\,\langle0_A|\langle0_B|+\sqrt{\tfrac14}\,\langle1_A|\langle1_B|=\begin{bmatrix}\sqrt{3/4}&0&0&\sqrt{1/4}\end{bmatrix}
 $$
 ```mermaid
-flowchart LR
+flowchart TD
     S["$$|\psi_{AB}\rangle$$"] --> M{"measure qubit B"}
     M -- "$$\tfrac34\ $$ get 0" --> A0["qubit A is $$\ |0_A\rangle$$"]
     M -- "$$\tfrac14\ $$ get 1" --> A1["qubit A is $$\ |1_A\rangle$$"]

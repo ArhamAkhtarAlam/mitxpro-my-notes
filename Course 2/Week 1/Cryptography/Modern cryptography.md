@@ -2,7 +2,7 @@
 how we keep data secret when it travels over channels anyone can listen to (the internet, wifi...). this is what [[Shor's algorithm]] threatens
 ## the basic idea
 ```mermaid
-flowchart LR
+flowchart TD
     P["plaintext<br/>(readable message)"] -- "cipher + key" --> C["ciphertext<br/>(looks like nonsense)"] -- "public channel" --> D["decrypt with the key"] --> P2["plaintext again"]
 ```
 - **cipher** = the algorithm that scrambles plaintext into ciphertext using a **key**
@@ -34,7 +34,7 @@ in **1941** at **Bletchley Park**, a British team including **Alan Turing** work
 **1978**: **Rivest, Shamir and Adleman** published [[RSA]], still the most famous one. (it came out in the late 1990s that the UK's **GCHQ** had secretly invented the same idea in the early 1970s)
 ## what's actually used: both
 ```mermaid
-flowchart LR
+flowchart TD
     A["public key crypto<br/>(eg. RSA)"] -- "used once to share" --> K["a symmetric key"] --> S["symmetric crypto (eg. AES)<br/>encrypts the actual data"]
 ```
 public key crypto is used to **set up** the secure channel and hand over a symmetric key, then the fast symmetric key does the real work

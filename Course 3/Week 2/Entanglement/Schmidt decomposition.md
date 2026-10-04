@@ -15,7 +15,7 @@ $$
 > - [[Schmidt number]] = how many $\lambda_k$ aren't 0
 ## how to find it
 ```mermaid
-flowchart LR
+flowchart TD
     S["write |ψ⟩ = Σ c_ab |a⟩|b⟩"] --> M["put the c_ab in a matrix<br/>(rows = A, columns = B)"] --> SVD["singular value<br/>decomposition (SVD)"] --> L["singular values = √λk<br/>(Schmidt coefficients)"]
 ```
 (or find the eigenvalues of $\rho_A$ to get the $\lambda_k$)

@@ -17,6 +17,7 @@ for a lot of these, **entanglement** is the resource that makes it better, when 
 - [[Quantum weirdness]] → the EPR paper, entanglement and Bell
 - [[CHSH game]] → Bell's argument as a game, classical max 75%
 - [[CHSH quantum strategy]] → winning 85.4% with an [[Entangled Photons generation and detection|entangled pair]]
+- [[CHSH inequality]] → the same thing as an inequality: hidden variables give at most 2, quantum gives 2√2 (and Bohr vs EPR)
 - [[Long-distance quantum communication]] → why we can't amplify photons, fibre loss, the quantum internet
 - [[Quantum repeaters]] → [[Quantum Error Correction|error correction]] nodes, BDCZ, DLCZ and entanglement swapping
 - [[QKD in practice]] → [[Quantum hacking]], [[QKD distance and key rate]], [[Floodlight QKD]], [[Increasing the key rate]]
@@ -33,7 +34,7 @@ flowchart LR
 - [[Channel capacity]] $C$ → the max error free rate you can send through the noisy channel (uses the **mutual information** $I(X;Y)$)
 ### quantum
 ```mermaid
-flowchart LR
+flowchart TD
     R["message ρ<br/>(a density matrix)"] --> C{"noisy quantum<br/>channel"} --> R2["received ρ'"] --> D["decode<br/>(maybe with a<br/>quantum computer)"]
 ```
 - the message is a [[Density matrix]] $\rho$, basically a distribution over pure states, and those states can be **non-orthogonal** (can't happen classically)

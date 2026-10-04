@@ -10,7 +10,7 @@ the **secret key rate** (bits per second) is how fast that happens, and how fast
 > but it's hungry: it uses **1 bit of key for every bit of message**, and a key can **never be reused**. so to encrypt fast you need key fast
 ## what limits the key rate
 ```mermaid
-flowchart LR
+flowchart TD
     T["transmitter (Alice)<br/>how fast can it make<br/>quantum states?"] --> C["channel (fibre)<br/>how many photons<br/>get through?"] --> R["receiver (Bob)<br/>how fast can it detect?<br/>(reset time after each click)"]
 ```
 - **transmitter**: preparing each quantum state takes some time
@@ -29,7 +29,7 @@ and since there are no quantum amplifiers ([[No-cloning theorem|no-cloning]], se
 ## strategy 1: wavelength division multiplexing (WDM)
 one fibre can carry lots of **colours** (wavelengths) of light at once without them mixing, so run several QKD systems side by side, one colour each
 ```mermaid
-flowchart LR
+flowchart TD
     A1["Alice's QKD 1 (colour 1)"] --> MUX["combine"]
     A2["Alice's QKD 2 (colour 2)"] --> MUX
     A3["Alice's QKD 3 (colour 3)"] --> MUX

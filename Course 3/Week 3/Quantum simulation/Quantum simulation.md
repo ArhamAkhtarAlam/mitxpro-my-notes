@@ -11,7 +11,7 @@ using a quantum computer to simulate **other quantum systems** (molecules, mater
 > so a universal, error-corrected quantum computer is still **several orders of magnitude** away in qubit count and lifetime. meanwhile, people look for algorithms that work on NISQ hardware
 ## the idea
 ```mermaid
-flowchart LR
+flowchart TD
     S["set up qubits in a<br/>specific geometry"] --> I["let them interact<br/>with each other"] --> F["they reach a<br/>final configuration"] --> P["measure just a few<br/>properties at the end"]
 ```
 - the quantum hardware **is** the system being simulated, so you never have to write down every possible arrangement

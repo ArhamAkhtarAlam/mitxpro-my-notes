@@ -30,7 +30,7 @@ put a detector on each output and **only one** clicks, 50/50 at random. it's a r
 > it's [[Unitary Operation|unitary]] like any gate, so a beamsplitter is basically a [[Quantum gate|quantum gate]] for photons
 
 ```mermaid
-flowchart LR
+flowchart TD
     P["1 photon"] --> BS{"50:50<br/>beamsplitter"}
     BS -- "50%" --> D1["detector 1 clicks"]
     BS -- "50%" --> D2["detector 2 clicks"]

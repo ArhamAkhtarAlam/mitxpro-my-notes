@@ -4,7 +4,7 @@
 entangled pairs sent over a fibre, or joined by entanglement swapping, come out **noisy**: instead of a perfect $|\Phi^+\rangle$ you get a mix with [[State fidelity|fidelity]] $F<1$. swapping noisy links makes them even worse, so a long repeater chain would end up with useless entanglement
 ## the recurrence protocol (Bennett et al. 1996)
 ```mermaid
-flowchart LR
+flowchart TD
     P["2 noisy pairs<br/>(fidelity F each)"] --> C["both sides do CNOTs<br/>from pair 1 into pair 2"] --> M["measure pair 2,<br/>compare results by phone"] --> D{"results agree?"}
     D -- "yes" --> K["keep pair 1:<br/>fidelity F′ > F"]
     D -- "no" --> T["throw both away"]

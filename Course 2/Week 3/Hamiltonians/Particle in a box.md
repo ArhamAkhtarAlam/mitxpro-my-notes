@@ -44,7 +44,7 @@ $$
 ## simulating it on a quantum computer
 position is continuous, but you can chop the box into $2^n$ points and store the wavefunction in $n$ qubits: $|\psi\rangle=\sum_x\psi(x)|x\rangle$. a superposition of a **discrete** set of states
 ```mermaid
-flowchart LR
+flowchart TD
     V["apply e^(-iVΔt)<br/>(easy in position basis)"] --> Q["QFT to<br/>momentum basis"] --> K["apply e^(-iKΔt)<br/>(easy in momentum basis)"] --> Q2["inverse QFT"] --> V
 ```
 kinetic energy is easy in the **momentum** basis and potential energy in the **position** basis, and the [[Quantum Fourier Transform|QFT]] switches between them. alternating small steps of each is exactly [[Trotterization]] with $A=V$ and $B=K$

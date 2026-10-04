@@ -19,7 +19,7 @@ $$
 $$
 multiplying it out mixes up the A and B labels, which is messy. so **group all of Alice's qubits together and all of Bob's together**
 ```mermaid
-flowchart LR
+flowchart TD
     M["multiply out:<br/>A and B labels mixed up"] --> G["regroup:<br/>(A1 A2)(B1 B2)"] --> R["½ ( |00⟩|00⟩ + |01⟩|01⟩<br/>+ |10⟩|10⟩ + |11⟩|11⟩ )"] --> X["= ½ Σ |x⟩|x⟩<br/>x = 0, 1, 2, 3"]
 ```
 $$

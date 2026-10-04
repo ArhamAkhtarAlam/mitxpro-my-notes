@@ -11,7 +11,7 @@ $$
 $$
 the target is untouched, and the control got a relative phase $e^{i\varphi}$
 ```mermaid
-flowchart LR
+flowchart TD
     C["control |+⟩"] --> G["controlled-U"]
     T["target = eigenstate |u⟩<br/>(eigenvalue e^(iφ))"] --> G
     G --> C2["control: |0⟩ + e^(iφ)|1⟩<br/>(the phase kicked back)"]

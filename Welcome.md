@@ -26,7 +26,7 @@ pick whatever sounds interesting, every note links to the ones it builds on
 | information theory | [[Quantum Communication]] | [[Shannon entropy]] → [[Von Neumann entropy]] |
 
 ```mermaid
-flowchart LR
+flowchart TD
     M["Math"] --> B["Bloch sphere"] --> G["Quantum gates"]
     G --> A["Algorithms<br/>(QFT, Shor's)"]
     G --> C["Photons + QKD"]

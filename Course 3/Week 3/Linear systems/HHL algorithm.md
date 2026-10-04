@@ -60,7 +60,7 @@ $$
 $$
 dividing each eigenvector's part by its eigenvalue **is** applying $A^{-1}$ (checked numerically on a random $4\times4$ Hermitian matrix)
 ```mermaid
-flowchart LR
+flowchart TD
     S1["|b⟩ = Σ bᵢ|aᵢ⟩"] -- "phase estimation" --> S2["Σ bᵢ|aᵢ⟩|λᵢ⟩"] -- "filter" --> S3["Σ (bᵢ/λᵢ)|aᵢ⟩|λᵢ⟩"] -- "uncompute" --> S4["Σ (bᵢ/λᵢ)|aᵢ⟩ ∝ |x⟩"]
 ```
 > [!tip] not just inverting

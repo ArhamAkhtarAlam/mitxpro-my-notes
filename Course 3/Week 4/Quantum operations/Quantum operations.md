@@ -22,7 +22,7 @@ rules 1 and 2 are natural. rule 3 is the surprising one
 
 your qubit $Q$ might be entangled with some other **reference** system $R$ (another qubit, the lab, anything). $\mathcal E$ only touches $Q$, nothing happens to $R$, and the **whole** thing still has to come out as a legal state
 ```mermaid
-flowchart LR
+flowchart TD
     RQ["ρ_RQ<br/>(Q possibly entangled with R)"] --> R["R: nothing happens (I)"]
     RQ --> Q["Q: apply ℰ"]
     R --> OUT["output must still be<br/>a legal density matrix"]

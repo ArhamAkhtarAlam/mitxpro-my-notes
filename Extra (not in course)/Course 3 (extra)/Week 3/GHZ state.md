@@ -8,7 +8,7 @@ $$
 (for $n$ qubits: $\frac1{\sqrt2}(|0\ldots0\rangle+|1\ldots1\rangle)$)
 ## making it
 ```mermaid
-flowchart LR
+flowchart TD
     A["|000⟩"] --> H["H on qubit 1"] --> C1["CNOT 1 → 2"] --> C2["CNOT 2 → 3"] --> G["|GHZ⟩"]
 ```
 1 [[Hadamard Gate|Hadamard]] + $n-1$ [[CNOT gate|CNOTs]] (checked numerically). it's a common benchmark for new hardware: the bigger the GHZ state a machine can make well, the better (see [[Quantum volume]])

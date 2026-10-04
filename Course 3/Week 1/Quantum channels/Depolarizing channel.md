@@ -8,7 +8,7 @@ $$
 $$
 
 ```mermaid
-flowchart LR
+flowchart TD
     IN["$$\rho$$"] --> C{"depolarizing<br/>channel"}
     C -- "$$1-p\ $$ do nothing" --> A["$$\rho$$"]
     C -- "$$\tfrac p3\ $$ apply X" --> X["$$X\rho X$$"]

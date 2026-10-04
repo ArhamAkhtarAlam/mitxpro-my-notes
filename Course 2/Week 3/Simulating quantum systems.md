@@ -35,7 +35,7 @@ flowchart TD
 - **hybrid**: a classical computer steers the quantum device through its parameters to find eg. a minimum energy, see [[VQE]]
 ## this week's notes
 ```mermaid
-flowchart LR
+flowchart TD
     H["what's a Hamiltonian?"] --> B["example:<br/>particle in a box"] --> T["simulating e^(-iHt):<br/>Trotterization"] --> E["finding energies:<br/>phase estimation or VQE"]
 ```
 - [[Hamiltonian]] → the energy operator that controls how a quantum system changes

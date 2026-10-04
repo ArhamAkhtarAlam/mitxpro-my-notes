@@ -40,7 +40,7 @@ $$
 any complex number can be written as $z=|z|\,e^{i\varphi}$ (a size and an angle)
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["amplitude α<br/>(complex)"] --> C["conjugate α*"] --> M["α α* = |α|²"] --> P["probability ✓<br/>(real, ≥ 0)"]
 ```
 (from amplitude to probability)

@@ -28,7 +28,7 @@ for **any** message and **any** ciphertext of the same length, there's **some** 
 - you still have to get the key to the other person **secretly** → this is exactly what [[QKD]] is for
 
 ```mermaid
-flowchart LR
+flowchart TD
     Q["QRNG<br/>(truly random bits)"] --> K["QKD<br/>(share the key securely)"] --> O["one-time pad<br/>(unbreakable encryption)"]
 ```
 

@@ -42,7 +42,7 @@ for 1 qubit: **3** of the 12 describe which unitary gate it is, the other **9** 
 
 ## the 4 steps (standard process tomography)
 ```mermaid
-flowchart LR
+flowchart TD
     A["1. prepare a set of<br/>linearly independent inputs ρ_a"] --> B["2. send each one<br/>through the gate"] --> C["3. state tomography<br/>on every output"] --> D["4. solve the linear equations<br/>for χ"]
 ```
 1. **prepare** a basis of linearly independent input states $\rho_a$ (eg. for 1 qubit: $|0\rangle,|1\rangle,|+\rangle,|{+i}\rangle$, which span all $2\times2$ matrices)

@@ -10,7 +10,7 @@ $$
 $$
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["CNOT<br/>q0 controls q1"] --> B["CNOT<br/>q1 controls q0"] --> C["CNOT<br/>q0 controls q1"] --> D["= SWAP"]
 ```
 (building a SWAP out of CNOTs)

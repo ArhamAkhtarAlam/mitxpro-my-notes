@@ -17,7 +17,7 @@ if one bit flips ($000\to010$) you take a **majority vote** and still get $0$
 this protects against the [[Binary symmetric channel]] as long as only 1 of the 3 bits flips
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["bit 0"] --> E["encode: 000"] --> N["noisy channel"] --> R["receive: 010"] --> V["majority vote"] --> O["0 ✓"]
 ```
 

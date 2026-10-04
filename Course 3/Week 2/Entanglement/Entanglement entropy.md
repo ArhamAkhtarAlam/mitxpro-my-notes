@@ -12,7 +12,7 @@ E(\psi)=S(\rho_A)=S(\rho_B)
 $$
 (you get the same answer using A or B)
 ```mermaid
-flowchart LR
+flowchart TD
     P["|ψ⟩AB"] --> R["ρAB = |ψ⟩⟨ψ|"] -- "partial trace over B" --> RA["ρA"] -- "eigenvalues λ" --> S["S(ρA) = −Σ λ log₂ λ"] --> E["E (in ebits)"]
 ```
 > [!tip] why this works

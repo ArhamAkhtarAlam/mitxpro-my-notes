@@ -12,7 +12,7 @@ Course 3, Week 4: **how well do our quantum states and gates actually work?** me
 
 ## why benchmark?
 ```mermaid
-flowchart LR
+flowchart TD
     N["NISQ machines<br/>(no error correction)"] --> B["need to know how<br/>good each gate is"]
     F["future fault tolerant machines<br/>(error corrected)"] --> B
     B --> U["understand how well we can<br/>prepare, operate and measure<br/>a quantum system"]
@@ -24,7 +24,7 @@ flowchart LR
 > the tomography methods from this week come back all through course 4, with fault tolerant error correction and the [[Threshold theorem|threshold theorem]]
 ## this week's plan
 ```mermaid
-flowchart LR
+flowchart TD
     S["benchmark states<br/>(state tomography)"] --> P["use that to benchmark gates<br/>(process tomography)"] --> E["practical side:<br/>how much work it takes"] --> R["randomized benchmarking<br/>(much less work)"]
 ```
 1. [[State tomography]] → figuring out what quantum state you actually made

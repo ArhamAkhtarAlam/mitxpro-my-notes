@@ -17,7 +17,7 @@ $$
 the average energy of any state is **never below** the true ground state energy $E_0$. so you can just try lots of states and keep the lowest energy: the lower you get, the closer you are
 ## the loop
 ```mermaid
-flowchart LR
+flowchart TD
     P["parameters θ"] --> Q["⚛️ quantum computer:<br/>prepare ψ(θ) and measure<br/>E(θ) = ⟨ψ(θ)|H|ψ(θ)⟩"] --> C["💻 classical computer:<br/>optimiser picks new θ<br/>to lower the energy"] --> P
     C --> D["converged → E(θ) ≈ E₀"]
 ```

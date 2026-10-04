@@ -24,7 +24,7 @@ $$
 
 chop time into $n$ tiny steps of $\Delta t=\frac tn$. in each step do a little bit of $A$, then a little bit of $B$, and repeat $n$ times
 ```mermaid
-flowchart LR
+flowchart TD
     S["ψ(0)"] --> A1["e^(-iAΔt)"] --> B1["e^(-iBΔt)"] --> A2["e^(-iAΔt)"] --> B2["e^(-iBΔt)"] --> D["... n times"] --> E["≈ ψ(t)"]
 ```
 - the commutator error in each step is about $\Delta t^2$, and there are $n$ steps, so the total error shrinks like $\frac{t^2}n$

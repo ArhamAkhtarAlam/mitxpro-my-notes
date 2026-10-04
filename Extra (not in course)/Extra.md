@@ -12,7 +12,7 @@ stuff that **isn't covered in the courses** but is still important or good to kn
 - **week 4 (maths behind fidelity)** → [[Partial trace]], [[Purification]]
 
 ```mermaid
-flowchart LR
+flowchart TD
     NC["No-cloning"] --> SD["Superdense coding"]
     PT["Partial trace"] --> PU["Purification"]
     PU --> EP["Entanglement purification"]

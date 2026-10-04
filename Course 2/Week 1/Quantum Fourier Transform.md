@@ -173,7 +173,7 @@ U_{\mathrm{QFT}}
 $$
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["H on q2"] --> B["CR2: q1 → q2"] --> C["CR3: q0 → q2"] --> D["H on q1"] --> E["CR2: q0 → q1"] --> F["H on q0"] --> G["SWAP q0, q2"]
 ```
 (the 3 qubit gate sequence)

@@ -21,7 +21,7 @@ flowchart LR
 ## what we have instead
 for the next several years: machines with **a few hundred to a few thousand noisy physical qubits**, **not** fully error corrected. that's the NISQ era
 ```mermaid
-flowchart LR
+flowchart TD
     N["NISQ now<br/>100s–1000s noisy qubits<br/>no full error correction"] --> I["better gates,<br/>lower error rates"] --> F["fault tolerant<br/>many logical qubits<br/>(course 4)"]
 ```
 so the big question:
@@ -30,7 +30,7 @@ so the big question:
 ## why "useful" matters: the virtuous cycle
 building bigger quantum computers costs a lot. just like with normal computers in the past, that needs **revenue** from real products (not only government money)
 ```mermaid
-flowchart LR
+flowchart TD
     A["useful NISQ app<br/>(a 'killer app')"] --> R["revenue"] --> T["better technology"] --> B["bigger, better<br/>quantum computers"] --> A
 ```
 finding one NISQ app with a real advantage could start this cycle, which in the long run leads to large fault tolerant quantum computers, which is what we really need to get the full promise of quantum computing
