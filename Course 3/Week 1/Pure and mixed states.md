@@ -36,6 +36,19 @@ the **centre** of the ball, $\frac I2$, is the **most** mixed state: a complete 
 > [!example] the course's example: $\rho=\frac14\begin{bmatrix}3&0\\0&1\end{bmatrix}$
 > from the [[Density matrix#bipartite state example]]. purity $\text{tr}(\rho^2)=\frac9{16}+\frac1{16}=0.625<1$, so it's **mixed**. on the Bloch sphere it's halfway up the $z$ axis, at length $0.5$ (checked numerically)
 
+## the course's 3 examples (2 qubits)
+![[Types_of_states.png]]
+
+| | $\rho$ | $\text{tr}(\rho)$ | $\text{tr}(\rho^2)$ |
+|---|---|---|---|
+| **pure** | $\lvert\psi\rangle\langle\psi\rvert$ (here $\lvert10\rangle$: one bar) | 1 | 1 |
+| **mixed** | $\sum_ip_i\lvert\psi_i\rangle\langle\psi_i\rvert$ (bars everywhere, all smaller) | 1 | $<1$ (here 0.46) |
+| **Bell state** | $\lvert\Phi^-\rangle\langle\Phi^-\rvert$, with $\lvert\Phi^-\rangle=\frac1{\sqrt2}(\lvert00\rangle-\lvert11\rangle)$ | 1 | **1** |
+
+> [!important] entangled is not the same as mixed
+> ==the Bell state is **pure**==: as a 2 qubit state you know it exactly. its 4 corner bars ($\pm\frac12$) are the off diagonal "coherence" between $|00\rangle$ and $|11\rangle$. but each **half** of it on its own is the completely mixed $\frac I2$ (see below). so the whole can be pure while the parts are mixed, that's entanglement
+
+(all checked numerically. the mixed example is my own, the course's slide used a different random one with $\text{tr}(\rho^2)\approx0.33$)
 ## where mixed states come from
 ```mermaid
 flowchart TD

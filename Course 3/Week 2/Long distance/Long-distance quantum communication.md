@@ -75,7 +75,7 @@ flowchart TD
     FC --> O
     O --> F["fibre (telecom wavelength)"]
 ```
-- **superconducting qubits** (like IBM's) store the qubit in **microwaves**, which only stay clean at extremely low temperatures, so they can't just be sent down a fibre
+- **superconducting qubits** (like IBM's) store the qubit in **microwaves**, which only stay clean at extremely low temperatures, so they can't just be sent down a fibre. they sit in a **dilution refrigerator** at about 0.01 K, while the fibre between 2 labs is at room temperature (~290 K), where a microwave photon would be drowned in heat noise. an **optical** photon is high enough energy to ignore that heat, so you convert to optical first
 - **spins** (electron or nuclear) have to be turned into light first
 - **trapped ions** already give out light, but at the wrong frequency for fibre, so it has to be converted
 

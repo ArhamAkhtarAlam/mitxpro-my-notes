@@ -60,6 +60,8 @@ because it's two way, Eve can **inject her own dim broadband light** into Bob's 
 > - Bob taps off a bit of what he receives and records when his photons arrive
 > - they compare the time tags: real photons from Alice come in matching pairs, Eve's don't
 > - that tells them **how much** of Bob's incoming light is Eve's, and so how much secret key they can still safely make
+>
+> in the experiment (the "coincidence rate" plot), the fraction of Eve's light they **measured** this way matched the fraction **actually** injected along a straight line, up to about 10%, so the monitoring works
 ## where it is now
 - a tabletop demo got **1.3 Gbit/s** of secret key through loss equal to **50 km** of fibre, on a single wavelength (compare ~1 Mbit/s for BB84)
 - still to do

@@ -13,6 +13,8 @@ examples
 > - fluctuating charges in the substrate
 > - **quasi-particles** (charges) tunneling across the Josephson junction
 > - energy loss from phonon or photon emission
+> - flipping **paramagnetic / nuclear spins** near the qubit
+> - unwanted **modes of the surrounding circuit** (the environment)
 > - noise coming in and out of the control line
 > - and many many more
 

@@ -77,6 +77,6 @@ flowchart LR
 
 the key idea: you don't convert **one** copy at a time, you convert **lots** of copies at once, and only care about the rate in the long run
 
-this works for lots of resources. does it work for entanglement? that's the next part (**fungibility**)
+this works for lots of resources. does it work for entanglement? that's the next part: [[Entanglement fungibility]]
 
 see also [[Quantum weirdness]], [[Density matrix]], [[Tensor product#entanglement]]

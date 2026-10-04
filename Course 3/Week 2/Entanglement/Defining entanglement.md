@@ -1,4 +1,4 @@
-#entanglement #definition
+w#entanglement #definition
 part 2 of the entanglement deep dive (after [[Entanglement as a resource]]): what entanglement exactly **is**, and how to measure **how much** there is
 ## the definition
 a 2 part pure state $|\psi\rangle_{AB}$ is **entangled** if and only if you **can't** write it as (a state of A) $\otimes$ (a state of B)

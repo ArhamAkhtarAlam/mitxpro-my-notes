@@ -53,6 +53,15 @@ multiplying $p\times q$ is instant, but going backwards is practically impossibl
 > [!danger] where quantum computers come in
 > [[Shor's algorithm]] finds the period $r$ (and so factors $N$) **efficiently**. a big enough quantum computer breaks RSA, which is why [[Post-quantum cryptography]] exists
 
+> [!example]- bonus: you can multiply encrypted numbers
+> from a slide in Course 3: RSA has a neat property
+> $$
+> \text{Enc}(a)\cdot\text{Enc}(b)=a^e\,b^e=(ab)^e=\text{Enc}(ab)\pmod N
+> $$
+> so someone can **multiply** 2 encrypted numbers without ever decrypting them. eg. with the keys above: $\text{Enc}(5)=282$, $\text{Enc}(7)=216$, and $282\times216\bmod323=188=\text{Enc}(35)$, which decrypts to $35=5\times7$ ✅ (checked numerically)
+>
+> the course used this for an **encrypted controller**: a computer that controls a machine (the "plant") while only ever seeing encrypted numbers. it's an example of **homomorphic encryption**
+
 ## practice (from the course)
 $p=101,\ q=113$
 - $N=11413$

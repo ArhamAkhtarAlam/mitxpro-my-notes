@@ -25,6 +25,9 @@ flowchart TD
 > $$
 > so it's just mixing the state with the fully [[Density matrix|mixed state]] $\frac I2$ (the middle of the [[Bloch sphere]])
 
+> [!note] board slip
+> on the slide this is written as "$(1-\frac23p)\rho+I$", which isn't a valid density matrix (its trace isn't 1). it should be $(1-\frac43p)\rho+\frac23p\,I$, the same as the formula above since $\frac43p\cdot\frac I2=\frac23p\,I$
+
 this works because of the trick below
 > [!important] the trick
 > ==for any density matrix $\rho$, if you apply $I,\sigma_x,\sigma_y,\sigma_z$ each with probability $\frac14$ you always get $\frac I2$==
