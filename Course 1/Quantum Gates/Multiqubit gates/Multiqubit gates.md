@@ -79,7 +79,7 @@ flowchart TD
 - [[Toffoli gate]] → a reversible AND, can do any classical computation
 - [[Fredkin gate]] → a controlled SWAP
 ## how they fit together
-- any circuit can be built from **single qubit gates + CNOT** (see [[Quantum gate#universal gate sets]])
+- any circuit can be built from **single qubit gates + CNOT** (see [[Quantum gate#Universal gate sets]])
 - so bigger gates like Toffoli get broken down into CNOTs and single qubit gates when run on real hardware
 - 2 qubit gates are usually the **slowest** and **noisiest** part of a real quantum computer, so good circuits try to use as few as possible
 

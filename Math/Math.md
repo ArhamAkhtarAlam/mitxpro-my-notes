@@ -9,7 +9,7 @@ the maths you need for the quantum notes. start at the top if something doesn't 
 - [[Eigenvalues and eigenvectors]] → the directions a matrix only stretches
 - [[Hilbert space]] → the space states live in, why it doubles with every qubit
 - [[Tensor product]] → combining qubits with $\otimes$, entanglement
-- [[Trace]] → tr, purity, the partial trace
+- [[Trace]] → tr, purity, the [[Partial trace|partial trace]]
 - [[Unitary Operation]] → $U^\dagger U=I$, what every gate is
 ## pictures and transforms
 - [[Bloch sphere]] → drawing a qubit as a point on a sphere

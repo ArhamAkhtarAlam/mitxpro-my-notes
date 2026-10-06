@@ -27,6 +27,8 @@ flowchart TD
 so the big question:
 > [!question] what **useful** things can a NISQ computer do?
 > real world problems that are worth paying for, with only noisy qubits
+> [!note] quantum supremacy
+> = doing **some** task on a quantum computer that no existing classical computer can do in any reasonable time. the task doesn't have to be useful, it just proves it's possible. so it's a milestone, but **not** the moment quantum computers become useful: the useful algorithms (cybersecurity, simulation, optimisation) need lots of error-free logical qubits, probably a decade or two away
 ## why "useful" matters: the virtuous cycle
 building bigger quantum computers costs a lot. just like with normal computers in the past, that needs **revenue** from real products (not only government money)
 ```mermaid

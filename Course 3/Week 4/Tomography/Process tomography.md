@@ -19,7 +19,7 @@ $$
 
 ==the goal of process tomography is to find this **χ matrix**==. it completely describes the gate
 > [!example] χ for an X gate
-> a perfect X gate has just one non-zero entry, $\chi_{XX}=1$. if it also has depolarizing noise $p$ (an extra random $X$, $Y$ or $Z$ each with probability $\frac p3$), the big bar shrinks to $1-p$ and 3 small ones appear (picture below)
+> a perfect [[X gate]] has just one non-zero entry, $\chi_{XX}=1$. if it also has depolarizing noise $p$ (an extra random $X$, $Y$ or $Z$ each with probability $\frac p3$), the big bar shrinks to $1-p$ and 3 small ones appear (picture below)
 >
 > handy link to [[Gate fidelity]]: when the ideal gate is a Pauli, its χ entry **is** the entanglement fidelity, here $\chi_{XX}=F_e=1-p$ (checked numerically)
 

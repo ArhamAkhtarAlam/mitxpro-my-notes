@@ -55,4 +55,4 @@ flowchart LR
 | $\langle\psi\rvert A\lvert\psi\rangle$ | expectation value | a number |
 | $\lvert01\rangle$ | $\lvert0\rangle\otimes\lvert1\rangle$ | 2 qubit state, see [[Tensor product]] |
 
-see also [[Complex numbers]], [[Math]], and the course's [[Course 3/Week 1/Dirac notation]] (projectors, norms and 2 qubit states written out as matrices)
+see also [[Complex numbers]], [[Math]], and the course's [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]] (projectors, norms and 2 qubit states written out as matrices)

@@ -40,12 +40,12 @@ flowchart TD
 - [[Quantum gate]] → every gate, single qubit and multi qubit
 - [[Bloch sphere]] and [[Unitary Operation]]
 ### Course 2: Quantum Algorithms for Cybersecurity, Chemistry, and Optimization
-- **week 1** → [[Modern cryptography]], [[RSA]], [[Fourier Transform]], [[Discrete Fourier Transform]], [[Quantum Fourier Transform]], [[Modular Exponentiation]], [[Order finding algorithm]], [[Quantum Phase Estimation]], [[Shor's algorithm]], [[Simon's algorithm]]
-- **week 2** → [[Post-quantum cryptography]], [[Polarization]], [[Beamsplitters]], [[Single Photon making and detecting]], [[Entangled Photons generation and detection]], [[Bell states]], [[QKD]], [[Quantum random number generators]], [[One-time pad]], [[Teleportation]]
+- **week 1** → [[Cryptography and Shor's algorithm]] (hub): [[Modern cryptography]], [[RSA]], [[Fourier Transform]], [[Discrete Fourier Transform]], [[Quantum Fourier Transform]], [[Modular Exponentiation]], [[Order finding algorithm]], [[Quantum Phase Estimation]], [[Shor's algorithm]], [[Simon's algorithm]]
+- **week 2** → [[Quantum cryptography]] (hub): [[Post-quantum cryptography]], [[Polarization]], [[Beamsplitters]], [[Single Photon making and detecting]], [[Entangled Photons generation and detection]], [[Bell states]], [[QKD]], [[Quantum random number generators]], [[One-time pad]], [[Teleportation]]
 - **week 3** → [[Simulating quantum systems]] ([[Hamiltonian]], [[Particle in a box]], [[Hamiltonian simulation]], [[Trotterization]], [[VQE]])
 - **week 4** → [[Quantum optimization]] ([[Adiabatic quantum computing]], [[Quantum annealing]], [[QAOA]], [[Grover's algorithm]], [[QASM]])
 ### Course 3: Practical Realities of Quantum Computation and Quantum Communication
-- **week 1** → [[Density matrix]], [[Quantum channels]], [[Noise Processes]], [[Quantum Error Correction]]
+- **week 1** → [[Noise in quantum systems]] (hub): [[Density matrix]], [[Quantum channels]], [[Noise Processes]], [[Quantum Error Correction]] (all the formulas: [[Week 1 formulas]])
 - **week 2** → [[Quantum Communication]] (information theory, EPR, Bell and CHSH)
 - **week 3** → [[Realistic quantum computation]] (the [[NISQ]] era)
 - **week 4** → [[Benchmarking quantum systems]] (tomography and randomized benchmarking)

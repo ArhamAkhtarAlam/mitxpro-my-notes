@@ -24,7 +24,7 @@ $$
 $$
 ^time-evolution
 
-$U(t)=e^{-i\hat Ht/\hbar}$ is a [[Unitary Operation|unitary]], just like a quantum gate. every gate is really "let some Hamiltonian act for some time"
+$U(t)=e^{-i\hat Ht/\hbar}$ is a [[Unitary Operation|unitary]], just like a [[Quantum gate|quantum gate]]. every gate is really "let some Hamiltonian act for some time"
 > [!example] one qubit: $\hat H=\frac{\hbar\omega}2Z$
 > $$
 > e^{-i\hat Ht/\hbar}=\begin{bmatrix}e^{-i\omega t/2}&0\\0&e^{i\omega t/2}\end{bmatrix}

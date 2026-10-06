@@ -102,7 +102,7 @@ $$
 > [!question] where did $|1_A\rangle|0_B\rangle$ come from? the original state only had $|00\rangle$ and $|11\rangle$
 > from the Hadamard. before it, the $|1_A\rangle$ term had B in $|1_B\rangle$. the Hadamard turned that into $\frac{|0_B\rangle-|1_B\rangle}{\sqrt2}$, which **does** have a $|0_B\rangle$ part. so ==after the Hadamard, B can be 0 even when A is 1==, and that's the piece $\Pi_0$ keeps. that's also why A ends up in a superposition below
 #### the same thing term by term
-**the rule**: a tensor product operator acts on **each qubit separately**. on any 2 qubit basis state $|a\rangle|b\rangle$
+**the rule**: a [[Tensor product|tensor product]] operator acts on **each qubit separately**. on any 2 qubit basis state $|a\rangle|b\rangle$
 $$
 (I_A\otimes\Pi_0)\,|a\rangle|b\rangle=\big(I_A|a\rangle\big)\big(\Pi_0|b\rangle\big)=|a\rangle\;|0\rangle\underbrace{\langle0|b\rangle}_{1\text{ or }0}
 $$
@@ -130,7 +130,7 @@ $$
 ==each projector keeps the half of the state where B has that value, and qubit A's part of those terms is untouched==
 
 > [!example]- the same thing with matrices
-> in the order $|00\rangle,|01\rangle,|10\rangle,|11\rangle$, $I_A\otimes\Pi_0$ is two copies of $\Pi_0$ down the diagonal ([[Course 3/Week 1/Dirac notation#tensor products of matrices|cheat sheet]]), so it just zeroes the 2nd and 4th entries (the ones where B is 1)
+> in the order $|00\rangle,|01\rangle,|10\rangle,|11\rangle$, $I_A\otimes\Pi_0$ is two copies of $\Pi_0$ down the diagonal ([[Course 3/Week 1/Density matrices/Dirac notation#tensor products of matrices|cheat sheet]]), so it just zeroes the 2nd and 4th entries (the ones where B is 1)
 > $$
 > \underbrace{\begin{bmatrix}1&0&0&0\\0&0&0&0\\0&0&1&0\\0&0&0&0\end{bmatrix}}_{I_A\otimes\Pi_0}\frac1{\sqrt2}\begin{bmatrix}\sqrt{3/4}\\\sqrt{3/4}\\\sqrt{1/4}\\-\sqrt{1/4}\end{bmatrix}=\frac1{\sqrt2}\begin{bmatrix}\sqrt{3/4}\\0\\\sqrt{1/4}\\0\end{bmatrix}
 > $$
@@ -184,4 +184,4 @@ $$
 $$
 the off diagonals cancel, and ==it's the **same** $\rho_A$ as part 3==, even though B was measured completely differently (checked numerically). what B does far away can't change what A looks like on its own
 
-see also [[Projectors]], [[Density matrix]], [[Pure and mixed states]], [[Course 3/Week 1/Dirac notation|Dirac notation cheat sheet]]
+see also [[Projectors]], [[Density matrix]], [[Pure and mixed states]], [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]]

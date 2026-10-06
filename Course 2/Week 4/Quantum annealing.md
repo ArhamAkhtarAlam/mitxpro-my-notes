@@ -19,7 +19,7 @@ same idea, but with **quantum fluctuations** instead of thermal ones
 
 ![[Annealing_tunneling.png]]
 ## the Hamiltonian
-the cost function goes into an **Ising** Hamiltonian (spins with fields and pairwise couplings), whose ground state is the best answer
+the cost function goes into an **Ising** [[Hamiltonian]] (spins with fields and pairwise couplings), whose ground state is the best answer
 $$
 H(s)=A(s)\,H_{\text{init}}+B(s)\,H_{\text{problem}}\qquad H_{\text{init}}=-\sum_iX_i\qquad H_{\text{problem}}=\sum_ih_iZ_i+\sum_{i<j}J_{ij}Z_iZ_j
 $$

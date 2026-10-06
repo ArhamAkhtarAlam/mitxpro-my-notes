@@ -52,3 +52,4 @@ flowchart TD
 
 see also [[Quantum channels]] (the noisy channels from last week)
 
+previous week: [[Noise in quantum systems]] · next week: [[Realistic quantum computation]]

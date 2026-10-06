@@ -19,7 +19,7 @@ it goes into a **superposition** of both paths
 $$
 |\text{in}\rangle\;\longrightarrow\;\frac1{\sqrt2}\big(|\text{transmitted}\rangle+i\,|\text{reflected}\rangle\big)
 $$
-put a detector on each output and **only one** clicks, 50/50 at random. it's a real quantum coin flip (this is actually how some quantum random number generators work)
+put a detector on each output and **only one** clicks, 50/50 at random. it's a real quantum coin flip (this is actually how some [[Quantum random number generators|quantum random number generators]] work)
 
 (the $i$ is a phase that reflection adds. it doesn't change the 50/50, but it matters when 2 paths meet again)
 > [!example]- as a matrix

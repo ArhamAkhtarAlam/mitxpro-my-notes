@@ -33,6 +33,8 @@ the same oracle as a quantum circuit: data qubits $D_1\ldots D_n$ and one result
 ### the hardware
 an IBM **5 qubit** superconducting chip. each qubit has a microwave resonator for control and readout. the middle qubit is $a$, and it's connected to the other 4 through extra resonators, which is what makes the CNOTs possible
 ## 2 ways to learn $k$
+![[LPN_outcomes.png]]
+(the ideal outcomes for the course's example, $k=11$, checked numerically. classical: 4 outcomes at $\frac14$ each, which on their own say little. quantum: half the time you get the key directly)
 ### classical learner
 measure everything after each query and collect the (classical) results, then find the $k$ that fits the data best. even though the oracle is quantum, the **learning is completely classical**
 ### quantum learner

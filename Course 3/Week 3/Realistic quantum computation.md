@@ -22,3 +22,5 @@ flowchart TD
 - [[HHL algorithm]] → the quantum linear system solver: log N instead of N, but with a very different input and output
 
 see also [[Noise Processes]], [[Quantum channels]], [[Quantum Communication]]
+
+previous week: [[Quantum Communication]] · next week: [[Benchmarking quantum systems]]

@@ -33,6 +33,7 @@ the [[Polarization|Poincaré sphere]] is the [[Bloch sphere]] for polarization: 
 | Bob | $M_B^{z-x}$ | halfway between $z$ and $-x$ |
 
 (the same 4 measurements as the [[CHSH quantum strategy]], on the Bloch sphere)
+![[Poincare_CHSH_axes.png]]
 ## the classical (hidden variable) limit
 combine them into one number
 $$
@@ -98,5 +99,12 @@ $$
 (checked numerically). so "violating the CHSH inequality" and "winning the CHSH game more than 75% of the time" are the same statement
 > [!info] experiments
 > lots of experiments have violated Bell's inequality, with photons, ions, atoms and superconducting qubits. "loophole-free" versions were done in 2015, and the 2022 Nobel prize in physics went to Aspect, **Clauser** (the C in CHSH) and Zeilinger for these experiments
+
+> [!warning] loopholes
+> real tests aren't perfect, so people found **loopholes**, ways a hidden variable theory could still sneak through
+> - **measurement (detection) loophole**: detectors miss photons, so maybe only the "agreeing" ones get counted
+> - **communication (locality) loophole**: if the labs aren't far enough apart, a light-speed signal could carry Alice's choice to Bob in time
+>
+> recently all of these have been closed **except one**: the ==**free will** loophole==, which asks whether Alice and Bob can really choose their measurements independently and at random. apart from that, every experiment agrees with quantum mechanics, and hidden variables aren't needed
 
 see also [[CHSH game]], [[CHSH quantum strategy]], [[Quantum weirdness]], [[Bell states]], [[Ekert91]]

@@ -42,4 +42,4 @@ flowchart LR
 > $$
 > there's no way to write this as one state $\otimes$ another. those are **entangled** states (see [[Quantum weirdness]])
 
-see also [[Course 3/Week 1/Dirac notation]] (fully worked $A\otimes B$, $A\otimes I$, $I\otimes A$), [[Math/Dirac notation]], [[Trace]] (the partial trace undoes the tensor product), [[Math]]
+see also [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]] (fully worked $A\otimes B$, $A\otimes I$, $I\otimes A$), [[Math/Dirac notation]], [[Trace]] (the [[Partial trace|partial trace]] undoes the tensor product), [[Math]]

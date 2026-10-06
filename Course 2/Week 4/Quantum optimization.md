@@ -28,3 +28,5 @@ flowchart TD
 | [[Grover's algorithm]] | search an unstructured list in $\sqrt N$ steps instead of $N$ | a **polynomial** (quadratic) speedup, done in the lab with [[QASM]] |
 
 see also [[Adiabatic quantum computing]], [[Quantum annealing]], [[QAOA]], [[Grover's algorithm]], [[VQE]]
+
+previous week: [[Simulating quantum systems]]

@@ -1,5 +1,5 @@
 #teleportation #entanglement #bell_states #quantum_communication
-how to move a qubit's **state** from Alice to Bob using a shared entangled pair and **2 classical bits**. discovered in 1993 and done in experiments many times since. a basic building block of quantum communication
+how to move a qubit's **state** from Alice to Bob using a shared entangled pair and **2 classical bits**. discovered in 1993 and done in experiments many times since. a basic building block of [[Quantum Communication|quantum communication]]
 > [!note] not like sci-fi
 > nothing physical travels. only the **quantum information** (the state $\alpha|0\rangle+\beta|1\rangle$) moves from one qubit to another
 

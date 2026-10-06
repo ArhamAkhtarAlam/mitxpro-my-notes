@@ -2,7 +2,7 @@
 the only encryption that's **mathematically unbreakable**, if you use it properly
 ## how it works
 Alice and Bob share a secret **random key at least as long as the message**
-- **encrypt**: add each message character to the matching key character (modular arithmetic, for bits that's XOR $\oplus$)
+- **encrypt**: add each message character to the matching key character ([[Modular arithmetic|modular arithmetic]], for bits that's XOR $\oplus$)
 - **decrypt**: do the same with the same key
 
 > [!example] with bits

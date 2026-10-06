@@ -56,6 +56,18 @@ since you can't amplify, the error rate grows exponentially with distance. at so
 
 > [!info] where QKD is today
 > that's why [[QKD]] in fibre only works up to about **100 km** in practice, nowhere near the global reach of the normal internet
+## going through space: satellite QKD
+air near the ground causes most of the trouble (turbulence and absorption), and it thins out quickly with height. so a link **up to a satellite** loses far less than a ground link of the same length, and satellites can pass the quantum information between each other before sending it back down
+![[Micius_satellite_QKD.png]]
+
+> [!example] the Micius satellite (China, 2016)
+> - orbits at **500 km** altitude at **7.6 km/s**
+> - QKD at **kHz** rates over **1200 km** satellite-to-ground
+> - the satellite is the **sender**: turbulence near the ground makes the beam **wander**, and that matters much less once the beam has already spread out (it's about **12 m** wide after 1200 km) than if it wanders right at the source
+> - it made separate keys with ground stations in **Europe and China**, **7600 km** apart, and used them to give both a shared key. that key seeded **AES-128** encryption for a **75 minute** intercontinental video call, using **70 kB** of key
+>
+> it proves global QKD is possible, but the rates need to go way up from kHz before it's practical
+
 ## the quantum internet
 the dream is a **quantum internet**: quantum computers and sensors all connected, sharing entanglement (most famously described by Jeff Kimble in *Nature* in 2008)
 

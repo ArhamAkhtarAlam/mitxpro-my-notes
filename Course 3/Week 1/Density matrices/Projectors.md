@@ -1,5 +1,5 @@
 #projector #measurement #density_matrix #dirac_notation
-a **projector** is the matrix that "picks out" one part of a state. it's how measurement works in the maths, and every pure [[Density matrix|density matrix]] is one. introduced on the [[Course 3/Week 1/Dirac notation|Dirac notation cheat sheet]]
+a **projector** is the matrix that "picks out" one part of a state. it's how measurement works in the maths, and every pure [[Density matrix|density matrix]] is one. introduced on the [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]]
 ## what it is
 the projector onto a state $|\phi\rangle$ is its outer product with itself
 $$
@@ -46,7 +46,7 @@ measuring in a basis $\{|i\rangle\}$ is described by the projectors $\Pi_i=|i\ra
 
 ## projectors and density matrices
 the density matrix of a **pure** state is just its projector
-![[Course 3/Week 1/Dirac notation#^pure-projector]]
+![[Course 3/Week 1/Density matrices/Dirac notation#^pure-projector]]
 
 and a **mixed** state is a weighted mix of projectors, $\rho=\sum_kp_k|\psi_k\rangle\langle\psi_k|$. so ==$\rho$ is pure exactly when $\rho^2=\rho$== (when it's a projector), see [[Density matrix]]
 ## measuring just one qubit
@@ -57,4 +57,4 @@ $$
 > [!example] $\sqrt{\tfrac34}\,|00\rangle+\sqrt{\tfrac14}\,|11\rangle$
 > $P(A=0)=\langle\psi|\Pi_{0_A}|\psi\rangle=\frac34$, and afterwards the pair is in $|00\rangle$ (checked numerically). this is the measurement behind "mixture 1" in [[Density matrix#bipartite state example]]. full step by step version: [[Density matrix practice]]
 
-see also [[Kets and bras combined]] (all 16 combinations of $|0\rangle,|1\rangle,\langle0|,\langle1|$), [[Course 3/Week 1/Dirac notation|Dirac notation cheat sheet]], [[Density matrix]], [[Math/Dirac notation]], [[Tensor product]]
+see also [[Kets and bras combined]] (all 16 combinations of $|0\rangle,|1\rangle,\langle0|,\langle1|$), [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]], [[Density matrix]], [[Math/Dirac notation]], [[Tensor product]]

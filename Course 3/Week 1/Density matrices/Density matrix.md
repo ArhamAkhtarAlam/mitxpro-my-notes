@@ -91,6 +91,18 @@ $$
 > **yes**
 > - $\text{tr}(\rho)=\sum_kp_k\,\text{tr}(\rho_k)=\sum_kp_k=1$
 > - $\langle\psi|\rho|\psi\rangle=\sum_kp_k\langle\psi|\rho_k|\psi\rangle\geq0$ because every piece is $\geq0$
+## how a gate changes a density matrix
+a [[Unitary Operation|unitary]] $U$ (a gate) turns $|\psi\rangle$ into $U|\psi\rangle$, so its density matrix becomes
+$$
+|\psi\rangle\langle\psi|\ \longrightarrow\ U|\psi\rangle\langle\psi|U^\dagger
+$$
+and because $\rho$ is just a mix of these, the same works for **any** density matrix
+$$
+\rho\ \longrightarrow\ U\rho\,U^\dagger
+$$
+^unitary-evolution
+
+==a gate never changes the purity==: $\text{tr}\big((U\rho U^\dagger)^2\big)=\text{tr}(\rho^2)$, so pure stays pure and mixed stays mixed. only noise ([[Quantum channels]]) can make a state more mixed
 ## unravellings are not unique
 for a mixed state there are infinitely many unravellings (von Neumann figured this out)
 
@@ -104,7 +116,7 @@ $$
 $$
 this is exactly what happened in the [[#bipartite state example]]. mixture 1 and mixture 2 are two different unravelings of the same $\rho$, and which one you get depends on which basis B measures in
 ## purification
-a **purification** of $\rho_A$ is a pure state $|\psi\rangle_{AB}$ where
+a **[[Purification|purification]]** of $\rho_A$ is a pure state $|\psi\rangle_{AB}$ where
 $$
 \rho_A=\text{tr}_B\big(|\psi\rangle_{AB}\langle\psi|_{AB}\big)
 $$
@@ -115,4 +127,4 @@ it's basically the [[#bipartite state example]] again. you have a two part syste
 > [!tip] why this matters
 > having infinite unravellings and purifications are key ideas for understanding [[Quantum Error Correction]]
 
-see also [[Density matrix practice]] (the course's worked exercise), [[Projectors]], [[Course 3/Week 1/Dirac notation]] (all the matrix maths for this week), [[Trace]], [[Von Neumann entropy]], [[Entanglement entropy]], [[Quantum channels]]
+see also [[Density matrix practice]] (the course's worked exercise), [[Projectors]], [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]] (all the matrix maths for this week), [[Trace]], [[Von Neumann entropy]], [[Entanglement entropy]], [[Quantum channels]]

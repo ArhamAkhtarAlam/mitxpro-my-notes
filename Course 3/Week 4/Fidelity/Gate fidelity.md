@@ -49,7 +49,7 @@ $$
 > [!important] the gold standard
 > ==entanglement fidelity measures how much **entanglement** the gate leaves intact==, and entanglement is the precious resource quantum computers run on ([[Entanglement as a resource]]). but it's **hard to measure directly** today
 
-for the noisy X gate, $F_e=1-p$ (checked numerically)
+for the noisy [[X gate]], $F_e=1-p$ (checked numerically)
 ## 3. average gate fidelity
 just average the (squared) fidelity **evenly over all input states**
 $$

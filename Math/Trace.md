@@ -27,7 +27,7 @@ flowchart LR
 ```
 
 ## the partial trace
-for a 2 part state (A and B), the **partial trace** $\text{tr}_B$ throws away B and tells you what's left for A
+for a 2 part state (A and B), the **[[Partial trace|partial trace]]** $\text{tr}_B$ throws away B and tells you what's left for A
 $$
 \rho_A=\text{tr}_B\big(\rho_{AB}\big)
 $$

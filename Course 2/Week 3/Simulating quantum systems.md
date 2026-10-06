@@ -53,3 +53,5 @@ flowchart TD
 | Zhang et al. 2017, *Observation of a Many-Body Dynamical Phase Transition with a 53-Qubit Quantum Simulator* | an **analog** simulator of **53 trapped ions** studying a phase transition in the transverse field Ising model of magnetism |
 
 see also [[Quantum simulation]], [[NISQ]], [[VQE]]
+
+previous week: [[Quantum cryptography]] · next week: [[Quantum optimization]]

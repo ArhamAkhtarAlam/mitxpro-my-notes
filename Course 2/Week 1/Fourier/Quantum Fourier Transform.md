@@ -189,7 +189,7 @@ $$
 
 Unlike the classical Discrete Fourier Transform, the Quantum Fourier Transform
 does not act on a continuous signal or a sampled time series.
-Its limits arise purely from the **finite dimension of the Hilbert space**.
+Its limits arise purely from the **finite dimension of the [[Hilbert space]]**.
 
 ---
 

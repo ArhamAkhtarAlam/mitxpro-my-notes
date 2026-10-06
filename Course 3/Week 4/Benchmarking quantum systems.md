@@ -41,3 +41,5 @@ flowchart TD
 - [[Process tomography]] → rebuilding a gate's whole χ matrix ($d^4-d^2$ numbers, 240 for 2 qubits!)
 
 see also [[Quantum volume]], [[NISQ]], [[Realistic quantum computation]]
+
+previous week: [[Realistic quantum computation]]

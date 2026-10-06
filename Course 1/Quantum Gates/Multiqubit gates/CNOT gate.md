@@ -69,7 +69,7 @@ the result can't be split into (qubit 0) $\otimes$ (qubit 1) anymore, it's **ent
 
 ## Properties
 - $\text{CNOT}\cdot\text{CNOT}=I$ (its own inverse)
-- with single qubit gates, CNOT can build **any** multi qubit gate (see [[Quantum gate#universal gate sets]])
+- with single qubit gates, CNOT can build **any** multi qubit gate (see [[Quantum gate#Universal gate sets]])
 - 3 CNOTs in a row (the middle one upside down) = a [[SWAP gate]]
 
 see also [[Multiqubit gates]], [[X gate]], [[Bell states]], [[Entanglement entropy]]

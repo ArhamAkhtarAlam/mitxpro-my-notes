@@ -56,7 +56,7 @@ $$
 - good gates → limited by the number of qubits $n'$
 
 ![[Quantum_volume_tradeoff.png]]
-> [!example]- the rough model in the picture (extra, from the original quantum volume paper)
+> [!example]- the rough model in the picture (from the course text)
 > the achievable depth is roughly $d\approx\frac1{n\,\epsilon_{\text{eff}}}$ (bigger circuits have more places for errors). then $n=d$ at $n\approx\frac1{\sqrt{\epsilon_{\text{eff}}}}$, which is where $m$ is biggest
 >
 > with $\epsilon_{\text{eff}}\approx0.1$ on 5 qubits that gives $m=3$ and $V_Q=8$, the same as IBM's real result below. to double the useful qubits you need about **4× lower** error

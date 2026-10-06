@@ -1,5 +1,5 @@
 #dirac_notation #tensor_product #projector #cheat_sheet
-every way of sticking 2 of $|0\rangle,|1\rangle,\langle0|,\langle1|$ together: all **16** combinations. builds on the [[Course 3/Week 1/Dirac notation|Dirac notation cheat sheet]] and [[Projectors]]
+every way of sticking 2 of $|0\rangle,|1\rangle,\langle0|,\langle1|$ together: all **16** combinations. builds on the [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]] and [[Projectors]]
 ## the rule: what you get depends on the order
 remember a ket is a **column** and a bra is a **row**
 
@@ -87,4 +87,4 @@ $$
 
 (checked numerically)
 
-see also [[Course 3/Week 1/Dirac notation|Dirac notation cheat sheet]], [[Projectors]], [[Tensor product]], [[Math/Dirac notation]]
+see also [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]], [[Projectors]], [[Tensor product]], [[Math/Dirac notation]]

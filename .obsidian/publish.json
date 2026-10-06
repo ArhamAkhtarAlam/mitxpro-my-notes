@@ -2,5 +2,7 @@
   "siteId": "12f717a93ab1dc87b65ff12be24f1ba6",
   "host": "publish-01.obsidian.md",
   "included": [],
-  "excluded": []
+  "excluded": [
+    "Private (not on GitHub)"
+  ]
 }
