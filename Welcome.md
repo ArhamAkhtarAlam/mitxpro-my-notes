@@ -9,6 +9,7 @@ these are my notes from three **MIT xPRO** quantum computing courses. I wrote th
 > - **Course 3** → *Practical Realities of Quantum Computation and Quantum Communication*: density matrices, noise, quantum channels, information theory, Bell and the CHSH game
 > - **Math** → all the maths you need for the rest
 > - **Extra** → good-to-know topics that aren't in the courses
+> - **Quantum Computation and Quantum Information** → notes from the textbook by Nielsen and Chuang
 
 ## where to start
 pick whatever sounds interesting, every note links to the ones it builds on
@@ -51,6 +52,8 @@ flowchart TD
 - **week 4** → [[Benchmarking quantum systems]] (tomography and randomized benchmarking)
 ### Math
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace
+### Quantum Computation and Quantum Information (the textbook)
+- [[Quantum Computation and Quantum Information]] → chapter 2: [[Ensembles of quantum states]], [[General properties of the density operator]], [[Reduced density operator]], [[Schmidt decomposition and purifications]], [[EPR and the Bell inequality]], [[Chapter 2 exercises]] (formulas: [[Chapter 2 formulas]])
 ### Extra (not in the courses)
 - [[Extra]] → things the courses skip but are good to know: the no-cloning theorem, more noise channels, superdense coding, GHZ states, tensor networks, purification...
 ## tips for reading

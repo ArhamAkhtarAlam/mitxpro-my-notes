@@ -37,6 +37,26 @@ an IBM **5 qubit** superconducting chip. each qubit has a microwave resonator fo
 (the ideal outcomes for the course's example, $k=11$, checked numerically. classical: 4 outcomes at $\frac14$ each, which on their own say little. quantum: half the time you get the key directly)
 ### classical learner
 measure everything after each query and collect the (classical) results, then find the $k$ that fits the data best. even though the oracle is quantum, the **learning is completely classical**
+> [!example] the classical learner, step by step ($n=3$, secret $k=101$)
+> **1. collect queries** (data $D$, parity $a$). each one is a linear equation for the bits of $k$, mod 2
+> $$
+> \begin{aligned}
+> D=110,\ a=1:&\quad k_1+k_2=1\\
+> D=011,\ a=1:&\quad k_2+k_3=1\\
+> D=111,\ a=0:&\quad k_1+k_2+k_3=0
+> \end{aligned}
+> $$
+> **2. Gaussian elimination, but mod 2** ($1+1=0$, and subtracting = adding)
+> $$
+> \begin{aligned}
+> \text{(3rd)}-\text{(1st)}:&\quad k_3=0-1=1\pmod2\\
+> \text{into the 2nd}:&\quad k_2=1-1=0\\
+> \text{into the 1st}:&\quad k_1=1-0=1
+> \end{aligned}
+> $$
+> so $k=101$ ✅ (check: $110\cdot101=1$, $011\cdot101=1$, $111\cdot101=1+1=0$). without noise, $n$ good queries are enough
+>
+> **3. now add noise**: say the last answer gets flipped to $a=1$. the same steps give $k_3=0$, $k_2=1$, $k_1=0$, so $k=010$, **wrong**, and nothing tells you which answer was the bad one. the classical fix is lots of extra queries and finding the $k$ that agrees with the **most** of them, which means checking up to all $2^n$ possible keys. that's why LPN is hard classically, while the quantum learner just reads $k$ off and majority votes each bit
 ### quantum learner
 before measuring, do **one more** [[Hadamard Gate|Hadamard]] on **every** qubit. the state becomes entangled between $a$ and the data qubits
 $$
@@ -62,5 +82,17 @@ flowchart LR
 ```
 > [!important] why it matters
 > a real experimental **quantum advantage** with today's noisy hardware, and the advantage gets **bigger** as the problem gets harder, either with a bigger oracle or more noise. the quantum learner is naturally robust because it just throws away the useless runs and majority votes on the rest
+
+## further reading
+> [!quote]- Ristè et al. 2017: Demonstration of quantum advantage in machine learning
+> *npj Quantum Information* **3**, 16 (2017), https://doi.org/10.1038/s41534-017-0017-3 ([arXiv:1512.06069](https://arxiv.org/abs/1512.06069)). the paper behind the experiment in this lecture (Raytheon BBN + IBM)
+> - a **5 qubit superconducting** processor runs the oracle $f(D,k)=D\cdot k\bmod2$ on random inputs, with oracles of $n=2$, 3 and 4 data qubits
+> - classical (C) and quantum (Q) learners get the **same** oracle. C just reads the outputs, Q applies Hadamards before measuring
+> - Q needs far fewer queries for the same error, and the gap **grows** with more noise and with bigger $n$: at $n=3$ the best classical solver needs almost **10×** more queries
+> - a trick that helped both: use the **analog** measurement signals instead of rounding each one to 0/1, then average before deciding each bit
+> - in theory: Q needs a **logarithmic** number of queries and linear runtime, C needs a **linear** number of queries and nearly exponential runtime
+> - takeaway: a quantum advantage can appear in today's noisy hardware, before full error correction
+>
+> ![[Riste 2017 - Demonstration of quantum advantage in machine learning.pdf#height=500]]
 
 see also [[NISQ]], [[Quantum volume]], [[Quantum machine learning]]

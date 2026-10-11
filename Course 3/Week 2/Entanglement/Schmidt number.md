@@ -20,7 +20,7 @@ $$
 multiplying it out mixes up the A and B labels, which is messy. so **group all of Alice's qubits together and all of Bob's together**
 ```mermaid
 flowchart TD
-    M["multiply out:<br/>A and B labels mixed up"] --> G["regroup:<br/>(A1 A2)(B1 B2)"] --> R["½ ( |00⟩|00⟩ + |01⟩|01⟩<br/>+ |10⟩|10⟩ + |11⟩|11⟩ )"] --> X["= ½ Σ |x⟩|x⟩<br/>x = 0, 1, 2, 3"]
+    M["multiply out:<br/>A and B labels mixed up"] --> G["regroup:<br/>(A1 A2)(B1 B2)"] --> R["½ ( |00⟩|00⟩ + |01⟩|01⟩ +<br/>|10⟩|10⟩ + |11⟩|11⟩ )"] --> X["= ½ Σ |x⟩|x⟩<br/>x = 0, 1, 2, 3"]
 ```
 $$
 \frac12\big(|00\rangle_A|00\rangle_B+|01\rangle_A|01\rangle_B+|10\rangle_A|10\rangle_B+|11\rangle_A|11\rangle_B\big)=\frac12\sum_{x=0}^{3}|x\rangle_A|x\rangle_B

@@ -36,6 +36,29 @@ $$
 | numbers to describe 80 electrons | $10^{160}$ |
 
 that's more numbers than there are particles in the universe, **squared**
+### how a classical computer simulates qubits, step by step
+store all $2^n$ amplitudes, and multiply by each gate's matrix. making a Bell state on 2 qubits:
+$$
+\begin{aligned}
+&\text{start }|00\rangle:&&\vec\psi=(1,0,0,0)\\
+&H\text{ on qubit 1 }(H\otimes I):&&\vec\psi=\tfrac1{\sqrt2}(1,0,1,0)\qquad\text{(}|00\rangle\text{ and }|10\rangle)\\
+&\text{CNOT (swaps the }|10\rangle,|11\rangle\text{ entries)}:&&\vec\psi=\tfrac1{\sqrt2}(1,0,0,1)=\tfrac{|00\rangle+|11\rangle}{\sqrt2}\ ✅
+\end{aligned}
+$$
+the $H\otimes I$ step as a full matrix
+$$
+\frac1{\sqrt2}\begin{bmatrix}1&0&1&0\\0&1&0&1\\1&0&-1&0\\0&1&0&-1\end{bmatrix}\begin{bmatrix}1\\0\\0\\0\end{bmatrix}=\frac1{\sqrt2}\begin{bmatrix}1\\0\\1\\0\end{bmatrix}
+$$
+**the cost**: every gate has to update **all** $2^n$ amplitudes, and storing them takes $16\times2^n$ bytes
+
+| qubits | amplitudes | memory |
+|---|---|---|
+| 2 | 4 | 64 bytes |
+| 30 | $\approx10^9$ | 17 GB (a big laptop) |
+| 50 | $\approx10^{15}$ | 18 PB (the biggest supercomputers) |
+| 80 | $\approx10^{24}$ | more than all the computer memory on Earth |
+
+a quantum computer just **is** the state: 80 qubits hold all $2^{80}$ amplitudes for free
 ### what classical methods can do
 
 | method | how big | catch |

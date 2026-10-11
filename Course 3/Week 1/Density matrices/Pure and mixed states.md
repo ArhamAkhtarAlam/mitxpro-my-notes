@@ -1,7 +1,7 @@
 #pure_state #mixed_state #density_matrix #bloch_sphere
 the 2 kinds of quantum state: ones we know **completely** (pure), and ones with some **classical uncertainty** mixed in (mixed). part of [[Density matrix]]
 ## the idea
-- **pure state**: you know **exactly** which quantum state it is. it can be written as a single ket $|\psi\rangle$ (even a superposition like $|+\rangle$ is pure)
+- **[[Pure state|pure state]]**: you know **exactly** which quantum state it is. it can be written as a single ket $|\psi\rangle$ (even a superposition like $|+\rangle$ is pure)
 - **mixed state**: it's one of several states, and you only know the **probabilities** (like a coin flip deciding which state was made). it can't be written as a single ket, only as a [[Density matrix|density matrix]]
 $$
 \text{pure: }\rho=|\psi\rangle\langle\psi|\qquad\qquad\text{mixed: }\rho=\sum_kp_k|\psi_k\rangle\langle\psi_k|\ \text{ (more than one state)}

@@ -4,7 +4,7 @@
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
-  "showOrphans": true,
+  "showOrphans": false,
   "collapse-color-groups": false,
   "colorGroups": [
     {
@@ -97,6 +97,13 @@
         "a": 1,
         "rgb": 15557798
       }
+    },
+    {
+      "query": "path:\"Quantum Computation and Quantum Information\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16114083
+      }
     }
   ],
   "collapse-display": false,
@@ -110,5 +117,5 @@
   "linkStrength": 1,
   "linkDistance": 30,
   "scale": 0.6614246902705242,
-  "close": true
+  "close": false
 }

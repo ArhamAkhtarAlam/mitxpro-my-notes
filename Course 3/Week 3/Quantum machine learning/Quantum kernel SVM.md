@@ -51,6 +51,26 @@ the kernel: bright = very similar states. the 2 bright blocks show points of the
 > |\langle0\ldots0|U(x)^\dagger U(y)|0\ldots0\rangle|^2=|\langle\phi(x)|\phi(y)\rangle|^2
 > $$
 > repeat many times to estimate it
+## the classical version, step by step
+### a classical kernel
+the usual classical choice is the **Gaussian (RBF) kernel**, $K(x,y)=e^{-(x-y)^2/2}$: 1 for the same point, falling towards 0 as points get further apart. for 3 data points $x=0,\,1,\,3$
+$$
+\begin{aligned}
+K(0,1)&=e^{-1/2}\approx0.607\qquad K(0,3)=e^{-9/2}\approx0.011\qquad K(1,3)=e^{-2}\approx0.135\\
+K&=\begin{bmatrix}1&0.607&0.011\\0.607&1&0.135\\0.011&0.135&1\end{bmatrix}
+\end{aligned}
+$$
+just a formula per pair, done in a microsecond. this matrix goes to the SVM exactly like the quantum one does
+### simulating the quantum kernel classically
+the 1 qubit feature map $|\phi(x)\rangle=\cos\frac x2|0\rangle+\sin\frac x2|1\rangle$ (an $R_y(x)$ gate), for $x=0$ and $y=0.5$
+$$
+\begin{aligned}
+&\text{1. write the states as vectors:}&&|\phi(0)\rangle=\begin{bmatrix}1\\0\end{bmatrix}\qquad|\phi(0.5)\rangle=\begin{bmatrix}\cos0.25\\\sin0.25\end{bmatrix}=\begin{bmatrix}0.969\\0.247\end{bmatrix}\\
+&\text{2. inner product:}&&\langle\phi(0)|\phi(0.5)\rangle=1\times0.969+0\times0.247=0.969\\
+&\text{3. square it:}&&K=0.969^2\approx0.939
+\end{aligned}
+$$
+easy for 1 qubit (2 numbers per state). but for $n$ qubits each state is $2^n$ numbers, and with entangling gates there's no shortcut, so at 50+ qubits a classical computer can't even store the states. ==that's the only place a quantum kernel can win: when the classical computer **can't** do steps 1–3==
 ## the honest bit
 > [!warning] just a toy example
 > ==the data set was made up and has no connection to real life data.== the point is to show the idea works on real quantum hardware. whether it beats classical methods on **real** problems is still an open question (see [[NISQ#where people are looking]])

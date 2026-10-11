@@ -31,8 +31,8 @@ so you **can't** just swap HHL in wherever a classical solver was used. you have
 (for simplicity assume $A$ is **Hermitian**, the general case also works but wasn't covered)
 ```mermaid
 flowchart TD
-    HS["1. Hamiltonian simulation<br/>apply e^(iAt)<br/>cost grows with ‖A‖ and t"] --> PE["2. phase estimation<br/>read off eigenvalues λ<br/>accuracy ≈ 1/t"]
-    PE --> F["3. filtering<br/>measure + keep only some results<br/>(linear, but not unitary)"]
+    HS["① Hamiltonian simulation<br/>apply e^(iAt)<br/>cost grows with ‖A‖ and t"] --> PE["② phase estimation<br/>read off eigenvalues λ<br/>accuracy ≈ 1/t"]
+    PE --> F["③ filtering<br/>measure + keep only some results<br/>(linear, but not unitary)"]
 ```
 1. **[[Hamiltonian simulation]]**: apply $e^{iAt}$. works for any matrix given in the row-by-row way above, not just the Hamiltonians of real physical systems. time grows like $\|A\|\,t$
 2. **[[Quantum Phase Estimation|phase estimation]]**: if something gives a phase $e^{i\lambda t}$, estimate $\lambda$. accuracy $\approx\frac1t$, like **frequency–time uncertainty**: watch something for time $t$ and you can only tell frequencies apart to about $\frac1t$ (same idea as the QFT's phase resolution, see [[Quantum Fourier Transform#Phase Resolution]])
@@ -65,6 +65,31 @@ flowchart TD
 ```
 > [!tip] not just inverting
 > once each eigenvector has its eigenvalue attached, you could multiply by **any** function of $\lambda$, not just $\frac1\lambda$. other work uses this for other useful functions of matrices
+## the same problem done classically
+the 2×2 example from [[Week 3 formulas#8. the HHL algorithm]], solved the normal way, to compare
+$$
+A=\begin{bmatrix}1&\frac12\\\frac12&1\end{bmatrix}\qquad\vec b=\begin{bmatrix}1\\0\end{bmatrix}
+$$
+**way 1: the inverse** (for a $2\times2$: swap the diagonal, negate the rest, divide by the determinant)
+$$
+\begin{aligned}
+\det A&=1\cdot1-\tfrac12\cdot\tfrac12=\tfrac34\\
+A^{-1}&=\frac1{3/4}\begin{bmatrix}1&-\frac12\\-\frac12&1\end{bmatrix}=\begin{bmatrix}\frac43&-\frac23\\-\frac23&\frac43\end{bmatrix}\\
+\vec x&=A^{-1}\vec b=\begin{bmatrix}\frac43\\-\frac23\end{bmatrix}
+\end{aligned}
+$$
+**way 2: exactly HHL's steps, but on paper** (eigenvalues $\frac32$ and $\frac12$, eigenvectors $\vec a_1=\frac{(1,1)}{\sqrt2}$, $\vec a_2=\frac{(1,-1)}{\sqrt2}$)
+$$
+\begin{aligned}
+&\text{1. rewrite }\vec b:&&\vec b=\tfrac1{\sqrt2}\vec a_1+\tfrac1{\sqrt2}\vec a_2\\
+&\text{2. find the eigenvalues:}&&\lambda_1=\tfrac32,\ \lambda_2=\tfrac12\quad\text{(HHL: phase estimation)}\\
+&\text{3. divide each part by its }\lambda:&&\vec x=\tfrac1{\sqrt2}\cdot\tfrac23\,\vec a_1+\tfrac1{\sqrt2}\cdot2\,\vec a_2\quad\text{(HHL: the filter)}\\
+&\text{4. add up:}&&\vec x=\tfrac13\begin{bmatrix}1\\1\end{bmatrix}+\begin{bmatrix}1\\-1\end{bmatrix}=\begin{bmatrix}\frac43\\-\frac23\end{bmatrix}\ ✅
+\end{aligned}
+$$
+> [!important] what each one gives you
+> - **classical**: the actual numbers $x_1=\frac43$, $x_2=-\frac23$. but finding eigenvalues or inverting costs about $N^3$
+> - **HHL**: the **state** $|x\rangle=\frac{2|0\rangle-|1\rangle}{\sqrt5}$ (normalised, so the overall size is lost). measuring it gives $0$ with chance $\frac45$ and $1$ with chance $\frac15$, so to read every entry you'd need many runs, which kills the speed up. ==it's only worth it if you need a **property** of $\vec x$, not $\vec x$ itself==
 ## things to watch out for (extra, not in the lecture)
 > [!warning]- the fine print
 > - **the filter doesn't always work**: strictly, the **amplitude** gets the $\frac1{\lambda_i}$ (so the chance goes like $\frac1{\lambda_i^2}$), and in the worst case the success chance is only about $\frac1{\kappa^2}$, so you repeat it or use a trick called amplitude amplification. that's part of why $\kappa$ still matters a lot (in my $4\times4$ check it worked 35% of the time)

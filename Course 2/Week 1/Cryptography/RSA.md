@@ -3,7 +3,7 @@ the most famous **public key** cryptosystem (Rivest, Shamir, Adleman, 1978). any
 ## the 4 steps
 ```mermaid
 flowchart TD
-    G["1. Alice makes keys<br/>public (e, N), private (d, N)"] --> P["2. Alice publishes (e, N)"] --> E["3. Bob encrypts<br/>c = mᵉ mod N"] --> D["4. Alice decrypts<br/>m = cᵈ mod N"]
+    G["① Alice makes keys<br/>public (e, N), private (d, N)"] --> P["② Alice publishes (e, N)"] --> E["③ Bob encrypts<br/>c = mᵉ mod N"] --> D["④ Alice decrypts<br/>m = cᵈ mod N"]
 ```
 ## step 1: making the keys
 it's all built on [[Modular Exponentiation|modular exponentiation]] $f(x)=a^x\bmod N$, which is **periodic** with some period $r$ (finding it is [[Order finding algorithm|order finding]])

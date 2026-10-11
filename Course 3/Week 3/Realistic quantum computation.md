@@ -21,6 +21,8 @@ flowchart TD
 - [[Linear systems of equations]] → solving A x = b classically, sparsity and the condition number (setup for [[HHL algorithm|HHL]])
 - [[HHL algorithm]] → the quantum linear system solver: log N instead of N, but with a very different input and output
 
+all the formulas, worked out step by step: [[Week 3 formulas]]
+
 see also [[Noise Processes]], [[Quantum channels]], [[Quantum Communication]]
 
 previous week: [[Quantum Communication]] · next week: [[Benchmarking quantum systems]]

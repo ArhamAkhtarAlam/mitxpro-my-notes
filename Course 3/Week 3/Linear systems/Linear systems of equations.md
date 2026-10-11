@@ -62,12 +62,63 @@ the level sets are ellipses, and $\kappa$ is how **stretched** they are (longest
 | **total** | $O\!\left(Ns\,\kappa\log\frac1\epsilon\right)$ |
 
 $\log\frac1\epsilon$ isn't bad, but it grows **linearly with $\kappa$**, which is why $\kappa$ measures how hard the problem is
+### worked example: conjugate gradient, step by step
+**conjugate gradient** is the smart version of gradient descent that real solvers use: each step goes downhill, but in a direction that doesn't undo the earlier steps, so an $N\times N$ system is solved in at most $N$ steps
+$$
+A=\begin{bmatrix}4&1\\1&3\end{bmatrix}\qquad\vec b=\begin{bmatrix}1\\2\end{bmatrix}\qquad\text{start: }\vec x_0=\begin{bmatrix}0\\0\end{bmatrix}
+$$
+**the recipe** (repeat): $\vec r$ = how wrong you are ($\vec b-A\vec x$), $\vec p$ = the direction to walk, $\alpha$ = how far
+$$
+\alpha=\frac{\vec r\cdot\vec r}{\vec p\cdot A\vec p}\qquad\vec x\to\vec x+\alpha\vec p\qquad\vec r\to\vec r-\alpha A\vec p\qquad\vec p\to\vec r_{\text{new}}+\frac{\vec r_{\text{new}}\cdot\vec r_{\text{new}}}{\vec r\cdot\vec r}\,\vec p
+$$
+**step 1**
+$$
+\begin{aligned}
+\vec r_0&=\vec b-A\vec x_0=\begin{bmatrix}1\\2\end{bmatrix}=\vec p_0&&\text{(first direction = straight downhill)}\\
+A\vec p_0&=\begin{bmatrix}6\\7\end{bmatrix}\qquad\alpha_0=\frac{1+4}{6+14}=0.25\\
+\vec x_1&=\begin{bmatrix}0.25\\0.5\end{bmatrix}\qquad\vec r_1=\begin{bmatrix}1\\2\end{bmatrix}-0.25\begin{bmatrix}6\\7\end{bmatrix}=\begin{bmatrix}-0.5\\0.25\end{bmatrix}
+\end{aligned}
+$$
+**step 2**
+$$
+\begin{aligned}
+\vec p_1&=\vec r_1+\frac{0.3125}{5}\vec p_0=\begin{bmatrix}-0.4375\\0.375\end{bmatrix}\qquad A\vec p_1=\begin{bmatrix}-1.375\\0.6875\end{bmatrix}\\
+\alpha_1&=\frac{0.3125}{0.8594}\approx0.364\\
+\vec x_2&=\begin{bmatrix}0.25\\0.5\end{bmatrix}+0.364\begin{bmatrix}-0.4375\\0.375\end{bmatrix}=\begin{bmatrix}0.0909\\0.6364\end{bmatrix}=\begin{bmatrix}\frac1{11}\\\frac7{11}\end{bmatrix}\qquad\vec r_2=\vec0\ ✅
+\end{aligned}
+$$
+exact after **2 steps** for a $2\times2$ (checked numerically). each step is just one multiplication by $A$, which is cheap when $A$ is sparse. with rounding errors and huge $N$ you stop early, after about $\sqrt\kappa\log\frac1\epsilon$ steps
 ## classical algorithm 2: direct solvers
 the method from school: **Gaussian elimination** (or LU decomposition). better with $\kappa$, but much worse with size
 $$
 O(N^3)
 $$
 great for small systems, but way too slow for huge ones, so big problems use iterative solvers
+### worked example: Gaussian elimination, step by step
+$$
+\begin{aligned}
+2x+y-z&=8&&(R_1)\\
+-3x-y+2z&=-11&&(R_2)\\
+-2x+y+2z&=-3&&(R_3)
+\end{aligned}
+$$
+**forward: clear out $x$, then $y$** (add multiples of one row to another)
+$$
+\begin{aligned}
+R_2+\tfrac32R_1:&\quad0.5y+0.5z=1\\
+R_3+R_1:&\quad2y+z=5\\
+R_3-4R_2:&\quad-z=1
+\end{aligned}
+$$
+**backwards: read off from the bottom up**
+$$
+\begin{aligned}
+-z=1&\ \Rightarrow\ z=-1\\
+0.5y+0.5(-1)=1&\ \Rightarrow\ y=3\\
+2x+3-(-1)=8&\ \Rightarrow\ x=2
+\end{aligned}
+$$
+check in $R_3$: $-4+3-2=-3$ ✅. why $N^3$: clearing each of the $N$ columns touches about $N\times N$ numbers below it, so about $\frac{N^3}3$ operations. $N=3$ is nothing, but $N=10^6$ is $3\times10^{17}$
 ## comparing
 
 | | time | good for |

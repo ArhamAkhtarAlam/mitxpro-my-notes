@@ -9,6 +9,7 @@ flowchart TD
 ```
 ## density matrices
 - [[Density matrix]] → the lecture: why we need classical statistics, mixtures, unravelings, [[Purification|purification]]
+- [[Pure state]] → a state you know completely: one ket, $\rho=|\psi\rangle\langle\psi|$, on the Bloch sphere's surface
 - [[Pure and mixed states]] → the difference, and how to tell them apart ($\text{tr}(\rho^2)$, the [[Bloch sphere]])
 - [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]] → the course's matrix cheat sheet
 - [[Kets and bras combined]] → all 16 combinations of $|0\rangle,|1\rangle,\langle0|,\langle1|$
@@ -26,5 +27,6 @@ flowchart TD
 ## also this week
 - [[Quantum Error Correction]] → the intro (more in later courses)
 - [[Week 1 formulas]] → every formula from this week on one page
+- [[Week 1 examples]] → every worked example from this week on one page
 
 next week: [[Quantum Communication]]

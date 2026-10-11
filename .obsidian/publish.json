@@ -3,6 +3,6 @@
   "host": "publish-01.obsidian.md",
   "included": [],
   "excluded": [
-    "Private (not on GitHub)"
+    "Private"
   ]
 }
