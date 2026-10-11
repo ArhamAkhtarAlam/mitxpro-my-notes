@@ -9,6 +9,7 @@ using a quantum computer to simulate **other quantum systems** (molecules, mater
 > Feynman said there's "plenty of room at the bottom" (lots of space at the nano scale for qubits), but there **isn't much room at the top**: every qubit needs wires and electronics, and fitting all of those in gets really hard, even at ~100 qubits
 >
 > so a universal, error-corrected quantum computer is still **several orders of magnitude** away in qubit count and lifetime. meanwhile, people look for algorithms that work on NISQ hardware
+
 ## the idea
 ```mermaid
 flowchart TD
@@ -37,18 +38,28 @@ $$
 
 that's more numbers than there are particles in the universe, **squared**
 ### how a classical computer simulates qubits, step by step
-store all $2^n$ amplitudes, and multiply by each gate's matrix. making a Bell state on 2 qubits:
+store all $2^n$ amplitudes in a list, and multiply by each gate's matrix. making a Bell state on 2 qubits:
+
+**1. the starting list.** 2 qubits have 4 basis states, always in the order $|00\rangle,|01\rangle,|10\rangle,|11\rangle$. starting in $|00\rangle$ means all the amplitude is on the first one
 $$
-\begin{aligned}
-&\text{start }|00\rangle:&&\vec\psi=(1,0,0,0)\\
-&H\text{ on qubit 1 }(H\otimes I):&&\vec\psi=\tfrac1{\sqrt2}(1,0,1,0)\qquad\text{(}|00\rangle\text{ and }|10\rangle)\\
-&\text{CNOT (swaps the }|10\rangle,|11\rangle\text{ entries)}:&&\vec\psi=\tfrac1{\sqrt2}(1,0,0,1)=\tfrac{|00\rangle+|11\rangle}{\sqrt2}\ ✅
-\end{aligned}
+\vec\psi=(1,0,0,0)
 $$
-the $H\otimes I$ step as a full matrix
+**2. build the matrix for "$H$ on qubit 1, nothing on qubit 2"**: that's $H\otimes I$ ([[Tensor product]]: each entry of $H$ times a whole copy of $I$)
 $$
-\frac1{\sqrt2}\begin{bmatrix}1&0&1&0\\0&1&0&1\\1&0&-1&0\\0&1&0&-1\end{bmatrix}\begin{bmatrix}1\\0\\0\\0\end{bmatrix}=\frac1{\sqrt2}\begin{bmatrix}1\\0\\1\\0\end{bmatrix}
+H\otimes I=\frac1{\sqrt2}\begin{bmatrix}1\cdot I&1\cdot I\\1\cdot I&-1\cdot I\end{bmatrix}=\frac1{\sqrt2}\begin{bmatrix}1&0&1&0\\0&1&0&1\\1&0&-1&0\\0&1&0&-1\end{bmatrix}
 $$
+**3. multiply** (each new entry = a row of the matrix times the list; only the first column matters because the list is $(1,0,0,0)$)
+$$
+\frac1{\sqrt2}\begin{bmatrix}1&0&1&0\\0&1&0&1\\1&0&-1&0\\0&1&0&-1\end{bmatrix}\begin{bmatrix}1\\0\\0\\0\end{bmatrix}=\frac1{\sqrt2}\begin{bmatrix}1\\0\\1\\0\end{bmatrix}\qquad\text{ie. }\tfrac{|00\rangle+|10\rangle}{\sqrt2}
+$$
+(qubit 1 is now in $|+\rangle$, qubit 2 still $|0\rangle$)
+
+**4. CNOT** (qubit 1 controls, qubit 2 flips): $|10\rangle\to|11\rangle$ and $|11\rangle\to|10\rangle$, while $|00\rangle,|01\rangle$ stay. in the list that just **swaps the 3rd and 4th entries**
+$$
+\tfrac1{\sqrt2}(1,0,\underbrace{1,0}_{\text{swap}})\ \to\ \tfrac1{\sqrt2}(1,0,0,1)=\frac{|00\rangle+|11\rangle}{\sqrt2}\ ✅\ \text{a Bell state}
+$$
+**5. measuring**: the chance of each outcome is its amplitude squared: $|00\rangle$ and $|11\rangle$ each $\frac12$, the others 0
+
 **the cost**: every gate has to update **all** $2^n$ amplitudes, and storing them takes $16\times2^n$ bytes
 
 | qubits | amplitudes | memory |

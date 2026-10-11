@@ -15,31 +15,63 @@ lots of cuts can separate the training set. a **support vector machine** (SVM) p
 ![[SVM_margin.png]]
 > [!important] support vectors
 > ==the points **closest** to the cut are the hardest to classify, and they're the only ones that decide where the cut goes.== they're called the **support vectors** (that's where the name comes from). find them and you've found the cut
+
 ### worked example: training an SVM by hand
 class $-1$: $(0,0),(1,0),(0,1)$. class $+1$: $(2,2),(3,2),(2,3)$
 
-**1. find the closest points across the gap**: $(1,0)$ and $(0,1)$ (with $x_1+x_2=1$) and $(2,2)$ (with $x_1+x_2=4$). these will be the support vectors
+**1. find the closest points across the gap.** both groups sit along the diagonal, so measure each point by $x_1+x_2$ (how far along the diagonal it is)
 
-**2. guess the direction**: the closest points are lined up along $x_1+x_2$, so $\vec w=(a,a)$
+| point | class | $x_1+x_2$ |
+|---|---|---|
+| $(0,0)$ | $-1$ | 0 |
+| $(1,0)$ | $-1$ | **1** |
+| $(0,1)$ | $-1$ | **1** |
+| $(2,2)$ | $+1$ | **4** |
+| $(3,2)$ | $+1$ | 5 |
+| $(2,3)$ | $+1$ | 5 |
 
-**3. put the support vectors exactly on the margin** ($\vec w\cdot\vec x+b=\pm1$)
+the $-1$ class reaches up to 1, the $+1$ class starts at 4. the points at the edges, $(1,0)$, $(0,1)$ and $(2,2)$, are the **support vectors**
+
+**2. guess the direction of $\vec w$.** $\vec w$ points **across** the gap (it's perpendicular to the cut). the gap is along the diagonal, so $\vec w=(a,a)$ for some number $a$. then $\vec w\cdot\vec x=a(x_1+x_2)$
+
+**3. put the support vectors exactly on the margin lines.** the SVM rule is $\vec w\cdot\vec x+b=+1$ for the closest $+1$ points and $-1$ for the closest $-1$ points
 $$
 \begin{aligned}
-(2,2):&\quad4a+b=+1\\
-(1,0):&\quad a+b=-1\\
-\text{subtract}:&\quad3a=2\ \Rightarrow\ a=\tfrac23,\ b=-\tfrac53
+(2,2):&\quad a(2+2)+b=+1\ \Rightarrow\ 4a+b=1\\
+(1,0):&\quad a(1+0)+b=-1\ \Rightarrow\ a+b=-1\\
+\text{subtract the 2nd from the 1st}:&\quad3a=2\ \Rightarrow\ a=\tfrac23\\
+\text{put back into }a+b=-1:&\quad b=-1-\tfrac23=-\tfrac53
 \end{aligned}
 $$
-so the cut is $\frac23x_1+\frac23x_2-\frac53=0$, ie. the line $x_1+x_2=2.5$, halfway across the gap
+so $\vec w=(\frac23,\frac23)$ and $b=-\frac53$. the cut is where $\vec w\cdot\vec x+b=0$: $\frac23(x_1+x_2)=\frac53$, ie. the line $x_1+x_2=2.5$, exactly halfway between 1 and 4
 
-**4. check every point** has $y_i(\vec w\cdot\vec x_i+b)\geq1$: $(0,0)\to\frac53$, $(1,0),(0,1),(2,2)\to1$ (the support vectors, exactly on the margin), $(3,2),(2,3)\to\frac53$ ✅
+**4. check every point** obeys $y_i(\vec w\cdot\vec x_i+b)\geq1$ (right side of the cut, and not inside the margin)
+$$
+\begin{aligned}
+(0,0),\ y=-1:&\quad-1\cdot\big(\tfrac23\cdot0-\tfrac53\big)=\tfrac53\geq1\ ✅\\
+(1,0),(0,1),\ y=-1:&\quad-1\cdot\big(\tfrac23\cdot1-\tfrac53\big)=-1\cdot(-1)=1\ ✅\ \text{(exactly on the margin)}\\
+(2,2),\ y=+1:&\quad\tfrac23\cdot4-\tfrac53=\tfrac83-\tfrac53=1\ ✅\ \text{(exactly on the margin)}\\
+(3,2),(2,3),\ y=+1:&\quad\tfrac23\cdot5-\tfrac53=\tfrac{10}3-\tfrac53=\tfrac53\ ✅
+\end{aligned}
+$$
+**5. the margin**
+$$
+\|\vec w\|=\sqrt{\big(\tfrac23\big)^2+\big(\tfrac23\big)^2}=\tfrac23\sqrt2\qquad\text{margin}=\frac2{\|\vec w\|}=\frac2{\frac23\sqrt2}=\frac3{\sqrt2}\approx2.12
+$$
+sanity check: the distance between the parallel lines $x_1+x_2=1$ and $x_1+x_2=4$ is $\frac{4-1}{\sqrt{1^2+1^2}}=\frac3{\sqrt2}$ ✅
 
-**5. the margin**: $\frac2{\|\vec w\|}=\frac2{\frac23\sqrt2}=\frac3{\sqrt2}\approx2.12$, the same as the distance between the lines $x_1+x_2=1$ and $x_1+x_2=4$ ✅
-
-**6. classify new points**: $(2,0)\to\frac43-\frac53=-\frac13<0$, class $-1$. $(2,1)\to2-\frac53=+\frac13>0$, class $+1$
-
+**6. classify new points**: work out $\vec w\cdot\vec x+b$ and look at the sign
+$$
+(2,0):\ \tfrac23\cdot2-\tfrac53=-\tfrac13<0\ \to\ \text{class }-1\qquad(2,1):\ \tfrac23\cdot3-\tfrac53=+\tfrac13>0\ \to\ \text{class }+1
+$$
 > [!note] the same answer in kernel form
-> $\vec w=\sum_i\alpha_iy_i\vec x_i$ with only the support vectors: $\alpha=\frac29$ for $(1,0)$ and $(0,1)$, $\frac49$ for $(2,2)$. check: $-\frac29(1,0)-\frac29(0,1)+\frac49(2,2)=(\frac23,\frac23)$ ✅. so $f(\vec x)=\text{sign}\big(\sum_i\alpha_iy_i\,\vec x_i\cdot\vec x+b\big)$, and swapping $\vec x_i\cdot\vec x$ for a kernel $K(\vec x_i,\vec x)$ is the whole kernel trick. real software finds the $\alpha_i$ by solving this optimisation iteratively (eg. the SMO algorithm), since by hand only works for tiny examples (all checked numerically)
+> the theory says $\vec w=\sum_i\alpha_iy_i\vec x_i$, with $\alpha_i\neq0$ only for support vectors, and $\sum_i\alpha_iy_i=0$
+> 1. by symmetry $(1,0)$ and $(0,1)$ get the same $\alpha$; call it $\alpha$, and call $(2,2)$'s one $\beta$
+> 2. $\sum\alpha_iy_i=0$: $-\alpha-\alpha+\beta=0$, so $\beta=2\alpha$
+> 3. match $\vec w$: $-\alpha(1,0)-\alpha(0,1)+\beta(2,2)=(-\alpha+2\beta,\ -\alpha+2\beta)=(3\alpha,3\alpha)$, which must be $(\frac23,\frac23)$, so $\alpha=\frac29$ and $\beta=\frac49$
+>
+> so $f(\vec x)=\text{sign}\big(\sum_i\alpha_iy_i\,\vec x_i\cdot\vec x+b\big)$, and swapping $\vec x_i\cdot\vec x$ for a kernel $K(\vec x_i,\vec x)$ is the whole kernel trick. real software finds the $\alpha_i$ by solving this optimisation iteratively (eg. the SMO algorithm), since by hand only works for tiny examples (all checked numerically)
+
 ## when a flat cut doesn't work: feature maps
 some data can't be split with a flat cut. the trick: **map** the data into more dimensions until it can be
 ![[Feature_map_1D_to_2D.png]]

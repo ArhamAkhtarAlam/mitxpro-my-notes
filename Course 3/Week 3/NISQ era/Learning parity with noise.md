@@ -38,25 +38,47 @@ an IBM **5 qubit** superconducting chip. each qubit has a microwave resonator fo
 ### classical learner
 measure everything after each query and collect the (classical) results, then find the $k$ that fits the data best. even though the oracle is quantum, the **learning is completely classical**
 > [!example] the classical learner, step by step ($n=3$, secret $k=101$)
-> **1. collect queries** (data $D$, parity $a$). each one is a linear equation for the bits of $k$, mod 2
-> $$
-> \begin{aligned}
-> D=110,\ a=1:&\quad k_1+k_2=1\\
-> D=011,\ a=1:&\quad k_2+k_3=1\\
-> D=111,\ a=0:&\quad k_1+k_2+k_3=0
-> \end{aligned}
-> $$
-> **2. Gaussian elimination, but mod 2** ($1+1=0$, and subtracting = adding)
-> $$
-> \begin{aligned}
-> \text{(3rd)}-\text{(1st)}:&\quad k_3=0-1=1\pmod2\\
-> \text{into the 2nd}:&\quad k_2=1-1=0\\
-> \text{into the 1st}:&\quad k_1=1-0=1
-> \end{aligned}
-> $$
-> so $k=101$ ✅ (check: $110\cdot101=1$, $011\cdot101=1$, $111\cdot101=1+1=0$). without noise, $n$ good queries are enough
+> **the mod 2 rules** (only 0 and 1 exist): $0+0=0$, $0+1=1$, $1+1=0$. so subtracting is the same as adding ($-1=1$)
 >
-> **3. now add noise**: say the last answer gets flipped to $a=1$. the same steps give $k_3=0$, $k_2=1$, $k_1=0$, so $k=010$, **wrong**, and nothing tells you which answer was the bad one. the classical fix is lots of extra queries and finding the $k$ that agrees with the **most** of them, which means checking up to all $2^n$ possible keys. that's why LPN is hard classically, while the quantum learner just reads $k$ off and majority votes each bit
+> **1. each query is one equation.** the oracle returns $a=D\cdot k=D_1k_1+D_2k_2+D_3k_3\pmod2$, and wherever $D_i=0$ that term drops out
+> $$
+> \begin{aligned}
+> D=110,\ a=1:&\quad1k_1+1k_2+0k_3=1\ \Rightarrow\ k_1+k_2=1\\
+> D=011,\ a=1:&\quad0k_1+1k_2+1k_3=1\ \Rightarrow\ k_2+k_3=1\\
+> D=111,\ a=0:&\quad1k_1+1k_2+1k_3=0\ \Rightarrow\ k_1+k_2+k_3=0
+> \end{aligned}
+> $$
+> **2. Gaussian elimination, mod 2.** take the 3rd equation minus the 1st: the $k_1$ and $k_2$ cancel
+> $$
+> \begin{aligned}
+> (k_1+k_2+k_3)-(k_1+k_2)&=0-1\\
+> k_3&=-1=1\pmod2
+> \end{aligned}
+> $$
+> **3. back substitute**
+> $$
+> \begin{aligned}
+> \text{2nd: }k_2+1=1&\ \Rightarrow\ k_2=0\\
+> \text{1st: }k_1+0=1&\ \Rightarrow\ k_1=1
+> \end{aligned}
+> $$
+> so $k=101$ ✅. check every query: $110\cdot101=1+0+0=1$ ✅, $011\cdot101=0+0+1=1$ ✅, $111\cdot101=1+0+1=2=0$ ✅. without noise, $n$ independent queries are enough
+>
+> **4. now add noise**: say the 3rd answer gets flipped, $a=1$ instead of $0$. redo the same steps
+> $$
+> k_3=1-1=0\qquad k_2=1-0=1\qquad k_1=1-1=0\qquad\Rightarrow\ k=010\ ✗
+> $$
+> the nasty part: $010$ fits **all 3** (wrong) answers perfectly ($110\cdot010=1$, $011\cdot010=1$, $111\cdot010=1$), so nothing warns you
+>
+> **5. the classical fix: more queries + vote.** add 2 more (both correct): $D=100,\ a=1$ and $D=001,\ a=1$. now score each possible key by how many of the 5 answers it agrees with
+>
+> | candidate | $110\to1$ | $011\to1$ | $111\to1$ (flipped) | $100\to1$ | $001\to1$ | agrees |
+> |---|---|---|---|---|---|---|
+> | $101$ | ✅ | ✅ | ✗ | ✅ | ✅ | **4/5** |
+> | $010$ | ✅ | ✅ | ✅ | ✗ | ✗ | 3/5 |
+>
+> $101$ wins. but to be sure you have to score **every** candidate, and there are $2^n$ of them (8 here, but $2^{100}$ for 100 bits). that's why LPN is hard classically, while the quantum learner just reads $k$ off directly and majority votes each bit separately
+
 ### quantum learner
 before measuring, do **one more** [[Hadamard Gate|Hadamard]] on **every** qubit. the state becomes entangled between $a$ and the data qubits
 $$
@@ -72,6 +94,7 @@ flowchart TD
 
 > [!note] same trick as Bernstein–Vazirani
 > "Hadamards, oracle, Hadamards, read off the secret string" is the idea behind the [[Bernstein-Vazirani algorithm]]
+
 ## the results
 - **2 data bits**: both learners do about the same for $k=00, 01, 10$. for $k=11$ (the hardest, with 2 noisy CNOTs) the quantum learner starts to pull ahead
 - **3 data bits**: the quantum learner keeps its advantage and the **gap grows** with the size of the oracle

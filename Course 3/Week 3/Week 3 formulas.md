@@ -12,7 +12,14 @@ P(\text{no error})&=(1-\epsilon)^g\\
 $$
 ==so you can only run about $g\approx\frac1\epsilon$ gates before an error is likely==
 > [!example] example
-> $\epsilon=0.001$ (99.9% gates), $g=1000$ gates: $(0.999)^{1000}\approx e^{-1}\approx0.37$, only a 37% chance of no error. that's the depth limit of the NISQ era
+> $\epsilon=0.001$ (99.9% gates), $g=1000$ gates
+> $$
+> \begin{aligned}
+> g\,\epsilon&=1000\times0.001=1\\
+> (0.999)^{1000}&\approx e^{-g\epsilon}=e^{-1}\approx0.37
+> \end{aligned}
+> $$
+> only a 37% chance of no error at all. that's the depth limit of the NISQ era
 
 > [!question] exercise
 > (a) $\epsilon=0.005$ and $g=200$ gates: chance of no error? (b) with $\epsilon=0.001$, how many gates until the chance of no error falls to 50%?
@@ -43,14 +50,20 @@ $$
 n^2=\frac1{\epsilon_{\text{eff}}}\quad\Rightarrow\quad n^*\approx\frac1{\sqrt{\epsilon_{\text{eff}}}}
 $$
 > [!example] worked example: CNOT error $\epsilon=0.01$
-> $\epsilon_{\text{eff}}\approx3\times0.01=0.03$, so $n^*\approx\frac1{\sqrt{0.03}}\approx5.8$
+> **1. effective error**: each $U_4$ is 3 CNOTs, so $\epsilon_{\text{eff}}\approx3\times0.01=0.03$
 >
-> | $n$ | $d(n)=\frac1{0.03n}$ | $\min(n,d)$ |
-> |---|---|---|
-> | 4 | 8.3 | 4 |
-> | 5 | 6.7 | **5** |
-> | 6 | 5.6 | **5** |
-> | 7 | 4.8 | 4 |
+> **2. the best size**: $\sqrt{0.03}\approx0.173$, so $n^*\approx\frac1{0.173}\approx5.8$. the answer should be near 5 or 6
+>
+> **3. check the sizes around it.** for each $n$: $d(n)=\frac1{0.03\times n}$, round **down** (only whole layers can run), then take the smaller of $n$ and that
+>
+> | $n$ | $0.03\times n$ | $d(n)$ | whole layers $\lfloor d\rfloor$ | $\min(n,\lfloor d\rfloor)$ |
+> |---|---|---|---|---|
+> | 4 | 0.12 | 8.3 | 8 | 4 |
+> | 5 | 0.15 | 6.7 | 6 | **5** |
+> | 6 | 0.18 | 5.6 | 5 | **5** |
+> | 7 | 0.21 | 4.8 | 4 | 4 |
+>
+> below $n^*$ you run out of **qubits** first, above it you run out of **depth** first
 >
 > the best is $m=5$, so $V_Q=2^5=32$. adding qubits doesn't help, only **better gates** do: halving $\epsilon$ moves $n^*$ up by $\sqrt2$
 
@@ -76,7 +89,7 @@ from [[Learning parity with noise]]
 $$
 a=D\cdot k\bmod2=\bigoplus_{i:\,k_i=1}D_i
 $$
-(XOR together the data bits where the key has a 1). eg. $k=101$, $D=111$: $a=1\oplus1=0$
+(XOR together the data bits where the key has a 1). eg. $k=101$ has 1s in positions 1 and 3, so for $D=111$: $a=D_1\oplus D_3=1\oplus1=0$
 
 **the quantum learner, derived** (the key fact: $H^{\otimes n}|D\rangle=\frac1{\sqrt{2^n}}\sum_y(-1)^{D\cdot y}|y\rangle$)
 $$
@@ -88,6 +101,15 @@ $$
 \end{aligned}
 $$
 step 4 uses $H^{\otimes n}\sum_D|D\rangle=\sqrt{2^n}\,|0\ldots0\rangle$ and $H^{\otimes n}\sum_D(-1)^{D\cdot k}|D\rangle=\sqrt{2^n}\,|k\rangle$ (everything else cancels)
+> [!example] why "everything else cancels", with 1 data bit
+> $H|0\rangle=\frac{|0\rangle+|1\rangle}{\sqrt2}$ and $H|1\rangle=\frac{|0\rangle-|1\rangle}{\sqrt2}$. add or subtract them:
+> $$
+> \begin{aligned}
+> H\big(|0\rangle+|1\rangle\big)&=\tfrac{(|0\rangle+|1\rangle)+(|0\rangle-|1\rangle)}{\sqrt2}=\tfrac{2|0\rangle}{\sqrt2}=\sqrt2\,|0\rangle&&\text{(the }|1\rangle\text{s cancel)}\\
+> H\big(|0\rangle-|1\rangle\big)&=\tfrac{(|0\rangle+|1\rangle)-(|0\rangle-|1\rangle)}{\sqrt2}=\tfrac{2|1\rangle}{\sqrt2}=\sqrt2\,|1\rangle&&\text{(the }|0\rangle\text{s cancel)}
+> \end{aligned}
+> $$
+> with $k=0$ all the signs $(-1)^{D\cdot k}$ are $+$, giving the first line ($\to|0\rangle$). with $k=1$ the sign pattern is $+,-$, giving the second ($\to|1\rangle=|k\rangle$). with $n$ bits each bit does this on its own, so the sign pattern $(-1)^{D\cdot k}$ turns into exactly $|k\rangle$
 
 ==so half the time $a=1$ and the data qubits **are** the key $k$==. classically each query only gives you one equation about $k$ (checked numerically for $k=101$: only $0000$ and $1011$ appear, $\frac12$ each)
 > [!question] exercise
@@ -151,11 +173,12 @@ so: run $U(y)$, then $U(x)$ **backwards**, measure, and $K$ = the chance of gett
 > $$
 > \begin{aligned}
 > |\phi(x)\rangle&=\cos\tfrac x2\,|0\rangle+\sin\tfrac x2\,|1\rangle\\
-> \langle\phi(x)|\phi(y)\rangle&=\cos\tfrac x2\cos\tfrac y2+\sin\tfrac x2\sin\tfrac y2=\cos\tfrac{x-y}2\\
+> \langle\phi(x)|\phi(y)\rangle&=\cos\tfrac x2\cos\tfrac y2+\sin\tfrac x2\sin\tfrac y2&&\text{(top×top + bottom×bottom)}\\
+> &=\cos\Big(\tfrac x2-\tfrac y2\Big)=\cos\tfrac{x-y}2&&\text{(the identity }\cos A\cos B+\sin A\sin B=\cos(A-B))\\
 > K(x,y)&=\cos^2\tfrac{x-y}2
 > \end{aligned}
 > $$
-> eg. $x=0.7$, $y=2$: $K=\cos^2(0.65)\approx0.634$. points close together → $K\approx1$, far apart → $K\approx0$
+> eg. $x=0.7$, $y=2$: $\frac{x-y}2=\frac{-1.3}2=-0.65$, $\cos(-0.65)=\cos(0.65)\approx0.796$, so $K\approx0.796^2\approx0.634$. points close together → $K\approx1$, far apart → $K\approx0$
 
 > [!question] exercise
 > with $K(x,y)=\cos^2\frac{x-y}2$: (a) $K(0,\pi)$ (b) $K(0,\frac\pi2)$ (c) with 2 qubits, $U(\vec x)=R_y(x_1)\otimes R_y(x_2)$, find $K\big((0,0),(\frac\pi2,\frac\pi2)\big)$
@@ -193,10 +216,25 @@ $$
 $$
 ==a small error in $\vec b$ can grow by up to $\kappa$ times in $\vec x$==
 > [!example] a badly conditioned system
+> **system 1**
 > $$
-> \begin{bmatrix}1&1\\1&1.001\end{bmatrix}\vec x=\begin{bmatrix}2\\2.001\end{bmatrix}\Rightarrow\vec x=\begin{bmatrix}1\\1\end{bmatrix}\qquad\text{but}\qquad\vec b=\begin{bmatrix}2\\2.002\end{bmatrix}\Rightarrow\vec x=\begin{bmatrix}0\\2\end{bmatrix}
+> \begin{aligned}
+> x_1+x_2&=2\\
+> x_1+1.001x_2&=2.001\\
+> \text{2nd}-\text{1st}:\quad0.001x_2&=0.001\ \Rightarrow\ x_2=1,\quad x_1=2-1=1
+> \end{aligned}
 > $$
-> changing $\vec b$ by $0.001$ completely changes the answer, because $\kappa\approx4000$ (the 2 rows are almost the same equation)
+> **system 2**: change only the last number by $0.001$
+> $$
+> \begin{aligned}
+> x_1+x_2&=2\\
+> x_1+1.001x_2&=2.002\\
+> \text{2nd}-\text{1st}:\quad0.001x_2&=0.002\ \Rightarrow\ x_2=2,\quad x_1=2-2=0
+> \end{aligned}
+> $$
+> a $0.05\%$ change in $\vec b$ moved the answer from $(1,1)$ to $(0,2)$. why: the 2 equations are almost the same line, so subtracting them leaves a tiny $0.001x_2$, and dividing by that tiny number blows up any change
+>
+> **the condition number**: $\det(A-\lambda I)=(1-\lambda)(1.001-\lambda)-1=0$ gives $\lambda\approx2.0005$ and $\lambda\approx0.0005$, so $\kappa\approx\frac{2.0005}{0.0005}\approx4000$
 
 **the costs**
 
@@ -242,9 +280,11 @@ $$
 > $$
 > A=\begin{bmatrix}1&\frac12\\\frac12&1\end{bmatrix}\qquad|b\rangle=|0\rangle
 > $$
-> **eigenvectors**: $|a_1\rangle=\frac{|0\rangle+|1\rangle}{\sqrt2}$ with $\lambda_1=\frac32$, and $|a_2\rangle=\frac{|0\rangle-|1\rangle}{\sqrt2}$ with $\lambda_2=\frac12$ (so $\kappa=3$)
+> **eigenvalues**: $\det(A-\lambda I)=(1-\lambda)^2-\frac14=0$, so $1-\lambda=\pm\frac12$: $\lambda_1=\frac32$, $\lambda_2=\frac12$ (so $\kappa=\frac{3/2}{1/2}=3$)
 >
-> **write $|b\rangle$ in them**: $|0\rangle=\frac1{\sqrt2}|a_1\rangle+\frac1{\sqrt2}|a_2\rangle$
+> **eigenvectors**: $\lambda=\frac32$ needs $-\frac12v_1+\frac12v_2=0$, so $v_1=v_2$: $|a_1\rangle=\frac{|0\rangle+|1\rangle}{\sqrt2}$. $\lambda=\frac12$ needs $\frac12v_1+\frac12v_2=0$, so $v_1=-v_2$: $|a_2\rangle=\frac{|0\rangle-|1\rangle}{\sqrt2}$
+>
+> **write $|b\rangle$ in them**: $b_1=\langle a_1|0\rangle=\frac1{\sqrt2}$ and $b_2=\langle a_2|0\rangle=\frac1{\sqrt2}$, so $|0\rangle=\frac1{\sqrt2}|a_1\rangle+\frac1{\sqrt2}|a_2\rangle$
 >
 > **divide by the eigenvalues**:
 > $$
@@ -256,7 +296,10 @@ $$
 > $$
 > **check classically**: $A^{-1}\binom10=\binom{4/3}{-2/3}$ ✅ (same direction)
 >
-> **success chance** with $C=\lambda_{\min}=\frac12$: $\frac14\Big(\frac{1/2}{9/4}+\frac{1/2}{1/4}\Big)=\frac14\big(0.222+2\big)\approx0.56$
+> **success chance** with $C=\lambda_{\min}=\frac12$, using $C^2\sum_i\frac{|b_i|^2}{\lambda_i^2}$ with $|b_i|^2=\frac12$:
+> $$
+> \Big(\tfrac12\Big)^2\Big(\frac{1/2}{(3/2)^2}+\frac{1/2}{(1/2)^2}\Big)=\frac14\Big(\frac{1/2}{9/4}+\frac{1/2}{1/4}\Big)=\frac14\big(0.222+2\big)\approx0.56
+> $$
 
 > [!question] exercise: HHL by hand
 > $A=\begin{bmatrix}2&1\\1&2\end{bmatrix}$, $|b\rangle=|0\rangle$. find $|x\rangle$ the HHL way, check it classically, and find the success chance with $C=\lambda_{\min}$

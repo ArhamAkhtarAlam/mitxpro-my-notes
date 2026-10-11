@@ -27,6 +27,7 @@ so you **can't** just swap HHL in wherever a classical solver was used. you have
 
 > [!note] same trick as the QFT
 > the classical FFT takes $N\log N$, the [[Quantum Fourier Transform]] takes about $(\log N)^2$. that's only possible because it transforms **amplitudes of a state**, not a list of numbers (see [[Discrete Fourier Transform#How fast is it?]]). HHL is the same deal
+
 ## the 3 building blocks
 (for simplicity assume $A$ is **Hermitian**, the general case also works but wasn't covered)
 ```mermaid
@@ -65,6 +66,7 @@ flowchart TD
 ```
 > [!tip] not just inverting
 > once each eigenvector has its eigenvalue attached, you could multiply by **any** function of $\lambda$, not just $\frac1\lambda$. other work uses this for other useful functions of matrices
+
 ## worked example: solving a system with HHL, step by step
 **the equations**
 $$
@@ -108,7 +110,11 @@ $$
 \kappa=\frac{\lambda_{\max}}{\lambda_{\min}}=\frac21=2\qquad\text{(close to 1, so nicely conditioned: HHL's filter will work often)}
 $$
 
-**step 1: load $\vec b$ as a state.** $\vec b=(1,0)$ is already length 1, so $|b\rangle=|0\rangle$. we need 4 qubits: $b$ (1 qubit, holds the vector), a **clock** (2 qubits, will hold the eigenvalue) and an **ancilla** (the filter)
+**step 1: load $\vec b$ as a state.** a quantum state has to have length 1, so divide by the length
+$$
+|b\rangle=\frac{\vec b}{\|\vec b\|}=\frac{(1,0)}{\sqrt{1^2+0^2}}=(1,0)=|0\rangle
+$$
+(if $\vec b$ were $(3,4)$, you'd load $\frac{(3,4)}5$ and remember the 5 for later). we need 4 qubits: $b$ (1 qubit holds a 2 number vector, $\log_22=1$), a **clock** (2 qubits, will hold the eigenvalue) and an **ancilla** (the filter)
 $$
 |0\rangle_{\text{anc}}\,|00\rangle_{\text{clock}}\,|0\rangle_b
 $$
@@ -120,84 +126,146 @@ b_1&=\langle a_1|0\rangle=\tfrac1{\sqrt2}\begin{bmatrix}1&1\end{bmatrix}\begin{b
 \end{aligned}
 $$
 check: $\frac1{\sqrt2}\cdot\frac{(1,1)}{\sqrt2}+\frac1{\sqrt2}\cdot\frac{(1,-1)}{\sqrt2}=\frac{(1,1)+(1,-1)}2=(1,0)$ ✅
-**step 3: phase estimation** with $U=e^{iAt}$ and $t=\frac\pi2$. each eigenvector picks up its own phase
+**step 3: phase estimation**, in 4 small steps. because everything is linear, we can follow $|a_1\rangle$ and $|a_2\rangle$ **separately** and add them up at the end
+
+**3a. choose $U=e^{iAt}$ with $t=\frac\pi2$.** on an eigenvector, $e^{iAt}$ just multiplies by $e^{i\lambda t}$ (that's what being an eigenvector means)
 $$
-U|a_1\rangle=e^{i\cdot2\cdot\frac\pi2}|a_1\rangle=e^{2\pi i\cdot\frac24}|a_1\rangle\qquad U|a_2\rangle=e^{i\cdot1\cdot\frac\pi2}|a_2\rangle=e^{2\pi i\cdot\frac14}|a_2\rangle
+U|a_1\rangle=e^{i\cdot2\cdot\frac\pi2}|a_1\rangle=e^{i\pi}|a_1\rangle=-|a_1\rangle\qquad U|a_2\rangle=e^{i\cdot1\cdot\frac\pi2}|a_2\rangle=e^{i\pi/2}|a_2\rangle=i\,|a_2\rangle
 $$
-so the clock reads $\frac24\to|10\rangle$ for $\lambda=2$ and $\frac14\to|01\rangle$ for $\lambda=1$ (the clock counts in quarters). after $H$s on the clock, controlled $U$ and $U^2$, and an inverse [[Quantum Fourier Transform|QFT]] ([[Quantum Phase Estimation]]):
+written as "fractions of a full turn" $e^{2\pi i\varphi}$: $\varphi_1=\frac24$ and $\varphi_2=\frac14$. a 2 qubit clock counts in quarters ($00,01,10,11=\frac04,\frac14,\frac24,\frac34$), so both fit **exactly**. ($t$ was picked to make this happen)
+
+**3b. Hadamards on both clock qubits**: an equal mix of all 4 clock readings $c=0,1,2,3$
+$$
+|00\rangle\ \to\ \tfrac12\big(|00\rangle+|01\rangle+|10\rangle+|11\rangle\big)
+$$
+**3c. controlled $U$ (from clock bit 0) and controlled $U^2$ (from clock bit 1).** clock reading $c$ ends up applying $U$ a total of $c$ times. on an eigenvector, $U^c$ just gives the number $e^{2\pi i\varphi c}$, and that number moves onto the **clock** (this is **phase kickback**: the eigenvector itself doesn't change)
+$$
+\begin{aligned}
+|a_1\rangle\ (\text{each }U=-1):&\quad\tfrac12\big(|00\rangle-|01\rangle+|10\rangle-|11\rangle\big)\,|a_1\rangle&&(1,-1,1,-1)\\
+|a_2\rangle\ (\text{each }U=i):&\quad\tfrac12\big(|00\rangle+i|01\rangle-|10\rangle-i|11\rangle\big)\,|a_2\rangle&&(1,i,-1,-i)
+\end{aligned}
+$$
+**3d. inverse QFT on the clock.** these patterns are exactly what the [[Quantum Fourier Transform|QFT]] makes from a single number: $(1,-1,1,-1)$ = "turns by $\frac24$ each step" and $(1,i,-1,-i)$ = "turns by $\frac14$ each step". so $\text{QFT}^\dagger$ turns them back into that number
+$$
+\tfrac12(1,-1,1,-1)\ \to\ |10\rangle\ (=2)\qquad\qquad\tfrac12(1,i,-1,-i)\ \to\ |01\rangle\ (=1)
+$$
+**3e. add the 2 parts back up** (with their $\frac1{\sqrt2}$s from step 2)
 $$
 \tfrac1{\sqrt2}|a_1\rangle|10\rangle_{\text{clock}}+\tfrac1{\sqrt2}|a_2\rangle|01\rangle_{\text{clock}}
 $$
-each eigenvector now has its eigenvalue **written next to it**
+each eigenvector now has its eigenvalue **written next to it** ($10$ = two quarters → $\lambda=2$, $01$ = one quarter → $\lambda=1$). this is [[Quantum Phase Estimation]]
 
-**step 4: the filter (controlled rotation).** rotate the ancilla so its $|1\rangle$ amplitude is $\frac C\lambda$, with $C=1$ (it must be $\leq\lambda_{\min}=1$)
+**step 4: the filter (controlled rotation).** we want the ancilla's $|1\rangle$ amplitude to be $\frac C\lambda$, with $C=1$ ($C$ can't be bigger than $\lambda_{\min}=1$, or $\frac C\lambda$ would be over 1, which isn't a valid amplitude)
 
-| clock | $\lambda$ | $\frac C\lambda$ | ancilla becomes | gate |
+**4a. which rotation?** an $R_y(\theta)$ gate does
+$$
+R_y(\theta)|0\rangle=\cos\tfrac\theta2\,|0\rangle+\sin\tfrac\theta2\,|1\rangle\qquad\text{so we need}\qquad\sin\tfrac\theta2=\frac C\lambda\ \Rightarrow\ \theta=2\arcsin\frac C\lambda
+$$
+**4b. the 2 angles**
+$$
+\begin{aligned}
+\lambda=2:&\quad\theta=2\arcsin(0.5)=2\times30°=60°=\tfrac\pi3&&\to\ \cos30°|0\rangle+\sin30°|1\rangle=0.866|0\rangle+0.5|1\rangle\\
+\lambda=1:&\quad\theta=2\arcsin(1)=2\times90°=180°=\pi&&\to\ \cos90°|0\rangle+\sin90°|1\rangle=0|0\rangle+1|1\rangle
+\end{aligned}
+$$
+**4c. controlled by the clock**: do $R_y(\frac\pi3)$ only when the clock says $10$, and $R_y(\pi)$ only when it says $01$
+
+| clock | $\lambda$ | $\frac C\lambda$ | gate | ancilla becomes |
 |---|---|---|---|---|
-| $\lvert10\rangle$ | 2 | 0.5 | $0.866\lvert0\rangle+0.5\lvert1\rangle$ | $R_y(\frac\pi3)$ |
-| $\lvert01\rangle$ | 1 | 1 | $0\lvert0\rangle+1\lvert1\rangle$ | $R_y(\pi)$ |
+| $\lvert10\rangle$ | 2 | 0.5 | $R_y(\frac\pi3)$ | $0.866\lvert0\rangle+0.5\lvert1\rangle$ |
+| $\lvert01\rangle$ | 1 | 1 | $R_y(\pi)$ | $0\lvert0\rangle+1\lvert1\rangle$ |
 
 $$
 \tfrac1{\sqrt2}|a_1\rangle|10\rangle\big(0.866|0\rangle+0.5|1\rangle\big)+\tfrac1{\sqrt2}|a_2\rangle|01\rangle\big(0|0\rangle+1|1\rangle\big)
 $$
 **step 5: measure the ancilla, keep only "1"**
-$$
-\begin{aligned}
-P(1)&=\Big(\tfrac{0.5}{\sqrt2}\Big)^2+\Big(\tfrac1{\sqrt2}\Big)^2=0.125+0.5=0.625\\
-\text{left over}&\ \propto\ \tfrac{0.5}{\sqrt2}|a_1\rangle|10\rangle+\tfrac1{\sqrt2}|a_2\rangle|01\rangle
-\end{aligned}
-$$
-62.5% of runs succeed. the other 37.5% you throw away and run again
 
-**step 6: uncompute** (run phase estimation backwards, $\text{QPE}^\dagger$): the clock goes back to $|00\rangle$, but the $\frac1\lambda$ factors stay
+**5a. the chance of 1** = add up the squared amplitudes of every term where the ancilla is $|1\rangle$
 $$
-\propto\ 0.5\,|a_1\rangle+1\,|a_2\rangle
+P(1)=\Big(\tfrac1{\sqrt2}\times0.5\Big)^2+\Big(\tfrac1{\sqrt2}\times1\Big)^2=0.125+0.5=0.625
 $$
+**5b. what's left if you got 1**: keep only those terms, then divide by $\sqrt{0.625}$ so the length is 1 again
+$$
+\frac{\frac{0.5}{\sqrt2}|a_1\rangle|10\rangle+\frac1{\sqrt2}|a_2\rangle|01\rangle}{\sqrt{0.625}}=0.447\,|a_1\rangle|10\rangle+0.894\,|a_2\rangle|01\rangle
+$$
+see what happened: before, $|a_1\rangle$ and $|a_2\rangle$ had equal amplitudes. now $|a_2\rangle$ (with $\lambda=1$) has **twice** as much as $|a_1\rangle$ (with $\lambda=2$). ==that ratio $1:\frac12$ is exactly "divide by $\lambda$"==. 62.5% of runs succeed, the other 37.5% you throw away and run again
+
+**step 6: uncompute** (run phase estimation backwards, $\text{QPE}^\dagger$)
+
+**6a. what it does**: step 3 took $|a_1\rangle|00\rangle\to|a_1\rangle|10\rangle$ and $|a_2\rangle|00\rangle\to|a_2\rangle|01\rangle$. running the same gates in reverse undoes exactly that
+$$
+0.447\,|a_1\rangle|10\rangle+0.894\,|a_2\rangle|01\rangle\ \to\ \big(0.447\,|a_1\rangle+0.894\,|a_2\rangle\big)|00\rangle
+$$
+the clock is clean again, and the $1:\frac12$ ratio stays because it's in the **amplitudes**, not the clock
+
+**6b. why bother?** if you skip it, $|a_1\rangle$ is still tied to clock $10$ and $|a_2\rangle$ to clock $01$, so they can't interfere. $b$ on its own is then a **mixture**: $0.2$ of $|a_1\rangle$ and $0.8$ of $|a_2\rangle$, which measures as **50/50** instead of the right 90/10 (checked numerically). the clock "knowing" which eigenvector you're in ruins the answer
+
 **step 7: what state is that?** put the eigenvectors back in
 $$
 \begin{aligned}
-0.5\cdot\tfrac{|0\rangle+|1\rangle}{\sqrt2}+\tfrac{|0\rangle-|1\rangle}{\sqrt2}&=\tfrac1{\sqrt2}\big(1.5|0\rangle-0.5|1\rangle\big)\\
-\text{normalise}:\quad|x\rangle&=\frac{3|0\rangle-|1\rangle}{\sqrt{10}}\approx0.949|0\rangle-0.316|1\rangle
+0.447\cdot\tfrac{|0\rangle+|1\rangle}{\sqrt2}+0.894\cdot\tfrac{|0\rangle-|1\rangle}{\sqrt2}&=\tfrac{0.447+0.894}{\sqrt2}|0\rangle+\tfrac{0.447-0.894}{\sqrt2}|1\rangle\\
+&=0.949\,|0\rangle-0.316\,|1\rangle\\
+&=\frac{3|0\rangle-|1\rangle}{\sqrt{10}}&&\text{(since }\tfrac3{\sqrt{10}}=0.949,\ \tfrac1{\sqrt{10}}=0.316)
 \end{aligned}
 $$
-the true answer $(0.75,-0.25)$ is $0.25\times(3,-1)$: **the same direction** ✅
+**compare to the real answer**: $(0.75,-0.25)=0.25\times(3,-1)$. normalised that's $\frac{(3,-1)}{\sqrt{10}}$: **the same** ✅. HHL gives the right **direction**, scaled to length 1
 
 ![[HHL_2x2_circuit.png]]
 (the whole circuit. the controlled $R_y$s only need one clock bit each, because only $|01\rangle$ and $|10\rangle$ ever show up here)
 
 **step 8: reading the answer out**
-- measure $b$: you get $0$ **90%** of the time and $1$ **10%**, so $x_1^2:x_2^2=9:1$
-- the **sign** ($x_2$ is negative) doesn't show up in a plain measurement, you'd need an extra interference trick
-- the **size** of $\vec x$ isn't in the state, but here it hides in the success rate: $P(1)=C^2\|\vec x\|^2=0.75^2+0.25^2=0.625$ ✅
-- so for a 2×2 this is silly (you'd solve it in your head), but the same circuit on $\log_2N$ qubits handles an $N\times N$ system, as long as you only need something like "the ratio $x_1^2:x_2^2$" and not every number
+- **the ratio**: measure $b$ and you get $0$ with chance $0.949^2=0.9$ and $1$ with chance $0.316^2=0.1$. so $x_1^2:x_2^2=9:1$, ie. $|x_1|=3|x_2|$
+- **the sign** ($x_2$ is negative) doesn't show up in a plain 0/1 measurement. you'd need to measure in another basis (eg. $+/-$, where $\frac{3|0\rangle-|1\rangle}{\sqrt{10}}$ gives $+$ only 20% of the time, but $\frac{3|0\rangle+|1\rangle}{\sqrt{10}}$ would give 80%)
+- **the size**: the state has length 1, so the real size is lost. but it hides in step 5's success rate: $P(1)=C^2\|\vec x\|^2$, and $0.75^2+0.25^2=0.625$ ✅. so counting how often the filter works tells you $\|\vec x\|=\sqrt{0.625}=0.79$
+- for a 2×2 this is silly (you'd solve it in your head), but the same circuit on $\log_2N$ qubits handles an $N\times N$ system, as long as you only need something like "the ratio $x_1^2:x_2^2$" and not every number
 
 (every step checked by simulating the 4 qubit circuit numerically)
 
 ## the same problem done classically
-the 2×2 example from [[Week 3 formulas#8. the HHL algorithm]], solved the normal way, to compare
-$$
-A=\begin{bmatrix}1&\frac12\\\frac12&1\end{bmatrix}\qquad\vec b=\begin{bmatrix}1\\0\end{bmatrix}
-$$
-**way 1: the inverse** (for a $2\times2$: swap the diagonal, negate the rest, divide by the determinant)
+the **same** system as the worked example above, solved 3 normal ways so you can compare
 $$
 \begin{aligned}
-\det A&=1\cdot1-\tfrac12\cdot\tfrac12=\tfrac34\\
-A^{-1}&=\frac1{3/4}\begin{bmatrix}1&-\frac12\\-\frac12&1\end{bmatrix}=\begin{bmatrix}\frac43&-\frac23\\-\frac23&\frac43\end{bmatrix}\\
-\vec x&=A^{-1}\vec b=\begin{bmatrix}\frac43\\-\frac23\end{bmatrix}
+1.5\,x_1+0.5\,x_2&=1&&(1)\\
+0.5\,x_1+1.5\,x_2&=0&&(2)
 \end{aligned}
 $$
-**way 2: exactly HHL's steps, but on paper** (eigenvalues $\frac32$ and $\frac12$, eigenvectors $\vec a_1=\frac{(1,1)}{\sqrt2}$, $\vec a_2=\frac{(1,-1)}{\sqrt2}$)
+**way 1: substitution** (the school way)
 $$
 \begin{aligned}
-&\text{1. rewrite }\vec b:&&\vec b=\tfrac1{\sqrt2}\vec a_1+\tfrac1{\sqrt2}\vec a_2\\
-&\text{2. find the eigenvalues:}&&\lambda_1=\tfrac32,\ \lambda_2=\tfrac12\quad\text{(HHL: phase estimation)}\\
-&\text{3. divide each part by its }\lambda:&&\vec x=\tfrac1{\sqrt2}\cdot\tfrac23\,\vec a_1+\tfrac1{\sqrt2}\cdot2\,\vec a_2\quad\text{(HHL: the filter)}\\
-&\text{4. add up:}&&\vec x=\tfrac13\begin{bmatrix}1\\1\end{bmatrix}+\begin{bmatrix}1\\-1\end{bmatrix}=\begin{bmatrix}\frac43\\-\frac23\end{bmatrix}\ ✅
+\text{from (2)}:&\quad0.5x_1=-1.5x_2\ \Rightarrow\ x_1=-3x_2\\
+\text{put into (1)}:&\quad1.5(-3x_2)+0.5x_2=1\ \Rightarrow\ -4.5x_2+0.5x_2=1\ \Rightarrow\ -4x_2=1\\
+&\quad x_2=-0.25\qquad x_1=-3(-0.25)=0.75
 \end{aligned}
 $$
+**way 2: the inverse matrix.** for any $2\times2$: swap the 2 diagonal numbers, flip the sign of the other 2, divide by the determinant
+$$
+\begin{bmatrix}a&b\\c&d\end{bmatrix}^{-1}=\frac1{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}
+$$
+$$
+\begin{aligned}
+\det A&=1.5\times1.5-0.5\times0.5=2.25-0.25=2\\
+A^{-1}&=\frac12\begin{bmatrix}1.5&-0.5\\-0.5&1.5\end{bmatrix}=\begin{bmatrix}0.75&-0.25\\-0.25&0.75\end{bmatrix}\\
+\vec x&=A^{-1}\vec b=\begin{bmatrix}0.75\cdot1+(-0.25)\cdot0\\-0.25\cdot1+0.75\cdot0\end{bmatrix}=\begin{bmatrix}0.75\\-0.25\end{bmatrix}
+\end{aligned}
+$$
+check $AA^{-1}=I$: top left $1.5(0.75)+0.5(-0.25)=1.125-0.125=1$ ✅, top right $1.5(-0.25)+0.5(0.75)=0$ ✅
+
+**way 3: exactly HHL's steps, but on paper** (using the eigenvalues and eigenvectors from step 0)
+$$
+\begin{aligned}
+&\text{1. rewrite }\vec b\text{ (HHL step 2):}&&\vec b=\tfrac1{\sqrt2}\vec a_1+\tfrac1{\sqrt2}\vec a_2\\
+&\text{2. know each eigenvalue (HHL step 3):}&&\lambda_1=2,\ \lambda_2=1\\
+&\text{3. divide each part by its }\lambda\text{ (HHL steps 4–5):}&&\vec x=\tfrac1{\sqrt2}\cdot\tfrac12\,\vec a_1+\tfrac1{\sqrt2}\cdot\tfrac11\,\vec a_2\\
+&\text{4. put the eigenvectors in:}&&\vec x=\tfrac1{2\sqrt2}\cdot\tfrac{(1,1)}{\sqrt2}+\tfrac1{\sqrt2}\cdot\tfrac{(1,-1)}{\sqrt2}=\tfrac{(1,1)}4+\tfrac{(1,-1)}2\\
+&\text{5. add up:}&&\vec x=(0.25+0.5,\ 0.25-0.5)=(0.75,\,-0.25)\ ✅
+\end{aligned}
+$$
+(why step 3 works: $A$ multiplies each eigenvector by its $\lambda$, so $A^{-1}$ must **divide** each one by its $\lambda$)
+
 > [!important] what each one gives you
-> - **classical**: the actual numbers $x_1=\frac43$, $x_2=-\frac23$. but finding eigenvalues or inverting costs about $N^3$
-> - **HHL**: the **state** $|x\rangle=\frac{2|0\rangle-|1\rangle}{\sqrt5}$ (normalised, so the overall size is lost). measuring it gives $0$ with chance $\frac45$ and $1$ with chance $\frac15$, so to read every entry you'd need many runs, which kills the speed up. ==it's only worth it if you need a **property** of $\vec x$, not $\vec x$ itself==
+> - **classical**: the actual numbers $x_1=0.75$, $x_2=-0.25$. but for an $N\times N$ system, inverting or finding eigenvalues costs about $N^3$
+> - **HHL**: the **state** $|x\rangle=\frac{3|0\rangle-|1\rangle}{\sqrt{10}}$ (normalised, so the overall size is lost). measuring it gives $0$ with chance $0.9$ and $1$ with chance $0.1$, so to read every entry you'd need many runs, which kills the speed up. ==it's only worth it if you need a **property** of $\vec x$, not $\vec x$ itself==
+
 ## things to watch out for (extra, not in the lecture)
 > [!warning]- the fine print
 > - **the filter doesn't always work**: strictly, the **amplitude** gets the $\frac1{\lambda_i}$ (so the chance goes like $\frac1{\lambda_i^2}$), and in the worst case the success chance is only about $\frac1{\kappa^2}$, so you repeat it or use a trick called amplitude amplification. that's part of why $\kappa$ still matters a lot (in my $4\times4$ check it worked 35% of the time)
