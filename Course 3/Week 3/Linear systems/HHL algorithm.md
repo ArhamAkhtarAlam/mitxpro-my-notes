@@ -65,6 +65,114 @@ flowchart TD
 ```
 > [!tip] not just inverting
 > once each eigenvector has its eigenvalue attached, you could multiply by **any** function of $\lambda$, not just $\frac1\lambda$. other work uses this for other useful functions of matrices
+## worked example: solving a system with HHL, step by step
+**the equations**
+$$
+\begin{aligned}
+1.5\,x_1+0.5\,x_2&=1\\
+0.5\,x_1+1.5\,x_2&=0
+\end{aligned}
+\qquad\Longrightarrow\qquad
+\underbrace{\begin{bmatrix}1.5&0.5\\0.5&1.5\end{bmatrix}}_{A}\begin{bmatrix}x_1\\x_2\end{bmatrix}=\underbrace{\begin{bmatrix}1\\0\end{bmatrix}}_{\vec b}
+$$
+(the answer we're aiming for: $x_1=0.75$, $x_2=-0.25$. I picked $A$ so its eigenvalues come out exactly, which keeps every step exact)
+
+**step 0: what we need to know about $A$** (HHL doesn't compute these, the circuit finds them by itself; they're worked out here so we can follow along)
+
+**(a) is $A$ Hermitian?** flip it across the diagonal and take complex conjugates ($A^\dagger$), and check nothing changes
+$$
+A^\dagger=\begin{bmatrix}1.5&0.5\\0.5&1.5\end{bmatrix}^{T*}=\begin{bmatrix}1.5&0.5\\0.5&1.5\end{bmatrix}=A\ ✅
+$$
+(real numbers and symmetric, so yes)
+
+**(b) the eigenvalues**: solve $\det(A-\lambda I)=0$
+$$
+\begin{aligned}
+\det\begin{bmatrix}1.5-\lambda&0.5\\0.5&1.5-\lambda\end{bmatrix}&=(1.5-\lambda)^2-0.5\times0.5=0\\
+(1.5-\lambda)^2&=0.25\\
+1.5-\lambda&=\pm0.5\\
+\lambda_1=2,\quad\lambda_2&=1
+\end{aligned}
+$$
+**(c) the eigenvectors**: for each $\lambda$, solve $(A-\lambda I)\vec v=0$
+$$
+\begin{aligned}
+\lambda_1=2:&\quad\begin{bmatrix}-0.5&0.5\\0.5&-0.5\end{bmatrix}\begin{bmatrix}v_1\\v_2\end{bmatrix}=0\ \Rightarrow\ -0.5v_1+0.5v_2=0\ \Rightarrow\ v_1=v_2\ \Rightarrow\ |a_1\rangle=\tfrac{|0\rangle+|1\rangle}{\sqrt2}\\
+\lambda_2=1:&\quad\begin{bmatrix}0.5&0.5\\0.5&0.5\end{bmatrix}\begin{bmatrix}v_1\\v_2\end{bmatrix}=0\ \Rightarrow\ 0.5v_1+0.5v_2=0\ \Rightarrow\ v_1=-v_2\ \Rightarrow\ |a_2\rangle=\tfrac{|0\rangle-|1\rangle}{\sqrt2}
+\end{aligned}
+$$
+(the $\frac1{\sqrt2}$ makes each one length 1). **check**: $A\binom11=\binom{1.5+0.5}{0.5+1.5}=\binom22=2\binom11$ ✅ and $A\binom1{-1}=\binom{1.5-0.5}{0.5-1.5}=\binom1{-1}=1\cdot\binom1{-1}$ ✅
+
+**(d) the condition number**: biggest eigenvalue ÷ smallest (in size)
+$$
+\kappa=\frac{\lambda_{\max}}{\lambda_{\min}}=\frac21=2\qquad\text{(close to 1, so nicely conditioned: HHL's filter will work often)}
+$$
+
+**step 1: load $\vec b$ as a state.** $\vec b=(1,0)$ is already length 1, so $|b\rangle=|0\rangle$. we need 4 qubits: $b$ (1 qubit, holds the vector), a **clock** (2 qubits, will hold the eigenvalue) and an **ancilla** (the filter)
+$$
+|0\rangle_{\text{anc}}\,|00\rangle_{\text{clock}}\,|0\rangle_b
+$$
+**step 2: rewrite $|b\rangle$ in $A$'s eigenvectors** (nothing happens physically, it's just maths). each coefficient is an inner product, $b_i=\langle a_i|b\rangle$
+$$
+\begin{aligned}
+b_1&=\langle a_1|0\rangle=\tfrac1{\sqrt2}\begin{bmatrix}1&1\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix}=\tfrac1{\sqrt2}\qquad b_2=\langle a_2|0\rangle=\tfrac1{\sqrt2}\begin{bmatrix}1&-1\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix}=\tfrac1{\sqrt2}\\
+|0\rangle_b&=\tfrac1{\sqrt2}|a_1\rangle+\tfrac1{\sqrt2}|a_2\rangle
+\end{aligned}
+$$
+check: $\frac1{\sqrt2}\cdot\frac{(1,1)}{\sqrt2}+\frac1{\sqrt2}\cdot\frac{(1,-1)}{\sqrt2}=\frac{(1,1)+(1,-1)}2=(1,0)$ ✅
+**step 3: phase estimation** with $U=e^{iAt}$ and $t=\frac\pi2$. each eigenvector picks up its own phase
+$$
+U|a_1\rangle=e^{i\cdot2\cdot\frac\pi2}|a_1\rangle=e^{2\pi i\cdot\frac24}|a_1\rangle\qquad U|a_2\rangle=e^{i\cdot1\cdot\frac\pi2}|a_2\rangle=e^{2\pi i\cdot\frac14}|a_2\rangle
+$$
+so the clock reads $\frac24\to|10\rangle$ for $\lambda=2$ and $\frac14\to|01\rangle$ for $\lambda=1$ (the clock counts in quarters). after $H$s on the clock, controlled $U$ and $U^2$, and an inverse [[Quantum Fourier Transform|QFT]] ([[Quantum Phase Estimation]]):
+$$
+\tfrac1{\sqrt2}|a_1\rangle|10\rangle_{\text{clock}}+\tfrac1{\sqrt2}|a_2\rangle|01\rangle_{\text{clock}}
+$$
+each eigenvector now has its eigenvalue **written next to it**
+
+**step 4: the filter (controlled rotation).** rotate the ancilla so its $|1\rangle$ amplitude is $\frac C\lambda$, with $C=1$ (it must be $\leq\lambda_{\min}=1$)
+
+| clock | $\lambda$ | $\frac C\lambda$ | ancilla becomes | gate |
+|---|---|---|---|---|
+| $\lvert10\rangle$ | 2 | 0.5 | $0.866\lvert0\rangle+0.5\lvert1\rangle$ | $R_y(\frac\pi3)$ |
+| $\lvert01\rangle$ | 1 | 1 | $0\lvert0\rangle+1\lvert1\rangle$ | $R_y(\pi)$ |
+
+$$
+\tfrac1{\sqrt2}|a_1\rangle|10\rangle\big(0.866|0\rangle+0.5|1\rangle\big)+\tfrac1{\sqrt2}|a_2\rangle|01\rangle\big(0|0\rangle+1|1\rangle\big)
+$$
+**step 5: measure the ancilla, keep only "1"**
+$$
+\begin{aligned}
+P(1)&=\Big(\tfrac{0.5}{\sqrt2}\Big)^2+\Big(\tfrac1{\sqrt2}\Big)^2=0.125+0.5=0.625\\
+\text{left over}&\ \propto\ \tfrac{0.5}{\sqrt2}|a_1\rangle|10\rangle+\tfrac1{\sqrt2}|a_2\rangle|01\rangle
+\end{aligned}
+$$
+62.5% of runs succeed. the other 37.5% you throw away and run again
+
+**step 6: uncompute** (run phase estimation backwards, $\text{QPE}^\dagger$): the clock goes back to $|00\rangle$, but the $\frac1\lambda$ factors stay
+$$
+\propto\ 0.5\,|a_1\rangle+1\,|a_2\rangle
+$$
+**step 7: what state is that?** put the eigenvectors back in
+$$
+\begin{aligned}
+0.5\cdot\tfrac{|0\rangle+|1\rangle}{\sqrt2}+\tfrac{|0\rangle-|1\rangle}{\sqrt2}&=\tfrac1{\sqrt2}\big(1.5|0\rangle-0.5|1\rangle\big)\\
+\text{normalise}:\quad|x\rangle&=\frac{3|0\rangle-|1\rangle}{\sqrt{10}}\approx0.949|0\rangle-0.316|1\rangle
+\end{aligned}
+$$
+the true answer $(0.75,-0.25)$ is $0.25\times(3,-1)$: **the same direction** ✅
+
+![[HHL_2x2_circuit.png]]
+(the whole circuit. the controlled $R_y$s only need one clock bit each, because only $|01\rangle$ and $|10\rangle$ ever show up here)
+
+**step 8: reading the answer out**
+- measure $b$: you get $0$ **90%** of the time and $1$ **10%**, so $x_1^2:x_2^2=9:1$
+- the **sign** ($x_2$ is negative) doesn't show up in a plain measurement, you'd need an extra interference trick
+- the **size** of $\vec x$ isn't in the state, but here it hides in the success rate: $P(1)=C^2\|\vec x\|^2=0.75^2+0.25^2=0.625$ ✅
+- so for a 2×2 this is silly (you'd solve it in your head), but the same circuit on $\log_2N$ qubits handles an $N\times N$ system, as long as you only need something like "the ratio $x_1^2:x_2^2$" and not every number
+
+(every step checked by simulating the 4 qubit circuit numerically)
+
 ## the same problem done classically
 the 2×2 example from [[Week 3 formulas#8. the HHL algorithm]], solved the normal way, to compare
 $$
