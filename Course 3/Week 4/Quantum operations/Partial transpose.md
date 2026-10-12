@@ -27,6 +27,34 @@ $$
 | noisy Bell state (below) | smallest is $\frac{1-3p}4$ | only if $p>\frac13$ |
 
 (all checked numerically)
+## the course's worked example
+**a product state stays legal.** for $|\psi_A\rangle=\alpha|0\rangle+\beta|1\rangle$ and $|\psi_B\rangle=\gamma|0\rangle+\delta|1\rangle$, the partial transpose just swaps B's off diagonal entries ($\gamma\delta^*\leftrightarrow\gamma^*\delta$)
+$$
+\rho_{AB}=\begin{bmatrix}|\alpha|^2&\alpha\beta^*\\\alpha^*\beta&|\beta|^2\end{bmatrix}\otimes\begin{bmatrix}|\gamma|^2&\gamma\delta^*\\\gamma^*\delta&|\delta|^2\end{bmatrix}\quad\to\quad\rho_{AB}^{T_B}=\begin{bmatrix}|\alpha|^2&\alpha\beta^*\\\alpha^*\beta&|\beta|^2\end{bmatrix}\otimes\begin{bmatrix}|\gamma|^2&\gamma^*\delta\\\gamma\delta^*&|\delta|^2\end{bmatrix}
+$$
+that's B's Bloch vector **flipped across the xz plane** ($y\to-y$), which is still a valid state, so nothing goes negative
+
+**an entangled state doesn't.** for $|\Psi^+\rangle=\frac{|01\rangle+|10\rangle}{\sqrt2}$
+$$
+\rho_{AB}=\frac12\begin{bmatrix}0&0&0&0\\0&1&1&0\\0&1&1&0\\0&0&0&0\end{bmatrix}\quad\xrightarrow{T_B}\quad\rho_{AB}^{T_B}=\frac12\begin{bmatrix}0&0&0&1\\0&1&0&0\\0&0&1&0\\1&0&0&0\end{bmatrix}\quad\xrightarrow{\text{diagonalize}}\quad\frac12\begin{bmatrix}-1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1\end{bmatrix}
+$$
+(the 1s in the off diagonal blocks $Q$ and $R$ moved to the corners when each block was transposed). the trace is still 1, but one eigenvalue is $-\frac12$ → entangled
+### a shortcut: leading minors (Sylvester's criterion)
+you only need to know if **some** eigenvalue is negative, not what it is. take determinants of the top left $1\times1$, $2\times2$, $3\times3$ and $4\times4$ corners (without the $\frac12$)
+$$
+|0|=0\qquad\begin{vmatrix}0&0\\0&1\end{vmatrix}=0\qquad\begin{vmatrix}0&0&0\\0&1&0\\0&0&1\end{vmatrix}=0\qquad\begin{vmatrix}0&0&0&1\\0&1&0&0\\0&0&1&0\\1&0&0&0\end{vmatrix}=-1
+$$
+the whole determinant is the **product** of the eigenvalues, so a negative one means an odd number of negative eigenvalues: not positive → entangled. often quicker than diagonalizing
+> [!warning] it only works one way (extra)
+> a negative leading minor **proves** a negative eigenvalue. but all leading minors $\geq0$ (with some $=0$, like the first 3 here) doesn't prove positivity: for that you need every principal minor, not just the top left ones
+
+### how entangled? the partial **trace**
+once you know it's entangled: if tracing out one half gives $\frac I2$ (a diagonal matrix with equal entries), the state is **maximally** entangled. for $|\Psi^+\rangle$
+$$
+\rho_A=\text{tr}_B\,\rho_{AB}=\frac{|0\rangle\langle0|+|1\rangle\langle1|}2=\frac I2
+$$
+the same for all 4 [[Bell states]]: the pair is pure, but each half alone is completely mixed ([[Partial trace]], [[Entanglement entropy]])
+
 ## noisy Bell states (Werner states)
 mix the Bell state with completely random noise
 $$

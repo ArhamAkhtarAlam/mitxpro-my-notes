@@ -50,6 +50,8 @@ flowchart TD
 | size of message | [[Shannon entropy]] (bits) | [[Von Neumann entropy]] (qubits) |
 | decoding | classical | can be quantum |
 
+all the formulas, with examples and exercises: [[Week 2 formulas]]
+
 see also [[Quantum channels]] (the noisy channels from last week)
 
 previous week: [[Noise in quantum systems]] · next week: [[Realistic quantum computation]]

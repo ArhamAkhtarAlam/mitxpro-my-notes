@@ -47,8 +47,8 @@ flowchart TD
 - **week 4** → [[Quantum optimization]] ([[Adiabatic quantum computing]], [[Quantum annealing]], [[QAOA]], [[Grover's algorithm]], [[QASM]])
 ### Course 3: Practical Realities of Quantum Computation and Quantum Communication
 - **week 1** → [[Noise in quantum systems]] (hub): [[Density matrix]], [[Quantum channels]], [[Noise Processes]], [[Quantum Error Correction]] (all the formulas: [[Week 1 formulas]])
-- **week 2** → [[Quantum Communication]] (information theory, EPR, Bell and CHSH)
-- **week 3** → [[Realistic quantum computation]] (the [[NISQ]] era)
+- **week 2** → [[Quantum Communication]] (information theory, EPR, Bell and CHSH) (all the formulas: [[Week 2 formulas]])
+- **week 3** → [[Realistic quantum computation]] (the [[NISQ]] era) (all the formulas: [[Week 3 formulas]])
 - **week 4** → [[Benchmarking quantum systems]] (tomography and randomized benchmarking)
 ### Math
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace

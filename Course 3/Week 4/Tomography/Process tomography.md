@@ -38,6 +38,8 @@ free parameters. for $n$ qubits ($d=2^n$) that's $2^{4n}-2^{2n}$
 | 5 | about 1 million |
 | 10 | about $10^{12}$ |
 
+(the course text writes the same count as $4^{2n}-4^n$: about $4^n$ input states, each needing $4^n$ numbers from [[State tomography]], minus $4^n$ constraints from the map having to be completely positive and trace preserving)
+
 for 1 qubit: **3** of the 12 describe which unitary gate it is, the other **9** describe decoherence and damping. ==there are many more ways to decohere and damp than to be a perfect gate==
 
 ## the 4 steps (standard process tomography)

@@ -37,6 +37,7 @@ flowchart TD
 - [[Operator-sum representation]] → describing **any** process on a qubit with Kraus operators, $\mathcal E(\rho)=\sum_kE_k\rho E_k^\dagger$ (the setup for error correction and process tomography)
 - [[Quantum operations]] → the 3 rules for a legal map (trace preserving, convex-linear, **completely positive**)
 - [[Partial transpose]] → the transpose isn't a physical operation, but it's a test for entanglement
+- [[IBM Q single-qubit tomography]] → the course's IBM Q exercise: state tomography on real hardware, step by step with the actual counts
 - [[Gate fidelity]] → how good a real gate is: minimum, entanglement and average gate fidelity, and how to measure it with 3 tomography runs
 - [[Process tomography]] → rebuilding a gate's whole χ matrix ($d^4-d^2$ numbers, 240 for 2 qubits!)
 
