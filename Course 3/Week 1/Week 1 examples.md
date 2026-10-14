@@ -99,9 +99,8 @@ the cross terms die because B's bits don't match ($\langle1|0\rangle=0$): pure p
 ## 4. quantum channels
 ### dephasing on $|+\rangle$
 from [[Dephasing channel]]
-$$
-\frac12\begin{bmatrix}1&1\\1&1\end{bmatrix}\longrightarrow\frac12\begin{bmatrix}1&1-2p\\1-2p&1\end{bmatrix}
-$$
+![[Dephasing channel#^dephasing-plus]]
+
 - $p=0.1$: off diagonals $\times0.8$, the state moves in towards the $z$ axis
 - $p=\frac12$: off diagonals gone, a 50/50 classical mix
 - $|0\rangle$ and $|1\rangle$ don't change at all (no off diagonal)

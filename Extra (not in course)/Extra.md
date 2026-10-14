@@ -8,7 +8,7 @@ stuff that **isn't covered in the courses** but is still important or good to kn
 ## Course 3
 - **week 1 (more channels)** → [[Pauli channel]] (the general one), [[Bit flip channel]], [[Bit-phase flip channel]], [[Phase damping channel]] (dephasing in disguise), [[Generalized amplitude damping channel]] (at a temperature), [[Erasure channel]] (lost, but you know it)
 - **week 2 (entanglement and networks)** → [[Superdense coding]], [[Entanglement purification]], [[Quantum memory]], [[Distributed quantum computing]], [[Blind quantum computing]]
-- **week 3 (algorithms and simulation)** → [[Bernstein-Vazirani algorithm]], [[GHZ state]], [[Solovay-Kitaev theorem]], [[Tensor networks]], [[Density functional theory]]
+- **week 3 (algorithms and simulation)** → [[Bernstein-Vazirani algorithm]], [[GHZ state]], [[Solovay-Kitaev theorem]], [[Tensor networks]], [[Density functional theory]], [[HHL with 10 variables]] (with Qiskit code to simulate your own equations)
 - **week 4 (maths behind fidelity)** → [[Purification]] (the [[Partial trace]] it uses is now in Course 3 Week 1, since the course covers it)
 
 ```mermaid

@@ -235,9 +235,7 @@ $$
 e^{2\pi i \theta}
 $$
 the QFT resolves it as
-$$
-\theta \approx \frac{k}{2^n}
-$$
+![[Quantum Phase Estimation#^phase-estimate]]
 
 The smallest resolvable phase difference is therefore
 $$

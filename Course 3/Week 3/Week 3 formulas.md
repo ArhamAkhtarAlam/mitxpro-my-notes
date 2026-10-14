@@ -86,9 +86,8 @@ $$
 from [[Learning parity with noise]]
 
 **the parity function**: data bits $D$ and a secret key $k$ (both $n$ bits)
-$$
-a=D\cdot k\bmod2=\bigoplus_{i:\,k_i=1}D_i
-$$
+![[Learning parity with noise#^parity]]
+
 (XOR together the data bits where the key has a 1). eg. $k=101$ has 1s in positions 1 and 3, so for $D=111$: $a=D_1\oplus D_3=1\oplus1=0$
 
 **the quantum learner, derived** (the key fact: $H^{\otimes n}|D\rangle=\frac1{\sqrt{2^n}}\sum_y(-1)^{D\cdot y}|y\rangle$)

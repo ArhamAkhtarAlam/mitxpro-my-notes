@@ -64,11 +64,11 @@ so the ideal Bloch vector is $\vec r=(0.707,\ 0.707,\ 0)$: on the equator, halfw
 **what we expect to see** (using $P(+1)=\frac{1+r}2$): $P_{|0\rangle}=0.5$, $P_{|+\rangle}=P_{|{+i}\rangle}=\frac{1+0.707}2\approx0.854$
 ### step 1: the counts (1024 runs per basis)
 
-| basis | result $+1$ | result $-1$ |
-|---|---|---|
-| $Z$ | $\lvert0\rangle$: 489 | $\lvert1\rangle$: 535 |
-| $X$ | $\lvert+\rangle$: 835 | $\lvert-\rangle$: 189 |
-| $Y$ | $\lvert{+i}\rangle$: 845 | $\lvert{-i}\rangle$: 179 |
+| basis | result $+1$              | result $-1$              |
+| ----- | ------------------------ | ------------------------ |
+| $Z$   | $\lvert0\rangle$: 489    | $\lvert1\rangle$: 535    |
+| $X$   | $\lvert+\rangle$: 835    | $\lvert-\rangle$: 189    |
+| $Y$   | $\lvert{+i}\rangle$: 845 | $\lvert{-i}\rangle$: 179 |
 
 ### step 2: probabilities (divide by 1024)
 $$

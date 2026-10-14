@@ -4,9 +4,8 @@ every formula from Course 3 Week 2 in one place, with an **eg.** under each form
 from [[Shannon entropy]]
 
 **entropy** = how many bits of surprise (information) a random variable gives, on average
-$$
-H(X)=-\sum_xp(x)\log_2p(x)
-$$
+![[Shannon entropy#^shannon-entropy]]
+
 > [!example] eg.
 > - **fair coin**: $-\big(\frac12\log_2\frac12+\frac12\log_2\frac12\big)=-\big(\frac12(-1)+\frac12(-1)\big)=1$ bit
 > - **fair dice**: 6 outcomes at $\frac16$ each: $-6\cdot\frac16\log_2\frac16=\log_26\approx2.58$ bits
@@ -15,9 +14,8 @@ $$
 > (handy: $\log_2\frac12=-1$, $\log_2\frac14=-2$, $\log_2\frac18=-3$)
 
 **binary entropy** (2 outcomes, chances $p$ and $1-p$)
-$$
-H(p)=-p\log_2p-(1-p)\log_2(1-p)
-$$
+![[Shannon entropy#^binary-entropy]]
+
 > [!example] eg. a coin that lands heads 10% of the time
 > $$
 > \begin{aligned}
@@ -28,9 +26,8 @@ $$
 > less than 1: you can usually guess the answer, so each flip tells you less
 
 **mutual information** = how much knowing $Y$ tells you about $X$
-$$
-I(X;Y)=H(X)-H(X|Y)
-$$
+![[Shannon entropy#^mutual-information]]
+
 > [!example] eg. a fair bit sent down a line that flips it 10% of the time
 > before: $H(X)=1$. after seeing $Y$, the only doubt left is "was it flipped?", so $H(X|Y)=H(0.1)=0.469$. $I=1-0.469=0.531$ bits get through per use
 
@@ -46,9 +43,8 @@ $$
 from [[Von Neumann entropy]]
 
 the quantum version: Shannon entropy of the **eigenvalues** $\lambda_k$ of $\rho$
-$$
-S(\rho)=-\text{tr}(\rho\log_2\rho)=-\sum_k\lambda_k\log_2\lambda_k
-$$
+![[Von Neumann entropy#^von-neumann]]
+
 > [!example] eg. 3 states
 > - **pure**, eg. $|+\rangle\langle+|$: eigenvalues $1,0$, so $S=-1\log_21=0$ (no uncertainty)
 > - **completely mixed** $\frac I2$: eigenvalues $\frac12,\frac12$, so $S=1$ (the maximum for a qubit)
@@ -70,9 +66,8 @@ $$
 from [[Channel capacity]]
 
 the most information per use you can send, choosing the best way to use the channel
-$$
-C=\max_{p(x)}I(X;Y)
-$$
+![[Channel capacity#^capacity]]
+
 **binary symmetric channel** (each bit flips with chance $p$)
 $$
 C=1-H(p)
@@ -96,9 +91,8 @@ $$
 from [[CHSH game]] and [[Quantum weirdness]]
 
 the referee sends random questions $a,b\in\{0,1\}$, Alice and Bob answer $x,y\in\{0,1\}$ without talking. they **win** if
-$$
-x\oplus y=a\cdot b
-$$
+![[CHSH game#^chsh-rule]]
+
 (answers must **differ** only when both questions are 1, otherwise they must **match**)
 
 > [!example] eg. the strategy "always answer 0"
@@ -113,9 +107,8 @@ $$
 > wins 3 out of 4 question pairs: 75%
 
 **the classical limit**
-$$
-P(\text{win})\le\frac34=75\%
-$$
+![[CHSH game#^classical-limit]]
+
 > [!example] why 75% is the best: try to win all 4
 > call Alice's answers $x_0,x_1$ (to question 0 and 1) and Bob's $y_0,y_1$. winning all 4 needs
 > $$
@@ -133,24 +126,21 @@ $$
 from [[CHSH inequality]] and [[CHSH quantum strategy]]
 
 **the inequality** (each $M$ is a measurement giving $\pm1$; local realism keeps the sum between $-2$ and $2$)
-$$
--2\le E\big(M_A^zM_B^{z+x}\big)+E\big(M_A^zM_B^{z-x}\big)+E\big(M_A^xM_B^{z+x}\big)-E\big(M_A^xM_B^{z-x}\big)\le2
-$$
+![[CHSH inequality#^chsh-inequality]]
+
 **quantum** (with the singlet $|\Psi^-\rangle$): each term is $\pm\frac1{\sqrt2}$, all pointing the same way
 $$
 \langle Q\rangle=-\tfrac1{\sqrt2}-\tfrac1{\sqrt2}-\tfrac1{\sqrt2}-\tfrac1{\sqrt2}=-2\sqrt2\approx-2.83<-2
 $$
 **the link to the game**
-$$
-P(\text{win})=\frac12+\frac S8
-$$
+![[CHSH inequality#^win-from-S]]
+
 > [!example] eg.
 > classical best $S=2$: $\frac12+\frac28=0.75$ ✅. quantum $S=2\sqrt2$: $\frac12+\frac{2\sqrt2}8=0.5+0.354=0.854$
 
 **entangled photons** ($\frac{|00\rangle+|11\rangle}{\sqrt2}$) measured by polarizers at angles $\theta_A,\theta_B$
-$$
-P(\text{same answer})=\cos^2(\theta_A-\theta_B)
-$$
+![[CHSH quantum strategy#^same-answer]]
+
 > [!example] eg. the winning angles
 > the strategy uses angles that are $22.5°=\frac\pi8$ apart for the 3 "match" question pairs: $P(\text{same})=\cos^2(22.5°)=0.924^2\approx0.854$ ✅. for the "differ" pair they're $67.5°$ apart: $P(\text{same})=\cos^2(67.5°)\approx0.146$, so $P(\text{differ})=0.854$ ✅. every question pair wins 85.4%
 
@@ -177,18 +167,16 @@ $$
 from [[Defining entanglement]], [[Schmidt decomposition]] and [[Schmidt number]]
 
 **entangled** = not a product of 2 separate states
-$$
-|\psi\rangle_{AB}\neq|\phi\rangle_A\otimes|\chi\rangle_B\quad\text{for any }|\phi\rangle_A,\ |\chi\rangle_B
-$$
+![[Defining entanglement#^entangled-def]]
+
 > [!example] eg. a quick test for 2 qubits
 > write $|\psi\rangle=\alpha|00\rangle+\beta|01\rangle+\gamma|10\rangle+\delta|11\rangle$. it's a **product** exactly when $\alpha\delta-\beta\gamma=0$
 > - $\frac{|00\rangle+|01\rangle+|10\rangle+|11\rangle}2$: $\frac14-\frac14=0$ → product (it's $|+\rangle|+\rangle$)
 > - $\frac{|00\rangle+|11\rangle}{\sqrt2}$: $\frac12-0=\frac12\neq0$ → entangled
 
 **Schmidt decomposition**: any 2 part pure state can be written with matching basis states
-$$
-|\psi\rangle_{AB}=\sum_k\sqrt{\lambda_k}\;|k\rangle_A\,|k\rangle_B
-$$
+![[Schmidt decomposition#^schmidt-form]]
+
 the $\lambda_k$ are the eigenvalues of $\rho_A$ (and of $\rho_B$). the **Schmidt number** = how many $\lambda_k$ aren't 0. 1 = product, more = entangled
 
 > [!example] eg.
@@ -221,9 +209,8 @@ $$
 > 1 ebit: the most a pair of qubits can have
 
 **the maximum** (in dimension $d$)
-$$
-E_{\max}=\log_2d
-$$
+![[Entanglement entropy#^max-entanglement]]
+
 > [!example] eg.
 > 2 qubits ($d=2$): 1 ebit. 2 Bell pairs ($d=4$): $\log_24=2$ ebits. a product state: 0
 
@@ -241,20 +228,17 @@ $$
 n\text{ copies of }|\psi\rangle\ \longleftrightarrow\ \approx n\,E(\psi)\text{ EPR pairs}
 $$
 **for** $|\psi\rangle=\sqrt{1-p}\,|00\rangle+\sqrt p\,|11\rangle$
-$$
-E(\psi)=S(\rho_A)=H(p)=-p\log_2p-(1-p)\log_2(1-p)
-$$
+![[Entanglement fungibility#^fungibility-rate]]
+
 > [!example] eg. 1000 copies with $p=0.1$
 > $1000\times H(0.1)=1000\times0.469\approx469$ perfect Bell pairs
 
 **how it works**: measure $w$ = how many of the $n$ copies are in $|11\rangle$ (without learning which). the chance of each $w$ is binomial
-$$
-P(w)=\tbinom nw\,p^w(1-p)^{n-w}
-$$
+![[Entanglement fungibility#^weight-probability]]
+
 and you're left with an equal superposition of $\binom nw$ terms, worth $\log_2\binom nw$ Bell pairs. the most likely $w$ is $np$
-$$
-\log_2\tbinom n{np}\approx n\,H(p)=n\,E(\psi)\text{ EPR pairs}
-$$
+![[Entanglement fungibility#^concentration-yield]]
+
 > [!example] eg. how good the approximation is ($p=0.1$)
 >
 > | $n$ | $\log_2\binom n{0.1n}$ | $nH(0.1)$ |
@@ -318,25 +302,22 @@ from [[Quantum repeaters]]
 from [[QKD distance and key rate]], [[Increasing the key rate]] and [[Floodlight QKD]]
 
 **single photons down a fibre** (rate $R$ per second, perfect detector)
-$$
-\text{key rate}\;\propto\;R\times(\text{fraction of photons that reach Bob})
-$$
+![[QKD distance and key rate#^key-rate]]
+
 > [!example] eg.
 > $R=10^9$ photons/s over 100 km: at most $10^9\times0.01=10^7$ arrive per second (before sifting and error correction take their share)
 
 **high dimensional encoding**
-$$
-\text{bits per photon}=\log_2(\text{number of possible states})
-$$
+![[Increasing the key rate#^bits-per-photon]]
+
 > [!example] eg. time bin frames
 > $M=4$ slots → 2 bits, $M=16$ → 4 bits, $M=1024$ → 10 bits per photon
 
 **wavelength multiplexing**: $N$ wavelength channels = $N\times$ the key rate
 
 **floodlight QKD**
-$$
-\text{processing gain}=\text{optical bandwidth}\times\text{Bob's bit time}
-$$
+![[Floodlight QKD#^processing-gain]]
+
 > [!example] eg. the course's numbers
 > 2 THz of light, Bob sends at 10 Gbit/s so each bit lasts $\frac1{10^{10}}=0.1$ ns
 > $$

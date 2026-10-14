@@ -90,6 +90,8 @@ a **minimal ensemble** for $\rho$ has as many states as the rank of $\rho$. any 
 $$
 p=\frac1{\langle\psi|\rho^{-1}|\psi\rangle}
 $$
+^minimal-ensemble
+
 ($\rho^{-1}$ only on the support). eg. $\rho=\frac I2$: $\rho^{-1}=2I$, so any $|\psi\rangle$ appears with probability $\frac12$ (like $|+\rangle,|-\rangle$ at 50/50)
 
 next: [[Reduced density operator]]

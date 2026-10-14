@@ -36,6 +36,8 @@ sequenceDiagram
 $$
 \text{processing gain}=\text{optical bandwidth}\times\text{Bob's bit time}
 $$
+^processing-gain
+
 > [!important] why a listening Eve can't read it
 > the light Eve can grab from the Alice → Bob fibre is **too dim** to use as a reference for coherent detection, and the [[No-cloning theorem|no-cloning theorem]] stops her turning it into a bright copy. without Alice's bright reference, Bob's bits just look like noise to her
 ## the numbers

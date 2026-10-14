@@ -7,6 +7,8 @@ if message $x$ happens with probability $p(x)$
 $$
 H(X)=-\sum_xp(x)\log_2p(x)
 $$
+^shannon-entropy
+
 basically: how **surprising** / random the message is
 - always the same message → $H=0$ (no surprise, you don't need to send anything)
 - all messages equally likely → $H$ is as big as it can be
@@ -15,6 +17,8 @@ a coin that lands on 1 with probability $p$ (this is called the **binary entropy
 $$
 H(p)=-p\log_2p-(1-p)\log_2(1-p)
 $$
+^binary-entropy
+
 - fair coin $p=\frac12$ → $H=1$ bit
 - $p=0.9$ → $H\approx0.47$ bits (it's usually 1 so it's less surprising, and you can compress it)
 - $p=0$ or $1$ → $H=0$
@@ -32,6 +36,8 @@ $I(X;Y)$ = how much info the received message $y$ gives you about the sent messa
 $$
 I(X;Y)=H(X)-H(X|Y)
 $$
+^mutual-information
+
 - $H(X|Y)$ is how much you still don't know about $x$ after seeing $y$
 - no noise → $y$ tells you everything → $I=H(X)$
 - total noise → $y$ tells you nothing → $I=0$

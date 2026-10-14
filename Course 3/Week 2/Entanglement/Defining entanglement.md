@@ -5,6 +5,8 @@ a 2 part pure state $|\psi\rangle_{AB}$ is **entangled** if and only if you **ca
 $$
 |\psi\rangle_{AB}\neq|\phi\rangle_A\otimes|\chi\rangle_B\quad\text{for any }|\phi\rangle_A,\ |\chi\rangle_B
 $$
+^entangled-def
+
 if you **can** split it like that, it's a **product state** (not entangled). see [[Tensor product#entanglement]]
 ```mermaid
 flowchart LR

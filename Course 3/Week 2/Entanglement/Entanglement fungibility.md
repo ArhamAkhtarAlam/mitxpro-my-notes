@@ -58,10 +58,14 @@ a superposition of maximally entangled states of **different sizes** (checked nu
 $$
 P(w)=\tbinom nw\,p^w(1-p)^{n-w}
 $$
+^weight-probability
+
 which for big $n$ is approximately **Gaussian**, with mean $np$ and variance $np(1-p)$. so on average they get
 $$
 \log_2\tbinom n{np}\approx n\,H(p)=n\,E(\psi)\text{ EPR pairs}
 $$
+^concentration-yield
+
 > [!note] the overhead $\delta$
 > they don't get **exactly** $nE$: $w$ wobbles around $np$ by about $\sqrt{np(1-p)}$, so the yield is $nE$ minus something that grows like $\sqrt n$. choosing $\delta\sim\frac1{\sqrt n}$ (per copy) covers it, and the protocol gives about $n(E-\delta)$ EPR pairs with high probability. as $n\to\infty$ the fee per copy vanishes
 

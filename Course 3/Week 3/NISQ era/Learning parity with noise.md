@@ -5,6 +5,8 @@ there's a black box (an **oracle**) with a secret bit string $k$ hidden inside. 
 $$
 a=D\cdot k\bmod2=\bigoplus_{i:\,k_i=1}D_i
 $$
+^parity
+
 in words: it looks at the input bits $D_i$ where $k_i=1$, and outputs their **parity** (XOR, see [[Modular arithmetic#mod 2 and XOR]])
 
 the goal: figure out $k$ by watching what the oracle does

@@ -152,9 +152,8 @@ $$
 \end{aligned}
 $$
 **minimal ensemble**: $|\psi\rangle$ has to appear with probability
-$$
-p=\frac1{\langle\psi|\rho^{-1}|\psi\rangle}
-$$
+![[General properties of the density operator#^minimal-ensemble]]
+
 > [!example] eg. can $|+\rangle$ be part of a 2 state recipe for $\rho=\begin{bmatrix}\frac34&0\\0&\frac14\end{bmatrix}$?
 > $$
 > \begin{aligned}

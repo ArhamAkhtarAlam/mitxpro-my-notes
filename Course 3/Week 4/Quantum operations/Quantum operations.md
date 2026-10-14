@@ -3,10 +3,10 @@ the formal rules for what counts as a **legal** map $\rho\to\mathcal E(\rho)$ in
 ## the 3 rules
 ==a map $\mathcal E$ is a valid quantum operation if and only if it's trace preserving, convex-linear and completely positive==
 
-| rule | in maths | why |
-|---|---|---|
-| **1. trace preserving** | $\text{tr}\,\mathcal E(\rho)=1$ | the output has to be a real [[Density matrix\|density matrix]] (probabilities add to 1) |
-| **2. convex-linear** | $\mathcal E\big(\sum_ip_i\rho_i\big)=\sum_ip_i\,\mathcal E(\rho_i)$ | a mixture going in gives the same mixture of outputs. quantum mechanics is a **linear** matrix theory |
+| rule                       | in maths                                                              | why                                                                                                        |
+| -------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **1. trace preserving**    | $\text{tr}\,\mathcal E(\rho)=1$                                       | the output has to be a real [[Density matrix\|density matrix]] (probabilities add to 1)                    |
+| **2. convex-linear**       | $\mathcal E\big(\sum_ip_i\rho_i\big)=\sum_ip_i\,\mathcal E(\rho_i)$   | a mixture going in gives the same mixture of outputs. quantum mechanics is a **linear** matrix theory      |
 | **3. completely positive** | $(I_R\otimes\mathcal E)(\rho_{RQ})\geq0$ for **any** extra system $R$ | the output must be a legal (positive) state, **even if $\mathcal E$ only acts on part of a bigger system** |
 
 rules 1 and 2 are natural. rule 3 is the surprising one

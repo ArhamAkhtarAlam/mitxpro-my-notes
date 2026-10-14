@@ -15,6 +15,8 @@ QPE finds the phase $\theta$
 $$
 \theta\approx\frac{k}{2^n}
 $$
+^phase-estimate
+
 more counting qubits = more precise $\theta$ (see [[Quantum Fourier Transform#Phase Resolution]])
 
 ```mermaid

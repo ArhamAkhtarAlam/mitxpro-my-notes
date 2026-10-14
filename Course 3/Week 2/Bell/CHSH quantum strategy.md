@@ -43,6 +43,8 @@ and when they measure in **different** bases, $\theta_A$ and $\theta_B$ apart
 $$
 P(\text{same answer})=\cos^2(\theta_A-\theta_B)
 $$
+^same-answer
+
 ## the strategy
 
 | player | gets | measures in | as an observable |

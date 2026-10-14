@@ -77,10 +77,14 @@ $$
 $$
 \begin{bmatrix}a&c\\b&d\end{bmatrix}=a\,|0\rangle\langle0|+c\,|0\rangle\langle1|+b\,|1\rangle\langle0|+d\,|1\rangle\langle1|
 $$
+^outer-product-matrix
+
 so every gate can be written with them, eg.
 $$
 I=|0\rangle\langle0|+|1\rangle\langle1|\qquad X=|0\rangle\langle1|+|1\rangle\langle0|\qquad Z=|0\rangle\langle0|-|1\rangle\langle1|
 $$
+^paulis-outer
+
 - $I$: keep both parts ([[Identity gate]])
 - $X$: swap $0\leftrightarrow1$ ([[X gate]])
 - $Z$: keep both, but put a minus on the $|1\rangle$ part ([[Z gate]])

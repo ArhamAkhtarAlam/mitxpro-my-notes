@@ -18,6 +18,8 @@ they win if
 $$
 x\oplus y=a\cdot b
 $$
+^chsh-rule
+
 ($\oplus$ is [[Modular arithmetic|XOR]], which is the same as $x+y \bmod 2$)
 ### the win chart
 
@@ -53,6 +55,8 @@ the referee picks each of the 4 cases $\frac14$ of the time, so he lands on the 
 $$
 P(\text{win})\le\frac34=75\%
 $$
+^classical-limit
+
 and 75% is actually possible, eg. both always say $0$ (wins every case except $a=b=1$)
 
 ![[CHSH_strategies.png]]

@@ -28,9 +28,8 @@ flowchart LR
 
 ## the partial trace
 for a 2 part state (A and B), the **[[Partial trace|partial trace]]** $\text{tr}_B$ throws away B and tells you what's left for A
-$$
-\rho_A=\text{tr}_B\big(\rho_{AB}\big)
-$$
+![[Partial trace#^partial-trace]]
+
 how to do it: keep A's labels, and only keep the terms where B's ket and bra **match** ($\langle0|0\rangle=1$, $\langle0|1\rangle=0$)
 
 > [!example]- example: half of a Bell pair

@@ -50,6 +50,8 @@ if A has dimension $d$ (eg. $d=2^n$ for $n$ qubits), the most entanglement possi
 $$
 E_{\max}=\log_2d
 $$
+^max-entanglement
+
 reached by the **maximally entangled** state $\frac1{\sqrt d}\sum_x|x\rangle|x\rangle$ (see [[Schmidt number#maximally entangled states]])
 
 see also [[Schmidt number]], [[Schmidt decomposition]], [[Von Neumann entropy]]

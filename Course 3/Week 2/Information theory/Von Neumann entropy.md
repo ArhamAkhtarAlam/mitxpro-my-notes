@@ -5,6 +5,8 @@ $S(\rho)$ = the number of **qubits** you need to faithfully represent a [[Densit
 $$
 S(\rho)=-\text{tr}(\rho\log_2\rho)=-\sum_k\lambda_k\log_2\lambda_k
 $$
+^von-neumann
+
 $\lambda_k$ are the **[[Eigenvalues and eigenvectors|eigenvalues]]** of $\rho$ (the spectral unravelling from [[Density matrix#unraveling (going the other way)]])
 
 so it's just the Shannon entropy of the eigenvalues

@@ -4,6 +4,8 @@ how much information you can actually get through a noisy channel
 $$
 C=\max_{p(x)}I(X;Y)
 $$
+^capacity
+
 - $I(X;Y)$ is the **mutual information** (see [[Shannon entropy#mutual information]])
 - you pick the best possible way to send messages (the best distribution $p(x)$)
 - $C$ = the **maximum error free rate** you can send over the noisy channel (in bits per use)

@@ -2,9 +2,8 @@
 a second way to measure entanglement: **how many terms** a state needs in its [[Schmidt decomposition]]. part of [[Defining entanglement]]
 ## the definition
 write the state in Schmidt form
-$$
-|\psi\rangle_{AB}=\sum_k\sqrt{\lambda_k}\;|k\rangle_A\,|k\rangle_B
-$$
+![[Schmidt decomposition#^schmidt-form]]
+
 the **Schmidt number** = the number of **non-zero** Schmidt coefficients $\sqrt{\lambda_k}$
 
 - Schmidt number 1 → [[Tensor product|product state]], **not** entangled

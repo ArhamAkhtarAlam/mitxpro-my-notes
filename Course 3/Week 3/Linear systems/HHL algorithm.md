@@ -67,6 +67,39 @@ flowchart TD
 > [!tip] not just inverting
 > once each eigenvector has its eigenvalue attached, you could multiply by **any** function of $\lambda$, not just $\frac1\lambda$. other work uses this for other useful functions of matrices
 
+## why it works
+**1. inverting a matrix is easy in its eigenvectors.** a Hermitian $A$ can be written as "stretch each eigenvector by its eigenvalue" (the spectral decomposition, see [[Eigenvalues and eigenvectors]])
+$$
+A=\sum_k\lambda_k\,|a_k\rangle\langle a_k|\qquad\Rightarrow\qquad A^{-1}=\sum_k\frac1{\lambda_k}\,|a_k\rangle\langle a_k|
+$$
+check: $AA^{-1}=\sum_{k,l}\lambda_k\frac1{\lambda_l}|a_k\rangle\langle a_k|a_l\rangle\langle a_l|=\sum_k\frac{\lambda_k}{\lambda_k}|a_k\rangle\langle a_k|=I$ (the eigenvectors are orthonormal, so $\langle a_k|a_l\rangle=0$ unless $k=l$). so
+$$
+A^{-1}|b\rangle=\sum_k\frac{b_k}{\lambda_k}|a_k\rangle
+$$
+==solving $A\vec x=\vec b$ is just "divide each eigenvector's part by its eigenvalue"==. classically that's no shortcut: finding all $N$ eigenvectors costs about $N^3$
+
+**2. HHL never finds the eigenvectors.** quantum gates are **linear**: whatever a circuit does to each $|a_k\rangle$ on its own, it does to all of them at once when they're in a superposition. so HHL only needs a circuit that does the right thing to **one** eigenvector, and it automatically works on $|b\rangle=\sum_kb_k|a_k\rangle$, all $N$ parts in parallel, without ever knowing what the $|a_k\rangle$ are
+
+**3. $e^{iAt}$ labels each part with its eigenvalue.** on an eigenvector, any power of $A$ is just a number: $A^n|a_k\rangle=\lambda_k^n|a_k\rangle$. so the exponential (a power series) is a number too
+$$
+e^{iAt}|a_k\rangle=\sum_n\frac{(it)^n}{n!}A^n|a_k\rangle=\sum_n\frac{(it\lambda_k)^n}{n!}|a_k\rangle=e^{i\lambda_kt}|a_k\rangle
+$$
+each part picks up a phase that spins at its **own** rate $\lambda_k$. [[Quantum Phase Estimation|phase estimation]] reads that rate into a register, giving $\sum_kb_k|a_k\rangle|\lambda_k\rangle$: every part now carries its eigenvalue as a label. and $e^{iAt}$ itself is cheap to build for a sparse $A$ ([[Hamiltonian simulation]]), with a cost that grows like $\log N$, not $N$
+
+**4. a measurement does the division.** a unitary can't just shrink some amplitudes (lengths have to stay 1). the trick: use the label to rotate an extra qubit, putting amplitude $\frac C{\lambda_k}$ on $|1\rangle$ and the rest on $|0\rangle$. measuring that qubit and keeping only "1" throws the rest away, so each part is left with a factor $\frac C{\lambda_k}$. ==dividing is not unitary, so HHL pays for it with a measurement that sometimes fails==
+- the chance it works is $C^2\sum_k\frac{|b_k|^2}{\lambda_k^2}$, and $C$ can be at most $\lambda_{\min}$. so in the worst case it's about $\big(\frac{\lambda_{\min}}{\lambda_{\max}}\big)^2=\frac1{\kappa^2}$, and you need about $\kappa^2$ tries (or $\kappa$ with amplitude amplification). that's why $\kappa$ is in HHL's cost
+
+**5. uncomputing brings back the interference.** after step 4, each $|a_k\rangle$ is still tied to its label $|\lambda_k\rangle$. with different labels attached, the parts can't interfere, and the $b$ register on its own is a **mixture**, not the state $|x\rangle$ (same idea as [[Partial trace|tracing out]] half of an entangled pair). running phase estimation backwards resets every label to $|0\ldots0\rangle$, the parts can add up again, and the result is $\sum_k\frac{b_k}{\lambda_k}|a_k\rangle\propto|x\rangle$
+
+**6. why it's fast.** $N$ amplitudes live in $\log_2N$ qubits, and every step (building $e^{iAt}$, phase estimation, the rotations) takes a number of gates that grows with $\log N$ (and $s$, $\kappa$, $\frac1\epsilon$), never with $N$. the $N$ eigenvectors are handled in parallel by the superposition in step 2. that's the exponential saving, and also the catch: the answer stays inside a quantum state
+
+| step | what it does | why it's allowed |
+|---|---|---|
+| load $\lvert b\rangle$ | $N$ numbers into $\log_2N$ qubits | amplitudes can hold numbers |
+| phase estimation on $e^{iAt}$ | writes $\lambda_k$ next to each $\lvert a_k\rangle$ | $e^{iAt}$ is unitary, and only multiplies eigenvectors by a phase |
+| controlled rotation + measure | multiplies each part by $\frac C{\lambda_k}$ | measurement can do non-unitary things (at the cost of sometimes failing) |
+| undo phase estimation | erases the labels | running a unitary backwards undoes it exactly |
+
 ## worked example: solving a system with HHL, step by step
 **the equations**
 $$
@@ -220,6 +253,9 @@ $$
 - for a 2×2 this is silly (you'd solve it in your head), but the same circuit on $\log_2N$ qubits handles an $N\times N$ system, as long as you only need something like "the ratio $x_1^2:x_2^2$" and not every number
 
 (every step checked by simulating the 4 qubit circuit numerically)
+
+> [!tip] bigger version
+> the same steps on **10 equations in 10 unknowns** (padding, approximate eigenvalues and all), with Qiskit code to simulate any system you like: [[HHL with 10 variables]]
 
 ## the same problem done classically
 the **same** system as the worked example above, solved 3 normal ways so you can compare

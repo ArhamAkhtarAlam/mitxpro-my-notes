@@ -5,6 +5,8 @@ if Alice sends [[Single Photon making and detecting|single photons]] at a rate $
 $$
 \text{key rate}\;\propto\;R\times(\text{fraction of photons that reach Bob})
 $$
+^key-rate
+
 and that fraction falls **exponentially** with distance (see [[Long-distance quantum communication#losing photons]])
 
 | distance | photons that arrive |

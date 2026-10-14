@@ -49,6 +49,8 @@ if a photon could be in **4** different states it could carry **2 bits** (00, 01
 $$
 \text{bits per photon}=\log_2(\text{number of possible states})
 $$
+^bits-per-photon
+
 (same $\log_2$ as in [[Shannon entropy]])
 ### which property of the photon?
 - **orbital angular momentum** (the light's "twist") → popular in research, but it **doesn't survive** normal optical fibre

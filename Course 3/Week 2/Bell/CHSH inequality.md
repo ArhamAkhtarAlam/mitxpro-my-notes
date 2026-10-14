@@ -57,6 +57,8 @@ so averaging over many runs, $Q$'s expectation value has to stay between $-2$ an
 $$
 -2\le E\big(M_A^zM_B^{z+x}\big)+E\big(M_A^zM_B^{z-x}\big)+E\big(M_A^xM_B^{z+x}\big)-E\big(M_A^xM_B^{z-x}\big)\le2
 $$
+^chsh-inequality
+
 ==this is the **CHSH inequality**. any hidden variable (local, classical) explanation has to obey it==
 ## what quantum mechanics predicts
 now treat the measurements as quantum observables ($\hat M_A^z=\sigma_z$, $\hat M_A^x=\sigma_x$, $\hat M_B^{z\pm x}=\frac{\sigma_z\pm\sigma_x}{\sqrt2}$) on $|\Psi^-\rangle$. eg. the first one
@@ -90,6 +92,7 @@ it's the same thing as the [[CHSH game]], just counted differently. if $S=|\lang
 $$
 P(\text{win})=\frac12+\frac S8
 $$
+^win-from-S
 
 | | $S$ | P(win) |
 |---|---|---|

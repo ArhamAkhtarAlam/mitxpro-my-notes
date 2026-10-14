@@ -46,6 +46,8 @@ eg. $|+\rangle$
 $$
 \frac12\begin{bmatrix}1&1\\1&1\end{bmatrix}\longrightarrow\frac12\begin{bmatrix}1&1-2p\\1-2p&1\end{bmatrix}
 $$
+^dephasing-plus
+
 this is just mixing the old state with some of the identity (the middle of the sphere) so $|+\rangle$ gets pulled in towards the center
 
 $|0\rangle$ and $|1\rangle$ have no off diagonal so they don't move at all

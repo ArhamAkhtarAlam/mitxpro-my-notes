@@ -5,6 +5,8 @@ every 2 part pure state can be written as
 $$
 |\psi\rangle_{AB}=\sum_k\sqrt{\lambda_k}\;|k\rangle_A\,|k\rangle_B
 $$
+^schmidt-form
+
 - $|k\rangle_A$ are orthonormal states of A, and $|k\rangle_B$ are orthonormal states of B
 - $\sqrt{\lambda_k}$ are the **Schmidt coefficients**: real, positive, and $\sum_k\lambda_k=1$
 - each A state is paired with **exactly one** B state, no cross terms

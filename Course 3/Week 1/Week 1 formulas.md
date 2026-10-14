@@ -44,12 +44,10 @@ $$
 > $$
 
 **outer products build every matrix** ($|i\rangle\langle j|$ = a 1 in row $i$, column $j$)
-$$
-\begin{bmatrix}a&c\\b&d\end{bmatrix}=a\,|0\rangle\langle0|+c\,|0\rangle\langle1|+b\,|1\rangle\langle0|+d\,|1\rangle\langle1|
-$$
-$$
-I=|0\rangle\langle0|+|1\rangle\langle1|\qquad X=|0\rangle\langle1|+|1\rangle\langle0|\qquad Z=|0\rangle\langle0|-|1\rangle\langle1|
-$$
+![[Kets and bras combined#^outer-product-matrix]]
+
+![[Kets and bras combined#^paulis-outer]]
+
 > [!example] eg.
 > $|0\rangle\langle1|\,|1\rangle=|0\rangle\langle1|1\rangle=|0\rangle$ (it turns $1$ into $0$). $Z|+\rangle=\big(|0\rangle\langle0|-|1\rangle\langle1|\big)\frac{|0\rangle+|1\rangle}{\sqrt2}=\frac{|0\rangle-|1\rangle}{\sqrt2}=|-\rangle$
 > [!example] example: $|0\rangle\otimes|+\rangle$ as a vector
