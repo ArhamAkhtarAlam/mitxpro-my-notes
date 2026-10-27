@@ -21,10 +21,10 @@ $$
 > $$
 > only a 37% chance of no error at all. that's the depth limit of the NISQ era
 
-> [!question] exercise
+> [!exercise] exercise
 > (a) $\epsilon=0.005$ and $g=200$ gates: chance of no error? (b) with $\epsilon=0.001$, how many gates until the chance of no error falls to 50%?
 
-> [!success]- answer
+> [!answer]- answer
 > (a) $0.995^{200}\approx e^{-1}\approx0.37$
 > (b) $e^{-g\epsilon}=\frac12$ → $g=\frac{\ln2}\epsilon\approx693$ gates
 
@@ -67,10 +67,10 @@ $$
 >
 > the best is $m=5$, so $V_Q=2^5=32$. adding qubits doesn't help, only **better gates** do: halving $\epsilon$ moves $n^*$ up by $\sqrt2$
 
-> [!question] exercise: better gates
+> [!exercise] exercise: better gates
 > the CNOT error improves to $\epsilon=0.0025$. find $\epsilon_{\text{eff}}$, $n^*$, $m$ and $V_Q$
 
-> [!success]- answer
+> [!answer]- answer
 > $\epsilon_{\text{eff}}=0.0075$, $n^*=\frac1{\sqrt{0.0075}}\approx11.5$
 >
 > | $n$ | $d(n)$ | $\min(n,d)$ |
@@ -111,10 +111,10 @@ step 4 uses $H^{\otimes n}\sum_D|D\rangle=\sqrt{2^n}\,|0\ldots0\rangle$ and $H^{
 > with $k=0$ all the signs $(-1)^{D\cdot k}$ are $+$, giving the first line ($\to|0\rangle$). with $k=1$ the sign pattern is $+,-$, giving the second ($\to|1\rangle=|k\rangle$). with $n$ bits each bit does this on its own, so the sign pattern $(-1)^{D\cdot k}$ turns into exactly $|k\rangle$
 
 ==so half the time $a=1$ and the data qubits **are** the key $k$==. classically each query only gives you one equation about $k$ (checked numerically for $k=101$: only $0000$ and $1011$ appear, $\frac12$ each)
-> [!question] exercise
+> [!exercise] exercise
 > key $k=110$. (a) find the parity $a$ for $D=011$ and $D=111$ (b) with $n=4$ and $k=1011$, which outcomes can the quantum learner give? (c) how many noiseless classical queries do you need for $n=4$?
 
-> [!success]- answer
+> [!answer]- answer
 > (a) $011$: $0\cdot1+1\cdot1+1\cdot0=1$. $111$: $1+1+0=2\equiv0$
 > (b) only $0000\,|\,0$ and $1011\,|\,1$ (data, then ancilla), $\frac12$ each
 > (c) each query is one linear equation for $k$, so 4 independent ones (and with noise it gets **much** harder classically, but the quantum learner still just reads off $k$)
@@ -145,17 +145,17 @@ $$
 $$
 f(x)=\text{sign}\Big(\sum_i\alpha_i\,y_i\,K(x_i,x)+b\Big)
 $$
-> [!example] eg. 2 support vectors
+> [!eg] eg. 2 support vectors
 > $\vec x_1=(1,1)$ with $y_1=+1$, $\vec x_2=(-1,-1)$ with $y_2=-1$, $\alpha_1=\alpha_2=\frac14$, $b=0$, plain kernel $K(\vec x,\vec y)=\vec x\cdot\vec y$. classify $\vec x=(2,0)$:
 > $$
 > f=\text{sign}\Big(\tfrac14(+1)\underbrace{(1,1)\cdot(2,0)}_{2}+\tfrac14(-1)\underbrace{(-1,-1)\cdot(2,0)}_{-2}\Big)=\text{sign}(0.5+0.5)=+1
 > $$
 > (this is the same as $\vec w=\sum_i\alpha_iy_i\vec x_i=(\frac12,\frac12)$, and $\vec w\cdot\vec x_1=1$: the support vectors sit exactly on the margin)
 
-> [!question] exercise
+> [!exercise] exercise
 > $\vec w=(3,4)$, $b=-5$. (a) the margin (b) classify $(1,1)$ and $(0,1)$ (c) with $\phi(x)=(x,x^2)$, find $K(1,-2)$
 
-> [!success]- answer
+> [!answer]- answer
 > (a) $\frac2{\|\vec w\|}=\frac25=0.4$
 > (b) $(1,1)$: $3+4-5=2>0$ → class $+1$. $(0,1)$: $4-5=-1$ → class $-1$, and it's exactly on the margin line, so it's a **support vector**
 > (c) $1\cdot(-2)+1^2(-2)^2=-2+4=2$
@@ -179,10 +179,10 @@ so: run $U(y)$, then $U(x)$ **backwards**, measure, and $K$ = the chance of gett
 > $$
 > eg. $x=0.7$, $y=2$: $\frac{x-y}2=\frac{-1.3}2=-0.65$, $\cos(-0.65)=\cos(0.65)\approx0.796$, so $K\approx0.796^2\approx0.634$. points close together → $K\approx1$, far apart → $K\approx0$
 
-> [!question] exercise
+> [!exercise] exercise
 > with $K(x,y)=\cos^2\frac{x-y}2$: (a) $K(0,\pi)$ (b) $K(0,\frac\pi2)$ (c) with 2 qubits, $U(\vec x)=R_y(x_1)\otimes R_y(x_2)$, find $K\big((0,0),(\frac\pi2,\frac\pi2)\big)$
 
-> [!success]- answer
+> [!answer]- answer
 > (a) $\cos^2\frac\pi2=0$: $|0\rangle$ and $|1\rangle$ don't overlap at all
 > (b) $\cos^2\frac\pi4=\frac12$
 > (c) product states multiply: $K=\cos^2\frac{x_1-y_1}2\cos^2\frac{x_2-y_2}2=\frac12\cdot\frac12=\frac14$
@@ -195,10 +195,10 @@ $$
 \text{memory}=16\times2^n\text{ bytes}\qquad n=50:\ 16\times2^{50}\approx1.8\times10^{16}\text{ bytes}\approx18\text{ petabytes}
 $$
 every extra qubit **doubles** it. for molecules it's worse: if each of 80 particles can be in ~100 states, that's $100^{80}=10^{160}$ numbers, far more than atoms in the universe ($\sim10^{80}$)
-> [!question] exercise
+> [!exercise] exercise
 > memory for (a) 30 qubits (b) 40 qubits
 
-> [!success]- answer
+> [!answer]- answer
 > (a) $16\times2^{30}\approx1.7\times10^{10}$ bytes ≈ 17 GB, a good laptop
 > (b) $16\times2^{40}\approx1.8\times10^{13}$ bytes ≈ 18 TB, $2^{10}=1024$ times more for 10 extra qubits
 
@@ -244,7 +244,7 @@ $$
 | HHL (quantum) | $O(\log N\cdot s^2\kappa^2/\epsilon)$ | gives $\lvert x\rangle$ as a quantum state |
 
 the big win is $\log N$ instead of $N$, but only if $s$ and $\kappa$ are small and you only need a property of $\vec x$, not every entry
-> [!example] eg. how big the difference is
+> [!eg] eg. how big the difference is
 > $N=10^6$ unknowns, $s=10$, $\kappa=10$, $\epsilon=0.01$ (so $\log_2N\approx20$, $\log\frac1\epsilon\approx4.6$)
 >
 > | method | steps |
@@ -255,10 +255,10 @@ the big win is $\log N$ instead of $N$, but only if $s$ and $\kappa$ are small a
 >
 > HHL wins here, but make $\kappa=1000$ and it's $2\times10^{11}$, worse than gradient descent ($5\times10^{10}$). $\kappa$ matters a lot
 
-> [!question] exercise
+> [!exercise] exercise
 > (a) $\kappa$ of $\begin{bmatrix}2&0\\0&0.5\end{bmatrix}$ and of $\begin{bmatrix}2&1\\1&2\end{bmatrix}$ (b) for the second one, $\vec b$ has a 1% error. how big can the error in $\vec x$ be?
 
-> [!success]- answer
+> [!answer]- answer
 > (a) $\frac2{0.5}=4$. the second has eigenvalues $3$ and $1$ (eigenvectors $\frac{(1,1)}{\sqrt2}$, $\frac{(1,-1)}{\sqrt2}$), so $\kappa=3$
 > (b) up to $\kappa\times1\%=3\%$
 
@@ -300,10 +300,10 @@ $$
 > \Big(\tfrac12\Big)^2\Big(\frac{1/2}{(3/2)^2}+\frac{1/2}{(1/2)^2}\Big)=\frac14\Big(\frac{1/2}{9/4}+\frac{1/2}{1/4}\Big)=\frac14\big(0.222+2\big)\approx0.56
 > $$
 
-> [!question] exercise: HHL by hand
+> [!exercise] exercise: HHL by hand
 > $A=\begin{bmatrix}2&1\\1&2\end{bmatrix}$, $|b\rangle=|0\rangle$. find $|x\rangle$ the HHL way, check it classically, and find the success chance with $C=\lambda_{\min}$
 
-> [!success]- answer
+> [!answer]- answer
 > eigenvalues $3$ ($|a_1\rangle=\frac{|0\rangle+|1\rangle}{\sqrt2}$) and $1$ ($|a_2\rangle=\frac{|0\rangle-|1\rangle}{\sqrt2}$), and $|0\rangle=\frac1{\sqrt2}(|a_1\rangle+|a_2\rangle)$
 > $$
 > \begin{aligned}

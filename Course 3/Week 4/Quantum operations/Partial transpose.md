@@ -1,4 +1,4 @@
-#partial_transpose #entanglement #PPT #density_matrix
+x #partial_transpose #entanglement #PPT #density_matrix
 transposing just **one part** of a 2 qubit density matrix. it's not a physical operation (see [[Quantum operations#the transpose example (positive, but not completely positive)|why]]), but it's a great **test for entanglement**
 ## what it does
 write the $4\times4$ density matrix as four $2\times2$ blocks. the partial transpose on the second qubit, $\rho^{T_B}$, transposes **each block**
@@ -45,7 +45,7 @@ $$
 |0|=0\qquad\begin{vmatrix}0&0\\0&1\end{vmatrix}=0\qquad\begin{vmatrix}0&0&0\\0&1&0\\0&0&1\end{vmatrix}=0\qquad\begin{vmatrix}0&0&0&1\\0&1&0&0\\0&0&1&0\\1&0&0&0\end{vmatrix}=-1
 $$
 the whole determinant is the **product** of the eigenvalues, so a negative one means an odd number of negative eigenvalues: not positive → entangled. often quicker than diagonalizing
-> [!warning] it only works one way (extra)
+> [!extra] it only works one way (extra)
 > a negative leading minor **proves** a negative eigenvalue. but all leading minors $\geq0$ (with some $=0$, like the first 3 here) doesn't prove positivity: for that you need every principal minor, not just the top left ones
 
 ### how entangled? the partial **trace**

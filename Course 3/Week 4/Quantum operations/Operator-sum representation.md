@@ -1,5 +1,5 @@
 #quantum_operations #kraus_operators #quantum_channel #quantum_error_correction
-the general way to describe **anything** that can happen to a quantum state (noise, measurement, gates...) as a map $\mathcal E$ from an input [[Density matrix|density matrix]] to an output one. it's the "VERY COMPLICATED" general version from [[Quantum channels]], and the language of [[Quantum Error Correction]]. part of [[Benchmarking quantum systems]]
+the general way to describe **anything** that can happen to a quantum state (noise, measurement, gates...) as a map $\mathcal E$ from an input [[Density matrix|density matrix]] to an output one. it's the complicated general version from [[Quantum channels]], and the language of [[Quantum Error Correction]]. part of [[Benchmarking quantum systems]]
 ## the goal
 for error correction we first need to say what an **error** even is. so: describe **every** possible way a density matrix $\rho$ can turn into another one
 $$
@@ -36,6 +36,21 @@ $$
 \mathcal E(\rho)=\sum_kE_k\,\rho\,E_k^\dagger
 $$
 ^operator-sum
+
+> [!note]- why "or" turns into that sum, step by step
+> **1. each outcome, with its chance.** $E_k|\psi\rangle$ isn't normalised: its squared length is the chance of getting $k$, and dividing by its length gives the actual state left behind
+> $$
+> p_k=\big\|E_k|\psi\rangle\big\|^2=\langle\psi|E_k^\dagger E_k|\psi\rangle\qquad|\psi_k\rangle=\frac{E_k|\psi\rangle}{\sqrt{p_k}}
+> $$
+> **2. "state $|\psi_k\rangle$ with chance $p_k$" is a mixture**, so its density matrix is $\sum_kp_k|\psi_k\rangle\langle\psi_k|$ ([[Density matrix]])
+> $$
+> \sum_kp_k\,\frac{E_k|\psi\rangle}{\sqrt{p_k}}\,\frac{\langle\psi|E_k^\dagger}{\sqrt{p_k}}=\sum_kE_k\,|\psi\rangle\langle\psi|\,E_k^\dagger
+> $$
+> the $p_k$ cancels: the unnormalised $E_k|\psi\rangle$ already carry their own chances
+>
+> **3. any input $\rho$.** a mixed input is a mixture of pure ones, $\rho=\sum_jq_j|\psi_j\rangle\langle\psi_j|$, and the formula is linear, so it works term by term: $\sum_kE_k\rho E_k^\dagger$
+>
+> eg. dephasing on $|+\rangle$ with $E_0=\sqrt{1-p}\,I$, $E_1=\sqrt p\,Z$: outcome 0 leaves $|+\rangle$ (chance $1-p$), outcome 1 leaves $Z|+\rangle=|-\rangle$ (chance $p$), so $\rho=(1-p)|+\rangle\langle+|+p|-\rangle\langle-|$, the same as $E_0\rho E_0^\dagger+E_1\rho E_1^\dagger$
 
 > [!important] the operator-sum representation
 > ==any physical process on a quantum state can be written as $\mathcal E(\rho)=\sum_kE_k\,\rho\,E_k^\dagger$==, where the $E_k$ satisfy

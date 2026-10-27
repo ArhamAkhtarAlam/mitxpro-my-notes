@@ -46,7 +46,7 @@ the kernel: bright = very similar states. the 2 bright blocks show points of the
 ![[Quantum_kernel_SVM.png]]
 9 support vectors (circled), and **100%** of the new points (squares) classified right, just like the experiment
 
-> [!example]- how a quantum computer measures an overlap (extra, not in the lecture)
+> [!extra]- how a quantum computer measures an overlap (extra, not in the lecture)
 > prepare $|\phi(y)\rangle$ by running the feature map circuit for $y$, then run the feature map for $x$ **backwards** ($U(x)^\dagger$), and measure. the chance of getting all 0s is
 > $$
 > |\langle0\ldots0|U(x)^\dagger U(y)|0\ldots0\rangle|^2=|\langle\phi(x)|\phi(y)\rangle|^2

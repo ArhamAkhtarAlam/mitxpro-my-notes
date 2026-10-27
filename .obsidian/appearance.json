@@ -2,7 +2,8 @@
   "theme": "system",
   "accentColor": "#00d4aa",
   "enabledCssSnippets": [
-    "New Text Document"
+    "New Text Document",
+    "Custom callouts"
   ],
   "translucency": true,
   "cssTheme": "Void Teal"

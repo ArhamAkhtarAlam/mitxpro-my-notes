@@ -49,4 +49,6 @@ flowchart LR
 >
 > that's the whole trick behind [[Shor's algorithm]]: it makes a signal that repeats with period $r$ and uses the [[Quantum Fourier Transform]] to find $r$
 
+the same idea outside quantum computing: a crystal is a pattern that repeats in space, so X-rays diffracting off it give sharp spikes, the Bragg peaks in [[XRD]]
+
 see also [[Discrete Fourier Transform]], [[Quantum Fourier Transform]]

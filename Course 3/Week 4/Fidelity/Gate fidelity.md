@@ -1,5 +1,8 @@
 #fidelity #gate_fidelity #benchmarking #quantum_operations
 **how well does a real, noisy gate $\mathcal E$ do the ideal gate $U$ you wanted?** like [[State fidelity]], but for operations instead of states. uses the [[Operator-sum representation|noise formalism]], part of [[Benchmarking quantum systems]]
+> [!tip] a grade, not a report
+> a test grade is one number that says how you did, but not what went wrong or how to fix it. gate fidelity is that grade for a gate: one number for how close it is to the gate you wanted, without the full [[Process tomography]] report. [[Randomized benchmarking]] is the practical way to measure it
+
 ## the setup
 - $U$ = the ideal (theoretical) unitary gate or circuit
 - $\mathcal E$ = what the hardware actually does, a noisy [[Quantum operations|quantum operation]]

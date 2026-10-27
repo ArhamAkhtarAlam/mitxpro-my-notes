@@ -8,6 +8,18 @@ how to **experimentally figure out** what quantum state you actually made. at th
 > - **centre** = $\frac I2$, the equal mix of $|0\rangle$ and $|1\rangle$
 >
 > so the question is really: **where in the ball is $\rho$?**
+> [!note] where the name comes from
+> **tomography** means rebuilding something from many pieces of incomplete data, like **X-ray tomography** in medicine, which builds a 3D picture of a body from 2D X-rays taken from lots of directions. here: rebuild a quantum state from lots of measurements, each of which only gives 1 bit and destroys the state
+
+> [!example] the idea on one state: a qubit somewhere on the equator
+> 1. **measure it** (in $0/1$) over and over: the histogram comes out 50/50. so it's on the **equator**, but at which angle $\varphi$?
+> 2. **rotate by $\frac\pi2$ around $x$** before measuring, so the $y$ direction gets turned onto the measurement axis. then measure many times again
+>    - if it was on the **$+x$ axis**: the rotation doesn't move it, still **50/50**
+>    - if it was on the **$+y$ axis**: the rotation turns it to the north pole, **100% up**
+>    - anything in between gives something in between, which tells you $\varphi$
+>
+> that's the essence of tomography. the catches: how many shots make a good histogram? what if the measurement is **biased**? you also need a **perfect** $\frac\pi2$ pulse, and to make the **exact same** state every time
+
 ## the key idea: the Bloch vector
 every single qubit density matrix can be written with the identity and the 3 Pauli matrices ([[X gate|σx]], [[Y gate|σy]], [[Z gate|σz]])
 $$
@@ -66,6 +78,8 @@ rotate **each** qubit before measuring: 3 choices per qubit, so $3\times3=$ **9 
 | 10 | about a million | 59,049 |
 
 (it grows **exponentially**, the overhead problem later this week)
+
+in practice the measured numbers go into a classical **optimization** that finds the **most likely physical** density matrix (raw numbers from noisy data can give a "density matrix" with negative eigenvalues, which isn't a real state)
 ## a real experiment
 2003, **Rainer Blatt's group** in Innsbruck: 2 trapped ions in the entangled state $\frac1{\sqrt2}(|SS\rangle+|DD\rangle)$ (S and D are the 2 levels of each ion, like $|0\rangle$ and $|1\rangle$), one of the first state tomographies of a well controlled multi qubit system
 - **real part**: 4 equal non-zero bars in the corners. the **off-diagonal** corners are the signature of **entanglement**

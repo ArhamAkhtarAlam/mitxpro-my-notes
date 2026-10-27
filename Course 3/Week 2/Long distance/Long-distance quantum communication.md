@@ -18,7 +18,7 @@ flowchart LR
 ## losing photons
 photons are the best carriers of quantum information (they're fast, don't interact much with stuff, and we already have fibre everywhere), but fibre still **absorbs** them
 
-the loss is **exponential** (the **Beer–Lambert law**). good fibre loses $0.2$ dB per km
+the loss is **exponential** (the **Beer–Lambert law**, the same law as light absorbed in [[UV-vis spectroscopy#Beer–Lambert law|UV-vis spectroscopy]]). good fibre loses $0.2$ dB per km
 
 > [!info]- what is a dB (decibel)?
 > a **decibel** measures how much a signal shrinks, on a log scale

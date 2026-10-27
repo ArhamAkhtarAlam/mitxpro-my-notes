@@ -26,7 +26,7 @@ $$
 \vec x\approx(0.618,\ 0.854,\ 0.944,\ 0.978,\ 0.989,\ 0.989,\ 0.978,\ 0.944,\ 0.854,\ 0.618)
 $$
 (symmetric, because the chain looks the same from both ends. the middle is close to 1 because $-1+3-1=1$, and the ends dip because they only have 1 neighbour)
-> [!tip]- why $x_1\approx0.618$, the golden ratio (extra)
+> [!extra]- why $x_1\approx0.618$, the golden ratio (extra)
 > try $x_j=1-r^j$ in the middle equations: $-(1-r^{j-1})+3(1-r^j)-(1-r^{j+1})=1$ needs $r^2-3r+1=0$, so $r=\frac{3-\sqrt5}2\approx0.382$. then $x_1\approx1-0.382=0.618=\frac1\varphi$ (the true value is $0.61798$, the tiny difference comes from the far end of the chain)
 
 ## step 0: understanding $A$

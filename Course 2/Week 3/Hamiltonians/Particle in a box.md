@@ -22,6 +22,8 @@ so only **certain energies** are allowed
 $$
 E_n=\frac{n^2\pi^2\hbar^2}{2ma^2}\qquad\psi_n(x)=\sqrt{\frac2a}\,\sin\Big(\frac{n\pi x}a\Big)
 $$
+^energy-levels
+
 > [!important] quantized energy
 > ==$n$ is the **quantum number**.== the energy goes up as $n^2$: $E_1,\ 4E_1,\ 9E_1,\ 16E_1,\ldots$ and it can never be $0$ (the particle always jiggles, even in its lowest state)
 
@@ -52,5 +54,8 @@ kinetic energy is easy in the **momentum** basis and potential energy in the **p
 
 > [!warning] you need both terms
 > ==the Hamiltonian needs the **kinetic** energy term too, not just $V(x)$.== inside the box $V=0$, so without the kinetic term nothing would happen at all
+
+> [!example] a real particle in a box: quantum dots
+> semiconductor **quantum dots** a few nm across trap electrons like this. smaller box → bigger $E_n\propto\frac1{a^2}$ → bigger gap → they absorb and glow **bluer**. you can see it directly in [[UV-vis spectroscopy]]
 
 see also [[Hamiltonian]], [[Trotterization]], [[Quantum Fourier Transform]]
