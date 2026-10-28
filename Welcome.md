@@ -9,7 +9,7 @@ these are my notes from three **MIT xPRO** quantum computing courses. I wrote th
 > - **Course 3** → *Practical Realities of Quantum Computation and Quantum Communication*: density matrices, noise, quantum channels, information theory, Bell and the CHSH game
 > - **Math** → all the maths you need for the rest
 > - **Extra** → good-to-know topics that aren't in the courses
-> - **IISc** → characterization notes from IISc ([[Metrology and nano-characterization workshop|hub]]): [[SEM]], [[TEM]], [[FIB]], [[UV-vis spectroscopy]] and [[XRD]], each with how it connects to the quantum notes
+> - **IISc** → characterization notes from IISc ([[Metrology and nano-characterization workshop|hub]]): [[SEM]], [[TEM]], [[FIB]], [[UV-vis spectroscopy]], [[XPS]], [[UPS]], [[REELS and other XPS modes|REELS]], [[XRD]], [[Sheet resistance and contacts]] and [[MOS capacitor C-V]], each with how it connects to the quantum notes
 > - **Quantum Computation and Quantum Information** → notes from the textbook by Nielsen and Chuang
 
 ## where to start

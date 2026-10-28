@@ -193,6 +193,6 @@ heat or cool the sample while measuring (MNCF stage: **−150 °C to 500 °C**) 
 > | you measure | peaks at multiples of $\frac1d$ | outcomes near multiples of $\frac{2^n}r$ |
 > | then | Bragg's law → $d$ | continued fractions → $r$ |
 
-see also [[TEM]] (electron diffraction, same Bragg idea), [[UV-vis spectroscopy]], [[FIB]], [[Raman spectroscopy]], [[XPS]], [[Metrology and nano-characterization workshop]]
+see also [[TEM]] (electron diffraction, same Bragg idea), [[UV-vis spectroscopy]], [[FIB]], [[Raman spectroscopy]], [[XPS]] (chemistry of the top few nm), [[Metrology and nano-characterization workshop]]
 
 formulas: [[Diffraction formulas]]

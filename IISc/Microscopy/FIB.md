@@ -126,6 +126,6 @@ incidence angle, acceleration voltage and the surface binding energy of the mate
 > [!extra] fixing and inspecting quantum chips
 > FIB cuts the thin lamellae that let a [[TEM#the quantum connection|TEM]] look inside a qubit's Josephson junction, and its circuit edit tricks (cut a line, deposit a new one) work on quantum chips the same way as on normal ones. the Ga it leaves behind matters more there though: stray atoms and damage are [[Noise Processes|noise]] sources for qubits
 
-see also [[SEM]], [[TEM]], [[XRD]], [[Metrology and nano-characterization workshop]]
+see also [[SEM]], [[TEM]], [[XRD]], [[REELS and other XPS modes|ISS]] (the same collisions, used to measure), [[Metrology and nano-characterization workshop]]
 
 formulas: [[Microscopy formulas]]
