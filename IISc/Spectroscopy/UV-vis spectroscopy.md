@@ -50,6 +50,8 @@ the log means the light dies away **exponentially** with distance: every extra b
 > $$
 > double the concentration (or the path length) and $A$ doubles, but $T$ **squares**: $0.316\to0.1$
 
+![[UVvis_Beer_Lambert.png]]
+
 ## for solids and films
 - **transmittance** for transparent films on glass or quartz
 - **reflectance** (with an integrating sphere for diffuse reflectance, powders)
@@ -69,6 +71,20 @@ $$
 > \end{aligned}
 > $$
 > (semiconductors above their gap are usually $10^4$–$10^5$ cm⁻¹, so this is strongly absorbing. for a real film, correct for reflection first)
+
+![[UVvis_edge_and_fringes.png]]
+
+the fringes come from light bouncing between the top and bottom of the film and **interfering** with itself. a maximum when the round trip is a whole number of wavelengths, so the fringe spacing gives the thickness
+$$
+2nt=m\lambda\ \Rightarrow\ t=\frac{\lambda_1\lambda_2}{2n(\lambda_1-\lambda_2)}
+$$
+^fringe-thickness
+
+> [!eg] neighbouring maxima at 600 nm and 500 nm, film $n=2.0$
+> $$
+> t=\frac{600\times500}{2(2.0)(600-500)}=\frac{300\,000}{400}=750\ \text{nm}
+> $$
+> ($\lambda_1>\lambda_2$ are two **adjacent** maxima. it's the same "extra path = whole number of wavelengths" rule as [[XRD#^bragg|Bragg's law]], just for a film instead of atomic planes)
 
 ## Tauc plot (finding the bandgap)
 plot $(\alpha h\nu)^{1/n}$ against $h\nu$ and extend the straight line part down to the x-axis, the intercept is $E_g$
@@ -125,6 +141,6 @@ for diffuse reflectance use **Kubelka–Munk**, $F(R)=\frac{(1-R)^2}{2R}$, in pl
 > [!extra] it's counting single photons
 > $E=\frac{1240}{\lambda}$ is **one** photon's energy, and the PMT detector works one photon at a time: the same particles of light used in [[Single Photon making and detecting|photonic quantum computing and QKD]]. the same formula gives the energy of the X-rays in [[XRD#where the X-rays come from|XRD]] (8 keV)
 
-see also [[XRD]], [[REELS and other XPS modes|REELS]] (band gap from the surface), [[TEM]] (EELS also measures gaps), [[FTIR]], [[Raman spectroscopy]], [[Metrology and nano-characterization workshop]]
+see also [[XRD]], [[REELS and other XPS modes|REELS]] (band gap from the surface), [[TEM]] (EELS also measures gaps), [[FTIR]], [[Raman spectroscopy]], [[Spectroscopy formulas]], [[Metrology and nano-characterization workshop]]
 
 formulas: [[Spectroscopy formulas]]

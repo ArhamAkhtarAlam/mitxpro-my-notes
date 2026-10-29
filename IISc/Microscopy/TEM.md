@@ -117,6 +117,8 @@ $\lambda$ is so short that the Bragg angles are under a degree, so $\sin\theta\a
 | tells you | surface | inside, crystal structure |
 | effort | easy prep | hard prep, costly |
 
+^sem-vs-tem
+
 ## in VLSI
 - **gate stack** → measure gate oxide thickness (a few atoms of high-k)
 - **fins / nanosheets** → exact shape and width
@@ -154,6 +156,6 @@ $\lambda$ is so short that the Bragg angles are under a degree, so $\sin\theta\a
 > [!extra] checking qubits
 > the heart of a [[Superconducting qubits|superconducting qubit]] is a **Josephson junction**: two superconductors separated by an oxide barrier only ~1–2 nm thick that electron pairs **tunnel** through. cross-section TEM (on a lamella cut by [[FIB#the quantum connection|FIB]]) is how that barrier is measured. because tunnelling is exponential in the thickness, a tiny change in the barrier changes the junction a lot, and that sets the qubit's frequency
 
-see also [[FIB]], [[SEM]], [[EDS]], [[XRD]], [[UV-vis spectroscopy]], [[Metrology and nano-characterization workshop]]
+see also [[Electron microscope]], [[FIB]], [[SEM]], [[EDS]], [[XRD]], [[UV-vis spectroscopy]], [[Metrology and nano-characterization workshop]]
 
 formulas: [[Microscopy formulas]]

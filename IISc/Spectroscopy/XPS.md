@@ -198,6 +198,8 @@ $$
 $$
 \ln\!\left(1+\frac R{R_\infty}\right)=\frac d\lambda\cdot\frac1{\cos\theta}\qquad R=\frac{I_{SiO_2}}{I_{Si^0}}
 $$
+^arxps-overlayer
+
 slope $m=d/\lambda$. a line through the origin means a **uniform** oxide, a curved line means rough or graded layers
 
 ![[XPS_ARXPS.png]]
