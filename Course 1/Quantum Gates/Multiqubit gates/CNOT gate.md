@@ -46,6 +46,8 @@ x & \text{CNOT}(x)\\
 |11\rangle & |10\rangle
 \end{array}
 $$
+^truth-table
+
 (it's the same as target $\to$ target $\oplus$ control, the XOR from [[Modular arithmetic]])
 ## Example (making a Bell state)
 ![[Bell_state_circuit.png]]

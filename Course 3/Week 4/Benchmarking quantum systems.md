@@ -45,3 +45,5 @@ flowchart TD
 see also [[Quantum volume]], [[NISQ]], [[Realistic quantum computation]]
 
 previous week: [[Realistic quantum computation]]
+
+next: [[Requirements for large scale quantum computation]] (course 4)

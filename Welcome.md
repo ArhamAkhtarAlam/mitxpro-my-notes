@@ -1,12 +1,13 @@
 # Welcome 
-these are my notes from three **MIT xPRO** quantum computing courses. I wrote them while taking the courses, so they're written the way I understood things, with lots of pictures and worked examples
+these are my notes from four **MIT xPRO** quantum computing courses. I wrote them while taking the courses, so they're written the way I understood things, with lots of pictures and worked examples
 
 ![[Bloch_sphere.png|400]]
 
 > [!info] what's in here
 > - **Course 1** → *Introduction to Quantum Computing*: qubits, the Bloch sphere, quantum gates
 > - **Course 2** → *Quantum Algorithms for Cybersecurity, Chemistry, and Optimization*: cryptography and Shor's algorithm, photons and quantum key distribution, simulating molecules, quantum optimisation and Grover
-> - **Course 3** → *Practical Realities of Quantum Computation and Quantum Communication*: density matrices, noise, quantum channels, information theory, Bell and the CHSH game
+> - **Course 3** → *Practical Realities of Quantum Computation and Quantum Communication*: density matrices, noise, quantum channels, information theory, Bell and the CHSH game, NISQ algorithms, tomography
+> - **Course 4** → *Requirements for Large Scale Universal Quantum Computation*: error correction, fault tolerance, the surface code, quantum advantage ([[Requirements for large scale quantum computation|overview]])
 > - **Math** → all the maths you need for the rest
 > - **Extra** → good-to-know topics that aren't in the courses
 > - **IISc** → characterization notes from the IISc workshop ([[Metrology and nano-characterization workshop|hub]], [[Technique comparison cheat sheet|cheat sheet]], [[Glossary]]): microscopy (SEM, TEM, FIB, AFM, MSA), spectroscopy (EDS, FTIR, Raman, UV-vis, XPS, UPS, REELS), XRD and electrical (sheet resistance, MOS C–V), each with how it connects to the quantum notes
@@ -51,6 +52,9 @@ flowchart TD
 - **week 2** → [[Quantum Communication]] (information theory, EPR, Bell and CHSH) (all the formulas: [[Week 2 formulas]])
 - **week 3** → [[Realistic quantum computation]] (the [[NISQ]] era) (all the formulas: [[Week 3 formulas]])
 - **week 4** → [[Benchmarking quantum systems]] (tomography and randomized benchmarking)
+### Course 4: Requirements for Large Scale Universal Quantum Computation
+- [[Requirements for large scale quantum computation]] → the course overview: recap of course 3, the plan for error correction, fault tolerance and the surface code
+- **week 1** → [[Detecting and correcting errors]] (hub): [[Bit flip code]] and the threshold, [[Parity measurement]], [[Decoding the bit flip code]], [[Phase flip code]], [[Shor code]], [[Computational capacity]]
 ### Math
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace
 ### Quantum Computation and Quantum Information (the textbook)

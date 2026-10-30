@@ -49,4 +49,6 @@ flowchart LR
 - quantum info sent **one way** or **two ways**, maybe with an extra **classical side channel**
 - **multiple parties** instead of just 2
 
+course 4 uses this as the model for the threshold of noisy computers: [[Computational capacity]]
+
 see also [[Quantum Communication]], [[Quantum channels]]

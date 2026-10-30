@@ -85,6 +85,55 @@
       }
     },
     {
+      "query": "path:\"Course 4/Week 1\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16740241
+      }
+    },
+    {
+      "query": "path:\"Course 4\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 12798583
+      }
+    },
+    {
+      "query": "path:IISc/Microscopy  ",
+      "color": {
+        "a": 1,
+        "rgb": 9133628
+      }
+    },
+    {
+      "query": "path:IISc/Spectroscopy  ",
+      "color": {
+        "a": 1,
+        "rgb": 14262374
+      }
+    },
+    {
+      "query": "path:IISc/Diffraction  ",
+      "color": {
+        "a": 1,
+        "rgb": 8031022
+      }
+    },
+    {
+      "query": "path:IISc/Electrical  ",
+      "color": {
+        "a": 1,
+        "rgb": 14729728
+      }
+    },
+    {
+      "query": "path:IISc  ",
+      "color": {
+        "a": 1,
+        "rgb": 10777937
+      }
+    },
+    {
       "query": "path:Math  ",
       "color": {
         "a": 1,
@@ -95,7 +144,7 @@
       "query": "path:\"Extra (not in course)\"  ",
       "color": {
         "a": 1,
-        "rgb": 15557798
+        "rgb": 3355443
       }
     },
     {
@@ -116,6 +165,6 @@
   "repelStrength": 10.4334899209134,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.7466445929628361,
-  "close": true
+  "scale": 0.7590563354587205,
+  "close": false
 }
