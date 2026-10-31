@@ -33,6 +33,7 @@ There are 4 main steps in Shor's Algorithm
 - Measure the qubits in the first Register
 
 ![[Shor_algo.png]]
+(drawn with $2L=4$ qubits per register; the $X$ on $y_0$ starts the second register in $|1\rangle$)
 ### what each step does
 1. **Hadamards** → the first register becomes an equal superposition of every $x$ at once
 $$

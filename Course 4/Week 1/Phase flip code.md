@@ -57,10 +57,11 @@ the encoding circuit is the bit flip one with Hadamards around it
 
 ![[Phase_flip_encoding_circuit.png]]
 
-> [!quote]- the course's key image: the whole phase flip circuit
-> encode, $\sigma_z$ error, then Hadamards and the bit flip decoder ([[Decoding the bit flip code]]). this one leaves out the first Hadamard, so it's the $|{+}{+}{+}\rangle,|{-}{-}{-}\rangle$ version from the box below
->
-> ![[Course 4 week 1 key images.pdf#page=2]]
+the whole cycle: encode ($\psi_0\to\psi_2$), a possible $\sigma_z$ error, undo the Hadamards ($\psi_3\to\psi_4$), then the bit flip decoder ([[Decoding the bit flip code]]) and a last $\text H$ on qubit 1 to undo the first one. between $\psi_4$ and the end, a $\sigma_z$ error has become a $\sigma_x$ error
+
+![[Phase_flip_full_circuit.png]]
+
+(the course's version leaves out both Hadamards on qubit 1, which gives the $|{+}{+}{+}\rangle,|{-}{-}{-}\rangle$ code from the box below)
 
 > [!eg] check it: encode $|0\rangle$
 > $$

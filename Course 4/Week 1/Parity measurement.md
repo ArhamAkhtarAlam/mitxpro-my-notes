@@ -44,9 +44,6 @@ each error gives a different pair $(s_A,s_B)$
 
 ^syndrome-table
 
-> [!quote]- the course's key image: the syndrome table
-> ![[Course 4 week 1 key images.pdf#page=1]]
-
 ==the syndrome uniquely says if a single bit flip happened, and on which qubit==. qubit 2 is the only one in **both** checks, so it's the only one that lights up both
 ## why it doesn't destroy the state
 > [!eg] a flip on qubit 1, step by step

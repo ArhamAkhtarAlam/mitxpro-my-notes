@@ -85,10 +85,11 @@ $\sigma_y=i\sigma_x\sigma_z$ ([[Y gate]]), so a $\sigma_y$ error is just a $\sig
 
 ^shor-errors
 
-> [!quote]- the course's key image: the full nine qubit circuit
-> encode (outer phase code in blue, inner bit codes in orange), a single qubit error, then decode: each block's bit code fixes $\sigma_x$ (red), and the Hadamards plus the last two CNOTs fix the block signs. this is the "rather complicated" correction circuit the lecture skipped
->
-> ![[Course 4 week 1 key images.pdf#page=3]]
+the full circuit, the "rather complicated" one the lecture skipped: encode, a possible error, then
+① decode each block's bit code and fix its $\sigma_x$ (registers blk1–blk3)
+② Hadamards on qubits 1, 4, 7 turn the block signs into bits, and one more bit flip decode takes the majority of the signs (register sign)
+
+![[Shor_code_full_circuit.png]]
 
 ==so the nine qubit code corrects one error of any of $\sigma_x$, $\sigma_y$, $\sigma_z$==
 ## what about every other error?
