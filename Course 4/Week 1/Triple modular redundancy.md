@@ -59,24 +59,27 @@ there's no single gate failure probability that lets the system **scale to any s
 $$
 p_{\text{circuit}}=1-(1-p)^N\approx Np
 $$
-so the condition $p_{\text{circuit}}<\frac13$ means
+TMR helps when the copied circuit's error is below the break-even point: $\frac13$ at leading order, $\frac12$ exactly (same as [[Bit flip code#the threshold]]). so
 $$
-p<\frac1{3N}
+\begin{aligned}
+\text{leading order:}\quad p_{\text{circuit}}<\tfrac13\ &\Rightarrow\ p<\frac1{3N}\\
+\text{exact:}\quad 1-(1-p)^N<\tfrac12\ &\Rightarrow\ p<1-2^{-1/N}\approx\frac{\ln2}N\approx\frac{0.69}N
+\end{aligned}
 $$
 ^tmr-break-even
 
-which **keeps changing** as the circuit gets bigger
+either way it **keeps changing** as the circuit gets bigger. the dots in the plot are the exact break-even points, where the solid and dashed curves cross
 
 ![[TMR_no_threshold.png]]
 
 > [!eg] the boundary moves
 >
-> | gates $N$ | TMR helps only if $p<$ |
-> |---|---|
-> | 1 | $0.33$ |
-> | 30 | $0.011$ |
-> | 1000 | $3.3\times10^{-4}$ |
-> | $10^9$ | $3.3\times10^{-10}$ |
+> | gates $N$ | leading order $\frac1{3N}$ | exact $\approx\frac{0.69}N$ |
+> |---|---|---|
+> | 1 | $0.33$ | $0.5$ |
+> | 30 | $0.011$ | $0.023$ |
+> | 1000 | $3.3\times10^{-4}$ | $6.9\times10^{-4}$ |
+> | $10^9$ | $3.3\times10^{-10}$ | $6.9\times10^{-10}$ |
 >
 > for a big computation, the gates would have to be almost perfect already
 
@@ -90,7 +93,7 @@ so we ask for something **more**: a single error rate $p_{th}$ such that if ever
 > [!answer]-
 > ① $3(0.05)^2-2(0.05)^3=0.0075-0.00025=0.00725$
 > ② about $0.00725+0.001\approx0.0083$: the vote's own error adds straight on, and more copies can't remove it
-> ③ $p<\frac1{3\times10^4}\approx3.3\times10^{-5}$, and even then it barely helps. you'd want much better gates, or a construction with a real threshold
+> ③ $p<\frac1{3\times10^4}\approx3.3\times10^{-5}$ at leading order ($\frac{0.69}{10^4}=6.9\times10^{-5}$ exactly), and even then it barely helps. you'd want much better gates, or a construction with a real threshold
 
 see also [[Computational capacity]], [[Bit flip code]], [[Fault-tolerant quantum computing]]
 
