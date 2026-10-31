@@ -22,6 +22,11 @@ encode, (maybe) an error, then the **decoding circuit**: the same two CNOTs agai
 
 ![[Bit_flip_decoding_circuit.png]]
 
+> [!quote]- the course's key image: encode, error, decode
+> the top circuit is this note's decoder. the bottom one is the same thing for the [[Phase flip code]], with Hadamards around the error
+>
+> ![[Course 4 week 1 key images.pdf#page=2]]
+
 (the "If" box is the classical control: `0x3` means the two measured bits are $11$)
 
 > [!eg] no error

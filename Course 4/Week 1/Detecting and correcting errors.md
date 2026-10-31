@@ -20,6 +20,7 @@ flowchart TD
 - [[Phase flip code]] → the bit flip code with Hadamards around it: $|0_L\rangle$ = even states, $|1_L\rangle$ = odd states. fixes one $\sigma_z$, but makes $\sigma_x$ errors 3× worse
 - [[Shor code]] → concatenate the two: a phase code of bit codes, 9 qubits. fixes any $\sigma_x$, $\sigma_y$ or $\sigma_z$ on one qubit, and so **any** one qubit error (the Paulis are a basis, and the measurement makes the error discrete)
 - [[Computational capacity]] → Shannon's channel capacity: below it, codes make the error exponentially close to 0. the setup for the **threshold** for noisy computers
+- [[Triple modular redundancy]] → von Neumann's question for **gates** plus noise: repeat a circuit 3 times and majority vote. it helps if $p<\frac13$, but the vote is a single point of failure and there's **no threshold** ($p<\frac1{3N}$ moves with circuit size)
 
 coming up: [[Threshold theorem]], [[Logical qubit]]
 

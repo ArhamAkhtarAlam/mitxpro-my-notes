@@ -9,6 +9,13 @@ the start of a journey: **how do you build a computer out of noisy components?**
 the idea of **capacity** came out of communication: a seminal result by **Claude Shannon** in the 1940s ([[Channel capacity]], [[Shannon entropy]])
 
 two parties have a communication link, but the link is **noisy**: a wire plus noise. what's the **maximum rate** (eg. bits per second) they can communicate at, despite the noise?
+
+> [!quote]- Shannon 1948: A mathematical theory of communication
+> *The Bell System Technical Journal* **27**, pp. 379–423 and 623–656 (July and October 1948)
+> - defines entropy as the measure of information, and the capacity of a channel
+> - the noisy channel coding theorem: below the capacity the error can be made as small as you like, above it it can't
+>
+> ![[Shannon 1948 - A mathematical theory of communication.pdf#height=500]]
 ### pre-Shannon
 plot the probability of error (0 to 1) against the rate
 - the faster you talk, the more mistakes: talk at an in-between speed and some people understand you and some don't
@@ -58,6 +65,8 @@ we already saw the seed of this: the bit flip code only helps if $p$ is below a 
 > ① $C=1-0.081=0.92$ bits per use: you lose only 8% of the rate to noise, even though fixing it needs a code
 > ② 5 copies gives $0.0086$, not enough. 7 copies fails with 4 or more flips: $\binom74p^4(1-p)^3+\binom75p^5(1-p)^2+\dots\approx0.0027$, still not enough (9 copies gives about $0.00089$). the rate is only $\frac19$ by then, which is why repetition is a bad code
 > ③ $C=1-H(0.5)=1-1=0$: the output is a fair coin flip, independent of the input, so no information gets through
+
+next: von Neumann asks the same question for gates, [[Triple modular redundancy]]
 
 see also [[Channel capacity]], [[Bit flip code]], [[Quantum Communication]]
 

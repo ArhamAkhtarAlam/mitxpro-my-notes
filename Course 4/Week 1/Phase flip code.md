@@ -57,6 +57,11 @@ the encoding circuit is the bit flip one with Hadamards around it
 
 ![[Phase_flip_encoding_circuit.png]]
 
+> [!quote]- the course's key image: the whole phase flip circuit
+> encode, $\sigma_z$ error, then Hadamards and the bit flip decoder ([[Decoding the bit flip code]]). this one leaves out the first Hadamard, so it's the $|{+}{+}{+}\rangle,|{-}{-}{-}\rangle$ version from the box below
+>
+> ![[Course 4 week 1 key images.pdf#page=2]]
+
 > [!eg] check it: encode $|0\rangle$
 > $$
 > \begin{aligned}

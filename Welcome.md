@@ -54,7 +54,7 @@ flowchart TD
 - **week 4** → [[Benchmarking quantum systems]] (tomography and randomized benchmarking)
 ### Course 4: Requirements for Large Scale Universal Quantum Computation
 - [[Requirements for large scale quantum computation]] → the course overview: recap of course 3, the plan for error correction, fault tolerance and the surface code
-- **week 1** → [[Detecting and correcting errors]] (hub): [[Bit flip code]] and the threshold, [[Parity measurement]], [[Decoding the bit flip code]], [[Phase flip code]], [[Shor code]], [[Computational capacity]]
+- **week 1** → [[Detecting and correcting errors]] (hub): [[Bit flip code]] and the threshold, [[Parity measurement]], [[Decoding the bit flip code]], [[Phase flip code]], [[Shor code]], [[Computational capacity]], [[Triple modular redundancy]]
 ### Math
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace
 ### Quantum Computation and Quantum Information (the textbook)

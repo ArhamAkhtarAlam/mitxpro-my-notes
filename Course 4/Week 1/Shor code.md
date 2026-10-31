@@ -33,6 +33,14 @@ $$
 - each of those then gets its own bit flip encoder (two CNOTs) to make the blocks 1–3, 4–6, 7–9
 
 it's the same recursion as in [[Bit flip code#more levels (recursion)]], but with a **different** code at each level
+
+> [!quote]- Shor 1995: Scheme for reducing decoherence in quantum computer memory
+> *Phys. Rev. A* **52**, R2493 (October 1995), [doi:10.1103/PhysRevA.52.R2493](https://doi.org/10.1103/PhysRevA.52.R2493). the first quantum error correcting code
+> - stores one qubit in nine, assuming each qubit decoheres **independently**
+> - the codewords are the ones above, written as $(|000\rangle\pm|111\rangle)^{\otimes3}$
+> - shows that when the error rate per qubit is small enough, the encoded qubit survives with much higher fidelity
+>
+> ![[Shor 1995 - Scheme for reducing decoherence in quantum computer memory.pdf#height=500]]
 ## correcting a $\sigma_x$ error
 first correct the **inner** code. it's just the bit flip code, so if there's a bit error, you correct it
 
@@ -76,6 +84,11 @@ $\sigma_y=i\sigma_x\sigma_z$ ([[Y gate]]), so a $\sigma_y$ error is just a $\sig
 | $\sigma_y$ | both | both, one after the other |
 
 ^shor-errors
+
+> [!quote]- the course's key image: the full nine qubit circuit
+> encode (outer phase code in blue, inner bit codes in orange), a single qubit error, then decode: each block's bit code fixes $\sigma_x$ (red), and the Hadamards plus the last two CNOTs fix the block signs. this is the "rather complicated" correction circuit the lecture skipped
+>
+> ![[Course 4 week 1 key images.pdf#page=3]]
 
 ==so the nine qubit code corrects one error of any of $\sigma_x$, $\sigma_y$, $\sigma_z$==
 ## what about every other error?
