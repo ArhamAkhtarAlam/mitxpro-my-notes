@@ -1,4 +1,4 @@
-uu#quantum_error_correction #fault_tolerance #NISQ
+#quantum_error_correction #fault_tolerance #NISQ
 Course 4: **Requirements for Large Scale Universal Quantum Computation**. what it takes to run **big** quantum computers for a **long** time without the noise winning
 
 > [!important] the one idea

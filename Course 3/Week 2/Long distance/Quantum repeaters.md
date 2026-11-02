@@ -7,7 +7,6 @@ flowchart TD
 ## idea 1: error correction nodes (1996)
 put nodes along the line that use [[Quantum Error Correction]] to fix the quantum information and send it on, like a classical amplifier
 
-(the transcript says Knill and Laflamme made the first "quantum computer proposal" here, it means a repeater based on error correction)
 > [!warning] the 50% limit
 > ==because of [[No-cloning theorem|no-cloning]], this only works if **less than half** the photons are lost between nodes.== if more than half are lost, Eve (or the environment) could have as much of the information as the receiver, and that's impossible to fix
 >

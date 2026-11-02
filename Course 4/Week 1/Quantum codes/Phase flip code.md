@@ -141,6 +141,6 @@ an $X$ on any one qubit changes the number of 1s by one, so it turns even states
 > ③ flipping qubit 2 maps $000\to010$, $011\to001$, $101\to111$, $110\to100$: that's $\tfrac12(|010\rangle+|001\rangle+|111\rangle+|100\rangle)=|1_L\rangle$
 > ④ if a measurement outcome only happened for $|0_L\rangle$, getting it would tell you the logical bit and collapse $\alpha|0_L\rangle+\beta|1_L\rangle$. both have to land in the same subspace so the measurement can't tell them apart
 
-see also [[Bit flip code]], [[Dephasing channel]], [[Hadamard Gate]], [[Quantum Error Correction]]
+see also [[Bit flip code]], [[Dephasing channel]], [[Hadamard Gate]], [[Quantum Error Correction]], textbook: [[Three qubit phase flip code]]
 
 week hub: [[Detecting and correcting errors]]

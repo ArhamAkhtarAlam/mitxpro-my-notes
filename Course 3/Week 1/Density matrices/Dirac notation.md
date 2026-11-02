@@ -1,12 +1,12 @@
 #dirac_notation #density_matrix #tensor_product #cheat_sheet
 the course's cheat sheet for the maths in Course 3 (from the "Density Matrices: Introduction" page). the matrix versions of everything in [[Math/Dirac notation]], for working through [[Density matrix]] problems
-> [!warning] 2 corrections the course points out in the video
+> [!note] two to remember
 > - the [[Hadamard Gate|Hadamard]] maps $|0\rangle\to\frac{|0\rangle+|1\rangle}{\sqrt2}$ and $|1\rangle\to\frac{|0\rangle-|1\rangle}{\sqrt2}$
-> - "mixture 2" in the density matrix video is missing the normalization $\frac1{\sqrt2}$. done properly:
+> - "mixture 2" from the density matrix video, with the normalization $\frac1{\sqrt2}$ on each state:
 > $$
 > \rho_2=\frac18\begin{bmatrix}3&\sqrt3\\\sqrt3&1\end{bmatrix}+\frac18\begin{bmatrix}3&-\sqrt3\\-\sqrt3&1\end{bmatrix}=\frac18\begin{bmatrix}6&0\\0&2\end{bmatrix}=\frac14\begin{bmatrix}3&0\\0&1\end{bmatrix}
 > $$
-> (my [[Density matrix#bipartite state example]] already has the fixed version)
+> (also in [[Density matrix#bipartite state example]])
 
 ## single qubit
 ### the basis

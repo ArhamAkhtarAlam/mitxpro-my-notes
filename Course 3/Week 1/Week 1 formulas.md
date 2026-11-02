@@ -50,6 +50,7 @@ $$
 
 > [!eg] eg.
 > $|0\rangle\langle1|\,|1\rangle=|0\rangle\langle1|1\rangle=|0\rangle$ (it turns $1$ into $0$). $Z|+\rangle=\big(|0\rangle\langle0|-|1\rangle\langle1|\big)\frac{|0\rangle+|1\rangle}{\sqrt2}=\frac{|0\rangle-|1\rangle}{\sqrt2}=|-\rangle$
+
 > [!example] example: $|0\rangle\otimes|+\rangle$ as a vector
 > $$
 > \begin{bmatrix}1\\0\end{bmatrix}\otimes\frac1{\sqrt2}\begin{bmatrix}1\\1\end{bmatrix}=\frac1{\sqrt2}\begin{bmatrix}1\\1\\0\\0\end{bmatrix}=\frac{|00\rangle+|01\rangle}{\sqrt2}
@@ -83,6 +84,7 @@ $$
 > - **density matrix**: $\rho=\begin{bmatrix}0.7&0\\0&0.3\end{bmatrix}$, $P(1)=\text{tr}(\Pi_1\rho)=$ the bottom right entry $=0.3$
 > - **state after**: getting 1 from that $|\psi\rangle$ gives $\frac{\sqrt{0.3}|1\rangle}{\sqrt{0.3}}=|1\rangle$
 > - **only qubit A**: on $\Phi^+=\frac{|00\rangle+|11\rangle}{\sqrt2}$, $(|0\rangle\langle0|\otimes I)\Phi^+=\frac{|00\rangle}{\sqrt2}$, so $P(A=0)=\frac12$ and the pair becomes $|00\rangle$
+
 > [!example] example: $|\psi\rangle=\frac{|0\rangle+i|1\rangle}{\sqrt2}$
 > $$
 > P(0)=\Big|\tfrac1{\sqrt2}\Big|^2=\tfrac12\qquad P(+)=|\langle+|\psi\rangle|^2=\Big|\tfrac{1+i}2\Big|^2=\tfrac{1+1}4=\tfrac12
@@ -282,6 +284,7 @@ C=1-H(p)\qquad H(p)=-p\log_2p-(1-p)\log_2(1-p)
 $$
 > [!eg] eg.
 > $p=0.1$: $H(0.1)=-0.1\log_20.1-0.9\log_20.9\approx0.469$, so $C\approx0.531$ bits per use
+
 > [!example] example: dephasing $p=0.25$ on $|+\rangle$
 > $$
 > \frac12\begin{bmatrix}1&1\\1&1\end{bmatrix}\longrightarrow\frac12\begin{bmatrix}1&0.5\\0.5&1\end{bmatrix}\qquad(1,0,0)\to(0.5,0,0)
@@ -365,6 +368,7 @@ $$
 $$
 > [!eg] eg.
 > with $\Omega=2\pi\times5$ MHz, $\langle Z\rangle=\cos(\Omega t)$ first hits $-1$ (a full flip $|0\rangle\to|1\rangle$) at $t=\frac\pi\Omega=100$ ns
+
 > [!example] example: how fast the Rabi envelope dies
 > at $t=\frac2\sigma$: $e^{-\sigma^2t^2/2}=e^{-2}\approx0.135$, only 13.5% of the oscillation is left
 

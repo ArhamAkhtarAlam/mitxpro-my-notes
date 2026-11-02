@@ -65,8 +65,6 @@ measure $11$: qubit 1 is flipped, so apply $X$ to it → $\alpha|0\rangle+\beta|
 
 in every case qubits 2 and 3 come out in a **definite** state, not entangled with qubit 1, so measuring them doesn't touch $\alpha$ and $\beta$. the course's practice problem goes through all four cases with its own labels: [[Bit flip code practice]]
 
-> [!warning] errata in the video
-> at 4:42 the blackboard says "measure (0,1)" at the bottom. it should say **"measure (1,1)"**: qubit 1 only needs fixing when both read 1
 ## vs the parity check version
 after decoding, qubit 2 holds $q_1\oplus q_2$ and qubit 3 holds $q_1\oplus q_3$: these are **parities** too, just compared with qubit 1 instead of with the neighbour ([[Parity measurement]])
 

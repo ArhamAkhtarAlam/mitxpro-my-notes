@@ -144,6 +144,6 @@ a dephasing channel with $q=\sin^2\frac\theta2$. "a random small rotation" and "
 > ③ $H=\frac1{\sqrt2}(X+Z)$, so the measurement gives "$\sigma_x$ on that qubit" or "$\sigma_z$ on that qubit", each with probability $\frac12$, and you fix whichever you get
 > ④ $9\times9=81$ qubits
 
-see also [[Bit flip code]], [[Phase flip code]], [[Decoding the bit flip code]], [[Pauli channel]], [[Quantum Error Correction]]
+see also [[Bit flip code]], [[Phase flip code]], [[Decoding the bit flip code]], [[Pauli channel]], [[Quantum Error Correction]], textbook: [[Shor nine qubit code]], [[Quantum error-correction conditions]]
 
 week hub: [[Detecting and correcting errors]]

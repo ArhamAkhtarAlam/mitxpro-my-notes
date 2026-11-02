@@ -1,4 +1,4 @@
-x #partial_transpose #entanglement #PPT #density_matrix
+#partial_transpose #entanglement #PPT #density_matrix
 transposing just **one part** of a 2 qubit density matrix. it's not a physical operation (see [[Quantum operations#the transpose example (positive, but not completely positive)|why]]), but it's a great **test for entanglement**
 ## what it does
 write the $4\times4$ density matrix as four $2\times2$ blocks. the partial transpose on the second qubit, $\rho^{T_B}$, transposes **each block**

@@ -52,18 +52,13 @@ in every case qubits 2 and 3 **factor out** into a definite state, so measuring 
 
 ==only an error on qubit 1 needs a fix, because qubit 1 is where the decoded state comes out==. an error on qubit 2 or 3 just changes what you measure, and those qubits get thrown away
 
-> [!warning] errata in the video
-> at 4:42 in the "Quantum Error Correction Codes: Introduction" video, the blackboard says "measure (0,1)" at the bottom. it should say **"measure (1,1)"**
-
 > [!exercise] try these
 > ① $\sigma_x$ on qubits 1 **and** 3. work out $|\psi_2\rangle$ and $|\psi_3\rangle$. what do you measure, and does the circuit fix it?
-> ② why can't the answer be "measured $|0\rangle|1\rangle$"?
-> ③ a $\sigma_y$ hits qubit 1 instead ($Y|0\rangle=i|1\rangle$, $Y|1\rangle=-i|0\rangle$). what comes out of qubit 1 after the fix?
+> ② a $\sigma_y$ hits qubit 1 instead ($Y|0\rangle=i|1\rangle$, $Y|1\rangle=-i|0\rangle$). what comes out of qubit 1 after the fix?
 
 > [!answer]-
 > ① $|\psi_2\rangle=\alpha|101\rangle+\beta|010\rangle$. CNOT $1\to2$: $\alpha|111\rangle+\beta|010\rangle$. CNOT $1\to3$: $\alpha|110\rangle+\beta|010\rangle=(\alpha|1\rangle+\beta|0\rangle)|1\rangle|0\rangle$. you measure $10$, do nothing, and qubit 1 is left flipped: 2 errors fool it ([[Bit flip code#when it breaks]])
-> ② $01$ is case b, an error on qubit 3. qubit 1 is already $\alpha|0\rangle+\beta|1\rangle$, so an $X$ would **add** an error
-> ③ $|\psi_2\rangle=i\alpha|100\rangle-i\beta|011\rangle$, decode to $(i\alpha|1\rangle-i\beta|0\rangle)|11\rangle$, measure $11$, $X$ gives $i(\alpha|0\rangle-\beta|1\rangle)$. the $i$ is a global phase, but $\alpha|0\rangle-\beta|1\rangle$ is a **phase flip** the code can't see. that's why we need the [[Phase flip code]] and the [[Shor code]]
+> ② $|\psi_2\rangle=i\alpha|100\rangle-i\beta|011\rangle$, decode to $(i\alpha|1\rangle-i\beta|0\rangle)|11\rangle$, measure $11$, $X$ gives $i(\alpha|0\rangle-\beta|1\rangle)$. the $i$ is a global phase, but $\alpha|0\rangle-\beta|1\rangle$ is a **phase flip** the code can't see. that's why we need the [[Phase flip code]] and the [[Shor code]]
 
 see also [[Decoding the bit flip code]], [[Parity measurement]] (the version that keeps the state encoded), [[Phase flip code practice]]
 

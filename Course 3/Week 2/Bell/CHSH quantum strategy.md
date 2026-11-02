@@ -223,7 +223,7 @@ here they want **different** answers
 > 85.4% is also the best any quantum strategy can do (called **Tsirelson's bound**)
 
 > [!note] from the lecture
-> - someone asked if this strategy is the best possible, and yes: you **can't** beat 0.854. the proof is harder than everything else here so the lecture skips it (it was proved by Tsirelson, the transcript mishears it as "Sir Olson")
+> - someone asked if this strategy is the best possible, and yes: you **can't** beat 0.854. the proof is harder than everything else here so the lecture skips it (it was proved by Tsirelson)
 > - so the CHSH game is a game that Alice and Bob can win **more often with an entangled state than without one**, and that's what makes it useful as a test for entanglement (like in [[Ekert91]])
 
 see also [[CHSH game]], [[CHSH inequality]] (the same thing as an inequality, 2√2 > 2), [[Quantum weirdness]], [[Ekert91]]

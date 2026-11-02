@@ -59,7 +59,7 @@ flowchart TD
 ### Math
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace
 ### Quantum Computation and Quantum Information (the textbook)
-- [[Quantum Computation and Quantum Information]] → chapter 2: [[Ensembles of quantum states]], [[General properties of the density operator]], [[Reduced density operator]], [[Schmidt decomposition and purifications]], [[EPR and the Bell inequality]], [[Chapter 2 exercises]] (formulas: [[Chapter 2 formulas]])
+- [[Quantum Computation and Quantum Information]] → chapter 2: [[Ensembles of quantum states]], [[General properties of the density operator]], [[Reduced density operator]], [[Schmidt decomposition and purifications]], [[EPR and the Bell inequality]], [[Chapter 2 exercises]] (formulas: [[Chapter 2 formulas]]); chapter 10: [[Introduction to quantum error-correction]], [[Syndrome diagnosis and recovery]], [[Three qubit phase flip code]], [[Shor nine qubit code]], [[Quantum error-correction conditions]], [[Discretization of the errors]], [[Independent error models]], [[Degenerate codes and the quantum Hamming bound]], [[Classical linear codes]], [[Chapter 10 exercises]] (formulas: [[Chapter 10 formulas]])
 ### Extra (not in the courses)
 - [[Extra]] → things the courses skip but are good to know: the no-cloning theorem, more noise channels, superdense coding, GHZ states, tensor networks, purification...
 ## tips for reading

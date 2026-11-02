@@ -12,7 +12,7 @@ it's all built on [[Modular Exponentiation|modular exponentiation]] $f(x)=a^x\bm
 |---|---|---|
 | 1 | pick 2 random primes $p,q$ | $p=17,\ q=19$ |
 | 2 | modulus $N=pq$ | $N=323$ |
-| 3 | period $r=(p-1)(q-1)$ ([[Modular arithmetic|Euler's totient]]) | $r=16\times18=288$ |
+| 3 | period $r=(p-1)(q-1)$ ([[Modular arithmetic\|Euler's totient]]) | $r=16\times18=288$ |
 | 4 | pick a public exponent $e$ with $\gcd(e,r)=1$ | $e=7$ |
 | 5 | private exponent $d=e^{-1}\bmod r$ | $d=247$ |
 

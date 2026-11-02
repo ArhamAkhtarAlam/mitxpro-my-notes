@@ -8,6 +8,7 @@ how to **experimentally figure out** what quantum state you actually made. at th
 > - **centre** = $\frac I2$, the equal mix of $|0\rangle$ and $|1\rangle$
 >
 > so the question is really: **where in the ball is $\rho$?**
+
 > [!note] where the name comes from
 > **tomography** means rebuilding something from many pieces of incomplete data, like **X-ray tomography** in medicine, which builds a 3D picture of a body from 2D X-rays taken from lots of directions. here: rebuild a quantum state from lots of measurements, each of which only gives 1 bit and destroys the state
 
@@ -91,7 +92,5 @@ here's the same thing for $\frac1{\sqrt2}(|00\rangle+|11\rangle)$ from my simula
 > for this state the 3 measurements that decide the fidelity ($XX$, $YY$, $ZZ$) always give the same answer, so shot noise can't touch them. the noise shows up in the other entries instead (the tiny bars)
 
 since then, tomography has been done on much bigger quantum systems, and it's still a basic tool for diagnosing states in quantum computers
-
-(the transcript says "telegraphic measurements", it means **tomographic**)
 
 see also [[Process tomography]], [[Benchmarking quantum systems]], [[Density matrix]]

@@ -47,7 +47,7 @@ flowchart TD
 ```
 (the avalanche)
 
-### what makes a detector good or bad
+## what makes a detector good or bad
 
 | property | what it means | why it matters |
 |---|---|---|

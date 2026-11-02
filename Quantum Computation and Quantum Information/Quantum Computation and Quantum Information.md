@@ -19,9 +19,36 @@ flowchart TD
     S --> P["purifications"]
     R --> B["EPR + Bell inequality"]
 ```
+## chapter 10: quantum error-correction
+pages 425–449: the three qubit codes, the Shor code, the general theory of quantum error correction, and classical linear codes
+- [[Introduction to quantum error-correction]] → §10.1: the repetition code, the three problems for quantum codes, the bit flip code
+- [[Syndrome diagnosis and recovery]] → §10.1.1: the syndrome projectors, fidelity with and without the code, $Z_1Z_2$ and $Z_2Z_3$
+- [[Three qubit phase flip code]] → §10.1.2: the bit flip code in the $|\pm\rangle$ basis, unitarily equivalent channels
+- [[Shor nine qubit code]] → §10.2: concatenation, and why fixing 4 errors fixes all of them
+- [[Quantum error-correction conditions]] → §10.3: theorem 10.1, $PE_i^\dagger E_jP=\alpha_{ij}P$, with the proof, and correction without measurement (Box 10.1)
+- [[Discretization of the errors]] → §10.3.1: theorem 10.2, why the four Paulis are enough
+- [[Independent error models]] → §10.3.2: depolarizing and amplitude damping noise on every qubit, $1-O(p)\to1-O(p^2)$
+- [[Degenerate codes and the quantum Hamming bound]] → §10.3.3–10.3.4: no non-degenerate code under 5 qubits
+- [[Classical linear codes]] → §10.4.1: generator and parity check matrices, distance, Hamming codes, the Gilbert-Varshamov bound, dual codes
+- [[Chapter 10 exercises]] → worked answers to exercises 10.1–10.23
+- [[Chapter 10 formulas]] → every formula from these pages on one sheet
+
+```mermaid
+flowchart TD
+    R["repetition code"] --> B["bit flip code"]
+    B --> P["phase flip code<br/>(Hadamard basis)"]
+    B --> S["Shor code<br/>(concatenate both)"]
+    P --> S
+    S --> C["error-correction conditions"]
+    C --> D["discretization:<br/>4 Paulis are enough"]
+    C --> I["independent errors:<br/>p becomes p²"]
+    C --> H["degenerate codes,<br/>quantum Hamming bound"]
+    H --> L["classical linear codes<br/>(towards CSS codes)"]
+```
 ## the same ideas in the courses
 - [[Density matrix]], [[Pure state]], [[Pure and mixed states]] (Course 3 Week 1)
 - [[Partial trace]], [[Schmidt decomposition]], [[Schmidt number]], [[Purification]]
 - [[Superdense coding]], [[Bell states]], [[Teleportation]]
+- chapter 10: [[Bit flip code]], [[Parity measurement]], [[Decoding the bit flip code]], [[Phase flip code]], [[Shor code]] (Course 4 Week 1), and the channels [[Bit flip channel]], [[Depolarizing channel]], [[Amplitude damping channel]] (Course 3 Week 1)
 
 see also [[Welcome]]

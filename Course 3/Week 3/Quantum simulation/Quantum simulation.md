@@ -77,7 +77,7 @@ a quantum computer just **is** the state: 80 qubits hold all $2^{80}$ amplitudes
 | solving the Schrödinger equation exactly | **fewer than 10 atoms** | exact but tiny |
 | [[Density functional theory]] (DFT) | way more atoms | **approximate**, not accurate for every material |
 | the biggest supercomputers (petabytes of memory) | about **50 qubits** worth | memory runs out |
-| clever tricks ([[Tensor networks|tensor networks]], renormalization group) | about **70** | still nowhere near real complex materials |
+| clever tricks ([[Tensor networks\|tensor networks]], renormalization group) | about **70** | still nowhere near real complex materials |
 
 ![[Classical_simulation_memory.png]]
 every extra qubit **doubles** the memory needed ($2^n$ numbers, see [[Tensor product#for states]]). a laptop runs out around 30, the biggest supercomputers around 50 (checked: $2^{50}$ amplitudes × 16 bytes ≈ 18 petabytes)

@@ -14,7 +14,7 @@ flowchart TD
     E --> F{"measure Q2 Q3: 11?"}
     F -- "yes" --> G["X on qubit 1"]
 ```
-## steps 1 to 3: encode
+## steps 1 to 3: encode  
 $$
 \begin{aligned}
 |\psi_0\rangle&=|\psi\rangle|0\rangle|0\rangle=(\alpha|0\rangle+\beta|1\rangle)|0\rangle|0\rangle\\

@@ -211,6 +211,6 @@ $$
 > ④ from the [[#^concatenation|recursion formula]], $p^{(2)}=2.7\times10^{-11}$ is not enough, $p^{(3)}=2.2\times10^{-21}$ is: **3 levels**, 27 qubits
 > ⑤ qubit 2 flipped: apply $X$ to qubit 2, then $X$ to both $S_A$ and $S_B$ to reset them to $|00\rangle$
 
-see also [[Quantum Error Correction]], [[Noise Processes]], [[Gate fidelity]], [[Randomized benchmarking]]
+see also [[Quantum Error Correction]], [[Noise Processes]], [[Gate fidelity]], [[Randomized benchmarking]], textbook: [[Introduction to quantum error-correction]], [[Syndrome diagnosis and recovery]]
 
 week hub: [[Detecting and correcting errors]]
