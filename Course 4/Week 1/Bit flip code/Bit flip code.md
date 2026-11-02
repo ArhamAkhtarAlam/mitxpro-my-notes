@@ -28,7 +28,7 @@ $$
 $$
 ^encoding
 
-the **code words** $|000\rangle$ and $|111\rangle$ stand for the **logical** states $|0_L\rangle$ and $|1_L\rangle$ (a [[Logical qubit|logical qubit]] made of 3 physical ones)
+the **code words** $|000\rangle$ and $|111\rangle$ stand for the **logical** states $|0_L\rangle$ and $|1_L\rangle$ (a [[Logical qubit|logical qubit]] made of 3 physical ones). it's also called the **repetition code**. a quantum operation on the encoded state may change $\alpha$ and $\beta$, but it should never flip a bit **inside** a code word
 
 > [!warning] this is not three copies
 > $\alpha|000\rangle+\beta|111\rangle$ is one **entangled** state, not $(\alpha|0\rangle+\beta|1\rangle)^{\otimes3}$. you can't copy an unknown qubit ([[No-cloning theorem]]), and you don't need to

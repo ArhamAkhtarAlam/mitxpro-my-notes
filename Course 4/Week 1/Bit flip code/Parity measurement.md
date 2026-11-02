@@ -32,6 +32,15 @@ the XOR is two [[CNOT gate|CNOTs]] in a row with the ancilla as the target: flip
 | 1 | 0 | 1 | different parity, one of them flipped |
 
 $s_B$ works the same way for qubits 2 and 3
+## parity of more bits
+classically, the parity is a third **parity bit** $b_p=b_1\oplus b_2$: 0 when the two data bits are the same, 1 when they differ (quantum mechanically the XOR is a CNOT with the parity qubit as the target). it works for any number of bits: XOR them all together
+- parity $1$ if there's an **odd** number of 1s
+- parity $0$ if there's an **even** number of 1s
+
+the **weight** of a parity check is how many bits it looks at. $s_A$ and $s_B$ are **weight-two** parity checks. the [[Surface code|surface code]] uses **weight-four** checks
+
+> [!eg] a weight-four check
+> $1\oplus0\oplus1\oplus1=1$: three 1s, odd, parity 1. flip any one bit and it becomes $0$, so a single check catches any single flip among its bits, but not **which** one. that's why codes use several overlapping checks
 ## the syndrome
 each error gives a different pair $(s_A,s_B)$
 
@@ -44,7 +53,9 @@ each error gives a different pair $(s_A,s_B)$
 
 ^syndrome-table
 
-==the syndrome uniquely says if a single bit flip happened, and on which qubit==. qubit 2 is the only one in **both** checks, so it's the only one that lights up both
+==the syndrome uniquely says if a single bit flip happened, and on which qubit==. qubit 2 is the only one in **both** checks, so it's the only one that lights up both. that's why the ancillas are also called **syndrome qubits**
+
+both code words $|000\rangle$ and $|111\rangle$ have parity 0 on every pair, so a single flip always takes the state **out** of the code words, and the parity change shows it
 ## why it doesn't destroy the state
 > [!eg] a flip on qubit 1, step by step
 > the state is $\alpha|100\rangle+\beta|011\rangle$, ancillas $|S_AS_B\rangle=|00\rangle$ (written after the data qubits)

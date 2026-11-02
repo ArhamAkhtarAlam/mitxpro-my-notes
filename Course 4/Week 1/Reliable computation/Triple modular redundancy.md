@@ -59,6 +59,8 @@ there's no single gate failure probability that lets the system **scale to any s
 $$
 p_{\text{circuit}}=1-(1-p)^N\approx Np
 $$
+^circuit-error
+
 TMR helps when the copied circuit's error is below the break-even point: $\frac13$ at leading order, $\frac12$ exactly (same as [[Bit flip code#the threshold]]). so
 $$
 \begin{aligned}
@@ -83,7 +85,7 @@ either way it **keeps changing** as the circuit gets bigger. the dots in the plo
 >
 > for a big computation, the gates would have to be almost perfect already
 
-so we ask for something **more**: a single error rate $p_{th}$ such that if every gate is below it, you can build a reliable circuit of **any** size. that's what we'll call a **threshold** ([[Threshold theorem]]). the fixes: vote after **every** small step instead of once at the end, make the voting itself redundant, and repeat the construction at many levels (like [[Bit flip code#more levels (recursion)]])
+so we ask for something **more**: a single error rate $p_{th}$ such that if every gate is below it, you can build a reliable circuit of **any** size. that's what we'll call a **threshold** ([[Threshold theorem]]), and the fix is the [[Fault-tolerant NAND gate]] plus [[Recursive fault tolerance]]. the fixes: vote after **every** small step instead of once at the end, make the voting itself redundant, and repeat the construction at many levels (like [[Bit flip code#more levels (recursion)]])
 
 > [!exercise] try these
 > ① a single circuit fails with $p=0.05$. what's its error with triple modular redundancy and a perfect vote?

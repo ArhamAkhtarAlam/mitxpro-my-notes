@@ -1,4 +1,4 @@
-#quantum_error_correction #fault_tolerance #NISQ
+uu#quantum_error_correction #fault_tolerance #NISQ
 Course 4: **Requirements for Large Scale Universal Quantum Computation**. what it takes to run **big** quantum computers for a **long** time without the noise winning
 
 > [!important] the one idea
@@ -41,7 +41,7 @@ flowchart TD
 | week | topic | to-do notes |
 |---|---|---|
 | **1** | strategies for **detecting and correcting** errors: simple quantum error correcting codes, and why **parity measurements** matter | [[Detecting and correcting errors]] (hub): [[Bit flip code]], [[Parity measurement]], [[Phase flip code]], [[Shor code]], [[Logical qubit]] |
-| **2** | how reliable classical **and** quantum machines are built from unreliable components: the **threshold theorem** and the principles of **fault tolerance** | [[Fault-tolerant quantum computing]], [[Threshold theorem]] |
+| **2** | how reliable classical **and** quantum machines are built from unreliable components: the **threshold theorem** and the principles of **fault tolerance** | [[Principles of fault tolerance]] (hub): [[Threshold theorem]], [[Fault-tolerant NAND gate]], [[Recursive fault tolerance]], to-do: [[Fault-tolerant quantum computing]] |
 | **3** | quantum **error mitigation**: composite pulses, dynamical error suppression | [[Composite pulses]], [[Dynamical decoupling]] |
 | **4** | quantum **error correction** in practice: fault tolerant computing with the **surface code**, computational complexity, and what it means to show **quantum advantage** ("quantum supremacy") | [[Surface code]], [[Quantum supremacy]] |
 

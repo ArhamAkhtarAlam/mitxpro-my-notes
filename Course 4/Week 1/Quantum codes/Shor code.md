@@ -113,6 +113,8 @@ R_z(\theta)&=e^{-i\theta Z/2}=\cos\tfrac\theta2\,I-i\sin\tfrac\theta2\,Z\\
 R_z^{(1)}(\theta)\,|\psi_L\rangle&=\cos\tfrac\theta2\,|\psi_L\rangle-i\sin\tfrac\theta2\,\sigma_z^{(1)}|\psi_L\rangle
 \end{aligned}
 $$
+^rz-expansion
+
 the first part is in the "no error" subspace and the second in the "$\sigma_z$ on qubit 1" subspace ([[Phase flip code#^phase-subspaces]]). measuring which subspace gives
 - "no error" with probability $\cos^2\frac\theta2$ → the state **is** $|\psi_L\rangle$ again, do nothing
 - "$\sigma_z$ on qubit 1" with probability $\sin^2\frac\theta2$ → the state is $\sigma_z^{(1)}|\psi_L\rangle$, apply $\sigma_z$ to qubit 1
@@ -123,6 +125,8 @@ this is closely related to the fact that the [[Dephasing channel]] can also be m
 $$
 \rho\ \to\ \cos^2\tfrac\theta2\,\rho+\sin^2\tfrac\theta2\,Z\rho Z
 $$
+^dephasing-rotation
+
 a dephasing channel with $q=\sin^2\frac\theta2$. "a random small rotation" and "a $Z$ with probability $q$" are the **same channel**, so a code that fixes one fixes the other
 
 > [!eg] a $0.2$ rad phase wobble

@@ -1,6 +1,7 @@
 {
     "name": "Void Teal",
-    "version": "0.2.1",
+    "version": "1.0.0",
     "minAppVersion": "1.0.0",
-    "author": "Arham-dev"
+    "author": "Arham-dev",
+    "authorUrl": "https://github.com/ArhamAkhtarAlam"
 }
