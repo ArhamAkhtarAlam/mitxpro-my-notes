@@ -93,6 +93,25 @@ it creeps up to $\frac12$ as $k\to\infty$, and at $\frac12$ a gate just outputs 
 
 > [!answer]-
 > $\frac1{2\sqrt k}=0.05$, so $\sqrt k=10$, $k=100$
+## 5. fault-tolerant procedures
+from [[Fault-tolerant procedure]]
+
+the threshold is 1 over the number of fault paths
+
+![[Bit flip code#^threshold]]
+
+and it only works if one failure gives at most one error per block
+
+![[Fault-tolerant procedure#^single-failure]]
+
+> [!eg]- one bad component
+> a 6 gate construction where one gate can put 2 errors in a block, $p=10^{-2}$: $p_{\text{fail}}\approx p+15p^2=0.01+0.0015=0.0115$, **worse** than one gate. the fault-tolerant version gives $15p^2=1.5\times10^{-3}$
+
+> [!exercise] exercise
+> with perfect inputs, only 6 of the 15 pairs of failures really break the encoded NAND ([[Fault-tolerant procedure#examples: computing NOT]]). what threshold would $c=6$ give, and how does $p_{\text{fail}}$ at $p=0.05$ compare with $c=15$?
+
+> [!answer]-
+> $p_{th}=\frac16=0.167$. at $p=0.05$: $6(0.0025)=0.015$ vs $15(0.0025)=0.0375$. both beat $0.05$, but $c=6$ by much more (and $p=0.1$ would only work with $c=6$)
 
 see also [[Course 4 Week 1 formulas]]
 

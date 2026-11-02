@@ -73,6 +73,8 @@ draw $p_{\text{fail}}$ of the circuit against the gate error $p$. no error corre
 3. **error correct** after every encoded gate, with error correction that is itself noisy but has no single point of failure
 4. **recurse** to push the error down doubly exponentially
 
+what makes step 3 work is a precise rule, a [[Fault-tolerant procedure]]: one failure gives at most one error per block, with gates between blocks done bitwise ([[Transversal gates]])
+
 this is classical fault tolerance. the next step is to take these principles and apply them to **quantum** computation ([[Fault-tolerant quantum computing]])
 
 > [!exercise] try these

@@ -55,7 +55,7 @@ flowchart TD
 ### Course 4: Requirements for Large Scale Universal Quantum Computation
 - [[Requirements for large scale quantum computation]] → the course overview: recap of course 3, the plan for error correction, fault tolerance and the surface code
 - **week 1** → [[Detecting and correcting errors]] (hub): [[Bit flip code]] and the threshold, [[Parity measurement]], [[Decoding the bit flip code]], [[Phase flip code]], [[Shor code]], [[Computational capacity]], [[Triple modular redundancy]] (all the formulas: [[Course 4 Week 1 formulas]])
-- **week 2** → [[Principles of fault tolerance]] (hub): [[Threshold theorem]] (and the classical thresholds), [[Fault-tolerant NAND gate]] ($15p^2$, $p_{th}=\frac1{15}$), [[Recursive fault tolerance]] (doubly exponential) (all the formulas: [[Course 4 Week 2 formulas]])
+- **week 2** → [[Principles of fault tolerance]] (hub): [[Threshold theorem]] (and the classical thresholds), [[Fault-tolerant NAND gate]] ($15p^2$, $p_{th}=\frac1{15}$), [[Recursive fault tolerance]] (doubly exponential), [[Fault-tolerant procedure]] (one failure, at most one error per block), [[Transversal gates]] (all the formulas: [[Course 4 Week 2 formulas]])
 ### Math
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace
 ### Quantum Computation and Quantum Information (the textbook)

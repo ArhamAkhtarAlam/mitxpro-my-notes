@@ -25,6 +25,8 @@ flowchart TD
 - [[Threshold theorem]] → simulate any error-free circuit of size $N$ to error $\epsilon$ with $O(N\,\text{polylog}(N/\epsilon))$ noisy gates, as long as $p<p_{th}$, with $p_{th}$ **independent of $N$ and $\epsilon$**. and the known classical thresholds (von Neumann's 0.073 up to the $\frac12$ limit)
 - [[Fault-tolerant NAND gate]] → encode a bit as 3, do 3 NANDs on the encoded wires, then 3 majority votes (no single point of failure). it fails only if 2 of the 6 gates fail: $15p^2$, so $p_{th}=\frac1{15}$
 - [[Recursive fault tolerance]] → replace every gate by an encoded block, again and again: $cp_{\text{fail}}=(cp)^{2^k}$, doubly exponential, with only polylog overhead
+- [[Fault-tolerant procedure]] → why it works: $p_{th}=\frac1c$ counted on a **universal** gate, and a procedure where one failure gives **at most one error per encoded block** (else $p_{\text{fail}}\approx c_1p$, no threshold). NOT done badly (one voter) and well (three)
+- [[Transversal gates]] → gates between blocks done bitwise in parallel ($A_i$ only meets $B_i$), so errors only spread between bits that interact. the CNOT shortcut with one shared control isn't fault tolerant
 ## also this week
 - [[Course 4 Week 2 formulas]] → every formula from this week on one page, with examples and exercises
 
