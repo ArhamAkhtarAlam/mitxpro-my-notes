@@ -93,7 +93,29 @@ it creeps up to $\frac12$ as $k\to\infty$, and at $\frac12$ a gate just outputs 
 
 > [!answer]-
 > $\frac1{2\sqrt k}=0.05$, so $\sqrt k=10$, $k=100$
-## 5. fault-tolerant procedures
+## 5. the cost of fault tolerance
+from [[Cost of fault tolerance]]. the central equation
+
+![[Cost of fault tolerance#^central-equation]]
+
+each gate needs $p_{\text{fail}}\leq\frac\epsilon N$, which takes this many levels
+
+![[Cost of fault tolerance#^levels-needed]]
+
+and the whole circuit costs
+
+![[Cost of fault tolerance#^fault-tolerance-size]]
+
+> [!eg] eg. $p=10^{-2}$, $c=15$, $N/\epsilon=10^{12}$
+> $\log_{10}(10^{12}/15)=10.8$, $\log_{10}(6.67)=0.824$, so $2^k\geq13.1$ → $k=4$, and $6^4=1296$ gates per gate
+
+> [!exercise] exercise: halve the gate error
+> same as the eg. but $p=5\times10^{-3}$. how many levels now?
+
+> [!answer]- answer
+> $\log_{10}(13.3)=1.125$, $2^k\geq\frac{10.8}{1.125}=9.6$ → $k=4$ still ($k=3$ only gives 8). halving $p$ only helps a little once you're well below threshold: the levels go like $\log\log$
+
+## 6. fault-tolerant procedures
 from [[Fault-tolerant procedure]]
 
 the threshold is 1 over the number of fault paths
@@ -112,6 +134,36 @@ and it only works if one failure gives at most one error per block
 
 > [!answer]-
 > $p_{th}=\frac16=0.167$. at $p=0.05$: $6(0.0025)=0.015$ vs $15(0.0025)=0.0375$. both beat $0.05$, but $c=6$ by much more (and $p=0.1$ would only work with $c=6$)
+
+## 7. quantum fault tolerance
+from [[Fault-tolerant quantum computing]]. gates on encoded data must be in the normalizer
+
+![[Fault-tolerant quantum computing#^normalizer]]
+
+the 5 qubit and 7 qubit code generators, from [[Transversal gates on stabilizer codes]]
+
+![[Transversal gates on stabilizer codes#^five-qubit-generators]]
+
+![[Transversal gates on stabilizer codes#^steane-generators]]
+
+Shor's cat state and its phase kickback, from [[Fault-tolerant measurement]]
+
+![[Fault-tolerant measurement#^cat-state]]
+
+![[Fault-tolerant measurement#^cat-kickback]]
+
+and the first threshold estimate, from [[Quantum threshold estimate]]
+
+![[Quantum threshold estimate#^quantum-threshold]]
+
+> [!eg] eg. is $X_1X_2X_3X_4X_5X_6X_7$ in the 7 qubit code's normalizer?
+> each $Z$ generator has 4 $Z$s, so it anticommutes in 4 places: commutes. each $X$ generator commutes trivially. yes, it's $\bar X$
+
+> [!exercise] exercise: a bigger code
+> a code needs 100 gates per fault-tolerant step. estimate $p_{th}$
+
+> [!answer]- answer
+> $\binom{100}2=4950$, so $p_{th}\approx2\times10^{-4}$
 
 see also [[Course 4 Week 1 formulas]]
 

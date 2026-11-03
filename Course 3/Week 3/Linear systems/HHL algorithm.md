@@ -302,11 +302,51 @@ $$
 > - **classical**: the actual numbers $x_1=0.75$, $x_2=-0.25$. but for an $N\times N$ system, inverting or finding eigenvalues costs about $N^3$
 > - **HHL**: the **state** $|x\rangle=\frac{3|0\rangle-|1\rangle}{\sqrt{10}}$ (normalised, so the overall size is lost). measuring it gives $0$ with chance $0.9$ and $1$ with chance $0.1$, so to read every entry you'd need many runs, which kills the speed up. ==it's only worth it if you need a **property** of $\vec x$, not $\vec x$ itself==
 
-## things to watch out for (extra, not in the lecture)
+## how good is it really?
+HHL got rid of the $N$, so now look at the **other** numbers. they didn't get any better
+### stuck with $\kappa$
+- the time still grows **linearly with $\kappa$**, for classical and quantum alike, and you can **prove** this can't be reduced
+- so ==the big quantum speed ups are where $\kappa$ is **small**==. if $\kappa$ is large, the $\log N$ win gets eaten
+
+one way to think about it: "quantum circuits only do unitary things" is more of a **guideline** than a hard rule
+- $\kappa=1$: $A$ is unitary, so inverting it is easy and $\kappa$ costs nothing
+- a slightly bigger $\kappa$: $A^{-1}$ is **slightly non-unitary**, and you pay only a slightly longer run time (the filter in step ③ fails a bit more often)
+
+```mermaid
+flowchart TD
+    U["κ = 1<br/>A is unitary<br/>no extra cost"] --> M["κ a bit bigger<br/>mildly non-unitary<br/>a bit more time"]
+    M --> B["κ huge<br/>very non-unitary<br/>the speed up is gone"]
+```
+
+the same idea shows up beyond linear systems
+- **better [[Hamiltonian simulation]]**: write $e^{-iHt}$ as its Taylor series, keep lots of terms, and add them up as a **linear combination** of (mostly) unitaries. the steps in between are non-unitary, but only mildly, so it stays cheap, and the whole thing is a very efficient algorithm
+- **simulating ODEs** (Dominic Berry): the [[Hamiltonian|Schrödinger equation]] is an ODE whose time evolution is exactly unitary. Berry's algorithm handles ODEs whose evolution is a little non-unitary, and the cost grows with **how** non-unitary it is
+### the input problem
+HHL wants $|b\rangle$ with the data in its amplitudes, and $A$ computable row by row. the same issue comes up in quantum machine learning ([[Quantum machine learning]]). to be useful it has to be a **complete package** that starts and ends with **classical** data, like [[Shor's algorithm]] wraps the purely quantum [[Quantum Fourier Transform|QFT]] in classical steps
+
+```mermaid
+flowchart TD
+    C["classical input<br/>y₁ … yₙ (n numbers)"] --> L["make |b⟩<br/>(N dimensional)"]
+    L --> H["HHL"]
+    H --> X["|x⟩"]
+    X --> O["measure, estimate<br/>observables (the easy part)"]
+```
+
+- **the output is the easier end**: measure $|x\rangle$ and estimate the observables you need, which is often what you wanted anyway
+- **the input is the hard end**, and still an open research question. two ideas:
+
+| idea | how | size |
+|---|---|---|
+| **quantum RAM** | new hardware that can be queried in superposition, eg. like a CD-ROM read by a photon in a superposition of positions: it picks up a phase from which cell it reads **and** from the data stored there | $N\approx n$: one amplitude per stored number. nobody has built a big one yet (just like big quantum computers) |
+| **algorithmic generation** | a small classical input fed into an algorithm that builds a big state, eg. a nonlinear embedding into a bigger space, or a **shape** (where there's material and where there isn't) turned into a finely discretized finite element model for the wave equation | $N\gg n$ |
+
+> [!important] the takeaway
+> ==HHL is fast only if $\kappa$ is small **and** the input can be loaded fast **and** you only need a property of $\vec x$==. those steps still have to be worked out before it solves practical problems
+
+## things to watch out for
 > [!warning]- the fine print
 > - **the filter doesn't always work**: strictly, the **amplitude** gets the $\frac1{\lambda_i}$ (so the chance goes like $\frac1{\lambda_i^2}$), and in the worst case the success chance is only about $\frac1{\kappa^2}$, so you repeat it or use a trick called amplitude amplification. that's part of why $\kappa$ still matters a lot (in my $4\times4$ check it worked 35% of the time)
-> - **loading $|b\rangle$** has to be fast too, or it eats the speed up
+> - **loading $|b\rangle$** has to be fast too, or it eats the speed up (see [[#the input problem]])
 > - **reading $|x\rangle$**: you can't read out all $N$ numbers (that would take $N$ measurements again). you can only get things like overall properties or averages of $\vec x$
-> - the lecture said there are issues the classical algorithm doesn't have, so these will probably come up next
 
 see also [[Linear systems of equations]], [[Quantum Phase Estimation]], [[Quantum Fourier Transform]]

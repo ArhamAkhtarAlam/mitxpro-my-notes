@@ -18,7 +18,7 @@
 taking it apart
 - **the goal**: a circuit of size $N$ with perfect gates
 - **the simulation**: a bigger circuit made of real gates, each failing with probability $p$, that gives the same output with error at most $\epsilon$
-- **the cost**: the size grows only in proportion to $N$, times a factor that's only **logarithmic** in $\frac1\epsilon$. a very aggressive (good) scaling
+- **the cost**: the size grows only in proportion to $N$, times a factor that's only **logarithmic** in $\frac1\epsilon$. a very aggressive (good) scaling (proved in [[Cost of fault tolerance]])
 - **the condition**: $p$ must be below $p_{th}$, and $p_{th}$ is a capacity that works for **any size** circuit (independent of $N$) and any **accuracy** (independent of $\epsilon$)
 
 compare triple modular redundancy: its condition $p<\frac1{3N}$ ([[Triple modular redundancy#^tmr-break-even]]) **does** depend on $N$, so it's not a threshold in this sense
@@ -47,7 +47,7 @@ how big is $p_{th}$ for real constructions? (the plot in [[Recursive fault toler
 | von Neumann | 1950s | $\geq0.073$ | 3 input | his assumptions weren't quite as strict, eg. not every gate had to be noisy |
 | Hajek and Weller | 1991 | $0.167\approx\frac16$ | 3 input | |
 | Evans and Pippenger | 1998 | $\approx0.089$ | 2 input (NAND) | worse than the 3 input numbers, but for gates that are [[Quantum gate#Universal gate sets\|universal]] on their own |
-| upper bound | (lecture: Evans and Pippenger, 2008) | $\leq\frac12-\frac1{2\sqrt k}$ | $k$ input | |
+| upper bound (Evans and Schulman) | 2003 | $\leq\frac12-\frac1{2\sqrt k}$ | $k$ input | |
 
 - the 3 input results assume **more** capability (a 3 input gate can do more), so it's no surprise they're higher. NAND gates are universal for classical computation, so their threshold is the one we'd really like to know
 - you want $p_{th}$ as **high** as possible: the higher it is, the worse the gates you can compute with
@@ -55,7 +55,7 @@ how big is $p_{th}$ for real constructions? (the plot in [[Recursive fault toler
 - as $k$ gets large, the bound creeps up to $\frac12$: $0.211$ for $k=3$, $0.333$ for $k=9$, $0.450$ for $k=101$. so maybe gates failing 49.9% of the time could work, but nobody can show that it's realisable
 
 > [!extra] the exact numbers
-> the Evans and Pippenger 2 input NAND threshold is $\frac{3-\sqrt7}4=0.0886$. the $\frac12-\frac1{2\sqrt k}$ bound is usually credited to Evans and Schulman (2003). these thresholds are for **formulas** (circuits where each output is used only once)
+> the Evans and Pippenger 2 input NAND threshold is exactly $\frac{3-\sqrt7}4=0.0886$. these thresholds are for **formulas** (circuits where each output is used only once)
 
 > [!exercise] try these
 > ① a construction has $p_{th}=0.01$. your gates fail with $p=0.005$. can you run a circuit with $10^{15}$ gates reliably? what about $p=0.02$?

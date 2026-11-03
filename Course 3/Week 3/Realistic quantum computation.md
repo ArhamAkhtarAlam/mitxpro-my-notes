@@ -19,7 +19,7 @@ flowchart TD
 - [[Quantum machine learning]] → [[Support vector machines]], [[Quantum kernel SVM]]
 - [[Quantum simulation]] → simulating molecules and materials, why classical computers can't, and the ammonia challenge
 - [[Linear systems of equations]] → solving A x = b classically, sparsity and the condition number (setup for [[HHL algorithm|HHL]])
-- [[HHL algorithm]] → the quantum linear system solver: log N instead of N, but with a very different input and output
+- [[HHL algorithm]] → the quantum linear system solver: log N instead of N, but with a very different input and output; how good it really is (stuck with κ, the input problem, quantum RAM)
 
 all the formulas, worked out step by step: [[Week 3 formulas]]
 

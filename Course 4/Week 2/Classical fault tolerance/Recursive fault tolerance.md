@@ -66,7 +66,7 @@ draw $p_{\text{fail}}$ of the circuit against the gate error $p$. no error corre
 - the crossing point doesn't move with $N$ or $\epsilon$, exactly what the [[Threshold theorem]] asks for. ==a remarkable property to have==
 
 > [!extra] where the polylog comes from
-> to reach a failure probability $\epsilon$ you need $(cp)^{2^k}\approx c\epsilon$, so $2^k\approx\frac{\log(1/c\epsilon)}{\log(1/cp)}$. the number of gates per logical gate is $6^k=(2^k)^{\log_26}=(2^k)^{2.58}$, so the overhead is $\big(\log\frac1\epsilon\big)^{2.58}$ (times constants): **polylogarithmic**. for a whole circuit of $N$ gates, each one needs error about $\frac\epsilon N$, which gives the $O\big(N\,\text{polylog}(N/\epsilon)\big)$ in the theorem
+> each level costs $6\times$ more gates but squares the error, so you only need a few levels. working that out gives the $O\big(N\,\text{polylog}(N/\epsilon)\big)$ in the theorem: [[Cost of fault tolerance]]
 ## so, the principles of classical fault tolerance
 1. **encode** the data (redundancy)
 2. **compute on the encoded data**, never decode in between
