@@ -11,12 +11,17 @@ stuff that **isn't covered in the courses** but is still important or good to kn
 - **week 3 (algorithms and simulation)** → [[Bernstein-Vazirani algorithm]], [[GHZ state]], [[Solovay-Kitaev theorem]], [[Tensor networks]], [[Density functional theory]], [[HHL with 10 variables]] (with Qiskit code to simulate your own equations)
 - **week 4 (maths behind fidelity)** → [[Purification]] (the [[Partial trace]] it uses is now in Course 3 Week 1, since the course covers it)
 
+## Course 4
+- **week 2 (behind quantum fault tolerance)** → [[Stabilizer codes]] (codes as the states a few Paulis leave alone, syndromes, $[\![n,k,d]\!]$), [[CSS codes]] (two classical codes, one for bit flips and one for phase flips: the Steane code), [[Clifford group]] ($H$, $S$, CNOT: Paulis to Paulis, 24 on one qubit), [[Gottesman-Knill theorem]] (why Clifford circuits are easy to simulate)
+
 ```mermaid
 flowchart TD
     NC["No-cloning"] --> SD["Superdense coding"]
     PT["Partial trace"] --> PU["Purification"]
     PU --> EP["Entanglement purification"]
     PK["Phase kickback"] --> BV["Bernstein-Vazirani"]
+    ST["Stabilizer codes"] --> CSS["CSS codes"]
+    CL["Clifford group"] --> GK["Gottesman-Knill"]
     EP --> QM["Quantum memory"] --> DQC["Distributed QC"] --> BQC["Blind QC"]
 ```
 (some rough "read this first" links)

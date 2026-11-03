@@ -110,4 +110,4 @@ remarkably, the dual construction comes up naturally in quantum error correction
 
 see also [[Binary symmetric channel]], [[Shannon entropy]], [[Channel capacity]], [[Degenerate codes and the quantum Hamming bound]]
 
-next: [[Chapter 10 exercises]]
+next: [[Calderbank-Shor-Steane codes]]

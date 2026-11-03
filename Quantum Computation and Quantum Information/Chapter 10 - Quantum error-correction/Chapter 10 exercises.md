@@ -1,5 +1,5 @@
 #textbook #quantum_error_correction #exercises
-worked answers to the exercises on p. 428–449 of the book (10.1 to 10.23). part of [[Quantum Computation and Quantum Information]]
+worked answers to the exercises on p. 428–474 of the book (10.1 to 10.61). part of [[Quantum Computation and Quantum Information]]
 ## 10.1 the encoding circuit works
 from [[Introduction to quantum error-correction#the bit flip channel and the bit flip code]]. CNOT from qubit 1 to 2, then from 1 to 3
 $$
@@ -137,4 +137,115 @@ $$
 $$
 so for large $n$ you can get $k/n$ as close to $1-H(2t/n)$ as you like ∎ ([[Classical linear codes#^gilbert-varshamov]])
 
-see also [[Chapter 10 formulas]], [[Quantum error-correction conditions]], [[Classical linear codes]]
+## 10.24 weakly self-dual
+$C\subseteq C^\perp$ means every pair of code words (including a word with itself) has inner product 0 mod 2. the code words are combinations of the columns of $G$, so it's enough that every pair of **columns** is orthogonal: $(G^TG)_{ij}=g_i\cdot g_j=0$ for all $i,j$, ie. $G^TG=0$ ∎
+## 10.25 the character sum
+if $x\in C^\perp$, every $x\cdot y=0$, so $\sum_{y\in C}(-1)^{x\cdot y}=|C|$. if $x\notin C^\perp$, the map $y\mapsto x\cdot y$ is a nonzero linear map $C\to Z_2$, so exactly half of $C$ gives 0 and half gives 1: the sum is 0 ∎ (this is the step used for phase flips in [[Calderbank-Shor-Steane codes#correcting the errors]])
+## 10.26 computing $H x$ with CNOTs
+$(Hx)_i=\sum_jH_{ij}x_j$ mod 2. for every 1 in row $i$, column $j$ of $H$, do a CNOT from data qubit $j$ onto ancilla $i$. each ancilla starts at 0 and gets flipped once per 1 among its bits, so it ends holding the parity $(Hx)_i$
+## 10.27 shifted CSS codes
+$Z^u|x+y\rangle=(-1)^{u\cdot(x+y)}|x+y\rangle$, so
+$$
+\frac1{\sqrt{|C_2|}}\sum_{y\in C_2}(-1)^{u\cdot y}|x+y+v\rangle=(-1)^{u\cdot x}\,X^vZ^u|x+C_2\rangle
+$$
+$\text{CSS}_{u,v}$ is $\text{CSS}(C_1,C_2)$ with a fixed Pauli $X^vZ^u$ applied. conjugating any error by a fixed Pauli only changes its sign, so the same errors are detectable and correctable (the syndromes just get a fixed known offset)
+## 10.28 the generator of the Hamming code
+the transpose of (10.77) is the $7\times4$ matrix with columns $1000011$, $0100101$, $0010110$, $0001111$. each satisfies $Hx=0$ for the Hamming $H$ (checked: $HG=0$), and the $I_4$ block makes them independent, so they span the 4 dimensional kernel: it's a generator matrix for $[7,4,3]$ ∎
+## 10.29 $V_S$ is a subspace
+if $g|\psi\rangle=|\psi\rangle$ and $g|\varphi\rangle=|\varphi\rangle$ then $g(a|\psi\rangle+b|\varphi\rangle)=a|\psi\rangle+b|\varphi\rangle$, for every $g\in S$. and "fixed by every $g$" is literally "in the $+1$ eigenspace of every $g$", the intersection ∎
+## 10.30 $-I\notin S\Rightarrow\pm iI\notin S$
+$(\pm iI)^2=-I$, and $S$ is closed under multiplication ∎
+## 10.31 commuting generators
+if the generators commute pairwise, two products of generators commute, since you can move each factor past the others one at a time. the other way round is immediate, the generators are elements of $S$ ∎
+## 10.32 the Steane generators stabilize the code words
+the $X$ generators' rows are rows of the Hamming $H$, which are code words of $C_2=C^\perp$, so they map $|x+y\rangle\to|x+y+h\rangle$ with $y+h\in C_2$: the sum over $C_2$ is unchanged. the $Z$ generators give $(-1)^{h\cdot(x+y)}$, and $x+y\in C_1$ means $H(x+y)=0$: sign $+1$ ∎ (checked numerically on [[Calderbank-Shor-Steane codes#^steane-book-codewords]])
+## 10.33 the twisted inner product
+write $r(g)=(a|b)$ and $r(g')=(a'|b')$. then $r(g)\Lambda r(g')^T=a\cdot b'+b\cdot a'$. on qubit $j$ that adds 1 exactly when the two factors anticommute ($X$ against $Z$, $X$ against $Y$, ...: check the 9 cases, eg. $Y$ against $Y$ gives $1+1=0$). Pauli products commute when the number of anticommuting places is even, so they commute iff the sum is 0 mod 2 ∎
+## 10.34 when $-I$ is in $S$
+every Pauli product squares to $\pm I$. if some $g_j^2=-I$, or $g_j=-I$, then $-I\in S$. so $-I\notin S$ forces $g_j^2=I$ and $g_j\neq-I$. (for the reverse direction you also need that no **product** of generators equals $-I$: eg. $X$ and $-X$ each square to $I$ but multiply to $-I$)
+## 10.35 $g^2=I$ and $g^\dagger=g$
+any $g\in G_n$ has $g^2=\pm I$. if $-I\notin S$ then $g^2=I$, and since $g$ is unitary, $g^\dagger=g^{-1}=g$ ∎
+## 10.36 the CNOT conjugations
+the matrix product in the note gives $UX_1U^\dagger=X_1X_2$ ([[Unitary gates and the stabilizer formalism#^conjugation-table]]). the others work the same way: $X$ on the target commutes with the CNOT, $Z$ on the control commutes with it, and $Z$ on the target picks up the control's $Z$ (all checked numerically)
+## 10.37 $UY_1U^\dagger$
+$Y_1=iX_1Z_1\to i(X_1X_2)Z_1=Y_1X_2$
+## 10.38 the conjugations fix the unitary
+if $U$ and $V$ conjugate $Z_1,Z_2,X_1,X_2$ the same way, then $W=V^\dagger U$ commutes with all four. they generate (as an algebra) every $4\times4$ matrix, so $W$ commutes with everything and is $cI$: $U=V$ up to a global phase ∎
+## 10.39 the phase gate
+$$
+SXS^\dagger=\begin{bmatrix}1&0\\0&i\end{bmatrix}\begin{bmatrix}0&1\\1&0\end{bmatrix}\begin{bmatrix}1&0\\0&-i\end{bmatrix}=\begin{bmatrix}0&-i\\i&0\end{bmatrix}=Y\qquad SZS^\dagger=Z
+$$
+($S$ and $Z$ are both diagonal, so they commute)
+## 10.40 $H$, $S$, CNOT generate the normalizer (sketch)
+**(1)** a one qubit normalizer gate sends $X\to\pm P$ and $Z\to\pm Q$ with $P\neq Q$ Paulis: 6 choices for $P$, 4 for $Q$, 24 in all, and products of $H$ and $S$ reach all 24 ([[Clifford group]])
+**(2)** given $UZ_1U^\dagger=X_1\otimes g$ and $UX_1U^\dagger=Z_1\otimes g'$, the circuit of figure 10.9 (controlled-$g'$, $H$, controlled-$g$ around a smaller $U'$) does the same conjugations on qubit 1, and $U'$ is an $n$ qubit normalizer gate, built by induction. the controlled Paulis are $O(n)$ CNOTs, $H$ and $S$
+**(3)** any $U\in N(G_{n+1})$ can be brought to the form in (2) by one qubit normalizer gates and swaps first, so $O(n)$ extra gates per level and $O(n^2)$ in total ∎
+## 10.41 $T$ and Toffoli
+$$
+TXT^\dagger=\begin{bmatrix}0&e^{-i\pi/4}\\e^{i\pi/4}&0\end{bmatrix}=\frac1{\sqrt2}\begin{bmatrix}0&1-i\\1+i&0\end{bmatrix}=\frac{X+Y}{\sqrt2}
+$$
+and $TZT^\dagger=Z$ (both diagonal). the Toffoli: it flips qubit 3 when qubits 1, 2 are both 1, so $Z_1$, $Z_2$, $X_3$ commute with it. for $X_1$: $\frac{I+Z_2+X_3-Z_2X_3}2$ is $I$ when qubit 2 is 0 and $X_3$ when qubit 2 is 1, which is the extra flip of qubit 3 that $X_1$ causes. same for the others (checked numerically)
+## 10.42 teleportation
+worked in [[Measurement and the Gottesman-Knill theorem#theorem 10.7: Gottesman-Knill]] for the input $|0\rangle$; the input $|+\rangle$ ($X_1$) works the same way, with the $Z$ correction controlled by the first measurement
+## 10.43 $S\subseteq N(S)$
+the elements of $S$ commute, so for $h,g\in S$, $hgh^\dagger=g\in S$ ∎
+## 10.44 $N(S)=Z(S)$
+for Pauli products $EgE^\dagger=\pm g$. if $E\in N(S)$ and $EgE^\dagger=-g$ for some $g\in S$, then $-g$ and $g$ are both in $S$, so $-I\in S$: impossible. so $EgE^\dagger=g$ for all $g$, ie. $E\in Z(S)$. the other way round is clear ∎
+## 10.45 located errors
+the possible errors are all Pauli products on the known $d-1$ qubits. any $E_j^\dagger E_k$ is also supported on those qubits, so it has weight $\leq d-1<d$ and can't be in $N(S)-S$ (that set has minimum weight $d$). by theorem 10.8 they're all correctable ∎
+## 10.46 the phase flip code's stabilizer
+$X|\pm\rangle=\pm|\pm\rangle$, so $X_1X_2$ and $X_2X_3$ give $+1$ on $|{+}{+}{+}\rangle$ and on $|{-}{-}{-}\rangle$ (two equal signs). they're independent and commuting, $n-k=2$, so they generate the whole stabilizer ∎
+## 10.47 the Shor generators
+$Z_iZ_j$ in one block gives $+1$ on $|000\rangle$ and $|111\rangle$. $X_1\cdots X_6$ maps $(|000\rangle\pm|111\rangle)(|000\rangle\pm|111\rangle)$ to itself times $(\pm1)(\pm1)=+1$, because both blocks of a code word have the **same** sign. same for $X_4\cdots X_9$ ∎
+## 10.48 the Shor code's logical operators
+$X^{\otimes9}$ commutes with each $Z_iZ_j$ (2 places) and with the $X$ generators; $Z^{\otimes9}$ commutes with each $X$ generator (6 places). they anticommute with each other (9 places). on the code words: $X^{\otimes3}$ maps $|000\rangle\pm|111\rangle$ to $\pm(\text{itself})$, so $X^{\otimes9}$ gives $+1$ on $|0_L\rangle$ and $(-1)^3=-1$ on $|1_L\rangle$: a logical $Z$. $Z^{\otimes3}$ swaps $|000\rangle+|111\rangle\leftrightarrow|000\rangle-|111\rangle$, so $Z^{\otimes9}$ swaps $|0_L\rangle\leftrightarrow|1_L\rangle$: a logical $X$ ∎
+## 10.49 the five qubit code corrects any single error
+the 15 single-qubit errors have 15 different nonzero syndromes ([[Stabilizer codes]] lists them). the syndrome of a product is the XOR of the syndromes, so for two **different** errors $E_jE_k$ has a nonzero syndrome: it anticommutes with some generator and isn't in $N(S)$. by theorem 10.8 all single-qubit errors are correctable ∎
+## 10.50 the five qubit code saturates the Hamming bound
+$\sum_{j=0}^1\binom5j3^j\,2^1=(1+15)\times2=32=2^5$ ∎
+## 10.51 the CSS check matrix
+the rows of $H(C_2^\perp)$ are the $X$ type generators and the rows of $H(C_1)$ the $Z$ type ones, so the code words are the states with $x+y\in C_1$ ($Z$ checks) that are unchanged by adding words of $(C_2^\perp)^\perp=C_2$ ($X$ checks): the coset states of $\text{CSS}(C_1,C_2)$. for errors on $\leq t$ qubits, a product $E_j^\dagger E_k$ has $X$ part and $Z$ part of weight $\leq2t$. if it commuted with all the $Z$ checks its $X$ part would be in $C_1$, and with all the $X$ checks its $Z$ part in $C_2^\perp$; both codes have distance $\geq2t+1$, so those parts are 0 or code words that are stabilizers. so $E_j^\dagger E_k\notin N(S)-S$ ∎
+## 10.52 the Steane logical operators
+$|0_L\rangle$'s strings have weight 0 or 4 and $|1_L\rangle$'s weight 3 or 7, so $Z^{\otimes7}$ gives $+1$ and $-1$: logical $Z$. $X^{\otimes7}$ flips every bit, which maps each string of $|0_L\rangle$ onto one of $|1_L\rangle$ (eg. $0000000\leftrightarrow1111111$, $1010101\leftrightarrow0101010$): logical $X$ ∎
+## 10.53 the encoded $Z$s are independent
+$G_z=[000|A_2^T0I]$ has the $k\times k$ identity in its last block, so its $k$ rows are linearly independent, and by proposition 10.3 the operators are independent ∎
+## 10.54 the encoded $X$s
+$G_x=[0E^TI|C^T00]$: the identity block makes them independent of each other; against the generators and the $\bar Z$s, the twisted products work out to $E^T+E^T=0$, $C^T+C^T=0$ for the generators, and $I$ against $G_z$'s $I$, giving $\bar X_j$ anticommuting only with $\bar Z_j$
+## 10.55 $\bar X$ for the Steane code in standard form
+from [[Standard form and stabilizer circuits#^steane-standard-form]], $E=(1,1,0)^T$ and $C=0$, so $\bar X=X_4X_5X_7$ in the standard order, $X_3X_5X_6$ in the original labels (it's $X^{\otimes7}$ times the stabilizer $X_1X_2X_4X_7$). checked numerically
+## 10.56 multiplying by a stabilizer
+for $g\in S$ and a code state $|\psi\rangle$: $g\bar X|\psi\rangle=\bar Xg|\psi\rangle=\bar X|\psi\rangle$ ($\bar X$ commutes with $g$). so $g\bar X$ and $\bar X$ do the same thing on the code ∎
+## 10.57 standard forms for the five and nine qubit codes
+**five qubit code**: $r=4$, no qubit swaps needed
+$$
+\left[\begin{array}{ccccc|ccccc}
+1&0&0&0&1&1&1&0&1&1\\
+0&1&0&0&1&0&0&1&1&0\\
+0&0&1&0&1&1&1&0&0&0\\
+0&0&0&1&1&1&0&1&1&1
+\end{array}\right]
+$$
+**nine qubit code**: $r=2$, after swapping qubits 2 and 4
+$$
+\left[\begin{array}{ccccccccc|ccccccccc}
+1&0&1&1&0&0&1&1&1&0&0&0&0&0&0&0&0&0\\
+0&1&0&0&1&1&1&1&1&0&0&0&0&0&0&0&0&0\\
+0&0&0&0&0&0&0&0&0&1&0&1&0&0&0&0&0&0\\
+0&0&0&0&0&0&0&0&0&1&0&0&1&0&0&0&0&0\\
+0&0&0&0&0&0&0&0&0&0&1&0&0&1&0&0&0&0\\
+0&0&0&0&0&0&0&0&0&0&1&0&0&0&1&0&0&0\\
+0&0&0&0&0&0&0&0&0&0&0&0&0&0&0&1&0&1\\
+0&0&0&0&0&0&0&0&0&0&0&0&0&0&0&0&1&1
+\end{array}\right]
+$$
+(computed by Gaussian elimination: rows only get added to each other, so they generate the same stabilizer)
+## 10.58 the measuring circuits
+figure 10.13: $|0\rangle\to\frac{|0\rangle+|1\rangle}{\sqrt2}$, controlled-$M$ gives $\frac{|0\rangle|\psi\rangle+|1\rangle M|\psi\rangle}{\sqrt2}$, and the last $H$ gives $|0\rangle\frac{I+M}2|\psi\rangle+|1\rangle\frac{I-M}2|\psi\rangle$: outcome 0 projects onto the $+1$ eigenspace, 1 onto the $-1$ one. for $M=Z$, $H$-controlled-$Z$-$H$ on the ancilla is a CNOT with the roles swapped ($H\otimes I$ turns CZ's control into a CNOT target), which gives figure 10.15. for $M=X$, write $X=HZH$ on the data qubit
+## 10.59 the all-CNOT syndrome circuit
+replace each controlled-$X$ from an ancilla by $H$ on the data, controlled-$Z$, $H$ on the data, and each controlled-$Z$ by a CNOT from the data onto the ancilla (CZ is symmetric, and $H$ on the ancilla turns it into a CNOT). the $H$s on the data cancel between neighbouring gates, leaving one layer before and one after the $X$ checks: figure 10.17
+## 10.60 syndrome circuits for the nine and five qubit codes
+one ancilla per generator (8 for the Shor code, 4 for the five qubit code), each prepared with $H$, then a controlled-$X$ onto every qubit where the generator has an $X$, a controlled-$Z$ onto every $Z$ (and both for a $Y$), then $H$ and measure. eg. the five qubit code's first ancilla does controlled-$X$ on qubits 1 and 4 and controlled-$Z$ on 2 and 3
+## 10.61 recovery for the Steane circuit
+the three $X$ type ancillas detect $Z$ errors and the three $Z$ type ancillas detect $X$ errors. an $X$ error on qubit $j$ makes $(s_4,s_5,s_6)$ equal column $j$ of the right block of the standard form, so apply $X_j$; a $Z$ error on qubit $j$ makes $(s_1,s_2,s_3)$ equal column $j$ of the left block, so apply $Z_j$ (a $Y$ shows up in both). all 7 columns of each block are different and nonzero, so every single-qubit error is identified
+
+see also [[Chapter 10 formulas]], [[Quantum error-correction conditions]], [[Classical linear codes]], [[Stabilizer code constructions]]

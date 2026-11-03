@@ -168,4 +168,82 @@ from [[Classical linear codes]]
 > [!answer]- answer
 > $7=2t+1$ gives $t=3$. $n-k\geq6$
 
+## 10. CSS codes
+from [[Calderbank-Shor-Steane codes]]. the coset states, for $x\in C_1$
+
+![[Calderbank-Shor-Steane codes#^css-coset-state]]
+
+good quantum codes exist
+
+![[Calderbank-Shor-Steane codes#^quantum-gv]]
+
+> [!eg] eg. $\text{CSS}(C_1,C_2)$ with $C_1=[7,4]$, $C_2=[7,3]$
+> $2^{4-3}=2$ cosets: one logical qubit, the Steane code
+
+> [!exercise] exercise: the quantum GV bound at $t/n=0.01$
+> what rate $k/n$ does it guarantee?
+
+> [!answer]- answer
+> $H(0.02)=0.02\log_2\frac1{0.02}+0.98\log_2\frac1{0.98}=0.113+0.029=0.141$, so $k/n\geq1-0.283=0.717$
+
+## 11. the stabilizer formalism
+from [[The stabilizer formalism]]
+
+![[The stabilizer formalism#^pauli-group]]
+
+![[The stabilizer formalism#^twisted-product]]
+
+![[The stabilizer formalism#^stabilizer-dimension]]
+
+> [!eg] eg. 3 independent generators on 5 qubits
+> $2^{5-3}=4$ dimensions: 2 logical qubits
+
+> [!exercise] exercise: do $X_1X_2$ and $Z_1Z_2$ commute?
+> use the twisted product
+
+> [!answer]- answer
+> $r=(1,1\,|\,0,0)$ and $r'=(0,0\,|\,1,1)$: $a\cdot b'+b\cdot a'=2=0$, so yes (that's why the EPR state can have both)
+
+## 12. gates and measurements
+from [[Unitary gates and the stabilizer formalism]] and [[Measurement and the Gottesman-Knill theorem]]
+
+![[Unitary gates and the stabilizer formalism#^stabilizer-conjugation]]
+
+![[Unitary gates and the stabilizer formalism#^conjugation-table]]
+
+an anticommuting measurement is a coin flip
+
+![[Measurement and the Gottesman-Knill theorem#^random-outcome]]
+
+![[Measurement and the Gottesman-Knill theorem#^gk-cost]]
+
+> [!eg] eg. $\langle Z_1,Z_2\rangle$ through $H_1$, CNOT
+> $\langle X_1,Z_2\rangle\to\langle X_1X_2,Z_1Z_2\rangle$: the EPR state
+
+> [!exercise] exercise: measure $Z_1$ on the EPR state
+> what happens to $\langle X_1X_2,Z_1Z_2\rangle$?
+
+> [!answer]- answer
+> $Z_1$ anticommutes with $X_1X_2$: outcome $\pm1$ with probability $\frac12$, new stabilizer $\langle\pm Z_1,Z_1Z_2\rangle$, ie. $|00\rangle$ or $|11\rangle$
+
+## 13. stabilizer codes
+from [[Stabilizer code constructions]] and [[Standard form and stabilizer circuits]]
+
+![[Stabilizer code constructions#^logical-basis]]
+
+![[Stabilizer code constructions#^css-check-matrix]]
+
+![[Stabilizer code constructions#^steane-logical]]
+
+![[Standard form and stabilizer circuits#^standard-form]]
+
+> [!eg] eg. is $X_1Y_4$ a problem for the Shor code?
+> it anticommutes with $Z_1Z_2$, so it's not in $N(S)$: detectable, and the pair $\{X_1,Y_4\}$ is correctable
+
+> [!exercise] exercise: the distance of the Steane code
+> find a weight 3 element of $N(S)-S$
+
+> [!answer]- answer
+> $Z_1Z_2Z_3$: it commutes with the $X$ generators ($IIIXXXX$: 0 overlap; $IXXIIXX$: 2; $XIXIXIX$: 2) and isn't in $S$ (the $Z$ generators have weight 4 and their products weight 4 or 0). so $d=3$
+
 see also [[Chapter 10 exercises]], [[Course 4 Week 1 formulas]]

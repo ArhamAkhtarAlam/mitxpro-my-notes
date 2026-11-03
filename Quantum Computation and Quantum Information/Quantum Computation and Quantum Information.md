@@ -20,7 +20,7 @@ flowchart TD
     R --> B["EPR + Bell inequality"]
 ```
 ## chapter 10: quantum error-correction
-pages 425–449: the three qubit codes, the Shor code, the general theory of quantum error correction, and classical linear codes
+pages 425–475: the three qubit codes, the Shor code, the general theory of quantum error correction, classical linear codes, CSS codes and stabilizer codes. (the last page starts §10.6, fault-tolerant quantum computation: the course version is [[Fault-tolerant quantum computing]])
 - [[Introduction to quantum error-correction]] → §10.1: the repetition code, the three problems for quantum codes, the bit flip code
 - [[Syndrome diagnosis and recovery]] → §10.1.1: the syndrome projectors, fidelity with and without the code, $Z_1Z_2$ and $Z_2Z_3$
 - [[Three qubit phase flip code]] → §10.1.2: the bit flip code in the $|\pm\rangle$ basis, unitarily equivalent channels
@@ -30,7 +30,13 @@ pages 425–449: the three qubit codes, the Shor code, the general theory of qua
 - [[Independent error models]] → §10.3.2: depolarizing and amplitude damping noise on every qubit, $1-O(p)\to1-O(p^2)$
 - [[Degenerate codes and the quantum Hamming bound]] → §10.3.3–10.3.4: no non-degenerate code under 5 qubits
 - [[Classical linear codes]] → §10.4.1: generator and parity check matrices, distance, Hamming codes, the Gilbert-Varshamov bound, dual codes
-- [[Chapter 10 exercises]] → worked answers to exercises 10.1–10.23
+- [[Calderbank-Shor-Steane codes]] → §10.4.2: $\text{CSS}(C_1,C_2)$ from two classical codes, correcting bit and phase flips separately, the quantum Gilbert-Varshamov bound, the Steane code
+- [[The stabilizer formalism]] → §10.5.1: the Pauli group, $V_S$, generators, the check matrix and the twisted product, why $n-k$ generators leave $2^k$ dimensions
+- [[Unitary gates and the stabilizer formalism]] → §10.5.2: conjugating the generators, the CNOT/$H$/$S$ table, the swap circuit, theorem 10.6, $T$ and Toffoli
+- [[Measurement and the Gottesman-Knill theorem]] → §10.5.3–10.5.4: certain vs coin-flip Pauli measurements, and why Clifford circuits are easy to simulate
+- [[Stabilizer code constructions]] → §10.5.5–10.5.6: logical operators, $N(S)-S$, theorem 10.8, distance, and the bit flip, Shor, five qubit and CSS codes
+- [[Standard form and stabilizer circuits]] → §10.5.7–10.5.8: the standard form, encoding by measuring, measuring operators, the Steane syndrome circuit
+- [[Chapter 10 exercises]] → worked answers to exercises 10.1–10.61
 - [[Chapter 10 formulas]] → every formula from these pages on one sheet
 
 ```mermaid
@@ -43,7 +49,11 @@ flowchart TD
     C --> D["discretization:<br/>4 Paulis are enough"]
     C --> I["independent errors:<br/>p becomes p²"]
     C --> H["degenerate codes,<br/>quantum Hamming bound"]
-    H --> L["classical linear codes<br/>(towards CSS codes)"]
+    H --> L["classical linear codes"]
+    L --> CSS["CSS codes"]
+    CSS --> SF["stabilizer formalism"]
+    SF --> GK["gates, measurements,<br/>Gottesman-Knill"]
+    GK --> SC["stabilizer codes,<br/>standard form, circuits"]
 ```
 ## the same ideas in the courses
 - [[Density matrix]], [[Pure state]], [[Pure and mixed states]] (Course 3 Week 1)
