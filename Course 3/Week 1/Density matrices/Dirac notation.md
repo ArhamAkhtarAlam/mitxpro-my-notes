@@ -1,5 +1,5 @@
 #dirac_notation #density_matrix #tensor_product #cheat_sheet
-the course's cheat sheet for the maths in Course 3 (from the "Density Matrices: Introduction" page). the matrix versions of everything in [[Math/Dirac notation]], for working through [[Density matrix]] problems
+a cheat sheet for the maths in Course 3: the matrix versions of everything in [[Math/Dirac notation]], for working through [[Density matrix]] problems
 > [!note] two to remember
 > - the [[Hadamard Gate|Hadamard]] maps $|0\rangle\to\frac{|0\rangle+|1\rangle}{\sqrt2}$ and $|1\rangle\to\frac{|0\rangle-|1\rangle}{\sqrt2}$
 > - "mixture 2" from the density matrix video, with the normalization $\frac1{\sqrt2}$ on each state:

@@ -1,5 +1,5 @@
 #quantum_error_correction #phase_flip_code #worked_example
-the course's "Phase-Flip Code I: Recovering the State" exercise, worked through. the same as [[Bit flip code practice]] with a layer of Hadamards on each side of the error, so a $\sigma_z$ gets turned into a $\sigma_x$ before decoding. it uses the **textbook** version of the [[Phase flip code]] (no Hadamard on qubit 1 at the start), so the code words are $|{+}{+}{+}\rangle$ and $|{-}{-}{-}\rangle$
+recovering the state from the phase flip code, worked through case by case. the same as [[Bit flip code practice]] with a layer of Hadamards on each side of the error, so a $\sigma_z$ gets turned into a $\sigma_x$ before decoding. it uses the **textbook** version of the [[Phase flip code]] (no Hadamard on qubit 1 at the start), so the code words are $|{+}{+}{+}\rangle$ and $|{-}{-}{-}\rangle$
 ## the circuit
 ![[Phase_flip_practice_circuit.png]]
 

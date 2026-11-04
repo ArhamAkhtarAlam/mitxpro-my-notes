@@ -72,7 +72,7 @@ $$
 $$
 ==completely mixed, even though the whole pair is pure==: the cross terms (the entanglement) die because B's bits don't match. the information is in the **correlations**, not in either half (see [[Entanglement entropy]] and [[Pure and mixed states]])
 ## more examples
-> [!example] the course's pair: $\sqrt{\tfrac34}\,|00\rangle+\sqrt{\tfrac14}\,|11\rangle$
+> [!example] example pair: $\sqrt{\tfrac34}\,|00\rangle+\sqrt{\tfrac14}\,|11\rangle$
 > same steps: the cross terms die, the diagonal ones stay
 > $$
 > \rho_A=\tfrac34|0\rangle\langle0|+\tfrac14|1\rangle\langle1|=\frac14\begin{bmatrix}3&0\\0&1\end{bmatrix}

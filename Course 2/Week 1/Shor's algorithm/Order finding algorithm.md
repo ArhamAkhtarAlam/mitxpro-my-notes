@@ -50,7 +50,7 @@ eg. with 8 counting qubits and $N=15,\ a=2$ you measure $0$, $64$, $128$ or $192
 
 see [[Shor's algorithm#Worked example (factoring 15)]] for the full thing
 ## worked example 2 (11 to the x, mod 21)
-the course's example: find the period of $f(x)=11^x\bmod21$
+example: find the period of $f(x)=11^x\bmod21$
 $$
 11^0,11^1,11^2,\ldots\bmod21=1,\ 11,\ 16,\ 8,\ 4,\ 2,\ 1,\ 11,\ldots
 $$

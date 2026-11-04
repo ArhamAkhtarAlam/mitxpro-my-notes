@@ -12,7 +12,7 @@ stuff that **isn't covered in the courses** but is still important or good to kn
 - **week 4 (maths behind fidelity)** → [[Purification]] (the [[Partial trace]] it uses is now in Course 3 Week 1, since the course covers it)
 
 ## Course 4
-- **week 2 (behind quantum fault tolerance)** → [[Stabilizer codes]] (codes as the states a few Paulis leave alone, syndromes, $[\![n,k,d]\!]$), [[CSS codes]] (two classical codes, one for bit flips and one for phase flips: the Steane code), [[Clifford group]] ($H$, $S$, CNOT: Paulis to Paulis, 24 on one qubit), [[Gottesman-Knill theorem]] (why Clifford circuits are easy to simulate)
+- **week 2 (behind quantum fault tolerance)** → [[CSS codes]] (two classical codes, one for bit flips and one for phase flips: the Steane code), [[Clifford group]] ($H$, $S$, CNOT: Paulis to Paulis, 24 on one qubit), [[Gottesman-Knill theorem]] (why Clifford circuits are easy to simulate). ([[Stabilizer codes]] is now in Course 4 Week 2, since the course covers it)
 
 ```mermaid
 flowchart TD
@@ -20,7 +20,7 @@ flowchart TD
     PT["Partial trace"] --> PU["Purification"]
     PU --> EP["Entanglement purification"]
     PK["Phase kickback"] --> BV["Bernstein-Vazirani"]
-    ST["Stabilizer codes"] --> CSS["CSS codes"]
+    CSS["CSS codes"] --> GK
     CL["Clifford group"] --> GK["Gottesman-Knill"]
     EP --> QM["Quantum memory"] --> DQC["Distributed QC"] --> BQC["Blind QC"]
 ```

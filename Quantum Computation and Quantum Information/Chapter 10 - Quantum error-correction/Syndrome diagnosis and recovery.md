@@ -95,7 +95,7 @@ in a circuit, each comparison is two CNOTs onto an ancilla ($SA$ for $Z_1Z_2$, $
 
 ^z-syndrome-table
 
-==neither measurement gives any information about $a$ and $b$==, so neither destroys the superposition we're protecting. (this is the course's [[Parity measurement]], and exercise 10.3 shows it's the same as measuring $P_0,\dots,P_3$)
+==neither measurement gives any information about $a$ and $b$==, so neither destroys the superposition we're protecting. (this is [[Parity measurement]] in the course notes, and exercise 10.3 shows it's the same as measuring $P_0,\dots,P_3$)
 
 > [!extra] exercise 10.2: the bit flip channel as a measurement
 > with $P_\pm$ the projectors onto $|\pm\rangle$, the same channel can be written $\mathcal E(\rho)=(1-2p)\rho+2pP_+\rho P_++2pP_-\rho P_-$: the qubit is left alone with probability $1-2p$, and **measured** in the $|+\rangle,|-\rangle$ basis by the environment with probability $2p$. worked in [[Chapter 10 exercises#10.2 the bit flip channel as a measurement]]

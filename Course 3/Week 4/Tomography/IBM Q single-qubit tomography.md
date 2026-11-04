@@ -1,5 +1,5 @@
 #tomography #density_matrix #bloch_sphere #IBM_Q
-the course's IBM Q exercise: doing [[State tomography]] on a real quantum computer, step by step, with the actual numbers from IBM's 5 qubit **Tenerife** machine. part of [[Benchmarking quantum systems]]
+doing [[State tomography]] on a real quantum computer, step by step, with the actual numbers from IBM's 5 qubit **Tenerife** machine. part of [[Benchmarking quantum systems]]
 ## the recipe
 1. write a circuit to measure the qubit in each Pauli basis: $X$, $Y$ and $Z$
 2. run each one many times and turn the counts into probabilities

@@ -43,7 +43,7 @@ $$
 &=\tfrac34|0\rangle\langle0|+\tfrac14|1\rangle\langle1|
 \end{aligned}
 $$
-==2 different ensembles, the **same** $\rho$, and no measurement can tell them apart==. (it's the same pair as the course's [[Density matrix#bipartite state example]])
+==2 different ensembles, the **same** $\rho$, and no measurement can tell them apart==. (it's the same pair as [[Density matrix#bipartite state example]])
 ## theorem 2.6: unitary freedom in the ensemble
 which ensembles give the same $\rho$? use **unnormalized** vectors $|\tilde\psi_i\rangle=\sqrt{p_i}\,|\psi_i\rangle$, so $\rho=\sum_i|\tilde\psi_i\rangle\langle\tilde\psi_i|$
 > [!important] unitary freedom

@@ -1,8 +1,6 @@
 #amplitude_damping #T1 #quantum_channel #bloch_sphere
 a type of [[Quantum channels|quantum channel]] that models **energy loss**, the qubit relaxes from $|1\rangle$ down to $|0\rangle$
 
-> [!info] not from the lecture videos
-> this one comes from the course page picture below + standard quantum computing stuff, not the video transcripts
 ## what it does
 $|1\rangle$ is the excited (higher energy) state and $|0\rangle$ is the ground state. over time the qubit gives energy to the environment and falls down
 - $|1\rangle$ → decays to $|0\rangle$ with probability $\gamma$

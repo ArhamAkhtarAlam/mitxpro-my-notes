@@ -66,6 +66,6 @@ this is very different from error correction for **analog** classical systems, w
 > ② $E_0=\frac{1+\sqrt{1-\gamma}}2I+\frac{1-\sqrt{1-\gamma}}2Z$
 > ③ $|0\rangle\langle0|=\frac{I+Z}2$ and $|1\rangle\langle1|=\frac{I-Z}2$, combinations of $I$ and $Z$, which the phase flip code corrects. so by theorem 10.2 it corrects them too
 
-see also [[Depolarizing channel]], [[Pauli channel]], [[Shor code]]
+see also [[Depolarizing channel]], [[Pauli channel]], [[Shor code]], maths: [[Pauli matrices]]
 
 next: [[Independent error models]]

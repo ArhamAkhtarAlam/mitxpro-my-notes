@@ -1,5 +1,5 @@
 #density_matrix #projector #measurement #worked_example
-the course's "Density Matrices: Practice" exercise, worked through. measure **one** qubit of a pair with a [[Projectors|projector]], then build the [[Density matrix|density matrix]] of the other one. this is the maths behind "mixture 1" in [[Density matrix#bipartite state example]]
+a worked example: measure **one** qubit of a pair with a [[Projectors|projector]], then build the [[Density matrix|density matrix]] of the other one. this is the maths behind "mixture 1" in [[Density matrix#bipartite state example]]
 ## the state
 the 2 qubit state from the first density matrix video
 $$
@@ -77,7 +77,7 @@ $$
 \langle\psi'_{AB}|=\frac1{\sqrt2}\Big(\sqrt{\tfrac34}\,\langle0_A0_B|+\sqrt{\tfrac34}\,\langle0_A1_B|+\sqrt{\tfrac14}\,\langle1_A0_B|-\sqrt{\tfrac14}\,\langle1_A1_B|\Big)
 $$
 ### apply the projectors
-#### straight from the course's form
+#### straight from the unexpanded form
 start from $|\psi'_{AB}\rangle$ **before** multiplying out. qubit B is now in a bracket in each term
 $$
 |\psi'_{AB}\rangle=\sqrt{\tfrac34}\,|0_A\rangle\underbrace{\frac{|0_B\rangle+|1_B\rangle}{\sqrt2}}_{\text{B part of term 1}}+\sqrt{\tfrac14}\,|1_A\rangle\underbrace{\frac{|0_B\rangle-|1_B\rangle}{\sqrt2}}_{\text{B part of term 2}}

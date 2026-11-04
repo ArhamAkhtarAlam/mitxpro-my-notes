@@ -318,7 +318,7 @@ from [[QKD distance and key rate]], [[Increasing the key rate]] and [[Floodlight
 **floodlight QKD**
 ![[Floodlight QKD#^processing-gain]]
 
-> [!eg] eg. the course's numbers
+> [!eg] eg. some real numbers
 > 2 THz of light, Bob sends at 10 Gbit/s so each bit lasts $\frac1{10^{10}}=0.1$ ns
 > $$
 > \text{gain}=2\times10^{12}\times10^{-10}=200\qquad\text{photons per bit}=0.1\text{ photons/s/Hz}\times200=20

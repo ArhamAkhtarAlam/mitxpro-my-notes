@@ -127,4 +127,4 @@ it's basically the [[#bipartite state example]] again. you have a two part syste
 > [!tip] why this matters
 > having infinite unravellings and purifications are key ideas for understanding [[Quantum Error Correction]]
 
-see also [[Density matrix practice]] (the course's worked exercise), [[Projectors]], [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]] (all the matrix maths for this week), [[Trace]], [[Von Neumann entropy]], [[Entanglement entropy]], [[Quantum channels]]
+see also [[Density matrix practice]] (a worked exercise), [[Projectors]], [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]] (all the matrix maths for this week), [[Trace]], [[Von Neumann entropy]], [[Entanglement entropy]], [[Quantum channels]]

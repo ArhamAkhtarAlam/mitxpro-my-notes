@@ -1,5 +1,5 @@
 #bell #CHSH_game #bell_inequality #entanglement #quantum_foundations
-the [[CHSH game]] written as an **inequality**: a number that can never go above 2 if the world runs on hidden variables, but quantum mechanics reaches $2\sqrt2$. from the course's "EPR Pair Violation" reading. follows on from [[Quantum weirdness]]
+the [[CHSH game]] written as an **inequality**: a number that can never go above 2 if the world runs on hidden variables, but quantum mechanics reaches $2\sqrt2$. follows on from [[Quantum weirdness]]
 ## the question
 is quantum "weirdness" there because quantum mechanics is **incomplete** (so with the full description it'd all make classical sense), or is it **fundamental**?
 ```mermaid

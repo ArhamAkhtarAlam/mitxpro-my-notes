@@ -95,6 +95,6 @@ $(I+g_j)/2$ projects onto the $+1$ eigenspace of $g_j$, so $P_S^{(0,\dots,0)}$ p
 > ② $n=2$ and $k=0$ (one state), so $n-k=2$: $X_1X_2$ and $Z_1Z_2$
 > ③ no: $X_1$ and $Z_1$ anticommute, so they stabilize only the zero vector
 
-see also [[Stabilizer codes]], [[Classical linear codes]], [[Bell states]]
+see also [[Stabilizer codes]], [[Classical linear codes]], [[Bell states]], maths: [[Groups]], [[Pauli matrices]]
 
 next: [[Unitary gates and the stabilizer formalism]]

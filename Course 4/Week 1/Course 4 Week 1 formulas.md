@@ -58,7 +58,7 @@ run the encoder backwards, measure qubits 2 and 3, fix qubit 1 if they read $11$
 
 ![[Decoding the bit flip code#^decoding-table]]
 
-worked case by case (the course's practice problem) in [[Bit flip code practice]]
+worked case by case in [[Bit flip code practice]]
 
 > [!eg]- why a $\sigma_z$ slips through
 > $\sigma_z$ on any qubit gives $\alpha|000\rangle-\beta|111\rangle$. decoding gives $(\alpha|0\rangle-\beta|1\rangle)|00\rangle$: measure $00$, "no error", but qubit 1 now has a phase flip ([[Decoding the bit flip code#what about phase errors?]])
@@ -83,7 +83,7 @@ and the errors land in four orthogonal subspaces
 
 ![[Phase flip code#^phase-subspaces]]
 
-the course's practice problem, case by case, in [[Phase flip code practice]]
+worked case by case in [[Phase flip code practice]]
 
 > [!eg]- $q=0.05$
 > on the bit flip code: $3(0.05)(0.95)^2+0.05^3=0.1355$, almost 3× the $0.05$ of one qubit. on the phase flip code it's $3q^2-2q^3=7.25\times10^{-3}$ instead

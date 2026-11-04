@@ -30,6 +30,7 @@ flowchart TD
 - [[Transversal gates]] → gates between blocks done bitwise in parallel ($A_i$ only meets $B_i$), so errors only spread between bits that interact. the CNOT shortcut with one shared control isn't fault tolerant
 ## quantum fault tolerance
 - [[Fault-tolerant quantum computing]] → the same recipe for quantum: stabilizer codes, gates from the normalizer, and why Clifford gates alone aren't enough (Gottesman-Knill)
+- [[Stabilizer codes]] → describe a code by the Paulis that leave it alone, errors flip their sign (the syndrome), gates update the generators, Gottesman-Knill, and the three kinds of error
 - [[Transversal gates on stabilizer codes]] → the 5 qubit code can't do $H$ or CNOT transversally, the 7 qubit (CSS) code does every Clifford. Eastin-Knill: no code does a universal set transversally
 - [[Fault-tolerant measurement]] → one ancilla is a single point of failure, so Shor's trick: a checked cat state, transversal controlled-$Z$s, parity of the results, repeat and vote
 - [[Quantum threshold estimate]] → a CNOT on the 7 qubit code takes 79 gates, $\binom{79}2=3081$ fault paths, so $p_{th}\approx10^{-4}$

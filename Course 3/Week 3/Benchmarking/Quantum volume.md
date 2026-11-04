@@ -56,7 +56,7 @@ $$
 - good gates → limited by the number of qubits $n'$
 
 ![[Quantum_volume_tradeoff.png]]
-> [!example]- the rough model in the picture (from the course text)
+> [!example]- the rough model in the picture
 > the achievable depth is roughly $d\approx\frac1{n\,\epsilon_{\text{eff}}}$ (bigger circuits have more places for errors), **rounded down**, since a circuit can only run whole layers. then $n=d$ at $n\approx\frac1{\sqrt{\epsilon_{\text{eff}}}}$, which is where $m$ is biggest
 >
 > with $\epsilon_{\text{eff}}\approx0.1$ on 5 qubits that gives $m=3$ and $V_Q=8$, the same as IBM's real result below. to double the useful qubits you need about **4× lower** error
@@ -90,7 +90,7 @@ the 2 papers the course points to, oldest first
 > - **heavy outputs**: the bit strings whose ideal probability is above the median. a circuit counts as done if **more than 2/3** of the outputs are heavy (a perfect machine gets ≈ 0.85, pure noise gets 0.5)
 > - $V_Q=2^{\min(d,m)}$, using square circuits $d=m$
 > - IBM devices tested: 5 qubit Tenerife, 16 qubit Melbourne, 20 qubit Tokyo ($V_Q=8$) and 20 qubit Johannesburg ($V_Q=16$, the best, with optimised compiling)
-> - like the lecture says: more qubits don't help if the errors (and crosstalk between qubits) are too big
+> - more qubits don't help if the errors (and crosstalk between qubits) are too big
 >
 > ![[Cross 2018 - Validating quantum computers using randomized model circuits.pdf#height=500]]
 

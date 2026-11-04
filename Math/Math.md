@@ -11,6 +11,12 @@ the maths you need for the quantum notes. start at the top if something doesn't 
 - [[Tensor product]] → combining qubits with $\otimes$, entanglement
 - [[Trace]] → tr, purity, the [[Partial trace|partial trace]]
 - [[Unitary Operation]] → $U^\dagger U=I$, what every gate is
+## for error correction and fault tolerance
+- [[Pauli matrices]] → $I,X,Y,Z$, how they multiply, commute or anticommute, Pauli strings, and why they're a basis for every $2\times2$ matrix
+- [[Groups]] → groups, generators, subgroups, cosets, normalizers: the language of stabilizer codes
+- [[Linear algebra mod 2]] → bit vectors, span, Gaussian elimination with XOR, kernels, and why a string can be orthogonal to itself
+- [[Counting and the binomial distribution]] → $\binom nk$, the chance $k$ things fail, the small-$p$ shortcut, the union bound
+- [[Big O notation]] → $O(\cdot)$, log vs polynomial vs exponential vs doubly exponential, log rules
 ## pictures and transforms
 - [[Bloch sphere]] → drawing a qubit as a point on a sphere
 - [[Fourier Transform]], [[Discrete Fourier Transform]] → splitting a signal into frequencies (used in the [[Quantum Fourier Transform]])
@@ -25,6 +31,10 @@ flowchart TD
     P["Probability"] --> Tr
     D --> U["Unitary"]
     E --> B["Bloch sphere"]
+    C --> PM["Pauli matrices"]
+    PM --> G["Groups"]
+    M2["Linear algebra mod 2"] --> G
+    P --> CB["Counting / binomial"]
 ```
 (arrows = "learn this first")
 

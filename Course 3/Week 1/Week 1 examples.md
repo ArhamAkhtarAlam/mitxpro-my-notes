@@ -46,14 +46,14 @@ $$
 | purity $\text{tr}(\rho^2)$ | 1 | $\frac12$ |
 
 same diagonal, the difference is the off diagonal (coherence)
-### purity of the course's state
+### purity of the example state
 from [[Pure and mixed states]]
 $$
 \rho=\frac14\begin{bmatrix}3&0\\0&1\end{bmatrix}\quad\Rightarrow\quad\text{tr}(\rho^2)=\Big(\tfrac34\Big)^2+\Big(\tfrac14\Big)^2=\tfrac{10}{16}=0.625<1
 $$
 so it's **mixed**. on the Bloch sphere: $r_z=\frac34-\frac14=0.5$, halfway up the $z$ axis, and $\frac{1+r^2}2=\frac{1+0.25}2=0.625$ ✅
 ### the 3 kinds of 2 qubit state
-from [[Pure and mixed states#the course's 3 examples (2 qubits)]]
+from [[Pure and mixed states#3 examples (2 qubits)]]
 
 | state | $\text{tr}(\rho^2)$ | |
 |---|---|---|

@@ -27,7 +27,7 @@ $$
 | noisy Bell state (below) | smallest is $\frac{1-3p}4$ | only if $p>\frac13$ |
 
 (all checked numerically)
-## the course's worked example
+## worked example
 **a product state stays legal.** for $|\psi_A\rangle=\alpha|0\rangle+\beta|1\rangle$ and $|\psi_B\rangle=\gamma|0\rangle+\delta|1\rangle$, the partial transpose just swaps B's off diagonal entries ($\gamma\delta^*\leftrightarrow\gamma^*\delta$)
 $$
 \rho_{AB}=\begin{bmatrix}|\alpha|^2&\alpha\beta^*\\\alpha^*\beta&|\beta|^2\end{bmatrix}\otimes\begin{bmatrix}|\gamma|^2&\gamma\delta^*\\\gamma^*\delta&|\delta|^2\end{bmatrix}\quad\to\quad\rho_{AB}^{T_B}=\begin{bmatrix}|\alpha|^2&\alpha\beta^*\\\alpha^*\beta&|\beta|^2\end{bmatrix}\otimes\begin{bmatrix}|\gamma|^2&\gamma^*\delta\\\gamma\delta^*&|\delta|^2\end{bmatrix}

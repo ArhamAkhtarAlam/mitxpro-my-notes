@@ -97,6 +97,6 @@ this is a **level 1** encoding. one encoded gate is better than one plain gate, 
 > ② $3+5=8$ gates, $\binom82=28$, so $p_{\text{fail}}\leq28p^2$ and the threshold drops to $\frac1{28}$: more gates means more ways to fail
 > ③ with 1 majority gate, it's a single point of failure (its error goes straight to the output), and the output would be one wire, so it's decoded and the next gate has nothing to correct with
 
-see also [[Triple modular redundancy]], [[Bit flip code]], [[Threshold theorem]]
+see also [[Triple modular redundancy]], [[Bit flip code]], [[Threshold theorem]], maths: [[Counting and the binomial distribution]]
 
 week hub: [[Principles of fault tolerance]]

@@ -43,4 +43,4 @@ $\gcd(a,N)$ = the biggest number that divides both. [[Shor's algorithm]] needs $
 
 eg. $\gcd(2^2-1,15)=\gcd(3,15)=3$ and $\gcd(2^2+1,15)=\gcd(5,15)=5$, and $3\times5=15$ ✅
 
-see also [[Math]]
+see also [[Math]], maths: [[Linear algebra mod 2]]

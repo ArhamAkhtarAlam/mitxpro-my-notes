@@ -1,9 +1,9 @@
 #quantum_error_correction #bit_flip_code #worked_example
-the course's "Bit-Flip Code I: Recovering the State" exercise, worked through. encode, let at most one $\sigma_x$ hit, decode, and find out when qubit 1 needs fixing. it's the no-ancilla version from [[Decoding the bit flip code]], with the course's labels $|\psi_0\rangle$ to $|\psi_3\rangle$
+recovering the state from the bit flip code, worked through case by case. encode, let at most one $\sigma_x$ hit, decode, and find out when qubit 1 needs fixing. it's the no-ancilla version from [[Decoding the bit flip code]], with the stages labelled $|\psi_0\rangle$ to $|\psi_3\rangle$
 ## the circuit
 ![[Bit_flip_practice_circuit.png]]
 
-(the course's figure stops at the measurements. the "If" box is the answer to the question below: `0x3` means the two measured bits are $11$)
+(the "If" box is the answer to the question below: `0x3` means the two measured bits are $11$)
 
 ```mermaid
 flowchart TD
@@ -45,7 +45,7 @@ $$
 |\psi_3^d\rangle&=\alpha|111\rangle+\beta|011\rangle=(\alpha|1\rangle+\beta|0\rangle)|1\rangle|1\rangle
 \end{aligned}
 $$
-in every case qubits 2 and 3 **factor out** into a definite state, so measuring them never touches $\alpha$ and $\beta$. this is the [[Decoding the bit flip code#^decoding-table|decoding table]], just with the course's labels
+in every case qubits 2 and 3 **factor out** into a definite state, so measuring them never touches $\alpha$ and $\beta$. this is the [[Decoding the bit flip code#^decoding-table|decoding table]], just with the $\psi$ labels
 ## the question
 > [!question] in which case(s) should a $\sigma_x$ be applied to the first qubit to recover $|\psi\rangle$?
 > only when the ancillas are measured in $|1\rangle|1\rangle$ (case d). in a, b and c qubit 1 already holds $\alpha|0\rangle+\beta|1\rangle$, and in d it holds $\alpha|1\rangle+\beta|0\rangle=X|\psi\rangle$, so one more $X$ undoes it

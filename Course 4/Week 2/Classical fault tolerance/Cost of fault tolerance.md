@@ -80,6 +80,6 @@ flowchart TD
 > ③ $\log_26=2.58$: the overhead grows like $\big(\log\frac N\epsilon\big)^{2.58}$
 > ④ then $p_{th}/p<1$ and its log is negative, so no $k$ works: every level makes it worse ([[Recursive fault tolerance#^recursion-table]])
 
-see also [[Threshold theorem]], [[Recursive fault tolerance]], [[Fault-tolerant procedure]]
+see also [[Threshold theorem]], [[Recursive fault tolerance]], [[Fault-tolerant procedure]], maths: [[Big O notation]]
 
 week hub: [[Principles of fault tolerance]]

@@ -17,10 +17,10 @@ flowchart TD
 - [[Bit flip code]] → encode $\alpha|0\rangle+\beta|1\rangle$ as $\alpha|000\rangle+\beta|111\rangle$ with two CNOTs, it fixes 1 flip, fails with $3p^2-2p^3$, the **threshold** $p<\frac1c$, correcting with $X$ gates, more redundancy and more levels
 - [[Parity measurement]] → parity checks onto ancillas give the **syndrome** (if and where an error happened) without revealing $\alpha$ or $\beta$
 - [[Decoding the bit flip code]] → the no-ancilla way: run the encoder backwards, measure qubits 2 and 3, fix qubit 1. and why a $\sigma_z$ on any qubit is a $\sigma_z$ on the encoded qubit
-- [[Bit flip code practice]] → the course's practice problem: every case from $|\psi_0\rangle$ to $|\psi_3\rangle$, and why only $11$ needs a fix
+- [[Bit flip code practice]] → every case from $|\psi_0\rangle$ to $|\psi_3\rangle$, and why only $11$ needs a fix
 ## quantum codes
 - [[Phase flip code]] → the bit flip code with Hadamards around it: $|0_L\rangle$ = even states, $|1_L\rangle$ = odd states. fixes one $\sigma_z$, but makes $\sigma_x$ errors 3× worse
-- [[Phase flip code practice]] → the course's practice problem: the Hadamards turn a $\sigma_z$ into a $\sigma_x$, then it's the bit flip code again
+- [[Phase flip code practice]] → the Hadamards turn a $\sigma_z$ into a $\sigma_x$, then it's the bit flip code again
 - [[Shor code]] → concatenate the two: a phase code of bit codes, 9 qubits. fixes any $\sigma_x$, $\sigma_y$ or $\sigma_z$ on one qubit, and so **any** one qubit error (the Paulis are a basis, and the measurement makes the error discrete)
 ## reliable computation
 - [[Computational capacity]] → Shannon's channel capacity: below it, codes make the error exponentially close to 0. the setup for the **threshold** for noisy computers

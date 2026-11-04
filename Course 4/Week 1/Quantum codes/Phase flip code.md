@@ -61,7 +61,7 @@ the whole cycle: encode ($\psi_0\to\psi_2$), a possible $\sigma_z$ error, undo t
 
 ![[Phase_flip_full_circuit.png]]
 
-(the course's version leaves out both Hadamards on qubit 1, which gives the $|{+}{+}{+}\rangle,|{-}{-}{-}\rangle$ code from the box below. its practice problem is worked case by case in [[Phase flip code practice]])
+(leaving out both Hadamards on qubit 1 gives the $|{+}{+}{+}\rangle,|{-}{-}{-}\rangle$ code from the box below. that version is worked case by case in [[Phase flip code practice]])
 
 > [!eg] check it: encode $|0\rangle$
 > $$

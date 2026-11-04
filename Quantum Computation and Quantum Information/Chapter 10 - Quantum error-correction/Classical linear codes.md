@@ -108,6 +108,6 @@ remarkably, the dual construction comes up naturally in quantum error correction
 > ③ $H(0.1)=0.332+0.137=0.469$, so $k/n\geq0.531$: some code with $k\approx53$ data bits in 100 corrects any 5 errors
 > ④ generator $H^T$, ie. spanned by $(1,1,0)$ and $(0,1,1)$: all even weight words $\{000,110,011,101\}$, a $[3,2]$ code. $C=\{000,111\}$ isn't inside it ($111$ has odd weight), so not even weakly self-dual
 
-see also [[Binary symmetric channel]], [[Shannon entropy]], [[Channel capacity]], [[Degenerate codes and the quantum Hamming bound]]
+see also [[Binary symmetric channel]], [[Shannon entropy]], [[Channel capacity]], [[Degenerate codes and the quantum Hamming bound]], maths: [[Linear algebra mod 2]]
 
 next: [[Calderbank-Shor-Steane codes]]

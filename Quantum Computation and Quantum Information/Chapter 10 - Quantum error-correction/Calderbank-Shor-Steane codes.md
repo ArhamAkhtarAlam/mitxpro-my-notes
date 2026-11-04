@@ -87,6 +87,6 @@ $|0_L\rangle=|0+C_2\rangle$ is the 8 code words of $C_2$, and $|1_L\rangle$ uses
 > ② $1101001$ is itself in $C_2$ (it's in $|0_L\rangle$), so it's the coset $0+C_2$: $|0_L\rangle$
 > ③ two classical codes have to be good at once, $C_1$ against bit flips and $C_2^\perp$ against phase flips, and each costs about $H(2t/n)$ of the rate
 
-see also [[CSS codes]], [[Classical linear codes]], [[Transversal gates on stabilizer codes]]
+see also [[CSS codes]], [[Classical linear codes]], [[Transversal gates on stabilizer codes]], maths: [[Linear algebra mod 2]], [[Groups]]
 
 next: [[The stabilizer formalism]]
