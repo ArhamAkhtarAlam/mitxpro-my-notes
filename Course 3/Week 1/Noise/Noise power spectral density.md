@@ -103,4 +103,4 @@ $$
 
 next: what different noise spectra look like, see [[Noise spectra]]
 
-see also [[Stochastic noise]]
+see also [[Stochastic noise]], [[Dynamical decoupling]] (filter functions in action)

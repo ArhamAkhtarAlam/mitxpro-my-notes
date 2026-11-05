@@ -58,4 +58,4 @@ grey = single trials, green = the average
 
 even though this was just one type of noise, it gives the general idea of how noise causes gate errors
 
-see also [[Stochastic noise]] (amplitude noise is a stochastic noise) and [[Systematic noise]]
+see also [[Rotary echo]] (undoing this decay by reversing the drive), [[Stochastic noise]] (amplitude noise is a stochastic noise) and [[Systematic noise]]

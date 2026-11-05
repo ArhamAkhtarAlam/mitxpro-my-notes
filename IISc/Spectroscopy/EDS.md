@@ -84,6 +84,6 @@ $$
 > [!extra] EDS and XPS measure the same levels
 > XPS measures each level's binding energy, EDS measures the **difference** between two levels. for copper: 1s at 8979 eV minus 2p$_{3/2}$ at 932.7 eV ([[XPS#the energy levels]]) gives 8046 eV, the Cu $K_\alpha$ line ✅. and only certain jumps happen (2p → 1s yes, 2s → 1s no) because the photon carries away one unit of angular momentum, the same spin–orbit bookkeeping as the [[XPS#the quantum connection|XPS doublets]]
 
-see also [[SEM]], [[TEM]], [[XPS]], [[XRD]], [[Metrology and nano-characterization workshop]]
+see also [[SEM]], [[TEM]], [[XPS]], [[XRD]], [[Metrology and nano-characterization workshop]], maths: [[Peak shapes and FWHM]]
 
 formulas: [[Spectroscopy formulas]]

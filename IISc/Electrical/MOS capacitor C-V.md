@@ -142,6 +142,6 @@ at low currents and for $C$–$V$ the cabling decides the noise floor and the le
 > [!extra] silicon spin qubits are MOS devices
 > take a MOS capacitor, make the gate into a few tiny electrodes, and cool it to ~1 K: under the gate you can **accumulate** a puddle of just **one** electron (a quantum dot). its spin is a qubit (the same spin ½ as the [[XPS#the quantum connection|XPS doublets]]). it's the same accumulation / depletion physics as the C–V curve, and companies like Intel build them in normal chip fabs. the interface traps that stretch out a C–V curve are exactly the charge noise that makes these qubits lose their state
 
-see also [[Electrical characterization]], [[Sheet resistance and contacts]], [[XPS]], [[UPS]], [[Metrology and nano-characterization workshop]]
+see also [[Electrical characterization]], [[Sheet resistance and contacts]], [[XPS]], [[UPS]], [[Metrology and nano-characterization workshop]], maths: [[Straight line fits]], [[Logarithms and exponentials]]
 
 formulas: [[Electrical formulas]]

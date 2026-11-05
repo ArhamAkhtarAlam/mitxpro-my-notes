@@ -141,6 +141,6 @@ for diffuse reflectance use **Kubelka–Munk**, $F(R)=\frac{(1-R)^2}{2R}$, in pl
 > [!extra] it's counting single photons
 > $E=\frac{1240}{\lambda}$ is **one** photon's energy, and the PMT detector works one photon at a time: the same particles of light used in [[Single Photon making and detecting|photonic quantum computing and QKD]]. the same formula gives the energy of the X-rays in [[XRD#where the X-rays come from|XRD]] (8 keV)
 
-see also [[XRD]], [[REELS and other XPS modes|REELS]] (band gap from the surface), [[TEM]] (EELS also measures gaps), [[FTIR]], [[Raman spectroscopy]], [[Spectroscopy formulas]], [[Metrology and nano-characterization workshop]]
+see also [[XRD]], [[REELS and other XPS modes|REELS]] (band gap from the surface), [[TEM]] (EELS also measures gaps), [[FTIR]], [[Raman spectroscopy]], [[Spectroscopy formulas]], [[Metrology and nano-characterization workshop]], maths: [[Logarithms and exponentials]], [[Straight line fits]]
 
 formulas: [[Spectroscopy formulas]]

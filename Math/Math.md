@@ -17,6 +17,10 @@ the maths you need for the quantum notes. start at the top if something doesn't 
 - [[Linear algebra mod 2]] → bit vectors, span, Gaussian elimination with XOR, kernels, and why a string can be orthogonal to itself
 - [[Counting and the binomial distribution]] → $\binom nk$, the chance $k$ things fail, the small-$p$ shortcut, the union bound
 - [[Big O notation]] → $O(\cdot)$, log vs polynomial vs exponential vs doubly exponential, log rules
+## for measurements and data (the IISc notes)
+- [[Logarithms and exponentials]] → $e^{-t/\tau}$, half-lives, $\ln$ vs $\log_{10}$ vs $\log_2$, absorbance, decibels, 60 mV/dec
+- [[Straight line fits]] → slope and intercept, least squares, and the linearising tricks (TLM, $1/C^2$, Tauc, Williamson–Hall, $\ln I$ vs $V$)
+- [[Peak shapes and FWHM]] → Gaussian vs Lorentzian, FWHM $=2.355\sigma$, lifetime ↔ linewidth, width and Fourier transforms
 ## pictures and transforms
 - [[Bloch sphere]] → drawing a qubit as a point on a sphere
 - [[Fourier Transform]], [[Discrete Fourier Transform]] → splitting a signal into frequencies (used in the [[Quantum Fourier Transform]])
@@ -35,6 +39,8 @@ flowchart TD
     PM --> G["Groups"]
     M2["Linear algebra mod 2"] --> G
     P --> CB["Counting / binomial"]
+    L["Logs and exponentials"] --> F["Straight line fits"]
+    L --> PK["Peak shapes"]
 ```
 (arrows = "learn this first")
 

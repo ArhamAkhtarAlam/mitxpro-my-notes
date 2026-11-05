@@ -25,6 +25,8 @@ this is the **pure dephasing** part of decoherence, the $T_\phi$ in
 $$
 \frac1{T_2}=\frac1{2T_1}+\frac1{T_\phi}
 $$
+^t2-relation
+
 (where $T_1$ is energy loss). caused by things like slow random changes in the qubit's frequency (see [[Noise Processes]] and [[Noise spectra]])
 
-see also [[Dephasing channel]], [[Amplitude damping channel]], [[Quantum channels]]
+see also [[Dephasing and the filter function]] (undoing dephasing with pulses), [[Dephasing channel]], [[Amplitude damping channel]], [[Quantum channels]]

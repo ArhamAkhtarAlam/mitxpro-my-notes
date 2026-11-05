@@ -269,3 +269,21 @@ h1, h2, h3 {
 .theme-light .callout[data-callout="eg"]       { --callout-color: 2, 136, 209; }
 .theme-light .callout[data-callout="exercise"] { --callout-color: 205, 110, 0; }
 .theme-light .callout[data-callout="answer"]   { --callout-color: 0, 140, 112; }
+
+/* drag handle on the right edge of the sidebar (publish.js adds it) */
+.sidebar-resizer {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 6px;
+  height: 100%;
+  cursor: col-resize;
+  z-index: 10;
+  touch-action: none;
+}
+.sidebar-resizer:hover,
+body.sidebar-resizing .sidebar-resizer {
+  background: var(--interactive-accent, #4cc9a0);
+  opacity: 0.5;
+}
+body.sidebar-resizing { user-select: none; cursor: col-resize; }

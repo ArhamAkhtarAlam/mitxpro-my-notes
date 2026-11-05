@@ -130,6 +130,6 @@ sheet resistance of doped layers, metal films. resistivity $\rho=R_s\,t$. why fo
 > [!extra] the same transistor becomes a qubit
 > squeeze a MOSFET down until the channel holds only a few electrons and cool it below 1 K: the current comes through in single electrons, and a single trapped electron's spin can be a qubit ([[MOS capacitor C-V#the quantum connection]]). the transfer curve turns into a series of sharp peaks, one per electron added (Coulomb blockade)
 
-see also [[Sheet resistance and contacts]], [[MOS capacitor C-V]], [[MSA]], [[Metrology and nano-characterization workshop]]
+see also [[Sheet resistance and contacts]], [[MOS capacitor C-V]], [[MSA]], [[Metrology and nano-characterization workshop]], maths: [[Logarithms and exponentials]], [[Straight line fits]]
 
 formulas: [[Electrical formulas]]

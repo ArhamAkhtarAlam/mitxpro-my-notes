@@ -185,6 +185,6 @@ $$
 > [!extra] ohmic contacts work by tunnelling
 > a metal on a semiconductor makes a Schottky barrier ([[UPS#in VLSI]]). to get an **ohmic** contact you dope the semiconductor very heavily right under the metal: that makes the barrier so **thin** that electrons tunnel straight through it, the same effect as the field emission gun in a [[TEM]]. that's why $\rho_c$ drops so steeply with doping
 
-see also [[Electrical characterization]], [[MOS capacitor C-V]], [[XPS]], [[UPS]], [[Metrology and nano-characterization workshop]]
+see also [[Electrical characterization]], [[MOS capacitor C-V]], [[XPS]], [[UPS]], [[Metrology and nano-characterization workshop]], maths: [[Straight line fits]], [[Logarithms and exponentials]]
 
 formulas: [[Electrical formulas]]

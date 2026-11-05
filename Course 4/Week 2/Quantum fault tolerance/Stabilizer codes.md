@@ -1,4 +1,4 @@
-#stabilizer_codes #quantum_error_correction #pauli
+ ho#stabilizer_codes #quantum_error_correction #pauli
 the language almost every quantum code is written in. instead of writing out the code words, list the Pauli operators that leave them alone. used all through [[Fault-tolerant quantum computing]]
 ## the idea
 a **stabilizer** is a set of operators that leaves a particular group of states untouched. a state **outside** that group gets a "label" from them instead (a $-1$), which is how changes, ie. **errors**, to code words get detected

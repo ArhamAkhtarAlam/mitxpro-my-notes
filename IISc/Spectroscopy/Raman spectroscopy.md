@@ -208,6 +208,6 @@ isotropic samples (liquids, powders) scatter the same whatever the polarization,
 > [!extra] Raman light is noise in quantum networks
 > sending single photons for QKD down a fibre that also carries normal internet traffic: the bright classical laser Raman-scatters off the glass and makes stray photons at nearby wavelengths, some landing right on the quantum channel ([[Long-distance quantum communication]]). that's one reason quantum and classical signals are kept far apart in wavelength
 
-see also [[FTIR]], [[XRD]], [[UV-vis spectroscopy]], [[AFM]], [[Metrology and nano-characterization workshop]]
+see also [[FTIR]], [[XRD]], [[UV-vis spectroscopy]], [[AFM]], [[Metrology and nano-characterization workshop]], maths: [[Peak shapes and FWHM]]
 
 formulas: [[Spectroscopy formulas]]

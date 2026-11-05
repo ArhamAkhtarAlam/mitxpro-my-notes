@@ -93,6 +93,6 @@ $$
 > [!extra] MEMS in the quantum ground state
 > a 350 kHz cantilever at room temperature holds $\frac{k_BT}{hf}\approx2\times10^7$ quanta of vibration (phonons). but a GHz mechanical resonator cooled to ~20 mK has almost **none**, it sits in its quantum ground state. in 2010 one was coupled to a superconducting qubit and put into a superposition of vibrating and not vibrating, the first quantum machine
 
-see also [[AFM]], [[Electrical characterization]], [[Metrology and nano-characterization workshop]]
+see also [[AFM]], [[Electrical characterization]], [[Metrology and nano-characterization workshop]], maths: [[Peak shapes and FWHM]], [[Logarithms and exponentials]]
 
 formulas: [[Microscopy formulas]]
