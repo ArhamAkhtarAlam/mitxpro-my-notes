@@ -19,6 +19,9 @@ to check a received word, multiply it by the **parity check matrix** $H$: the 3 
 > $$
 
 the syndrome tells you **which** bit flipped, never **what** its value is. that's the property that carries over to the quantum case
+
+> [!extra] a "perfect" code
+> 3 check bits give $2^3=8$ syndromes, and there are exactly 8 things to name: "no error" plus a flip on one of the 7 bits. nothing is wasted, so the $[7,4]$ code is called **perfect**. the 5 qubit code does the same trick for qubits ([[Stabilizer codes#^five-qubit-codewords]]). Steane spends 2 more qubits than that, and gets transversal Clifford gates in return ([[Transversal gates on stabilizer codes]])
 ## the quantum version: $[\![7,1,3]\!]$
 quantum errors include phase flips, so the Steane code spends 7 qubits on **one** qubit (not 4). the notation $[\![n,k,d]\!]$ (double brackets = quantum): $n=7$ physical qubits, $k=1$ logical qubit, and **distance** $d=3$, so it corrects any one error ([[Stabilizer codes#logical operators and distance]])
 

@@ -49,6 +49,11 @@ flowchart TD
 
 the same trick gives a CNOT with **one control and many targets** at no extra cost: measure $\bar X_A\bar X_{T_1}\bar X_{T_2}\cdots$ in step 2
 
+> [!extra] why the Paulis can wait
+> a Clifford gate turns a Pauli into another Pauli: eg. a CNOT turns $X_C$ (before it) into $X_CX_T$ (after it), and $Z_T$ into $Z_CZ_T$. so a pending Pauli can be pushed through all the later Clifford gates, and it only ever changes **which** measurement results get flipped. this bookkeeping is the **Pauli frame**. the one place it can't wait is a $T$ gate, since $TXT^\dagger$ isn't a Pauli: that's where the $S$ correction in [[Magic state distillation]] comes from
+>
+> each lattice surgery measurement also takes about $d$ rounds of checks, not one, because a single round could have a measurement error in it (same reason as [[Parity measurement]] repeats). so a logical CNOT costs a few times $d$ check rounds
+
 > [!important] the one idea
 > ==on the surface code, gates become measurements: prepare, measure some big logical parities, track the Paulis in software==
 

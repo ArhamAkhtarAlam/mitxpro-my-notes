@@ -76,6 +76,9 @@ that's the trick: in each part of the superposition, the two qubits being compar
 > [!extra] parity is the $Z_1Z_2$ operator
 > measuring $s_A$ is the same as measuring the operator $Z_1Z_2=Z\otimes Z\otimes I$: its eigenvalue is $+1$ for even parity ($|00\rangle,|11\rangle$) and $-1$ for odd ($|01\rangle,|10\rangle$), so $s_A=0\leftrightarrow+1$ and $s_A=1\leftrightarrow-1$. the code states are $+1$ eigenstates of both $Z_1Z_2$ and $Z_2Z_3$, these operators are called the code's **stabilizers**. measuring an operator only projects onto its eigenspaces ([[Projectors]]), and here a whole eigenspace contains $\alpha|000\rangle+\beta|111\rangle$, so nothing collapses
 
+> [!extra] what if the ancilla is wrong?
+> the CNOTs and the ancilla measurement are noisy too, so a syndrome of $10$ might really be "no error" plus a bad readout. acting on it would **add** a flip. the fix is to measure the parities again and again: a real data error changes the syndrome and it **stays** changed, while a readout error shows up once and disappears. the [[Surface code]] does exactly this, every round, and only looks at where the syndrome **changes** ([[Decoding the surface code]], [[Fault-tolerant measurement]])
+
 next: what to do with the syndrome, [[Bit flip code#correcting the error]]
 
 > [!exercise] try these
