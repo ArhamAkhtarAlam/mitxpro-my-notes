@@ -47,6 +47,19 @@ $$
 g\,(E|\psi\rangle)=-E\,g|\psi\rangle=-E|\psi\rangle
 $$
 and measuring $g$ gives $-1$ instead of $+1$. ==the **syndrome** is the list of which generators anticommute with the error==: one bit per generator, measured without touching the encoded state ([[Parity measurement]], done fault tolerantly in [[Fault-tolerant measurement]])
+
+> [!eg] the bit flip code
+> generators $Z_1Z_2$ and $Z_2Z_3$ ([[Bit flip code]]). each single bit flip anticommutes with a different set of them, so each one gives its own pair of $\pm1$ values. the ancillas store them as $|0\rangle\leftrightarrow+1$, $|1\rangle\leftrightarrow-1$
+>
+> | error | logical qubit | $\langle Z_1Z_2\rangle$ | $\langle Z_2Z_3\rangle$ | ancillas | measurement |
+> |---|---|---|---|---|---|
+> | none | $\vert\psi\rangle_0=\alpha\vert000\rangle+\beta\vert111\rangle$ | ${}_0\langle\psi\vert Z_1Z_2\vert\psi\rangle_0=+1$ | ${}_0\langle\psi\vert Z_2Z_3\vert\psi\rangle_0=+1$ | $\vert00\rangle_A$ | $+1,\ +1$ |
+> | qubit 1 | $\vert\psi\rangle_1=\alpha\vert100\rangle+\beta\vert011\rangle$ | ${}_1\langle\psi\vert Z_1Z_2\vert\psi\rangle_1=-1$ | ${}_1\langle\psi\vert Z_2Z_3\vert\psi\rangle_1=+1$ | $\vert10\rangle_A$ | $-1,\ +1$ |
+> | qubit 2 | $\vert\psi\rangle_2=\alpha\vert010\rangle+\beta\vert101\rangle$ | ${}_2\langle\psi\vert Z_1Z_2\vert\psi\rangle_2=-1$ | ${}_2\langle\psi\vert Z_2Z_3\vert\psi\rangle_2=-1$ | $\vert11\rangle_A$ | $-1,\ -1$ |
+> | qubit 3 | $\vert\psi\rangle_3=\alpha\vert001\rangle+\beta\vert110\rangle$ | ${}_3\langle\psi\vert Z_1Z_2\vert\psi\rangle_3=+1$ | ${}_3\langle\psi\vert Z_2Z_3\vert\psi\rangle_3=-1$ | $\vert01\rangle_A$ | $+1,\ -1$ |
+>
+> every $|\psi\rangle_k$ is an eigenstate of both generators, so the measurement gives these values **with certainty** and leaves $\alpha$, $\beta$ alone. eg. $X_1$ anticommutes with $Z_1Z_2$ only, so $|\psi\rangle_1$ gives $-1,+1$. same table in parity language: [[Parity measurement#^syndrome-table]]
+
 ## how gates change the stabilizer
 apply a unitary $U$ to a stabilized state: $U|\psi\rangle=Ug|\psi\rangle=UgU^\dagger\,U|\psi\rangle$, so the new state $U|\psi\rangle$ is stabilized by $UgU^\dagger$. ==to follow a state through a circuit, just follow its generators==
 

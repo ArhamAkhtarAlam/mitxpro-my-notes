@@ -44,16 +44,14 @@ the **weight** of a parity check is how many bits it looks at. $s_A$ and $s_B$ a
 ## the syndrome
 each error gives a different pair $(s_A,s_B)$
 
-| error | state | $s_A$ (1 vs 2) | $s_B$ (2 vs 3) | ancillas $\vert S_AS_B\rangle$ | syndrome |
-|---|---|---|---|---|---|
-| none | $\vert\psi\rangle_0=\alpha\vert000\rangle+\beta\vert111\rangle$ | same: ${}_0\langle\psi\vert Z_1Z_2\vert\psi\rangle_0=+1$ | same: ${}_0\langle\psi\vert Z_2Z_3\vert\psi\rangle_0=+1$ | $\vert00\rangle_A$ | $00$ |
-| qubit 1 | $\vert\psi\rangle_1=\alpha\vert100\rangle+\beta\vert011\rangle$ | different: ${}_1\langle\psi\vert Z_1Z_2\vert\psi\rangle_1=-1$ | same: ${}_1\langle\psi\vert Z_2Z_3\vert\psi\rangle_1=+1$ | $\vert10\rangle_A$ | $10$ |
-| qubit 2 | $\vert\psi\rangle_2=\alpha\vert010\rangle+\beta\vert101\rangle$ | different: ${}_2\langle\psi\vert Z_1Z_2\vert\psi\rangle_2=-1$ | different: ${}_2\langle\psi\vert Z_2Z_3\vert\psi\rangle_2=-1$ | $\vert11\rangle_A$ | $11$ |
-| qubit 3 | $\vert\psi\rangle_3=\alpha\vert001\rangle+\beta\vert110\rangle$ | same: ${}_3\langle\psi\vert Z_1Z_2\vert\psi\rangle_3=+1$ | different: ${}_3\langle\psi\vert Z_2Z_3\vert\psi\rangle_3=-1$ | $\vert01\rangle_A$ | $01$ |
+| error | state | $s_A$ (1 vs 2) | $s_B$ (2 vs 3) | syndrome |
+|---|---|---|---|---|
+| none | $\alpha\vert000\rangle+\beta\vert111\rangle$ | same | same | $00$ |
+| qubit 1 | $\alpha\vert100\rangle+\beta\vert011\rangle$ | different | same | $10$ |
+| qubit 2 | $\alpha\vert010\rangle+\beta\vert101\rangle$ | different | different | $11$ |
+| qubit 3 | $\alpha\vert001\rangle+\beta\vert110\rangle$ | same | different | $01$ |
 
 ^syndrome-table
-
-every $|\psi\rangle_k$ is an eigenstate of both $Z_1Z_2$ and $Z_2Z_3$ ([[#why it doesn't destroy the state|more below]]), so measuring them gives these $\pm1$ values **with certainty**: ancilla $|0\rangle\leftrightarrow+1$, ancilla $|1\rangle\leftrightarrow-1$
 
 ==the syndrome uniquely says if a single bit flip happened, and on which qubit==. qubit 2 is the only one in **both** checks, so it's the only one that lights up both. that's why the ancillas are also called **syndrome qubits**
 
