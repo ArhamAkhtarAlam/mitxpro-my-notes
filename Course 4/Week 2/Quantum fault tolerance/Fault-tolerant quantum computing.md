@@ -38,6 +38,7 @@ the gates that map Pauli products to Pauli products are the **Clifford** gates, 
 how hard that is depends on the code: [[Transversal gates on stabilizer codes]] shows the easy gates for the 5 and 7 qubit codes, and why **no** code gets a universal set the easy way
 ## the rest of the story
 - [[Transversal gates on stabilizer codes]] → the 5 qubit code vs the 7 qubit (Steane) code, CSS codes and transversal CNOTs, and the Eastin-Knill theorem
+- [[From Hamming to Steane]] → building the 7 qubit code from the classical Hamming code
 - [[Steane code circuit]] → the 7 qubit code as a circuit: encoder, syndrome ancillas, lookup table
 - [[Fault-tolerant measurement]] → measuring the stabilizers without spreading errors: Shor's cat state trick
 - [[Quantum threshold estimate]] → putting it together for a CNOT on the 7 qubit code: 79 gates, so $p_{th}\approx\frac1{3081}\approx10^{-4}$

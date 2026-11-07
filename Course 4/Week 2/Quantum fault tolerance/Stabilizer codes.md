@@ -59,6 +59,8 @@ and measuring $g$ gives $-1$ instead of $+1$. ==the **syndrome** is the list of 
 > | qubit 3 | $\vert\psi\rangle_3=\alpha\vert001\rangle+\beta\vert110\rangle$ | ${}_3\langle\psi\vert Z_1Z_2\vert\psi\rangle_3=+1$ | ${}_3\langle\psi\vert Z_2Z_3\vert\psi\rangle_3=-1$ | $\vert01\rangle_A$ | $+1,\ -1$ |
 >
 > every $|\psi\rangle_k$ is an eigenstate of both generators, so the measurement gives these values **with certainty** and leaves $\alpha$, $\beta$ alone. eg. $X_1$ anticommutes with $Z_1Z_2$ only, so $|\psi\rangle_1$ gives $-1,+1$. same table in parity language: [[Parity measurement#^syndrome-table]]
+>
+> the [[Phase flip code]] is the same with $X$s: its stabilizers are $X_1X_2$ and $X_2X_3$, parity checks in the $|\pm\rangle$ basis
 
 ## how gates change the stabilizer
 apply a unitary $U$ to a stabilized state: $U|\psi\rangle=Ug|\psi\rangle=UgU^\dagger\,U|\psi\rangle$, so the new state $U|\psi\rangle$ is stabilized by $UgU^\dagger$. ==to follow a state through a circuit, just follow its generators==
@@ -116,6 +118,29 @@ flowchart TD
 > | 5 | 0011 | 0111 | 0100 |
 >
 > all 15 single-qubit errors give **different** nonzero syndromes, and with "no error" (0000) that uses all $2^4=16$. so it corrects any one error, with nothing to spare: the "perfect" code from the [[Degenerate codes and the quantum Hamming bound|quantum Hamming bound]] (checked numerically)
+
+the 5 qubit code (Laflamme, Miquel, Paz and Zurek) is the smallest code that corrects any single Pauli error. its code words, the states every generator leaves alone, are
+$$
+\begin{aligned}
+|0\rangle_L=\tfrac14\big(&|00000\rangle+|10010\rangle+|01001\rangle+|10100\rangle+|01010\rangle-|11011\rangle-|00110\rangle-|11000\rangle\\
+-&|11101\rangle-|00011\rangle-|11110\rangle-|01111\rangle-|10001\rangle-|01100\rangle-|10111\rangle+|00101\rangle\big)\\
+|1\rangle_L=\tfrac14\big(&|11111\rangle+|01101\rangle+|10110\rangle+|01011\rangle+|10101\rangle-|00100\rangle-|11001\rangle-|00111\rangle\\
+-&|00010\rangle-|11100\rangle-|00001\rangle-|10000\rangle-|01110\rangle-|10011\rangle-|01000\rangle+|11010\rangle\big)
+\end{aligned}
+$$
+^five-qubit-codewords
+
+($|1\rangle_L=XXXXX\,|0\rangle_L$: flip every bit and the list swaps over, checked numerically)
+
+> [!eg] a bit flip on qubit 1 of $|0\rangle_L$
+> $|0\rangle_f=X_1I_2I_3I_4I_5|0\rangle_L$ flips the first bit of every term. $X_1$ commutes with $g_1,g_2,g_3$ (they have $X$ or $I$ on qubit 1) but **anticommutes** with $g_4=ZXIXZ$:
+> $$
+> \begin{aligned}
+> g_{1,2,3}:&\quad{}_f\langle0|g|0\rangle_f=+1\\
+> g_4:&\quad(ZXIXZ)(XIIII)|0\rangle_L=-(XIIII)(ZXIXZ)|0\rangle_L\ \Rightarrow\ {}_f\langle0|ZXIXZ|0\rangle_f=-1
+> \end{aligned}
+> $$
+> syndrome $0001$, the first row of the table above. classical processing turns it into "qubit 1", and an $X_1$ (fed forward) fixes it
 ## logical operators and distance
 an operator that **commutes** with every generator but **isn't in** $S$ maps the code to itself without being the identity on it: it's a **logical** operator (it's in the normalizer, [[Fault-tolerant quantum computing#^normalizer]]). eg. $X_1X_2X_3$ for the bit flip code, or $X^{\otimes5}$ for the 5 qubit code
 

@@ -64,4 +64,10 @@ $$
 $$
 ![[Dephasing_bloch_3d.png]]
 
+> [!exercise] try this
+> which are true for the dephasing channel? (a) it leaves $\rho$ alone with probability $1-p$ (b) it applies $Z$ with probability $p$ (c) for $\rho=|\psi\rangle\langle\psi|$ with $|\psi\rangle=\alpha|0\rangle+\beta|1\rangle$, it changes the off-diagonal elements of $\rho$ (d) on the Bloch sphere it keeps the $z$ component and shrinks $x$ and $y$
+
+> [!answer]-
+> all four. $Z$ flips the sign of the off-diagonals ($\alpha\beta^*\to-\alpha\beta^*$) and leaves the populations $|\alpha|^2$, $|\beta|^2$ alone, so the off-diagonals shrink by $1-2p$ and so do $x$ and $y$
+
 see also [[Depolarizing channel]] and [[Amplitude damping channel]] (and the comparison in [[Quantum channels#comparing the channels]])

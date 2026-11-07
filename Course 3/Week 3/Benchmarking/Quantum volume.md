@@ -94,4 +94,10 @@ the 2 papers the course points to, oldest first
 >
 > ![[Cross 2018 - Validating quantum computers using randomized model circuits.pdf#height=500]]
 
+> [!exercise] try this
+> quantum volume answers "can this computer run a given algorithm?", using the number of qubits $N$ it needs and the circuit depth $d$. which hardware aspects does it take into account? (a) how many gates can be applied before decoherence spoils the results (b) the connectivity between qubits (c) the available gate set (d) how many gates can run in parallel
+
+> [!answer]-
+> all four. they all change how deep a random circuit on $n'$ qubits can run before it fails: (a) is the error rate per gate, (b) and (c) decide how many extra (SWAP or decomposition) gates a circuit needs, and (d) decides how many layers it takes
+
 see also [[NISQ]], [[Multiqubit gates]], [[Noise Processes]]

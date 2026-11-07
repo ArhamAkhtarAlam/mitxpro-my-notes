@@ -61,11 +61,13 @@ how big is $p_{th}$ for real constructions? (the plot in [[Recursive fault toler
 > ① a construction has $p_{th}=0.01$. your gates fail with $p=0.005$. can you run a circuit with $10^{15}$ gates reliably? what about $p=0.02$?
 > ② what does the $k$ input bound give for $k=25$?
 > ③ why isn't "$p<\frac13$" from triple modular redundancy a threshold in the sense of this theorem?
+> ④ a circuit of $N$ perfect gates is simulated with error below $\epsilon$ using $O(\text{poly}(\log\frac N\epsilon)\,N)$ faulty gates, each failing with probability $p$. does $p_{th}$ depend on $N$, on $\epsilon$, or on $p$?
 
 > [!answer]-
 > ① with $p=0.005$, yes: the theorem says any size and any accuracy, just with more (polylog) overhead. with $p=0.02$ it gives no guarantee, however much overhead you add
 > ② $\frac12-\frac1{2\times5}=0.5-0.1=0.4$
 > ③ the $\frac13$ is for the error of the **whole** copied circuit, so per gate it's $p<\frac1{3N}$, which shrinks as $N$ grows. a threshold must be independent of $N$ (and the voter is assumed perfect, which isn't allowed)
+> ④ none of them. $N$ and $\epsilon$ only change the **overhead** (how many levels), and $p$ is what you compare **against** $p_{th}$. the threshold is fixed by the construction itself (the code, the gate set, how many fault paths it has)
 
 see also [[Computational capacity]] (Shannon's version for wires), [[Bit flip code#the threshold]], [[Fault-tolerant quantum computing]]
 

@@ -64,6 +64,35 @@ because it's two way, Eve can **inject her own dim broadband light** into Bob's 
 > - that tells them **how much** of Bob's incoming light is Eve's, and so how much secret key they can still safely make
 >
 > in the experiment (the "coincidence rate" plot), the fraction of Eve's light they **measured** this way matched the fraction **actually** injected along a straight line, up to about 10%, so the monitoring works
+## the whole setup
+```mermaid
+flowchart TD
+    subgraph Alice
+        EDFA["EDFA amplifier: bright broadband ASE light"] --> LO["bright part kept as the local oscillator"]
+        EDFA --> SIG["dim part sent out (signal)"]
+        SPDC["photon-pair source (SPDC)"] --> CW["CWDM: separates the pair"]
+        CW --> SIG
+        CW --> SPD1["single-photon detectors (idlers, via taps)"]
+        LO --> HOM["homodyne receiver"]
+    end
+    subgraph Bob
+        TAP["tap"] --> SPD2["single-photon detector"]
+        TAP --> BPSK["BPSK: writes his bits as phase 0 or π"]
+        BPSK --> EDFA2["EDFA amplifier"]
+    end
+    subgraph Eve
+        ES["her own dim source"]
+        ER["quantum receiver"]
+    end
+    SIG -- "optical fibre" --> TAP
+    EDFA2 -- "optical fibre back" --> HOM
+    SPD1 --> COINC["coincidence measurements: how much of Bob's light is Eve's?"]
+    SPD2 --> COINC
+    ES -. "injects light" .-> TAP
+    EDFA2 -. "taps the return" .-> ER
+```
+
+the dotted lines are Eve's possible attack (in theory). the detector clicks go to the coincidence counter over electrical cables
 ## where it is now
 - a tabletop demo got **1.3 Gbit/s** of secret key through loss equal to **50 km** of fibre, on a single wavelength (compare ~1 Mbit/s for BB84)
 - still to do

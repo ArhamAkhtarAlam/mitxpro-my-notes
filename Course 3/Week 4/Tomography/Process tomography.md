@@ -71,4 +71,10 @@ flowchart TD
 
 today process tomography and its variants are among the most important diagnostic tools in quantum computing labs. for many qubits, cheaper methods like [[Randomized benchmarking]] give one overall error number instead of the whole χ
 
+> [!exercise] try this
+> which step of standard process tomography is **not** correct? (a) prepare $d$ arbitrarily chosen input states, $d$ being the dimension (b) send the inputs through the process (c) do state tomography on every output to get its coefficients (d) solve the linear equations for $\chi$
+
+> [!answer]-
+> (a): you need $d^2$ **linearly independent** inputs (a basis for all $d\times d$ matrices), eg. $|0\rangle,|1\rangle,|+\rangle,|{+i}\rangle$ for one qubit, not $d$ arbitrary ones
+
 see also [[State tomography]], [[Gate fidelity]], [[Operator-sum representation]], [[Quantum operations]]

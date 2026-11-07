@@ -95,4 +95,12 @@ eg. a Bell state with some noise mixed in, $\rho=(1-\text{noise})\,|\phi\rangle\
 
 next: using fidelities of states to grade whole **gates** ([[Process tomography]])
 
+> [!exercise] try these
+> ① for an ideal $|\phi\rangle$ and an experimental $\rho$, $F(|\phi\rangle,\rho)=\sqrt{\langle\phi|\rho|\phi\rangle}$. which are true? (a) it's about the projection probability of $\rho$ onto $|\phi\rangle$ (b) it equals the largest overlap $\max|\langle\psi|\phi\rangle|$ over all purifications $|\psi\rangle$ of $\rho$ (c) $|\phi\rangle$ is the ideal state, $\rho$ the noisy one actually made (d) all of these
+> ② for two pure states, $F=|\langle\psi|\phi\rangle|$. which are **not** true? (a) it can be read as the projection of $|\phi\rangle$ onto $|\psi\rangle$ (b) it has no upper bound, it goes from 0 to infinity (c) its minimum is 0, reached when $|\psi\rangle=|\phi\rangle$ (d) it's estimated from many measurements of identically prepared states
+
+> [!answer]-
+> ① (d). careful with (a): the projection **probability** is $\langle\phi|\rho|\phi\rangle=F^2$, and $F$ is its square root. (b) is Uhlmann's theorem
+> ② (b) and (c). $0\leq F\leq1$: it's 1 when the states are identical and 0 when they're orthogonal
+
 see also [[State tomography]], [[Density matrix]], [[Benchmarking quantum systems]]

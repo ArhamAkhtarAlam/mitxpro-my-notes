@@ -72,4 +72,14 @@ $$
 ## binary symmetric channel
 the depolarizing channel is like the quantum version of the [[Binary symmetric channel]] because neither has a preferred basis/input (the binary symmetric channel flips $0\to1$ and $1\to0$ with the same probability $p$)
 
+> [!exercise] try these
+> ① which are true for the depolarizing channel? (a) it leaves $\rho$ alone with probability $1-p$ (b) at $p=0$ no information about $\rho$ is lost (c) it maps $\rho\to\left(1-\frac34p\right)\rho+\frac p4\left(X\rho X+Y\rho Y+Z\rho Z\right)$ (d) on the Bloch sphere it shrinks the Bloch vector uniformly toward the centre
+> ② which is **not** true? (a) it replaces $\rho$ with the maximally mixed state with probability $p$ (b) at $p=0$ no information is lost (c) it maps $\rho\to(1-p)\rho+\frac p2I$ (d) on the Bloch sphere it keeps the $z$ component and shrinks $x$ and $y$
+
+> [!answer]-
+> ① all four. for (c), use $\frac I2=\frac14\left(\rho+X\rho X+Y\rho Y+Z\rho Z\right)$ for any $\rho$: then $(1-p)\rho+p\frac I2=\left(1-\frac34p\right)\rho+\frac p4(X\rho X+Y\rho Y+Z\rho Z)$
+> ② (d): that's the dephasing channel. depolarizing shrinks all three components equally
+>
+> careful: these questions use the other common convention, where $p$ is the chance of replacing $\rho$ by $\frac I2$. it's the same channel as the one above with $p_{\text{here}}=\frac43p$
+
 see also [[Dephasing channel]] and [[Amplitude damping channel]] (and the comparison in [[Quantum channels#comparing the channels]])

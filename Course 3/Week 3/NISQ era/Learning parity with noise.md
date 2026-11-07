@@ -24,6 +24,17 @@ flowchart LR
 | 1 | 1 | 0 |
 
 after a few tries it's obvious that $a=D_1\oplus D_2$, so $k=11$
+
+all four possible 2 bit keys side by side ($a=k_1D_1\oplus k_2D_2$):
+
+| $D_1$ | $D_2$ | $a$ for $k=11$ | $k=10$ | $k=01$ | $k=00$ |
+|---|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 0 |
+
+each key gives a different column, so the 4 rows always pin down $k$
 ### with noise it gets hard
 now say any of $D_1$, $D_2$ or $a$ gets **flipped** by accident sometimes. the pattern gets buried, and classically the number of queries you need grows **nearly exponentially** with the amount of noise
 ## the quantum oracle

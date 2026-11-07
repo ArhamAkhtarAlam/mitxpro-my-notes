@@ -127,4 +127,12 @@ it's basically the [[#bipartite state example]] again. you have a two part syste
 > [!tip] why this matters
 > having infinite unravellings and purifications are key ideas for understanding [[Quantum Error Correction]]
 
+> [!exercise] try these
+> ① which of these is **not** true? (a) a pure state $|\psi\rangle$ can be written as $\rho=|\psi\rangle\langle\psi|$ (b) a density matrix can be a probabilistic mix of pure states, but never a mix of mixed states (c) the trace of a density matrix is always 1 (d) density matrices are positive: their expectation values are real and $\geq0$
+> ② which of these is **not** true? (a) a density matrix can represent a random mix of quantum states (b) its diagonal elements are probabilities (c) density matrices always represent mixed states (d) a purification of $\rho_A$ is a pure state $|\psi\rangle_{AB}$ with $\rho_A=\text{tr}_B(|\psi\rangle\langle\psi|)$
+
+> [!answer]-
+> ① (b): a mix of mixed states is fine, eg. $\frac12\rho_1+\frac12\rho_2$. each $\rho_i$ is itself a mix of pure states, so the whole thing is just a bigger mix of pure states
+> ② (c): $|\psi\rangle\langle\psi|$ is a density matrix too, and it's pure ($\text{tr}\,\rho^2=1$)
+
 see also [[Density matrix practice]] (a worked exercise), [[Projectors]], [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]] (all the matrix maths for this week), [[Trace]], [[Von Neumann entropy]], [[Entanglement entropy]], [[Quantum channels]]

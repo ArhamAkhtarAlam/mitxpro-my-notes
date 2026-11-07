@@ -32,4 +32,10 @@ see [[Rabi oscillation]]: first an ideal Rabi oscillation with no noise, then th
 - [[Noise power spectral density]] → time vs ensemble averages, autocorrelation, and the Wiener–Khinchin theorem
 - [[Noise spectra]] → 1/f, Johnson and Nyquist noise, and which noise causes $T_1$ vs dephasing
 
+> [!exercise] try this
+> which can be a consequence of noise in quantum computing or communication? (a) reduced communication rates (b) limits on the length or circuit depth of a computation (c) more overhead needed to fight the errors (d) system failure
+
+> [!answer]-
+> all four. (a) is easy to forget: in quantum communication, loss and errors mean fewer usable bits per second (eg. the low key rates in [[QKD]])
+
 see also [[Quantum channels]] (the channels are one way to model what noise does to a qubit)

@@ -81,11 +81,15 @@ this is classical fault tolerance. the next step is to take these principles and
 > ① with $c=15$ and $p=0.05$, how many levels do you need to get below $10^{-6}$?
 > ② what happens to $p_{\text{fail}}^{(k)}$ when $p=\frac1{15}$ exactly?
 > ③ a gate with $p=10^{-3}$: how many levels (and gates per logical gate) to get below $10^{-15}$?
+> ④ a circuit has 4 faulty gates, each failing with probability $p$. to leading order in $p$, how likely is it that exactly 1, exactly 2, exactly 3 of them fail?
+> ⑤ one level of encoding ($k=1$) with $N$ faulty gates corrects one error and fails with two. how many fault paths $C$ are there (at least), roughly what's the failure probability, and how does $p_{th}$ relate to $C$?
 
 > [!answer]-
 > ① $cp=0.75$: level 3 gives $\frac{0.75^8}{15}=6.7\times10^{-3}$, level 4 gives $6.7\times10^{-4}$, level 5 gives $6.7\times10^{-6}$, level 6 gives $\frac{0.75^{64}}{15}=6.7\times10^{-10}$. so **6 levels** ($6^6=46\,656$ gates per logical gate). close to the threshold, it's expensive
 > ② $cp=1$, so $p_{\text{fail}}=\frac1{15}=p$ at every level: recursion neither helps nor hurts
 > ③ $cp=0.015$: level 2 gives $3.4\times10^{-9}$, level 3 gives $\frac{0.015^8}{15}=1.7\times10^{-16}$. so **3 levels**, 216 gates per logical gate
+> ④ choose which gates fail: $\binom41p=4p$, $\binom42p^2=6p^2$, $\binom43p^3=4p^3$ (the $(1-p)$ factors for the others are $\approx1$ to leading order)
+> ⑤ every pair of gates is a fault path: $C\geq\binom N2=\frac{N!}{2!(N-2)!}$, and $p_{\text{fail}}\approx Cp^2$. the threshold is $p_{th}=\frac1C$, **inversely** proportional to $C$ (not proportional): if $p<p_{th}$ then $p_{\text{fail}}=Cp\cdot p<p$, so encoding helps
 
 see also [[Bit flip code#more levels (recursion)]], [[Shor code]] (concatenating two different codes), [[Threshold theorem]]
 

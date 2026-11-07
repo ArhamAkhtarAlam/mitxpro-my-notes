@@ -202,4 +202,14 @@ $$
 
 either way the time grows at least with $N$, because you have to at least **write down** all $N$ numbers of $\vec x$. the quantum algorithm ([[HHL algorithm]]) gets around that in a clever (but catchy) way, coming next
 
+> [!exercise] try these
+> ① write $3x_1+x_3=5$, $x_2-ix_3=0$, $-2x_1+x_2=-1$ as $A\vec x=\vec b$. what's $N$?
+> ② which of these set how hard a linear system is to solve? (a) the dimension $N$ (b) the sparsity $s$ of $A$ (c) the condition number $\kappa$ of $A$ (d) the trace of $A$
+> ③ $\kappa=\|A\|\cdot\|A^{-1}\|$. what does it measure?
+
+> [!answer]-
+> ① $A=\begin{pmatrix}3&0&1\\0&1&-i\\-2&1&0\end{pmatrix}$, $\vec b=\begin{pmatrix}5\\0\\-1\end{pmatrix}$, $N=3$
+> ② (a), (b) and (c) (and the precision $\epsilon$ you want). the trace says nothing about how hard it is: shifting the diagonal changes the trace without making the system any easier
+> ③ how close $A$ is to being **non-invertible** (singular). $\kappa=1$ is perfect (eg. $A=I$), and $\kappa\to\infty$ as $A$ approaches a matrix with no inverse, where small errors in $\vec b$ blow up in $\vec x$
+
 see also [[Realistic quantum computation]], [[Eigenvalues and eigenvectors]]

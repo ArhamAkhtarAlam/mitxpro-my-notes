@@ -91,4 +91,10 @@ there are versions for many qubits too, and today **gate fidelities are routinel
 | entanglement | how much entanglement survives | the gold standard | hard to measure directly |
 | average | the typical input | easy to measure | for qubits, different from $F_e$, but convertible with the formula |
 
+> [!exercise] try this
+> how is the entanglement fidelity of a gate usually (and most easily) found? (a) measure the minimum gate fidelity and compute it from that (b) measure it directly by applying the gate to half of a maximally entangled state (c) measure the average gate fidelity and compute it from that (d) it can only be bounded roughly
+
+> [!answer]-
+> (c): $\bar F$ is much easier to measure (eg. by [[Randomized benchmarking]]), and $F_e$ follows from $\bar F=\frac{dF_e+1}{d+1}$. (b) is the definition, but it's hard to do directly
+
 see also [[State fidelity]], [[Operator-sum representation]], [[State tomography]], [[Process tomography]]

@@ -87,7 +87,7 @@ $$
 > [!example]- stationary but NOT ergodic: a bucket of batteries
 > a bucket holds different kinds of batteries (9 V and 1.5 V). pick one at random and measure its voltage over time: it's constant, so it's **stationary**. but averaging that one battery over time (9 V) gives a different answer from averaging over the whole bucket at once (somewhere between 1.5 and 9 V), so it's **not ergodic**. you can only assume ergodicity with extra assumptions (eg. "the bucket only has identical 9 V batteries")
 
-> [!example]- course example: TV static
+> [!eg]- eg. TV static
 > an old TV with no signal: every pixel flickers randomly between black (0) and white (1), all shades equally likely, independently of the other pixels, with essentially zero correlation time
 > - **time average**: watch 1 pixel for a long time. **ensemble average**: take a screenshot and average all the pixels
 > - the two agree (mean and correlations), so it's **ergodic** (to second order) and **wide sense stationary**

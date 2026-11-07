@@ -68,6 +68,12 @@ flowchart TD
 > ② an $X$ generator $X^{\otimes4}$ goes to $Y^{\otimes4}=i^4X^{\otimes4}Z^{\otimes4}$, the product of an $X$ generator and the $Z$ generator on the same qubits: still in the stabilizer ✓. $\bar X=X^{\otimes7}$ goes to $Y^{\otimes7}=i^7X^{\otimes7}Z^{\otimes7}=-i\bar X\bar Z=-\bar Y$, which is what $\bar S^\dagger$ does. so $S^{\otimes7}=\bar S^\dagger$, and $(S^\dagger)^{\otimes7}=\bar S$
 > ③ the 7 qubit code's $X$ and $Z$ generators have the **same pattern**, so swapping $X\leftrightarrow Z$ just swaps the two sets. the 5 qubit code's generators mix $X$s and $Z$s, and the swapped versions aren't in its stabilizer
 
+> [!exercise] try this
+> which are true for the 7 qubit code? (a) three of its stabilizer generators are $IIIZZZZ$, $IZZIIZZ$ and $ZIZIZIZ$ (b) it has a transversal Hadamard $\bar H=HHHHHHH$ (c) a transversal CNOT between two blocks is 7 CNOTs, between qubits 1 and 8, 2 and 9, 3 and 10, and so on (d) the $T$ gate isn't a normalizer gate
+
+> [!answer]-
+> all four. (a)–(c) are in the table above. (d): $TXT^\dagger=\frac{X+Y}{\sqrt2}$ isn't a Pauli product, so $T$ isn't in the [[Clifford group]] (the normalizer of the Pauli group)
+
 see also [[Transversal gates]], [[Classical linear codes]], [[Shor code]]
 
 week hub: [[Principles of fault tolerance]]

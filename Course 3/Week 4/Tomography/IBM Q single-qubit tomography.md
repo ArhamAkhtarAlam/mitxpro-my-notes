@@ -70,6 +70,9 @@ so the ideal Bloch vector is $\vec r=(0.707,\ 0.707,\ 0)$: on the equator, halfw
 | $X$   | $\lvert+\rangle$: 835    | $\lvert-\rangle$: 189    |
 | $Y$   | $\lvert{+i}\rangle$: 845 | $\lvert{-i}\rangle$: 179 |
 
+![[IBM_tomography_counts.png]]
+(the green marks are what a perfect run would give on average: 512, 874, 874)
+
 ### step 2: probabilities (divide by 1024)
 $$
 \begin{aligned}

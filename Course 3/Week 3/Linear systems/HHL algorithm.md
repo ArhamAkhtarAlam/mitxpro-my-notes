@@ -349,4 +349,10 @@ flowchart TD
 > - **loading $|b\rangle$** has to be fast too, or it eats the speed up (see [[#the input problem]])
 > - **reading $|x\rangle$**: you can't read out all $N$ numbers (that would take $N$ measurements again). you can only get things like overall properties or averages of $\vec x$
 
+> [!exercise] try this
+> for a Hermitian $N\times N$ matrix $A$ and a unit vector $\vec b$, the quantum linear systems algorithm finds a sample of $\vec x$ with $A\vec x=\vec b$. which of these is one of its building blocks? (a) Hamiltonian diagonalization (b) period finding (c) phase estimation (d) none of these
+
+> [!answer]-
+> (c): [[Quantum Phase Estimation|phase estimation]] of $e^{iAt}$ writes $A$'s eigenvalues $\lambda_j$ into a register, so the $\frac1{\lambda_j}$ rotation can be done. it never diagonalizes $A$ classically
+
 see also [[Linear systems of equations]], [[Quantum Phase Estimation]], [[Quantum Fourier Transform]]

@@ -32,6 +32,7 @@ flowchart TD
 - [[Fault-tolerant quantum computing]] → the same recipe for quantum: stabilizer codes, gates from the normalizer, and why Clifford gates alone aren't enough (Gottesman-Knill)
 - [[Stabilizer codes]] → describe a code by the Paulis that leave it alone, errors flip their sign (the syndrome), gates update the generators, Gottesman-Knill, and the three kinds of error
 - [[Transversal gates on stabilizer codes]] → the 5 qubit code can't do $H$ or CNOT transversally, the 7 qubit (CSS) code does every Clifford. Eastin-Knill: no code does a universal set transversally
+- [[From Hamming to Steane]] → the classical $[7,4]$ Hamming code ($G$, $H$, syndromes), its quantum version $[\![7,1,3]\!]$, phase flips as bit flips in the $\pm$ basis, a worked bit flip with ancillas
 - [[Steane code circuit]] → encode with $H$s and CNOTs, measure the six generators with six ancillas, the syndrome points to the qubit to flip
 - [[Fault-tolerant measurement]] → one ancilla is a single point of failure, so Shor's trick: a checked cat state, transversal controlled-$Z$s, parity of the results, repeat and vote
 - [[Quantum threshold estimate]] → a CNOT on the 7 qubit code takes 79 gates, $\binom{79}2=3081$ fault paths, so $p_{th}\approx10^{-4}$

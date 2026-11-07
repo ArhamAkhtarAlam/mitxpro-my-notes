@@ -50,4 +50,12 @@ even though it's unphysical, the partial transpose is a really useful maths tool
 ## the channels you already know pass
 every channel in [[Quantum channels]] ([[Dephasing channel|dephasing]], [[Depolarizing channel|depolarizing]], [[Amplitude damping channel|amplitude damping]]...) is written with Kraus operators that add up to $I$, so by the big theorem they're all automatically completely positive and trace preserving
 
+> [!exercise] try these
+> ① which is **not** a requirement for a valid quantum operation? (a) the output density matrix has trace 1 (b) on a statistical mixture it acts on only one state of the mix, chosen by its weight (c) it maps positive density matrices to positive density matrices (d) even when it acts on only part of a bigger system, the result is still a positive density matrix
+> ② the partial transpose isn't a valid quantum operation. which requirement does it break? (a) trace preservation (b) linearity (c) complete positivity (d) none of these
+
+> [!answer]-
+> ① (b): it must be **linear**, acting on the whole mixture, $\mathcal E(\sum_ip_i\rho_i)=\sum_ip_i\mathcal E(\rho_i)$. (d) is complete positivity
+> ② (c): it keeps the trace and is linear, but on half of a Bell state it gives a matrix with a negative eigenvalue ([[Partial transpose]])
+
 see also [[Operator-sum representation]], [[Partial transpose]], [[Quantum channels]], [[Density matrix]]
