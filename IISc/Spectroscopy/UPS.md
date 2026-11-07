@@ -15,7 +15,7 @@ a **helium discharge lamp** (+ monochromator to pick the line), inside a UHV cha
 
 ^ups-lines
 
-(wavelengths from [[UV-vis spectroscopy#^photon-energy|E = 1240/λ]]. that's **vacuum** UV, way below the 200 nm where [[UV-vis spectroscopy]] stops: air absorbs it, which is one more reason it all happens in UHV. and ~70× less energy than the Al $K_\alpha$ X-rays in XPS)
+(wavelengths from [[UV-vis spectroscopy#^photon-energy|E = 1240/λ]]. that's **vacuum** UV, way below the 200 nm where [[UV-vis spectroscopy]] stops: air absorbs it, which is one more  reason it all happens in UHV. and ~70× less energy than the Al $K_\alpha$ X-rays in XPS)
 
 He II reaches deeper into the band structure. the relative intensities of spectral features change between He I and He II because the ionization probabilities depend on the photon energy
 ## the process
