@@ -18,6 +18,10 @@ flowchart TD
 2. it doesn't evolve by itself: it's coupled to an **environment**, starting in some state $|e\rangle$ (pure here, but it doesn't have to be)
 3. together they go through a **unitary** $U$. overall, nature is still unitary, it's just that some of it happens outside our system
 4. afterwards the environment is **measured** in some orthonormal basis $|e_0\rangle,|e_1\rangle,\ldots$ (or just ignored, which gives the same result)
+
+the same thing as a circuit, with one qubit standing in for the environment (the result $k$ says which $E_k$ happened):
+
+![[Operator_sum_circuit.png]]
 ## working it out
 before the measurement the joint state is $U\,|e\rangle|\psi\rangle$. if the environment's measurement gives $k$, the system is left with
 $$

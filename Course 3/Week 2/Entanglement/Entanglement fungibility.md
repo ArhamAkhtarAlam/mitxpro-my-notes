@@ -106,7 +106,7 @@ with high probability they now share $n$ copies of $\psi_{AB}$. the overhead $\d
 > - one copy of $\psi$ is worth $E(\psi)=H(p)$ ebits, so ==1000 copies of $\sqrt{0.9}\,|00\rangle+\sqrt{0.1}\,|11\rangle$ are worth about 469 EPR pairs==, and you can go either way
 > - since both directions work at the **same** rate, the entanglement entropy is **the** way to measure pure state entanglement (any other measure would let you make entanglement for free by converting in a loop)
 
-> [!warning] only for pure states (beyond the lecture)
+> [!warning] only for pure states
 > for **mixed** states, entanglement isn't fully fungible. the ebits you can **distill** out ([[Entanglement purification]]) can be fewer than the ebits it **costs** to make the state, and some entangled mixed states ("bound entanglement") can't be distilled into **any** EPR pairs
 
 see also [[Entanglement as a resource]], [[Entanglement entropy]], [[Schmidt decomposition]], [[Teleportation]], [[Von Neumann entropy]]

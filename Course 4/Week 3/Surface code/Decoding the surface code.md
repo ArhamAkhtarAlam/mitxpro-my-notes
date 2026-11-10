@@ -11,6 +11,12 @@ so of order $10^{11}$ to $10^{12}$ bits **per second**. at a physical error rate
 ## minimum weight perfect matching
 model errors as chains that can only run along certain directions in **space and time** (a measure qubit giving a wrong result is a chain in the time direction). the allowed directions form a 3D lattice: the 2D chip horizontally, one layer per round, time going up. this lattice is worked out in advance
 
+here's a slice with just one line of measure qubits, so space is one direction and time the other:
+
+![[Spacetime_matching.png]]
+
+a data error flips two neighbouring checks in the same round: a pair **across space**. a wrong readout shows up in one round and is gone in the next: a pair **across time**
+
 each error chain leaves a detection event at **each end** (or one end, if the other is on a boundary):
 
 ![[Surface_code_matching.png]]

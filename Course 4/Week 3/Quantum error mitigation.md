@@ -40,4 +40,4 @@ coming up: [[Composite pulses]]
 
 see also [[Noise Processes]], [[Noise power spectral density]], [[Rabi oscillation]]
 
-previous week: [[Principles of fault tolerance]] · course overview: [[Requirements for large scale quantum computation]]
+previous week: [[Principles of fault tolerance]] · next week: [[Computational complexity]] · course overview: [[Requirements for large scale quantum computation]]

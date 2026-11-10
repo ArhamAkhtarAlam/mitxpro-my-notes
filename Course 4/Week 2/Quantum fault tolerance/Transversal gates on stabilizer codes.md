@@ -43,7 +43,7 @@ $H$, $S$ and CNOT generate only the [[Clifford group]], and that isn't universal
 > [!warning] the Eastin-Knill theorem (2009)
 > ==no quantum error-correcting code, stabilizer or not, has a universal set of transversal gates==. you can't get universal quantum computation by staying inside one code and only using transversal gates
 
-stabilizer codes are the most useful codes to work with, because they're the quantum analog of classical linear codes, with big families and nice properties. so this is a real blow, and the next lectures are a series of tricks to get around it
+stabilizer codes are the most useful codes to work with, because they're the quantum analog of classical linear codes, with big families and nice properties. so this is a real blow, and what follows is a series of tricks to get around it
 - **switching codes**: complicated codes that have several families together, moving the data between codes that each do different gates transversally
 - **teleporting gates**: prepare a special state, then use a teleportation-like circuit ([[Teleportation]]) to apply the missing gate
 

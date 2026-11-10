@@ -7,6 +7,8 @@ in course 3 ([[Noise Processes]]) noise came in two kinds, [[Systematic noise]] 
   1. it **relaxes** to the north pole ($T_1$). after that there's no way to tell which way it was pointing, so this breaks the phase too
   2. it **diffuses around the equator**: this is **dephasing**, with time $T_\phi$
 
+![[Relaxation_vs_dephasing.png]]
+
 $T_2$ combines both:
 
 ![[Phase damping channel#^t2-relation]]
@@ -28,6 +30,8 @@ flowchart TD
 ```
 ## example: a flux qubit
 a superconducting **flux qubit**: a superconducting loop interrupted by 4 Josephson junctions. the magnetic flux $\Phi$ through the loop sets the qubit energy $E_{01}$. local magnetic field fluctuations make $\Phi$, and so $E_{01}$, wobble: that's what dephases the qubit
+
+![[Flux_qubit_noise.png]]
 
 start in $\alpha|0\rangle+\beta|1\rangle$. $|1\rangle$ has more energy, so it gathers phase faster:
 $$

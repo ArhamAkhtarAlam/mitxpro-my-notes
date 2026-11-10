@@ -36,6 +36,10 @@ flowchart TD
 ```
 
 **the distillation circuit as measurements**: on paper the circuit is mostly CNOTs with one control and many targets, and those are cheap ([[Surface code logical operations#a CNOT made of measurements]]). better still: **prepare $|+\rangle$ then a multi-target CNOT** is the same as **prepare $|0\rangle$ then measure a multi-qubit $\bar X$**. so the whole thing is just **five 8-body logical $X$ measurements** on 16 logical qubits, plus the final $T$ gates. drawn in 3D (2D chip + time going up), with qubits only switched on when they're needed, it looks like a little engine: "3D quantum assembly code"
+
+![[Distillation_15_to_1.png]]
+
+the 15 code qubits plus 1 output qubit start in $|0\rangle$ or $|+\rangle$, and each purple column is one $|+\rangle$ control fanning out to 7 targets: 8 qubits, so one 8-body $\bar X$ measurement. the first four columns build the 15 qubit code, the fifth entangles the output qubit with it. then every code qubit gets a noisy $T^\dagger$ (teleported in from an injected state) and is measured in the $X$ basis. if the results pass the code's checks, the output qubit is left in $|T\rangle$ (checked numerically)
 ## how big and how slow
 for a two-level factory with $p=10^{-3}$ and 1 µs per round of error detection:
 - about **150,000 physical qubits**
@@ -54,6 +58,8 @@ a big square chip split up into
 - **patches**: the protected logical qubits
 - a large rectangle: a **$T$ state factory**
 - **open lanes**: room to move logical qubits around and make them interact (lattice surgery)
+
+![[Surface_code_computer_layout.png]]
 
 the factory is large but not the main cost. not long ago, 90% or more of the chip had to make $T$ states for reasonable run times. it's much less now thanks to better distillation and to quantum chemistry algorithms that need far fewer $T$ gates
 

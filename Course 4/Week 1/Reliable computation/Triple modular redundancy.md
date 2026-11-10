@@ -11,7 +11,7 @@ his beautiful paper: *Probabilistic Logics and the Synthesis of Reliable Organis
 > lectures given at Caltech in January 1952 (notes by R. S. Pierce), published in *Automata Studies* (Princeton, 1956), pp. 43–98
 > - every "organ" (gate) fails with some probability $\epsilon$, and the question is how small the final error can be made
 > - majority organs and **multiplexing** (bundles of wires carrying one bit) are his versions of triple modular redundancy
-> - he compares the setup to nerve cells throughout: the biology model from the lecture
+> - he compares the setup to nerve cells throughout
 >
 > ![[von Neumann 1956 - Probabilistic logics and the synthesis of reliable organisms from unreliable components.pdf#height=500]]
 ## computational capacity

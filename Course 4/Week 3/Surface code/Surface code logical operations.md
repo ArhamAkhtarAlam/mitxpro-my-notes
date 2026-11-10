@@ -29,6 +29,10 @@ you can also measure **multi-qubit** logical operators, eg. $\bar Z\bar Z$ on tw
 
 how: open up a strip of new checks between the two patches. the product of all the new blue shapes in the strip equals the product of the two green lines, so ==multiplying many small local parities gives one big logical parity==. this is called **lattice surgery**
 
+![[Lattice_surgery_ZZ.png]]
+
+each patch's $\bar Z$ is a row of $Z$s. the 4 new blue checks overlap each other on the fresh qubits, so those cancel, and what's left is the bottom row of patch 1 times the top row of patch 2: $\bar Z_1\bar Z_2$ (checked numerically). each new check is just a small parity, but their product is the logical parity
+
 $\bar X\bar X$ works the same way with orange shapes, and even mixed operators like $\bar X\bar X\bar Z$ work: some shapes are then **half blue, half orange**, which just means the Hadamard (bit flip → phase flip detection) happens at different times on different qubits around the shape
 ## a CNOT made of measurements
 with a logical ancilla $A$ between the control $C$ and the target $T$:
@@ -39,13 +43,7 @@ with a logical ancilla $A$ between the control $C$ and the target $T$:
 
 the result is a CNOT from $C$ to $T$, up to Paulis: $X_T$ if $b=-1$, and $Z_C$ if $a\cdot c=-1$. those Paulis are never applied, the classical software just remembers them and flips later measurement results
 
-```mermaid
-flowchart TD
-    I["ancilla A in |0⟩"] --> M1["measure XX on A, target"]
-    M1 --> M2["measure ZZ on control, A"]
-    M2 --> M3["measure A in the X basis"]
-    M3 --> R["CNOT from control to target, plus Paulis tracked in software"]
-```
+![[Measurement_CNOT.png]]
 
 the same trick gives a CNOT with **one control and many targets** at no extra cost: measure $\bar X_A\bar X_{T_1}\bar X_{T_2}\cdots$ in step 2
 

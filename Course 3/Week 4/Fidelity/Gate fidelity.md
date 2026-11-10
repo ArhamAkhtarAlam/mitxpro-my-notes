@@ -49,6 +49,10 @@ $$
 F_e=\Big\langle\Phi\Big|\,(I\otimes U^\dagger\circ\mathcal E)\big(|\Phi\rangle\langle\Phi|\big)\,\Big|\Phi\Big\rangle
 $$
 (the squared/probability version). if $\mathcal E$ is perfect, $U^\dagger$ exactly cancels it and the entanglement is untouched: $F_e=1$
+
+as a circuit: the first $H$ and CNOT make $|\Phi\rangle$, and at the end they're run backwards, which turns $|\Phi\rangle$ back into $|00\rangle$. so the chance of measuring $00$ **is** $F_e$
+
+![[Entanglement_fidelity_circuit.png]]
 > [!important] the gold standard
 > ==entanglement fidelity measures how much **entanglement** the gate leaves intact==, and entanglement is the precious resource quantum computers run on ([[Entanglement as a resource]]). but it's **hard to measure directly** today
 

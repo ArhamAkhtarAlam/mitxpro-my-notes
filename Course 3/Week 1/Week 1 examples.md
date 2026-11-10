@@ -1,7 +1,7 @@
 #examples #density_matrix #quantum_channel #noise
 every worked example from Course 3 Week 1 in one place, fully worked. goes with [[Week 1 formulas]]; each one links to the note it comes from
 ## 1. density matrices
-### the lecture's pair, measured 2 ways
+### one pair, measured 2 ways
 from [[Density matrix#bipartite state example]]
 $$
 |\psi_{AB}\rangle=\sqrt{\tfrac34}\,|00\rangle+\sqrt{\tfrac14}\,|11\rangle

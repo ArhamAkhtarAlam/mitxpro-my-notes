@@ -8,7 +8,7 @@ flowchart TD
     N --> Q
 ```
 ## density matrices
-- [[Density matrix]] → the lecture: why we need classical statistics, mixtures, unravelings, [[Purification|purification]]
+- [[Density matrix]] → why we need classical statistics, mixtures, unravelings, [[Purification|purification]]
 - [[Pure state]] → a state you know completely: one ket, $\rho=|\psi\rangle\langle\psi|$, on the Bloch sphere's surface
 - [[Pure and mixed states]] → the difference, and how to tell them apart ($\text{tr}(\rho^2)$, the [[Bloch sphere]])
 - [[Course 3/Week 1/Density matrices/Dirac notation|Dirac notation cheat sheet]] → the matrix cheat sheet

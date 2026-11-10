@@ -1,5 +1,5 @@
 #partial_trace #density_matrix #trace #entanglement
-how to "forget" part of a system: it gives you the [[Density matrix|density matrix]] of just the piece you care about. it's the $\text{Tr}_B$ in the definition of a [[Purification|purification]] in the density matrix lecture
+how to "forget" part of a system: it gives you the [[Density matrix|density matrix]] of just the piece you care about. it's the $\text{Tr}_B$ in the definition of a [[Purification|purification]] in [[Density matrix]]
 ## the idea
 you have 2 systems $A$ and $B$ in a joint state $\rho_{AB}$, but you can only see $A$. the **partial trace** over $B$ gives what $A$ looks like on its own
 $$
@@ -77,7 +77,7 @@ $$
 > $$
 > \rho_A=\tfrac34|0\rangle\langle0|+\tfrac14|1\rangle\langle1|=\frac14\begin{bmatrix}3&0\\0&1\end{bmatrix}
 > $$
-> exactly "mixture 1" from the lecture and [[Density matrix practice]]: tracing out B gives the same answer as measuring B and not knowing the result (checked numerically)
+> exactly "mixture 1" from [[Density matrix]] and [[Density matrix practice]]: tracing out B gives the same answer as measuring B and not knowing the result (checked numerically)
 
 > [!example] a product state: $|+\rangle|0\rangle$
 > $$

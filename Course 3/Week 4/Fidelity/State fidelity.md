@@ -78,7 +78,7 @@ every mixed state has many purifications, and the fidelity picks the one that li
 > $$
 > F(\rho,\sigma)=\text{tr}\sqrt{\sqrt\rho\,\sigma\sqrt\rho}
 > $$
-> ([[Trace]] of a matrix square root). when $\sigma=|\phi\rangle\langle\phi|$ is pure it simplifies to $\sqrt{\langle\phi|\rho|\phi\rangle}$ (checked numerically). not in the lecture, it's in the standard textbooks
+> ([[Trace]] of a matrix square root). when $\sigma=|\phi\rangle\langle\phi|$ is pure it simplifies to $\sqrt{\langle\phi|\rho|\phi\rangle}$ (checked numerically).
 
 ## in experiments
 this is the version you use all the time: $\phi$ = the ideal state from theory, $\rho$ = the noisy state you actually made

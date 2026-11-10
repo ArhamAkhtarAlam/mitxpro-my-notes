@@ -58,8 +58,14 @@ they output $0$ for the first basis state and $1$ for the other one (the $+1$ an
 
 ![[CHSH_quantum_strategy.png]]
 
-> [!info] what the lecture gives
-> the lecture gives Bob's $b=0$ measurement as the observable $\frac1{\sqrt2}(\sigma_x+\sigma_z)$, which is exactly the $s$ basis at $+22.5^\circ$. it doesn't write out $t$, but $\frac1{\sqrt2}(\sigma_z-\sigma_x)$ at $-22.5^\circ$ is the mirror image and the standard choice (checked numerically)
+> [!info] Bob's two bases
+> Bob's $b=0$ observable $\frac1{\sqrt2}(\sigma_x+\sigma_z)$ is exactly the $s$ basis at $+22.5^\circ$, and $\frac1{\sqrt2}(\sigma_z-\sigma_x)$ at $-22.5^\circ$ is its mirror image, the standard choice for $t$ (checked numerically)
+
+as a circuit: make the shared pair, then each player rotates by **minus twice** their angle and measures normally. $R_y(-2\theta)$ turns the basis state $\cos\theta|0\rangle+\sin\theta|1\rangle$ into $|0\rangle$, so measuring after it is measuring in the $\theta$ basis
+
+![[CHSH_circuit.png]]
+
+$\theta_A=0^\circ$ or $45^\circ$, $\theta_B=+22.5^\circ$ or $-22.5^\circ$. simulating all 4 cases gives a win rate of $\cos^2(22.5^\circ)\approx85\%$
 
 ```mermaid
 flowchart LR
@@ -105,9 +111,6 @@ Bob outputs $0$, same as Alice, so they **win with 85.4%**
 > P(+1)=\frac{1+\langle A\rangle}2\qquad P(-1)=\frac{1-\langle A\rangle}2
 > $$
 > way faster than finding eigenvectors
-
-> [!warning] lecture mix-up
-> on the board he first wrote $\frac12+\frac1{\sqrt2}$, which is more than 1. a student caught it: it's $\frac12+\frac1{2\sqrt2}$
 
 ### every case worked out
 the same 4 steps for all 4 cases. the 2 things you need
@@ -215,15 +218,15 @@ here they want **different** answers
 | $\frac\pi2$ ($90^\circ$)  | Alice $0/1$ vs Bob $+/-$ | $\cos^2\frac\pi4=\frac12$, like a coin flip |
 | $\pi$ ($180^\circ$)       | opposite points          | $\cos^2\frac\pi2=0$, never agree            |
 
-(the lecture doesn't prove it. it's the same rule as $P(\text{same answer})=\cos^2(\theta_A-\theta_B)$ above, just with Bloch sphere angles, which are double)
+(it's the same rule as $P(\text{same answer})=\cos^2(\theta_A-\theta_B)$ above, just with Bloch sphere angles, which are double)
 ## why it matters
 > [!important] quantum beats classical
 > ==no classical strategy can beat 75% (see [[CHSH game#the best classical strategy wins 75%]]), but sharing entanglement gets 85.4%.== that's Bell's result: quantum mechanics can't be explained by any **local hidden variable** theory
 >
 > 85.4% is also the best any quantum strategy can do (called **Tsirelson's bound**)
 
-> [!note] from the lecture
-> - someone asked if this strategy is the best possible, and yes: you **can't** beat 0.854. the proof is harder than everything else here so the lecture skips it (it was proved by Tsirelson)
+> [!note] is this the best possible?
+> - yes: you **can't** beat 0.854. the proof is harder than everything else here (it was proved by Tsirelson)
 > - so the CHSH game is a game that Alice and Bob can win **more often with an entangled state than without one**, and that's what makes it useful as a test for entanglement (like in [[Ekert91]])
 
 see also [[CHSH game]], [[CHSH inequality]] (the same thing as an inequality, 2√2 > 2), [[Quantum weirdness]], [[Ekert91]]

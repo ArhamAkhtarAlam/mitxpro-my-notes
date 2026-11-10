@@ -60,10 +60,9 @@ $$
 \sum_i\frac{b_i}{\lambda_i}\,|a_i\rangle\;\propto\;A^{-1}|b\rangle=|x\rangle\ ✅
 $$
 dividing each eigenvector's part by its eigenvalue **is** applying $A^{-1}$ (checked numerically on a random $4\times4$ Hermitian matrix)
-```mermaid
-flowchart TD
-    S1["|b⟩ = Σ bᵢ|aᵢ⟩"] -- "phase estimation" --> S2["Σ bᵢ|aᵢ⟩|λᵢ⟩"] -- "filter" --> S3["Σ (bᵢ/λᵢ)|aᵢ⟩|λᵢ⟩"] -- "uncompute" --> S4["Σ (bᵢ/λᵢ)|aᵢ⟩ ∝ |x⟩"]
-```
+the whole thing as a flowchart, with the actual circuit steps (load, phase estimation, rotation, measure, uncompute):
+
+![[HHL_flowchart.png]]
 > [!tip] not just inverting
 > once each eigenvector has its eigenvalue attached, you could multiply by **any** function of $\lambda$, not just $\frac1\lambda$. other work uses this for other useful functions of matrices
 
@@ -101,6 +100,10 @@ each part picks up a phase that spins at its **own** rate $\lambda_k$. [[Quantum
 | undo phase estimation | erases the labels | running a unitary backwards undoes it exactly |
 
 ## worked example: solving a system with HHL, step by step
+the whole example at a glance (every number is worked out below):
+
+![[HHL_example_flowchart.png]]
+
 **the equations**
 $$
 \begin{aligned}

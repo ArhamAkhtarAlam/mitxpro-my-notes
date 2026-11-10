@@ -25,6 +25,10 @@ flowchart LR
 ```
 A and R share a pair, and R and B share a pair. R measures its 2 halves together in the Bell basis (the reverse of making a Bell state, see [[CNOT gate#Example (making a Bell state)]]), and suddenly **A and B are entangled**, even though they never interacted
 
+![[Entanglement_swapping_circuit.png]]
+
+$R_0$ and $R_1$ are R's two halves. the CNOT and $H$ then measuring is the Bell measurement; R sends the 2 results to B, who fixes his qubit with $X$ and/or $Z$ (just like [[Teleportation]]). then A and B share exactly $\frac1{\sqrt2}(|00\rangle+|11\rangle)$ (checked numerically)
+
 (= means "entangled")
 ### nesting it
 ```mermaid

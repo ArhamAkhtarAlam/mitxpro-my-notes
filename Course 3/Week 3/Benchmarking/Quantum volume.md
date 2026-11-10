@@ -19,6 +19,8 @@ flowchart TD
 ### gate errors add up
 eg. making a 3 qubit [[GHZ state]] $\frac1{\sqrt2}(|000\rangle+|111\rangle)$ takes 2 [[CNOT gate|CNOTs]]: one entangles the top and middle qubits, the next adds the bottom one
 
+![[GHZ_circuit.png]]
+
 if each CNOT has error $\epsilon$, the fidelities (${}1-\epsilon{}$) **multiply**
 $$
 F=(1-\epsilon)^2\approx1-2\epsilon
@@ -26,16 +28,19 @@ $$
 (to first order in $\epsilon$, eg. $\epsilon=0.01$ gives $0.9801\approx0.98$)
 
 quantum volume uses layers of random **general 2 qubit gates** ($U_4$), since those are what algorithms like [[QAOA]] and [[VQE]] use. each $U_4$ needs **3 CNOTs**, so it has about $3\epsilon$ error
+
+![[U4_three_CNOTs.png]]
+
+(each $u$ is some single qubit gate; any 2 qubit gate fits this pattern, and a random one really does need all 3 CNOTs, checked by compiling one)
 ### other errors
 - **spectator errors** → while a CNOT runs on 2 qubits, its control signal can accidentally disturb a **3rd** qubit that's just sitting there
 - **decoherence** → long (deep) circuits give the qubits more time to lose their state (see [[Noise Processes]])
 - **measurement errors** → reading the answer out wrong
 ### connectivity
 quantum volume puts its $U_4$s between **random** pairs of qubits. but a lot of hardware can only do gates between **neighbouring** qubits, so far apart qubits first have to be moved next to each other with [[SWAP gate|SWAPs]] or [[Teleportation|teleportation]]
-```mermaid
-flowchart LR
-    W["want a U4 on<br/>qubits 0 and 2<br/>(not neighbours)"] --> S["SWAP qubits 0 and 1<br/>(3 more CNOTs!)"] --> D["now do the U4<br/>on the neighbours"]
-```
+![[SWAP_then_U4.png]]
+
+want a $U_4$ on qubits 0 and 2, which aren't neighbours: first SWAP qubits 0 and 1 (a SWAP is **3 more CNOTs**), then do the $U_4$ on the neighbours 1 and 2
 more gates → more errors
 ### native gates
 every machine has its own set of gates it can do directly. anything else has to be **built** from them (the [[Solovay-Kitaev theorem|Solovay–Kitaev algorithm]] approximates any gate with a sequence of the available ones). machines with more native gates need fewer gates in total → less error
@@ -68,9 +73,9 @@ flowchart TD
 their **5 qubit** IBM Quantum Experience processor got an average quantum volume of **8** (so effectively $m=3$ useful qubits, not 5)
 
 > [!info] today's version
-> quantum volume was later made more precise: run random "square" circuits ($n$ qubits, depth $n$) and check the outputs pass a statistical test (the "heavy output" test, more than 2/3 of the time). the biggest $n$ that passes gives $V_Q=2^n$. same spirit as the lecture's version (extra, not in the lecture)
+> quantum volume was later made more precise: run random "square" circuits ($n$ qubits, depth $n$) and check the outputs pass a statistical test (the "heavy output" test, more than 2/3 of the time). the biggest $n$ that passes gives $V_Q=2^n$. same spirit as the version above
 
-a stringent test of near-term hardware, and the lecture expects these benchmarks to keep evolving as people learn more
+a stringent test of near-term hardware, and these benchmarks will likely keep evolving as people learn more
 
 ## further reading
 the 2 papers the course points to, oldest first

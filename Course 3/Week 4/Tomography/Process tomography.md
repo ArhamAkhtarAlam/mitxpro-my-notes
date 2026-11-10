@@ -3,7 +3,7 @@
 ## the goal
 > [!note] like a truth table, but quantum
 > to test a classical black box gate with 2 inputs and 1 output, you write its **truth table**: put in all 4 possible inputs and read each output. easy, because there are only 4 inputs and you can read the output exactly.
-> the quantum version is the same idea, but the inputs are quantum states and **reading each output needs [[State tomography]]**. so process tomography is just state tomography repeated over a set of inputs (the lecture counts it as $3^n$ rounds of state tomography), and the full process matrix has $16^n$ entries ($d^4$ with $d=2^n$)
+> the quantum version is the same idea, but the inputs are quantum states and **reading each output needs [[State tomography]]**. so process tomography is just state tomography repeated over a set of inputs (counted as $3^n$ rounds of state tomography), and the full process matrix has $16^n$ entries ($d^4$ with $d=2^n$)
 
 any process can be written in [[Operator-sum representation|operator-sum form]]
 

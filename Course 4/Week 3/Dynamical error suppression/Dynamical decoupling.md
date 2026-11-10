@@ -49,6 +49,8 @@ flowchart TD
 ## noise spectroscopy
 CPMG with many pulses has a **narrow** passband, centred near $\omega\approx\pi n/t$. change $n$ (or $t$) and the narrow filter slides around in frequency. measure how much the qubit dephases each time, and you can **reconstruct the noise spectrum** $S(\omega)$ the qubit sees: the qubit plus pulses becomes a **noise spectrometer**
 
+![[Noise_spectroscopy.png]]
+
 and once you know $S(\omega)$, you can design a pulse sequence whose filter function is **optimal** for that noise (within whatever constraints you have)
 
 ```mermaid

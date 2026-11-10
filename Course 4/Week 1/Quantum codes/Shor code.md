@@ -69,7 +69,7 @@ $$
 \sigma_z^{(5)}:\quad|0_x\,0_x\,0_x\rangle&\to|0_x\,1_x\,0_x\rangle
 \end{aligned}
 $$
-a $\sigma_z$ in the middle block is a **bit error on the middle "qubit"**, so we correct it exactly the same way: compare the three blocks and take the **majority** of whether they have a $+$ or a $-$. (the circuit for that is rather complicated, so the lecture skipped it)
+a $\sigma_z$ in the middle block is a **bit error on the middle "qubit"**, so we correct it exactly the same way: compare the three blocks and take the **majority** of whether they have a $+$ or a $-$. (the circuit for that is rather complicated, see below)
 
 > [!tip] any $\sigma_z$ in a block does the same thing
 > $\sigma_z^{(4)}$, $\sigma_z^{(5)}$ and $\sigma_z^{(6)}$ all flip the same block's sign, so you don't need to know **which** qubit it was, only which **block**. you fix it with a $\sigma_z$ on any qubit of that block
@@ -85,7 +85,7 @@ $\sigma_y=i\sigma_x\sigma_z$ ([[Y gate]]), so a $\sigma_y$ error is just a $\sig
 
 ^shor-errors
 
-the full circuit, the "rather complicated" one the lecture skipped: encode, a possible error, then
+the full circuit, the "rather complicated" one: encode, a possible error, then
 ① decode each block's bit code and fix its $\sigma_x$ (registers blk1–blk3)
 ② Hadamards on qubits 1, 4, 7 turn the block signs into bits, and one more bit flip decode takes the majority of the signs (register sign)
 

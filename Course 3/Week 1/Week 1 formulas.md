@@ -158,7 +158,7 @@ $$
 > [!eg] eg.
 > $\begin{bmatrix}0.7&0\\0&0.3\end{bmatrix}$: $\vec r=(0,0,0.7-0.3)=(0,0,0.4)$, and $\frac{1+0.4^2}2=0.58$ ✅ the same purity as above
 
-**the lecture's example**: $\sqrt{\tfrac34}\,|00\rangle+\sqrt{\tfrac14}\,|11\rangle$, B measured in 2 different ways
+**an example**: $\sqrt{\tfrac34}\,|00\rangle+\sqrt{\tfrac14}\,|11\rangle$, B measured in 2 different ways
 $$
 \begin{aligned}
 \rho_1&=\tfrac34|0\rangle\langle0|+\tfrac14|1\rangle\langle1|=\frac14\begin{bmatrix}3&0\\0&1\end{bmatrix}\\

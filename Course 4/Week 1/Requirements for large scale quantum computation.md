@@ -43,7 +43,7 @@ flowchart TD
 | **1** | strategies for **detecting and correcting** errors: simple quantum error correcting codes, and why **parity measurements** matter | [[Detecting and correcting errors]] (hub): [[Bit flip code]], [[Parity measurement]], [[Phase flip code]], [[Shor code]], [[Logical qubit]] |
 | **2** | how reliable classical **and** quantum machines are built from unreliable components: the **threshold theorem** and the principles of **fault tolerance** | [[Principles of fault tolerance]] (hub): [[Threshold theorem]], [[Fault-tolerant NAND gate]], [[Recursive fault tolerance]], [[Fault-tolerant procedure]], [[Transversal gates]], to-do: [[Fault-tolerant quantum computing]] |
 | **3** | quantum **error mitigation**: composite pulses, dynamical error suppression | [[Composite pulses]], [[Dynamical decoupling]] |
-| **4** | quantum **error correction** in practice: fault tolerant computing with the **surface code**, computational complexity, and what it means to show **quantum advantage** ("quantum supremacy") | [[Surface code]], [[Quantum supremacy]] |
+| **4** | quantum **error correction** in practice: fault tolerant computing with the **surface code**, computational complexity, and what it means to show **quantum advantage** ("quantum supremacy") | [[Surface code]], [[Computational complexity]], [[Quantum supremacy]] |
 
 ## a taste of week 1
 the simplest code, the [[Bit flip code]], spreads each qubit over three and takes a majority vote ([[Quantum Error Correction#The classical idea: repetition code]]). it only fails if **2 or more** of the 3 flip
