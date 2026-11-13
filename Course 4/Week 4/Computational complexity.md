@@ -23,13 +23,15 @@ flowchart TD
 - [[Randomized and quantum computation]] → random gates or random input bits, a classical Turing machine writing a quantum circuit for each $n$, probabilities average but amplitudes cancel
 - [[Nondeterminism]] → accept if **any** of $2^n$ branches accepts: physically unreasonable, but where [[NP]] comes from
 ### complexity classes
-- [[Complexity classes]] → DTIME, **P ⊆ BPP ⊆ BQP** and P ⊆ NP, the believed map, why P = BPP is suspected, why only polynomial vs exponential matters
-- [[NP]] → yes answers have short proofs you can check: $f(x)=\bigvee_yg(x,y)$, travelling salesman
+- [[Complexity classes]] → DTIME, time vs memory (PSPACE), efficient isn't fast, **P ⊆ BPP ⊆ BQP ⊆ PSPACE** and P ⊆ NP, the believed map, why P = BPP is suspected, why only polynomial vs exponential matters
+- [[NP]] → yes answers have short proofs you can check: $f(x)=\bigvee_yg(x,y)$, travelling salesman, factoring, P ⊆ NP
+- [[NP-complete]] → the hardest NP problems: one in P means P = NP; Sudoku, map colouring, circuit SAT; $(n-1)!/2$ routes; factoring isn't one
 - [[Quantum circuit evaluation]] → the BQP-complete problem: is the output mostly 1 or mostly 0? (a promise problem); in BPP only if BPP = BQP
+- [[Quantum vs classical complexity]] → where BQP sits: factoring yes, NP-complete probably not, BQP ⊆ PSPACE; exponential vs Grover's quadratic speed ups; nothing proven
 
-![[Complexity_class_map.png]]
+![[Complexity_hierarchy.png]]
 
-coming up: [[Turing machine]], [[NP-complete]], [[Quantum supremacy]]
+coming up: [[Turing machine]], [[Quantum supremacy]]
 
 see also [[Big O notation]], [[Quantum volume]]
 

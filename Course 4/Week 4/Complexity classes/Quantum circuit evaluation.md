@@ -70,7 +70,7 @@ so if (as people believe) BPP ≠ BQP, there's **no efficient classical algorith
 > ③ for the budget alone, $n'^2\ge n^6$ means $n'\ge n^3$. but just listing $n^6$ gates already makes the description about $n^6$ long, and then the budget is $n'^2\approx n^{12}$: way more than needed, so it's automatically fine
 > ④ a fast classical simulator would put this problem in BPP, and then (since every BQP problem reduces to it) all of BQP would be in BPP: BPP = BQP, which people believe is false
 
-previous: [[NP]]
+previous: [[NP-complete]] · next: [[Quantum vs classical complexity]]
 
 see also [[Promise, sampling and relation problems]], [[Quantum volume]], [[Quantum supremacy]]
 

@@ -12,7 +12,12 @@ NP = the problems you can **verify** in polynomial time, but only when the answe
 > ![[TSP_certificate.png]]
 >
 > - **yes**: the certificate is just the list of cities in order. check that each city appears once and add up the miles: fast
-> - **no**: "there's no route under 1000 miles" might have **no** short proof. you'd seemingly have to rule out every route
+> - **no**: "there's no route under 1000 miles" might have **no** short proof. you'd seemingly have to rule out every route, and with $n$ cities there are $\frac{(n-1)!}2$ of them ([[NP-complete#why brute force is hopeless]])
+
+> [!eg] factoring
+> finding the prime factors of a big number seems hard. but given the factors, checking them is **one multiplication**, about $n^2$ steps for $n$ bit numbers
+
+**P ⊆ NP**: if you can **solve** a problem fast, you can verify it fast too. just solve it and ignore the certificate
 
 ## the definition: one giant OR
 $f$ is in NP if it can be written as
@@ -42,8 +47,8 @@ flowchart TD
 - **nondeterminism**: a nondeterministic computer could check **all** certificates at once and take the OR, exactly the model in [[Nondeterminism]] (the choices along an accepting branch are the certificate)
 - **proofs**: complexity theory asks what we can compute quickly, but also **what can be proven**. NP is a statement about **proof complexity**: which statements have short proofs
 
-> [!extra]- NP-complete
-> some NP problems are the **hardest** in NP: every NP problem can be turned into them with a polynomial time reduction, so a fast algorithm for one gives a fast algorithm for all. these are [[NP-complete]], eg. travelling salesman, and the original one, **circuit SAT**: given a classical circuit, is there an input that makes it output 1? (that's the OR above, with $g$ = the circuit). many planning and optimization problems are naturally NP-complete, which is why NP gets so much attention. the quantum version is [[Quantum circuit evaluation]]
+## the hardest ones
+some NP problems are the **hardest** in NP: a fast algorithm for one would give a fast algorithm for all of them. these are the [[NP-complete]] problems, eg. travelling salesman and **circuit SAT** (the OR above, with $g$ = a circuit)
 
 > [!exercise] try these
 > ① for "does this number $N$ have a factor between 2 and $\sqrt N$?", what's a certificate for yes, and how do you check it?
@@ -57,7 +62,7 @@ flowchart TD
 > ③ no: a yes for this question means "no route works", and there's no known short proof of that. (it's in co-NP, the "no-side" version)
 > ④ the checker only has polynomial time, so it can only read a polynomial number of bits. an exponentially long certificate couldn't even be read
 
-previous: [[Complexity classes]] · next: [[Quantum circuit evaluation]]
+previous: [[Complexity classes]] · next: [[NP-complete]]
 
 see also [[Nondeterminism]], [[Grover's algorithm]]
 

@@ -14,6 +14,31 @@ $$
 > [!eg]
 > $\text{DTIME}(100n^3)$ = the languages you can decide in at most $100n^3$ steps on an $n$ bit input. for $n=10$ that's $100\,000$ steps
 
+## time and memory
+a computer has two budgets: **time** (number of steps) and **memory** (bits it can store). they can scale very differently
+
+> [!eg] a made up problem
+>
+> | variables $n$ | memory | steps |
+> |---|---|---|
+> | 2 | 100 | 4 |
+> | 3 | 1000 | 9 |
+> | 4 | 10 000 | 16 |
+>
+> the steps grow like $n^2$ (polynomial), but the memory grows like $10^n$ (exponential): the memory is what kills it
+
+the class of problems that need only **polynomial memory**, however long they take, is **PSPACE**. it's huge: it contains everything below, including games like $n\times n$ chess and Go
+
+![[Complexity_hierarchy.png]]
+
+### efficient isn't the same as fast
+multiplying two $n$ bit numbers by long multiplication takes about $n^2$ steps: every bit of one times every bit of the other
+
+> [!eg] $3\times3=9$ in binary
+> $11\times11=11+110=1001$: two bits each, so $2^2=4$ bit products. with 3 bits it's $3^2=9$ bit products, and so on
+
+so multiplication is in P. but for $n=10^{100}$ bits that's $10^{200}$ steps, which would never finish. "efficient" only means it **scales** better: an exponential algorithm on the same input would need about $2^{10^{100}}$ steps
+
 ## the main classes
 
 | class | computer | must be right | in time |
@@ -22,6 +47,7 @@ $$
 | **BPP** | randomized ([[Randomized and quantum computation]]) | with probability $\ge\frac23$ | polynomial |
 | **BQP** | quantum (uniform circuit family) | with probability $\ge\frac23$ | polynomial |
 | **[[NP]]** | nondeterministic ([[Nondeterminism]]) | a "yes" has a short proof you can check | polynomial |
+| **PSPACE** | deterministic | always | any, but polynomial **memory** |
 
 ^class-table
 
@@ -29,11 +55,11 @@ $$
 
 ## how they fit together
 $$
-\text{P}\subseteq\text{BPP}\subseteq\text{BQP}\qquad\text{P}\subseteq\text{NP}
+\text{P}\subseteq\text{BPP}\subseteq\text{BQP}\subseteq\text{PSPACE}\qquad\text{P}\subseteq\text{NP}\subseteq\text{PSPACE}
 $$
 ^containments
 
-**P** is the weakest: everything else contains it. a random computer can ignore its random bits (P ⊆ BPP), and a quantum computer can simulate coin flips (BPP ⊆ BQP). but the two branches, NP and BQP, look like they may be **incomparable**: problems in NP that aren't in BQP, and the other way round
+**P** is the weakest: everything else contains it. a random computer can ignore its random bits (P ⊆ BPP), and a quantum computer can simulate coin flips (BPP ⊆ BQP). at the top, PSPACE contains them all: you can try every certificate one by one, or add up a quantum circuit's amplitudes one path at a time, reusing the same polynomial memory ([[Quantum vs classical complexity]]). but the two branches, NP and BQP, look like they may be **incomparable**: problems in NP that aren't in BQP, and the other way round
 
 ![[Complexity_class_map.png]]
 
@@ -63,14 +89,16 @@ that's crude: in practice $n^2$ vs $n^3$ matters a lot. but it makes the classes
 > ② an algorithm takes $2^{n/100}$ steps. is it polynomial? which is bigger at $n=1000$, $2^{n/100}$ or $n^2$? at $n=10\,000$?
 > ③ why is P ⊆ BPP?
 > ④ if someone proved BPP = BQP, what would it mean for quantum computers?
+> ⑤ in the made up problem above, how much memory do 10 variables need, and how many steps?
 
 > [!answer]-
 > ① yes ($n^2<n^3$, so the same machine works) and yes ($c=2$)
 > ② no, it's exponential. $n=1000$: $2^{10}=1024$ vs $10^6$, so $n^2$ is bigger. $n=10\,000$: $2^{100}\approx10^{30}$ vs $10^8$: the exponential wins eventually, which is all the classes care about
 > ③ a deterministic algorithm is a randomized one that never reads its random bits, and it's right with probability 1 ≥ $\frac23$
 > ④ every problem a quantum computer solves in polynomial time could also be solved by a classical randomized computer in polynomial time: no exponential [[Quantum advantage|quantum advantage]] for yes/no problems (polynomial speed ups like Grover's could still exist)
+> ⑤ memory $10^{10}$, steps $10^2=100$. the steps are trivial, the memory is ten billion units
 
-next: [[NP]], then [[Quantum circuit evaluation]]
+next: [[NP]], then [[NP-complete]], [[Quantum circuit evaluation]] and [[Quantum vs classical complexity]]
 
 see also [[Big O notation]], [[Nondeterminism]], [[Randomized and quantum computation]]
 
