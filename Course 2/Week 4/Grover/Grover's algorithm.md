@@ -25,6 +25,14 @@ flowchart TD
 3. **diffuser** $U_s=2|s\rangle\langle s|-I$: the **second reflection**. it flips every amplitude around the **average**, so the one negative amplitude shoots up and the rest shrink
 
 one oracle + one diffuser = one **Grover iteration**
+
+here it is with $N=8$ items, searching for $101$ (the red bar):
+
+![[Grover_animation.png]]
+
+- **left**: the amplitudes. the oracle flips the red bar upside down, then the diffuser flips **every** bar around the average (dashed line). the red one is far below the average, so it lands far above it
+- **right**: the same thing as an arrow. every iteration turns it the same angle towards "marked"
+- after 2 iterations it's at 94.5%: measure now. a 3rd iteration turns it **past** the answer and the chance drops to 33%
 ## why it works (2 reflections = a rotation)
 think of the state as an arrow in the plane spanned by $|w\rangle$ and "everything else"
 - it starts almost along "everything else", at a small angle $\theta$ above it, where $\sin\theta=\frac1{\sqrt N}$

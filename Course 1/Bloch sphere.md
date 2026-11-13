@@ -26,6 +26,10 @@ every single qubit [[Quantum gate|quantum gate]] just rotates the sphere
 - [[Sqrt(X) Gate]] → $90^\circ$ around $x$
 - [[Phase shift]] → $\varphi$ around $z$
 
+watch 4 gates in a row: H, Z, H, X take $|0\rangle$ → $|+\rangle$ → $|-\rangle$ → $|1\rangle$ → back to $|0\rangle$. the dashed line is the axis each gate turns around, and the bar at the bottom shows which gate is running
+
+![[Bloch_gates_animation.png]]
+
 ```mermaid
 flowchart LR
     Z0["|0⟩ top"] -- "X" --> Z1["|1⟩ bottom"]

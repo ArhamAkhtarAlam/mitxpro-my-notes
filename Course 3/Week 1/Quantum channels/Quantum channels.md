@@ -55,6 +55,14 @@ $$
 
 ![[Bloch_sphere_meaning.png]]
 
+here's what the 3 main channels do to the whole sphere as the noise strength goes up (the red dots are $|0\rangle$, $|1\rangle$, $|\pm\rangle$, $|\pm i\rangle$):
+
+![[Quantum_channels_animation.png]]
+
+- **[[Dephasing channel|dephasing]]**: squashes sideways onto the $z$ axis. $|0\rangle$ and $|1\rangle$ are untouched, superpositions die
+- **[[Depolarizing channel|depolarizing]]**: shrinks evenly towards the centre, the same in every direction
+- **[[Amplitude damping channel|amplitude damping]]**: shrinks **and** slides up, until everything sits at $|0\rangle$
+
 > [!question]- if it's in the middle do we have no idea what state it's in?
 > yes, zero information. measuring in **any** basis ($|0\rangle$/$|1\rangle$, $|+\rangle$/$|-\rangle$, anything) gives 50/50
 >

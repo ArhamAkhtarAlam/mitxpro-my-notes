@@ -15,16 +15,15 @@ R_{-x}(\Omega t/2)\,R_x(\Omega t/2)=I\qquad\text{for any }\Omega
 $$
 ^rotary-echo
 
-"for any $\Omega$" includes a drive that's simply **too strong**: an overshoot. read the animation like a table:
-- **rows**: the drive is just right (top) or 25% too strong (bottom)
-- **columns**: the drive is left on the whole time (left, grey) or reversed halfway, the rotary echo (right, purple)
+"for any $\Omega$" includes a drive that's simply **too strong**: an overshoot. here's one qubit with a drive 25% too strong. the grey dashed arrow is where a drive of the right strength would put it, and the green ring is the target, $|0\rangle$
 
-the green ring is the target, $|0\rangle$, and the bar at the bottom shows when the drive gets reversed:
+**no correction**: the drive stays on along $+x$. it should turn a full 360°, but turns 450°, ending on the equator: a measurement gives $|0\rangle$ only half the time
+
+![[Drive_no_reversal_animation.png]]
+
+**rotary echo**: the same overshooting drive, reversed halfway. it turns 225° out and exactly 225° back along the same path, so it's home at $|0\rangle$:
 
 ![[Rotary_echo_animation.png]]
-
-- **just right**: both get back to $|0\rangle$ (a full $2\pi$ turn either way)
-- **25% too strong**: without the reversal the qubit turns $2.5\pi$ and ends up on the equator, so a measurement gives $|0\rangle$ only half the time. with the reversal it retraces its path exactly and is back at $|0\rangle$
 
 where it sits next to the other sequences:
 

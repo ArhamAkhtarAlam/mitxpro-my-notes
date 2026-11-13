@@ -47,6 +47,10 @@ what happens
 ![[Rabi_noisy.png]]
 grey = single trials, green = the average
 
+the same thing moving: on top one run with no noise, at the bottom 6 runs that each turn a bit faster or slower. they start together but drift apart, so their average (thick green) shrinks:
+
+![[Rabi_animation.png]]
+
 > [!important] the decay is Gaussian
 > ==because the noise is quasi-static (low frequency) the decay has a **Gaussian** shape.== if $\Omega$ is spread out with standard deviation $\sigma$ around $\Omega_0$
 > $$

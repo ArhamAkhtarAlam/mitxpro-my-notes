@@ -14,18 +14,19 @@ all the sequences on one page (the rotary echo is in [[Rotary echo]]):
 
 with noise, each run's Bloch vector drifts clockwise or anticlockwise around the equator, at a different speed depending on that run's noise offset. by the second pulse they're spread all over, so the ensemble ends up **largely depolarized**
 
+follow **one** run. red is the qubit, its path stays drawn, and the grey dashed arrow is where it would be with no noise. nothing undoes the drift, so it misses $|1\rangle$:
+
+![[Ramsey_animation.png]]
+
 why, in frequency: during the wait, the energy offset of one run is constant, a **rectangle** in time. the Fourier transform of a rectangle is a **sinc**, centred at zero frequency. so ==with no pulses the filter function passes low frequencies, exactly where 1/f noise is strongest: the worst possible choice==. (in lacrosse terms: running without cradling)
 ## spin echo (n = 1)
 put a $\pi$ pulse in the **middle** of the free evolution. it flips the Bloch vector over, so the runs that were drifting **away** from $x$ now drift **back towards** it, at the same speed. they all **refocus** right when the second $\frac\pi2$ pulse comes, and the vector lands on $|1\rangle$ again
 
 ![[Spin_echo_phases.png]]
 
-here it is running. think of the 5 arrows as 5 runners on the equator, each a bit faster or slower (a different noise offset). the caption says what each step does, the bar at the bottom shows where you are in the sequence, and the green ring is where everyone should finish:
+the same run as in the Ramsey animation, with the same noise, now with the 180° pulse in the middle. watch the red path: it drifts 60° one way, gets flipped to the mirror side, and the **same** drift carries it straight back:
 
 ![[Spin_echo_animation.png]]
-
-- **left, exact pulses**: the runs fan out, the $\pi$ pulse flips them, they fan back in, and **all** land on $|1\rangle$
-- **right, every pulse 25% too long**: the overshooting pulses tip the runs **off the equator** (the first $\frac\pi2$ goes past it, and the $\pi$ pulse tips them further). they still drift back together sideways, but they're now at different heights, so they never meet again: only 90% land on $|1\rangle$ on average
 
 the evolution is now two half periods: a rectangle with sign $+$, then one with sign $-$ (the $\pi$ pulse inverted the system). their filter function
 
@@ -45,6 +46,10 @@ two $\pi$ pulses split the free evolution into three periods and push the passba
 
 as $n$ grows, the filter moves to higher and higher frequencies, and the dephasing rate keeps dropping
 
+the same run with two 180° pulses. it never drifts more than 30° before being flipped back:
+
+![[CPMG_animation.png]]
+
 ![[Dephasing_more_pulses.png]]
 (coherence under 1/f noise, worked out from [[Dephasing and the filter function#^dephasing-decay]])
 
@@ -63,6 +68,10 @@ real pulses are never exactly $\pi$: the amplitude or length is a bit off, so ev
 - **CP** (Carr and Purcell, the older version): the $\pi$ pulses turn around $y$, **across** the state. each pulse that's 5% too long leaves the vector $9°$ off, and these $9°$s **add up**: after 10 pulses it's $90°$ off, pointing nowhere near where it should
 
 ![[Overshoot_CP_vs_CPMG.png]]
+
+what a bad pulse does to one spin echo: every pulse is 25% too long (so "90°" is really 112° and "180°" is really 225°). the flip no longer lands on the mirror side, so the drift can't bring it home, and it ends up with only an 88% chance of $|1\rangle$:
+
+![[Spin_echo_overshoot_animation.png]]
 
 that's why CPMG has the "MG" (Meiboom and Gill): they made it robust to pulse errors by turning the $\pi$ pulses $90°$, from $y$ to $x$. (the CP curve swings back up because the extra rotation keeps going round: after about 20 pulses it's $180°$ off, pointing along $-x$, and the plot only measures how far along the $x$ axis it is, either way)
 
