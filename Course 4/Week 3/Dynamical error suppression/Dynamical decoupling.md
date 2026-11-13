@@ -3,6 +3,10 @@
 a flux qubit with magnetic flux noise ([[Dephasing and the filter function]]). the dephasing depends on the noise spectrum **seen through a filter function**, and the filter function comes from the pulses we apply. so which pulses help? three examples, from worst to best. part of [[Quantum error mitigation]]
 
 the noise here is **1/f noise** ([[Noise spectra]]): big at low frequencies, falling as $1/f$. take it to be **quasi-static**: fixed during any one run, different from run to run (some probability distribution). work in the **rotating frame**, where with no noise the Bloch vector would just sit still along $x$
+
+all the sequences on one page (the rotary echo is in [[Rotary echo]]):
+
+![[Pulse_sequences.png]]
 ## Ramsey: do nothing (n = 0)
 1. a $\frac\pi2$ pulse around $y$ brings the Bloch vector down to the equator, pointing along $x$
 2. wait a time $\tau$ (free evolution)
@@ -15,6 +19,13 @@ why, in frequency: during the wait, the energy offset of one run is constant, a 
 put a $\pi$ pulse in the **middle** of the free evolution. it flips the Bloch vector over, so the runs that were drifting **away** from $x$ now drift **back towards** it, at the same speed. they all **refocus** right when the second $\frac\pi2$ pulse comes, and the vector lands on $|1\rangle$ again
 
 ![[Spin_echo_phases.png]]
+
+here it is running. think of the 5 arrows as 5 runners on the equator, each a bit faster or slower (a different noise offset). the caption says what each step does, the bar at the bottom shows where you are in the sequence, and the green ring is where everyone should finish:
+
+![[Spin_echo_animation.png]]
+
+- **left, exact pulses**: the runs fan out, the $\pi$ pulse flips them, they fan back in, and **all** land on $|1\rangle$
+- **right, every pulse 25% too long**: the overshooting pulses tip the runs **off the equator** (the first $\frac\pi2$ goes past it, and the $\pi$ pulse tips them further). they still drift back together sideways, but they're now at different heights, so they never meet again: only 90% land on $|1\rangle$ on average
 
 the evolution is now two half periods: a rectangle with sign $+$, then one with sign $-$ (the $\pi$ pulse inverted the system). their filter function
 
@@ -46,6 +57,40 @@ flowchart TD
     E --> C["CPMG, n pulses<br/>filter moves higher with n"]
     C --> T["less 1/f noise gets through<br/>T₂ → 2T₁"]
 ```
+## what if the π pulses overshoot?
+real pulses are never exactly $\pi$: the amplitude or length is a bit off, so every pulse rotates a bit too far. with one pulse that's a small error. with CPMG's dozens of pulses, could the errors **pile up**? it depends on **which axis** the $\pi$ pulses turn around
+- **CPMG**: the $\pi$ pulses turn around $x$, the **same axis the state points along** (the first $\frac\pi2$ pulse put it on $x$). turning a vector around its own axis does nothing to it, so turning too far does nothing either. the small leftover errors from the noise drift also flip sign from pulse to pulse and cancel
+- **CP** (Carr and Purcell, the older version): the $\pi$ pulses turn around $y$, **across** the state. each pulse that's 5% too long leaves the vector $9°$ off, and these $9°$s **add up**: after 10 pulses it's $90°$ off, pointing nowhere near where it should
+
+![[Overshoot_CP_vs_CPMG.png]]
+
+that's why CPMG has the "MG" (Meiboom and Gill): they made it robust to pulse errors by turning the $\pi$ pulses $90°$, from $y$ to $x$. (the CP curve swings back up because the extra rotation keeps going round: after about 20 pulses it's $180°$ off, pointing along $-x$, and the plot only measures how far along the $x$ axis it is, either way)
+
+> [!extra]- the sequences as code
+> the whole family in [Qiskit](https://www.qiskit.org/): $n=0$ is Ramsey, $n=1$ the spin echo, $n>1$ CPMG with the $\pi$ pulses at $\frac{j-1/2}n\,T$
+> ```python
+> from math import pi
+> from qiskit import QuantumCircuit
+>
+> def cpmg(n, T=800, overshoot=0.0):
+>     """n = 0: Ramsey, n = 1: spin echo, n > 1: CPMG. total wait T ns."""
+>     f = 1 + overshoot                    # 0.05 = every pulse 5% too long
+>     qc = QuantumCircuit(1)
+>     qc.ry(f * pi / 2, 0)                 # π/2: onto the equator, along x
+>     if n == 0:
+>         qc.delay(T, 0, unit="ns")        # just wait
+>     else:
+>         qc.delay(T // (2 * n), 0, unit="ns")
+>         for j in range(n):
+>             qc.rx(f * pi, 0)             # π pulse around x (along the state)
+>             qc.delay(T // n if j < n - 1 else T // (2 * n), 0, unit="ns")
+>     qc.ry(f * pi / 2, 0)                 # π/2: read out, ideally |1⟩
+>     qc.measure_all()
+>     return qc
+>
+> print(cpmg(4).draw())
+> ```
+> `cpmg(4)` is π/2, then 100 ns, π, 200 ns, π, 200 ns, π, 200 ns, π, 100 ns, then π/2. with `overshoot=0.05` the noise free circuit still lands on $|1\rangle$ more than 99% of the time. change `qc.rx` to `qc.ry` to get CP and watch the error grow with `n`. on real hardware the `delay`s are where the noise acts
 ## noise spectroscopy
 CPMG with many pulses has a **narrow** passband, centred near $\omega\approx\pi n/t$. change $n$ (or $t$) and the narrow filter slides around in frequency. measure how much the qubit dephases each time, and you can **reconstruct the noise spectrum** $S(\omega)$ the qubit sees: the qubit plus pulses becomes a **noise spectrometer**
 
@@ -68,11 +113,13 @@ flowchart TD
 > ① in a spin echo with total time $t$, when exactly is the $\pi$ pulse, and why does it have to be there?
 > ② why does the spin echo refocus quasi-static noise **perfectly**, but CPMG still helps for real 1/f noise?
 > ③ CPMG with $n=4$ pulses over $t=8\,\mu$s: when are the pulses?
+> ④ every $\pi$ pulse is 2% too long. with CP pulses (around $y$), about how far off is the state after 25 pulses? and with CPMG?
 
 > [!answer]-
 > ① at $t/2$: the phase gathered in the first half ($+\delta\omega\,t/2$) is cancelled by the second half ($-\delta\omega\,t/2$) only if the halves are equally long
 > ② quasi-static noise is constant during a run, so any equal $+$ and $-$ periods cancel it exactly. real 1/f noise also changes during the run; the echo only cancels the part slower than $t$, and more pulses (shorter periods) also cancel the faster parts
 > ③ at $\frac{j-1/2}4\times8=1,3,5,7\,\mu$s
+> ④ 2% of $180°$ is $3.6°$ per pulse, and with CP these add up: $25\times3.6°=90°$ off. with CPMG the pulses turn around the axis the state points along, so it stays (almost) where it should
 
 see also [[Rotary echo]] (the same trick during a drive), [[Noise power spectral density]], [[Bloch sphere]]
 

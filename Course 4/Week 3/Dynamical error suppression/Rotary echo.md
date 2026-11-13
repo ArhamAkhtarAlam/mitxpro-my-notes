@@ -15,6 +15,21 @@ R_{-x}(\Omega t/2)\,R_x(\Omega t/2)=I\qquad\text{for any }\Omega
 $$
 ^rotary-echo
 
+"for any $\Omega$" includes a drive that's simply **too strong**: an overshoot. read the animation like a table:
+- **rows**: the drive is just right (top) or 25% too strong (bottom)
+- **columns**: the drive is left on the whole time (left, grey) or reversed halfway, the rotary echo (right, purple)
+
+the green ring is the target, $|0\rangle$, and the bar at the bottom shows when the drive gets reversed:
+
+![[Rotary_echo_animation.png]]
+
+- **just right**: both get back to $|0\rangle$ (a full $2\pi$ turn either way)
+- **25% too strong**: without the reversal the qubit turns $2.5\pi$ and ends up on the equator, so a measurement gives $|0\rangle$ only half the time. with the reversal it retraces its path exactly and is back at $|0\rangle$
+
+where it sits next to the other sequences:
+
+![[Pulse_sequences.png]]
+
 > [!important] the one idea
 > ==reversing the drive undoes any amplitude error, whatever its size, just as a $\pi$ pulse undoes any phase drift in a spin echo==
 
@@ -24,6 +39,21 @@ flowchart TD
     B --> C["reverse: drive along −x for t/2"]
     C --> D["every run back at |0⟩"]
 ```
+> [!extra]- the rotary echo as code
+> in [Qiskit](https://www.qiskit.org/), a continuous drive for a time is just a rotation by the angle it turns through
+> ```python
+> from math import pi
+> from qiskit import QuantumCircuit
+>
+> def rotary_echo(theta, overshoot=0.0):
+>     f = 1 + overshoot            # 0.25 = drive 25% too strong
+>     qc = QuantumCircuit(1)
+>     qc.rx(f * theta, 0)          # drive along +x
+>     qc.rx(-f * theta, 0)         # drive reversed: along −x
+>     qc.measure_all()             # always |0⟩, whatever the overshoot
+>     return qc
+> ```
+> try `rotary_echo(pi, overshoot=0.25)`: it measures $|0\rangle$ every time. delete the second `rx` and add its angle to the first (`qc.rx(2 * f * theta, 0)`) to get the unreversed drive, which misses
 ## more reversals
 just like spin echo → CPMG, for noise that falls off with frequency one reversal can become **many**. each extra reversal pushes the filter function to higher frequencies. here the filter shapes the noise spectrum of the **drive amplitude** fluctuations, not of the qubit frequency
 
