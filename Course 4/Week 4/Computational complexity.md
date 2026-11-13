@@ -22,8 +22,14 @@ flowchart TD
 - [[Circuit model]] → classical vs quantum circuits, fan-in and fan-out, ancillas, **width, depth, size**, and the flaw: one circuit per input size (the halting trick), no loops
 - [[Randomized and quantum computation]] → random gates or random input bits, a classical Turing machine writing a quantum circuit for each $n$, probabilities average but amplitudes cancel
 - [[Nondeterminism]] → accept if **any** of $2^n$ branches accepts: physically unreasonable, but where [[NP]] comes from
+### complexity classes
+- [[Complexity classes]] → DTIME, **P ⊆ BPP ⊆ BQP** and P ⊆ NP, the believed map, why P = BPP is suspected, why only polynomial vs exponential matters
+- [[NP]] → yes answers have short proofs you can check: $f(x)=\bigvee_yg(x,y)$, travelling salesman
+- [[Quantum circuit evaluation]] → the BQP-complete problem: is the output mostly 1 or mostly 0? (a promise problem); in BPP only if BPP = BQP
 
-coming up: [[Turing machine]], [[Complexity classes]], [[Quantum supremacy]]
+![[Complexity_class_map.png]]
+
+coming up: [[Turing machine]], [[NP-complete]], [[Quantum supremacy]]
 
 see also [[Big O notation]], [[Quantum volume]]
 

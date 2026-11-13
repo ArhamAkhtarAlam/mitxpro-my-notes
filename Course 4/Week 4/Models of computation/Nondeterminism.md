@@ -58,6 +58,8 @@ all three models branch; they differ in how the branches are **combined** at the
 > ③ reject: the OR of all zeros is 0
 > ④ measuring the superposition gives one random branch, just like the randomized case. to boost the accepting branch you need interference, and the best known speed up for search (Grover) is only a square root
 
+next: [[Complexity classes]]
+
 see also [[Randomized and quantum computation]], [[Circuit model]], [[Grover's algorithm]]
 
 week hub: [[Computational complexity]]

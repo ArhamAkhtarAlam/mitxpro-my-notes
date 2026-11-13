@@ -6,5 +6,6 @@
     "Custom callouts"
   ],
   "translucency": true,
-  "cssTheme": "Void Teal"
+  "cssTheme": "Void Teal",
+  "showRibbon": true
 }

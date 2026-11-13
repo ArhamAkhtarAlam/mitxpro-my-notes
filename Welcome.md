@@ -10,7 +10,9 @@ these are my notes from four **MIT xPRO** quantum computing courses. I wrote the
 > - **Course 4** → *Requirements for Large Scale Universal Quantum Computation*: error correction, fault tolerance, the surface code, quantum advantage ([[Requirements for large scale quantum computation|overview]])
 > - **Math** → all the maths you need for the rest
 > - **Extra** → good-to-know topics that aren't in the courses
-> - **IISc** → characterization notes from the IISc workshop ([[Metrology and nano-characterization workshop|hub]], [[Technique comparison cheat sheet|cheat sheet]], [[Glossary]]): microscopy (SEM, TEM, FIB, AFM, MSA), spectroscopy (EDS, FTIR, Raman, UV-vis, XPS, UPS, REELS), XRD and electrical (sheet resistance, MOS C–V), each with how it connects to the quantum notes
+> - **VLSI** → chip-making notes from 2 workshops
+> 	- **IISc** → characterization ([[Metrology and nano-characterization workshop|hub]], [[Technique comparison cheat sheet|cheat sheet]], [[Glossary]]): microscopy (SEM, TEM, FIB, AFM, MSA), spectroscopy (EDS, FTIR, Raman, UV-vis, XPS, UPS, REELS), XRD and electrical (sheet resistance, MOS C–V), each with how it connects to the quantum notes
+> 	- **Microwind** → FinFET and nanosheet cell design ([[Microwind course|hub]], [[Microwind formulas|formulas]]): MOSFET → FinFET → nanosheet → CFET, the Microwind tool, logic cells, ring oscillators, technology scaling
 > - **Quantum Computation and Quantum Information** → notes from the textbook by Nielsen and Chuang
 
 ## where to start
@@ -57,7 +59,7 @@ flowchart TD
 - **week 1** → [[Detecting and correcting errors]] (hub): [[Bit flip code]] and the threshold, [[Parity measurement]], [[Decoding the bit flip code]], [[Phase flip code]], [[Shor code]], [[Computational capacity]], [[Triple modular redundancy]] (all the formulas: [[Course 4 Week 1 formulas]])
 - **week 2** → [[Principles of fault tolerance]] (hub): [[Threshold theorem]] (and the classical thresholds), [[Fault-tolerant NAND gate]] ($15p^2$, $p_{th}=\frac1{15}$), [[Cost of fault tolerance]]; quantum: [[Fault-tolerant quantum computing]], [[Stabilizer codes]], [[Transversal gates on stabilizer codes]], [[From Hamming to Steane]], [[Steane code circuit]], [[Fault-tolerant measurement]], [[Quantum threshold estimate]], [[Recursive fault tolerance]] (doubly exponential), [[Fault-tolerant procedure]] (one failure, at most one error per block), [[Transversal gates]] (all the formulas: [[Course 4 Week 2 formulas]])
 - **week 3** → [[Quantum error mitigation]] (hub): [[Correcting continuous errors]] (errors are linear), [[Dephasing and the filter function]] ($T_2$, the lacrosse picture, pulses filter the noise), [[Dynamical decoupling]] (Ramsey, spin echo, CPMG, noise spectroscopy), [[Rotary echo]], then the [[Surface code]] ([[Surface code logical operations|logical operations]], [[Magic state distillation]], [[Decoding the surface code|decoding]]) (all the formulas: [[Course 4 Week 3 formulas]])
-- **week 4** → [[Computational complexity]] (hub): [[Languages]] (yes/no problems), [[Promise, sampling and relation problems]], [[Circuit model]] (width, depth, size), [[Randomized and quantum computation]], [[Nondeterminism]]
+- **week 4** → [[Computational complexity]] (hub): [[Languages]] (yes/no problems), [[Promise, sampling and relation problems]], [[Circuit model]] (width, depth, size), [[Randomized and quantum computation]], [[Nondeterminism]], [[Complexity classes]] (P, BPP, BQP), [[NP]] (short proofs), [[Quantum circuit evaluation]] (BQP-complete)
 ### Math
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace; for the IISc notes: [[Logarithms and exponentials]], [[Straight line fits]], [[Peak shapes and FWHM]]
 ### Quantum Computation and Quantum Information (the textbook)

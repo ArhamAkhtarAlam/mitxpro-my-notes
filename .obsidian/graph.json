@@ -85,10 +85,31 @@
       }
     },
     {
-      "query": "path:\"Course 4/Week 1\"  ",
+      "query": "path:\"Course 4/Week 1\"",
       "color": {
         "a": 1,
         "rgb": 16740241
+      }
+    },
+    {
+      "query": "path:\"Course 4/Week 2\"",
+      "color": {
+        "a": 1,
+        "rgb": 11868062
+      }
+    },
+    {
+      "query": "path:\"Course 4/Week 3\"",
+      "color": {
+        "a": 1,
+        "rgb": 16757702
+      }
+    },
+    {
+      "query": "path:\"Course 4/Week 4\"",
+      "color": {
+        "a": 1,
+        "rgb": 7473591
       }
     },
     {
@@ -99,35 +120,35 @@
       }
     },
     {
-      "query": "path:IISc/Microscopy  ",
+      "query": "path:VLSI/IISc/Microscopy  ",
       "color": {
         "a": 1,
         "rgb": 9133628
       }
     },
     {
-      "query": "path:IISc/Spectroscopy  ",
+      "query": "path:VLSI/IISc/Spectroscopy  ",
       "color": {
         "a": 1,
         "rgb": 14262374
       }
     },
     {
-      "query": "path:IISc/Diffraction  ",
+      "query": "path:VLSI/IISc/Diffraction  ",
       "color": {
         "a": 1,
         "rgb": 8031022
       }
     },
     {
-      "query": "path:IISc/Electrical  ",
+      "query": "path:VLSI/IISc/Electrical  ",
       "color": {
         "a": 1,
         "rgb": 14729728
       }
     },
     {
-      "query": "path:IISc  ",
+      "query": "path:VLSI/IISc  ",
       "color": {
         "a": 1,
         "rgb": 10777937
@@ -153,6 +174,41 @@
         "a": 1,
         "rgb": 16114083
       }
+    },
+    {
+      "query": "path:VLSI/Microwind/Transistors",
+      "color": {
+        "a": 1,
+        "rgb": 14964526
+      }
+    },
+    {
+      "query": "path:VLSI/Microwind/Microwind",
+      "color": {
+        "a": 1,
+        "rgb": 15895608
+      }
+    },
+    {
+      "query": "path:\"VLSI/Microwind/Cell design\"",
+      "color": {
+        "a": 1,
+        "rgb": 12071463
+      }
+    },
+    {
+      "query": "path:VLSI/Microwind/Industry",
+      "color": {
+        "a": 1,
+        "rgb": 16034184
+      }
+    },
+    {
+      "query": "path:VLSI/Microwind  ",
+      "color": {
+        "a": 1,
+        "rgb": 9318181
+      }
     }
   ],
   "collapse-display": false,
@@ -161,10 +217,10 @@
   "nodeSizeMultiplier": 1.38828995242093,
   "lineSizeMultiplier": 1.26842989084803,
   "collapse-forces": false,
-  "centerStrength": 0.488553036663868,
-  "repelStrength": 9.95302372599156,
+  "centerStrength": 0.506801007556675,
+  "repelStrength": 9.91020990664209,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.5679141498168612,
-  "close": true
+  "scale": 0.5720710698052661,
+  "close": false
 }
