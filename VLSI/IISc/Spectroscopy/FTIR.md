@@ -170,6 +170,6 @@ counterfeit pharmaceutical tablets (ATR), semiconductor contamination (find orga
 > [!extra] Fourier transforms and interferometers again
 > FTIR is a Michelson interferometer, the same idea as the Mach–Zehnder in [[Beamsplitters]], followed by a [[Fourier Transform]]. a spectrum hidden in a signal that's a sum of cosines is exactly what the [[Quantum Fourier Transform]] pulls out in [[Quantum Phase Estimation]]: there the "frequencies" are the phases of the eigenvalues
 
-see also [[Raman spectroscopy]], [[UV-vis spectroscopy]], [[XPS]], [[Metrology and nano-characterization workshop]]
+see also [[Raman spectroscopy]], [[UV-vis spectroscopy]], [[XPS]], [[Metrology and nano-characterization workshop]], class 11 physics: [[Two blocks and a spring]] (two masses on a spring, reduced mass)
 
 formulas: [[Spectroscopy formulas]]

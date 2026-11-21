@@ -101,6 +101,6 @@ mount on a stub with carbon tape, make it conductive, blow off dust, load. much 
 > [!extra] SEM is how qubit chips get checked
 > the tiny Josephson junctions and wiring of [[Superconducting qubits]] are imaged by SEM during fabrication (CD-SEM for the junction size), and small defects there show up later as noise ([[Noise Processes]], [[Rabi oscillation]]). the barrier inside the junction is too thin for an SEM, that needs a [[TEM#the quantum connection|TEM]]
 
-see also [[Electron microscope]], [[TEM]], [[FIB]], [[AFM]], [[EDS]], [[XRD]], [[Metrology and nano-characterization workshop]]
+see also [[Electron microscope]], [[TEM]], [[FIB]], [[AFM]], [[EDS]], [[XRD]], [[Metrology and nano-characterization workshop]], class 11 physics: [[Work-energy theorem]] (KE = eV)
 
 formulas: [[Microscopy formulas]]

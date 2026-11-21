@@ -42,6 +42,7 @@ the full chain is in [[Complexity classes#^containments]]
 > ③ no. factoring would just stop being an example of a quantum speed up. BPP = BQP needs a fast classical algorithm for a BQP-complete problem like [[Quantum circuit evaluation]]
 > ④ there's no known quantum algorithm that does it, and NP-complete problems don't seem to have the structure quantum speed ups need. Grover alone only gives a square root, which is still exponential
 
+
 previous: [[Quantum circuit evaluation]]
 
 see also [[Promise, sampling and relation problems]], [[Quantum volume]]

@@ -25,7 +25,7 @@ flowchart TD
 - [[Correcting continuous errors]] → analog computers can't be corrected, but a continuous error $e^{i\theta Z}=\cos\theta\,I+i\sin\theta\,Z$ is a linear combination, so a code that fixes $Z$ fixes it too
 ### dynamical error suppression
 - [[Dephasing and the filter function]] → $T_1$, $T_\phi$, $T_2$, the lacrosse picture, a flux qubit's random phase, and the dephasing formula where the pulses act as a **filter function** on the noise spectrum
-- [[Dynamical decoupling]] → Ramsey (filter at 0 Hz, the worst for 1/f noise), spin echo, CPMG (filter moves up with more pulses), noise spectroscopy
+- [[Dynamical decoupling]] → Ramsey (filter at 0 Hz, the worst for 1/f noise), spin echo, CPMG (filter moves up with more pulses), pulse errors (CP vs CPMG), XY-4 and XY-8 (robust for any state), noise spectroscopy
 - [[Rotary echo]] → the same trick during a drive: reverse the drive halfway to undo amplitude errors; open loop vs closed loop
 ### the surface code
 once the physical errors are low enough, correct the rest:

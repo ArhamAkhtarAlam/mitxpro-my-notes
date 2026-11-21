@@ -10,7 +10,7 @@ flowchart TD
     A["random gates inside the circuit"] <--> B["deterministic circuit + extra random input bits"]
 ```
 
-(going from 1 to 2: give every random gate its own fresh input bit $r_j$ to read instead)
+(going from 1 to 2: give every random gate its own fresh bit $r_j$ to read instead)
 ## quantum circuits
 already familiar: unitary gates, ancillas in $|0\rangle$, a width, a depth and a size ([[Circuit model]]). the one drawback is the same as for classical circuits: an **uncontrolled dependence on the input size** $n$
 ## uniform circuit families

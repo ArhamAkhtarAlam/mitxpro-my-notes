@@ -182,6 +182,6 @@ $$
 > [!extra] placing atoms for qubits
 > an STM tip can also **move** atoms. in silicon, it can strip hydrogen atoms off a surface one by one to make a pattern, and then a single phosphorus atom sticks exactly there. that's how some groups build qubits from **single donor atoms** in silicon, much more precisely than the [[FIB#the quantum connection|ion implantation]] route
 
-see also [[SEM]], [[MSA]], [[UPS]], [[FIB]], [[Metrology and nano-characterization workshop]]
+see also [[SEM]], [[MSA]], [[UPS]], [[FIB]], [[Metrology and nano-characterization workshop]], class 11 physics: [[Conservation of mechanical energy]] (springs)
 
 formulas: [[Microscopy formulas]]

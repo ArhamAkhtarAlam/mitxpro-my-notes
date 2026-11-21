@@ -14,6 +14,7 @@ these are my notes from four **MIT xPRO** quantum computing courses. I wrote the
 > 	- **IISc** → characterization ([[Metrology and nano-characterization workshop|hub]], [[Technique comparison cheat sheet|cheat sheet]], [[Glossary]]): microscopy (SEM, TEM, FIB, AFM, MSA), spectroscopy (EDS, FTIR, Raman, UV-vis, XPS, UPS, REELS), XRD and electrical (sheet resistance, MOS C–V), each with how it connects to the quantum notes
 > 	- **Microwind** → FinFET and nanosheet cell design ([[Microwind course|hub]], [[Microwind formulas|formulas]]): MOSFET → FinFET → nanosheet → CFET, the Microwind tool, logic cells, ring oscillators, technology scaling
 > - **Quantum Computation and Quantum Information** → notes from the textbook by Nielsen and Chuang
+> - **IIT** → class 11 physics for IIT prep: [[Work, energy and power]] (work, power, energy, collisions) and [[Rotational mechanics]] (centre of mass, impulse, angular momentum), with animations
 
 ## where to start
 pick whatever sounds interesting, every note links to the ones it builds on
@@ -64,6 +65,9 @@ flowchart TD
 - [[Math]] → complex numbers, Dirac notation, probability, modular arithmetic, Hilbert spaces, eigenvalues, tensor products, the trace; for the IISc notes: [[Logarithms and exponentials]], [[Straight line fits]], [[Peak shapes and FWHM]]
 ### Quantum Computation and Quantum Information (the textbook)
 - [[Quantum Computation and Quantum Information]] → chapter 2: [[Ensembles of quantum states]], [[General properties of the density operator]], [[Reduced density operator]], [[Schmidt decomposition and purifications]], [[EPR and the Bell inequality]], [[Chapter 2 exercises]] (formulas: [[Chapter 2 formulas]]); chapter 10: [[Introduction to quantum error-correction]], [[Syndrome diagnosis and recovery]], [[Three qubit phase flip code]], [[Shor nine qubit code]], [[Quantum error-correction conditions]], [[Discretization of the errors]], [[Independent error models]], [[Degenerate codes and the quantum Hamming bound]], [[Classical linear codes]], [[Calderbank-Shor-Steane codes]], [[The stabilizer formalism]], [[Unitary gates and the stabilizer formalism]], [[Measurement and the Gottesman-Knill theorem]], [[Stabilizer code constructions]], [[Standard form and stabilizer circuits]], [[Chapter 10 exercises]] (formulas: [[Chapter 10 formulas]])
+### IIT: class 11 physics
+- **work, power and energy** → [[Work, energy and power]] (work, power, energy conservation, collisions)
+- **rotational mechanics** → [[Rotational mechanics]] (centre of mass, impulse, restitution, angular momentum)
 ### Extra (not in the courses)
 - [[Extra]] → things the courses skip but are good to know: the no-cloning theorem, more noise channels, superdense coding, GHZ states, tensor networks, purification...
 ## tips for reading

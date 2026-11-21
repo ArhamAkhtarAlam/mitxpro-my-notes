@@ -8,6 +8,69 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
+      "query": "path:\"IIT/11th/P11/ROT/Centre of mass\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 10182117
+      }
+    },
+    {
+      "query": "path:\"IIT/11th/P11/ROT/Momentum\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15817653
+      }
+    },
+    {
+      "query": "path:\"IIT/11th/P11/ROT/Angular momentum\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 48121
+      }
+    },
+    {
+      "query": "path:\"IIT/11th/P11/ROT\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 3804323
+      }
+    },
+    {
+      "query": "path:\"IIT/11th/P11/WEP/Work\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 3065014
+      }
+    },
+    {
+      "query": "path:\"IIT/11th/P11/WEP/Power\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 9095462
+      }
+    },
+    {
+      "query": "path:\"IIT/11th/P11/WEP/Energy\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16765503
+      }
+    },
+    {
+      "query": "path:\"IIT/11th/P11/WEP/Collisions\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16744273
+      }
+    },
+    {
+      "query": "path:\"IIT\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 3696193
+      }
+    },
+    {
       "query": "path:\"Course 1/Quantum Gates/Single qubit gates\"  ",
       "color": {
         "a": 1,
@@ -217,10 +280,10 @@
   "nodeSizeMultiplier": 1.38828995242093,
   "lineSizeMultiplier": 1.26842989084803,
   "collapse-forces": false,
-  "centerStrength": 0.506801007556675,
+  "centerStrength": 0.580464595577946,
   "repelStrength": 9.91020990664209,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.5720710698052661,
+  "scale": 0.5909979673940213,
   "close": false
 }

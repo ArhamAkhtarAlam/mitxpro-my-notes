@@ -6,7 +6,7 @@ the first model of computing: the circuit. the models in this week aren't separa
 - you can restrict to **bounded** fan-in and fan-out, or to **reversible** circuits (a special case), but you don't have to
 - no ancillas needed: the internal wires **are** new bits, created as you go
 
-**quantum**: every gate is **unitary**, so it has the same number of inputs and outputs. a [[CNOT gate]] takes 2 qubits to 2, a [[Toffoli gate]] 3 to 3. gates can't create extra data, so every qubit you'll ever need goes in at the start: the input plus a bunch of **ancillas** in $|0\rangle$
+**quantum**: every gate is **unitary**, so it has the same number of inputs and outputs. a [[CNOT gate]] takes 2 qubits to 2, a [[Toffoli gate]] 3 to 3. gates can't create extra data, so every qubit you'll ever need goes in at the start: the input plus a bunch of **ancillas** in $|0\rangle$¥¥
 ## how big is a circuit?
 **computability** asks: can this be computed at all, yes or no? **complexity** asks: given that it can, **how hard** is it? how much time, how much effort? for a circuit, three measures:
 

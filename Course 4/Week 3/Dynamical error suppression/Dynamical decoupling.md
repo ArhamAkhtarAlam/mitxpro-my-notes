@@ -75,6 +75,29 @@ what a bad pulse does to one spin echo: every pulse is 25% too long (so "90°" i
 
 that's why CPMG has the "MG" (Meiboom and Gill): they made it robust to pulse errors by turning the $\pi$ pulses $90°$, from $y$ to $x$. (the CP curve swings back up because the extra rotation keeps going round: after about 20 pulses it's $180°$ off, pointing along $-x$, and the plot only measures how far along the $x$ axis it is, either way)
 
+## XY-4 and XY-8: protecting every state
+CPMG has a catch: it's only robust because the state points along $x$, the same axis as the pulses. a state pointing along $y$ gets the CP treatment, and the errors pile up again (CP has the same problem the other way round). in a real computation the qubit could be pointing **anywhere**, so you want a sequence that works for every state
+
+the fix: **alternate** the pulse axes
+
+![[XY_sequences.png]]
+
+- **XY-4**: π pulses around $y, x, y, x$. whatever error the $x$ pulses make, the $y$ pulses partly undo, for any starting direction
+- **XY-8**: XY-4 followed by its **mirror image** ($y\,x\,y\,x\;x\,y\,x\,y$). the leftover error of XY-4 cancels too
+
+the timing is the same as CPMG: π pulses equally spaced, with half gaps at the start and end ($\frac\tau8,\frac\tau4,\frac\tau4,\frac\tau4,\frac\tau8$ for 4 pulses over $\tau$)
+
+all four sequences, each with 8 π pulses that are 12% too long, starting from a state halfway between $x$ and $y$:
+
+![[XY_sequences_animation.png]]
+
+CP and CPMG end up only 50% back on target; XY-4 gets 98%, XY-8 100%
+
+![[XY_robustness.png]]
+
+> [!important] why alternate?
+> ==CP protects states along $y$, CPMG protects states along $x$, XY-4 and XY-8 protect both, so they protect **any** state==. that's why XY-type sequences are the usual choice when you don't know what the qubit is storing
+
 > [!extra]- the sequences as code
 > the whole family in [Qiskit](https://www.qiskit.org/): $n=0$ is Ramsey, $n=1$ the spin echo, $n>1$ CPMG with the $\pi$ pulses at $\frac{j-1/2}n\,T$
 > ```python
@@ -123,12 +146,14 @@ flowchart TD
 > ② why does the spin echo refocus quasi-static noise **perfectly**, but CPMG still helps for real 1/f noise?
 > ③ CPMG with $n=4$ pulses over $t=8\,\mu$s: when are the pulses?
 > ④ every $\pi$ pulse is 2% too long. with CP pulses (around $y$), about how far off is the state after 25 pulses? and with CPMG?
+> ⑤ the qubit stores an unknown state. why use XY-4 instead of CPMG? write out the pulse axes of XY-8
 
 > [!answer]-
 > ① at $t/2$: the phase gathered in the first half ($+\delta\omega\,t/2$) is cancelled by the second half ($-\delta\omega\,t/2$) only if the halves are equally long
 > ② quasi-static noise is constant during a run, so any equal $+$ and $-$ periods cancel it exactly. real 1/f noise also changes during the run; the echo only cancels the part slower than $t$, and more pulses (shorter periods) also cancel the faster parts
 > ③ at $\frac{j-1/2}4\times8=1,3,5,7\,\mu$s
 > ④ 2% of $180°$ is $3.6°$ per pulse, and with CP these add up: $25\times3.6°=90°$ off. with CPMG the pulses turn around the axis the state points along, so it stays (almost) where it should
+> ⑤ CPMG is only robust for states along $x$; an unknown state might point along $y$, where pulse errors pile up. XY-4 alternates the axes, so it's robust for any state. XY-8: $y\,x\,y\,x\,x\,y\,x\,y$
 
 see also [[Rotary echo]] (the same trick during a drive), [[Noise power spectral density]], [[Bloch sphere]]
 

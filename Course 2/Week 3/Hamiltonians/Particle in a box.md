@@ -58,4 +58,4 @@ kinetic energy is easy in the **momentum** basis and potential energy in the **p
 > [!example] a real particle in a box: quantum dots
 > semiconductor **quantum dots** a few nm across trap electrons like this. smaller box → bigger $E_n\propto\frac1{a^2}$ → bigger gap → they absorb and glow **bluer**. you can see it directly in [[UV-vis spectroscopy]]
 
-see also [[Hamiltonian]], [[Trotterization]], [[Quantum Fourier Transform]]
+see also [[Hamiltonian]], [[Trotterization]], [[Quantum Fourier Transform]], class 11 physics: [[Conservation of mechanical energy]]

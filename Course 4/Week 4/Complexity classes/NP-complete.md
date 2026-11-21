@@ -1,4 +1,4 @@
-#complexity #complexity_class #NP
+90#complexity #complexity_class #NP
 the **hardest** problems in [[NP]]: solve any one of them fast and you've solved all of NP fast. part of [[Complexity classes]]
 
 ## the definition
@@ -19,13 +19,13 @@ flowchart TD
 
 ## examples
 
-| problem | question | certificate |
-|---|---|---|
-| circuit SAT | does some input make this circuit output 1? | that input |
-| travelling salesman | is there a round trip through all the cities, each once, shorter than $k$ miles? | the route |
-| $n\times n$ Sudoku | can this grid be filled in? | the filled grid |
-| map colouring | can the map be coloured with 3 colours so neighbours always differ? | the colouring |
-| box packing | do these boxes fit into $k$ bins? | which bin each box goes in |
+| problem             | question                                                                         | certificate                |
+| ------------------- | -------------------------------------------------------------------------------- | -------------------------- |
+| circuit SAT         | does some input make this circuit output 1?                                      | that input                 |
+| travelling salesman | is there a round trip through all the cities, each once, shorter than $k$ miles? | the route                  |
+| $n\times n$ Sudoku  | can this grid be filled in?                                                      | the filled grid            |
+| map colouring       | can the map be coloured with 3 colours so neighbours always differ?              | the colouring              |
+| box packing         | do these boxes fit into $k$ bins?                                                | which bin each box goes in |
 
 circuit SAT is the original one: it's exactly the OR over certificates in [[NP#^np-or]], with the verifier written as a circuit. lots of planning and scheduling problems turn out to be NP-complete, which is why NP gets so much attention
 
