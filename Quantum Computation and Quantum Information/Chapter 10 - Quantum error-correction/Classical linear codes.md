@@ -97,16 +97,16 @@ if $C$ is an $[n,k]$ code with generator $G$ and parity check $H$, its **dual** 
 remarkably, the dual construction comes up naturally in quantum error correction: it's the key to the CSS codes ([[CSS codes]])
 
 > [!exercise] try these
-> ① receive $0011101$ with the $[7,4]$ Hamming code. which bit (if any) is wrong?
-> ② what's the distance of the $[6,2]$ repetition code, and how many errors does it correct?
-> ③ the Gilbert-Varshamov bound for $n=100$, $t=5$
-> ④ find the dual of the $[3,1]$ repetition code. is it self-dual?
+> **1** receive $0011101$ with the $[7,4]$ Hamming code. which bit (if any) is wrong?
+> **2** what's the distance of the $[6,2]$ repetition code, and how many errors does it correct?
+> **3** the Gilbert-Varshamov bound for $n=100$, $t=5$
+> **4** find the dual of the $[3,1]$ repetition code. is it self-dual?
 
 > [!answer]-
-> ① places with a 1: 3, 4, 5, 7. row 1 (places 4–7): 4, 5, 7 → 3 ones → 1. row 2 (places 2, 3, 6, 7): 3, 7 → 0. row 3 (places 1, 3, 5, 7): 3, 5, 7 → 1. syndrome $(1,0,1)$ = 5: flip bit 5, giving $0011001$ (check: row 1 sees 4, 7, row 2 sees 3, 7, row 3 sees 3, 7, all even ✓)
-> ② the smallest nonzero code word weight is 3 ($000111$), so $d=3$ and it corrects $t=1$
-> ③ $H(0.1)=0.332+0.137=0.469$, so $k/n\geq0.531$: some code with $k\approx53$ data bits in 100 corrects any 5 errors
-> ④ generator $H^T$, ie. spanned by $(1,1,0)$ and $(0,1,1)$: all even weight words $\{000,110,011,101\}$, a $[3,2]$ code. $C=\{000,111\}$ isn't inside it ($111$ has odd weight), so not even weakly self-dual
+> **1** places with a 1: 3, 4, 5, 7. row 1 (places 4–7): 4, 5, 7 → 3 ones → 1. row 2 (places 2, 3, 6, 7): 3, 7 → 0. row 3 (places 1, 3, 5, 7): 3, 5, 7 → 1. syndrome $(1,0,1)$ = 5: flip bit 5, giving $0011001$ (check: row 1 sees 4, 7, row 2 sees 3, 7, row 3 sees 3, 7, all even ✓)
+> **2** the smallest nonzero code word weight is 3 ($000111$), so $d=3$ and it corrects $t=1$
+> **3** $H(0.1)=0.332+0.137=0.469$, so $k/n\geq0.531$: some code with $k\approx53$ data bits in 100 corrects any 5 errors
+> **4** generator $H^T$, ie. spanned by $(1,1,0)$ and $(0,1,1)$: all even weight words $\{000,110,011,101\}$, a $[3,2]$ code. $C=\{000,111\}$ isn't inside it ($111$ has odd weight), so not even weakly self-dual
 
 see also [[Binary symmetric channel]], [[Shannon entropy]], [[Channel capacity]], [[Degenerate codes and the quantum Hamming bound]], maths: [[Linear algebra mod 2]]
 

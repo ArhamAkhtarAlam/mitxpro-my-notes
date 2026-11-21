@@ -43,13 +43,13 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① what does $S$ do to $Y$? (use $Y=iXZ$)
-> ② what does $HSH$ do to $X$ and $Z$?
-> ③ use the CNOT row to find where an $X$ on the control and a $Z$ on the control end up
+> **1** what does $S$ do to $Y$? (use $Y=iXZ$)
+> **2** what does $HSH$ do to $X$ and $Z$?
+> **3** use the CNOT row to find where an $X$ on the control and a $Z$ on the control end up
 
 > [!answer]-
-> ① $SYS^\dagger=i\,(SXS^\dagger)(SZS^\dagger)=iYZ=i(iX)=-X$ (using $YZ=iX$)
-> ② $X\xrightarrow{H}Z\xrightarrow{S}Z\xrightarrow{H}X$, and $Z\xrightarrow{H}X\xrightarrow{S}Y\xrightarrow{H}-Y$ (since $HYH=-Y$). so $X\to X$ and $Z\to-Y$: a quarter turn about $x$
-> ③ $X_1\to X_1X_2$: the bit flip copies onto the target. $Z_1\to Z_1$: a phase flip on the control stays put
+> **1** $SYS^\dagger=i\,(SXS^\dagger)(SZS^\dagger)=iYZ=i(iX)=-X$ (using $YZ=iX$)
+> **2** $X\xrightarrow{H}Z\xrightarrow{S}Z\xrightarrow{H}X$, and $Z\xrightarrow{H}X\xrightarrow{S}Y\xrightarrow{H}-Y$ (since $HYH=-Y$). so $X\to X$ and $Z\to-Y$: a quarter turn about $x$
+> **3** $X_1\to X_1X_2$: the bit flip copies onto the target. $Z_1\to Z_1$: a phase flip on the control stays put
 
 see also [[Gottesman-Knill theorem]], [[Randomized benchmarking]], [[Stabilizer codes]], [[Quantum gate]], textbook: [[Unitary gates and the stabilizer formalism]], maths: [[Pauli matrices]]

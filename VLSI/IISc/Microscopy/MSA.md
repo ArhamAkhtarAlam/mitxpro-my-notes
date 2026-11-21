@@ -70,14 +70,14 @@ $$
 - the cantilever of an [[AFM]] is itself a MEMS resonator
 
 > [!exercise] try these
-> ① LDV with a 633 nm laser reads $f_D=10$ kHz. how fast is the surface moving?
-> ② a 1 MHz resonator has $Q=10\,000$. how wide is its peak?
-> ③ why does LDV measure out of plane motion but not in plane?
+> **1** LDV with a 633 nm laser reads $f_D=10$ kHz. how fast is the surface moving?
+> **2** a 1 MHz resonator has $Q=10\,000$. how wide is its peak?
+> **3** why does LDV measure out of plane motion but not in plane?
 
 > [!answer]-
-> ① $v=\frac{f_D\lambda}2=\frac{10^4\times633\times10^{-9}}2=3.2$ mm/s
-> ② $\Delta f=\frac{f_0}Q=\frac{10^6}{10^4}=100$ Hz
-> ③ the Doppler shift only comes from motion **along** the laser beam. sideways motion doesn't change the path length, so that's what the stroboscopic video is for
+> **1** $v=\frac{f_D\lambda}2=\frac{10^4\times633\times10^{-9}}2=3.2$ mm/s
+> **2** $\Delta f=\frac{f_0}Q=\frac{10^6}{10^4}=100$ Hz
+> **3** the Doppler shift only comes from motion **along** the laser beam. sideways motion doesn't change the path length, so that's what the stroboscopic video is for
 
 ## the quantum connection
 > [!extra] interferometers are quantum circuits for light

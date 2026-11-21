@@ -86,14 +86,14 @@ $$
 ^steane-logical
 
 > [!exercise] try these
-> ① show the five qubit code saturates the quantum Hamming bound (exercise 10.50)
-> ② is $Z_1Z_2$ a problem for the Shor code?
-> ③ the bit flip code has $Z_1\in N(S)-S$. what's its distance, and what does that say?
+> **1** show the five qubit code saturates the quantum Hamming bound (exercise 10.50)
+> **2** is $Z_1Z_2$ a problem for the Shor code?
+> **3** the bit flip code has $Z_1\in N(S)-S$. what's its distance, and what does that say?
 
 > [!answer]-
-> ① $n=5$, $k=1$, $t=1$: $(1+3\times5)\times2=32=2^5$, equality ([[Degenerate codes and the quantum Hamming bound#^quantum-hamming-bound]])
-> ② no: $Z_1Z_2=g_1\in S$, so it does nothing to the code. that's why the Shor code can't tell $Z_1$ from $Z_2$ and doesn't need to
-> ③ weight 1, so $d=1$: it corrects no **arbitrary** errors (a single $Z$ slips through), only bit flips
+> **1** $n=5$, $k=1$, $t=1$: $(1+3\times5)\times2=32=2^5$, equality ([[Degenerate codes and the quantum Hamming bound#^quantum-hamming-bound]])
+> **2** no: $Z_1Z_2=g_1\in S$, so it does nothing to the code. that's why the Shor code can't tell $Z_1$ from $Z_2$ and doesn't need to
+> **3** weight 1, so $d=1$: it corrects no **arbitrary** errors (a single $Z$ slips through), only bit flips
 
 see also [[Stabilizer codes]], [[Shor nine qubit code]], [[Transversal gates on stabilizer codes]], [[Quantum error-correction conditions]]
 

@@ -54,13 +54,13 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① work out $XYZ$
-> ② do $XZZXI$ and $IXZZX$ commute?
-> ③ write $\begin{bmatrix}1&0\\0&0\end{bmatrix}$ as a combination of Paulis
+> **1** work out $XYZ$
+> **2** do $XZZXI$ and $IXZZX$ commute?
+> **3** write $\begin{bmatrix}1&0\\0&0\end{bmatrix}$ as a combination of Paulis
 
 > [!answer]-
-> ① $XY=iZ$, then $iZ\cdot Z=iI$. so $XYZ=iI$
-> ② places 2 ($Z$ vs $X$), 3 ($Z$ vs $Z$, same), 4 ($X$ vs $Z$): clashes at places 2 and 4, even, so yes (they're two of the 5 qubit code's checks, which must commute)
-> ③ $\frac{I+Z}2$ (the projector onto $|0\rangle$)
+> **1** $XY=iZ$, then $iZ\cdot Z=iI$. so $XYZ=iI$
+> **2** places 2 ($Z$ vs $X$), 3 ($Z$ vs $Z$, same), 4 ($X$ vs $Z$): clashes at places 2 and 4, even, so yes (they're two of the 5 qubit code's checks, which must commute)
+> **3** $\frac{I+Z}2$ (the projector onto $|0\rangle$)
 
 see also [[Math]], [[Groups]], [[Clifford group]], [[Stabilizer codes]]

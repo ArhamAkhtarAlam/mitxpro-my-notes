@@ -270,15 +270,15 @@ the middle term is the [[Particle in a box#^energy-levels|particle in a box]] en
 
 ## practice
 > [!exercise] mixed
-> ① a Raman peak at 1332 cm⁻¹ (diamond). what energy is that in meV?
-> ② with Al $K_\alpha$, O 1s ($BE=531$ eV) comes out at what $KE$ (take $\phi=4.5$ eV)?
-> ③ what fraction of XPS signal comes from deeper than 2λ?
-> ④ a film shows $R=10\%$ reflection and $T=50\%$, $t=1$ µm. what's $\alpha$ with and without the reflection correction?
+> **1** a Raman peak at 1332 cm⁻¹ (diamond). what energy is that in meV?
+> **2** with Al $K_\alpha$, O 1s ($BE=531$ eV) comes out at what $KE$ (take $\phi=4.5$ eV)?
+> **3** what fraction of XPS signal comes from deeper than 2λ?
+> **4** a film shows $R=10\%$ reflection and $T=50\%$, $t=1$ µm. what's $\alpha$ with and without the reflection correction?
 
 > [!answer]-
-> ① $1.2398\times10^{-4}\times1332=0.165$ eV $=165$ meV ([[#^wavenumber]])
-> ② $1486.6-531-4.5=951.1$ eV
-> ③ $e^{-2}=13.5\%$
-> ④ simple: $\frac1{10^{-4}\ \text{cm}}\ln\frac1{0.5}=6.9\times10^3$ cm⁻¹. corrected: $-\frac1{10^{-4}}\ln\frac{0.5}{0.81}=4.8\times10^3$ cm⁻¹. ignoring reflection blames reflected light on absorption
+> **1** $1.2398\times10^{-4}\times1332=0.165$ eV $=165$ meV ([[#^wavenumber]])
+> **2** $1486.6-531-4.5=951.1$ eV
+> **3** $e^{-2}=13.5\%$
+> **4** simple: $\frac1{10^{-4}\ \text{cm}}\ln\frac1{0.5}=6.9\times10^3$ cm⁻¹. corrected: $-\frac1{10^{-4}}\ln\frac{0.5}{0.81}=4.8\times10^3$ cm⁻¹. ignoring reflection blames reflected light on absorption
 
 see also [[Microscopy formulas]], [[Diffraction formulas]], [[Electrical formulas]], [[Metrology and nano-characterization workshop]]

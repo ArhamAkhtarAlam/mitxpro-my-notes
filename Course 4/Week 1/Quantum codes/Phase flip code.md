@@ -130,16 +130,16 @@ an $X$ on any one qubit changes the number of 1s by one, so it turns even states
 ==each code fixes one kind of error and makes the other kind 3× worse==. real qubits get both (and everything in between), so we need a code that does both at once ([[Shor code]])
 
 > [!exercise] try these
-> ① write out $\sigma_z^{(3)}|0_L\rangle$ and check it's orthogonal to $|0_L\rangle$
-> ② a qubit has $\sigma_z$ errors with $q=10^{-3}$ and no $\sigma_x$ errors. which code should you use, and what's the logical error?
-> ③ show $X^{(2)}|0_L\rangle=|1_L\rangle$
-> ④ why must each subspace contain both $|0_L\rangle$ and $|1_L\rangle$ (with the same error), and not just one of them?
+> **1** write out $\sigma_z^{(3)}|0_L\rangle$ and check it's orthogonal to $|0_L\rangle$
+> **2** a qubit has $\sigma_z$ errors with $q=10^{-3}$ and no $\sigma_x$ errors. which code should you use, and what's the logical error?
+> **3** show $X^{(2)}|0_L\rangle=|1_L\rangle$
+> **4** why must each subspace contain both $|0_L\rangle$ and $|1_L\rangle$ (with the same error), and not just one of them?
 
 > [!answer]-
-> ① $\sigma_z^{(3)}$ gives a $-$ wherever qubit 3 is 1: $\tfrac12(|000\rangle-|011\rangle-|101\rangle+|110\rangle)$. overlap $\tfrac14(1-1-1+1)=0$ ✓
-> ② the phase flip code: $\approx3q^2=3\times10^{-6}$ (the bit flip code would make it $\approx3\times10^{-3}$)
-> ③ flipping qubit 2 maps $000\to010$, $011\to001$, $101\to111$, $110\to100$: that's $\tfrac12(|010\rangle+|001\rangle+|111\rangle+|100\rangle)=|1_L\rangle$
-> ④ if a measurement outcome only happened for $|0_L\rangle$, getting it would tell you the logical bit and collapse $\alpha|0_L\rangle+\beta|1_L\rangle$. both have to land in the same subspace so the measurement can't tell them apart
+> **1** $\sigma_z^{(3)}$ gives a $-$ wherever qubit 3 is 1: $\tfrac12(|000\rangle-|011\rangle-|101\rangle+|110\rangle)$. overlap $\tfrac14(1-1-1+1)=0$ ✓
+> **2** the phase flip code: $\approx3q^2=3\times10^{-6}$ (the bit flip code would make it $\approx3\times10^{-3}$)
+> **3** flipping qubit 2 maps $000\to010$, $011\to001$, $101\to111$, $110\to100$: that's $\tfrac12(|010\rangle+|001\rangle+|111\rangle+|100\rangle)=|1_L\rangle$
+> **4** if a measurement outcome only happened for $|0_L\rangle$, getting it would tell you the logical bit and collapse $\alpha|0_L\rangle+\beta|1_L\rangle$. both have to land in the same subspace so the measurement can't tell them apart
 
 see also [[Bit flip code]], [[Dephasing channel]], [[Hadamard Gate]], [[Quantum Error Correction]], textbook: [[Three qubit phase flip code]]
 

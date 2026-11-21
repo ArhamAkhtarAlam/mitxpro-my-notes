@@ -73,7 +73,7 @@ $$
 
 peak moves to lower $2\theta$ → bigger $d$ → tensile
 > [!eg]- Si (400) moves from $2\theta=69.13^\circ$ to $69.00^\circ$
-> $\Delta\theta=-0.065^\circ=-1.13\times10^{-3}$ rad, $\cot34.56^\circ=1.45$, so $\varepsilon=1.45\times1.13\times10^{-3}=0.16\%$ tensile (the same answer as [[XRD#limits|the XRD exercise]] ②, done the long way there)
+> $\Delta\theta=-0.065^\circ=-1.13\times10^{-3}$ rad, $\cot34.56^\circ=1.45$, so $\varepsilon=1.45\times1.13\times10^{-3}=0.16\%$ tensile (the same answer as [[XRD#limits|the XRD exercise]] **2**, done the long way there)
 
 ## strain in an epitaxial film
 mismatch
@@ -119,13 +119,13 @@ $$
 
 ## practice
 > [!exercise] mixed
-> ① which of Si's (111), (200), (220) give peaks?
-> ② a peak is broadened by both size and strain. how do you separate them?
-> ③ a SiGe film has $x=0.30$. what's its relaxed lattice parameter (no bowing)?
+> **1** which of Si's (111), (200), (220) give peaks?
+> **2** a peak is broadened by both size and strain. how do you separate them?
+> **3** a SiGe film has $x=0.30$. what's its relaxed lattice parameter (no bowing)?
 
 > [!answer]-
-> ① (111) all odd ✅, (200) all even but $h+k+l=2$ isn't a multiple of 4 ❌, (220) sum 4 ✅
-> ② measure several peaks and make a Williamson–Hall plot ([[#^williamson-hall]])
-> ③ $0.7\times5.431+0.3\times5.658=5.499$ Å
+> **1** (111) all odd ✅, (200) all even but $h+k+l=2$ isn't a multiple of 4 ❌, (220) sum 4 ✅
+> **2** measure several peaks and make a Williamson–Hall plot ([[#^williamson-hall]])
+> **3** $0.7\times5.431+0.3\times5.658=5.499$ Å
 
 see also [[Microscopy formulas]], [[Spectroscopy formulas]], [[Electrical formulas]], [[Metrology and nano-characterization workshop]]

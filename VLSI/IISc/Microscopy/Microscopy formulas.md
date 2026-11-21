@@ -284,15 +284,15 @@ $$
 
 ## practice
 > [!exercise] mixed
-> ① what's the electron wavelength at 2 kV, and why does a low kV SEM still resolve ~1 nm?
-> ② an SAED spot is 8.0 mm from the centre with $\lambda L=2.51$ pm·m. what's $d$?
-> ③ how long to mill a 5×5×2 µm box in Si at 1 nA?
-> ④ a cantilever is made twice as long. what happens to $k$ and $f_0$?
+> **1** what's the electron wavelength at 2 kV, and why does a low kV SEM still resolve ~1 nm?
+> **2** an SAED spot is 8.0 mm from the centre with $\lambda L=2.51$ pm·m. what's $d$?
+> **3** how long to mill a 5×5×2 µm box in Si at 1 nA?
+> **4** a cantilever is made twice as long. what happens to $k$ and $f_0$?
 
 > [!answer]-
-> ① $\frac{1.226}{\sqrt{2000}}=0.027$ nm. resolution is set by the spot and interaction volume, not $\lambda$, and low kV shrinks the interaction volume ([[#^kanaya-okayama]])
-> ② $d=\frac{\lambda L}R=\frac{2.51\times10^{-12}}{8.0\times10^{-3}}=0.31$ nm
-> ③ $V=50\ \mu\text{m}^3$, at 0.3 µm³/s → ~170 s, about 3 min
-> ④ $k\propto\frac1{L^3}$ → 8× softer. $f_0\propto\frac1{L^2}$ → 4× lower
+> **1** $\frac{1.226}{\sqrt{2000}}=0.027$ nm. resolution is set by the spot and interaction volume, not $\lambda$, and low kV shrinks the interaction volume ([[#^kanaya-okayama]])
+> **2** $d=\frac{\lambda L}R=\frac{2.51\times10^{-12}}{8.0\times10^{-3}}=0.31$ nm
+> **3** $V=50\ \mu\text{m}^3$, at 0.3 µm³/s → ~170 s, about 3 min
+> **4** $k\propto\frac1{L^3}$ → 8× softer. $f_0\propto\frac1{L^2}$ → 4× lower
 
 see also [[Spectroscopy formulas]], [[Diffraction formulas]], [[Electrical formulas]], [[Metrology and nano-characterization workshop]]

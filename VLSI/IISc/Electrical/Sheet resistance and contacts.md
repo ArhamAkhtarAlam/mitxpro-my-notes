@@ -152,16 +152,16 @@ $$
 | **TLM** | contact resistance + $R_{sh}$ | patterned pads at several spacings |
 
 > [!exercise] try these
-> ① a 50 nm Al film has $R_{sh}=0.6\ \Omega/\text{sq}$. what's $\rho$? (bulk Al is $2.7\times10^{-8}\ \Omega\,\text{m}$, why is the film worse?)
-> ② how many squares is a line 2 mm long and 4 µm wide, and what's its resistance with $R_{sh}=0.6$?
-> ③ TLM with $W=50$ µm gives slope $2\ \Omega$/µm and intercept $30\ \Omega$. find $R_{sh}$, $R_c$ and $L_T$
-> ④ why does a probe station always set a compliance current?
+> **1** a 50 nm Al film has $R_{sh}=0.6\ \Omega/\text{sq}$. what's $\rho$? (bulk Al is $2.7\times10^{-8}\ \Omega\,\text{m}$, why is the film worse?)
+> **2** how many squares is a line 2 mm long and 4 µm wide, and what's its resistance with $R_{sh}=0.6$?
+> **3** TLM with $W=50$ µm gives slope $2\ \Omega$/µm and intercept $30\ \Omega$. find $R_{sh}$, $R_c$ and $L_T$
+> **4** why does a probe station always set a compliance current?
 
 > [!answer]-
-> ① $\rho=0.6\times50\times10^{-9}=3.0\times10^{-8}\ \Omega\,\text{m}$. a bit worse than bulk: in a thin film electrons also scatter off the surfaces and grain boundaries, so $\tau$ in [[#^drude]] is shorter
-> ② $\frac{2000}{4}=500$ squares, $R=0.6\times500=300\ \Omega$
-> ③ $R_{sh}=2\times50=100\ \Omega/\text{sq}$, $R_c=15\ \Omega$, $L=-\frac{30}{2}=-15$ µm $=-2L_T$ so $L_T=7.5$ µm
-> ④ so a short or a breakdown can't push a huge current and burn the device ([[Electrical characterization]])
+> **1** $\rho=0.6\times50\times10^{-9}=3.0\times10^{-8}\ \Omega\,\text{m}$. a bit worse than bulk: in a thin film electrons also scatter off the surfaces and grain boundaries, so $\tau$ in [[#^drude]] is shorter
+> **2** $\frac{2000}{4}=500$ squares, $R=0.6\times500=300\ \Omega$
+> **3** $R_{sh}=2\times50=100\ \Omega/\text{sq}$, $R_c=15\ \Omega$, $L=-\frac{30}{2}=-15$ µm $=-2L_T$ so $L_T=7.5$ µm
+> **4** so a short or a breakdown can't push a huge current and burn the device ([[Electrical characterization]])
 
 ## the quantum connection
 > [!extra] Ω per square is the natural unit of 2D, and quantum mechanics has its own

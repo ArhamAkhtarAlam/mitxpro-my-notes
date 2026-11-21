@@ -165,16 +165,16 @@ heat or cool the sample while measuring (MNCF stage: **−150 °C to 500 °C**) 
 - averages over a big area (mm) → no local info, use [[TEM#Bragg's law in a TEM|TEM diffraction]] for that
 
 > [!exercise] try these
-> ① Cu is fcc with $a=3.615$ Å. at what $2\theta$ is its (111) peak?
-> ② a Si film's (400) peak shows up at $2\theta=69.00^\circ$ instead of $69.13^\circ$. is it under tension or compression, and by how much?
-> ③ a peak at $2\theta=30^\circ$ has FWHM $0.2^\circ$. how big are the crystallites?
-> ④ why can't you do XRD with visible light?
+> **1** Cu is fcc with $a=3.615$ Å. at what $2\theta$ is its (111) peak?
+> **2** a Si film's (400) peak shows up at $2\theta=69.00^\circ$ instead of $69.13^\circ$. is it under tension or compression, and by how much?
+> **3** a peak at $2\theta=30^\circ$ has FWHM $0.2^\circ$. how big are the crystallites?
+> **4** why can't you do XRD with visible light?
 
 > [!answer]-
-> ① $d=\frac{3.615}{\sqrt3}=2.087$ Å, $\sin\theta=\frac{1.5406}{2\times2.087}=0.369$, $\theta=21.66^\circ$, so $2\theta=43.3^\circ$
-> ② lower angle = bigger $d$ = **tension**. $d=\frac{1.5406}{2\sin34.50^\circ}=1.3600$ Å, so $a=4d=5.440$ Å vs $5.431$: $\frac{5.440-5.431}{5.431}=0.16\%$ tensile strain
-> ③ $\beta=0.00349$ rad, $D=\frac{0.9\times0.15406}{0.00349\times\cos15^\circ}\approx41$ nm (half the width → twice the size)
-> ④ Bragg needs $\lambda\le2d$, so $\sin\theta\le1$. visible light is ~500 nm, thousands of times bigger than the ~0.2 nm spacing, so no angle works
+> **1** $d=\frac{3.615}{\sqrt3}=2.087$ Å, $\sin\theta=\frac{1.5406}{2\times2.087}=0.369$, $\theta=21.66^\circ$, so $2\theta=43.3^\circ$
+> **2** lower angle = bigger $d$ = **tension**. $d=\frac{1.5406}{2\sin34.50^\circ}=1.3600$ Å, so $a=4d=5.440$ Å vs $5.431$: $\frac{5.440-5.431}{5.431}=0.16\%$ tensile strain
+> **3** $\beta=0.00349$ rad, $D=\frac{0.9\times0.15406}{0.00349\times\cos15^\circ}\approx41$ nm (half the width → twice the size)
+> **4** Bragg needs $\lambda\le2d$, so $\sin\theta\le1$. visible light is ~500 nm, thousands of times bigger than the ~0.2 nm spacing, so no angle works
 
 ## the quantum connection
 > [!extra] a diffraction pattern is a Fourier transform

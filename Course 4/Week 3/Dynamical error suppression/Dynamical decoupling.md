@@ -142,18 +142,18 @@ flowchart TD
 > $n=10$ pulses over $t=20\,\mu$s: the pulses are $2\,\mu$s apart, so the sign flips every $2\,\mu$s, a square wave of period $4\,\mu$s. the filter peaks near $1/(4\,\mu\text{s})=250$ kHz. for 1/f noise that's far weaker than the noise near 0 Hz that Ramsey lets through
 
 > [!exercise] try these
-> ① in a spin echo with total time $t$, when exactly is the $\pi$ pulse, and why does it have to be there?
-> ② why does the spin echo refocus quasi-static noise **perfectly**, but CPMG still helps for real 1/f noise?
-> ③ CPMG with $n=4$ pulses over $t=8\,\mu$s: when are the pulses?
-> ④ every $\pi$ pulse is 2% too long. with CP pulses (around $y$), about how far off is the state after 25 pulses? and with CPMG?
-> ⑤ the qubit stores an unknown state. why use XY-4 instead of CPMG? write out the pulse axes of XY-8
+> **1** in a spin echo with total time $t$, when exactly is the $\pi$ pulse, and why does it have to be there?
+> **2** why does the spin echo refocus quasi-static noise **perfectly**, but CPMG still helps for real 1/f noise?
+> **3** CPMG with $n=4$ pulses over $t=8\,\mu$s: when are the pulses?
+> **4** every $\pi$ pulse is 2% too long. with CP pulses (around $y$), about how far off is the state after 25 pulses? and with CPMG?
+> **5** the qubit stores an unknown state. why use XY-4 instead of CPMG? write out the pulse axes of XY-8
 
 > [!answer]-
-> ① at $t/2$: the phase gathered in the first half ($+\delta\omega\,t/2$) is cancelled by the second half ($-\delta\omega\,t/2$) only if the halves are equally long
-> ② quasi-static noise is constant during a run, so any equal $+$ and $-$ periods cancel it exactly. real 1/f noise also changes during the run; the echo only cancels the part slower than $t$, and more pulses (shorter periods) also cancel the faster parts
-> ③ at $\frac{j-1/2}4\times8=1,3,5,7\,\mu$s
-> ④ 2% of $180°$ is $3.6°$ per pulse, and with CP these add up: $25\times3.6°=90°$ off. with CPMG the pulses turn around the axis the state points along, so it stays (almost) where it should
-> ⑤ CPMG is only robust for states along $x$; an unknown state might point along $y$, where pulse errors pile up. XY-4 alternates the axes, so it's robust for any state. XY-8: $y\,x\,y\,x\,x\,y\,x\,y$
+> **1** at $t/2$: the phase gathered in the first half ($+\delta\omega\,t/2$) is cancelled by the second half ($-\delta\omega\,t/2$) only if the halves are equally long
+> **2** quasi-static noise is constant during a run, so any equal $+$ and $-$ periods cancel it exactly. real 1/f noise also changes during the run; the echo only cancels the part slower than $t$, and more pulses (shorter periods) also cancel the faster parts
+> **3** at $\frac{j-1/2}4\times8=1,3,5,7\,\mu$s
+> **4** 2% of $180°$ is $3.6°$ per pulse, and with CP these add up: $25\times3.6°=90°$ off. with CPMG the pulses turn around the axis the state points along, so it stays (almost) where it should
+> **5** CPMG is only robust for states along $x$; an unknown state might point along $y$, where pulse errors pile up. XY-4 alternates the axes, so it's robust for any state. XY-8: $y\,x\,y\,x\,x\,y\,x\,y$
 
 see also [[Rotary echo]] (the same trick during a drive), [[Noise power spectral density]], [[Bloch sphere]]
 

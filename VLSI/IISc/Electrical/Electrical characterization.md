@@ -111,14 +111,14 @@ sheet resistance of doped layers, metal films. resistivity $\rho=R_s\,t$. why fo
 - self-heating in power devices
 
 > [!exercise] try these
-> ① a diode's log $I$–$V$ plot climbs 1 decade per 90 mV. what's $n$?
-> ② a transistor needs 300 mV of gate to go from $I_{off}=1$ nA to 1 µA below threshold. what's its SS? is it ideal?
-> ③ why is the probe station kept dark?
+> **1** a diode's log $I$–$V$ plot climbs 1 decade per 90 mV. what's $n$?
+> **2** a transistor needs 300 mV of gate to go from $I_{off}=1$ nA to 1 µA below threshold. what's its SS? is it ideal?
+> **3** why is the probe station kept dark?
 
 > [!answer]-
-> ① $n=\frac{90}{59.5}\approx1.5$
-> ② 3 decades in 300 mV → SS $=100$ mV/dec, worse than the 60 mV ideal (the gate doesn't fully control the channel, $C_d/C_{ox}$ isn't zero)
-> ③ light has enough energy to make electron-hole pairs ([[UV-vis spectroscopy#the quantum connection]]), which shows up as extra current, a disaster at pA levels
+> **1** $n=\frac{90}{59.5}\approx1.5$
+> **2** 3 decades in 300 mV → SS $=100$ mV/dec, worse than the 60 mV ideal (the gate doesn't fully control the channel, $C_d/C_{ox}$ isn't zero)
+> **3** light has enough energy to make electron-hole pairs ([[UV-vis spectroscopy#the quantum connection]]), which shows up as extra current, a disaster at pA levels
 
 ## the quantum connection
 > [!extra] 60 mV/dec is a thermal limit, and quantum tunnelling can beat it

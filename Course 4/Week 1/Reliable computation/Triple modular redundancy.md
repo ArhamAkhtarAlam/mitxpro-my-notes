@@ -88,14 +88,14 @@ either way it **keeps changing** as the circuit gets bigger. the dots in the plo
 so we ask for something **more**: a single error rate $p_{th}$ such that if every gate is below it, you can build a reliable circuit of **any** size. that's what we'll call a **threshold** ([[Threshold theorem]]), and the fix is the [[Fault-tolerant NAND gate]] plus [[Recursive fault tolerance]]. the fixes: vote after **every** small step instead of once at the end, make the voting itself redundant, and repeat the construction at many levels (like [[Bit flip code#more levels (recursion)]])
 
 > [!exercise] try these
-> ① a single circuit fails with $p=0.05$. what's its error with triple modular redundancy and a perfect vote?
-> ② the majority gate fails with probability $10^{-3}$. what's the best TMR can do for the circuit in ①?
-> ③ you want to protect a 10 000 gate circuit with one round of TMR. how good must each gate be?
+> **1** a single circuit fails with $p=0.05$. what's its error with triple modular redundancy and a perfect vote?
+> **2** the majority gate fails with probability $10^{-3}$. what's the best TMR can do for the circuit in **1**?
+> **3** you want to protect a 10 000 gate circuit with one round of TMR. how good must each gate be?
 
 > [!answer]-
-> ① $3(0.05)^2-2(0.05)^3=0.0075-0.00025=0.00725$
-> ② about $0.00725+0.001\approx0.0083$: the vote's own error adds straight on, and more copies can't remove it
-> ③ $p<\frac1{3\times10^4}\approx3.3\times10^{-5}$ at leading order ($\frac{0.69}{10^4}=6.9\times10^{-5}$ exactly), and even then it barely helps. you'd want much better gates, or a construction with a real threshold
+> **1** $3(0.05)^2-2(0.05)^3=0.0075-0.00025=0.00725$
+> **2** about $0.00725+0.001\approx0.0083$: the vote's own error adds straight on, and more copies can't remove it
+> **3** $p<\frac1{3\times10^4}\approx3.3\times10^{-5}$ at leading order ($\frac{0.69}{10^4}=6.9\times10^{-5}$ exactly), and even then it barely helps. you'd want much better gates, or a construction with a real threshold
 
 see also [[Computational capacity]], [[Bit flip code]], [[Fault-tolerant quantum computing]]
 

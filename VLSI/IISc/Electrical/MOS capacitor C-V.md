@@ -111,16 +111,16 @@ at low currents and for $C$–$V$ the cabling decides the noise floor and the le
 - **triax**: an extra **guard** conductor held at the **same voltage as the signal**, so no voltage difference means no leakage current between them. use triax for pA and fA measurements ($I$–$V$ at low current, also for $C$–$V$ with guarded connections)
 
 > [!exercise] try these
-> ① a 200 µm × 200 µm MOS capacitor measures $C_{ox}=138$ pF in accumulation. how thick is the SiO₂?
-> ② on n-type silicon, which way do you sweep to accumulate?
-> ③ the high frequency curve stays low in inversion but the low frequency one comes back to $C_{ox}$. why?
-> ④ a 2 nm high-k film has EOT 0.4 nm. what's its $\varepsilon$?
+> **1** a 200 µm × 200 µm MOS capacitor measures $C_{ox}=138$ pF in accumulation. how thick is the SiO₂?
+> **2** on n-type silicon, which way do you sweep to accumulate?
+> **3** the high frequency curve stays low in inversion but the low frequency one comes back to $C_{ox}$. why?
+> **4** a 2 nm high-k film has EOT 0.4 nm. what's its $\varepsilon$?
 
 > [!answer]-
-> ① $A=4\times10^{-8}$ m², $d=\frac{\varepsilon_0(3.9)A}{C}=\frac{8.854\times10^{-12}\times3.9\times4\times10^{-8}}{138\times10^{-12}}=10.0$ nm
-> ② **positive** gate voltage: it pulls the majority carriers (electrons) up to the interface. everything is mirrored compared to p-type
-> ③ at low frequency the minority electrons can be made and destroyed fast enough to follow the AC signal, so the charge sits right at the oxide. at high frequency they can't, so only the edge of the (maximum width) depletion layer responds
-> ④ $\varepsilon=3.9\times\frac{2}{0.4}=19.5$
+> **1** $A=4\times10^{-8}$ m², $d=\frac{\varepsilon_0(3.9)A}{C}=\frac{8.854\times10^{-12}\times3.9\times4\times10^{-8}}{138\times10^{-12}}=10.0$ nm
+> **2** **positive** gate voltage: it pulls the majority carriers (electrons) up to the interface. everything is mirrored compared to p-type
+> **3** at low frequency the minority electrons can be made and destroyed fast enough to follow the AC signal, so the charge sits right at the oxide. at high frequency they can't, so only the edge of the (maximum width) depletion layer responds
+> **4** $\varepsilon=3.9\times\frac{2}{0.4}=19.5$
 
 ## the quantum connection
 > [!extra] a transmon qubit is a capacitor

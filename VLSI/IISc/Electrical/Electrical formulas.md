@@ -141,13 +141,13 @@ $$
 eg. a 1 µm² transistor at 1 V letting through 10 mA dissipates 10 mW in a tiny volume: it melts. the compliance current stops that
 ## practice
 > [!exercise] mixed
-> ① four-point on a 500 nm film reads $V/I=0.2\ \Omega$. find $R_{sh}$ and $\rho$
-> ② a MOSFET in saturation: $I_D=0.5$ mA at $V_{GS}-V_{th}=0.5$ V. what's $g_m$?
-> ③ why is $\phi_F$ bigger for heavier doping, and what does that do to $V_{th}$?
+> **1** four-point on a 500 nm film reads $V/I=0.2\ \Omega$. find $R_{sh}$ and $\rho$
+> **2** a MOSFET in saturation: $I_D=0.5$ mA at $V_{GS}-V_{th}=0.5$ V. what's $g_m$?
+> **3** why is $\phi_F$ bigger for heavier doping, and what does that do to $V_{th}$?
 
 > [!answer]-
-> ① $R_{sh}=4.532\times0.2=0.91\ \Omega/\text{sq}$, $\rho=0.91\times500\times10^{-9}=4.5\times10^{-7}\ \Omega\,\text{m}$
-> ② square law: $g_m=\frac{2I_D}{V_{GS}-V_{th}}=\frac{2\times0.5}{0.5}=2$ mS
-> ③ $\phi_F=\frac{k_BT}q\ln\frac{N_A}{n_i}$ grows with $N_A$, and so does the depletion term, so $V_{th}$ goes **up**: more doping is harder to invert
+> **1** $R_{sh}=4.532\times0.2=0.91\ \Omega/\text{sq}$, $\rho=0.91\times500\times10^{-9}=4.5\times10^{-7}\ \Omega\,\text{m}$
+> **2** square law: $g_m=\frac{2I_D}{V_{GS}-V_{th}}=\frac{2\times0.5}{0.5}=2$ mS
+> **3** $\phi_F=\frac{k_BT}q\ln\frac{N_A}{n_i}$ grows with $N_A$, and so does the depletion term, so $V_{th}$ goes **up**: more doping is harder to invert
 
 see also [[Microscopy formulas]], [[Spectroscopy formulas]], [[Diffraction formulas]], [[Metrology and nano-characterization workshop]]

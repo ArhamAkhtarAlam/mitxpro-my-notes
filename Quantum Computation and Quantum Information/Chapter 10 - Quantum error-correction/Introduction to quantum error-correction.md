@@ -65,17 +65,17 @@ where superpositions go to the matching superpositions. $|0_L\rangle$ and $|1_L\
 
 ![[Bit_flip_encoding_circuit.png]]
 
-this isn't cloning: $a|000\rangle+b|111\rangle$ is entangled, not three copies of $a|0\rangle+b|1\rangle$ (exercise ③ below)
+this isn't cloning: $a|000\rangle+b|111\rangle$ is entangled, not three copies of $a|0\rangle+b|1\rangle$ (exercise **3** below)
 
 > [!exercise] try these
-> ① show that $p_e<p$ exactly when $0<p<1/2$
-> ② a **5** bit repetition code with majority voting. what's $p_e$, and what is it for $p=0.01$?
-> ③ write out $(a|0\rangle+b|1\rangle)^{\otimes3}$. when is it equal to $a|000\rangle+b|111\rangle$?
+> **1** show that $p_e<p$ exactly when $0<p<1/2$
+> **2** a **5** bit repetition code with majority voting. what's $p_e$, and what is it for $p=0.01$?
+> **3** write out $(a|0\rangle+b|1\rangle)^{\otimes3}$. when is it equal to $a|000\rangle+b|111\rangle$?
 
 > [!answer]-
-> ① $p-p_e=p-3p^2+2p^3=p(1-p)(1-2p)$, which is $>0$ when $0<p<1/2$ (and the code makes it **worse** for $p>1/2$)
-> ② it fails with 3 or more flips: $p_e=10p^3(1-p)^2+5p^4(1-p)+p^5\approx10p^3$. at $p=0.01$: $9.80\times10^{-6}+4.95\times10^{-8}+10^{-10}\approx9.85\times10^{-6}$
-> ③ $a^3|000\rangle+a^2b(|001\rangle+|010\rangle+|100\rangle)+ab^2(|011\rangle+|101\rangle+|110\rangle)+b^3|111\rangle$. it only matches when $ab=0$, ie. for $|0\rangle$ or $|1\rangle$, which the no-cloning theorem allows
+> **1** $p-p_e=p-3p^2+2p^3=p(1-p)(1-2p)$, which is $>0$ when $0<p<1/2$ (and the code makes it **worse** for $p>1/2$)
+> **2** it fails with 3 or more flips: $p_e=10p^3(1-p)^2+5p^4(1-p)+p^5\approx10p^3$. at $p=0.01$: $9.80\times10^{-6}+4.95\times10^{-8}+10^{-10}\approx9.85\times10^{-6}$
+> **3** $a^3|000\rangle+a^2b(|001\rangle+|010\rangle+|100\rangle)+ab^2(|011\rangle+|101\rangle+|110\rangle)+b^3|111\rangle$. it only matches when $ab=0$, ie. for $|0\rangle$ or $|1\rangle$, which the no-cloning theorem allows
 
 see also [[Binary symmetric channel]], [[Bit flip code]], [[No-cloning theorem]]
 

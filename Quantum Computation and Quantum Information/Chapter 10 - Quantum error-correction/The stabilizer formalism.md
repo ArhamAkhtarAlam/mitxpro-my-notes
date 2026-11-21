@@ -86,14 +86,14 @@ $(I+g_j)/2$ projects onto the $+1$ eigenspace of $g_j$, so $P_S^{(0,\dots,0)}$ p
 ==each independent generator halves the space==, just as you'd guess, since the $\pm1$ eigenspaces of a Pauli product are the same size. from now on, stabilizers always mean independent commuting generators with $-I\notin S$
 
 > [!exercise] try these
-> ① write the check matrix rows of $X_1Z_2$ and $Z_1X_2$, and use the twisted product to decide if they commute
-> ② how many independent generators does the EPR state need, and why?
-> ③ is $\langle X_1,Z_1\rangle$ a valid stabilizer?
+> **1** write the check matrix rows of $X_1Z_2$ and $Z_1X_2$, and use the twisted product to decide if they commute
+> **2** how many independent generators does the EPR state need, and why?
+> **3** is $\langle X_1,Z_1\rangle$ a valid stabilizer?
 
 > [!answer]-
-> ① $r(X_1Z_2)=(1,0\,|\,0,1)$ and $r(Z_1X_2)=(0,1\,|\,1,0)$. $r\Lambda r'^T$ swaps the halves of $r'$: $(1,0,0,1)\cdot(1,0,0,1)=2=0$ mod 2, so they **commute** (they anticommute on both qubits)
-> ② $n=2$ and $k=0$ (one state), so $n-k=2$: $X_1X_2$ and $Z_1Z_2$
-> ③ no: $X_1$ and $Z_1$ anticommute, so they stabilize only the zero vector
+> **1** $r(X_1Z_2)=(1,0\,|\,0,1)$ and $r(Z_1X_2)=(0,1\,|\,1,0)$. $r\Lambda r'^T$ swaps the halves of $r'$: $(1,0,0,1)\cdot(1,0,0,1)=2=0$ mod 2, so they **commute** (they anticommute on both qubits)
+> **2** $n=2$ and $k=0$ (one state), so $n-k=2$: $X_1X_2$ and $Z_1Z_2$
+> **3** no: $X_1$ and $Z_1$ anticommute, so they stabilize only the zero vector
 
 see also [[Stabilizer codes]], [[Classical linear codes]], [[Bell states]], maths: [[Groups]], [[Pauli matrices]]
 

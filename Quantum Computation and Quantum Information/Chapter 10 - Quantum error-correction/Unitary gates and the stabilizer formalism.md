@@ -74,14 +74,14 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① what is $UY_1U^\dagger$ for the CNOT? (exercise 10.37)
-> ② start from $\langle Z_1,Z_2\rangle$ and apply $H_1$ then a CNOT. what's the new stabilizer?
-> ③ what do $X$ and $Z$ go to under $SH$ (first $H$, then $S$)?
+> **1** what is $UY_1U^\dagger$ for the CNOT? (exercise 10.37)
+> **2** start from $\langle Z_1,Z_2\rangle$ and apply $H_1$ then a CNOT. what's the new stabilizer?
+> **3** what do $X$ and $Z$ go to under $SH$ (first $H$, then $S$)?
 
 > [!answer]-
-> ① $Y_1=iX_1Z_1\to iX_1X_2Z_1=Y_1X_2$ (checked numerically)
-> ② $\langle X_1,Z_2\rangle\to\langle X_1X_2,Z_1Z_2\rangle$: the EPR state $\frac{|00\rangle+|11\rangle}{\sqrt2}$
-> ③ $X\xrightarrow{H}Z\xrightarrow{S}Z$ and $Z\xrightarrow{H}X\xrightarrow{S}Y$
+> **1** $Y_1=iX_1Z_1\to iX_1X_2Z_1=Y_1X_2$ (checked numerically)
+> **2** $\langle X_1,Z_2\rangle\to\langle X_1X_2,Z_1Z_2\rangle$: the EPR state $\frac{|00\rangle+|11\rangle}{\sqrt2}$
+> **3** $X\xrightarrow{H}Z\xrightarrow{S}Z$ and $Z\xrightarrow{H}X\xrightarrow{S}Y$
 
 see also [[Clifford group]], [[Gottesman-Knill theorem]], [[CNOT gate]], [[Hadamard Gate]]
 

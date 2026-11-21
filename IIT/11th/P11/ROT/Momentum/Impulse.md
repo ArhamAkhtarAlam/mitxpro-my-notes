@@ -54,14 +54,14 @@ $$
 area below the axis counts as **negative** impulse
 
 > [!exercise] try these
-> ① a 0.15 kg cricket ball at 20 m/s is hit straight back at 30 m/s. impulse? if the contact lasts 5 ms, average force?
-> ② a 3 kg body's $x$–$t$ graph has slope 4 m/s, then turns sharply to slope $-2$ m/s. impulse at the corner?
-> ③ a force of 10 N acts for 2 s, then 20 N for 1 s, on a 5 kg body at rest. final speed?
+> **1** a 0.15 kg cricket ball at 20 m/s is hit straight back at 30 m/s. impulse? if the contact lasts 5 ms, average force?
+> **2** a 3 kg body's $x$–$t$ graph has slope 4 m/s, then turns sharply to slope $-2$ m/s. impulse at the corner?
+> **3** a force of 10 N acts for 2 s, then 20 N for 1 s, on a 5 kg body at rest. final speed?
 
 > [!answer]-
-> ① $0.15\times50=7.5$ N s; $F=\frac{7.5}{0.005}=1500$ N
-> ② $3(-2-4)=-18$ N s
-> ③ $J=20+20=40$ N s, $v=8$ m/s
+> **1** $0.15\times50=7.5$ N s; $F=\frac{7.5}{0.005}=1500$ N
+> **2** $3(-2-4)=-18$ N s
+> **3** $J=20+20=40$ N s, $v=8$ m/s
 
 see also [[Coefficient of restitution]], [[Variable mass systems]]
 

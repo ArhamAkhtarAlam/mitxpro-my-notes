@@ -78,14 +78,14 @@ $$
 $|0_L\rangle=|0+C_2\rangle$ is the 8 code words of $C_2$, and $|1_L\rangle$ uses $x=(1,1,1,1,1,1,1)$, an element of $C_1$ that isn't in $C_2$ (checked numerically: the stabilizer generators of [[The stabilizer formalism#^steane-generators-book]] leave both alone)
 
 > [!exercise] try these
-> ① a CSS code from $C_1=[15,11,3]$ and $C_2=C_1^\perp$. what are $n$ and $k$?
-> ② in the Steane code, which coset is $|1101001+C_2\rangle$?
-> ③ why does the quantum GV bound have $2H$ instead of $H$?
+> **1** a CSS code from $C_1=[15,11,3]$ and $C_2=C_1^\perp$. what are $n$ and $k$?
+> **2** in the Steane code, which coset is $|1101001+C_2\rangle$?
+> **3** why does the quantum GV bound have $2H$ instead of $H$?
 
 > [!answer]-
-> ① $n=15$, $k=11-4=7$
-> ② $1101001$ is itself in $C_2$ (it's in $|0_L\rangle$), so it's the coset $0+C_2$: $|0_L\rangle$
-> ③ two classical codes have to be good at once, $C_1$ against bit flips and $C_2^\perp$ against phase flips, and each costs about $H(2t/n)$ of the rate
+> **1** $n=15$, $k=11-4=7$
+> **2** $1101001$ is itself in $C_2$ (it's in $|0_L\rangle$), so it's the coset $0+C_2$: $|0_L\rangle$
+> **3** two classical codes have to be good at once, $C_1$ against bit flips and $C_2^\perp$ against phase flips, and each costs about $H(2t/n)$ of the rate
 
 see also [[CSS codes]], [[Classical linear codes]], [[Transversal gates on stabilizer codes]], maths: [[Linear algebra mod 2]], [[Groups]]
 

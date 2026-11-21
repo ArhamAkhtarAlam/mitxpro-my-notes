@@ -54,14 +54,14 @@ above the centre, with speed $v\sin\theta=\sqrt{\tfrac23gR}\cdot\tfrac23=\tfrac2
 > it started at $R$ above the centre but only reaches $\frac{23}{27}R$: the missing $\frac{4}{27}mgR$ is the KE it still has at the top, $\tfrac12m\left(\tfrac23\right)^2\cdot\tfrac23gR=\tfrac{4}{27}mgR$ ✓
 
 > [!exercise] try these
-> ① what's $N$ at the very bottom of the circle?
-> ② from what height above the bottom would you have to release it to just make it round the top of the circle?
-> ③ a small ball sits on top of a smooth hemisphere of radius $R$ and is nudged. at what angle from the top does it fly off?
+> **1** what's $N$ at the very bottom of the circle?
+> **2** from what height above the bottom would you have to release it to just make it round the top of the circle?
+> **3** a small ball sits on top of a smooth hemisphere of radius $R$ and is nudged. at what angle from the top does it fly off?
 
 > [!answer]-
-> ① speed there: $v^2=2g(2R)=4gR$, so $N-mg=\frac{m\cdot4gR}{R}$, $N=5mg$
-> ② at the top it needs $v^2\ge gR$: $mg h=mg(2R)+\tfrac12mgR$, $h=2.5R$
-> ③ the classic: $\cos\phi=\frac23$, $\phi\approx48.2°$ (same maths with the angle measured from the vertical)
+> **1** speed there: $v^2=2g(2R)=4gR$, so $N-mg=\frac{m\cdot4gR}{R}$, $N=5mg$
+> **2** at the top it needs $v^2\ge gR$: $mg h=mg(2R)+\tfrac12mgR$, $h=2.5R$
+> **3** the classic: $\cos\phi=\frac23$, $\phi\approx48.2°$ (same maths with the angle measured from the vertical)
 
 see also [[Power in circular motion]], [[Conservation of mechanical energy]]
 

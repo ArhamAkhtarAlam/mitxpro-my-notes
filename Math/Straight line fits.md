@@ -48,13 +48,13 @@ flowchart TD
 > so $R_{sh}=mW=50\ \Omega/\text{sq}$, $R_c=c/2=10\ \Omega$, and $L_T=\frac c{2m}=20$ µm
 
 > [!exercise] try these
-> ① three points $(0,1)$, $(1,3)$, $(2,5)$. what's the least squares line?
-> ② a $\ln I$ vs $V$ plot of a diode at 300 K has slope $19.3$ V⁻¹. what's $n$? ($k_BT/q=25.85$ mV)
-> ③ why is a straight line on a log-log plot a power law?
+> **1** three points $(0,1)$, $(1,3)$, $(2,5)$. what's the least squares line?
+> **2** a $\ln I$ vs $V$ plot of a diode at 300 K has slope $19.3$ V⁻¹. what's $n$? ($k_BT/q=25.85$ mV)
+> **3** why is a straight line on a log-log plot a power law?
 
 > [!answer]-
-> ① $\bar x=1$, $\bar y=3$, $m=\frac{(-1)(-2)+0+(1)(2)}{1+0+1}=2$, $c=3-2=1$: $y=2x+1$ (the points are exactly on it)
-> ② slope $=\frac q{nk_BT}$ → $n=\frac1{0.02585\times19.3}=2.0$
-> ③ $\log y=k\log x+c$ means $y=10^c\,x^k$: a power law with exponent $k$ equal to the slope
+> **1** $\bar x=1$, $\bar y=3$, $m=\frac{(-1)(-2)+0+(1)(2)}{1+0+1}=2$, $c=3-2=1$: $y=2x+1$ (the points are exactly on it)
+> **2** slope $=\frac q{nk_BT}$ → $n=\frac1{0.02585\times19.3}=2.0$
+> **3** $\log y=k\log x+c$ means $y=10^c\,x^k$: a power law with exponent $k$ equal to the slope
 
 see also [[Logarithms and exponentials]], [[Peak shapes and FWHM]], [[Probability and expectation values]], [[Math]]

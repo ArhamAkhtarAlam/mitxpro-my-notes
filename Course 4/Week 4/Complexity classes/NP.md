@@ -51,16 +51,16 @@ flowchart TD
 some NP problems are the **hardest** in NP: a fast algorithm for one would give a fast algorithm for all of them. these are the [[NP-complete]] problems, eg. travelling salesman and **circuit SAT** (the OR above, with $g$ = a circuit)
 
 > [!exercise] try these
-> ① for "does this number $N$ have a factor between 2 and $\sqrt N$?", what's a certificate for yes, and how do you check it?
-> ② for a route of 30 cities, how many certificates $y$ are there to OR over (ignoring the start city)? how long does checking one take?
-> ③ is "this travelling salesman instance has **no** route under 1000 miles" obviously in NP? why?
-> ④ why does the certificate have to be **polynomial** length?
+> **1** for "does this number $N$ have a factor between 2 and $\sqrt N$?", what's a certificate for yes, and how do you check it?
+> **2** for a route of 30 cities, how many certificates $y$ are there to OR over (ignoring the start city)? how long does checking one take?
+> **3** is "this travelling salesman instance has **no** route under 1000 miles" obviously in NP? why?
+> **4** why does the certificate have to be **polynomial** length?
 
 > [!answer]-
-> ① the factor $d$ itself. check: divide $N$ by $d$ and see the remainder is 0, fast (polynomial in the number of digits)
-> ② $29!\approx9\times10^{30}$ orderings, but checking one is just 30 additions
-> ③ no: a yes for this question means "no route works", and there's no known short proof of that. (it's in co-NP, the "no-side" version)
-> ④ the checker only has polynomial time, so it can only read a polynomial number of bits. an exponentially long certificate couldn't even be read
+> **1** the factor $d$ itself. check: divide $N$ by $d$ and see the remainder is 0, fast (polynomial in the number of digits)
+> **2** $29!\approx9\times10^{30}$ orderings, but checking one is just 30 additions
+> **3** no: a yes for this question means "no route works", and there's no known short proof of that. (it's in co-NP, the "no-side" version)
+> **4** the checker only has polynomial time, so it can only read a polynomial number of bits. an exponentially long certificate couldn't even be read
 
 previous: [[Complexity classes]] · next: [[NP-complete]]
 

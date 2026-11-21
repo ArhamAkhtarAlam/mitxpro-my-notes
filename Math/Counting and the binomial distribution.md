@@ -59,13 +59,13 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① 5 bits, each flips with $p=0.1$. chance of exactly 2 flips?
-> ② a code survives any single failure among 7 gates, $p=10^{-3}$. roughly how often does it fail?
-> ③ 1000 gates, each fails with $10^{-6}$. bound the chance that any fails
+> **1** 5 bits, each flips with $p=0.1$. chance of exactly 2 flips?
+> **2** a code survives any single failure among 7 gates, $p=10^{-3}$. roughly how often does it fail?
+> **3** 1000 gates, each fails with $10^{-6}$. bound the chance that any fails
 
 > [!answer]-
-> ① $\binom52(0.1)^2(0.9)^3=10\times0.01\times0.729=0.0729$
-> ② $\binom72p^2=21\times10^{-6}=2.1\times10^{-5}$
-> ③ $1000\times10^{-6}=10^{-3}$ by the union bound
+> **1** $\binom52(0.1)^2(0.9)^3=10\times0.01\times0.729=0.0729$
+> **2** $\binom72p^2=21\times10^{-6}=2.1\times10^{-5}$
+> **3** $1000\times10^{-6}=10^{-3}$ by the union bound
 
 see also [[Math]], [[Probability and expectation values]], [[Big O notation]]

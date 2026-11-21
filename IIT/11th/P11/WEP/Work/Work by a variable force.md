@@ -56,14 +56,14 @@ no integral needed, and it doesn't matter **which way** $F$ points or how it cha
 > $$
 
 > [!exercise] try these
-> ① a spring force $F=-kx$. how much work does the spring do as it's stretched from 0 to $x$?
-> ② $F=\frac{6}{x^2}$ N acts along $+x$. find the work from $x=1$ m to $x=3$ m
-> ③ a 0.5 kg ball tied to a 1 m string is pulled slowly from hanging down to horizontal. work done by the pull?
+> **1** a spring force $F=-kx$. how much work does the spring do as it's stretched from 0 to $x$?
+> **2** $F=\frac{6}{x^2}$ N acts along $+x$. find the work from $x=1$ m to $x=3$ m
+> **3** a 0.5 kg ball tied to a 1 m string is pulled slowly from hanging down to horizontal. work done by the pull?
 
 > [!answer]-
-> ① $\int_0^x(-kx)\,dx=-\tfrac12kx^2$ (the spring fights the stretch; that energy is stored, see [[Conservation of mechanical energy]])
-> ② $\int_1^3 6x^{-2}dx=[-6/x]_1^3=-2+6=4$ J
-> ③ $W=mgL=0.5\times10\times1=5$ J
+> **1** $\int_0^x(-kx)\,dx=-\tfrac12kx^2$ (the spring fights the stretch; that energy is stored, see [[Conservation of mechanical energy]])
+> **2** $\int_1^3 6x^{-2}dx=[-6/x]_1^3=-2+6=4$ J
+> **3** $W=mgL=0.5\times10\times1=5$ J
 
 see also [[Work done by a force]], [[Power]]
 

@@ -81,14 +81,14 @@ twice the shift of the rest point: it oscillates about the new rest point with a
 > put a load on a spring gently and let go: the max stretch is **twice** the stretch it would settle at. that's why sudden loads are twice as bad as slow ones for bridges and ropes
 
 > [!exercise] try these
-> ① a 0.2 kg ball is pressed 10 cm into a spring ($k=200$ N/m) and fired straight up. how high does it go above the release point?
-> ② in the curve problem, what if the level part were at height $\frac H4$?
-> ③ in the rough patch problem, what if the drop were 3 m instead?
+> **1** a 0.2 kg ball is pressed 10 cm into a spring ($k=200$ N/m) and fired straight up. how high does it go above the release point?
+> **2** in the curve problem, what if the level part were at height $\frac H4$?
+> **3** in the rough patch problem, what if the drop were 3 m instead?
 
 > [!answer]-
-> ① $\tfrac12(200)(0.1)^2=1$ J $=mgh$ → $h=\frac{1}{0.2\times10}=0.5$ m
-> ② it drops $\frac{3H}{4}$: $x=\sqrt{\frac{3mgH}{2k}}$
-> ③ $d=3/0.5=6$ m: across (2), back (2), across again (2): it stops at the **far** edge, next to the spring side
+> **1** $\tfrac12(200)(0.1)^2=1$ J $=mgh$ → $h=\frac{1}{0.2\times10}=0.5$ m
+> **2** it drops $\frac{3H}{4}$: $x=\sqrt{\frac{3mgH}{2k}}$
+> **3** $d=3/0.5=6$ m: across (2), back (2), across again (2): it stops at the **far** edge, next to the spring side
 
 see also [[Leaving a circular track]], [[Chain sliding off a table]], [[Perfectly inelastic collisions]]
 

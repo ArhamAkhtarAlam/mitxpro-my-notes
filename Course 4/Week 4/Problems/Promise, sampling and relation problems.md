@@ -50,16 +50,16 @@ flowchart TD
 > ==a promise shrinks the inputs that count, a relation allows many right answers, a sampling problem asks for a random output with the right distribution==
 
 > [!exercise] try these
-> ① an algorithm crashes on an input outside the promise. is it still a correct algorithm for the promise problem?
-> ② "given a graph, output a shortest path between two nodes". function or relation?
-> ③ is every function also a relation?
-> ④ why can't a sampling problem be checked by looking at a single output?
+> **1** an algorithm crashes on an input outside the promise. is it still a correct algorithm for the promise problem?
+> **2** "given a graph, output a shortest path between two nodes". function or relation?
+> **3** is every function also a relation?
+> **4** why can't a sampling problem be checked by looking at a single output?
 
 > [!answer]-
-> ① yes: outside $P$ there's no requirement at all
-> ② a relation: there can be several shortest paths, and any one of them is right
-> ③ yes: $R=\{(x,f(x))\}$, a relation with exactly one right answer for each $x$
-> ④ every possible output may be allowed; what matters is how **often** each one comes up, which you only see from many samples
+> **1** yes: outside $P$ there's no requirement at all
+> **2** a relation: there can be several shortest paths, and any one of them is right
+> **3** yes: $R=\{(x,f(x))\}$, a relation with exactly one right answer for each $x$
+> **4** every possible output may be allowed; what matters is how **often** each one comes up, which you only see from many samples
 
 next: [[Circuit model]]
 

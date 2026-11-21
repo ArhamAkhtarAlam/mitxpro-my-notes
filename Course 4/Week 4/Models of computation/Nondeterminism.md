@@ -47,16 +47,16 @@ all three models branch; they differ in how the branches are **combined** at the
 > the choices made along an accepting branch are a **certificate**: hand them to an ordinary computer and it can follow that one branch and check it quickly. so "a nondeterministic machine accepts $x$ in polynomial time" means the same as "there's a short proof that $x$ is a yes instance, which can be checked fast". that's the usual definition of [[NP]]
 
 > [!exercise] try these
-> ① a nondeterministic computer branches in two at each of 20 steps. how many branches are there at the end?
-> ② 1 of those branches accepts. what does the nondeterministic computer output? what's the chance a randomized one taking random branches accepts?
-> ③ what does the nondeterministic computer output if no branch accepts?
-> ④ why can't a quantum computer just do nondeterminism by putting all branches in superposition?
+> **1** a nondeterministic computer branches in two at each of 20 steps. how many branches are there at the end?
+> **2** 1 of those branches accepts. what does the nondeterministic computer output? what's the chance a randomized one taking random branches accepts?
+> **3** what does the nondeterministic computer output if no branch accepts?
+> **4** why can't a quantum computer just do nondeterminism by putting all branches in superposition?
 
 > [!answer]-
-> ① $2^{20}\approx10^6$
-> ② it accepts. a random one: $2^{-20}\approx10^{-6}$
-> ③ reject: the OR of all zeros is 0
-> ④ measuring the superposition gives one random branch, just like the randomized case. to boost the accepting branch you need interference, and the best known speed up for search (Grover) is only a square root
+> **1** $2^{20}\approx10^6$
+> **2** it accepts. a random one: $2^{-20}\approx10^{-6}$
+> **3** reject: the OR of all zeros is 0
+> **4** measuring the superposition gives one random branch, just like the randomized case. to boost the accepting branch you need interference, and the best known speed up for search (Grover) is only a square root
 
 next: [[Complexity classes]]
 

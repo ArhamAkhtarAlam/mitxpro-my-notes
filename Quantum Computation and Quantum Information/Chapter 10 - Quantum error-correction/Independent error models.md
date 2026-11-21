@@ -68,14 +68,14 @@ $$
 ==the fidelity goes from $\sqrt{1-\gamma}$ to $1-O(\gamma^2)$==, a net suppression just like the depolarizing case. the same argument works for other noise; from here on the book mostly uses Pauli noise models, where classical probability does the work
 
 > [!exercise] try these
-> ① the bound for a 5 qubit code at $p=0.01$
-> ② check the $O(p^2)$ coefficient: expand $(1-p)^{n-1}(1+(n-1)p)$ to second order
-> ③ check $E_0=(1-\gamma/4)I+\gamma Z/4$ to first order in $\gamma$
+> **1** the bound for a 5 qubit code at $p=0.01$
+> **2** check the $O(p^2)$ coefficient: expand $(1-p)^{n-1}(1+(n-1)p)$ to second order
+> **3** check $E_0=(1-\gamma/4)I+\gamma Z/4$ to first order in $\gamma$
 
 > [!answer]-
-> ① $\sqrt{0.99^4\times1.04}=\sqrt{0.99902}=0.99951$, so $1-F\approx4.9\times10^{-4}$, vs $3.3\times10^{-3}$ unencoded (the estimate $\frac{10}2p^2=5\times10^{-4}$ ✓)
-> ② $\big[1-(n-1)p+\binom{n-1}2p^2\big]\big[1+(n-1)p\big]=1+\big[\binom{n-1}2-(n-1)^2\big]p^2+\dots=1-\binom n2p^2+\dots$. the $p$ terms cancel; the square root halves the coefficient
-> ③ $\sqrt{1-\gamma}\approx1-\gamma/2$, and $(1-\gamma/4)I+\frac\gamma4Z=\text{diag}(1,\ 1-\gamma/2)$ ✓
+> **1** $\sqrt{0.99^4\times1.04}=\sqrt{0.99902}=0.99951$, so $1-F\approx4.9\times10^{-4}$, vs $3.3\times10^{-3}$ unencoded (the estimate $\frac{10}2p^2=5\times10^{-4}$ ✓)
+> **2** $\big[1-(n-1)p+\binom{n-1}2p^2\big]\big[1+(n-1)p\big]=1+\big[\binom{n-1}2-(n-1)^2\big]p^2+\dots=1-\binom n2p^2+\dots$. the $p$ terms cancel; the square root halves the coefficient
+> **3** $\sqrt{1-\gamma}\approx1-\gamma/2$, and $(1-\gamma/4)I+\frac\gamma4Z=\text{diag}(1,\ 1-\gamma/2)$ ✓
 
 see also [[Depolarizing channel]], [[Amplitude damping channel]], [[State fidelity]], [[Operator-sum representation]]
 

@@ -58,13 +58,13 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① find the kernel of $\begin{bmatrix}1&1&1&1\end{bmatrix}$
-> ② is $1111$ orthogonal to itself? $111$?
-> ③ $C=\{000,111\}$. what's $C^\perp$, and check $\dim C+\dim C^\perp=3$
+> **1** find the kernel of $\begin{bmatrix}1&1&1&1\end{bmatrix}$
+> **2** is $1111$ orthogonal to itself? $111$?
+> **3** $C=\{000,111\}$. what's $C^\perp$, and check $\dim C+\dim C^\perp=3$
 
 > [!answer]-
-> ① every even weight 4 bit string: $2^{4-1}=8$ of them
-> ② $1111$: weight 4, even, yes. $111$: weight 3, no
-> ③ the strings with $x\cdot111=0$, ie. even weight: $\{000,110,101,011\}$, dimension 2. $1+2=3$ ✓
+> **1** every even weight 4 bit string: $2^{4-1}=8$ of them
+> **2** $1111$: weight 4, even, yes. $111$: weight 3, no
+> **3** the strings with $x\cdot111=0$, ie. even weight: $\{000,110,101,011\}$, dimension 2. $1+2=3$ ✓
 
 see also [[Math]], [[Groups]], [[Classical linear codes]], [[Eigenvalues and eigenvectors]]

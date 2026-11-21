@@ -33,7 +33,7 @@ the same pattern as the parity check matrix of the classical $[7,4]$ Hamming cod
 | $\bar Z$ | $Z^{\otimes7}$ ✓ | the same with $X$ and $Z$ swapped |
 | $\bar H$ | $H^{\otimes7}$ ✓ | swaps the $X$ generators with the $Z$ generators, which is still the same stabilizer |
 | CNOT | 7 bitwise CNOTs ✓ | between two code blocks, qubit $i$ to qubit $i$ |
-| $\bar S$ | $(S^\dagger)^{\otimes7}$ ✓ | exercise ② |
+| $\bar S$ | $(S^\dagger)^{\otimes7}$ ✓ | exercise **2** |
 
 > [!important] the one idea
 > ==every CSS code has a transversal CNOT, and every stabilizer code with a transversal CNOT is a CSS code==. a lovely fact to try proving yourself
@@ -59,14 +59,14 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① check that $ZZZZZ$ commutes with all four 5 qubit code generators
-> ② what does $S^{\otimes7}$ do to the 7 qubit code? (use $SXS^\dagger=Y=iXZ$, and that the $X$ generators have 4 $X$s)
-> ③ why does $H^{\otimes7}$ work for the 7 qubit code but $H^{\otimes5}$ fail for the 5 qubit code?
+> **1** check that $ZZZZZ$ commutes with all four 5 qubit code generators
+> **2** what does $S^{\otimes7}$ do to the 7 qubit code? (use $SXS^\dagger=Y=iXZ$, and that the $X$ generators have 4 $X$s)
+> **3** why does $H^{\otimes7}$ work for the 7 qubit code but $H^{\otimes5}$ fail for the 5 qubit code?
 
 > [!answer]-
-> ① each generator has two $X$s, so $ZZZZZ$ anticommutes in two places: two sign flips cancel ✓
-> ② an $X$ generator $X^{\otimes4}$ goes to $Y^{\otimes4}=i^4X^{\otimes4}Z^{\otimes4}$, the product of an $X$ generator and the $Z$ generator on the same qubits: still in the stabilizer ✓. $\bar X=X^{\otimes7}$ goes to $Y^{\otimes7}=i^7X^{\otimes7}Z^{\otimes7}=-i\bar X\bar Z=-\bar Y$, which is what $\bar S^\dagger$ does. so $S^{\otimes7}=\bar S^\dagger$, and $(S^\dagger)^{\otimes7}=\bar S$
-> ③ the 7 qubit code's $X$ and $Z$ generators have the **same pattern**, so swapping $X\leftrightarrow Z$ just swaps the two sets. the 5 qubit code's generators mix $X$s and $Z$s, and the swapped versions aren't in its stabilizer
+> **1** each generator has two $X$s, so $ZZZZZ$ anticommutes in two places: two sign flips cancel ✓
+> **2** an $X$ generator $X^{\otimes4}$ goes to $Y^{\otimes4}=i^4X^{\otimes4}Z^{\otimes4}$, the product of an $X$ generator and the $Z$ generator on the same qubits: still in the stabilizer ✓. $\bar X=X^{\otimes7}$ goes to $Y^{\otimes7}=i^7X^{\otimes7}Z^{\otimes7}=-i\bar X\bar Z=-\bar Y$, which is what $\bar S^\dagger$ does. so $S^{\otimes7}=\bar S^\dagger$, and $(S^\dagger)^{\otimes7}=\bar S$
+> **3** the 7 qubit code's $X$ and $Z$ generators have the **same pattern**, so swapping $X\leftrightarrow Z$ just swaps the two sets. the 5 qubit code's generators mix $X$s and $Z$s, and the swapped versions aren't in its stabilizer
 
 > [!exercise] try this
 > which are true for the 7 qubit code? (a) three of its stabilizer generators are $IIIZZZZ$, $IZZIIZZ$ and $ZIZIZIZ$ (b) it has a transversal Hadamard $\bar H=HHHHHHH$ (c) a transversal CNOT between two blocks is 7 CNOTs, between qubits 1 and 8, 2 and 9, 3 and 10, and so on (d) the $T$ gate isn't a normalizer gate

@@ -53,16 +53,16 @@ this matters for quantum computers: [[Shor's algorithm]] factors fast, but since
 > nobody knows a way. [[Grover's algorithm]] speeds up brute force search from $2^n$ to about $2^{n/2}$ tries, but that's still exponential. the big quantum speed ups use a hidden structure in the problem (like the period in factoring), and NP-complete problems don't seem to have one. so people believe NP-complete problems are **not** in BQP
 
 > [!exercise] try these
-> ① you find a polynomial algorithm for 3-colouring maps. what happens to travelling salesman?
-> ② how many round trips are there for 12 cities?
-> ③ circuit SAT with 100 input bits: about how many tries does brute force need? and Grover?
-> ④ factoring is in NP, and Shor's algorithm puts it in BQP. why doesn't that show NP ⊆ BQP?
+> **1** you find a polynomial algorithm for 3-colouring maps. what happens to travelling salesman?
+> **2** how many round trips are there for 12 cities?
+> **3** circuit SAT with 100 input bits: about how many tries does brute force need? and Grover?
+> **4** factoring is in NP, and Shor's algorithm puts it in BQP. why doesn't that show NP ⊆ BQP?
 
 > [!answer]-
-> ① it becomes polynomial too: reduce travelling salesman to 3-colouring (polynomial time), then run your algorithm. in fact all of NP would be in P, so P = NP
-> ② $\frac{11!}2=19\,958\,400$
-> ③ brute force: up to $2^{100}\approx1.3\times10^{30}$. Grover: about $2^{50}\approx10^{15}$, much better but still far too many
-> ④ factoring isn't known to be NP-complete, so other NP problems can't be reduced to it. only an NP-complete problem in BQP would pull all of NP in
+> **1** it becomes polynomial too: reduce travelling salesman to 3-colouring (polynomial time), then run your algorithm. in fact all of NP would be in P, so P = NP
+> **2** $\frac{11!}2=19\,958\,400$
+> **3** brute force: up to $2^{100}\approx1.3\times10^{30}$. Grover: about $2^{50}\approx10^{15}$, much better but still far too many
+> **4** factoring isn't known to be NP-complete, so other NP problems can't be reduced to it. only an NP-complete problem in BQP would pull all of NP in
 
 previous: [[NP]] · next: [[Quantum circuit evaluation]]
 

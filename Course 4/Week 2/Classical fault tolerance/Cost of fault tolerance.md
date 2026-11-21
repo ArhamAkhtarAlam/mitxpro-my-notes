@@ -69,16 +69,16 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① with $p=10^{-3}$ and $c=15$, how many levels for $N=10^{12}$, $\epsilon=10^{-3}$?
-> ② show $d^k=(2^k)^{\log_2d}$
-> ③ with $d=6$, what power of the log is the overhead?
-> ④ why does it go wrong if $p>p_{th}$? look at $\log(p_{th}/p)$
+> **1** with $p=10^{-3}$ and $c=15$, how many levels for $N=10^{12}$, $\epsilon=10^{-3}$?
+> **2** show $d^k=(2^k)^{\log_2d}$
+> **3** with $d=6$, what power of the log is the overhead?
+> **4** why does it go wrong if $p>p_{th}$? look at $\log(p_{th}/p)$
 
 > [!answer]-
-> ① each gate needs $10^{-15}$ again, so the same answer: $2^k\geq7.6$, $k=3$. only $N/\epsilon$ matters
-> ② $d=2^{\log_2d}$, so $d^k=2^{k\log_2d}=(2^k)^{\log_2d}$
-> ③ $\log_26=2.58$: the overhead grows like $\big(\log\frac N\epsilon\big)^{2.58}$
-> ④ then $p_{th}/p<1$ and its log is negative, so no $k$ works: every level makes it worse ([[Recursive fault tolerance#^recursion-table]])
+> **1** each gate needs $10^{-15}$ again, so the same answer: $2^k\geq7.6$, $k=3$. only $N/\epsilon$ matters
+> **2** $d=2^{\log_2d}$, so $d^k=2^{k\log_2d}=(2^k)^{\log_2d}$
+> **3** $\log_26=2.58$: the overhead grows like $\big(\log\frac N\epsilon\big)^{2.58}$
+> **4** then $p_{th}/p<1$ and its log is negative, so no $k$ works: every level makes it worse ([[Recursive fault tolerance#^recursion-table]])
 
 see also [[Threshold theorem]], [[Recursive fault tolerance]], [[Fault-tolerant procedure]], maths: [[Big O notation]]
 

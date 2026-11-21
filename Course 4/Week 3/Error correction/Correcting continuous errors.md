@@ -42,14 +42,14 @@ the syndrome measurement does the work: it collapses $\cos\theta\,|\psi\rangle+i
 > $\theta=0.1$ on one qubit of the [[Phase flip code]]: the state becomes $\cos(0.1)|\psi_L\rangle+i\sin(0.1)Z_1|\psi_L\rangle$. the syndrome measurement gives "no error" with probability $\cos^2(0.1)\approx0.990$ (state is now perfect) and "$Z$ on qubit 1" with probability $\sin^2(0.1)\approx0.010$ (apply $Z_1$, state is now perfect). either way, no leftover $\theta$
 
 > [!exercise] try these
-> ① write $e^{i\theta X}$ as a combination of Paulis. which code corrects it?
-> ② after the syndrome measurement in the example, is there any trace of $\theta$ left in the state?
-> ③ why doesn't the same trick work for an analog voltage?
+> **1** write $e^{i\theta X}$ as a combination of Paulis. which code corrects it?
+> **2** after the syndrome measurement in the example, is there any trace of $\theta$ left in the state?
+> **3** why doesn't the same trick work for an analog voltage?
 
 > [!answer]-
-> ① $e^{i\theta X}=\cos\theta\,I+i\sin\theta\,X$: any code that corrects single bit flips, eg. the [[Bit flip code]]
-> ② no: $\theta$ only set the **probabilities** of the two outcomes. after the measurement (and the fix) the state is exactly $|\psi_L\rangle$
-> ③ the voltage is a single number with no redundancy and no "legal" set to project onto. the quantum code spreads the qubit over several qubits, and the syndrome measurement projects onto a small set of discrete outcomes
+> **1** $e^{i\theta X}=\cos\theta\,I+i\sin\theta\,X$: any code that corrects single bit flips, eg. the [[Bit flip code]]
+> **2** no: $\theta$ only set the **probabilities** of the two outcomes. after the measurement (and the fix) the state is exactly $|\psi_L\rangle$
+> **3** the voltage is a single number with no redundancy and no "legal" set to project onto. the quantum code spreads the qubit over several qubits, and the syndrome measurement projects onto a small set of discrete outcomes
 
 see also [[Discretization of the errors]] (the textbook proof), [[Shor code]], [[Detecting and correcting errors]], maths: [[Pauli matrices]]
 

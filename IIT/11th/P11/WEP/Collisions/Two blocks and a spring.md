@@ -52,14 +52,14 @@ here $\mu=\frac m2$, so $T=2\pi\sqrt{\frac{m}{2k}}$. the speeds of B and C cross
 > with $v=2$ m/s, $m=1$ kg: total KE 2 J. at max squeeze, the pair carries $\tfrac12(2m)(1)^2=1$ J of centre of mass KE, so only **1 J** goes into the spring. half the energy is always locked up in the drift
 
 > [!exercise] try these
-> ① same set up, but C has mass $2m$. speed at max compression?
-> ② in the main problem, how fast are B and C going when the spring is back at its natural length for the first time?
-> ③ $m=0.5$ kg, $k=100$ N/m. period of the oscillation?
+> **1** same set up, but C has mass $2m$. speed at max compression?
+> **2** in the main problem, how fast are B and C going when the spring is back at its natural length for the first time?
+> **3** $m=0.5$ kg, $k=100$ N/m. period of the oscillation?
 
 > [!answer]-
-> ① $mv=3mv'$ → $v'=\frac v3$; $\tfrac12mv^2=\tfrac12(3m)\frac{v^2}{9}+\tfrac12kx^2$ → $x=v\sqrt{\frac{2m}{3k}}$
-> ② they've swapped: B at 0, C at $v$ (like an elastic collision through the spring)
-> ③ $\mu=0.25$ kg, $T=2\pi\sqrt{0.0025}=0.1\pi\approx0.31$ s
+> **1** $mv=3mv'$ → $v'=\frac v3$; $\tfrac12mv^2=\tfrac12(3m)\frac{v^2}{9}+\tfrac12kx^2$ → $x=v\sqrt{\frac{2m}{3k}}$
+> **2** they've swapped: B at 0, C at $v$ (like an elastic collision through the spring)
+> **3** $\mu=0.25$ kg, $T=2\pi\sqrt{0.0025}=0.1\pi\approx0.31$ s
 
 see also [[Perfectly inelastic collisions]], [[Centre of mass]]
 

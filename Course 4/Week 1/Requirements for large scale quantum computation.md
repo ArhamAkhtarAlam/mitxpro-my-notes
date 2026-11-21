@@ -64,14 +64,14 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① a gate has error $p=10^{-4}$. roughly how many gates can you run before the success chance drops to $e^{-1}\approx37\%$?
-> ② with the 3-bit repetition code, what's $p_L$ for $p=0.1$? is the code still worth it?
-> ③ why can't a quantum code just copy the qubit three times, like the classical one?
+> **1** a gate has error $p=10^{-4}$. roughly how many gates can you run before the success chance drops to $e^{-1}\approx37\%$?
+> **2** with the 3-bit repetition code, what's $p_L$ for $p=0.1$? is the code still worth it?
+> **3** why can't a quantum code just copy the qubit three times, like the classical one?
 
 > [!answer]-
-> ① $e^{-pN}=e^{-1}$ when $N=\frac1p=10\,000$ gates
-> ② $p_L=3(0.01)-2(0.001)=0.028$, still better than $0.1$, so yes (it's worth it for any $p<\frac12$)
-> ③ the [[No-cloning theorem|no-cloning theorem]] says you can't copy an unknown state. $\alpha|000\rangle+\beta|111\rangle$ isn't three copies, it's one **entangled** state
+> **1** $e^{-pN}=e^{-1}$ when $N=\frac1p=10\,000$ gates
+> **2** $p_L=3(0.01)-2(0.001)=0.028$, still better than $0.1$, so yes (it's worth it for any $p<\frac12$)
+> **3** the [[No-cloning theorem|no-cloning theorem]] says you can't copy an unknown state. $\alpha|000\rangle+\beta|111\rangle$ isn't three copies, it's one **entangled** state
 
 see also [[Quantum Error Correction]], [[Noise Processes]], [[NISQ]], [[Quantum volume]], [[Randomized benchmarking]]
 

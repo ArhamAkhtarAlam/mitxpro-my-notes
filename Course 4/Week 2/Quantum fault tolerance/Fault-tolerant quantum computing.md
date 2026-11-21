@@ -44,14 +44,14 @@ how hard that is depends on the code: [[Transversal gates on stabilizer codes]] 
 - [[Quantum threshold estimate]] → putting it together for a CNOT on the 7 qubit code: 79 gates, so $p_{th}\approx\frac1{3081}\approx10^{-4}$
 
 > [!exercise] try these
-> ① why must a gate on encoded data be in the normalizer of the stabilizer?
-> ② the 3 qubit bit flip code has stabilizer generators $Z_1Z_2$ and $Z_2Z_3$. is $X_1X_2X_3$ in the normalizer? what does it do?
-> ③ a construction only uses $H$, $S$ and CNOT. why can't it be the whole story?
+> **1** why must a gate on encoded data be in the normalizer of the stabilizer?
+> **2** the 3 qubit bit flip code has stabilizer generators $Z_1Z_2$ and $Z_2Z_3$. is $X_1X_2X_3$ in the normalizer? what does it do?
+> **3** a construction only uses $H$, $S$ and CNOT. why can't it be the whole story?
 
 > [!answer]-
-> ① if $|\psi\rangle$ is in the code, $h|\psi\rangle=|\psi\rangle$ for all $h\in S$. then $(ghg^\dagger)\,g|\psi\rangle=g|\psi\rangle$, so $g|\psi\rangle$ is left alone by every $ghg^\dagger$. that's the code again only if every $ghg^\dagger$ is in $S$
-> ② it commutes with $Z_1Z_2$ and $Z_2Z_3$ (each overlaps it in 2 places), so conjugating leaves them unchanged: yes. it maps $|000\rangle\leftrightarrow|111\rangle$, the **logical** $X$ ([[Bit flip code]])
-> ③ those generate only the Clifford group, which a classical computer can simulate efficiently (Gottesman-Knill). no speed up is possible without a non-Clifford gate
+> **1** if $|\psi\rangle$ is in the code, $h|\psi\rangle=|\psi\rangle$ for all $h\in S$. then $(ghg^\dagger)\,g|\psi\rangle=g|\psi\rangle$, so $g|\psi\rangle$ is left alone by every $ghg^\dagger$. that's the code again only if every $ghg^\dagger$ is in $S$
+> **2** it commutes with $Z_1Z_2$ and $Z_2Z_3$ (each overlaps it in 2 places), so conjugating leaves them unchanged: yes. it maps $|000\rangle\leftrightarrow|111\rangle$, the **logical** $X$ ([[Bit flip code]])
+> **3** those generate only the Clifford group, which a classical computer can simulate efficiently (Gottesman-Knill). no speed up is possible without a non-Clifford gate
 
 see also [[Fault-tolerant procedure]], [[Transversal gates]], [[Quantum Error Correction]], [[Threshold theorem]]
 

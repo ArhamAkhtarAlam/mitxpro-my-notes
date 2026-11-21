@@ -53,14 +53,14 @@ flowchart TD
 that's the key idea behind fault tolerance: you can't make every piece perfect, so you check the pieces and repeat
 
 > [!exercise] try these
-> ① in the one ancilla circuit, an $X$ hits the ancilla right after the first controlled-$Z$. how many data errors?
-> ② show that $H^{\otimes2}\frac{|00\rangle-|11\rangle}{\sqrt2}$ only has odd weight strings
-> ③ in the cat circuit, an $X$ hits cat qubit 2 just before the controlled-$Z$s. how many data errors? does the syndrome come out right?
+> **1** in the one ancilla circuit, an $X$ hits the ancilla right after the first controlled-$Z$. how many data errors?
+> **2** show that $H^{\otimes2}\frac{|00\rangle-|11\rangle}{\sqrt2}$ only has odd weight strings
+> **3** in the cat circuit, an $X$ hits cat qubit 2 just before the controlled-$Z$s. how many data errors? does the syndrome come out right?
 
 > [!answer]-
-> ① the next three controlled-$Z$s each put a $Z$ on their data qubit: **3** errors in one block from one failure
-> ② $H^{\otimes2}|00\rangle=\frac12(|00\rangle+|01\rangle+|10\rangle+|11\rangle)$ and $H^{\otimes2}|11\rangle=\frac12(|00\rangle-|01\rangle-|10\rangle+|11\rangle)$. subtract and divide by $\sqrt2$: $\frac1{\sqrt2}(|01\rangle+|10\rangle)$, only odd weight ✓
-> ③ only qubit 2's controlled-$Z$ is affected, so at most **1** data error (a $Z$ on data qubit 2): fault tolerant. the syndrome can come out wrong, which is why the measurement is repeated and majority voted
+> **1** the next three controlled-$Z$s each put a $Z$ on their data qubit: **3** errors in one block from one failure
+> **2** $H^{\otimes2}|00\rangle=\frac12(|00\rangle+|01\rangle+|10\rangle+|11\rangle)$ and $H^{\otimes2}|11\rangle=\frac12(|00\rangle-|01\rangle-|10\rangle+|11\rangle)$. subtract and divide by $\sqrt2$: $\frac1{\sqrt2}(|01\rangle+|10\rangle)$, only odd weight ✓
+> **3** only qubit 2's controlled-$Z$ is affected, so at most **1** data error (a $Z$ on data qubit 2): fault tolerant. the syndrome can come out wrong, which is why the measurement is repeated and majority voted
 
 see also [[Parity measurement]], [[Fault-tolerant procedure]], [[Shor code]], [[Bell states]]
 

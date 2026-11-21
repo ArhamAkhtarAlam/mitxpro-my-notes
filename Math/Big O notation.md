@@ -49,13 +49,13 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① simplify $O(5n^3+n^2\log n)$
-> ② how many qubits to hold $10^{12}$ numbers in amplitudes?
-> ③ rewrite $6^k$ as a power of $2^k$
+> **1** simplify $O(5n^3+n^2\log n)$
+> **2** how many qubits to hold $10^{12}$ numbers in amplitudes?
+> **3** rewrite $6^k$ as a power of $2^k$
 
 > [!answer]-
-> ① $O(n^3)$
-> ② $\log_2(10^{12})=12\log_2 10\approx39.9$, so 40 qubits
-> ③ $6^k=(2^k)^{\log_26}=(2^k)^{2.58}$
+> **1** $O(n^3)$
+> **2** $\log_2(10^{12})=12\log_2 10\approx39.9$, so 40 qubits
+> **3** $6^k=(2^k)^{\log_26}=(2^k)^{2.58}$
 
 see also [[Math]], [[Counting and the binomial distribution]], [[Cost of fault tolerance]]

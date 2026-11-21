@@ -117,14 +117,14 @@ for diffuse reflectance use **Kubelka–Munk**, $F(R)=\frac{(1-R)^2}{2R}$, in pl
 - (to check a film's **crystal structure** too, pair it with [[XRD]]. eg. amorphous vs crystalline TiO₂ have different gaps)
 
 > [!exercise] try these
-> ① a solution has $A=0.8$. what fraction of light gets through? what if you use a cuvette twice as long?
-> ② a film's Tauc plot (with $n=\frac12$) crosses zero at $h\nu=2.4$ eV. what's the gap, and what colour is the edge?
-> ③ good optical fibre loses $0.2$ dB per km. a dB is $10\log_{10}\frac{P_{in}}{P_{out}}$, so what absorbance is that per km, and what's left after 100 km?
+> **1** a solution has $A=0.8$. what fraction of light gets through? what if you use a cuvette twice as long?
+> **2** a film's Tauc plot (with $n=\frac12$) crosses zero at $h\nu=2.4$ eV. what's the gap, and what colour is the edge?
+> **3** good optical fibre loses $0.2$ dB per km. a dB is $10\log_{10}\frac{P_{in}}{P_{out}}$, so what absorbance is that per km, and what's left after 100 km?
 
 > [!answer]-
-> ① $T=10^{-0.8}=0.158$ (15.8%). twice the path: $A=1.6$, $T=10^{-1.6}=0.025$ (2.5%)
-> ② direct gap $E_g=2.4$ eV, edge at $\frac{1240}{2.4}=517$ nm, green. it absorbs blue/violet, so it looks yellow-orange
-> ③ dB $=10\times A$, so $A=0.02$ per km. 100 km: $A=2$, $T=10^{-2}=1\%$ ([[Long-distance quantum communication#losing photons]])
+> **1** $T=10^{-0.8}=0.158$ (15.8%). twice the path: $A=1.6$, $T=10^{-1.6}=0.025$ (2.5%)
+> **2** direct gap $E_g=2.4$ eV, edge at $\frac{1240}{2.4}=517$ nm, green. it absorbs blue/violet, so it looks yellow-orange
+> **3** dB $=10\times A$, so $A=0.02$ per km. 100 km: $A=2$, $T=10^{-2}=1\%$ ([[Long-distance quantum communication#losing photons]])
 
 ## the quantum connection
 > [!extra] quantum confinement is a particle in a box
@@ -136,7 +136,7 @@ for diffuse reflectance use **Kubelka–Munk**, $F(R)=\frac{(1-R)^2}{2R}$, in pl
 > eg. CdSe (bulk gap 1.74 eV, edge 713 nm, deep red). a dot with 0.3 eV of confinement energy: gap 2.04 eV, edge $\frac{1240}{2.04}=608$ nm (orange). halve its size → 4× the confinement, 1.2 eV: gap 2.94 eV, edge $\frac{1240}{2.94}=422$ nm (violet). same material, different colour, just from the size of the box
 
 > [!extra] Beer–Lambert is the same law as fibre loss
-> light dies away exponentially as it travels through the sample, just like photons in an optical fibre in [[Long-distance quantum communication#losing photons]] (exercise ③ above). that's why QKD in fibre stops at ~100 km and needs [[Quantum repeaters|repeaters]] further than that
+> light dies away exponentially as it travels through the sample, just like photons in an optical fibre in [[Long-distance quantum communication#losing photons]] (exercise **3** above). that's why QKD in fibre stops at ~100 km and needs [[Quantum repeaters|repeaters]] further than that
 
 > [!extra] it's counting single photons
 > $E=\frac{1240}{\lambda}$ is **one** photon's energy, and the PMT detector works one photon at a time: the same particles of light used in [[Single Photon making and detecting|photonic quantum computing and QKD]]. the same formula gives the energy of the X-rays in [[XRD#where the X-rays come from|XRD]] (8 keV)

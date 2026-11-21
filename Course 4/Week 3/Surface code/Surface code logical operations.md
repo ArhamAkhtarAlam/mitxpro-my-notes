@@ -56,16 +56,16 @@ the same trick gives a CNOT with **one control and many targets** at no extra co
 > ==on the surface code, gates become measurements: prepare, measure some big logical parities, track the Paulis in software==
 
 > [!exercise] try these
-> ① why can't the checks see the red chain, but they can see the same chain stopping in the middle of the grid?
-> ② the grid has 5 data qubits along each side. what's the smallest number of bit flips that causes an undetected logical error?
-> ③ in the measurement CNOT, the outcomes are $a=+1$, $b=-1$, $c=-1$. which Paulis does the software note down?
-> ④ why measure $\bar Z\bar Z$ instead of measuring $\bar Z$ on each qubit and multiplying?
+> **1** why can't the checks see the red chain, but they can see the same chain stopping in the middle of the grid?
+> **2** the grid has 5 data qubits along each side. what's the smallest number of bit flips that causes an undetected logical error?
+> **3** in the measurement CNOT, the outcomes are $a=+1$, $b=-1$, $c=-1$. which Paulis does the software note down?
+> **4** why measure $\bar Z\bar Z$ instead of measuring $\bar Z$ on each qubit and multiplying?
 
 > [!answer]-
-> ① across the grid, every blue shape it passes touches it twice. stopping in the middle, the blue shape at the end touches it only once, so it flips: a detection event at each loose end
-> ② 5: a chain all the way across (the code distance $d=5$)
-> ③ $b=-1$ → $X_T$; $a\cdot c=-1$ → $Z_C$. both
-> ④ measuring each one would collapse each qubit and destroy any superposition or entanglement between them. $\bar Z\bar Z$ only reveals the parity, eg. it keeps $\alpha|\bar0\bar0\rangle+\beta|\bar1\bar1\rangle$ intact
+> **1** across the grid, every blue shape it passes touches it twice. stopping in the middle, the blue shape at the end touches it only once, so it flips: a detection event at each loose end
+> **2** 5: a chain all the way across (the code distance $d=5$)
+> **3** $b=-1$ → $X_T$; $a\cdot c=-1$ → $Z_C$. both
+> **4** measuring each one would collapse each qubit and destroy any superposition or entanglement between them. $\bar Z\bar Z$ only reveals the parity, eg. it keeps $\alpha|\bar0\bar0\rangle+\beta|\bar1\bar1\rangle$ intact
 
 see also [[Parity measurement]], [[CNOT gate]], [[Teleportation]], [[Transversal gates on stabilizer codes]]
 

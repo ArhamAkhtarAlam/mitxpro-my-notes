@@ -55,15 +55,15 @@ and the absorption coefficient of a film is the $\ln$ version ([[UV-vis spectros
 > $T_1=100\,\mu$s. after a $1\,\mu$s gate, the chance the qubit has **not** relaxed is $e^{-0.01}\approx0.990$, so about a 1% error. small $x$ shortcut: $e^{-x}\approx1-x$. after $69\,\mu$s ($T_1\ln2$) it's 50/50
 
 > [!exercise] try these
-> ① a film transmits 25% of the light. what's its absorbance?
-> ② a fibre loses 0.2 dB per km. what fraction of the light is left after 100 km?
-> ③ a signal drops to 10% in $46\,\mu$s. what's its time constant?
-> ④ why is the $\ln$ (not $\log_{10}$) the natural one for a diode?
+> **1** a film transmits 25% of the light. what's its absorbance?
+> **2** a fibre loses 0.2 dB per km. what fraction of the light is left after 100 km?
+> **3** a signal drops to 10% in $46\,\mu$s. what's its time constant?
+> **4** why is the $\ln$ (not $\log_{10}$) the natural one for a diode?
 
 > [!answer]-
-> ① $A=-\log_{10}0.25=0.60$
-> ② $0.2\times100=20$ dB = a factor $10^{20/10}=100$: 1% is left
-> ③ $e^{-46/\tau}=0.1$ → $\tau=\frac{46}{\ln10}=20\,\mu$s
-> ④ the current comes from a Boltzmann factor $e^{-E/k_BT}$, so $e$ is built in. $\log_{10}$ is just for reading plots in decades, at the cost of the $\ln10$ factor
+> **1** $A=-\log_{10}0.25=0.60$
+> **2** $0.2\times100=20$ dB = a factor $10^{20/10}=100$: 1% is left
+> **3** $e^{-46/\tau}=0.1$ → $\tau=\frac{46}{\ln10}=20\,\mu$s
+> **4** the current comes from a Boltzmann factor $e^{-E/k_BT}$, so $e$ is built in. $\log_{10}$ is just for reading plots in decades, at the cost of the $\ln10$ factor
 
 see also [[Big O notation]] (log rules, growth rates), [[Probability and expectation values]] ($\log_2$ and entropy), [[Peak shapes and FWHM]], [[Math]]

@@ -155,14 +155,14 @@ $$
 - line edge roughness of resist patterns
 
 > [!exercise] try these
-> ① a tapping cantilever has $k=40$ N/m and $f_0=350$ kHz. what's its effective mass?
-> ② why use non-contact mode on a soft polymer?
-> ③ a 20 nm wide, 100 nm deep trench comes out looking only 30 nm deep. why?
+> **1** a tapping cantilever has $k=40$ N/m and $f_0=350$ kHz. what's its effective mass?
+> **2** why use non-contact mode on a soft polymer?
+> **3** a 20 nm wide, 100 nm deep trench comes out looking only 30 nm deep. why?
 
 > [!answer]-
-> ① $m^*=\frac{k}{(2\pi f_0)^2}=\frac{40}{(2\pi\times350\,000)^2}=\frac{40}{4.84\times10^{12}}=8.3\times10^{-12}$ kg, about 8 ng
-> ② contact drags the tip sideways and scratches it, non-contact never touches
-> ③ **tip convolution**: the tip is too fat to reach the bottom of a narrow trench
+> **1** $m^*=\frac{k}{(2\pi f_0)^2}=\frac{40}{(2\pi\times350\,000)^2}=\frac{40}{4.84\times10^{12}}=8.3\times10^{-12}$ kg, about 8 ng
+> **2** contact drags the tip sideways and scratches it, non-contact never touches
+> **3** **tip convolution**: the tip is too fat to reach the bottom of a narrow trench
 
 ## the quantum connection
 > [!extra] the AFM's parent runs on tunnelling

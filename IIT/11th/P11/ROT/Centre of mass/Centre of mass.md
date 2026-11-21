@@ -53,14 +53,14 @@ the centre of mass accelerates **down** at $0.4$ m/s², much less than $g$. chec
 > $\bar a=\left(\frac{m_1-m_2}{m_1+m_2}\right)^2g$, downwards. equal masses: the centre of mass doesn't accelerate at all
 
 > [!exercise] try these
-> ① 1 kg at $(0,0)$, 2 kg at $(3,0)$, 3 kg at $(0,4)$. where's the centre of mass?
-> ② two skaters, 60 kg and 40 kg, push apart from rest. the 40 kg one moves at 3 m/s. how fast is the other, and what's $\bar v$?
-> ③ Atwood with 4 kg and 1 kg: find $\bar a$
+> **1** 1 kg at $(0,0)$, 2 kg at $(3,0)$, 3 kg at $(0,4)$. where's the centre of mass?
+> **2** two skaters, 60 kg and 40 kg, push apart from rest. the 40 kg one moves at 3 m/s. how fast is the other, and what's $\bar v$?
+> **3** Atwood with 4 kg and 1 kg: find $\bar a$
 
 > [!answer]-
-> ① $\bar x=\frac{6}{6}=1$, $\bar y=\frac{12}{6}=2$: $(1,2)$
-> ② momentum: $60v=40(3)$, $v=2$ m/s the other way; $\bar v=0$ (it started at rest, no outside force)
-> ③ $a=\frac35g=6$, $\bar a=\frac{4(-6)+1(6)}{5}=-3.6$ m/s² $=\left(\frac35\right)^2g$ ✓
+> **1** $\bar x=\frac{6}{6}=1$, $\bar y=\frac{12}{6}=2$: $(1,2)$
+> **2** momentum: $60v=40(3)$, $v=2$ m/s the other way; $\bar v=0$ (it started at rest, no outside force)
+> **3** $a=\frac35g=6$, $\bar a=\frac{4(-6)+1(6)}{5}=-3.6$ m/s² $=\left(\frac35\right)^2g$ ✓
 
 see also [[Centre of mass at rest]], [[Centre of mass of continuous bodies]]
 

@@ -93,14 +93,14 @@ all three give the **same** state: a $Z$ on the encoded qubit ($|111\rangle$ has
 > ==if you get a $\sigma_x$, it corrects it. if you get a $\sigma_z$ on any qubit, you've applied $\sigma_z$ to the encoded qubit==, and the code can't even tell. with three qubits there are three times as many places for it to happen, see [[Phase flip code#how bad are phase errors?]]
 
 > [!exercise] try these
-> ① decode $\alpha|001\rangle+\beta|110\rangle$ (an error on qubit 3) step by step. what do you measure?
-> ② why does an error on qubit 1 need a fix but errors on qubits 2 and 3 don't?
-> ③ what happens if you decode $\alpha|011\rangle+\beta|100\rangle$ (errors on qubits 2 and 3)?
+> **1** decode $\alpha|001\rangle+\beta|110\rangle$ (an error on qubit 3) step by step. what do you measure?
+> **2** why does an error on qubit 1 need a fix but errors on qubits 2 and 3 don't?
+> **3** what happens if you decode $\alpha|011\rangle+\beta|100\rangle$ (errors on qubits 2 and 3)?
 
 > [!answer]-
-> ① CNOT $1\to2$: $\alpha|001\rangle+\beta|100\rangle$. CNOT $1\to3$: $\alpha|001\rangle+\beta|101\rangle=(\alpha|0\rangle+\beta|1\rangle)|01\rangle$. measure $01$, qubit 1 is fine
-> ② the decoded state comes out on qubit 1. an error on 2 or 3 only changes what you measure there, which you throw away anyway
-> ③ CNOT $1\to2$: $\alpha|011\rangle+\beta|110\rangle$. CNOT $1\to3$: $\alpha|011\rangle+\beta|111\rangle=(\alpha|0\rangle+\beta|1\rangle)|11\rangle$. you measure $11$ and "fix" qubit 1 to $\alpha|1\rangle+\beta|0\rangle$: two errors fool the code ([[Bit flip code#when it breaks]])
+> **1** CNOT $1\to2$: $\alpha|001\rangle+\beta|100\rangle$. CNOT $1\to3$: $\alpha|001\rangle+\beta|101\rangle=(\alpha|0\rangle+\beta|1\rangle)|01\rangle$. measure $01$, qubit 1 is fine
+> **2** the decoded state comes out on qubit 1. an error on 2 or 3 only changes what you measure there, which you throw away anyway
+> **3** CNOT $1\to2$: $\alpha|011\rangle+\beta|110\rangle$. CNOT $1\to3$: $\alpha|011\rangle+\beta|111\rangle=(\alpha|0\rangle+\beta|1\rangle)|11\rangle$. you measure $11$ and "fix" qubit 1 to $\alpha|1\rangle+\beta|0\rangle$: two errors fool the code ([[Bit flip code#when it breaks]])
 
 see also [[Bit flip code]], [[Parity measurement]], [[Phase flip code]], [[CNOT gate]]
 

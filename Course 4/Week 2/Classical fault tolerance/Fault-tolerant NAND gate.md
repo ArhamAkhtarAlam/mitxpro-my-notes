@@ -88,14 +88,14 @@ this is a **level 1** encoding. one encoded gate is better than one plain gate, 
 | threshold | moves with $N$ | $\frac1{15}$, and recursion makes it work for any $N$ |
 
 > [!exercise] try these
-> ① $A=0_L$, $B=1_L$, and the wire $A_3$ arrives flipped. trace the encoded NAND. what comes out?
-> ② if the error correction used 5 majority gates instead of 3, what would the bound and the threshold be?
-> ③ why do we need **3** majority gates, and not just 1?
+> **1** $A=0_L$, $B=1_L$, and the wire $A_3$ arrives flipped. trace the encoded NAND. what comes out?
+> **2** if the error correction used 5 majority gates instead of 3, what would the bound and the threshold be?
+> **3** why do we need **3** majority gates, and not just 1?
 
 > [!answer]-
-> ① the right answer is $\overline{0\wedge1}=1$. NANDs 1, 2 get $(0,1)$ → 1. NAND 3 gets $(1,1)$ → 0. every majority gate sees $1,1,0$ → 1, so the output is $111$: the input error is gone
-> ② $3+5=8$ gates, $\binom82=28$, so $p_{\text{fail}}\leq28p^2$ and the threshold drops to $\frac1{28}$: more gates means more ways to fail
-> ③ with 1 majority gate, it's a single point of failure (its error goes straight to the output), and the output would be one wire, so it's decoded and the next gate has nothing to correct with
+> **1** the right answer is $\overline{0\wedge1}=1$. NANDs 1, 2 get $(0,1)$ → 1. NAND 3 gets $(1,1)$ → 0. every majority gate sees $1,1,0$ → 1, so the output is $111$: the input error is gone
+> **2** $3+5=8$ gates, $\binom82=28$, so $p_{\text{fail}}\leq28p^2$ and the threshold drops to $\frac1{28}$: more gates means more ways to fail
+> **3** with 1 majority gate, it's a single point of failure (its error goes straight to the output), and the output would be one wire, so it's decoded and the next gate has nothing to correct with
 
 see also [[Triple modular redundancy]], [[Bit flip code]], [[Threshold theorem]], maths: [[Counting and the binomial distribution]]
 

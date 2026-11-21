@@ -67,16 +67,16 @@ $n=0$ means no $X$ error. every qubit has a **different** nonzero syndrome, so =
 > one ancilla touches four data qubits. an $X$ error on ancilla $d$ halfway through spreads through its remaining CNOTs onto **several** data qubits, more than the code can fix. that's why [[Fault-tolerant measurement]] replaces each ancilla with a checked cat state
 
 > [!exercise] try these
-> ① an $X$ error hits qubit 4. which ancillas fire, and what is $n$?
-> ② a $Y$ error hits qubit 6. what are $n$ and $m$, and what do you apply?
-> ③ why not just measure qubits 1, 5, 6, 7 in the $Z$ basis to get the parity $Z_1Z_5Z_6Z_7$?
-> ④ check that $\bar X=X_4X_5X_6$ commutes with all three $Z$ generators
+> **1** an $X$ error hits qubit 4. which ancillas fire, and what is $n$?
+> **2** a $Y$ error hits qubit 6. what are $n$ and $m$, and what do you apply?
+> **3** why not just measure qubits 1, 5, 6, 7 in the $Z$ basis to get the parity $Z_1Z_5Z_6Z_7$?
+> **4** check that $\bar X=X_4X_5X_6$ commutes with all three $Z$ generators
 
 > [!answer]-
-> ① qubit 4 is in $Z_2Z_4Z_6Z_7$ and $Z_3Z_4Z_5Z_7$, so $b$ and $c$ fire: $n=2+4=6$, which the table maps back to qubit 4
-> ② $Y_6$ anticommutes with both kinds of generator through qubit 6: $a,b$ fire and $d,e$ fire, so $n=m=3$ → qubit 6. apply $X_6$ and $Z_6$ (a $Y$ up to phase)
-> ③ that measures each qubit separately and collapses the superposition of code words, destroying $|\psi\rangle_L$. the ancilla only learns the parity
-> ④ overlaps with $\{1,5,6,7\}$, $\{2,4,6,7\}$, $\{3,4,5,7\}$ are $\{5,6\}$, $\{4,6\}$, $\{4,5\}$: two each, so two sign flips cancel ✓
+> **1** qubit 4 is in $Z_2Z_4Z_6Z_7$ and $Z_3Z_4Z_5Z_7$, so $b$ and $c$ fire: $n=2+4=6$, which the table maps back to qubit 4
+> **2** $Y_6$ anticommutes with both kinds of generator through qubit 6: $a,b$ fire and $d,e$ fire, so $n=m=3$ → qubit 6. apply $X_6$ and $Z_6$ (a $Y$ up to phase)
+> **3** that measures each qubit separately and collapses the superposition of code words, destroying $|\psi\rangle_L$. the ancilla only learns the parity
+> **4** overlaps with $\{1,5,6,7\}$, $\{2,4,6,7\}$, $\{3,4,5,7\}$ are $\{5,6\}$, $\{4,6\}$, $\{4,5\}$: two each, so two sign flips cancel ✓
 
 see also [[Stabilizer codes]], [[Transversal gates on stabilizer codes]], [[Fault-tolerant measurement]], [[Calderbank-Shor-Steane codes]], [[Standard form and stabilizer circuits]], maths: [[Linear algebra mod 2]]
 

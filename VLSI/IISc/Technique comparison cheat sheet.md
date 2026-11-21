@@ -78,15 +78,15 @@ flowchart TD
 | resistance quantum | $h/e^2=25.8$ kΩ |
 
 > [!exercise] quick fire
-> ① you need to know if a 2 nm film on a wafer is oxidized. which technique?
-> ② you need the strain in one 50 nm grain. which?
-> ③ which two techniques give a work function?
-> ④ which two give a band gap, and which only sees the surface?
+> **1** you need to know if a 2 nm film on a wafer is oxidized. which technique?
+> **2** you need the strain in one 50 nm grain. which?
+> **3** which two techniques give a work function?
+> **4** which two give a band gap, and which only sees the surface?
 
 > [!answer]-
-> ① [[XPS]] (top few nm, chemical state)
-> ② [[TEM]] diffraction (XRD averages over mm). or Raman if a ~1 µm average is OK
-> ③ [[UPS]] and KPFM ([[AFM]])
-> ④ [[UV-vis spectroscopy]] and [[REELS and other XPS modes|REELS]]. REELS is surface only
+> **1** [[XPS]] (top few nm, chemical state)
+> **2** [[TEM]] diffraction (XRD averages over mm). or Raman if a ~1 µm average is OK
+> **3** [[UPS]] and KPFM ([[AFM]])
+> **4** [[UV-vis spectroscopy]] and [[REELS and other XPS modes|REELS]]. REELS is surface only
 
 see also [[Glossary]], [[Metrology and nano-characterization workshop]]

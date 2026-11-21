@@ -101,16 +101,16 @@ UPS is an **average over the spot** and needs UHV, KPFM is local and works in ai
 > real barriers are squeezed together by interface states (Fermi level pinning), but the trend is why UPS work functions matter for contacts
 
 > [!exercise] try these
-> ① with He II, a spectrum is 36.3 eV wide. what's $\phi$?
-> ② the same sample with He I gives a width of 16.72 eV. does it agree?
-> ③ why does XPS see core levels but UPS doesn't?
-> ④ KPFM, with a tip calibrated at 4.80 eV, reads $CPD=0.30$ V on a gold pad. what's gold's work function, and is it clean?
+> **1** with He II, a spectrum is 36.3 eV wide. what's $\phi$?
+> **2** the same sample with He I gives a width of 16.72 eV. does it agree?
+> **3** why does XPS see core levels but UPS doesn't?
+> **4** KPFM, with a tip calibrated at 4.80 eV, reads $CPD=0.30$ V on a gold pad. what's gold's work function, and is it clean?
 
 > [!answer]-
-> ① $\phi=40.81-36.3=4.51$ eV
-> ② $21.22-16.72=4.50$ eV. yes: $\phi$ belongs to the surface, not the lamp
-> ③ a core level like Si 2p needs ~99 eV to free. a 21 eV photon simply doesn't have enough, so only electrons within ~21 eV of the vacuum level come out
-> ④ $\phi=4.80-0.30=4.50$ eV. clean gold is ~5.1 eV, so it's probably covered in contamination (check with [[XPS]])
+> **1** $\phi=40.81-36.3=4.51$ eV
+> **2** $21.22-16.72=4.50$ eV. yes: $\phi$ belongs to the surface, not the lamp
+> **3** a core level like Si 2p needs ~99 eV to free. a 21 eV photon simply doesn't have enough, so only electrons within ~21 eV of the vacuum level come out
+> **4** $\phi=4.80-0.30=4.50$ eV. clean gold is ~5.1 eV, so it's probably covered in contamination (check with [[XPS]])
 
 ## the quantum connection
 > [!extra] the Fermi edge is Pauli exclusion

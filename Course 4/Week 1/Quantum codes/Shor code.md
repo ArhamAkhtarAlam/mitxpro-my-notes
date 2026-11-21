@@ -86,8 +86,8 @@ $\sigma_y=i\sigma_x\sigma_z$ ([[Y gate]]), so a $\sigma_y$ error is just a $\sig
 ^shor-errors
 
 the full circuit, the "rather complicated" one: encode, a possible error, then
-① decode each block's bit code and fix its $\sigma_x$ (registers blk1–blk3)
-② Hadamards on qubits 1, 4, 7 turn the block signs into bits, and one more bit flip decode takes the majority of the signs (register sign)
+**1** decode each block's bit code and fix its $\sigma_x$ (registers blk1–blk3)
+**2** Hadamards on qubits 1, 4, 7 turn the block signs into bits, and one more bit flip decode takes the majority of the signs (register sign)
 
 ![[Shor_code_full_circuit.png]]
 
@@ -133,16 +133,16 @@ a dephasing channel with $q=\sin^2\frac\theta2$. "a random small rotation" and "
 > $q=\sin^2(0.1)=0.00997\approx1\%$. a qubit that randomly turns by $\pm0.2$ rad (11°) is the same as one that gets a full $\sigma_z$ 1% of the time
 
 > [!exercise] try these
-> ① a $\sigma_y$ hits qubit 2. what happens to the blocks, and how is it fixed?
-> ② what happens if $\sigma_z$ hits qubits 4 **and** 5 (two errors in the same block)?
-> ③ write a Hadamard error as a sum of Paulis. which syndromes can the measurement give?
-> ④ how many qubits would you need to concatenate the Shor code with itself once more?
+> **1** a $\sigma_y$ hits qubit 2. what happens to the blocks, and how is it fixed?
+> **2** what happens if $\sigma_z$ hits qubits 4 **and** 5 (two errors in the same block)?
+> **3** write a Hadamard error as a sum of Paulis. which syndromes can the measurement give?
+> **4** how many qubits would you need to concatenate the Shor code with itself once more?
 
 > [!answer]-
-> ① the first block becomes $|010\rangle\mp|101\rangle$ (one bit flipped **and** the sign flipped). the inner code finds and flips qubit 2 back, leaving $|000\rangle\mp|111\rangle$, then the outer code sees the first block's sign disagree with the other two and fixes it with a $\sigma_z$ on qubits 1–3
-> ② two $\sigma_z$'s on $|111\rangle$ give $(-1)^2=+1$, so the block is **unchanged**: no error at all. the Shor code doesn't even notice (it's a **degenerate** code: different errors can do the same thing)
-> ③ $H=\frac1{\sqrt2}(X+Z)$, so the measurement gives "$\sigma_x$ on that qubit" or "$\sigma_z$ on that qubit", each with probability $\frac12$, and you fix whichever you get
-> ④ $9\times9=81$ qubits
+> **1** the first block becomes $|010\rangle\mp|101\rangle$ (one bit flipped **and** the sign flipped). the inner code finds and flips qubit 2 back, leaving $|000\rangle\mp|111\rangle$, then the outer code sees the first block's sign disagree with the other two and fixes it with a $\sigma_z$ on qubits 1–3
+> **2** two $\sigma_z$'s on $|111\rangle$ give $(-1)^2=+1$, so the block is **unchanged**: no error at all. the Shor code doesn't even notice (it's a **degenerate** code: different errors can do the same thing)
+> **3** $H=\frac1{\sqrt2}(X+Z)$, so the measurement gives "$\sigma_x$ on that qubit" or "$\sigma_z$ on that qubit", each with probability $\frac12$, and you fix whichever you get
+> **4** $9\times9=81$ qubits
 
 see also [[Bit flip code]], [[Phase flip code]], [[Decoding the bit flip code]], [[Pauli channel]], [[Quantum Error Correction]], textbook: [[Shor nine qubit code]], [[Quantum error-correction conditions]]
 

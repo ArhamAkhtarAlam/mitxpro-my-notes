@@ -105,14 +105,14 @@ $$
 B carries on at $v_0$ for that instant: the hit only shares A's momentum with P ($mv_0=2m\cdot\frac{v_0}{2}$ ✓), and the rod then starts turning
 
 > [!exercise] try these
-> ① a free rod is hit ⊥ at its centre. does it spin?
-> ② in the hockey puck problem, $L=1$ m and $d=0.25$ m. what $m$ stops the puck?
-> ③ a 6 kg, 1 m rod on ice is hit at one end, receiving an impulse of 3 N s. find $v_\text{cm}$ and $\omega$
+> **1** a free rod is hit ⊥ at its centre. does it spin?
+> **2** in the hockey puck problem, $L=1$ m and $d=0.25$ m. what $m$ stops the puck?
+> **3** a 6 kg, 1 m rod on ice is hit at one end, receiving an impulse of 3 N s. find $v_\text{cm}$ and $\omega$
 
 > [!answer]-
-> ① no: zero torque about the centre, it just slides
-> ② $m=\frac{M}{1+12/16}=\frac47M$
-> ③ $v_\text{cm}=0.5$ m/s, $\omega=\frac{3(0.5)}{6/12}=3$ rad/s ($\frac{v_\text{cm}}{\omega}=\frac16$ ✓)
+> **1** no: zero torque about the centre, it just slides
+> **2** $m=\frac{M}{1+12/16}=\frac47M$
+> **3** $v_\text{cm}=0.5$ m/s, $\omega=\frac{3(0.5)}{6/12}=3$ rad/s ($\frac{v_\text{cm}}{\omega}=\frac16$ ✓)
 
 see also [[Angular momentum]], [[Coefficient of restitution]], [[Centre of mass]]
 

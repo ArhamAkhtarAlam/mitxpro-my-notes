@@ -104,14 +104,14 @@ $$
 so it extends to a unitary on everything, and its effect on the system is $\mathcal R(\sigma)=\sum_iU_iM_i\sigma M_i^\dagger U_i^\dagger$: exactly the measure and correct operation. ==it needs a **fresh** ancilla every round==: the ancilla ends up holding the syndrome, ie. the error gets moved onto it
 
 > [!exercise] try these
-> ① show $\alpha$ is always Hermitian, straight from $PE_i^\dagger E_jP=\alpha_{ij}P$
-> ② bit flip code, errors $\{I,X_1\}$. find $\alpha$
-> ③ why can't the ancilla in Box 10.1 be reused without resetting it?
+> **1** show $\alpha$ is always Hermitian, straight from $PE_i^\dagger E_jP=\alpha_{ij}P$
+> **2** bit flip code, errors $\{I,X_1\}$. find $\alpha$
+> **3** why can't the ancilla in Box 10.1 be reused without resetting it?
 
 > [!answer]-
-> ① take the adjoint: $(PE_i^\dagger E_jP)^\dagger=PE_j^\dagger E_iP=\alpha_{ji}P$, and also $=(\alpha_{ij}P)^\dagger=\alpha_{ij}^*P$. so $\alpha_{ji}=\alpha_{ij}^*$
-> ② $PIP=P$, $PX_1^\dagger X_1P=P$, $PX_1P=0$: $\alpha=\begin{bmatrix}1&0\\0&1\end{bmatrix}$
-> ③ $U$ is only defined to do the right thing on $|\psi\rangle|0\rangle$. after a round the ancilla is in some $|i\rangle$ (entangled with which error happened), so the next round would start from the wrong state. the error information has to be thrown away somewhere, and that's what resetting the ancilla does
+> **1** take the adjoint: $(PE_i^\dagger E_jP)^\dagger=PE_j^\dagger E_iP=\alpha_{ji}P$, and also $=(\alpha_{ij}P)^\dagger=\alpha_{ij}^*P$. so $\alpha_{ji}=\alpha_{ij}^*$
+> **2** $PIP=P$, $PX_1^\dagger X_1P=P$, $PX_1P=0$: $\alpha=\begin{bmatrix}1&0\\0&1\end{bmatrix}$
+> **3** $U$ is only defined to do the right thing on $|\psi\rangle|0\rangle$. after a round the ancilla is in some $|i\rangle$ (entangled with which error happened), so the next round would start from the wrong state. the error information has to be thrown away somewhere, and that's what resetting the ancilla does
 
 see also [[Operator-sum representation]], [[Quantum operations]], [[Projectors]]
 

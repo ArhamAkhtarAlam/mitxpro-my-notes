@@ -31,16 +31,16 @@ the full chain is in [[Complexity classes#^containments]]
 - so every claim of [[Quantum advantage|quantum advantage]] rests on the best **known** classical algorithms plus conjectures. that's why demonstrations ([[Quantum supremacy]]) pick problems where the evidence is strongest, like sampling from random circuits
 
 > [!exercise] try these
-> ① about how many Grover iterations does it take to search $10^{12}$ items? how many classical checks on average?
-> ② why can't a quantum computer efficiently solve a problem that needs more than polynomial memory on a classical computer?
-> ③ someone finds a fast classical algorithm for factoring. does that prove BPP = BQP?
-> ④ a company says its quantum computer solves an NP-complete problem exponentially faster. why be sceptical?
+> **1** about how many Grover iterations does it take to search $10^{12}$ items? how many classical checks on average?
+> **2** why can't a quantum computer efficiently solve a problem that needs more than polynomial memory on a classical computer?
+> **3** someone finds a fast classical algorithm for factoring. does that prove BPP = BQP?
+> **4** a company says its quantum computer solves an NP-complete problem exponentially faster. why be sceptical?
 
 > [!answer]-
-> ① $\frac\pi4\sqrt{10^{12}}=\frac\pi4\times10^6\approx7.9\times10^5$ iterations, vs about $5\times10^{11}$ classical checks
-> ② BQP ⊆ PSPACE: anything a quantum computer does in polynomial time, a classical computer can also do with polynomial memory (slowly). so a problem that really needs more memory can't be in BQP
-> ③ no. factoring would just stop being an example of a quantum speed up. BPP = BQP needs a fast classical algorithm for a BQP-complete problem like [[Quantum circuit evaluation]]
-> ④ there's no known quantum algorithm that does it, and NP-complete problems don't seem to have the structure quantum speed ups need. Grover alone only gives a square root, which is still exponential
+> **1** $\frac\pi4\sqrt{10^{12}}=\frac\pi4\times10^6\approx7.9\times10^5$ iterations, vs about $5\times10^{11}$ classical checks
+> **2** BQP ⊆ PSPACE: anything a quantum computer does in polynomial time, a classical computer can also do with polynomial memory (slowly). so a problem that really needs more memory can't be in BQP
+> **3** no. factoring would just stop being an example of a quantum speed up. BPP = BQP needs a fast classical algorithm for a BQP-complete problem like [[Quantum circuit evaluation]]
+> **4** there's no known quantum algorithm that does it, and NP-complete problems don't seem to have the structure quantum speed ups need. Grover alone only gives a square root, which is still exponential
 
 
 previous: [[Quantum circuit evaluation]]

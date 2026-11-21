@@ -53,13 +53,13 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① is $\{I,X\}$ a subgroup of the Pauli group? what about $\{I,X,Z\}$?
-> ② how many elements does $\langle Z_1Z_2,\ Z_2Z_3,\ Z_3Z_4\rangle$ have?
-> ③ how many cosets does a $[7,3]$ code have inside a $[7,4]$ code?
+> **1** is $\{I,X\}$ a subgroup of the Pauli group? what about $\{I,X,Z\}$?
+> **2** how many elements does $\langle Z_1Z_2,\ Z_2Z_3,\ Z_3Z_4\rangle$ have?
+> **3** how many cosets does a $[7,3]$ code have inside a $[7,4]$ code?
 
 > [!answer]-
-> ① $\{I,X\}$: yes ($X^2=I$). $\{I,X,Z\}$: no, $XZ=-iY$ isn't in it
-> ② 3 independent commuting generators that square to $I$: $2^3=8$
-> ③ $\frac{2^4}{2^3}=2$: the two logical states of the Steane code
+> **1** $\{I,X\}$: yes ($X^2=I$). $\{I,X,Z\}$: no, $XZ=-iY$ isn't in it
+> **2** 3 independent commuting generators that square to $I$: $2^3=8$
+> **3** $\frac{2^4}{2^3}=2$: the two logical states of the Steane code
 
 see also [[Math]], [[Pauli matrices]], [[Linear algebra mod 2]], [[Stabilizer codes]]

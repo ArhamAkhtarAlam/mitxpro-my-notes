@@ -38,16 +38,16 @@ the same construction will be used for fault-tolerant **quantum** circuits ([[Fa
 > the [[Bit flip code]] encoder uses qubit 1 as the control for both CNOTs, so an $X$ on qubit 1 before them ends up on all three: $|111\rangle$ instead of $|000\rangle$. that's fine for encoding a fresh qubit (there's no code yet to protect), but between two encoded blocks you always want the transversal version
 
 > [!exercise] try these
-> ① in the shortcut circuit, wire $B_2$ fails instead. how many errors in each block?
-> ② a Toffoli between three blocks, done transversally (Toffoli $i$ on $A_i$, $B_i$, $C_i$). is it fault tolerant?
-> ③ check the transversal CNOT gives the right logical answer for $A=111$, $B=111$
-> ④ a quantum $X$ error sits on $A_2$ before a transversal CNOT $A\to B$. where are the errors afterwards?
+> **1** in the shortcut circuit, wire $B_2$ fails instead. how many errors in each block?
+> **2** a Toffoli between three blocks, done transversally (Toffoli $i$ on $A_i$, $B_i$, $C_i$). is it fault tolerant?
+> **3** check the transversal CNOT gives the right logical answer for $A=111$, $B=111$
+> **4** a quantum $X$ error sits on $A_2$ before a transversal CNOT $A\to B$. where are the errors afterwards?
 
 > [!answer]-
-> ① only $B_2$ is wrong: 0 errors in $A$, 1 in $B$. the shortcut's problem is only its shared control
-> ② yes: a failure in Toffoli $i$ can only touch bit $i$ of each block, so at most one error per block
-> ③ each $B_i$ becomes $1\oplus1=0$, so $B=000$: logical $1\oplus1=0$ ✓
-> ④ on $A_2$ and $B_2$: one error in each block, which each block's code can correct
+> **1** only $B_2$ is wrong: 0 errors in $A$, 1 in $B$. the shortcut's problem is only its shared control
+> **2** yes: a failure in Toffoli $i$ can only touch bit $i$ of each block, so at most one error per block
+> **3** each $B_i$ becomes $1\oplus1=0$, so $B=000$: logical $1\oplus1=0$ ✓
+> **4** on $A_2$ and $B_2$: one error in each block, which each block's code can correct
 
 see also [[Fault-tolerant procedure]], [[CNOT gate]], [[Fault-tolerant NAND gate]]
 

@@ -47,14 +47,14 @@ $$
 the ball leaves at a **flatter** angle (further from the normal) when $e<1$
 
 > [!exercise] try these
-> ① a ball dropped from 5 m bounces to 1.8 m. find $e$
-> ② same ball, how high is the second bounce?
-> ③ a ball hits a wall at 10 m/s, $45°$ to the normal, $e=0.5$. speed and angle after?
+> **1** a ball dropped from 5 m bounces to 1.8 m. find $e$
+> **2** same ball, how high is the second bounce?
+> **3** a ball hits a wall at 10 m/s, $45°$ to the normal, $e=0.5$. speed and angle after?
 
 > [!answer]-
-> ① $e=\sqrt{1.8/5}=0.6$
-> ② $0.6^2\times1.8=0.648$ m
-> ③ along: $7.07$, normal: $3.54$; $v\approx7.9$ m/s, $\tan\theta_2=2$, $\theta_2\approx63°$
+> **1** $e=\sqrt{1.8/5}=0.6$
+> **2** $0.6^2\times1.8=0.648$ m
+> **3** along: $7.07$, normal: $3.54$; $v\approx7.9$ m/s, $\tan\theta_2=2$, $\theta_2\approx63°$
 
 see also [[Impulse]], [[Free rod collisions]]
 

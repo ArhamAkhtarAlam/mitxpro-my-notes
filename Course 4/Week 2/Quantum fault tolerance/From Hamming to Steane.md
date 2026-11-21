@@ -57,16 +57,16 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① encode the message $1000$ with $G$
-> ② the received word is $0101011$. which bit flipped?
-> ③ why does $|0_L\rangle$ only contain Hamming code words with an even number of 1s?
-> ④ a $Z$ error hits qubit 5. which generators notice it?
+> **1** encode the message $1000$ with $G$
+> **2** the received word is $0101011$. which bit flipped?
+> **3** why does $|0_L\rangle$ only contain Hamming code words with an even number of 1s?
+> **4** a $Z$ error hits qubit 5. which generators notice it?
 
 > [!answer]-
-> ① column 1 of $G$: $1110000$. check: $H(1110000)^T=(1+1,\ 1+1,\ 0)=(0,0,0)$ ✓
-> ② $H(0101011)^T$: row 1 (bits 1,3,5,7) $=0+0+0+1=1$, row 2 (bits 2,3,6,7) $=1+0+1+1=1$, row 3 (bits 4,5,6,7) $=1+0+1+1=1$. syndrome $(1,1,1)$ = binary 7: bit 7 flipped, the sent word was $0101010$
-> ③ they're the code words of the smaller dual code (the rows of $H$ and their sums), all weight 0 or 4. the odd ones (weight 3 or 7) make up $|1_L\rangle=X^{\otimes7}|0_L\rangle$
-> ④ the $X$ generators with an $X$ on qubit 5: $IIIXXXX$ and $XIXIXIX$ (5 = binary 101)
+> **1** column 1 of $G$: $1110000$. check: $H(1110000)^T=(1+1,\ 1+1,\ 0)=(0,0,0)$ ✓
+> **2** $H(0101011)^T$: row 1 (bits 1,3,5,7) $=0+0+0+1=1$, row 2 (bits 2,3,6,7) $=1+0+1+1=1$, row 3 (bits 4,5,6,7) $=1+0+1+1=1$. syndrome $(1,1,1)$ = binary 7: bit 7 flipped, the sent word was $0101010$
+> **3** they're the code words of the smaller dual code (the rows of $H$ and their sums), all weight 0 or 4. the odd ones (weight 3 or 7) make up $|1_L\rangle=X^{\otimes7}|0_L\rangle$
+> **4** the $X$ generators with an $X$ on qubit 5: $IIIXXXX$ and $XIXIXIX$ (5 = binary 101)
 
 see also [[Classical linear codes]], [[CSS codes]], [[Transversal gates on stabilizer codes]], [[Stabilizer codes]]
 

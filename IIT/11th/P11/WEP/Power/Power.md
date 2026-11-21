@@ -57,14 +57,14 @@ which makes sense: it lands at the same height and the same speed, so gravity's 
 > $m=1$ kg, $v_0=20$ m/s, $\theta=60°$: at launch $P=-10\times17.3=-173$ W, at the top 0, at landing $+173$ W. flight time $3.46$ s
 
 > [!exercise] try these
-> ① a car engine gives 30 kW at 20 m/s. what's the driving force?
-> ② a 2 kg block is pulled at a steady 3 m/s across a floor with $\mu_k=0.25$. power of the pull?
-> ③ in the $x=t^3/6$ example, at what time is the power equal to the average power over $0$–$2$ s?
+> **1** a car engine gives 30 kW at 20 m/s. what's the driving force?
+> **2** a 2 kg block is pulled at a steady 3 m/s across a floor with $\mu_k=0.25$. power of the pull?
+> **3** in the $x=t^3/6$ example, at what time is the power equal to the average power over $0$–$2$ s?
 
 > [!answer]-
-> ① $F=P/v=30000/20=1500$ N
-> ② steady speed, so pull = friction $=0.25\times20=5$ N, $P=5\times3=15$ W
-> ③ $t^3=2$, $t=2^{1/3}\approx1.26$ s
+> **1** $F=P/v=30000/20=1500$ N
+> **2** steady speed, so pull = friction $=0.25\times20=5$ N, $P=5\times3=15$ W
+> **3** $t^3=2$, $t=2^{1/3}\approx1.26$ s
 
 see also [[Power in circular motion]], [[Projectile motion]]
 

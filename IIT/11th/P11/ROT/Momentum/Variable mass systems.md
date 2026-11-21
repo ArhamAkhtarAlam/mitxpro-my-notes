@@ -68,14 +68,14 @@ the cart just gets lighter, so the same force accelerates it more and more
 > $F=10$ N, $m_0=10$ kg, $\mu=1$ kg/s, after 5 s: the loading car has $v=\frac{50}{15}=3.3$ m/s; the leaking cart has $v=10\ln2=6.9$ m/s. with fixed mass it would be $5$ m/s
 
 > [!exercise] try these
-> ① a hose sprays 2 kg/s of water at 10 m/s onto a wall, and the water stops. force on the wall?
-> ② a rocket of 1000 kg ejects gas at 2000 m/s relative to it, at 5 kg/s, in deep space. its acceleration?
-> ③ in the bullet problem, what if the bullets stuck in the wall instead?
+> **1** a hose sprays 2 kg/s of water at 10 m/s onto a wall, and the water stops. force on the wall?
+> **2** a rocket of 1000 kg ejects gas at 2000 m/s relative to it, at 5 kg/s, in deep space. its acceleration?
+> **3** in the bullet problem, what if the bullets stuck in the wall instead?
 
 > [!answer]-
-> ① $F=\mu v=20$ N
-> ② $a=\frac{u\mu}{M}=\frac{2000\times5}{1000}=10$ m/s²
-> ③ each loses only $mv$: $F=100$ N
+> **1** $F=\mu v=20$ N
+> **2** $a=\frac{u\mu}{M}=\frac{2000\times5}{1000}=10$ m/s²
+> **3** each loses only $mv$: $F=100$ N
 
 see also [[Impulse]], [[Momentum]]
 

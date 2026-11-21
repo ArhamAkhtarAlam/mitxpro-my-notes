@@ -57,14 +57,14 @@ this is a **discrete jump** in what a channel can do despite errors. the same ki
 we already saw the seed of this: the bit flip code only helps if $p$ is below a threshold ([[Bit flip code#the threshold]])
 
 > [!exercise] try these
-> ① a binary symmetric channel flips 1% of bits. what's its capacity? (use $H(0.01)=0.081$)
-> ② you want an error below $10^{-3}$ on the 10% channel using only repetition. is 5 copies enough? what about 7?
-> ③ why can't you communicate reliably over a channel that flips 50% of bits, however clever the code?
+> **1** a binary symmetric channel flips 1% of bits. what's its capacity? (use $H(0.01)=0.081$)
+> **2** you want an error below $10^{-3}$ on the 10% channel using only repetition. is 5 copies enough? what about 7?
+> **3** why can't you communicate reliably over a channel that flips 50% of bits, however clever the code?
 
 > [!answer]-
-> ① $C=1-0.081=0.92$ bits per use: you lose only 8% of the rate to noise, even though fixing it needs a code
-> ② 5 copies gives $0.0086$, not enough. 7 copies fails with 4 or more flips: $\binom74p^4(1-p)^3+\binom75p^5(1-p)^2+\dots\approx0.0027$, still not enough (9 copies gives about $0.00089$). the rate is only $\frac19$ by then, which is why repetition is a bad code
-> ③ $C=1-H(0.5)=1-1=0$: the output is a fair coin flip, independent of the input, so no information gets through
+> **1** $C=1-0.081=0.92$ bits per use: you lose only 8% of the rate to noise, even though fixing it needs a code
+> **2** 5 copies gives $0.0086$, not enough. 7 copies fails with 4 or more flips: $\binom74p^4(1-p)^3+\binom75p^5(1-p)^2+\dots\approx0.0027$, still not enough (9 copies gives about $0.00089$). the rate is only $\frac19$ by then, which is why repetition is a bad code
+> **3** $C=1-H(0.5)=1-1=0$: the output is a fair coin flip, independent of the input, so no information gets through
 
 next: von Neumann asks the same question for gates, [[Triple modular redundancy]]
 

@@ -110,14 +110,14 @@ incidence angle, acceleration voltage and the surface binding energy of the mate
 - 3D reconstruction (slice and view)
 
 > [!exercise] try these
-> ① why is the ion column's resolution (4 nm) worse than the electron column's (0.7 nm), even though a Ga ion's wavelength is tiny?
-> ② you need a lamella from one failed transistor among millions. why FIB and not an ultramicrotome?
-> ③ use $E_{\max}$ to explain why a He ion microscope is gentler than a Ga FIB ($m_{\text{He}}=4.0$ u)
+> **1** why is the ion column's resolution (4 nm) worse than the electron column's (0.7 nm), even though a Ga ion's wavelength is tiny?
+> **2** you need a lamella from one failed transistor among millions. why FIB and not an ultramicrotome?
+> **3** use $E_{\max}$ to explain why a He ion microscope is gentler than a Ga FIB ($m_{\text{He}}=4.0$ u)
 
 > [!answer]-
-> ① a 30 keV Ga ion has $\lambda=\frac h{\sqrt{2mE}}\approx2\times10^{-5}$ nm, so the wavelength is irrelevant. the limit is the **spot size**: the source's energy spread and the electrostatic lenses' aberrations, plus the ion spreading out in the sample
-> ② the FIB cuts from **exactly** the spot you found in the SEM. a microtome slices blindly (and is for soft materials)
-> ③ $\frac{4(4.0)(28.1)}{(32.1)^2}=0.44$, about half Ga's 0.82, and a light ion also goes deeper instead of sputtering at the surface, so it sputters far less
+> **1** a 30 keV Ga ion has $\lambda=\frac h{\sqrt{2mE}}\approx2\times10^{-5}$ nm, so the wavelength is irrelevant. the limit is the **spot size**: the source's energy spread and the electrostatic lenses' aberrations, plus the ion spreading out in the sample
+> **2** the FIB cuts from **exactly** the spot you found in the SEM. a microtome slices blindly (and is for soft materials)
+> **3** $\frac{4(4.0)(28.1)}{(32.1)^2}=0.44$, about half Ga's 0.82, and a light ion also goes deeper instead of sputtering at the surface, so it sputters far less
 
 ## the quantum connection
 > [!extra] making qubits atom by atom

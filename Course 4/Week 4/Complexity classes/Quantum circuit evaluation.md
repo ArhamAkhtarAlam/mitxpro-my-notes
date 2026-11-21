@@ -27,10 +27,10 @@ flowchart TD
     Q -- "just run it and measure" --> B["solved in BQP"]
 ```
 
-### ① it's in BQP
+### **1** it's in BQP
 just **run the circuit** and measure the first qubit. by the promise, the output is right with probability at least $\frac23$. and if running it adds some extra errors, **repeat** a few times and take the majority to push the error back below $\frac13$
 
-### ② every BQP problem reduces to it
+### **2** every BQP problem reduces to it
 a problem in BQP practically **is** "there's a uniform quantum circuit that gets it right with probability $\frac23$" ([[Randomized and quantum computation#uniform circuit families]]). so to reduce it: write that circuit down, and hand it to quantum circuit evaluation
 
 ### the $n^2$ worry
@@ -59,16 +59,16 @@ so if (as people believe) BPP ≠ BQP, there's **no efficient classical algorith
 > in both, the circuit is the "universal" problem of the class: a problem is in the class exactly when its answer can be read off some such circuit, so writing that circuit down is the reduction
 
 > [!exercise] try these
-> ① a circuit gives 1 with probability 0.5. what does quantum circuit evaluation say about it?
-> ② one run is right with probability $\frac23$. you run it 3 times and take the majority. what's the chance the majority is right?
-> ③ a BQP problem needs $n^{6}$ gates on $n$ qubits. how long should the padded input $n'$ be so the $n'^2$ budget covers it?
-> ④ why does BQP-completeness of this problem mean simulating quantum circuits classically is probably hard?
+> **1** a circuit gives 1 with probability 0.5. what does quantum circuit evaluation say about it?
+> **2** one run is right with probability $\frac23$. you run it 3 times and take the majority. what's the chance the majority is right?
+> **3** a BQP problem needs $n^{6}$ gates on $n$ qubits. how long should the padded input $n'$ be so the $n'^2$ budget covers it?
+> **4** why does BQP-completeness of this problem mean simulating quantum circuits classically is probably hard?
 
 > [!answer]-
-> ① nothing: 0.5 breaks the promise, so the circuit isn't a valid input and any answer is allowed
-> ② at least 2 of 3 right: $3\left(\tfrac23\right)^2\tfrac13+\left(\tfrac23\right)^3=\tfrac{12}{27}+\tfrac8{27}=\tfrac{20}{27}\approx0.74$, already better than $\frac23$
-> ③ for the budget alone, $n'^2\ge n^6$ means $n'\ge n^3$. but just listing $n^6$ gates already makes the description about $n^6$ long, and then the budget is $n'^2\approx n^{12}$: way more than needed, so it's automatically fine
-> ④ a fast classical simulator would put this problem in BPP, and then (since every BQP problem reduces to it) all of BQP would be in BPP: BPP = BQP, which people believe is false
+> **1** nothing: 0.5 breaks the promise, so the circuit isn't a valid input and any answer is allowed
+> **2** at least 2 of 3 right: $3\left(\tfrac23\right)^2\tfrac13+\left(\tfrac23\right)^3=\tfrac{12}{27}+\tfrac8{27}=\tfrac{20}{27}\approx0.74$, already better than $\frac23$
+> **3** for the budget alone, $n'^2\ge n^6$ means $n'\ge n^3$. but just listing $n^6$ gates already makes the description about $n^6$ long, and then the budget is $n'^2\approx n^{12}$: way more than needed, so it's automatically fine
+> **4** a fast classical simulator would put this problem in BPP, and then (since every BQP problem reduces to it) all of BQP would be in BPP: BPP = BQP, which people believe is false
 
 previous: [[NP-complete]] · next: [[Quantum vs classical complexity]]
 

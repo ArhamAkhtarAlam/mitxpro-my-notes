@@ -187,16 +187,16 @@ isotropic samples (liquids, powders) scatter the same whatever the polarization,
 - multilayer stacks where materials and phases coexist
 
 > [!exercise] try these
-> ① a 633 nm laser, a peak at 690 nm. what's the Raman shift?
-> ② the anti-Stokes/Stokes ratio of the 520 cm⁻¹ peak went up when you raised the laser power. what happened?
-> ③ the asymmetric stretch of CO₂ shows in FTIR but not Raman. why?
-> ④ a graphene peak at 1580 cm⁻¹: at 300 K, about what fraction of those vibrations are already excited?
+> **1** a 633 nm laser, a peak at 690 nm. what's the Raman shift?
+> **2** the anti-Stokes/Stokes ratio of the 520 cm⁻¹ peak went up when you raised the laser power. what happened?
+> **3** the asymmetric stretch of CO₂ shows in FTIR but not Raman. why?
+> **4** a graphene peak at 1580 cm⁻¹: at 300 K, about what fraction of those vibrations are already excited?
 
 > [!answer]-
-> ① $10^7\left(\frac1{633}-\frac1{690}\right)=15\,798-14\,493=1305$ cm⁻¹ (near graphene's D peak)
-> ② the laser **heated** the spot: more phonons already in $v=1$, so more anti-Stokes ([[#^stokes-ratio]])
-> ③ it changes the dipole (IR active) but the polarizability change of the two bonds cancels, $\Delta\alpha=0$
-> ④ $e^{-1580\times1.4388/300}=e^{-7.58}=0.0005$, about 1 in 2000. stiff, high-frequency modes are almost all in their ground state at room temperature
+> **1** $10^7\left(\frac1{633}-\frac1{690}\right)=15\,798-14\,493=1305$ cm⁻¹ (near graphene's D peak)
+> **2** the laser **heated** the spot: more phonons already in $v=1$, so more anti-Stokes ([[#^stokes-ratio]])
+> **3** it changes the dipole (IR active) but the polarizability change of the two bonds cancels, $\Delta\alpha=0$
+> **4** $e^{-1580\times1.4388/300}=e^{-7.58}=0.0005$, about 1 in 2000. stiff, high-frequency modes are almost all in their ground state at room temperature
 
 ## the quantum connection
 > [!extra] phonons are quanta, just like photons

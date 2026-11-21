@@ -95,11 +95,11 @@ since then, tomography has been done on much bigger quantum systems, and it's st
 
 > [!exercise] try these
 > on the Bloch sphere the north pole is $|0\rangle\langle0|$ and the south pole $|1\rangle\langle1|$
-> ① which density matrices lie on the **surface** of the unit sphere? (a) pure states (b) mixed states (c) two-qubit states (d) entangled states
-> ② which density matrix sits at the **centre**? (a) a pure state (b) an entangled state (c) a two-qubit state (d) an equal mix of $|0\rangle\langle0|$ and $|1\rangle\langle1|$
+> **1** which density matrices lie on the **surface** of the unit sphere? (a) pure states (b) mixed states (c) two-qubit states (d) entangled states
+> **2** which density matrix sits at the **centre**? (a) a pure state (b) an entangled state (c) a two-qubit state (d) an equal mix of $|0\rangle\langle0|$ and $|1\rangle\langle1|$
 
 > [!answer]-
-> ① (a): $|\vec r|=1$ exactly when $\text{tr}\,\rho^2=1$. mixed states are inside
-> ② (d): $\vec r=0$ gives $\rho=\frac I2=\frac12|0\rangle\langle0|+\frac12|1\rangle\langle1|$, the maximally mixed state. the Bloch sphere only shows single-qubit states, so (b) and (c) can't be anywhere on it
+> **1** (a): $|\vec r|=1$ exactly when $\text{tr}\,\rho^2=1$. mixed states are inside
+> **2** (d): $\vec r=0$ gives $\rho=\frac I2=\frac12|0\rangle\langle0|+\frac12|1\rangle\langle1|$, the maximally mixed state. the Bloch sphere only shows single-qubit states, so (b) and (c) can't be anywhere on it
 
 see also [[Process tomography]], [[Benchmarking quantum systems]], [[Density matrix]]

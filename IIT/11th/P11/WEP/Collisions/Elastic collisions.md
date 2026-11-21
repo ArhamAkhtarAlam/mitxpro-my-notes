@@ -4,15 +4,15 @@ in an **elastic** collision both momentum **and** kinetic energy are kept. in 1D
 
 **momentum**:
 $$
-m_1u_1+m_2u_2=m_1v_1+m_2v_2\ \Rightarrow\ m_1(u_1-v_1)=m_2(v_2-u_2)\qquad①
+m_1u_1+m_2u_2=m_1v_1+m_2v_2\ \Rightarrow\ m_1(u_1-v_1)=m_2(v_2-u_2)\qquad\textbf{1}
 $$
 
 **KE**:
 $$
-\tfrac12m_1u_1^2+\tfrac12m_2u_2^2=\tfrac12m_1v_1^2+\tfrac12m_2v_2^2\ \Rightarrow\ m_1(u_1^2-v_1^2)=m_2(v_2^2-u_2^2)\qquad②
+\tfrac12m_1u_1^2+\tfrac12m_2u_2^2=\tfrac12m_1v_1^2+\tfrac12m_2v_2^2\ \Rightarrow\ m_1(u_1^2-v_1^2)=m_2(v_2^2-u_2^2)\qquad\textbf{2}
 $$
 
-divide ② by ① (the difference of squares cancels against ①):
+divide **2** by **1** (the difference of squares cancels against **1**):
 $$
 \begin{aligned}
 u_1+v_1&=v_2+u_2\\
@@ -57,14 +57,14 @@ $$
 if the spring has **another** free block on its far end, the answer changes: see [[Two blocks and a spring]]
 
 > [!exercise] try these
-> ① a 2 kg ball at 3 m/s hits a 1 kg ball at rest, elastically. find both velocities after
-> ② a ball at 5 m/s hits an identical ball moving the **same** way at 2 m/s, elastically. after?
-> ③ a ball is dropped from 1.8 m onto a floor with $e=0.5$. how high does it bounce?
+> **1** a 2 kg ball at 3 m/s hits a 1 kg ball at rest, elastically. find both velocities after
+> **2** a ball at 5 m/s hits an identical ball moving the **same** way at 2 m/s, elastically. after?
+> **3** a ball is dropped from 1.8 m onto a floor with $e=0.5$. how high does it bounce?
 
 > [!answer]-
-> ① $3-0=v_2-v_1$ and $2(3)=2v_1+v_2$: $v_1=1$ m/s, $v_2=4$ m/s
-> ② equal masses swap: $v_1=2$, $v_2=5$ m/s
-> ③ it hits at 6 m/s, leaves at $0.5\times6=3$ m/s, rises $\frac{9}{20}=0.45$ m ($e^2$ times the height)
+> **1** $3-0=v_2-v_1$ and $2(3)=2v_1+v_2$: $v_1=1$ m/s, $v_2=4$ m/s
+> **2** equal masses swap: $v_1=2$, $v_2=5$ m/s
+> **3** it hits at 6 m/s, leaves at $0.5\times6=3$ m/s, rises $\frac{9}{20}=0.45$ m ($e^2$ times the height)
 
 see also [[Momentum]], [[Perfectly inelastic collisions]]
 

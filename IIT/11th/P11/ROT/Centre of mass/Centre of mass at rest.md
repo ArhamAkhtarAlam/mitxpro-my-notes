@@ -88,14 +88,14 @@ momentum at the top: $mu\cos\theta=\frac m2(0)+\frac m2v'$, so the other half le
 it goes back the way it came and lands at the launch point, 0. so $\frac{0+x}{2}=R$, $x=2R$. momentum: $mu\cos\theta=-\frac m2u\cos\theta+\frac m2v'$, so $v'=3u\cos\theta$
 
 > [!exercise] try these
-> ① a 60 kg person walks 3 m along a 120 kg raft. how far does the raft move?
-> ② a shell explodes at the top into halves; one lands at the launch point. where's the other?
-> ③ a 50 kg man at the back of a 150 kg boat is 10 m from the shore. he walks 4 m to the front (towards the shore). how far from the shore is he now?
+> **1** a 60 kg person walks 3 m along a 120 kg raft. how far does the raft move?
+> **2** a shell explodes at the top into halves; one lands at the launch point. where's the other?
+> **3** a 50 kg man at the back of a 150 kg boat is 10 m from the shore. he walks 4 m to the front (towards the shore). how far from the shore is he now?
 
 > [!answer]-
-> ① $\frac{60}{180}\times3=1$ m backwards
-> ② at $2R$ (the retracing case)
-> ③ the boat moves back $\frac{50}{200}\times4=1$ m, so he moves $3$ m towards the shore: 7 m away
+> **1** $\frac{60}{180}\times3=1$ m backwards
+> **2** at $2R$ (the retracing case)
+> **3** the boat moves back $\frac{50}{200}\times4=1$ m, so he moves $3$ m towards the shore: 7 m away
 
 see also [[Centre of mass]], [[Momentum]], [[Projectile motion]]
 

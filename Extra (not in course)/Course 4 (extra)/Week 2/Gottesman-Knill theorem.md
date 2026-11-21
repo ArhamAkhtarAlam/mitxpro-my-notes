@@ -53,13 +53,13 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① track the stabilizers of $|00\rangle$ through $H_1$ then CNOT$_{12}$. which Bell state is it?
-> ② in the GHZ state, what do you get if you measure $Z_1Z_3$?
-> ③ how many bits does the tableau need for 50 qubits? compare 50 qubits' state vector (16 bytes per amplitude)
+> **1** track the stabilizers of $|00\rangle$ through $H_1$ then CNOT$_{12}$. which Bell state is it?
+> **2** in the GHZ state, what do you get if you measure $Z_1Z_3$?
+> **3** how many bits does the tableau need for 50 qubits? compare 50 qubits' state vector (16 bytes per amplitude)
 
 > [!answer]-
-> ① $Z_1,Z_2\xrightarrow{H_1}X_1,Z_2\xrightarrow{\text{CNOT}}X_1X_2,\ Z_1Z_2$: the state with $XX=+1$ and $ZZ=+1$, which is $|\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt2}$
-> ② $Z_1Z_3=(Z_1Z_2)(Z_2Z_3)$ is a product of stabilizers, so it's certain: $+1$ (the bits always agree)
-> ③ $2\cdot50\cdot101=10100$ bits, about 1.3 kB. the state vector is $16\times2^{50}\approx1.8\times10^{16}$ bytes, about 18 petabytes
+> **1** $Z_1,Z_2\xrightarrow{H_1}X_1,Z_2\xrightarrow{\text{CNOT}}X_1X_2,\ Z_1Z_2$: the state with $XX=+1$ and $ZZ=+1$, which is $|\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt2}$
+> **2** $Z_1Z_3=(Z_1Z_2)(Z_2Z_3)$ is a product of stabilizers, so it's certain: $+1$ (the bits always agree)
+> **3** $2\cdot50\cdot101=10100$ bits, about 1.3 kB. the state vector is $16\times2^{50}\approx1.8\times10^{16}$ bytes, about 18 petabytes
 
 see also [[Clifford group]], [[Stabilizer codes]], [[Solovay-Kitaev theorem]], [[Quantum simulation]], textbook: [[Measurement and the Gottesman-Knill theorem]]

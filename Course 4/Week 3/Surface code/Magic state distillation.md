@@ -64,16 +64,16 @@ a big square chip split up into
 the factory is large but not the main cost. not long ago, 90% or more of the chip had to make $T$ states for reasonable run times. it's much less now thanks to better distillation and to quantum chemistry algorithms that need far fewer $T$ gates
 
 > [!exercise] try these
-> ① your injected $T$ states have error $p=2\times10^{-3}$. what's the error after one level of 15 to 1?
-> ② an injection succeeds half the time. with room for 10 attempts, how often do you end up with no $T$ state?
-> ③ an algorithm needs $10^8$ $T$ gates and must fail less than 1% of the time. is one level of distillation at $p=10^{-3}$ enough?
-> ④ why not just apply $T$ transversally to every data qubit?
+> **1** your injected $T$ states have error $p=2\times10^{-3}$. what's the error after one level of 15 to 1?
+> **2** an injection succeeds half the time. with room for 10 attempts, how often do you end up with no $T$ state?
+> **3** an algorithm needs $10^8$ $T$ gates and must fail less than 1% of the time. is one level of distillation at $p=10^{-3}$ enough?
+> **4** why not just apply $T$ transversally to every data qubit?
 
 > [!answer]-
-> ① $35\times(2\times10^{-3})^3=35\times8\times10^{-9}=2.8\times10^{-7}$
-> ② $0.5^{10}\approx10^{-3}$, about 1 time in 1000
-> ③ $10^8\times3.5\times10^{-8}=3.5$ expected errors, way more than 0.01: no, you need a second level ($10^8\times10^{-21}$ is tiny)
-> ④ on the surface code that's not a valid logical gate, and by the Eastin-Knill theorem no code has a universal transversal set, so some gate always has to be done another way
+> **1** $35\times(2\times10^{-3})^3=35\times8\times10^{-9}=2.8\times10^{-7}$
+> **2** $0.5^{10}\approx10^{-3}$, about 1 time in 1000
+> **3** $10^8\times3.5\times10^{-8}=3.5$ expected errors, way more than 0.01: no, you need a second level ($10^8\times10^{-21}$ is tiny)
+> **4** on the surface code that's not a valid logical gate, and by the Eastin-Knill theorem no code has a universal transversal set, so some gate always has to be done another way
 
 see also [[Clifford group]], [[Gottesman-Knill theorem]], [[Teleportation]], [[Cost of fault tolerance]]
 

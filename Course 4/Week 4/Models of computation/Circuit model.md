@@ -51,16 +51,16 @@ flowchart TD
 > ==circuits measure cost cleanly (width = memory, depth = time, size = effort), but a circuit only handles one input length==, so a whole problem needs a family of them
 
 > [!exercise] try these
-> ① a circuit on 5 qubits has gates on (1,2), (3,4), (2,3), (4,5), (1,2). gates in a layer can't share a qubit, and a gate must come after the earlier gates it shares qubits with. what are the width, size and smallest depth?
-> ② why does a quantum circuit need ancillas when a classical one doesn't?
-> ③ making an $n$ qubit GHZ state with a chain of CNOTs (1→2, 2→3, ...): what are the size and depth? can you do better on depth?
-> ④ why isn't a circuit family enough, by itself, to describe an algorithm?
+> **1** a circuit on 5 qubits has gates on (1,2), (3,4), (2,3), (4,5), (1,2). gates in a layer can't share a qubit, and a gate must come after the earlier gates it shares qubits with. what are the width, size and smallest depth?
+> **2** why does a quantum circuit need ancillas when a classical one doesn't?
+> **3** making an $n$ qubit GHZ state with a chain of CNOTs (1→2, 2→3, ...): what are the size and depth? can you do better on depth?
+> **4** why isn't a circuit family enough, by itself, to describe an algorithm?
 
 > [!answer]-
-> ① width 5, size 5, depth **3**. layer 1: (1,2) and (3,4). layer 2: (2,3), which waits for both, and (4,5), which only waits for (3,4) and shares nothing with (2,3). layer 3: the last (1,2), which waits for (2,3)
-> ② unitary gates have as many outputs as inputs, so they can't make new wires; all the workspace has to be there from the start, as $|0\rangle$ ancillas
-> ③ size $n-1$, depth $n-1$ (each CNOT waits for the previous one). yes: once qubits 1 and 2 are entangled, both can be controls in the next layer, so the number of entangled qubits doubles each layer: depth $\lceil\log_2n\rceil$, same size
-> ④ it's one circuit per $n$, chosen with no rules, so it could hide uncomputable information (the halting example). an algorithm needs one finite recipe for all $n$
+> **1** width 5, size 5, depth **3**. layer 1: (1,2) and (3,4). layer 2: (2,3), which waits for both, and (4,5), which only waits for (3,4) and shares nothing with (2,3). layer 3: the last (1,2), which waits for (2,3)
+> **2** unitary gates have as many outputs as inputs, so they can't make new wires; all the workspace has to be there from the start, as $|0\rangle$ ancillas
+> **3** size $n-1$, depth $n-1$ (each CNOT waits for the previous one). yes: once qubits 1 and 2 are entangled, both can be controls in the next layer, so the number of entangled qubits doubles each layer: depth $\lceil\log_2n\rceil$, same size
+> **4** it's one circuit per $n$, chosen with no rules, so it could hide uncomputable information (the halting example). an algorithm needs one finite recipe for all $n$
 
 next: [[Randomized and quantum computation]]
 

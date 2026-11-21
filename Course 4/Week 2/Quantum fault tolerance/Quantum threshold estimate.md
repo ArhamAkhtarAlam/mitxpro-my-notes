@@ -34,14 +34,14 @@ $$
 > very. it leaves out the gates that make and check the cat states, the error correction on the **second** block, and the fact that the CNOT alone isn't universal ([[Transversal gates on stabilizer codes#but not universal]]). it also counts every pair of failures as fatal, which overcounts (like [[Fault-tolerant procedure#examples: computing NOT|15 being an overcount]] for the NAND). careful counts give thresholds from around $10^{-5}$ up to about $10^{-2}$ depending on the code and the noise model; the [[Surface code]] reaches about 1%
 
 > [!exercise] try these
-> ① with the threshold $\frac1{3081}$, is a gate with error $10^{-3}$ good enough? what about $10^{-4}$?
-> ② if each syndrome measurement only had to be done **once**, what would the count and threshold be?
-> ③ for $p=10^{-4}$, how many levels of recursion get each encoded gate below $10^{-15}$? (use [[Cost of fault tolerance#^levels-needed]] with $N/\epsilon$ replaced by $10^{15}$)
+> **1** with the threshold $\frac1{3081}$, is a gate with error $10^{-3}$ good enough? what about $10^{-4}$?
+> **2** if each syndrome measurement only had to be done **once**, what would the count and threshold be?
+> **3** for $p=10^{-4}$, how many levels of recursion get each encoded gate below $10^{-15}$? (use [[Cost of fault tolerance#^levels-needed]] with $N/\epsilon$ replaced by $10^{15}$)
 
 > [!answer]-
-> ① $10^{-3}>3.2\times10^{-4}$: no, adding levels makes it worse. $10^{-4}$: yes, it's below
-> ② $7+6\times4=31$ gates, $\binom{31}2=465$, so $p_{th}\approx2.2\times10^{-3}$. repeating the measurements costs almost a factor of 7 in the threshold
-> ③ $p_{th}/p=3.25$, $\log_{10}3.25=0.511$. $\log_{10}(10^{15}/3081)=11.5$. so $2^k\geq22.5$ → $k=5$. close to the threshold, so lots of levels
+> **1** $10^{-3}>3.2\times10^{-4}$: no, adding levels makes it worse. $10^{-4}$: yes, it's below
+> **2** $7+6\times4=31$ gates, $\binom{31}2=465$, so $p_{th}\approx2.2\times10^{-3}$. repeating the measurements costs almost a factor of 7 in the threshold
+> **3** $p_{th}/p=3.25$, $\log_{10}3.25=0.511$. $\log_{10}(10^{15}/3081)=11.5$. so $2^k\geq22.5$ → $k=5$. close to the threshold, so lots of levels
 
 see also [[Threshold theorem]], [[Cost of fault tolerance]], [[Fault-tolerant measurement]]
 

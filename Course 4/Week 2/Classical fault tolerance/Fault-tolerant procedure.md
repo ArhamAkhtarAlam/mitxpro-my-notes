@@ -104,16 +104,16 @@ so it's fault tolerant. the same idea for gates between two blocks (like a CNOT)
 > the [[Fault-tolerant NAND gate]] bound counts all $\binom62=15$ pairs of failures. with perfect inputs only some pairs really break it: 2 NANDs (3 pairs) or 2 MAJs (3 pairs) give 2 wrong outputs, but a NAND plus a MAJ (9 pairs) gives at most 1. so 6 fault paths, not 15. the real count also has to include an error arriving on the inputs from the previous gate, which is why the simple bound $15p^2$ is the safe one to use
 
 > [!exercise] try these
-> ① in the fault-tolerant NOT, what if two NOT gates fail? two MAJ gates?
-> ② "3 NOT gates and no voting at all" also gives at most one error per block from one failure. so why bother with the majority gates?
-> ③ a construction has 10 components and one of them can, by failing alone, put 2 errors in a block. its gates fail with $p=10^{-3}$. roughly how often does the block fail?
-> ④ build XOR from NAND gates (4 is enough)
+> **1** in the fault-tolerant NOT, what if two NOT gates fail? two MAJ gates?
+> **2** "3 NOT gates and no voting at all" also gives at most one error per block from one failure. so why bother with the majority gates?
+> **3** a construction has 10 components and one of them can, by failing alone, put 2 errors in a block. its gates fail with $p=10^{-3}$. roughly how often does the block fail?
+> **4** build XOR from NAND gates (4 is enough)
 
 > [!answer]-
-> ① two NOTs: each voter sees 2 wrong out of 3, so all 3 outputs are wrong. two MAJs: 2 wrong outputs. both are 2 failures, so they're the $p^2$ terms the threshold counts
-> ② errors coming **in** would pile up: with no voting, one wrong input wire stays wrong, and the next failure adds a second error to the same block. the majority gates are the error correction that resets each block to at most one error
-> ③ that one component alone gives $p_{\text{fail}}\approx p=10^{-3}$, no better than an unencoded gate, plus the $cp^2$ terms. the encoding is wasted
-> ④ $n=a\,\text{NAND}\,b$, then $a\oplus b=(a\,\text{NAND}\,n)\ \text{NAND}\ (b\,\text{NAND}\,n)$
+> **1** two NOTs: each voter sees 2 wrong out of 3, so all 3 outputs are wrong. two MAJs: 2 wrong outputs. both are 2 failures, so they're the $p^2$ terms the threshold counts
+> **2** errors coming **in** would pile up: with no voting, one wrong input wire stays wrong, and the next failure adds a second error to the same block. the majority gates are the error correction that resets each block to at most one error
+> **3** that one component alone gives $p_{\text{fail}}\approx p=10^{-3}$, no better than an unencoded gate, plus the $cp^2$ terms. the encoding is wasted
+> **4** $n=a\,\text{NAND}\,b$, then $a\oplus b=(a\,\text{NAND}\,n)\ \text{NAND}\ (b\,\text{NAND}\,n)$
 
 see also [[Fault-tolerant NAND gate]], [[Recursive fault tolerance#so, the principles of classical fault tolerance]], [[Transversal gates]], [[Fault-tolerant quantum computing]]
 

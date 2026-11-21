@@ -246,18 +246,18 @@ alternate **sputtering** (Ar$^+$ ion beam etches the surface a bit) and scanning
 - work function / band alignments (with [[UPS]])
 
 > [!exercise] try these
-> ① with Mg $K_\alpha$ you see a peak at $KE=964.3$ eV ($\phi=4.5$ eV). what's its binding energy, and what element could it be?
-> ② you switch from Al to Mg and a peak stays at the same $KE$. what is it?
-> ③ what fraction of the signal comes from deeper than 6 nm, if $\lambda=2$ nm?
-> ④ a Si 2p spectrum has peaks at 99.4 eV and 103.4 eV. what's on the surface?
-> ⑤ ARXPS gives $R=0.70$ with $\lambda=3$ nm. how thick is the oxide?
+> **1** with Mg $K_\alpha$ you see a peak at $KE=964.3$ eV ($\phi=4.5$ eV). what's its binding energy, and what element could it be?
+> **2** you switch from Al to Mg and a peak stays at the same $KE$. what is it?
+> **3** what fraction of the signal comes from deeper than 6 nm, if $\lambda=2$ nm?
+> **4** a Si 2p spectrum has peaks at 99.4 eV and 103.4 eV. what's on the surface?
+> **5** ARXPS gives $R=0.70$ with $\lambda=3$ nm. how thick is the oxide?
 
 > [!answer]-
-> ① $BE=1253.6-964.3-4.5=284.8$ eV: C 1s, the adventitious carbon that's on everything
-> ② an **Auger** peak: its $KE$ only depends on the atom
-> ③ $e^{-6/2}=e^{-3}=0.05$, so 5% ([[#^escape-probability]])
-> ④ silicon (99.4) with a native $\text{SiO}_2$ on top (103.4, the Si$^{4+}$ state, shifted +4 eV)
-> ⑤ $d=-3\ln0.70=-3\times(-0.357)=1.07$ nm
+> **1** $BE=1253.6-964.3-4.5=284.8$ eV: C 1s, the adventitious carbon that's on everything
+> **2** an **Auger** peak: its $KE$ only depends on the atom
+> **3** $e^{-6/2}=e^{-3}=0.05$, so 5% ([[#^escape-probability]])
+> **4** silicon (99.4) with a native $\text{SiO}_2$ on top (103.4, the Si$^{4+}$ state, shifted +4 eV)
+> **5** $d=-3\ln0.70=-3\times(-0.357)=1.07$ nm
 
 ## the quantum connection
 > [!extra] the photoelectric effect is where photons came from

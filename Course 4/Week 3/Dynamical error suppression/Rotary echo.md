@@ -78,14 +78,14 @@ flowchart TD
 ==it uses the same pulses we already use for logic ($\pi$ pulses), and lowers the error rates from coherent, reversible errors==. lower physical error rates mean less overhead for full error correction ([[Threshold theorem]]: the further below threshold, the fewer levels of coding you need)
 
 > [!exercise] try these
-> ① a rotary echo is meant to rotate by $\pi$ around $+x$, then $\pi$ around $-x$. a run's drive is 5% too strong. what does it do in each half, and where does it end up?
-> ② does a rotary echo help with noise in the qubit **frequency** during the drive?
-> ③ is dynamical decoupling error correction? why or why not?
+> **1** a rotary echo is meant to rotate by $\pi$ around $+x$, then $\pi$ around $-x$. a run's drive is 5% too strong. what does it do in each half, and where does it end up?
+> **2** does a rotary echo help with noise in the qubit **frequency** during the drive?
+> **3** is dynamical decoupling error correction? why or why not?
 
 > [!answer]-
-> ① the first half does $1.05\pi$ instead of $\pi$ (it overshoots $|1\rangle$). the second half does $-1.05\pi$. the total is $0$: back at $|0\rangle$ exactly
-> ② not directly: it's built to cancel **amplitude** errors. frequency noise during free evolution is what the spin echo and CPMG handle
-> ③ no: it's open loop suppression. it never measures anything, so it can't catch errors it isn't built for (the "defender knocking the ball out" errors, see [[Dephasing and the filter function#the lacrosse picture]])
+> **1** the first half does $1.05\pi$ instead of $\pi$ (it overshoots $|1\rangle$). the second half does $-1.05\pi$. the total is $0$: back at $|0\rangle$ exactly
+> **2** not directly: it's built to cancel **amplitude** errors. frequency noise during free evolution is what the spin echo and CPMG handle
+> **3** no: it's open loop suppression. it never measures anything, so it can't catch errors it isn't built for (the "defender knocking the ball out" errors, see [[Dephasing and the filter function#the lacrosse picture]])
 
 see also [[Stochastic noise]], [[Composite pulses]], [[Fault-tolerant quantum computing]]
 

@@ -72,14 +72,14 @@ with no pulses, $y=1$ throughout and $g=\text{sinc}^2(\omega t/2)$
 > for a Gaussian variable, $\langle e^{-i\tilde\varphi}\rangle=e^{-\langle\tilde\varphi^2\rangle/2}$. squaring the time integral gives a double integral of the autocorrelation $\langle\tilde E(t_1)\tilde E(t_2)\rangle$, and [[Noise power spectral density#Wiener–Khinchin theorem|Wiener–Khinchin]] turns that into $\frac1{2\pi}\int S(\omega)\left|\int_0^ty\,e^{i\omega t'}dt'\right|^2d\omega$
 
 > [!exercise] try these
-> ① $T_1=50\,\mu$s and $T_\phi=100\,\mu$s. what's $T_2$?
-> ② a qubit is at a sweet spot, $\partial E_{01}/\partial\Phi=0$. how much does flux noise dephase it (to this order)?
-> ③ why can't dynamical decoupling help with $T_1$?
+> **1** $T_1=50\,\mu$s and $T_\phi=100\,\mu$s. what's $T_2$?
+> **2** a qubit is at a sweet spot, $\partial E_{01}/\partial\Phi=0$. how much does flux noise dephase it (to this order)?
+> **3** why can't dynamical decoupling help with $T_1$?
 
 > [!answer]-
-> ① $\frac1{T_2}=\frac1{100}+\frac1{100}=\frac1{50}$, so $T_2=50\,\mu$s
-> ② not at all: the exponent is proportional to $(\partial E_{01}/\partial\Phi)^2=0$. (higher order terms still dephase it a little)
-> ③ relaxation gives energy away to the environment, which is irreversible. pulses can only refocus coherent phase errors
+> **1** $\frac1{T_2}=\frac1{100}+\frac1{100}=\frac1{50}$, so $T_2=50\,\mu$s
+> **2** not at all: the exponent is proportional to $(\partial E_{01}/\partial\Phi)^2=0$. (higher order terms still dephase it a little)
+> **3** relaxation gives energy away to the environment, which is irreversible. pulses can only refocus coherent phase errors
 
 next: [[Dynamical decoupling]] (actual pulse sequences and their filter functions)
 

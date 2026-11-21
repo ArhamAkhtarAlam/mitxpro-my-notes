@@ -102,14 +102,14 @@ transistors are now **way** below what light can see (the gate and fin are a few
 > you can't focus it. there are no good lenses for X-rays (they pass straight through almost everything), but electrons are charged so a magnetic field can bend and focus them easily. that's why [[XRD]] measures the diffraction pattern instead of an image: it does the Fourier transform but has no lens to undo it
 
 > [!exercise] try these
-> ① what resolution could a UV microscope (λ = 250 nm, $n\sin\alpha=0.9$) get?
-> ② roughly what wavelength does a 5 kV SEM beam have?
-> ③ why does the SEM's resolution (~1 nm) come nowhere near its wavelength?
+> **1** what resolution could a UV microscope (λ = 250 nm, $n\sin\alpha=0.9$) get?
+> **2** roughly what wavelength does a 5 kV SEM beam have?
+> **3** why does the SEM's resolution (~1 nm) come nowhere near its wavelength?
 
 > [!answer]-
-> ① $d=\frac{0.61\times250}{0.9}=169$ nm. better, but still no use for transistors
-> ② $\frac{1.226}{\sqrt{5000}}=0.0173$ nm $=17$ pm
-> ③ the lens aberrations and the size of the interaction volume set the limit, not $\lambda$ ([[SEM#what hits the sample, what comes out]])
+> **1** $d=\frac{0.61\times250}{0.9}=169$ nm. better, but still no use for transistors
+> **2** $\frac{1.226}{\sqrt{5000}}=0.0173$ nm $=17$ pm
+> **3** the lens aberrations and the size of the interaction volume set the limit, not $\lambda$ ([[SEM#what hits the sample, what comes out]])
 
 ## the quantum connection
 > [!extra] matter waves

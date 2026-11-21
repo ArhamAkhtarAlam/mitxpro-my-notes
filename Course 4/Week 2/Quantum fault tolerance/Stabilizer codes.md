@@ -159,18 +159,18 @@ the **distance** $d$ is the weight (number of non-identity entries) of the small
 > stabilizer codes are the quantum version of classical **linear** codes: generators play the role of the parity check matrix ([[Linear algebra mod 2]])
 
 > [!exercise] try these
-> ① 4 independent generators on 6 qubits: how many logical qubits?
-> ② find the syndrome of $X_2$ for the bit flip code (generators $Z_1Z_2$, $Z_2Z_3$)
-> ③ why is the bit flip code's distance only 1?
-> ④ the 7 qubit code has 6 generators. how many syndromes, and how many single-qubit Pauli errors?
-> ⑤ which kind of error is $Z_1Z_2$ for the Bell state's stabilizer? and $Y_1Y_2$?
+> **1** 4 independent generators on 6 qubits: how many logical qubits?
+> **2** find the syndrome of $X_2$ for the bit flip code (generators $Z_1Z_2$, $Z_2Z_3$)
+> **3** why is the bit flip code's distance only 1?
+> **4** the 7 qubit code has 6 generators. how many syndromes, and how many single-qubit Pauli errors?
+> **5** which kind of error is $Z_1Z_2$ for the Bell state's stabilizer? and $Y_1Y_2$?
 
 > [!answer]-
-> ① $k=6-4=2$
-> ② $X_2$ anticommutes with both (they each have a $Z$ on qubit 2): syndrome 11, matching [[Syndrome diagnosis and recovery#^z-syndrome-table]]
-> ③ $Z_1$ commutes with both generators but isn't in $S$, so it's a logical operator of weight 1: a single phase flip changes the logical state without being detected
-> ④ $2^6=64$ syndromes, for $1+21=22$ cases. lots to spare: an $X$ error is read by the 3 $Z$ checks and a $Z$ error by the 3 $X$ checks separately
-> ⑤ $Z_1Z_2\in S$: harmless. $Y_1Y_2=-(-Y_1Y_2)$: it's $-1$ times an element of $S$, so it multiplies $|\Phi^+\rangle$ by $-1$, a global phase, also harmless here (with $k=0$ there's nothing logical to damage)
+> **1** $k=6-4=2$
+> **2** $X_2$ anticommutes with both (they each have a $Z$ on qubit 2): syndrome 11, matching [[Syndrome diagnosis and recovery#^z-syndrome-table]]
+> **3** $Z_1$ commutes with both generators but isn't in $S$, so it's a logical operator of weight 1: a single phase flip changes the logical state without being detected
+> **4** $2^6=64$ syndromes, for $1+21=22$ cases. lots to spare: an $X$ error is read by the 3 $Z$ checks and a $Z$ error by the 3 $X$ checks separately
+> **5** $Z_1Z_2\in S$: harmless. $Y_1Y_2=-(-Y_1Y_2)$: it's $-1$ times an element of $S$, so it multiplies $|\Phi^+\rangle$ by $-1$, a global phase, also harmless here (with $k=0$ there's nothing logical to damage)
 
 see also [[Transversal gates on stabilizer codes]], [[CSS codes]], [[Quantum error-correction conditions]], [[Parity measurement]], textbook: [[The stabilizer formalism]], [[Stabilizer code constructions]], maths: [[Pauli matrices]], [[Groups]]
 

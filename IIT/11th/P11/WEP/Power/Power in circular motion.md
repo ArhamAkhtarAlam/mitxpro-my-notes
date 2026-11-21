@@ -67,14 +67,14 @@ $$
 >
 
 > [!exercise] try these
-> ① a particle goes round a circle at a steady 5 m/s. power of the net force?
-> ② $K=3t^2$ for a 1.5 kg particle on a 1 m circle. find $F_t$ and $P$ at $t=1$ s
-> ③ $K=s^2$, $m=2$ kg. find $F_t$ when $s=3$ m
+> **1** a particle goes round a circle at a steady 5 m/s. power of the net force?
+> **2** $K=3t^2$ for a 1.5 kg particle on a 1 m circle. find $F_t$ and $P$ at $t=1$ s
+> **3** $K=s^2$, $m=2$ kg. find $F_t$ when $s=3$ m
 
 > [!answer]-
-> ① zero: uniform circular motion, the force is all centripetal
-> ② $\tfrac12(1.5)v^2=3t^2$ → $v=2t$, $a_t=2$, $F_t=3$ N; $P=\frac{dK}{dt}=6t=6$ W (check $3\times2=6$ ✓)
-> ③ $F_t=2s=6$ N
+> **1** zero: uniform circular motion, the force is all centripetal
+> **2** $\tfrac12(1.5)v^2=3t^2$ → $v=2t$, $a_t=2$, $F_t=3$ N; $P=\frac{dK}{dt}=6t=6$ W (check $3\times2=6$ ✓)
+> **3** $F_t=2s=6$ N
 
 see also [[Power]], [[Leaving a circular track]]
 

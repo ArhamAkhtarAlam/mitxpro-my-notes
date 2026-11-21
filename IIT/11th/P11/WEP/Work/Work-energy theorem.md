@@ -19,7 +19,7 @@ the recipe for every problem below:
 
 all start from rest, $g=10\,\text{m/s}^2$, run for 2 s
 
-## ① pulled along a rough floor
+## **1** pulled along a rough floor
 a 2 kg block, a $10\sqrt2$ N pull at $45°$ above the horizontal, $\mu_k=0.1$
 - the pull has parts $10\sqrt2\cos45°=10$ N forward and $10$ N up
 - vertical: $N+10=20$, so $N=10$ N (the pull lifts some of the weight, so friction is smaller)
@@ -38,7 +38,7 @@ W_\text{total}&=90-9=81\ \text{J}\\
 \end{aligned}
 $$
 
-## ② pushed up a smooth 30° slope
+## **2** pushed up a smooth 30° slope
 2 kg, force $F$ along the slope, it accelerates **up** at $2\,\text{m/s}^2$
 - along the slope: $F-mg\sin30°=ma$, so $F-10=4$, $F=14$ N
 - ⊥ to the slope: $N=mg\cos30°=10\sqrt3$ N
@@ -52,7 +52,7 @@ W_\text{total}&=56-40=16\ \text{J}\\
 \end{aligned}
 $$
 
-## ③ held back on a rough 60° slope
+## **3** held back on a rough 60° slope
 2 kg, $\mu_k=0.1$, a force $F$ up the slope, and the block slides **down** with $a=0.4\,\text{m/s}^2$
 - ⊥ to the slope: $N=mg\cos60°=10$ N, so $f=1$ N, pointing **up** the slope (against the motion)
 - along the slope (down = positive): $mg\sin60°-F-f=ma$, so $10\sqrt3-F-1=0.8$, $F=10\sqrt3-1.8\approx15.5$ N
@@ -68,7 +68,7 @@ W_\text{total}&=-8\sqrt3+1.44-0.8+8\sqrt3=0.64\ \text{J}\\
 \end{aligned}
 $$
 
-## ④ pushed horizontally up a rough 30° slope
+## **4** pushed horizontally up a rough 30° slope
 2 kg, $\mu_k=0.1$, a **horizontal** force $F$, the block goes up the slope at $a=2\,\text{m/s}^2$. now $F$ also presses the block into the slope, so it changes $N$ and the friction
 - ⊥ to the slope: $N=mg\cos30°+F\sin30°=10\sqrt3+\frac F2$
 - along the slope: $F\cos30°-mg\sin30°-\mu_kN=ma$
@@ -93,17 +93,17 @@ W_\text{total}&\approx66.8-40-10.8=16\ \text{J}=\Delta K\ ✓
 $$
 
 > [!eg] the same 16 J twice
-> ② and ④ both end at 4 m/s after 4 m, so both have $\Delta K=16$ J. the forces are completely different (④ pushes harder, but wastes some of it pressing into the slope and on friction); the **total** comes out the same
+> **2** and **4** both end at 4 m/s after 4 m, so both have $\Delta K=16$ J. the forces are completely different (**4** pushes harder, but wastes some of it pressing into the slope and on friction); the **total** comes out the same
 
 > [!exercise] try these
-> ① a 1 kg ball is thrown straight up at 10 m/s. use the theorem to find how high it goes
-> ② a 4 kg block slides 5 m on a floor with $\mu_k=0.2$ and stops. how fast was it going?
-> ③ in ① of the worked problems, what would the KE be after 2 s if the floor were smooth?
+> **1** a 1 kg ball is thrown straight up at 10 m/s. use the theorem to find how high it goes
+> **2** a 4 kg block slides 5 m on a floor with $\mu_k=0.2$ and stops. how fast was it going?
+> **3** in **1** of the worked problems, what would the KE be after 2 s if the floor were smooth?
 
 > [!answer]-
-> ① only gravity works: $-mgh=0-\tfrac12mu^2$, $h=\frac{u^2}{2g}=5$ m
-> ② $-\mu_kmgs=0-\tfrac12mu^2$: $u=\sqrt{2\mu_kgs}=\sqrt{20}\approx4.5$ m/s
-> ③ $a=5\,\text{m/s}^2$, $s=10$ m, $W=10\times10=100$ J $=\Delta K$ (check: $v=10$, $\tfrac12(2)(100)=100$ ✓)
+> **1** only gravity works: $-mgh=0-\tfrac12mu^2$, $h=\frac{u^2}{2g}=5$ m
+> **2** $-\mu_kmgs=0-\tfrac12mu^2$: $u=\sqrt{2\mu_kgs}=\sqrt{20}\approx4.5$ m/s
+> **3** $a=5\,\text{m/s}^2$, $s=10$ m, $W=10\times10=100$ J $=\Delta K$ (check: $v=10$, $\tfrac12(2)(100)=100$ ✓)
 
 see also [[Work done by a force]], [[Friction]], [[Conservation of mechanical energy]]
 

@@ -313,7 +313,7 @@ HHL got rid of the $N$, so now look at the **other** numbers. they didn't get an
 
 one way to think about it: "quantum circuits only do unitary things" is more of a **guideline** than a hard rule
 - $\kappa=1$: $A$ is unitary, so inverting it is easy and $\kappa$ costs nothing
-- a slightly bigger $\kappa$: $A^{-1}$ is **slightly non-unitary**, and you pay only a slightly longer run time (the filter in step ③ fails a bit more often)
+- a slightly bigger $\kappa$: $A^{-1}$ is **slightly non-unitary**, and you pay only a slightly longer run time (the filter in step **3** fails a bit more often)
 
 ```mermaid
 flowchart TD

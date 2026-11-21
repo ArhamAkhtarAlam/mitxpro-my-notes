@@ -54,14 +54,14 @@ so the smallest code that encodes one qubit and corrects any single error has $n
 > 9 qubits when 5 would do. it's easy to understand because of its concatenated structure, not because it's efficient. and it's degenerate, so it doesn't need all of the $2^9$ dimensions the counting suggests: only $2\times(1+3\times9)=56$ of the 512 for its 28 errors, and fewer still because $Z_1,Z_2,Z_3$ act the same
 
 > [!exercise] try these
-> ① smallest $n$ allowed by the quantum Hamming bound for $k=1$, $t=2$
-> ② what does the quantum Singleton bound say for $k=1$, $t=2$?
-> ③ for $k=2$, $t=1$, what's the smallest $n$ allowed by the Hamming bound?
+> **1** smallest $n$ allowed by the quantum Hamming bound for $k=1$, $t=2$
+> **2** what does the quantum Singleton bound say for $k=1$, $t=2$?
+> **3** for $k=2$, $t=1$, what's the smallest $n$ allowed by the Hamming bound?
 
 > [!answer]-
-> ① need $2\big(1+3n+9\binom n2\big)\leq2^n$. $n=9$: $2(1+27+324)=704>512$ ✗. $n=10$: $2(1+30+405)=872\leq1024$ ✓. so $n\geq10$ for a non-degenerate code
-> ② $n\geq4\times2+1=9$
-> ③ need $4(1+3n)\leq2^n$. $n=6$: $76>64$ ✗. $n=7$: $88\leq128$ ✓. so $n\geq7$
+> **1** need $2\big(1+3n+9\binom n2\big)\leq2^n$. $n=9$: $2(1+27+324)=704>512$ ✗. $n=10$: $2(1+30+405)=872\leq1024$ ✓. so $n\geq10$ for a non-degenerate code
+> **2** $n\geq4\times2+1=9$
+> **3** need $4(1+3n)\leq2^n$. $n=6$: $76>64$ ✗. $n=7$: $88\leq128$ ✓. so $n\geq7$
 
 see also [[Shor code]], [[Classical linear codes]]
 

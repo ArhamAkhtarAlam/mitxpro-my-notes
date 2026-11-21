@@ -39,14 +39,14 @@ the trick in each case: pick a strip whose own centre you already know
 > $$
 
 > [!exercise] try these
-> ① find $\bar x$ for the area under $y=x^2$ from $0$ to $1$
-> ② a solid cone, height 12 cm, stands on its base. how high is its centre of mass?
-> ③ use the sector formula to check the semicircular plate result
+> **1** find $\bar x$ for the area under $y=x^2$ from $0$ to $1$
+> **2** a solid cone, height 12 cm, stands on its base. how high is its centre of mass?
+> **3** use the sector formula to check the semicircular plate result
 
 > [!answer]-
-> ① $\frac{\int_0^1x^3dx}{\int_0^1x^2dx}=\frac{1/4}{1/3}=\frac34$
-> ② $\frac{12}{4}=3$ cm
-> ③ $\alpha=\frac\pi2$: $\frac{2a\cdot1}{3\pi/2}=\frac{4a}{3\pi}$ ✓
+> **1** $\frac{\int_0^1x^3dx}{\int_0^1x^2dx}=\frac{1/4}{1/3}=\frac34$
+> **2** $\frac{12}{4}=3$ cm
+> **3** $\alpha=\frac\pi2$: $\frac{2a\cdot1}{3\pi/2}=\frac{4a}{3\pi}$ ✓
 
 see also [[Centre of mass]]
 

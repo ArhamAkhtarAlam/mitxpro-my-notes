@@ -57,14 +57,14 @@ this is very different from error correction for **analog** classical systems, w
 > a combination of $I$ and $Z_1$. the syndrome measurement finds "no error" with probability $\cos^2\frac\theta2$ and "$Z_1$" with probability $\sin^2\frac\theta2$, and either way the state comes back perfectly. for $\theta=\pi/263$ that's "$Z_1$" only $3.6\times10^{-5}$ of the time
 
 > [!exercise] try these
-> ① write the amplitude damping element $E_1=\begin{bmatrix}0&\sqrt\gamma\\0&0\end{bmatrix}$ as a combination of Paulis
-> ② same for $E_0=\begin{bmatrix}1&0\\0&\sqrt{1-\gamma}\end{bmatrix}$
-> ③ the projectors $|0\rangle\langle0|$ and $|1\rangle\langle1|$ on one qubit are errors too (exercise 10.9). why does the phase flip code correct them?
+> **1** write the amplitude damping element $E_1=\begin{bmatrix}0&\sqrt\gamma\\0&0\end{bmatrix}$ as a combination of Paulis
+> **2** same for $E_0=\begin{bmatrix}1&0\\0&\sqrt{1-\gamma}\end{bmatrix}$
+> **3** the projectors $|0\rangle\langle0|$ and $|1\rangle\langle1|$ on one qubit are errors too (exercise 10.9). why does the phase flip code correct them?
 
 > [!answer]-
-> ① $E_1=\sqrt\gamma\,\frac{X+iY}2$, since $\frac{X+iY}2=\frac12\Big(\begin{bmatrix}0&1\\1&0\end{bmatrix}+\begin{bmatrix}0&1\\-1&0\end{bmatrix}\Big)=\begin{bmatrix}0&1\\0&0\end{bmatrix}$
-> ② $E_0=\frac{1+\sqrt{1-\gamma}}2I+\frac{1-\sqrt{1-\gamma}}2Z$
-> ③ $|0\rangle\langle0|=\frac{I+Z}2$ and $|1\rangle\langle1|=\frac{I-Z}2$, combinations of $I$ and $Z$, which the phase flip code corrects. so by theorem 10.2 it corrects them too
+> **1** $E_1=\sqrt\gamma\,\frac{X+iY}2$, since $\frac{X+iY}2=\frac12\Big(\begin{bmatrix}0&1\\1&0\end{bmatrix}+\begin{bmatrix}0&1\\-1&0\end{bmatrix}\Big)=\begin{bmatrix}0&1\\0&0\end{bmatrix}$
+> **2** $E_0=\frac{1+\sqrt{1-\gamma}}2I+\frac{1-\sqrt{1-\gamma}}2Z$
+> **3** $|0\rangle\langle0|=\frac{I+Z}2$ and $|1\rangle\langle1|=\frac{I-Z}2$, combinations of $I$ and $Z$, which the phase flip code corrects. so by theorem 10.2 it corrects them too
 
 see also [[Depolarizing channel]], [[Pauli channel]], [[Shor code]], maths: [[Pauli matrices]]
 

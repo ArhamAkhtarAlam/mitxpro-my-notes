@@ -59,14 +59,14 @@ follow it with Pauli corrections and it's error correction. add a measurement of
 > each ancilla here touches 4 data qubits, so one ancilla error can spread to several of them. making this safe is the subject of §10.6 (course version: [[Fault-tolerant measurement]])
 
 > [!exercise] try these
-> ① find $\bar X$ for the Steane code in standard form (exercise 10.55)
-> ② why does measuring $Z$ need only a CNOT and no Hadamards?
-> ③ in the standard form, which generators does an $X$ error on qubit 1 (standard order) flip?
+> **1** find $\bar X$ for the Steane code in standard form (exercise 10.55)
+> **2** why does measuring $Z$ need only a CNOT and no Hadamards?
+> **3** in the standard form, which generators does an $X$ error on qubit 1 (standard order) flip?
 
 > [!answer]-
-> ① $E=(1,1,0)^T$ and $C=0$, so $G_x=[0001101|0000000]$: $\bar X=X_4X_5X_7$ in the standard order, which is $X_3X_5X_6$ in the original labels (checked numerically: it commutes with every generator and anticommutes with $\bar Z$)
-> ② a CNOT from the data onto $|0\rangle$ copies the data's $Z$ value onto the ancilla, $a|0\rangle+b|1\rangle\to a|00\rangle+b|11\rangle$, so measuring the ancilla is measuring $Z$ on the data
-> ③ the $Z$ type generators with a 1 in column 1 of the right block: rows 4 and 6 (columns $1011001$ and $1110010$)
+> **1** $E=(1,1,0)^T$ and $C=0$, so $G_x=[0001101|0000000]$: $\bar X=X_4X_5X_7$ in the standard order, which is $X_3X_5X_6$ in the original labels (checked numerically: it commutes with every generator and anticommutes with $\bar Z$)
+> **2** a CNOT from the data onto $|0\rangle$ copies the data's $Z$ value onto the ancilla, $a|0\rangle+b|1\rangle\to a|00\rangle+b|11\rangle$, so measuring the ancilla is measuring $Z$ on the data
+> **3** the $Z$ type generators with a 1 in column 1 of the right block: rows 4 and 6 (columns $1011001$ and $1110010$)
 
 see also [[Stabilizer codes]], [[Fault-tolerant measurement]], [[Parity measurement]], [[Quantum Phase Estimation]]
 

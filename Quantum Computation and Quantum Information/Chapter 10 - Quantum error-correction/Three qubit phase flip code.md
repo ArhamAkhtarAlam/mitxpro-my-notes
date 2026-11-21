@@ -59,14 +59,14 @@ the phase flip code has exactly the same properties as the bit flip code: the sa
 the two channels are **unitarily equivalent**: there's a unitary $U$ (here $H$) such that one channel is the same as the other with $U$ before it and $U^\dagger$ after. those extra gates just get absorbed into the encoding and the correction. ==any two unitarily equivalent channels are protected by the same code, up to that change of basis== (general $U$: problem 10.1)
 
 > [!exercise] try these
-> ① a $Z$ hits qubit 2 of $a|{+}{+}{+}\rangle+b|{-}{-}{-}\rangle$. what do $X_1X_2$ and $X_2X_3$ give, and what's the fix?
-> ② check $HZH=X$, and use it to get $H^{\otimes3}Z_1Z_2H^{\otimes3}=X_1X_2$
-> ③ what does a **bit** flip $X_1$ do to this code?
+> **1** a $Z$ hits qubit 2 of $a|{+}{+}{+}\rangle+b|{-}{-}{-}\rangle$. what do $X_1X_2$ and $X_2X_3$ give, and what's the fix?
+> **2** check $HZH=X$, and use it to get $H^{\otimes3}Z_1Z_2H^{\otimes3}=X_1X_2$
+> **3** what does a **bit** flip $X_1$ do to this code?
 
 > [!answer]-
-> ① $a|{+}{-}{+}\rangle+b|{-}{+}{-}\rangle$: both give $-1$, so apply $Z_2$
-> ② $HZH=\frac12\begin{bmatrix}1&1\\1&-1\end{bmatrix}\begin{bmatrix}1&1\\-1&1\end{bmatrix}=\begin{bmatrix}0&1\\1&0\end{bmatrix}=X$. then $H^{\otimes3}(Z\otimes Z\otimes I)H^{\otimes3}=HZH\otimes HZH\otimes HH=X\otimes X\otimes I$
-> ③ $X|+\rangle=|+\rangle$ and $X|-\rangle=-|-\rangle$, so it gives $a|{+}{+}{+}\rangle-b|{-}{-}{-}\rangle$: a logical phase flip that the syndromes can't see (both stay $+1$). this code only protects against phase flips, which is why we need the [[Shor nine qubit code]]
+> **1** $a|{+}{-}{+}\rangle+b|{-}{+}{-}\rangle$: both give $-1$, so apply $Z_2$
+> **2** $HZH=\frac12\begin{bmatrix}1&1\\1&-1\end{bmatrix}\begin{bmatrix}1&1\\-1&1\end{bmatrix}=\begin{bmatrix}0&1\\1&0\end{bmatrix}=X$. then $H^{\otimes3}(Z\otimes Z\otimes I)H^{\otimes3}=HZH\otimes HZH\otimes HH=X\otimes X\otimes I$
+> **3** $X|+\rangle=|+\rangle$ and $X|-\rangle=-|-\rangle$, so it gives $a|{+}{+}{+}\rangle-b|{-}{-}{-}\rangle$: a logical phase flip that the syndromes can't see (both stay $+1$). this code only protects against phase flips, which is why we need the [[Shor nine qubit code]]
 
 see also [[Phase flip code]], [[Phase flip code practice]], [[Hadamard Gate]], [[Dephasing channel]]
 

@@ -101,14 +101,14 @@ in a circuit, each comparison is two CNOTs onto an ancilla ($SA$ for $Z_1Z_2$, $
 > with $P_\pm$ the projectors onto $|\pm\rangle$, the same channel can be written $\mathcal E(\rho)=(1-2p)\rho+2pP_+\rho P_++2pP_-\rho P_-$: the qubit is left alone with probability $1-2p$, and **measured** in the $|+\rangle,|-\rangle$ basis by the environment with probability $2p$. worked in [[Chapter 10 exercises#10.2 the bit flip channel as a measurement]]
 
 > [!exercise] try these
-> ① the state after the channel is $a|010\rangle+b|101\rangle$. which $P_j$ fires, and what do you do?
-> ② the minimum fidelity with and without the code at $p=0.1$
-> ③ what do $Z_1Z_2$ and $Z_2Z_3$ give for a flip on qubit 2? check it with the formula for $Z_1Z_2$
+> **1** the state after the channel is $a|010\rangle+b|101\rangle$. which $P_j$ fires, and what do you do?
+> **2** the minimum fidelity with and without the code at $p=0.1$
+> **3** what do $Z_1Z_2$ and $Z_2Z_3$ give for a flip on qubit 2? check it with the formula for $Z_1Z_2$
 
 > [!answer]-
-> ① $P_2$, with certainty: flip qubit 2 back
-> ② no code $\sqrt{0.9}=0.949$. code $\geq\sqrt{1-0.03+0.002}=\sqrt{0.972}=0.986$
-> ③ both $-1$. eg. $|010\rangle$: qubits 1, 2 are $01$, which is in the $-$ part of $Z_1Z_2$, and qubits 2, 3 are $10$, also $-$
+> **1** $P_2$, with certainty: flip qubit 2 back
+> **2** no code $\sqrt{0.9}=0.949$. code $\geq\sqrt{1-0.03+0.002}=\sqrt{0.972}=0.986$
+> **3** both $-1$. eg. $|010\rangle$: qubits 1, 2 are $01$, which is in the $-$ part of $Z_1Z_2$, and qubits 2, 3 are $10$, also $-$
 
 see also [[Parity measurement]], [[State fidelity]], [[Projectors]], [[Decoding the bit flip code]]
 

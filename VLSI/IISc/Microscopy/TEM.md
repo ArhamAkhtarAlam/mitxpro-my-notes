@@ -130,16 +130,16 @@ $\lambda$ is so short that the Bragg angles are under a degree, so $\sin\theta\a
 > the beam is powerful. soft materials (polymers, organics) and some oxides get damaged or amorphize. use lower kV or less dose, or cryo-TEM
 
 > [!exercise] try these
-> ① find $\lambda$ at 300 kV
-> ② a lamella is 250 nm thick. what goes wrong?
-> ③ an SAED pattern shows sharp rings. what does the film look like?
-> ④ which mode would you use to see if a 2 nm gate oxide is crystalline or amorphous?
+> **1** find $\lambda$ at 300 kV
+> **2** a lamella is 250 nm thick. what goes wrong?
+> **3** an SAED pattern shows sharp rings. what does the film look like?
+> **4** which mode would you use to see if a 2 nm gate oxide is crystalline or amorphous?
 
 > [!answer]-
-> ① $300\,000\times(1+0.2936)=388\,070$, $\sqrt{\cdot}=623.0$, $\lambda=\frac{1.226}{623.0}=1.97$ pm
-> ② too thick: electrons scatter many times or get absorbed, so the image is dark and blurry. thin it more in the [[FIB]]
-> ③ **polycrystalline**: many small grains pointing every way, each ring is one $(hkl)$ (single crystal = spots, amorphous = halo)
-> ④ **HRTEM**: lattice fringes = crystalline, no fringes = amorphous
+> **1** $300\,000\times(1+0.2936)=388\,070$, $\sqrt{\cdot}=623.0$, $\lambda=\frac{1.226}{623.0}=1.97$ pm
+> **2** too thick: electrons scatter many times or get absorbed, so the image is dark and blurry. thin it more in the [[FIB]]
+> **3** **polycrystalline**: many small grains pointing every way, each ring is one $(hkl)$ (single crystal = spots, amorphous = halo)
+> **4** **HRTEM**: lattice fringes = crystalline, no fringes = amorphous
 
 ## the quantum connection
 > [!extra] the lens does a Fourier transform

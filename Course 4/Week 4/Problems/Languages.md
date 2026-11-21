@@ -49,16 +49,16 @@ there's a little overhead (one call per output bit, so a few times more work for
 > ask "does $N$ have a factor $d$ with $1<d\leq k$?". **binary search** on $k$ finds the smallest factor in about $\log_2N$ questions: halve the range each time. that's the standard yes/no version of factoring, and the one that's used to place it among the [[Complexity classes|complexity classes]]
 
 > [!exercise] try these
-> ① how many strings in $\{0,1\}^*$ have length at most 3?
-> ② $L=\{x:x\text{ starts with }1\}$. accept or reject: $1010$, $0111$, the empty string?
-> ③ a function outputs 64 bits. how many calls to its language version do you need to read the whole answer?
-> ④ write the halting problem as a language
+> **1** how many strings in $\{0,1\}^*$ have length at most 3?
+> **2** $L=\{x:x\text{ starts with }1\}$. accept or reject: $1010$, $0111$, the empty string?
+> **3** a function outputs 64 bits. how many calls to its language version do you need to read the whole answer?
+> **4** write the halting problem as a language
 
 > [!answer]-
-> ① $1+2+4+8=15$ (the empty string, 2 of length 1, 4 of length 2, 8 of length 3)
-> ② accept $1010$; reject $0111$; reject the empty string (it doesn't start with anything)
-> ③ 64, one per bit
-> ④ $L_{\text{HALT}}=\{(\text{code},x):\text{the code stops when run on }x\}$, with the pair written as one bit string
+> **1** $1+2+4+8=15$ (the empty string, 2 of length 1, 4 of length 2, 8 of length 3)
+> **2** accept $1010$; reject $0111$; reject the empty string (it doesn't start with anything)
+> **3** 64, one per bit
+> **4** $L_{\text{HALT}}=\{(\text{code},x):\text{the code stops when run on }x\}$, with the pair written as one bit string
 
 next: [[Promise, sampling and relation problems]]
 

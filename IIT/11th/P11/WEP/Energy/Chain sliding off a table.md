@@ -50,14 +50,14 @@ $$
 > the hanging part pulls with $\frac{Mg}3$, the static friction can hold up to $\mu_s\frac{2Mg}{3}$. it slides only if $\frac13>\frac23\mu_s$, ie. $\mu_s<\frac12$
 
 > [!exercise] try these
-> ① a smooth table ($\mu=0$), half the chain hanging. speed when it leaves?
-> ② in the problem above, why can't you just use the friction at the start times the distance?
-> ③ what's the friction force at the start, and when the chain has slid $\frac L3$?
+> **1** a smooth table ($\mu=0$), half the chain hanging. speed when it leaves?
+> **2** in the problem above, why can't you just use the friction at the start times the distance?
+> **3** what's the friction force at the start, and when the chain has slid $\frac L3$?
 
 > [!answer]-
-> ① PE lost $=\frac{MgL}{2}-\frac{MgL}{8}=\frac{3MgL}{8}=\tfrac12Mv^2$ → $v=\sqrt{\frac{3gL}{4}}$
-> ② the friction isn't constant: it falls as less chain is on the table. constant friction would give $\frac49\mu MgL$, twice the real value
-> ③ start: $\frac23\mu Mg$; after $\frac L3$: $\frac13\mu Mg$
+> **1** PE lost $=\frac{MgL}{2}-\frac{MgL}{8}=\frac{3MgL}{8}=\tfrac12Mv^2$ → $v=\sqrt{\frac{3gL}{4}}$
+> **2** the friction isn't constant: it falls as less chain is on the table. constant friction would give $\frac49\mu MgL$, twice the real value
+> **3** start: $\frac23\mu Mg$; after $\frac L3$: $\frac13\mu Mg$
 
 see also [[Work by a variable force]], [[Centre of mass]], [[Friction]]
 

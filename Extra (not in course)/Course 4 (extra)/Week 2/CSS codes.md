@@ -55,13 +55,13 @@ flowchart TD
 ```
 
 > [!exercise] try these
-> ① CSS codes from $C_1=[15,11]$ (Hamming, $r=4$) and $C_2=C_1^\perp=[15,4]$. how many logical qubits?
-> ② check that $0001111$ and $0110011$ overlap in an even number of places
-> ③ why is $X^{\otimes7}|0_L\rangle$ orthogonal to $|0_L\rangle$?
+> **1** CSS codes from $C_1=[15,11]$ (Hamming, $r=4$) and $C_2=C_1^\perp=[15,4]$. how many logical qubits?
+> **2** check that $0001111$ and $0110011$ overlap in an even number of places
+> **3** why is $X^{\otimes7}|0_L\rangle$ orthogonal to $|0_L\rangle$?
 
 > [!answer]-
-> ① $k=11-4=7$: a $[\![15,7]\!]$ code (distance 3)
-> ② they share places 6 and 7: 2, even ✓. so the $X$ and $Z$ versions commute
-> ③ $X^{\otimes7}$ flips all 7 bits, turning weight 0 or 4 strings into weight 7 or 3. no string appears in both, so the overlap is 0
+> **1** $k=11-4=7$: a $[\![15,7]\!]$ code (distance 3)
+> **2** they share places 6 and 7: 2, even ✓. so the $X$ and $Z$ versions commute
+> **3** $X^{\otimes7}$ flips all 7 bits, turning weight 0 or 4 strings into weight 7 or 3. no string appears in both, so the overlap is 0
 
 see also [[Stabilizer codes]], [[Classical linear codes]], [[Transversal gates on stabilizer codes]], [[Shor code]], textbook: [[Calderbank-Shor-Steane codes]]

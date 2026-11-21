@@ -55,14 +55,14 @@ two ideas
 - when the noise isn't independent, use codes that correct errors on more than one qubit, built along similar lines
 
 > [!exercise] try these
-> ① a $Z$ hits qubit 5. what do the two sign comparisons give, and what's the fix?
-> ② $Y_1=iX_1Z_1$. what does the code do with a $Y_1$ error?
-> ③ show that $Z_1Z_2$ does nothing at all to $|0_L\rangle$ and $|1_L\rangle$
+> **1** a $Z$ hits qubit 5. what do the two sign comparisons give, and what's the fix?
+> **2** $Y_1=iX_1Z_1$. what does the code do with a $Y_1$ error?
+> **3** show that $Z_1Z_2$ does nothing at all to $|0_L\rangle$ and $|1_L\rangle$
 
 > [!answer]-
-> ① it flips block 2's sign: blocks 1 and 2 differ, blocks 2 and 3 differ, so block 2. fix with $Z_4Z_5Z_6$ (or just $Z_5$)
-> ② the bit flip checks find qubit 1, and the phase checks find block 1: apply $X_1$ and $Z_1Z_2Z_3$. the leftover $i$ is a global phase, so it doesn't matter. (check: $XZ=\begin{bmatrix}0&-1\\1&0\end{bmatrix}$ and $iXZ=\begin{bmatrix}0&-i\\i&0\end{bmatrix}=Y$ ✓)
-> ③ on $|000\rangle\pm|111\rangle$, $|000\rangle$ gets no signs and $|111\rangle$ gets $(-1)^2=1$, so the block is unchanged. two different errors, $Z_1$ and $Z_2$, have the **same** effect on the code words: this is a **degenerate** code ([[Degenerate codes and the quantum Hamming bound]])
+> **1** it flips block 2's sign: blocks 1 and 2 differ, blocks 2 and 3 differ, so block 2. fix with $Z_4Z_5Z_6$ (or just $Z_5$)
+> **2** the bit flip checks find qubit 1, and the phase checks find block 1: apply $X_1$ and $Z_1Z_2Z_3$. the leftover $i$ is a global phase, so it doesn't matter. (check: $XZ=\begin{bmatrix}0&-1\\1&0\end{bmatrix}$ and $iXZ=\begin{bmatrix}0&-i\\i&0\end{bmatrix}=Y$ ✓)
+> **3** on $|000\rangle\pm|111\rangle$, $|000\rangle$ gets no signs and $|111\rangle$ gets $(-1)^2=1$, so the block is unchanged. two different errors, $Z_1$ and $Z_2$, have the **same** effect on the code words: this is a **degenerate** code ([[Degenerate codes and the quantum Hamming bound]])
 
 see also [[Shor code]], [[Operator-sum representation]], [[Recursive fault tolerance]]
 

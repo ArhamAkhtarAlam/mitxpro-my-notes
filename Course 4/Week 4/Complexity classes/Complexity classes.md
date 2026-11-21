@@ -85,18 +85,18 @@ that's crude: in practice $n^2$ vs $n^3$ matters a lot. but it makes the classes
 > any constant above $\frac12$ works. if one run is right with probability $\frac23$, run it $k$ times and take the majority: the chance the majority is wrong falls like $e^{-ck}$ (a Chernoff bound, the same counting as the [[Bit flip code]]). about 50 runs already gets the error below one in a million, a constant factor that doesn't change "polynomial"
 
 > [!exercise] try these
-> ① a problem is in $\text{DTIME}(n^2)$. is it in $\text{DTIME}(n^3)$? is it in P?
-> ② an algorithm takes $2^{n/100}$ steps. is it polynomial? which is bigger at $n=1000$, $2^{n/100}$ or $n^2$? at $n=10\,000$?
-> ③ why is P ⊆ BPP?
-> ④ if someone proved BPP = BQP, what would it mean for quantum computers?
-> ⑤ in the made up problem above, how much memory do 10 variables need, and how many steps?
+> **1** a problem is in $\text{DTIME}(n^2)$. is it in $\text{DTIME}(n^3)$? is it in P?
+> **2** an algorithm takes $2^{n/100}$ steps. is it polynomial? which is bigger at $n=1000$, $2^{n/100}$ or $n^2$? at $n=10\,000$?
+> **3** why is P ⊆ BPP?
+> **4** if someone proved BPP = BQP, what would it mean for quantum computers?
+> **5** in the made up problem above, how much memory do 10 variables need, and how many steps?
 
 > [!answer]-
-> ① yes ($n^2<n^3$, so the same machine works) and yes ($c=2$)
-> ② no, it's exponential. $n=1000$: $2^{10}=1024$ vs $10^6$, so $n^2$ is bigger. $n=10\,000$: $2^{100}\approx10^{30}$ vs $10^8$: the exponential wins eventually, which is all the classes care about
-> ③ a deterministic algorithm is a randomized one that never reads its random bits, and it's right with probability 1 ≥ $\frac23$
-> ④ every problem a quantum computer solves in polynomial time could also be solved by a classical randomized computer in polynomial time: no exponential [[Quantum advantage|quantum advantage]] for yes/no problems (polynomial speed ups like Grover's could still exist)
-> ⑤ memory $10^{10}$, steps $10^2=100$. the steps are trivial, the memory is ten billion units
+> **1** yes ($n^2<n^3$, so the same machine works) and yes ($c=2$)
+> **2** no, it's exponential. $n=1000$: $2^{10}=1024$ vs $10^6$, so $n^2$ is bigger. $n=10\,000$: $2^{100}\approx10^{30}$ vs $10^8$: the exponential wins eventually, which is all the classes care about
+> **3** a deterministic algorithm is a randomized one that never reads its random bits, and it's right with probability 1 ≥ $\frac23$
+> **4** every problem a quantum computer solves in polynomial time could also be solved by a classical randomized computer in polynomial time: no exponential [[Quantum advantage|quantum advantage]] for yes/no problems (polynomial speed ups like Grover's could still exist)
+> **5** memory $10^{10}$, steps $10^2=100$. the steps are trivial, the memory is ten billion units
 
 next: [[NP]], then [[NP-complete]], [[Quantum circuit evaluation]] and [[Quantum vs classical complexity]]
 

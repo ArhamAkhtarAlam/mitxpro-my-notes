@@ -47,14 +47,14 @@ $$
 > the formalism only handles stabilizer inputs, so it's not the whole story of teleportation, but it shows the dynamics
 
 > [!exercise] try these
-> ① on $|0\rangle$ (stabilizer $\langle Z\rangle$), measure $X$. what are the probabilities and the new stabilizer?
-> ② on the EPR state $\langle X_1X_2,Z_1Z_2\rangle$, measure $X_1X_2$. what happens?
-> ③ a 100 qubit circuit with $10^6$ Clifford gates and measurements: roughly how many classical steps?
+> **1** on $|0\rangle$ (stabilizer $\langle Z\rangle$), measure $X$. what are the probabilities and the new stabilizer?
+> **2** on the EPR state $\langle X_1X_2,Z_1Z_2\rangle$, measure $X_1X_2$. what happens?
+> **3** a 100 qubit circuit with $10^6$ Clifford gates and measurements: roughly how many classical steps?
 
 > [!answer]-
-> ① $X$ anticommutes with $Z$: $\frac12$ each, new stabilizer $\langle\pm X\rangle$, ie. $|+\rangle$ or $|-\rangle$
-> ② it's in the stabilizer, so the outcome is $+1$ for certain and the state is unchanged
-> ③ $O(n^2m)=10^4\times10^6=10^{10}$: a few seconds on a laptop. the state vector would need $2^{100}$ amplitudes
+> **1** $X$ anticommutes with $Z$: $\frac12$ each, new stabilizer $\langle\pm X\rangle$, ie. $|+\rangle$ or $|-\rangle$
+> **2** it's in the stabilizer, so the outcome is $+1$ for certain and the state is unchanged
+> **3** $O(n^2m)=10^4\times10^6=10^{10}$: a few seconds on a laptop. the state vector would need $2^{100}$ amplitudes
 
 see also [[Gottesman-Knill theorem]], [[Clifford group]], [[Teleportation]], [[Projectors]]
 

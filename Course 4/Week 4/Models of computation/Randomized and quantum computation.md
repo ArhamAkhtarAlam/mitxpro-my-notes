@@ -49,16 +49,16 @@ a random choice splits the computation into two **branches**; many choices give 
 > a random algorithm only has to be right with high probability, say $\frac23$. repeating it $k$ times and taking the majority makes the error shrink exponentially in $k$, the same counting as [[Bit flip code|repetition codes]]. the class of problems solved this way in polynomial time is BPP, and its quantum version is BQP ([[Complexity classes]])
 
 > [!exercise] try these
-> ① a randomized circuit uses 5 random gates. how many extra input bits does the "random input" version need?
-> ② why don't people bother having a Turing machine output a **classical** circuit?
-> ③ apply $H$ three times to $|0\rangle$. what's the result?
-> ④ a random walk on 0/1 flips its bit with probability $\frac12$ at each step. after 10 steps, what's the probability of being at 0?
+> **1** a randomized circuit uses 5 random gates. how many extra input bits does the "random input" version need?
+> **2** why don't people bother having a Turing machine output a **classical** circuit?
+> **3** apply $H$ three times to $|0\rangle$. what's the result?
+> **4** a random walk on 0/1 flips its bit with probability $\frac12$ at each step. after 10 steps, what's the probability of being at 0?
 
 > [!answer]-
-> ① 5, one per random gate
-> ② the Turing machine could just compute the answer directly instead of writing a circuit and running it a moment later
-> ③ $HH=I$, so $HHH|0\rangle=H|0\rangle=\frac1{\sqrt2}(|0\rangle+|1\rangle)$
-> ④ $\frac12$: after the very first step it's already $\frac12,\frac12$, and a fair flip keeps it there
+> **1** 5, one per random gate
+> **2** the Turing machine could just compute the answer directly instead of writing a circuit and running it a moment later
+> **3** $HH=I$, so $HHH|0\rangle=H|0\rangle=\frac1{\sqrt2}(|0\rangle+|1\rangle)$
+> **4** $\frac12$: after the very first step it's already $\frac12,\frac12$, and a fair flip keeps it there
 
 next: [[Nondeterminism]]
 

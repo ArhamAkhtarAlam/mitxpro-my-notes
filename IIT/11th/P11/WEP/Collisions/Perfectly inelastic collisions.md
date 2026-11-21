@@ -60,14 +60,14 @@ x&=b(1+\sqrt2)
 $$
 
 > [!exercise] try these
-> ① a 10 g bullet at 400 m/s sticks in a 1.99 kg block on a spring, $k=800$ N/m. max compression?
-> ② what fraction of the KE is lost when a bullet $m$ sticks in a block $M$ at rest?
-> ③ two 1 kg carts, one at 4 m/s, one at rest, couple together. KE lost?
+> **1** a 10 g bullet at 400 m/s sticks in a 1.99 kg block on a spring, $k=800$ N/m. max compression?
+> **2** what fraction of the KE is lost when a bullet $m$ sticks in a block $M$ at rest?
+> **3** two 1 kg carts, one at 4 m/s, one at rest, couple together. KE lost?
 
 > [!answer]-
-> ① $u=\frac{0.01\times400}{2}=2$ m/s, $x=2\sqrt{\frac{2}{800}}=0.1$ m
-> ② KE after / before $=\frac{m}{m+M}$, so the lost fraction is $\frac{M}{m+M}$
-> ③ $u=2$ m/s; before 8 J, after $\tfrac12(2)(4)=4$ J: 4 J lost
+> **1** $u=\frac{0.01\times400}{2}=2$ m/s, $x=2\sqrt{\frac{2}{800}}=0.1$ m
+> **2** KE after / before $=\frac{m}{m+M}$, so the lost fraction is $\frac{M}{m+M}$
+> **3** $u=2$ m/s; before 8 J, after $\tfrac12(2)(4)=4$ J: 4 J lost
 
 see also [[Elastic collisions]], [[Conservation of mechanical energy]], [[Two blocks and a spring]]
 

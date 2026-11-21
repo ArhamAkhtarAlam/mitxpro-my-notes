@@ -64,14 +64,14 @@ $$
 - find stray Ga left behind by an [[FIB#downsides|FIB]]
 
 > [!exercise] try these
-> ① estimate the $K_\alpha$ energy of iron ($Z=26$)
-> ② a peak at 1.74 keV, and the sample has W in it. can you be sure it's Si?
-> ③ you want to know if Si on a surface is oxidized. EDS or XPS?
+> **1** estimate the $K_\alpha$ energy of iron ($Z=26$)
+> **2** a peak at 1.74 keV, and the sample has W in it. can you be sure it's Si?
+> **3** you want to know if Si on a surface is oxidized. EDS or XPS?
 
 > [!answer]-
-> ① $10.2\times25^2=6375$ eV $\approx6.4$ keV (real 6.40)
-> ② no: W $M$ lines sit at ~1.78 keV, within the ~130 eV resolution. check another line or use a higher-resolution method
-> ③ **XPS**: EDS gives the element only, XPS sees the Si$^{4+}$ chemical shift ([[XPS#what you get]])
+> **1** $10.2\times25^2=6375$ eV $\approx6.4$ keV (real 6.40)
+> **2** no: W $M$ lines sit at ~1.78 keV, within the ~130 eV resolution. check another line or use a higher-resolution method
+> **3** **XPS**: EDS gives the element only, XPS sees the Si$^{4+}$ chemical shift ([[XPS#what you get]])
 
 ## the quantum connection
 > [!extra] Moseley's law is the Bohr atom

@@ -83,16 +83,16 @@ mount on a stub with carbon tape, make it conductive, blow off dust, load. much 
 - combine with [[EDS]] for chemistry
 
 > [!exercise] which signal?
-> ① you want to see if a Pt contact sits on top of a Si pad, and the surface is flat
-> ② you want to see the sidewall roughness of a resist line
-> ③ you want to know if there's Cu contamination
-> ④ why does a TEM need 200 kV but a CD-SEM uses ~1 kV?
+> **1** you want to see if a Pt contact sits on top of a Si pad, and the surface is flat
+> **2** you want to see the sidewall roughness of a resist line
+> **3** you want to know if there's Cu contamination
+> **4** why does a TEM need 200 kV but a CD-SEM uses ~1 kV?
 
 > [!answer]-
-> ① **BSE**: flat surface means no topography, but Pt ($Z=78$) is much heavier than Si ($Z=14$) so it's bright
-> ② **SE** at low kV: topography and edges, from only the top few nm
-> ③ characteristic **X-rays** ([[EDS]]): Cu has its own lines
-> ④ a TEM needs electrons to go **through** the sample (and a short wavelength, 2.5 pm at 200 kV), a CD-SEM only needs the surface and mustn't damage or charge the resist
+> **1** **BSE**: flat surface means no topography, but Pt ($Z=78$) is much heavier than Si ($Z=14$) so it's bright
+> **2** **SE** at low kV: topography and edges, from only the top few nm
+> **3** characteristic **X-rays** ([[EDS]]): Cu has its own lines
+> **4** a TEM needs electrons to go **through** the sample (and a short wavelength, 2.5 pm at 200 kV), a CD-SEM only needs the surface and mustn't damage or charge the resist
 
 ## the quantum connection
 > [!extra] electrons are quantum waves

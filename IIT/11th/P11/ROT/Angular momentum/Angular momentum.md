@@ -88,14 +88,14 @@ x=\frac l2(1-\cos\theta)=\frac{3m^2v^2}{2g(M+3m)(M+2m)}
 $$
 
 > [!exercise] try these
-> ① a 2 kg disc of radius 0.5 m spins at 10 rad/s. a 0.5 kg lump sticks to its rim. new $\omega$?
-> ② find $L$ about the origin for a 2 kg particle at $(3,4)$ m with $\vec v=5\hat i$ m/s
-> ③ in the hanging rod problem with $M=3m$, what's $\omega$?
+> **1** a 2 kg disc of radius 0.5 m spins at 10 rad/s. a 0.5 kg lump sticks to its rim. new $\omega$?
+> **2** find $L$ about the origin for a 2 kg particle at $(3,4)$ m with $\vec v=5\hat i$ m/s
+> **3** in the hanging rod problem with $M=3m$, what's $\omega$?
 
 > [!answer]-
-> ① $\frac12(2)(0.25)(10)=(0.25+0.125)\omega'$, $\omega'=6.7$ rad/s
-> ② $L=m(xv_y-yv_x)=2(0-20)=-40$ kg m²/s (clockwise)
-> ③ $\omega=\frac{3mv}{6ml}=\frac{v}{2l}$
+> **1** $\frac12(2)(0.25)(10)=(0.25+0.125)\omega'$, $\omega'=6.7$ rad/s
+> **2** $L=m(xv_y-yv_x)=2(0-20)=-40$ kg m²/s (clockwise)
+> **3** $\omega=\frac{3mv}{6ml}=\frac{v}{2l}$
 
 see also [[Free rod collisions]], [[Projectile motion]], [[Circular motion]]
 

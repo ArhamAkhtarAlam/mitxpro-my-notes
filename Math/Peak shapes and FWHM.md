@@ -46,13 +46,13 @@ real peaks are often a mix (a **Voigt** profile: a Lorentzian smeared by a Gauss
 > ==a peak's width tells you about either randomness (Gaussian) or lifetime (Lorentzian), and width in one domain is always one over width in the other==
 
 > [!exercise] try these
-> ① a Gaussian peak has $\sigma=0.4$. what's its FWHM?
-> ② a resonance has $\Delta f=1$ MHz (FWHM). how long does the oscillation take to decay ($\tau$)?
-> ③ you see a peak with long tails. is it more likely from detector noise or from a short lifetime?
+> **1** a Gaussian peak has $\sigma=0.4$. what's its FWHM?
+> **2** a resonance has $\Delta f=1$ MHz (FWHM). how long does the oscillation take to decay ($\tau$)?
+> **3** you see a peak with long tails. is it more likely from detector noise or from a short lifetime?
 
 > [!answer]-
-> ① $2.355\times0.4=0.94$
-> ② $\tau=\frac1{\pi\Delta f}=\frac1{\pi\times10^6}=0.32\,\mu$s
-> ③ a short lifetime: long tails are the Lorentzian signature
+> **1** $2.355\times0.4=0.94$
+> **2** $\tau=\frac1{\pi\Delta f}=\frac1{\pi\times10^6}=0.32\,\mu$s
+> **3** a short lifetime: long tails are the Lorentzian signature
 
 see also [[Straight line fits]], [[Logarithms and exponentials]], [[Noise power spectral density]], [[Math]]

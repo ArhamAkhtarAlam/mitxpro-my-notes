@@ -94,16 +94,16 @@ the lab system is split into chambers with their own pressure
 - pumps: turbo molecular, ion pump, backing pumps. **N₂** is used for venting
 
 > [!exercise] try these
-> ① a REELS spectrum with $E_0=1500$ eV has its loss onset at 1494.3 eV. what's the gap, and what could the film be?
-> ② you want to know if a 3 nm film on a wafer is uniform in the **top layer** of atoms. ISS or XPS?
-> ③ which mode would you use to find the conduction band (empty states) of an organic solar cell film?
-> ④ in ISS with He⁺, a peak at 794 eV (from 1000 eV). which element? (hint: try Ga, 69.7 u)
+> **1** a REELS spectrum with $E_0=1500$ eV has its loss onset at 1494.3 eV. what's the gap, and what could the film be?
+> **2** you want to know if a 3 nm film on a wafer is uniform in the **top layer** of atoms. ISS or XPS?
+> **3** which mode would you use to find the conduction band (empty states) of an organic solar cell film?
+> **4** in ISS with He⁺, a peak at 794 eV (from 1000 eV). which element? (hint: try Ga, 69.7 u)
 
 > [!answer]-
-> ① $E_g=1500-1494.3=5.7$ eV, eg. HfO₂
-> ② **ISS**: XPS averages over ~5–10 nm, so it would see right through the 3 nm film into the wafer
-> ③ **IPES** (empty states), together with [[UPS]] for the filled ones
-> ④ $\mu=\frac{69.7}{4.0}=17.4$, $\left(\frac{16.4}{18.4}\right)^2=0.79$ → 794 eV ✅, gallium (eg. left behind by an [[FIB#downsides|FIB]])
+> **1** $E_g=1500-1494.3=5.7$ eV, eg. HfO₂
+> **2** **ISS**: XPS averages over ~5–10 nm, so it would see right through the 3 nm film into the wafer
+> **3** **IPES** (empty states), together with [[UPS]] for the filled ones
+> **4** $\mu=\frac{69.7}{4.0}=17.4$, $\left(\frac{16.4}{18.4}\right)^2=0.79$ → 794 eV ✅, gallium (eg. left behind by an [[FIB#downsides|FIB]])
 
 ## the quantum connection
 > [!extra] energy is lost in quanta

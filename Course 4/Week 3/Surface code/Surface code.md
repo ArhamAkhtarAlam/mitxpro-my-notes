@@ -57,16 +57,16 @@ in practice, the lower the error rate the better: at a gate error around $10^{-3
 - [[Decoding the surface code]] → the classical side: a trillion bits a second, minimum weight matching, sub 10 µs latency
 
 > [!exercise] try these
-> ① a single bit flip on a data qubit in the middle of the grid. how many detection events does it cause, and on which shapes?
-> ② why do the orange checks need the $H$ gates before and after?
-> ③ a blue square and an orange square share an edge. do their checks commute?
-> ④ why does using fewer gates per check give a higher threshold?
+> **1** a single bit flip on a data qubit in the middle of the grid. how many detection events does it cause, and on which shapes?
+> **2** why do the orange checks need the $H$ gates before and after?
+> **3** a blue square and an orange square share an edge. do their checks commute?
+> **4** why does using fewer gates per check give a higher threshold?
 
 > [!answer]-
-> ① 2: the two blue shapes touching it (each data qubit in the bulk touches 2 blue and 2 orange shapes). the orange ones don't notice a bit flip
-> ② a parity check in the computational basis only sees bit flips. $H$ swaps $X$ and $Z$, so between the two $H$ layers a phase flip looks like a bit flip
-> ③ yes: they share 2 qubits, and $Z\otimes Z$ commutes with $X\otimes X$ (two minus signs cancel)
-> ④ each gate can fail. with fewer gates in a check, there are fewer ways for the check itself to go wrong, so the information about errors is more reliable and more physical error can be tolerated
+> **1** 2: the two blue shapes touching it (each data qubit in the bulk touches 2 blue and 2 orange shapes). the orange ones don't notice a bit flip
+> **2** a parity check in the computational basis only sees bit flips. $H$ swaps $X$ and $Z$, so between the two $H$ layers a phase flip looks like a bit flip
+> **3** yes: they share 2 qubits, and $Z\otimes Z$ commutes with $X\otimes X$ (two minus signs cancel)
+> **4** each gate can fail. with fewer gates in a check, there are fewer ways for the check itself to go wrong, so the information about errors is more reliable and more physical error can be tolerated
 
 see also [[Parity measurement]], [[Stabilizer codes]], [[Threshold theorem]], [[Cost of fault tolerance]], [[Fault-tolerant quantum computing]]
 

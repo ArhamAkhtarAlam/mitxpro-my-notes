@@ -151,14 +151,14 @@ counterfeit pharmaceutical tablets (ATR), semiconductor contamination (find orga
 ==both measure vibrations, but they follow **different selection rules**: IR needs a change in **dipole**, Raman needs a change in **polarizability**==. so they complement each other
 
 > [!exercise] try these
-> ① what wavelength (in µm) is the Si–O–Si peak at 1080 cm⁻¹?
-> ② O–H ($\mu\approx0.94$ u) absorbs at ~3600 cm⁻¹. estimate the O–D stretch
-> ③ why is the CO₂ in the air a problem, and how do you fix it?
+> **1** what wavelength (in µm) is the Si–O–Si peak at 1080 cm⁻¹?
+> **2** O–H ($\mu\approx0.94$ u) absorbs at ~3600 cm⁻¹. estimate the O–D stretch
+> **3** why is the CO₂ in the air a problem, and how do you fix it?
 
 > [!answer]-
-> ① $\lambda=\frac{10^4}{1080}=9.26$ µm
-> ② $\mu_{OD}=\frac{16\times2}{18}=1.78$ u, so $3600\times\sqrt{\frac{0.94}{1.78}}=3600\times0.727\approx2620$ cm⁻¹
-> ③ CO₂ (and water vapour) absorb IR themselves, so they show up in every spectrum. the background scan records them and dividing by it removes them
+> **1** $\lambda=\frac{10^4}{1080}=9.26$ µm
+> **2** $\mu_{OD}=\frac{16\times2}{18}=1.78$ u, so $3600\times\sqrt{\frac{0.94}{1.78}}=3600\times0.727\approx2620$ cm⁻¹
+> **3** CO₂ (and water vapour) absorb IR themselves, so they show up in every spectrum. the background scan records them and dividing by it removes them
 
 ## the quantum connection
 > [!extra] vibrations are quantized

@@ -47,14 +47,14 @@ gravity is $mg$ straight down, so only the **vertical** part of the displacement
 > $m=2$ kg, $g=10$. the displacement is at $120°$ to gravity (gravity points down, the slope goes $30°$ up): $W=mgs\cos120°=20\times4\times(-\tfrac12)=-40$ J. same as $-mgh$ with $h=4\sin30°=2$ m
 
 > [!exercise] try these
-> ① a 5 N force at $60°$ above the horizontal drags a box 4 m along the floor. how much work does it do?
-> ② $\vec F=2\hat i-3\hat j$ N moves a particle from $(1,1)$ to $(4,-1)$ m. find $W$
-> ③ a satellite goes round in a circle. how much work does gravity do on it in one orbit? in half an orbit?
+> **1** a 5 N force at $60°$ above the horizontal drags a box 4 m along the floor. how much work does it do?
+> **2** $\vec F=2\hat i-3\hat j$ N moves a particle from $(1,1)$ to $(4,-1)$ m. find $W$
+> **3** a satellite goes round in a circle. how much work does gravity do on it in one orbit? in half an orbit?
 
 > [!answer]-
-> ① $W=5\times4\times\cos60°=10$ J
-> ② $\vec s=3\hat i-2\hat j$, $W=6+6=12$ J
-> ③ zero both times: gravity points to the centre, always ⊥ to the velocity
+> **1** $W=5\times4\times\cos60°=10$ J
+> **2** $\vec s=3\hat i-2\hat j$, $W=6+6=12$ J
+> **3** zero both times: gravity points to the centre, always ⊥ to the velocity
 
 see also [[Work-energy theorem]], [[Work by a variable force]]
 

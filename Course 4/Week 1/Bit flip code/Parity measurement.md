@@ -82,14 +82,14 @@ that's the trick: in each part of the superposition, the two qubits being compar
 next: what to do with the syndrome, [[Bit flip code#correcting the error]]
 
 > [!exercise] try these
-> ① work out $s_A$ and $s_B$ step by step for a flip on qubit 3, $\alpha|001\rangle+\beta|110\rangle$
-> ② why not just measure all three qubits and take a majority vote?
-> ③ what syndrome do you get if qubits 1 **and** 2 both flip?
+> **1** work out $s_A$ and $s_B$ step by step for a flip on qubit 3, $\alpha|001\rangle+\beta|110\rangle$
+> **2** why not just measure all three qubits and take a majority vote?
+> **3** what syndrome do you get if qubits 1 **and** 2 both flip?
 
 > [!answer]-
-> ① $S_A$: $q_1\oplus q_2=0\oplus0=0$ in the $\alpha$ part and $1\oplus1=0$ in the $\beta$ part, so $s_A=0$. $S_B$: $q_2\oplus q_3=0\oplus1=1$ and $1\oplus0=1$, so $s_B=1$. syndrome $01$ → qubit 3
-> ② measuring them projects onto $|000\rangle$ (with probability $|\alpha|^2$) or $|111\rangle$: you'd learn the logical bit, but lose the superposition
-> ③ $\alpha|110\rangle+\beta|001\rangle$: qubits 1, 2 the same, 2, 3 different → $01$, which **looks like** a flip on qubit 3. the correction then makes it worse, see [[Bit flip code#when it breaks]]
+> **1** $S_A$: $q_1\oplus q_2=0\oplus0=0$ in the $\alpha$ part and $1\oplus1=0$ in the $\beta$ part, so $s_A=0$. $S_B$: $q_2\oplus q_3=0\oplus1=1$ and $1\oplus0=1$, so $s_B=1$. syndrome $01$ → qubit 3
+> **2** measuring them projects onto $|000\rangle$ (with probability $|\alpha|^2$) or $|111\rangle$: you'd learn the logical bit, but lose the superposition
+> **3** $\alpha|110\rangle+\beta|001\rangle$: qubits 1, 2 the same, 2, 3 different → $01$, which **looks like** a flip on qubit 3. the correction then makes it worse, see [[Bit flip code#when it breaks]]
 
 see also [[Decoding the bit flip code]] (the same parities without ancillas), [[Phase flip code]] (the same checks in the $|\pm\rangle$ basis), [[Bit flip code]], [[CNOT gate]], [[Quantum Error Correction]]
 

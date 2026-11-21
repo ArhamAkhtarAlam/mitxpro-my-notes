@@ -46,16 +46,16 @@ in [[Magic state distillation]], whether each later step is done depends on corr
 > ==a surface code computer needs thousands of CPUs and FPGAs, connected in a custom way, decoding $10^{12}$ bits a second with under 10 µs of latency==
 
 > [!exercise] try these
-> ① a chip with 200,000 physical qubits does a round every 1 µs. how many bits per second come out, and about how many are detection events (1 in 20)?
-> ② how many CPU cores does that need?
-> ③ two detection events are 2 steps apart, and each is 4 steps from the boundary. what does matching choose, and why?
-> ④ why is it fine for the decoder to be wrong about exactly *which* path the errors took, as long as the ends are right?
+> **1** a chip with 200,000 physical qubits does a round every 1 µs. how many bits per second come out, and about how many are detection events (1 in 20)?
+> **2** how many CPU cores does that need?
+> **3** two detection events are 2 steps apart, and each is 4 steps from the boundary. what does matching choose, and why?
+> **4** why is it fine for the decoder to be wrong about exactly *which* path the errors took, as long as the ends are right?
 
 > [!answer]-
-> ① half are measured: $10^5$ bits per µs $=10^{11}$ bits/s, about $5\times10^9$ detection events per second
-> ② $200{,}000/100=2000$ cores
-> ③ pair them with each other: total length 2, against 8 for sending both to the boundary. 2 errors are far more likely than 8
-> ④ two paths with the same ends differ by a closed loop, and a closed loop of errors is a product of checks (a stabilizer), which does nothing to the logical qubit. only a mistake that adds up to a chain right across the grid is a logical error
+> **1** half are measured: $10^5$ bits per µs $=10^{11}$ bits/s, about $5\times10^9$ detection events per second
+> **2** $200{,}000/100=2000$ cores
+> **3** pair them with each other: total length 2, against 8 for sending both to the boundary. 2 errors are far more likely than 8
+> **4** two paths with the same ends differ by a closed loop, and a closed loop of errors is a product of checks (a stabilizer), which does nothing to the logical qubit. only a mistake that adds up to a chain right across the grid is a logical error
 
 see also [[Surface code logical operations]], [[Parity measurement]], [[Threshold theorem]]
 

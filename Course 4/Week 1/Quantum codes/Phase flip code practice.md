@@ -71,14 +71,14 @@ note the fix is an $X$, not a $Z$: by the time we look, the Hadamards have alrea
 | d | $\sigma_z$ on qubit 1 | $\alpha\vert100\rangle+\beta\vert011\rangle$ | $11$ | $X$ on qubit 1 |
 
 > [!exercise] try these
-> ① check $\text HZ\text H=X$ by multiplying the matrices
-> ② a $\sigma_x$ hits qubit 2 at the error spot instead ($X|+\rangle=|+\rangle$, $X|-\rangle=-|-\rangle$). what do you measure, and what comes out of qubit 1?
-> ③ $\sigma_z$ on qubits 1 **and** 2. what do you measure, and what comes out?
+> **1** check $\text HZ\text H=X$ by multiplying the matrices
+> **2** a $\sigma_x$ hits qubit 2 at the error spot instead ($X|+\rangle=|+\rangle$, $X|-\rangle=-|-\rangle$). what do you measure, and what comes out of qubit 1?
+> **3** $\sigma_z$ on qubits 1 **and** 2. what do you measure, and what comes out?
 
 > [!answer]-
-> ① $\text HZ=\frac1{\sqrt2}\begin{bmatrix}1&-1\\1&1\end{bmatrix}$, then $\text HZ\text H=\frac12\begin{bmatrix}1&-1\\1&1\end{bmatrix}\begin{bmatrix}1&1\\1&-1\end{bmatrix}=\frac12\begin{bmatrix}0&2\\2&0\end{bmatrix}=X$
-> ② $|\psi_3\rangle=\alpha|{+}{+}{+}\rangle-\beta|{-}{-}{-}\rangle$, so $|\psi_4\rangle=\alpha|000\rangle-\beta|111\rangle$ and $|\psi_5\rangle=(\alpha|0\rangle-\beta|1\rangle)|00\rangle$. you measure $00$ and get $Z|\psi\rangle$ out: a bit flip is invisible to this code ([[Phase flip code#bit errors are now worse]])
-> ③ $|\psi_4\rangle=\alpha|110\rangle+\beta|001\rangle$. CNOT $1\to2$: $\alpha|100\rangle+\beta|001\rangle$. CNOT $1\to3$: $\alpha|101\rangle+\beta|001\rangle=(\alpha|1\rangle+\beta|0\rangle)|01\rangle$. you measure $01$, do nothing, and qubit 1 comes out as $X|\psi\rangle$: 2 errors beat it
+> **1** $\text HZ=\frac1{\sqrt2}\begin{bmatrix}1&-1\\1&1\end{bmatrix}$, then $\text HZ\text H=\frac12\begin{bmatrix}1&-1\\1&1\end{bmatrix}\begin{bmatrix}1&1\\1&-1\end{bmatrix}=\frac12\begin{bmatrix}0&2\\2&0\end{bmatrix}=X$
+> **2** $|\psi_3\rangle=\alpha|{+}{+}{+}\rangle-\beta|{-}{-}{-}\rangle$, so $|\psi_4\rangle=\alpha|000\rangle-\beta|111\rangle$ and $|\psi_5\rangle=(\alpha|0\rangle-\beta|1\rangle)|00\rangle$. you measure $00$ and get $Z|\psi\rangle$ out: a bit flip is invisible to this code ([[Phase flip code#bit errors are now worse]])
+> **3** $|\psi_4\rangle=\alpha|110\rangle+\beta|001\rangle$. CNOT $1\to2$: $\alpha|100\rangle+\beta|001\rangle$. CNOT $1\to3$: $\alpha|101\rangle+\beta|001\rangle=(\alpha|1\rangle+\beta|0\rangle)|01\rangle$. you measure $01$, do nothing, and qubit 1 comes out as $X|\psi\rangle$: 2 errors beat it
 
 see also [[Phase flip code]], [[Bit flip code practice]], [[Hadamard Gate]], [[Shor code]]
 

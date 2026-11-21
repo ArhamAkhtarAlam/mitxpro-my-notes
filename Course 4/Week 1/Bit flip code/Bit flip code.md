@@ -198,18 +198,18 @@ $$
 - the channel it's built for is the [[Binary symmetric channel]] (each bit flips with probability $p$), the quantum version is the [[Bit flip channel]]
 
 > [!exercise] try these
-> ① a qubit has $p=10^{-4}$. what's $p_L$ with the bit flip code, and how many times better is that?
-> ② a different code has $c=100$. what's its threshold? would it help a qubit with $p=10^{-3}$?
-> ③ why does the code fail with 2 flips, eg. $|000\rangle\to|011\rangle$?
-> ④ with more levels of recursion, how many levels does a $p=10^{-3}$ qubit need to get below $10^{-15}$?
-> ⑤ the syndrome reads $11$. what do you do, step by step?
+> **1** a qubit has $p=10^{-4}$. what's $p_L$ with the bit flip code, and how many times better is that?
+> **2** a different code has $c=100$. what's its threshold? would it help a qubit with $p=10^{-3}$?
+> **3** why does the code fail with 2 flips, eg. $|000\rangle\to|011\rangle$?
+> **4** with more levels of recursion, how many levels does a $p=10^{-3}$ qubit need to get below $10^{-15}$?
+> **5** the syndrome reads $11$. what do you do, step by step?
 
 > [!answer]-
-> ① $p_L\approx3(10^{-4})^2=3\times10^{-8}$, about $3300\times$ better (a smaller $p$ gains more, since $\frac{p}{p_L}=\frac1{cp}$)
-> ② $p_{th}=\frac1{100}=1\%$. yes: $cp^2=100\times10^{-6}=10^{-4}<10^{-3}$, a $10\times$ improvement
-> ③ $|011\rangle$ is closer to $|111\rangle$ than to $|000\rangle$, so the majority vote "fixes" it to $|111\rangle$: a logical $0$ becomes a logical $1$ and nobody notices
-> ④ from the [[#^concatenation|recursion formula]], $p^{(2)}=2.7\times10^{-11}$ is not enough, $p^{(3)}=2.2\times10^{-21}$ is: **3 levels**, 27 qubits
-> ⑤ qubit 2 flipped: apply $X$ to qubit 2, then $X$ to both $S_A$ and $S_B$ to reset them to $|00\rangle$
+> **1** $p_L\approx3(10^{-4})^2=3\times10^{-8}$, about $3300\times$ better (a smaller $p$ gains more, since $\frac{p}{p_L}=\frac1{cp}$)
+> **2** $p_{th}=\frac1{100}=1\%$. yes: $cp^2=100\times10^{-6}=10^{-4}<10^{-3}$, a $10\times$ improvement
+> **3** $|011\rangle$ is closer to $|111\rangle$ than to $|000\rangle$, so the majority vote "fixes" it to $|111\rangle$: a logical $0$ becomes a logical $1$ and nobody notices
+> **4** from the [[#^concatenation|recursion formula]], $p^{(2)}=2.7\times10^{-11}$ is not enough, $p^{(3)}=2.2\times10^{-21}$ is: **3 levels**, 27 qubits
+> **5** qubit 2 flipped: apply $X$ to qubit 2, then $X$ to both $S_A$ and $S_B$ to reset them to $|00\rangle$
 
 see also [[Quantum Error Correction]], [[Noise Processes]], [[Gate fidelity]], [[Randomized benchmarking]], textbook: [[Introduction to quantum error-correction]], [[Syndrome diagnosis and recovery]]
 
