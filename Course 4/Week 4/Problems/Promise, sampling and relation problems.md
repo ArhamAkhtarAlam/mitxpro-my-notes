@@ -14,7 +14,7 @@ a generalization of functions. each input $x$ comes with a probability distribut
 
 > [!eg] sampling
 > - $x=n$, $D_x$ = uniform over $\{0,1\}^n$: output $n$ fair random bits ([[Quantum random number generators]])
-> - $x$ = a description of a quantum circuit, $D_x$ = the distribution of its measurement results. a quantum computer samples this just by running the circuit. that's the kind of task used to show [[Quantum supremacy]]
+> - $x$ = a description of a quantum circuit, $D_x$ = the distribution of its measurement results. a quantum computer samples this just by running the circuit. that's the kind of task used to show [[Quantum advantage|quantum supremacy]]
 
 (you could go further, eg. the output is a **quantum state**. but languages, functions and sampling are a good first map)
 ## relations

@@ -72,6 +72,6 @@ so if (as people believe) BPP ≠ BQP, there's **no efficient classical algorith
 
 previous: [[NP-complete]] · next: [[Quantum vs classical complexity]]
 
-see also [[Promise, sampling and relation problems]], [[Quantum volume]], [[Quantum supremacy]]
+see also [[Promise, sampling and relation problems]], [[Quantum volume]], [[Quantum advantage|quantum supremacy]]
 
 week hub: [[Computational complexity]]

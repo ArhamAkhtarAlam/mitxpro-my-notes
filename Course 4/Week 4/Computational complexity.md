@@ -31,7 +31,7 @@ flowchart TD
 
 ![[Complexity_hierarchy.png]]
 
-coming up: [[Turing machine]], [[Quantum supremacy]]
+coming up: [[Turing machine]], [[Quantum advantage|quantum supremacy]]
 
 see also [[Big O notation]], [[Quantum volume]]
 

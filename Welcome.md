@@ -69,7 +69,7 @@ flowchart TD
 - **work, power and energy** → [[Work, energy and power]] (work, power, energy conservation, collisions)
 - **rotational mechanics** → [[Rotational mechanics]] (centre of mass, impulse, restitution, angular momentum)
 ### Extra (not in the courses)
-- [[Extra]] → things the courses skip but are good to know: the no-cloning theorem, more noise channels, superdense coding, GHZ states, tensor networks, purification...
+- [[Extra]] → things the courses skip but are good to know: the no-cloning theorem, more noise channels, superdense coding, GHZ states, tensor networks, purification, superconducting qubits, logical qubits, quantum advantage, Turing machines...
 ## tips for reading
 - **click any link** to jump to that note, or **hover** over it for a quick preview
 - the **graph view** shows how all the notes connect

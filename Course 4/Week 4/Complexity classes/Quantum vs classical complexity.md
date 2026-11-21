@@ -28,7 +28,7 @@ the full chain is in [[Complexity classes#^containments]]
 ## none of it is proven
 - nobody has proven factoring isn't in P. a clever classical algorithm could exist: unlikely, but not impossible
 - even P ≠ BQP is unproven, and it would be very hard to prove: since P ⊆ BQP ⊆ PSPACE, proving P ≠ BQP would also prove **P ≠ PSPACE**, a famous open problem
-- so every claim of [[Quantum advantage|quantum advantage]] rests on the best **known** classical algorithms plus conjectures. that's why demonstrations ([[Quantum supremacy]]) pick problems where the evidence is strongest, like sampling from random circuits
+- so every claim of [[Quantum advantage|quantum advantage]] rests on the best **known** classical algorithms plus conjectures. that's why demonstrations ([[Quantum advantage|quantum supremacy]]) pick problems where the evidence is strongest, like sampling from random circuits
 
 > [!exercise] try these
 > **1** about how many Grover iterations does it take to search $10^{12}$ items? how many classical checks on average?
