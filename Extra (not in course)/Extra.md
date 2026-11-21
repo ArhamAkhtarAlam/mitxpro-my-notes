@@ -3,8 +3,15 @@ stuff that **isn't covered in the courses** but is still important or good to kn
 ## Course 1
 - [[Fredkin gate]] → the controlled SWAP (and the swap test)
 - [[Phase kickback]] → how a controlled gate changes the **control** qubit
+- [[Rotation gates]] → $R_x$, $R_y$, $R_z$, every named gate as a rotation, the $ZYZ$ decomposition
+- [[Measuring in other bases]] → rotate then measure: $X$ and $Y$ measurements, the Born rule, relative vs global phase
+- [[Universal gate sets]] → why $H$, $T$, CNOT are enough, and why Cliffords aren't
+- [[Deutsch-Jozsa algorithm]] → the first quantum speed up: constant or balanced in one call
 ## Course 2
-- **week 2** → [[No-cloning theorem]] (you can't copy an unknown state, and why that matters everywhere)
+- **week 1** → [[Diffie-Hellman key exchange]] (the other public-key system Shor breaks)
+- **week 2** → [[No-cloning theorem]] (you can't copy an unknown state, and why that matters everywhere), [[Hong-Ou-Mandel effect]] (two identical photons always leave a beamsplitter together)
+- **week 3** → [[Jordan-Wigner transformation]] (turning electrons into qubits for VQE)
+- **week 4** → [[Amplitude amplification]] (Grover for any algorithm, and amplitude estimation)
 ## Course 3
 - **week 1 (more channels)** → [[Pauli channel]] (the general one), [[Bit flip channel]], [[Bit-phase flip channel]], [[Phase damping channel]] (dephasing in disguise), [[Generalized amplitude damping channel]] (at a temperature), [[Erasure channel]] (lost, but you know it)
 - **week 2 (entanglement and networks)** → [[LOCC]] (the rules entanglement is measured by), [[Superdense coding]], [[Entanglement purification]], [[Quantum memory]], [[Distributed quantum computing]], [[Blind quantum computing]]
@@ -23,6 +30,9 @@ flowchart TD
     PT["Partial trace"] --> PU["Purification"]
     PU --> EP["Entanglement purification"]
     PK["Phase kickback"] --> BV["Bernstein-Vazirani"]
+    PK --> DJ["Deutsch-Jozsa"] --> BV
+    RG["Rotation gates"] --> UG["Universal gate sets"]
+    RG --> MB["Measuring in other bases"]
     CSS["CSS codes"] --> GK
     CL["Clifford group"] --> GK["Gottesman-Knill"]
     EP --> QM["Quantum memory"] --> DQC["Distributed QC"] --> BQC["Blind QC"]
